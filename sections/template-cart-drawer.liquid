@@ -1,3 +1,5 @@
+This is another test
+
 <!-- Convert Experiments conversion tracking -->  <script type="text/javascript">  window._conv_q = window._conv_q || [];  _conv_q.push(["triggerConversion", "10047507"]);  </script> 
 <section data-section-id="{{ section.id }}" >
     <div class="section-content">
@@ -159,11 +161,18 @@
                                                                 </div>
                                                             </div>
                                                             <div class="text-end cart-total-price ps-3 fw-normal">
-                                                                {% if item.properties['promo_product'] or item.line_price == 0 %}
-                                                                    <span class="m-0 p-0">{{ 'templates.cart.free' | t }}</span>
-                                                                {% else %}
-                                                                    <span class="m-0 p-0"> {{ item.line_price | money }} </span>
+                                                                {% if item.variant.price < item.variant.compare_at_price %}
+                                                                    <span class="item__compare-at-price">
+                                                                    {{ item.variant.compare_at_price | times: item.quantity | money }}
+                                                                    </span>
                                                                 {% endif %}
+                                                                <span {% if item.variant.price < item.variant.compare_at_price %}class="item__price--sale"{% endif%}>
+                                                                    {% if item.properties['promo_product'] or item.line_price == 0 %}
+                                                                        <span class="m-0 p-0">{{ 'templates.cart.free' | t }}</span>
+                                                                    {% else %}
+                                                                        <span class="m-0 p-0"> {{ item.line_price | money }} </span>
+                                                                    {% endif %}
+                                                                </span>
                                                             </div>
                                                         </div>
                                                                                 <div class="showabtest">

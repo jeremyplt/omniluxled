@@ -965,3 +965,14 @@ html .swiper-button-next:hover::after
 #shopify-section-template--16184566120610__6ec0e2ef-40e2-4265-a008-778c56929061 {
   display: none;
 }
+
+/* Cart Drawer */
+
+.item__compare-at-price {
+  opacity: .8;
+  text-decoration: line-through;
+}
+
+.item__price--sale {
+  font-weight: bold;
+}
