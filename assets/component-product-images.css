@@ -1,0 +1,33 @@
+.product-images--desktop {
+	text-align: center;
+}
+
+.product-images__grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+.product-details-wrapper {
+	position: sticky;
+	top: 8rem;
+	z-index: 20;
+}
+
+.product-images--slider {
+	display: none;
+}
+
+@media (max-width: 989px) {
+	.product-images--desktop {
+		display: none;
+	}
+
+	.product-images--slider {
+		display: block;
+	}
+}
+
+.show-more-button {
+	margin: 1rem auto;
+}

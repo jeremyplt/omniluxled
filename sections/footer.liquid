@@ -1,0 +1,480 @@
+{%- liquid
+    assign logo_svg = section.settings.footer_logo_svg
+    assign footer_linklist_2 = section.settings.footer_linklist_col_2
+    assign footer_linklist_3 = section.settings.footer_linklist_col_3
+    assign footer_linklist_4 = section.settings.footer_linklist_col_4
+    assign bottom_footer_linklist = section.settings.bottom_footer_linklist
+-%}
+
+
+<footer class="site-footer border-top overflow-hidden" data-section-id="{{ section.id }}">
+    <div data-footer-top class="footer-top border-bottom" style="background-color: {{ section.settings.footer_top_bg_color }}; color: {{ section.settings.footer_top_txt_color }};">
+        <div class="{% if section.settings.fluid_footer %}container-fluid{% else %}container{% endif %}">
+            <div class="row">
+                {%- comment -%} col-1 newsletter & logo {%- endcomment -%}
+                <div class="col-lg-4 col-xl-4 footer-col-1 me-xl-auto pb-4 pb-lg-5 position-relative pt-7 pt-lg-8">
+                    <div class="mb-lg-8 text-center text-lg-start mb-4 pb-1 pb-lg-0">
+                        <a class="d-inline-block" href="{{ routes.root_url }}" name="{{ shop.name | escape }}" title="{{ shop.name | escape }}" aria-label="{{ shop.name | escape }}">
+                            {%- if logo_svg != blank -%}
+                            <img src="{{ logo_svg }}" alt="{{ shop.name | escape }}" class="img-fluid w-100" loading="lazy" width="200" height="80" style="max-width: {{ section.settings.logo_max_width }}px"
+                            width="{{ section.settings.logo_max_width }}"
+                            height="40">
+                            {%- elsif section.settings.footer_logo != blank -%}
+                            <img srcset="{{ section.settings.footer_logo | image_url: width: 250, scale: 2 }}"
+                                src="{{ section.settings.footer_logo | image_url: width: 20 }}"
+                                loading="lazy" class="img-fluid"
+                                width="{{ section.settings.footer_logo.width }}"
+                                height="{{ section.settings.footer_logo.height }}"
+                                alt="{{ section.settings.footer_logo.alt | default: shop.name | escape }}"
+                                style="max-width: {{ section.settings.logo_max_width }}px" >
+                            {%- else -%}
+                            <span class="h5 text-primary">{{ shop.name }}</span>
+                            {%- endif -%}
+                        </a>
+                    </div>
+                    <div class="">
+                        {% if section.settings.col_1_heading != blank %}
+                          <p class="col_1_heading lh-sm mb-4 mb-lg-2 pb-2 pb-lg-1 h5">{{ section.settings.col_1_heading }}</p>
+                        {% endif %}
+                        {% if section.settings.show_newsletter %}
+
+                            <div id="footer_email_capture" class="klaviyo-form-TLyKnL"></div>
+                            <div class="pb-2 d-none">
+                                <custom-klaviyo class="d-block newsletter-form mx-auto" data-successMsg="{{ section.settings.success_message }}" data-subscribed="{{ section.settings.subscribed_message }}">
+                                    <form id="email_signup1" data-subscribe-form
+                                    class="klaviyo_styling klaviyo_gdpr_embed_TLyKnL"
+                                    action="//manage.kmail-lists.com/ajax/subscriptions/subscribe?a=TLyKnL"
+                                    method="POST">
+                                        <input type="hidden" name="g" value="UP5g9u">
+                                        <div class="position-relative">
+                                            <div class="form-floating input-group mb-2 mx-lg-0 mx-sm-auto">
+                                                <input type="email" name="email" aria-label="email" id="newsletterFooterCustomerEmail" class="form-control" placeholder="{{ 'general.social.newsletter_form.newsletter_email' | t }}" value="{% if customer %}{{ customer.email }}{% endif %}" autocorrect="off" autocapitalize="off" required>
+                                                <button type="submit" data-subscribe-button name="btnSubmit" aria-label="submit" class="btn btn-outline-primary submit-btn">
+                                                    {{ 'general.social.newsletter_form.button' | t }}
+                                                </button>
+                                                <label for="newsletterFooterCustomerEmail">{{ 'general.social.newsletter_form.newsletter_email' | t }}</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="klaviyo_messages text-white font-size-lg font-family-heading" style="display: none;" data-final-result></div>
+                                </custom-klaviyo>
+                 
+                                {% comment %} <div id="footer_email_capture" class="klaviyo-form-TLyKnL"></div> {% endcomment %}
+                            </div>
+                        {% endif %}
+                        {% if section.settings.col_1_txt != blank %}
+                            <p class="mb-0 col_1_txt d-none">{{ section.settings.col_1_txt }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-8 col-xl-7 mt-1 mt-lg-0 pt-3 pt-lg-7">
+                    <div class="row pt-1 justify-content-between fw-normal">
+                        {%- comment -%} col-2 {%- endcomment -%}
+                        <div class="col-md-auto col-6">
+                            {% if section.settings.col_2_heading != blank %}
+                            <p class="h6 text-uppercase lh-base">{{ section.settings.col_2_heading }}</p>
+                            {% endif %}
+                            {% if linklists[footer_linklist_2].links.size > 0 %}
+                                <ul class="list-unstyled footer-navigation">
+                                {%- comment %}<locksmith:9c57>{% endcomment -%}
+                                  {%- assign locksmith_159e_forloop__size = 0 %}{% for link in linklists[footer_linklist_2].links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[footer_linklist_2], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_159e_forloop__size = locksmith_159e_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_159e_forloop__index = nil -%}
+                                {%- comment %}</locksmith:9c57>{% endcomment -%}
+                                {% for link in linklists[footer_linklist_2].links %}
+                                    {%- comment %}<locksmith:ad5f>{% endcomment -%}
+                                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[footer_linklist_2], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_159e_forloop__index == nil %}{% assign locksmith_159e_forloop__index = 1 %}{% assign locksmith_159e_forloop__index0 = 0 %}{% else %}{% assign locksmith_159e_forloop__index = locksmith_159e_forloop__index | plus: 1 %}{% assign locksmith_159e_forloop__index0 = locksmith_159e_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_159e_forloop__index == 1 %}{% assign locksmith_159e_forloop__first = true %}{% else %}{% assign locksmith_159e_forloop__first = false %}{% endif %}{% if locksmith_159e_forloop__index == locksmith_159e_forloop__size %}{% assign locksmith_159e_forloop__last = true %}{% else %}{% assign locksmith_159e_forloop__last = false %}{% endif %}{% assign locksmith_159e_forloop__rindex = locksmith_159e_forloop__size | minus: locksmith_159e_forloop__index | minus: 1 %}{% assign locksmith_159e_forloop__rindex0 = locksmith_159e_forloop__size | minus: locksmith_159e_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                                    {%- comment %}</locksmith:ad5f>{% endcomment -%}
+                                    <li class="py-1 text-capitalize">
+                                    <a class="position-relative {% if locksmith_159e_forloop__first %}fw-semibold{% endif %}" href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                        <span>{{ link.title }}</span>
+                                    </a>
+                                    </li>
+                                {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </div>
+                        {%- comment -%} col-3 {%- endcomment -%}
+                        <div class="col-md-auto col-6">
+                            {% if section.settings.col_3_heading != blank %}
+                                <p class="h6 text-uppercase lh-base">{{ section.settings.col_3_heading }}</p>
+                            {% endif %}
+                            {% if linklists[footer_linklist_3].links.size > 0 %}
+                                <ul class="list-unstyled footer-navigation ms-n1 ms-lg-0">
+                                    {%- comment %}<locksmith:dfbb>{% endcomment -%}
+                                      {%- assign locksmith_d151_forloop__size = 0 %}{% for link in linklists[footer_linklist_3].links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[footer_linklist_3], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_d151_forloop__size = locksmith_d151_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_d151_forloop__index = nil -%}
+                                    {%- comment %}</locksmith:dfbb>{% endcomment -%}
+                                    {% for link in linklists[footer_linklist_3].links %}
+                                        {%- comment %}<locksmith:9e5a>{% endcomment -%}
+                                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[footer_linklist_3], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_d151_forloop__index == nil %}{% assign locksmith_d151_forloop__index = 1 %}{% assign locksmith_d151_forloop__index0 = 0 %}{% else %}{% assign locksmith_d151_forloop__index = locksmith_d151_forloop__index | plus: 1 %}{% assign locksmith_d151_forloop__index0 = locksmith_d151_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_d151_forloop__index == 1 %}{% assign locksmith_d151_forloop__first = true %}{% else %}{% assign locksmith_d151_forloop__first = false %}{% endif %}{% if locksmith_d151_forloop__index == locksmith_d151_forloop__size %}{% assign locksmith_d151_forloop__last = true %}{% else %}{% assign locksmith_d151_forloop__last = false %}{% endif %}{% assign locksmith_d151_forloop__rindex = locksmith_d151_forloop__size | minus: locksmith_d151_forloop__index | minus: 1 %}{% assign locksmith_d151_forloop__rindex0 = locksmith_d151_forloop__size | minus: locksmith_d151_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                                        {%- comment %}</locksmith:9e5a>{% endcomment -%}
+                                        <li class="py-1 text-capitalize">
+                                            <a class="position-relative {% if locksmith_d151_forloop__first %}fw-semibold{% endif %}" href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                                <span>{{ link.title }}</span>
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </div>
+                        {%- comment -%} col-4 {%- endcomment -%}
+                        <div class="col-md-auto col-12 mt-4 mt-lg-0 pb-5 pb-lg-0">
+                            {% if section.settings.col_4_heading != blank %}
+                                <p class="h6 text-uppercase lh-base">{{ section.settings.col_4_heading }}</p>
+                            {% endif %}
+                            {% if linklists[footer_linklist_4].links.size > 0 %}
+                                <ul class="list-unstyled footer-navigation">
+                                    {%- comment %}<locksmith:5c0e>{% endcomment -%}
+                                      {%- assign locksmith_ab70_forloop__size = 0 %}{% for link in linklists[footer_linklist_4].links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[footer_linklist_4], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_ab70_forloop__size = locksmith_ab70_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_ab70_forloop__index = nil -%}
+                                    {%- comment %}</locksmith:5c0e>{% endcomment -%}
+                                    {% for link in linklists[footer_linklist_4].links %}
+                                        {%- comment %}<locksmith:65e2>{% endcomment -%}
+                                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[footer_linklist_4], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_ab70_forloop__index == nil %}{% assign locksmith_ab70_forloop__index = 1 %}{% assign locksmith_ab70_forloop__index0 = 0 %}{% else %}{% assign locksmith_ab70_forloop__index = locksmith_ab70_forloop__index | plus: 1 %}{% assign locksmith_ab70_forloop__index0 = locksmith_ab70_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_ab70_forloop__index == 1 %}{% assign locksmith_ab70_forloop__first = true %}{% else %}{% assign locksmith_ab70_forloop__first = false %}{% endif %}{% if locksmith_ab70_forloop__index == locksmith_ab70_forloop__size %}{% assign locksmith_ab70_forloop__last = true %}{% else %}{% assign locksmith_ab70_forloop__last = false %}{% endif %}{% assign locksmith_ab70_forloop__rindex = locksmith_ab70_forloop__size | minus: locksmith_ab70_forloop__index | minus: 1 %}{% assign locksmith_ab70_forloop__rindex0 = locksmith_ab70_forloop__size | minus: locksmith_ab70_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                                        {%- comment %}</locksmith:65e2>{% endcomment -%}
+                                        <li class="py-1 text-capitalize">
+                                            <a class="position-relative {% if locksmith_ab70_forloop__first %}fw-semibold{% endif %}" href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                                <span>{{ link.title }}</span>
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                {%- comment -%}
+                                <div class="pt-3" data-footer-currency>
+                                    <select placeholder="Usd $" class="form-select border w-auto fw-semibold" name="" style="line-height:1.1875;padding:11px 46px 11px 20px;">
+                                        <option>USD $</option>
+                                        <option>AUD $</option>
+                                    </select>
+                                </div>
+                                {%- endcomment -%}
+                                <div class="d-md-none">
+                                    {% render 'social-media-links' %}
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-12 d-none d-md-block">
+                            {% if section.settings.show_social_links %}
+                                <div class="pb-4 mb-1 pt-4">
+                                    {% render 'social-media-links' %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </div>
+    <div data-footer-bottom class="footer-bottom" style="background-color: {{ section.settings.footer_bottom_bg_color }}; color: {{ section.settings.footer_bottom_txt_color }};">
+        <div class="{% if section.settings.fluid_footer %}container-fluid{% else %}container{% endif %}">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start text-center pb-2 mb-1 pb-lg-0 mb-lg-0">
+                    {% if section.settings.show_payment_icons %}
+                        <ul class="list-inline payment-icons mx-n2 mx-md-0">
+                            {% if section.settings.payment_icon_ae %}<li class="list-inline-item"><img src="{{ 'american_express' | payment_type_img_url }}" width="24" height="24" alt="american express" loading="lazy" data-p-icon/></li>{% endif %}
+                            {% if section.settings.payment_icon_applepay %}<li class="list-inline-item"><img src="{{ 'apple_pay' | payment_type_img_url }}" width="24" height="24" alt="apple pay" loading="lazy" data-p-icon/></li>{% endif %}
+                            {% if section.settings.payment_icon_diners %}<li class="list-inline-item"><img src="{{ 'diners_club' | payment_type_img_url }}" width="24" height="24" alt="diners club" loading="lazy" data-p-icon/></li>{% endif %}
+                            {% if section.settings.payment_icon_discover %}<li class="list-inline-item"><img src="{{ 'discover' | payment_type_img_url }}" width="24" height="24" alt="discover" loading="lazy" data-p-icon/></li>{% endif %}
+                            {% if section.settings.payment_icon_mastercard %}<li class="list-inline-item"><img src="{{ 'master' | payment_type_img_url }}" width="24" height="24" alt="master" loading="lazy" data-p-icon/></li>{% endif %}
+                            {% if section.settings.payment_icon_paypal %}<li class="list-inline-item"><img src="{{ 'paypal' | payment_type_img_url }}" width="24" height="24" alt="paypal" loading="lazy" data-p-icon/></li>{% endif %}
+                            {% if section.settings.payment_icon_shopify_pay %}<li class="list-inline-item"><img src="{{ 'shopify_pay' | payment_type_img_url }}" width="24" height="24" alt="shopify_pay" loading="lazy" data-p-icon/></li>{% endif %}
+                            {% if section.settings.payment_icon_visa %}<li class="list-inline-item"><img src="{{ 'visa' | payment_type_img_url }}" width="24" height="24" alt="visa" loading="lazy" data-p-icon/></li>{% endif %}
+                            {% if section.settings.payment_icon_afterpay %}<li class="list-inline-item"> <img src="{{ 'afterpay' | payment_type_img_url }}" width="24" height="24" alt="afterpay" loading="lazy" data-p-icon/></li>{% endif %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <div class="col-xl-7 col-lg-8 col-12 mb-lg-0 mb-3 text-center text-lg-start ms-lg-auto">
+                    <div class="d-xl-flex align-items-center w-100">
+                        {% if linklists[bottom_footer_linklist].links.size > 0 %}
+                            <ul class="list-unstyled w-100 bottom_footer_link d-flex flex-wrap mb-n2 justify-content-between justify-content-center">
+                                    <li class="col-lg-auto col-12 order-lg-first order-last mt-lg-0 mt-2"><span class="font-size-md" style="line-height: 1.571428571428571;">©{{ 'now' | date: "%Y" }} GlobalMed Technologies</span></li>
+                                {% for link in linklists[bottom_footer_linklist].links %}
+                                    {%- comment %}<locksmith:89bb>{% endcomment -%}
+                                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[bottom_footer_linklist], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                    {%- comment %}</locksmith:89bb>{% endcomment -%}
+                                    <li class="px-2 mb-2 mx-lg-0 mx-auto">
+                                        <a class="position-relative font-size-md" href="{{ link.url }}" class="font-size-sm text-uppercase" style="line-height: 1.571428571428571;color: {{ section.settings.footer_bottom_txt_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                            <span>{{ link.title }}</span>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of container-->
+    </div>
+</footer>
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_footer",
+      "label": "Full Width Footer?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "footer_top_bg_color",
+      "label": "Footer Top Background Color",
+      "default": "#FAF4F0"
+    },
+    {
+      "type": "color",
+      "id": "footer_top_txt_color",
+      "label": "Footer Top Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "footer_top_link_color",
+      "label": "Footer Top Links Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "footer_bottom_bg_color",
+      "label": "Footer Bottom Background Color",
+      "default": "#FAF4F0"
+    },
+    {
+      "type": "color",
+      "id": "footer_bottom_txt_color",
+      "label": "Footer Bottom Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Column 1"
+    },
+    {
+      "type": "text",
+      "id": "col_1_heading",
+      "label": "Heading",
+      "default": "STAY IN TOUCH"
+    },
+    {
+      "type": "html",
+      "id": "col_1_txt",
+      "label": "Text",
+      "default": "Get monthly updates and free resources."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "Show Newsletter Form?",
+      "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "success_message",
+      "label": "Success Message",
+      "default": "Thank you for signing up! Your special offer is on its way!"
+    },
+    {
+      "type": "textarea",
+      "id": "subscribed_message",
+      "label": "Already Subscriber Message",
+      "default": "You have already subscribed!"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_links",
+      "label": "Show Social Links?",
+      "default": true
+    },
+    {
+      "type": "paragraph",
+      "content": "Select Networks"
+    },
+    {
+      "type": "checkbox",
+      "id": "social_icon_facebook",
+      "label": "Facebook",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "social_icon_tiktok",
+      "label": "Tiktok",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "social_icon_twitter",
+      "label": "Twitter",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "social_icon_instagram",
+      "label": "Instagram",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "social_icon_reddit",
+      "label": "Reddit?",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "social_icon_youtube",
+      "label": "YouTube",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "footer_logo_svg",
+      "label": "Footer svg logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "range",
+      "id": "logo_max_width",
+      "min": 200,
+      "max": 300,
+      "step": 1,
+      "unit": "px",
+      "label": "Logo width",
+      "default": 216
+    },
+    {
+      "type": "header",
+      "content": "Column 2"
+    },
+    {
+      "type": "text",
+      "id": "col_2_heading",
+      "label": "Heading",
+      "default": "Footer menu"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_linklist_col_2",
+      "label": "Select Menu"
+    },
+    {
+      "type": "header",
+      "content": "Column 3"
+    },
+    {
+      "type": "text",
+      "id": "col_3_heading",
+      "label": "Heading",
+      "default": "Footer menu"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_linklist_col_3",
+      "label": "Select Menu"
+    },
+    {
+      "type": "header",
+      "content": "Column 3"
+    },
+    {
+      "type": "text",
+      "id": "col_4_heading",
+      "label": "Heading",
+      "default": "Footer menu"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_linklist_col_4",
+      "label": "Select Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "bottom_footer_linklist",
+      "label": "Bottom Footer Link"
+    },
+    {
+      "type": "header",
+      "content": "Payment Icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "Show Payment Icons?",
+      "default": true
+    },
+    {
+      "type": "paragraph",
+      "content": "Select Payment Methods"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_icon_ae",
+      "label": "American Express",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_icon_applepay",
+      "label": "Apple Pay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_icon_diners",
+      "label": "Diners",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_icon_discover",
+      "label": "Discover",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_icon_mastercard",
+      "label": "Mastercard",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_icon_paypal",
+      "label": "Paypal",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_icon_shopify_pay",
+      "label": "Shopify Pay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_icon_visa",
+      "label": "Visa",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_icon_afterpay",
+      "label": "Afterpay",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

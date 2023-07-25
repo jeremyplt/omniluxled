@@ -1,0 +1,36 @@
+<style type="text/css">
+  .template-404 .title + * {
+    margin-top: 1rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .template-404 .title + * {
+      margin-top: 2rem;
+    }
+  }
+  .account-fair-tone{
+    background-image: url(https://cdn.shopify.com/s/files/1/0482/6736/2466/files/account.jpg?v=1671616863);
+    background-size: cover;
+    height:47vh;
+
+  }
+#MainContent{
+  min-height:50vh;
+}
+</style>
+<div class="template-404 page-width section-content text-center">
+  <span class="account-fair-tone gradient-fair-tone position-absolute w-100 start-0 top-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
+  </span>
+    <div class="container">
+        <p class="mb-0 lh-1 h1" >
+            {{ 'templates.404.subtext' | t }}
+        </p>
+        <h2 class="title pt-4">
+            {{ 'templates.404.title' | t }}
+        </h2>
+        <h5 class="mb-3">We're sorry, but the page you requested could not be found.</h5>
+        <a href="{{ routes.all_products_collection_url }}" class="link body-large btn btn-outline-primary">
+            {{ 'general.continue_shopping' | t }}
+        </a>
+    </div>
+</div>

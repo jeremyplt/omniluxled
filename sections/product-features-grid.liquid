@@ -1,0 +1,244 @@
+{% if section.settings.display_for_product == 'true' %}
+<link rel="stylesheet" href="{{ 'global-features-grid.css' | asset_url }}">
+<section id="{{ section.settings.heading_txt | handle }}" class="section-content feature-wrap {% if section.settings.grid_size == '6' %}feature-row-6{% endif %}"  data-section-id="{{ section.id }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+      {% if section.settings.heading_txt != blank %}
+        <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 text-center mb-lg-4 mb-2 pb-1 pb-lg-0 mx-auto">
+                  <h3 class="h4 section-title mb-3 fw-light">{{ section.settings.heading_txt }}</h3>
+            </div>
+        </div>
+        {% endif %}
+        {% assign blocks_size = section.blocks | size %}
+        {% if blocks_size > 0 %}
+          <div class="mx-auto {% if section.settings.grid_size != '6' %}feature-row-wrap{% endif %}">
+            <div class="row justify-content-center {% if section.settings.grid_size == '2' %}row-cols-lg-5{% endif %}">
+              {%- for block in section.blocks -%}
+                {%- if block.settings.icon_img != blank -%}
+              <div class="{% if section.settings.grid_size == '6' %}col-6 col-lg-2 col-md-4 feature-six{% else %}col-4{% endif %}{% if section.settings.icon_layout %} only-icon{% endif %}" {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                  <div class="feature mx-auto d-flex flex-column mb-lg-5 mb-3 pb-1 pb-lg-0">
+                      <div class="w-100 square-card-wrap">
+                        <div class="position-relative square-card text-center">
+                          {% if block.settings.icon_img != blank %}
+                          <img src="{{ block.settings.icon_img }}" alt="{{ block.settings.title | escape }}" title="{{ block.settings.title }}"
+                          width="150"
+                          height="150" loading="lazy" class="w-100 h-100 position-absolute top-0 start-0"/>
+                          {% else %}
+                          <img src="{{ settings.no_image }}" alt="{{ block.settings.title | escape }}" title="{{ block.settings.title }}"
+                            width="150"
+                            height="150" loading="lazy" class="w-100 h-100 position-absolute top-0 start-0"/>
+                          {% endif %}
+                        </div>
+                      </div>
+                      {% if block.settings.title != blank or block.settings.txt != blank %}
+                      <div class="text-md-center mt-md-3 feature-text-wrap">
+                        {% if block.settings.title != blank %}
+                            <div class="h6 fw-bold lh-base lh-lg ls-06 mb-3 text-uppercase">{{ block.settings.title }}</div>
+                        {% endif %}
+                        {% if block.settings.txt != blank %}
+                            <div>{{ block.settings.txt }}</div>
+                        {% endif %}
+                      </div>
+                      {% endif %}
+                  </div>
+              </div>
+            {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        {% endif %}
+
+{% if section.settings.ingredients_txt != blank %}
+  <custom-accordion class="d-block" {{ block.shopify_attributes }} data-accordionType="multiple">
+    <div id="ingredientsAccordion" data-product-accordion >
+      
+      <div class="accordion__container py-3 text-center">
+        <a class="accordion__toggle d-inline-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open {{ section.settings.ingredients_txt }}" rel="nofollow" aria-label="Open {{ section.settings.ingredients_txt }}" role="button" aria-expanded="false" aria-controls="accordion_customTab1_ing">
+          <span class="me-3">{{ section.settings.ingredients_txt }}</span>
+          <span class=" d-flex justify-content-center align-items-center font-size-xs">
+            <span class="ox-plus trn"></span>
+            <span class="ox-minus position-absolute trn"></span>
+          </span>
+        </a>
+        <div class="accordion__block toggle-content" id="accordion_customTab1_ing" data-type="content">
+          <div class="rte pt-3 formatted-list">{{ section.settings.ingredients_desc }}</div>
+        </div>
+      </div>
+   
+    </div>
+  </custom-accordion>
+  {% endif %}
+</section>
+
+<style>
+  [data-section-id="{{ section.id }}"]
+  {
+    padding-top: {{ section.settings.pts }}px;
+    padding-bottom: {{ section.settings.pbs }}px;
+    {% if section.settings.border-top %}
+    border-top: 1.5px solid {{ section.settings.section_txt_color }};
+    {% endif %}
+    {% if section.settings.border-bottom %}
+    border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+    {% endif %}
+  }
+  @media (min-width:992px)
+  {
+    [data-section-id="{{ section.id }}"]
+    {
+      padding-top: {{ section.settings.pt }}px;
+      padding-bottom: {{ section.settings.pb }}px;
+    }
+  }
+</style>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Product Featured Grid",
+  "class": "index-features-grid",
+  "settings": [
+    {
+      "type": "liquid",
+      "label": "Display for this product",
+      "id": "display_for_product"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "icon_layout",
+      "label": "Only Icon?",
+      "default": false
+    },
+    {
+      "type": "liquid",
+      "id": "grid_size",
+      "label": "Grid Size",
+      "info": "If 3 column use value 4, 5 columns use value 2 and 6 columns use value 6 into metafield."
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "liquid",
+      "id": "heading_txt",
+      "label": "Heading Text"
+    },
+    {
+      "type": "header",
+      "content": "Ingredients"
+    },
+     {
+      "type": "liquid",
+      "id": "ingredients_txt",
+      "label": "Ingredients Text"
+    },
+     {
+      "type": "liquid",
+      "id": "ingredients_desc",
+      "label": "Ingredients Description"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "section_txt_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Spacing & Border"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding Top(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding Bottom(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pts",
+      "label": "Padding Top(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pbs",
+      "label": "Padding Bottom(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Featured Grid",
+      "blocks": [
+        {
+          "type": "content"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Feature Block",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "icon_img",
+          "label": "Icon SVG Image"
+        },
+        {
+          "type": "liquid",
+          "id": "title",
+          "label": "Heading"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

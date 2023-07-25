@@ -1,0 +1,115 @@
+<section data-section-id="{{ section.id }}" >
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+        {% if section.settings.img_text1 != blank %}
+            <div class="text-center mb-n3 fw-normal font-size-sm" style="line-height: 1.6923076923;">{{ section.settings.img_text1 }}</div>
+        {% endif %}
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Info Text",
+  "tag": "section",
+  "class": "info-text-footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Info Text"
+    },
+    {
+      "type": "richtext",
+      "id": "img_text1",
+      "label": "Paragraph 1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing & Border"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding Top(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding Bottom(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pts",
+      "label": "Padding Top(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pbs",
+      "label": "Padding Bottom(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Info Text"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+    [data-section-id="{{ section.id }}"]
+    {
+      padding-top: {{ section.settings.pts }}px;
+      padding-bottom: {{ section.settings.pbs }}px;
+      {% if section.settings.border-top %}
+      border-top: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+      {% if section.settings.border-bottom %}
+      border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+    }
+    @media (min-width:992px)
+    {
+      [data-section-id="{{ section.id }}"]
+      {
+        padding-top: {{ section.settings.pt }}px;
+        padding-bottom: {{ section.settings.pb }}px;
+      }
+    }
+  </style>

@@ -1,0 +1,223 @@
+<link rel="stylesheet" href="{{ 'global-features-grid.css' | asset_url }}">
+<section class="section-content feature-wrap {% if section.settings.grid_size == '6' %}feature-row-6{% endif %}"  data-section-id="{{ section.id }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+      {% if section.settings.heading_txt != blank %}
+        <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 text-center mb-lg-4 mb-2 pb-1 pb-lg-0 mx-auto">
+                  <h3 class="section-title mb-3">{{ section.settings.heading_txt }}</h3>
+            </div>
+        </div>
+        {% endif %}
+        {% assign blocks_size = section.blocks | size %}
+        {% if blocks_size > 0 %}
+          <div class="mx-auto {% if section.settings.grid_size != '6' %}feature-row-wrap{% endif %}">
+            <div class="row justify-content-center {% if section.settings.grid_size == '2' %}row-cols-lg-5{% endif %}">
+              {% for block in section.blocks %}
+              <div class="{% if section.settings.grid_size == '6' %}col-6 col-lg-2 col-md-4 feature-six{% else %}col-4{% endif %}" {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                  <div class=" mx-auto d-flex flex-column mb-lg-5 mb-3 pb-1 pb-lg-0">
+                      <div class="w-100 square-card-wrap">
+                        <div class="position-relative square-card text-center">
+                          {% if block.settings.image != blank %}
+                          <img src="{{ block.settings.image | image_url: width: 500 }}" alt="{{ block.settings.title | escape }}" title="{{ block.settings.title }}"
+                          width="250"
+                          height="250" loading="lazy" class="w-100 h-100 position-absolute top-0 start-0"/>
+                          {% else %}
+                          <img src="{{ settings.no_image }}" alt="{{ block.settings.title | escape }}" title="{{ block.settings.title }}"
+                            width="150"
+                            height="150" loading="lazy" class="w-100 h-100 position-absolute top-0 start-0"/>
+                          {% endif %}
+                        </div>
+                      </div>
+                      {% if block.settings.title != blank or block.settings.txt != blank %}
+                        <a href="{{ block.settings.url }}">
+                      <div class="text-md-center mt-md-3 feature-text-wrap">
+                        {% if block.settings.title != blank %}
+                            <p class="fw-semibold mb-2 ">{{ block.settings.title }}</p>
+                        {% endif %}
+                        {% if block.settings.txt != blank %}
+                            <div class="fw-semibold">{{ block.settings.txt }}</div>
+                        {% endif %}
+                      </div>
+                    </a>
+                      {% endif %}
+                  </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+    </div>
+</section>
+<style>
+  [data-section-id="{{ section.id }}"]
+  {
+    padding-top: {{ section.settings.pts }}px;
+    padding-bottom: {{ section.settings.pbs }}px;
+    {% if section.settings.border-top %}
+    border-top: 1.5px solid {{ section.settings.section_txt_color }};
+    {% endif %}
+    {% if section.settings.border-bottom %}
+    border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+    {% endif %}
+  }
+  @media (min-width:992px)
+  {
+    [data-section-id="{{ section.id }}"]
+    {
+      padding-top: {{ section.settings.pt }}px;
+      padding-bottom: {{ section.settings.pb }}px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Reviews Product",
+  "class": "index-features-grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "grid_size",
+      "label": "Grid Size",
+      "options": [
+        {
+          "value": "4",
+          "label": "3 Columns"
+        },
+        {
+          "value": "2",
+          "label": "5 Columns"
+        },
+        {
+          "value": "6",
+          "label": "6 Columns"
+        }
+      ],
+      "default": "4"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "section_txt_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Spacing & Border"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding Top(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding Bottom(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pts",
+      "label": "Padding Top(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pbs",
+      "label": "Padding Bottom(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews Product",
+      "blocks": [
+        {
+          "type": "content"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Feature Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon SVG Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "txt",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

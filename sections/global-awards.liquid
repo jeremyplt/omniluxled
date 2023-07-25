@@ -1,0 +1,190 @@
+<section class="section-content awards-wrap position-relative {{ section.settings.css_class }}"  data-section-id="{{ section.id }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
+  {%- if section.settings.gradient_tone != blank -%}
+    <span class="gradient-fair-tone light-tone-top position-absolute w-100 start-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
+      <span class="white-anim"></span>
+    </span>
+    {%- endif -%}
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+        <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 text-center mb-lg-4 mb-2 pb-1 pb-lg-0 mx-auto">
+                {% if section.settings.heading_txt != blank %}
+                  <h3 class="h6 pb-md-1 ls-0 section-title mb-3">{{ section.settings.heading_txt }}</h3>
+                {% endif %}
+            </div>
+        </div>
+
+        {% assign blocks_size = section.blocks | size %}
+        {% if blocks_size > 0 %}
+
+            <div class="row justify-content-center row-cols-lg-5">
+              {% for block in section.blocks %}
+              <div class="col-lg col-md-4 col-6" {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                  <div class="awards mx-auto d-flex flex-column mb-5 pb-1 pb-lg-0">
+                      <div class="position-relative square-card text-center">
+                        {% if block.settings.icon_img != blank %}
+                        <img src="{{ block.settings.icon_img | image_url: height: 300 }}" alt="{{ section.settings.heading_txt | default:awards }}" title="{{ block.settings.title }}"
+                        width="150"
+                        height="150" loading="lazy" class="w-100 h-100 object-contain position-absolute top-0 start-0"/>
+                        {% else %}
+                        <img src="{{ settings.no_image | image_url: height: 300 }}" alt="{{ section.settings.heading_txt | escape }}" title="{{ block.settings.title }}"
+                          width="150"
+                          height="150" loading="lazy" class="w-100 h-100 object-contain position-absolute top-0 start-0"/>
+                        {% endif %}
+                      </div>
+                  </div>
+              </div>
+              {% endfor %}
+            </div>
+
+        {% endif %}
+
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Awards Grid",
+  "class": "index-awards-grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "gradient_tone",
+      "label": "Gradient Tone?",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "section_txt_color",
+      "label": "Text Color",
+      "default": "#000"
+    },
+    {
+      "type": "header",
+      "content": "Spacing & Border"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding Top(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding Bottom(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "pts",
+      "label": "Padding Top(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "pbs",
+      "label": "Padding Bottom(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 24
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS class"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Awards Grid",
+      "blocks": [
+        {
+          "type": "content"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Awards Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_img",
+          "label": "Icon Image",
+          "info": "For Better Viewing Use Example dimentions: 300x300px ( Aspect Ratio: 1:1 )"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+<style>
+  [data-section-id="{{ section.id }}"]
+  {
+    padding-top: {{ section.settings.pts }}px;
+    padding-bottom: {{ section.settings.pbs }}px;
+    {% if section.settings.border-top %}
+    border-top: 1.5px solid {{ section.settings.section_txt_color }};
+    {% endif %}
+    {% if section.settings.border-bottom %}
+    border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+    {% endif %}
+  }
+  @media (min-width:992px)
+  {
+    [data-section-id="{{ section.id }}"]
+    {
+      padding-top: {{ section.settings.pt }}px;
+      padding-bottom: {{ section.settings.pb }}px;
+    }
+  }
+</style>

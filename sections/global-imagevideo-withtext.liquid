@@ -1,0 +1,647 @@
+{%- if section.settings.display_for_this_product == 'true' -%}
+<link rel="stylesheet" href="{{ 'global-image-with-text.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'global-video-with-text.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'global-video-with-text.css' | asset_url | stylesheet_tag }}</noscript>
+<section id="image-with-text" class="section-content image-with-text py-0 border-top {% if section.settings.border_bottom %} border-bottom {% endif %} position-relative {% if section.settings.enable_background_tone %}background-tone{% endif %}"  data-section-id="{{ section.id }}" style="background:{{ section.settings.section_bg_color }}; color:{{ section.settings.section_txt_color }}">
+    {% if section.settings.enable_background_tone %}
+    <span class="gradient-fair-tone light-tone-top position-absolute w-100 start-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
+        <span class="white-anim"></span>
+    </span>
+    {% endif %}
+    <div class="{% if section.settings.fluid_layout %}container-fluid px-0 overflow-hidden{% else %}container{% endif %}">
+        {% assign blocks_size = section.blocks | size %}
+        {% if blocks_size > 0 %}
+        {% for block in section.blocks %}
+        <div class="row">
+            <div class="col-12 col-lg-6 {% if block.settings.image_alignment == 'left' %}order-lg-1 pe-0{% else %}order-lg-2 ps-0{% endif %}">
+                 <custom-video class="video-with--text position-relative d-block placement--{{ section.settings.placement }}"
+                    data-loop="{{ section.settings.loop }}" data-autoplay="true" data-controls="{{ section.settings.controls }}" data-muted="{{ section.settings.muted }}"
+                    data-video-type="{{ section.settings.video_type }}"  data-placement="{{ section.settings.placement }}"
+                    {% if section.settings.mobile_video_id != blank %}data-mobileVideo="{{ section.settings.mobile_video_id }}"{% endif %} data-video-id="{{ section.settings.video_id }}">
+                    <div class="cta-btn">
+                        <span class="d-inline-flex" role="button" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
+                            <span class="btn btn-outline-white d-flex align-items-center d-lg-inline-flex d-none"> {{ section.settings.video_btn_text }} <i class="ox-play ms-2" style="font-size:11px;"></i></span>
+                            <span class="d-inline-flex align-items-center justify-content-center d-lg-none text-white btn-play-mobile"><i class="ox-play-o"></i></span>
+                        </span>
+                        <span class="d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
+                            <span class="btn btn btn-outline-white">Watch video <i class="ox-play"></i></span>
+                        </span>
+                    </div>     
+          
+          <div class="banner-img w-100 position-relative square-card h-100 {{ block.settings.height }}">
+                    {%- if block.settings.image != blank -%}
+                       
+                        <img
+                            
+                            src="{{ block.settings.image }}?format=pjpg"
+                            
+                            alt="{{ block.settings.image.alt | escape }}"
+                            class="h-100 top-0 start-0 position-absolute object-cover w-100"
+                            loading="lazy"
+                            width="{{ block.settings.image.width | divided_by: 3 }}"
+                            height="{{ block.settings.image.height | divided_by: 3 }}"
+                        >
+                    {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+
+                </div>
+            </div>
+            {%- if section.settings.placement == 'grid' -%}
+                        <div class="video-section {{ section.settings.height }}" tabindex="0"></div>
+                    {%- endif -%}
+                    {% if section.settings.enable_overlay %}
+                                <div class="poster-overlay {% if section.settings.placement == 'grid' %}poster-overlay-grid{% endif %}" style="background-color: {{ section.settings.overlay_bg_color }}!important; opacity: {{ section.settings.overlay_opacity }}!important;mix-blend-mode: multiply!important;"></div>
+                    {% endif %}
+                </custom-video>
+           
+            <div class="col-12 col-lg-6 d-flex align-items-center inside-block-col {% if block.settings.image_alignment == 'left' %}order-lg-2{% else %}order-lg-1{% endif %}">
+                <div class="inside-block {{ block.settings.alignment }} {% if block.settings.image_alignment == 'left' %}text-p-end ps-5{% else %}ms-lg-auto text-p-start{% endif %}  pb-lg-5 pt-4 mt-1 mt-lg-0 mb-lg-0 mb-1 pb-8 pe-20 ps-20" style="max-width:675px">
+                    <div class="formatted-list pe-lg-3 ps-0 {% if block.settings.fullwidth_content %} col-12 {% else %}col-sm-10 col-12{% endif %}">
+                        {% if block.settings.heading_txt != blank %}
+                            <h3 class="mb-3" style="max-width:{{ block.settings.max_width }}px;">{{ block.settings.heading_txt }}</h3>
+                        {% endif %}
+                        {% if block.settings.txt != blank %}
+                            <div class="{% if block.settings.btn_txt != blank or block.settings.btn_txt_watch != blank or block.settings.steps_captions != blank or block.settings.step_heading != blank or block.settings.steps_captions_2 != blank %}pb-2 mb-1{% else %}mb-n3 pb-0{% endif %}">{{ block.settings.txt }}</div>
+                        {% endif %}
+                        {% if block.settings.step_heading != blank %}
+                            <p class="mb-2 mb-md-3 ">{{ block.settings.step_heading }}</p>
+                        {% endif %}
+                        {% if block.settings.steps_captions != blank %}
+                         {% assign caption = block.settings.steps_captions | newline_to_br | strip_newlines | split: '<br />' %}
+                            <ul class="list-unstyled mb-5">
+                                {% for cap in caption %}
+                                    <li class="mb-2 mb-md-3 position-relative ps-4">{{ cap }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        {% if block.settings.steps_captions_2 != blank %}
+                        <div class="pb-2 mb-1 readbody mt-n2" data-redmore="false" data-redmore-id="instructions_{{ forloop.index }}">
+                            <div class="readbody-text formatted-list mt-n1 pb-3 pb-lg-0">
+                                {{ block.settings.steps_captions_2 }}
+                            </div>
+                            <div class="align-items-center d-inline-flex d-lg-none fw-semibold red-more-btn" onclick="readMore('instructions_{{ forloop.index }}')">
+                                <span class="me-1">Read </span><span class="me-1">Close </span>Instructions <i class="ms-2 font-size-xs ox-arrow ox-arrow-down mt-1"></i>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% if block.settings.btn_txt_watch != blank %}
+                        <div class="mt-lg-3 mt-2 pt-1 w-100 w-sm-auto">
+
+                            <div class="custom-video-container ">
+                                <span data-trigger-videobtn class="cursor-pointer btn w-100 w-sm-auto {% if block.settings.btn_type_watch == "border-0" %}border-0{% endif %} btn{% if block.settings.btn_type_watch == 'outline' %}-{% endif %}{% if block.settings.btn_type_watch != "border-0" %}{{ block.settings.btn_type_watch }}{% endif %}-{{ block.settings.btn_variant_watch }} {{ block.settings.btn_size_watch }}" title="{{ block.settings.btn_txt_watch }}">
+                                    {{ block.settings.btn_txt_watch }}
+                                    <i class="ox-play ms-2" style="font-size:11px;"></i>
+                                </span>
+                                
+                                
+                                <custom-video class="video-with--text position-relative d-block placement--popup"
+                                    data-loop="true" data-autoplay="true" data-controls="true" data-muted="false"
+                                    data-video-type="local"  data-placement="popup"
+                                    {% if section.settings.watch_mobile_video_id != blank %}data-mobileVideo="{{ block.settings.watch_mobile_video_id }}"{% endif %} 
+                                    data-video-id="{{ block.settings.watch_video_id }}">
+                                    <div class="cta-btn d-none">
+                                        <button class="play__button btn btn-primary" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
+                                            <span class="icon-play"></span>
+                                        </button>
+                                        <button class="bg-transparent border-2 border-white btn btn-primary p-3 pause__button rounded-pill d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
+                                            <span class="ox-play" style="position: relative;right: -2px;"></span>
+                                        </button>
+                                    </div>
+                                </custom-video>
+
+                            </div>
+
+                            
+                        </div>
+                        {% endif %}
+                        {% if block.settings.btn_txt != blank %}
+                            <a {% if block.settings.btn_link %} href="{{ block.settings.btn_link }}" {% endif %}class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }}">{{ block.settings.btn_txt }}</a>
+                        {% endif %}
+                        {% if block.settings.link_txt != blank %}
+                            <div class="mt-3 pt-1">
+                                <a target="_blank" {% if block.settings.link_url %} href="{{ block.settings.link_url }}" {% endif %}class="btn-link">{{ block.settings.link_txt }}</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Image-Video Text-Multi",
+  "class": "image-text-style",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "display_for_this_product",
+      "label": "Display For this Product"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_background_tone",
+      "label": "Background Tone",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "styling"
+    },
+    {
+      "type": "checkbox",
+      "id": "border_bottom",
+      "label": "Enable Border bottom",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image-with-text-block",
+      "name": "Image With Text Block",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "fullwidth_content",
+          "label": "Full Width content?",
+          "default": false
+        },
+        {
+          "type": "liquid",
+          "id": "heading_txt",
+          "label": "Heading Text"
+        },
+        {
+          "type": "range",
+          "id": "max_width",
+          "min": 100,
+          "max": 570,
+          "step": 10,
+          "unit": "px",
+          "label": "Heading max-width",
+          "default": 530
+        },
+         {
+      "type": "header",
+      "content": "Poster"
+    },
+    {
+      "type": "select",
+      "id": "poster_type",
+      "label": "Poster Type",
+      "options": [
+        {
+          "value": "",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "paragraph",
+      "content": "Video"
+    },
+    {
+      "type": "textarea",
+      "id": "bg_video",
+      "label": "Poster Video URL",
+      "info": "Only Mute video can autoplay. Use local video URL."
+    },
+    {
+      "type": "textarea",
+      "id": "mobile_bg_video",
+      "label": "Mobile Poster Video URL",
+      "info": "Only Mute video can autoplay. Use local video URL."
+    },
+    {
+      "type": "paragraph",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "poster_image",
+      "label": "Select Image",
+      "info": "For Better Viewing Use Example dimentions: 1200x1200px ( Aspect Ratio: 1:1 )"
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_overlay",
+      "label": "Enabled?",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "overlay_bg_color",
+      "label": "Overlay Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.5
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_video_layout",
+      "label": "Full Width video?",
+      "default": true,
+      "info": "If checked only video with full width will be visible"
+    },
+    {
+      "type": "select",
+      "id": "video_type",
+      "label": "Video Type",
+      "options": [
+        {
+          "value": "youtube",
+          "label": "Youtube"
+        },
+        {
+          "value": "vimeo",
+          "label": "Vimeo"
+        },
+        {
+          "value": "local",
+          "label": "Local Video"
+        }
+      ],
+      "default": "local"
+    },
+    {
+      "type": "select",
+      "id": "placement",
+      "label": "Placement",
+      "options": [
+        {
+          "value": "grid",
+          "label": "Grid"
+        },
+        {
+          "value": "popup",
+          "label": "Modal"
+        }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "textarea",
+      "id": "video_id",
+      "label": "Video Id",
+      "info": "For Local video use file link. For Youtube and Vimeo use video ID"
+    },
+    {
+      "type": "textarea",
+      "id": "mobile_video_id",
+      "label": "Mobile Video Id",
+      "info": "Same as above. Only add details if need to show diff video in mobile device."
+    },
+    {
+      "type": "text",
+      "id": "video_btn_text",
+      "label": "Video Button Text",
+      "default": "Watch video"
+    },
+    {
+      "type": "header",
+      "content": "styling"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-start",
+          "label": "Left"
+        },
+        {
+          "value": "text-end",
+          "label": "Right"
+        }
+      ],
+      "default": "text-center"
+    },
+    {
+      "type": "select",
+      "id": "video_alignment",
+      "label": "Caption Alignment",
+      "options": [
+        {
+          "value": "justify-content-start",
+          "label": "Left"
+        },
+        {
+          "value": "justify-content-center",
+          "label": "Center"
+        },
+        {
+          "value": "justify-content-end",
+          "label": "Right"
+        }
+      ],
+      "default": "justify-content-center"
+    },
+        {
+          "type": "liquid",
+          "id": "txt",
+          "label": "Text"
+        },
+        {
+          "type": "liquid",
+          "id": "step_heading",
+          "label": "Step Heading"
+        },
+        {
+          "type": "liquid",
+          "id": "steps_captions",
+          "label": "Details List",
+          "info": "Each entry must be on a new line."
+        },
+        {
+          "type": "liquid",
+          "id": "steps_captions_2",
+          "label": "Read More/Less Details",
+          "info": "There will be default text on the desktop and a read more/less button on the smaller screen."
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "liquid",
+          "id": "btn_txt",
+          "label": "Button Text"
+        },
+        {
+          "type": "liquid",
+          "id": "btn_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "btn_type",
+          "label": "Button Type",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "",
+              "label": "Solid"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "btn_variant",
+          "label": "Button Variant",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "dark",
+              "label": "Dark"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "select",
+          "id": "btn_size",
+          "label": "Button Size",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn-sm",
+              "label": "Small"
+            },
+            {
+              "value": "btn-lg",
+              "label": "Large"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "header",
+          "content": "Watch Video"
+        },
+        {
+          "type": "liquid",
+          "id": "btn_txt_watch",
+          "label": "Watch Button Text"
+        },
+        {
+          "type": "liquid",
+          "id": "watch_video_id",
+          "label": "Video Id"
+        },
+        {
+          "type": "liquid",
+          "id": "watch_mobile_video_id",
+          "label": "Mobile Video Id"
+        },
+        {
+          "type": "select",
+          "id": "btn_type_watch",
+          "label": "Button Type for Watch",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "border-0",
+              "label": "No Outline"
+            },
+            {
+              "value": "",
+              "label": "Solid"
+            }
+          ], 
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "btn_variant_watch",
+          "label": "Button Variant for Watch",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "dark",
+              "label": "Dark"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "select",
+          "id": "btn_size_watch",
+          "label": "Button Size for Watch",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn-sm",
+              "label": "Small"
+            },
+            {
+              "value": "btn-lg",
+              "label": "Large"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "liquid",
+          "id": "link_txt",
+          "label": "Link Text"
+        },
+        {
+          "type": "liquid",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "liquid",
+          "id": "image",
+          "label": "Select Image",
+          "info": "For Better Viewing Use Example dimentions: 775*735 ( Aspect Ratio: 1.05 )"
+        },
+        {
+          "type": "header",
+          "content": "styling"
+        },
+      
+        {
+          "type": "select",
+          "id": "image_alignment",
+          "label": "Image Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image-Video with Text-Multi",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}
+<script>
+    function readMore(instructions) {
+        let readFlag = event.currentTarget.closest('.readbody');
+        if (readFlag.getAttribute('data-redmore') === "true") {
+            readFlag.setAttribute("data-redMore", "false");
+        } else {
+            readFlag.setAttribute("data-redMore", "true");
+        }
+    }
+</script>

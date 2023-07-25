@@ -1,0 +1,659 @@
+<link rel="stylesheet" href="{{ 'template-accrodian-block.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section data-section-id="{{ section.id }}" class="how-its-works-accrdian border-top ">
+    <div class="overflow-hidden">
+        <div class="row">
+            <custom-accordion {{ block.shopify_attributes }} data-accordionType="single" >
+                <div class="">
+                    <div class="accordion__container ">
+                        <a class="accordion__toggle d-flex align-items-center container py-5 " data-how-its-work href="javascript:void(0);" title="Open {{ block.settings.title | strip_html }}" rel="nofollow" aria-label="Open {{ block.settings.title | strip_html }}" role="button" aria-expanded="false" aria-controls="faq-{{ section.settings.heading | handleize }}-{{ forloop.index }}">
+                            <div class="col-5  col-lg-3 " style="pointer-events:none;">
+                                <img src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Group_1562.svg?v=1669461824" alt="{{ shop.name | escape }}" class="img-fluid" style="width: {{ section.settings.logo_width }}px" loading="lazy" width="{{ section.settings.logo_width }}" height="{{ section.settings.logo_width }}">
+                            </div>
+                            <div class="col-7 col-lg-3  text-end ms-auto">
+                                <div class="h6 btn btn-simple m-0 btn-hiw ls-sm">SEE HOW IT WORKS +</div>
+                            </div>
+                        </a>
+                        <div class="accordion__block toggle-content mt-4" id="faq-{{ section.settings.heading | handleize }}-{{ forloop.index }}-1" data-type="content">
+                            <section class="mb-11 image-with-text"  data-section-id="{{ section.id }}" >
+                                <div class="container">
+                                    <div class="row align-items-end">
+                                        <div class="col-12 col-md-6 col-lg-5  {% if section.settings.image_alignment == 'left' %}order-md-1{% else %}order-md-2 me-auto{% endif %}">
+                                            <div class="banner-img position-relative accordion__image-with-text">
+                                                {%- if section.settings.image != blank -%}
+                                                    <img
+                                                        srcset="
+                                                        {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+                                                        {%- if section.settings.image.width >= 520 -%}{{ section.settings.image | image_url: width: 520, format: 'pjpg' }} 520w,{%- endif -%}
+                                                        {%- if section.settings.image.width >= 650 -%}{{ section.settings.image | image_url: width: 650, format: 'pjpg' }} 650w,{%- endif -%}
+                                                        {%- if section.settings.image.width >= 780 -%}{{ section.settings.image | image_url: width: 780, format: 'pjpg' }} 780w,{%- endif -%}
+                                                        {%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900, format: 'pjpg' }} 900w,{%- endif -%}
+                                                        {%- if section.settings.image.width >= 1000 -%}{{ section.settings.image | image_url: width: 1000, format: 'pjpg' }} 1000w,{%- endif -%}"
+                                                        src="{{ section.settings.image | image_url: width: 20, format: 'pjpg' }}"
+                                                        sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), 100vw"
+                                                        alt="{{ section.settings.image.alt | escape }}"
+                                                        class="w-100 position-absolute top-0 start-0 h-100"
+                                                        loading="lazy"
+                                                        width="{{ section.settings.image.width | divided_by: 3 }}"
+                                                        height="{{ section.settings.image.height | divided_by: 3 }}"
+                                                    >
+                                                {%- else -%}
+                                                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                                                {%- endif -%}
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-5  mt-4 mt-md-0 {% if section.settings.image_alignment == 'left' %}order-md-2{% else %} ms-auto order-md-1{% endif %}">
+                                            <div class="inside-block {{ section.settings.alignment }}">
+                                                {% if section.settings.heading_txt != blank %}
+                                                    <h3 class="mb-3">{{ section.settings.heading_txt }}</h3>
+                                                {% endif %}
+                                                {% if section.settings.img_text1 != blank %}
+                                                    <p class="mb-3 mb-xl-5">{{ section.settings.img_text1 }}</p>
+                                                {% endif %}
+                                                {% if section.settings.img_text2 != blank %}
+                                                    <p class="mb-3 mb-xl-5">{{ section.settings.img_text2 }}</p>
+                                                {% endif %}
+                                                {% if section.settings.img_text3 != blank %}
+                                                    <p class="m-0">{{ section.settings.img_text3 }}</p>
+                                                {% endif %}
+                                                {% if section.settings.step_heading != blank %}
+                                                    <h6 class="mb-2 mb-md-3 text-uppercase">{{ section.settings.step_heading }}</h6>
+                                                {% endif %}
+                                                {% if section.settings.btn_txt != blank %}
+                                                    <a {% if section.settings.btn_link %} href="{{ section.settings.btn_link }}" {% endif %}class="btn btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}">{{ section.settings.btn_txt }}</a>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="skin-images pb-10">
+                                <div class="container">
+                                    <slider-element class="swiper-container carousel d-block position-relative arrow-outside">
+                                        <div class="swiper swiper-slider featured-collection-slider card-carousel" data-slider='{
+                                              "loop": false,
+                                              "shortSwipes": false,
+                                              "slidesPerView": "1.3",
+                                              "spaceBetween": 15,
+                                              "observer": true,
+                                              "freeMode": true,
+                                                "observeParents": true,
+                                              "grabCursor": true,
+                                              "navigation": {
+                                                  "nextEl": ".product-button-next",
+                                                  "prevEl": ".product-button-prev"
+                                              },
+                                              "pagination": {
+                                                  "el": ".swiper-pagination"
+                                              },
+                                              "breakpoints": {
+                                                "560": {
+                                                  "slidesPerView": 2,
+                                                  "spaceBetween":20
+
+                                                },
+                                                "768": {
+                                                  "slidesPerView": 2.8,
+                                                  "spaceBetween":20
+                                                },
+                                                "992": {
+                                                  "slidesPerView": 3.5,
+                                                  "spaceBetween":30
+                                                },
+                                                "1200": {
+                                                    "slidesPerView": 4.5,
+                                                    "spaceBetween":30
+                                                  },
+                                                  "1400": {
+                                                    "slidesPerView": 5,
+                                                    "spaceBetween":30
+                                                  }
+                                             }
+                                          }'>
+                                            <div class="swiper-wrapper ">
+                                                {%- for block in section.blocks limit: 5 -%}
+                                                <div class="swiper-slide">
+                                                    <div class="d-flex">
+                                                        <div class="card border-0" style="width: 228px;">
+                                                            <div class="hiw-card-img">
+                                                                {%- if block.settings.skin_image != blank -%}
+                                                                    <img src="{{ block.settings.skin_image | image_url: width: 360, format: 'pjpg' }} " alt="" loading="lazy" class="card-img-top" height="360" width="360" loading="lazy">
+                                                                    {% if forloop.last == true %}<p></p>{% else %} <span class="ox-arrow-up position-absolute top-50 right-0 slider-arrow fw-lighter"></span> {% endif %}
+                                                                {%- else -%}
+                                                                <img src="{{ settings.no_image | image_url: width: 360, format: 'pjpg' }} " alt="" class="card-img-top" height="360" width="360" loading="lazy">
+                                                                {%- endif -%}
+                                                            </div>
+                                                            <div class="card-body px-0">
+                                                                {%- if block.settings.skin_text != blank -%}
+                                                                <p class="font-size-md mb-0 ">{{ block.settings.skin_text }}</p>
+                                                                {%- endif -%}
+                                                            </div>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                                {%- endfor -%}
+                                            </div>
+                                        </div>
+                                    </slider-element>
+                                </div>
+                            </section>
+                            <section class="image-with-text  two-image-border "  data-section-id="{{ section.id }}" >
+                                <div class="">
+                                    <div class="row align-items-center">
+                                        <div class="col-12 col-lg-4 col-xl-6 ">
+                                            <div class="inside-block care-block-parent ps-3">
+                                                <div class="care-block">
+                                                    {% if section.settings.Contour_para != blank %}
+                                                    <p class="font-size-lg-20 fw-medium m-0 px-3 px-lg-0 py-4 py-lg-0">{{ section.settings.Contour_para }}</p>
+                                                {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-8  col-xl-6 d-md-flex justify-content-end">
+                                            <div class="face-skin-card border-start ">
+                                                <div class="banner-img  position-relative    border-bottom {{ section.settings.height }}">
+                                                    {%- if section.settings.Contour_image1 != blank -%}
+                                                        <img
+                                                            srcset="
+                                                            {%- if section.settings.Contour_image1.width >= 360 -%}{{ section.settings.Contour_image1 | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+                                                            {%- if section.settings.Contour_image1.width >= 520 -%}{{ section.settings.Contour_image1 | image_url: width: 520, format: 'pjpg' }} 520w,{%- endif -%}
+                                                            {%- if section.settings.Contour_image1.width >= 650 -%}{{ section.settings.Contour_image1 | image_url: width: 650, format: 'pjpg' }} 650w,{%- endif -%}
+                                                            {%- if section.settings.Contour_image1.width >= 780 -%}{{ section.settings.Contour_image1 | image_url: width: 780, format: 'pjpg' }} 780w,{%- endif -%}
+                                                            {%- if section.settings.Contour_image1.width >= 900 -%}{{ section.settings.Contour_image1 | image_url: width: 900, format: 'pjpg' }} 900w,{%- endif -%}
+                                                            {%- if section.settings.Contour_image1.width >= 1000 -%}{{ section.settings.Contour_image1 | image_url: width: 1000, format: 'pjpg' }} 1000w,{%- endif -%}"
+                                                            src="{{ section.settings.Contour_image1 | image_url: width: 20, format: 'pjpg' }}"
+                                                            sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), 100vw"
+                                                            alt="{{ section.settings.image.alt | escape }}"
+                                                            class="w-100 h-100 position-absolute top-0 start-0"
+                                                            loading="lazy"
+                                                            width="{{ section.settings.image.width | divided_by: 3 }}"
+                                                            height="{{ section.settings.image.height | divided_by: 3 }}"
+                                                        >
+                                                    {%- else -%}
+                                                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                                                    {%- endif -%}
+
+                                                </div>
+                                                <div class="py-3 px-4">
+                                                        {% if section.settings.Contour_image_text1 != blank %}
+                                                                {{ section.settings.Contour_image_text1 }}
+                                                        {% endif %}
+                                                </div>
+                                            </div>
+                                            <div class="face-skin-card border-start face-care-card">
+                                                <div class="banner-img border-bottom {{ section.settings.height }}">
+                                                    {%- if section.settings.Contour_image2 != blank -%}
+                                                        <img
+                                                            srcset="
+                                                            {%- if section.settings.Contour_image2.width >= 360 -%}{{ section.settings.Contour_image2 | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+                                                            {%- if section.settings.Contour_image2.width >= 520 -%}{{ section.settings.Contour_image2 | image_url: width: 520, format: 'pjpg' }} 520w,{%- endif -%}
+                                                            {%- if section.settings.Contour_image2.width >= 650 -%}{{ section.settings.Contour_image2 | image_url: width: 650, format: 'pjpg' }} 650w,{%- endif -%}
+                                                            {%- if section.settings.Contour_image2.width >= 780 -%}{{ section.settings.Contour_image2 | image_url: width: 780, format: 'pjpg' }} 780w,{%- endif -%}
+                                                            {%- if section.settings.Contour_image2.width >= 900 -%}{{ section.settings.Contour_image2 | image_url: width: 900, format: 'pjpg' }} 900w,{%- endif -%}
+                                                            {%- if section.settings.Contour_image2.width >= 1000 -%}{{ section.settings.Contour_image2 | image_url: width: 1000, format: 'pjpg' }} 1000w,{%- endif -%}"
+                                                            src="{{ section.settings.Contour_image2 | image_url: width: 20, format: 'pjpg' }}"
+                                                            sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), 100vw"
+                                                            alt="{{ section.settings.image.alt | escape }}"
+                                                            class="w-100 h-100"
+                                                            loading="lazy"
+                                                            width="{{ section.settings.image.width | divided_by: 3 }}"
+                                                            height="{{ section.settings.image.height | divided_by: 3 }}"
+                                                        >
+                                                    {%- else -%}
+                                                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                                                    {%- endif -%}
+
+                                                </div>
+                                                <div class="  py-3  px-4">
+                                                    {% if section.settings.Contour_image_text2 != blank %}
+                                                                {{ section.settings.Contour_image_text2 }}
+                                                        {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </custom-accordion>
+        </div>
+    </div>
+</section>
+<section data-section-id="{{ section.id }}" class="how-its-works-accrdian border-top  overflow-hidden">
+    <div class="">
+        <div class="row">
+            <custom-accordion {{ block.shopify_attributes }} data-accordionType="single" >
+                <div class="accordion__container ">
+                    <a class="accordion__toggle d-flex align-items-center container py-5" data-how-its-work href="javascript:void(0);" title="Open {{ block.settings.title | strip_html }}" rel="nofollow" aria-label="Open {{ block.settings.title | strip_html }}" role="button" aria-expanded="false" aria-controls="faq-{{ section.settings.heading | handleize }}-{{ forloop.index }}">
+                        <div class="col-5  col-lg-3 " style="pointer-events:none;">
+                            <img src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Group_1563.png?v=1669874448" alt="{{ shop.name | escape }}" class="img-fluid" style="width:216px" loading="lazy" height="216" width="216" loading="lazy">
+                        </div>
+                        <div class="col-7 col-lg-3 text-end ms-auto">
+                            <div class="h6 btn btn-simple m-0 btn-hiw ls-sm">SEE HOW IT WORKS +</div>
+                        </div>
+                    </a>
+                    <div class="accordion__block toggle-content mt-4" id="faq-{{ section.settings.heading | handleize }}-{{ forloop.index }}-2" data-type="content">
+                        <section class="mb-11 image-with-text"  data-section-id="{{ section.id }}" >
+                            <div class="container">
+                                <div class="row align-items-end">
+                                    <div class="col-12 col-md-6 col-lg-5  {% if section.settings.image_alignment == 'left' %}order-md-1{% else %}order-md-2 me-auto{% endif %}">
+                                        <div class="banner-img  position-relative accordion__image-with-text">
+                                            {%- if section.settings.clear_image != blank -%}
+                                                <img
+                                                    srcset="
+                                                    {%- if section.settings.clear_image.width >= 360 -%}{{ section.settings.clear_image | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+                                                    {%- if section.settings.clear_image.width >= 520 -%}{{ section.settings.clear_image | image_url: width: 520, format: 'pjpg' }} 520w,{%- endif -%}
+                                                    {%- if section.settings.clear_image.width >= 650 -%}{{ section.settings.clear_image | image_url: width: 650, format: 'pjpg' }} 650w,{%- endif -%}
+                                                    {%- if section.settings.clear_image.width >= 780 -%}{{ section.settings.clear_image | image_url: width: 780, format: 'pjpg' }} 780w,{%- endif -%}
+                                                    {%- if section.settings.clear_image.width >= 900 -%}{{ section.settings.clear_image | image_url: width: 900, format: 'pjpg' }} 900w,{%- endif -%}
+                                                    {%- if section.settings.clear_image.width >= 1000 -%}{{ section.settings.clear_image | image_url: width: 1000, format: 'pjpg' }} 1000w,{%- endif -%}"
+                                                    src="{{ section.settings.clear_image | image_url: width: 20, format: 'pjpg' }}"
+                                                    sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), 100vw"
+                                                    alt="{{ section.settings.image.alt | escape }}"
+                                                    class="w-100 position-absolute top-0 start-0 h-100"
+                                                    loading="lazy"
+                                                    width="{{ section.settings.image.width | divided_by: 3 }}"
+                                                    height="{{ section.settings.image.height | divided_by: 3 }}"
+                                                >
+                                            {%- else -%}
+                                                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                                            {%- endif -%}
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-5  mt-4 mt-md-0 {% if section.settings.image_alignment == 'left' %}order-md-2{% else %} ms-auto order-md-1{% endif %}">
+                                        <div class="inside-block {{ section.settings.alignment }}">
+                                            {% if section.settings.clear_heading_txt1 != blank %}
+                                                <p class="mb-3">{{ section.settings.clear_heading_txt1 }}</h3>
+                                            {% endif %}
+                                            {% if section.settings.clear_heading_txt2 != blank %}
+                                                <p class="mb-3 ">{{ section.settings.clear_heading_txt2 }}</p>
+                                            {% endif %}
+                                            {% if section.settings.clear_heading_txt3 != blank %}
+                                                <p class="mb-3 ">{{ section.settings.clear_heading_txt3 }}</p>
+                                            {% endif %}
+                                            {% if section.settings.clear_heading_txt4 != blank %}
+                                                <p class="m-0">{{ section.settings.clear_heading_txt4 }}</p>
+                                            {% endif %}
+                                            {% if section.settings.step_heading != blank %}
+                                                <h6 class="mb-2 mb-md-3 text-uppercase">{{ section.settings.step_heading }}</h6>
+                                            {% endif %}
+                                            {% if section.settings.btn_txt != blank %}
+                                                <a {% if section.settings.btn_link %} href="{{ section.settings.btn_link }}" {% endif %}class="btn btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}">{{ section.settings.btn_txt }}</a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="skin-images pb-10">
+                            <div class="container">
+                                <slider-element class="swiper-container carousel d-block position-relative arrow-outside">
+                                    <div class="swiper swiper-slider featured-collection-slider card-carousel" data-slider='{
+                                            "loop": false,
+                                            "shortSwipes": false,
+                                            "slidesPerView": "1",
+                                            "observer": true,
+                                            "observeParents": true,
+                                            "spaceBetween": 15,
+                                            "freeMode": true,
+                                            "grabCursor": true,
+                                            "navigation": {
+                                                "nextEl": ".product-button-next",
+                                                "prevEl": ".product-button-prev"
+                                            },
+                                            "pagination": {
+                                                "el": ".swiper-pagination"
+                                            },
+                                            "breakpoints": {
+                                            "560": {
+                                                "slidesPerView": 1.5
+                                            },
+                                            "768": {
+                                                "slidesPerView": 3,
+                                                "spaceBetween": 30
+                                            },
+                                            "992": {
+                                                "slidesPerView": 4,
+                                                "spaceBetween": 30
+                                            }
+                                            }
+                                        }'>
+                                        <div class="swiper-wrapper ">
+                                            {%- for block in section.blocks -%}
+                                                {%- if block.type == 'clear_image_card' -%}
+                                                    <div class="swiper-slide">
+                                                            <div class="card border-0 " style="width:312px;">
+                                                                <div class="hiw-card-img">
+                                                                    {%- if block.settings.clear_skin_image != blank -%}
+                                                                    <img src=" {{ block.settings.clear_skin_image | image_url: width: 360, format: 'pjpg' }} " alt="" class="card-img-top" height="360" width="360" loading="lazy">
+                                                                    {% if forloop.last == true %}<p></p>{% else %} <span class="ox-arrow-up position-absolute top-50 right-0 slider-arrow-second fw-lighter"></span> {% endif %}
+                                                                    {%- else -%}
+                                                                    <img src=" {{ settings.no_image | image_url: width: 360, format: 'pjpg' }} " alt="" class="card-img-top" height="360" width="360" loading="lazy">
+                                                                    {%- endif -%}
+                                                                </div>
+
+                                                                <div class="card-body px-0">
+                                                                    {%- if block.settings.skin_text != blank -%}
+                                                                    <p class="font-size-md mb-0 ">{{ block.settings.skin_text }}</p>
+                                                                    {%- endif -%}
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                {%- endif -%}
+                                            {%- endfor -%}
+                                        </div>
+                                    </div>
+                                </slider-element>
+                            </div>
+                        </section>
+                        <section class="image-with-text  two-image-border "  data-section-id="{{ section.id }}" >
+                            <div class="container-fluid px-0">
+                                <div class="row align-items-center no-gutter ">
+                                    <div class="col-12 col-lg-4  col-xl-6 ps-3">
+                                        <div class="care-block-parent">
+                                            <div class="care-block">
+                                                {% if section.settings.teatementpara != blank %}
+                                                    <p class="py-4 pt-lg-0 font-size-lg-20 fw-medium  m-0 px-3 px-lg-0  pb-lg-0">{{ section.settings.teatementpara }}</p>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-8  col-xl-6 d-md-flex justify-content-end">
+                                        <div class="face-skin-card  ">
+                                            <div class="banner-img     border-bottom {{ section.settings.height }}">
+                                                {%- if section.settings.clear_image1 != blank -%}
+                                                    <img
+                                                        srcset="
+                                                        {%- if section.settings.clear_image1.width >= 360 -%}{{ section.settings.clear_image1 | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+                                                        {%- if section.settings.clear_image1.width >= 520 -%}{{ section.settings.clear_image1 | image_url: width: 520, format: 'pjpg' }} 520w,{%- endif -%}
+                                                        {%- if section.settings.clear_image1.width >= 650 -%}{{ section.settings.clear_image1 | image_url: width: 650, format: 'pjpg' }} 650w,{%- endif -%}
+                                                        {%- if section.settings.clear_image1.width >= 780 -%}{{ section.settings.clear_image1 | image_url: width: 780, format: 'pjpg' }} 780w,{%- endif -%}
+                                                        {%- if section.settings.clear_image1.width >= 900 -%}{{ section.settings.clear_image1 | image_url: width: 900, format: 'pjpg' }} 900w,{%- endif -%}
+                                                        {%- if section.settings.clear_image1.width >= 1000 -%}{{ section.settings.clear_image1 | image_url: width: 1000, format: 'pjpg' }} 1000w,{%- endif -%}"
+                                                        src="{{ section.settings.clear_image1 | image_url: width: 20, format: 'pjpg' }}"
+                                                        sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), 100vw"
+                                                        alt="{{ section.settings.image.alt | escape }}"
+                                                        class="w-100 h-100"
+                                                        loading="lazy"
+                                                        width="{{ section.settings.image.width | divided_by: 3 }}"
+                                                        height="{{ section.settings.image.height | divided_by: 3 }}"
+                                                    >
+                                                {%- else -%}
+                                                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                                                {%- endif -%}
+
+                                            </div>
+                                            <div class=" py-3 pe-lg-8 px-4">
+                                                    {% if section.settings.Clear_image_text1 != blank %}
+                                                            {{ section.settings.Clear_image_text1 }}
+                                                    {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="face-skin-card  face-care-card">
+                                            <div class="banner-img    border-bottom {{ section.settings.height }}">
+                                                {%- if section.settings.clear_image2 != blank -%}
+                                                    <img
+                                                        srcset="
+                                                        {%- if section.settings.clear_image2.width >= 360 -%}{{ section.settings.clear_image2 | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+                                                        {%- if section.settings.clear_image2.width >= 520 -%}{{ section.settings.clear_image2 | image_url: width: 520, format: 'pjpg' }} 520w,{%- endif -%}
+                                                        {%- if section.settings.clear_image2.width >= 650 -%}{{ section.settings.clear_image2 | image_url: width: 650, format: 'pjpg' }} 650w,{%- endif -%}
+                                                        {%- if section.settings.clear_image2.width >= 780 -%}{{ section.settings.clear_image2 | image_url: width: 780, format: 'pjpg' }} 780w,{%- endif -%}
+                                                        {%- if section.settings.clear_image2.width >= 900 -%}{{ section.settings.clear_image2 | image_url: width: 900, format: 'pjpg' }} 900w,{%- endif -%}
+                                                        {%- if section.settings.clear_image2.width >= 1000 -%}{{ section.settings.clear_image2 | image_url: width: 1000, format: 'pjpg' }} 1000w,{%- endif -%}"
+                                                        src="{{ section.settings.clear_image2 | image_url: width: 20, format: 'pjpg' }}"
+                                                        sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), 100vw"
+                                                        alt="{{ section.settings.image.alt | escape }}"
+                                                        class="w-100 h-100"
+                                                        loading="lazy"
+                                                        width="{{ section.settings.image.width | divided_by: 3 }}"
+                                                        height="{{ section.settings.image.height | divided_by: 3 }}"
+                                                    >
+                                                {%- else -%}
+                                                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                                                {%- endif -%}
+
+                                            </div>
+                                            <div class="py-3 px-4">
+                                                {% if section.settings.Clear_image_text2 != blank %}
+                                                            {{ section.settings.Clear_image_text2 }}
+                                                    {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </custom-accordion>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Accordion Block",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image With Text"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "img_text1",
+      "label": "Paragraph 1",
+      "default": "Awesome Sub Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "img_text2",
+      "label": "Paragraph 2"
+    },
+    {
+      "type": "textarea",
+      "id": "img_text3",
+      "label": "Paragraph 3"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select Image",
+      "info": "For Better Viewing Use Example dimentions: 775*735 ( Aspect Ratio: 1.05 )"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-end",
+          "label": "Right"
+        }
+      ],
+      "default": "text-left"
+    },
+    {
+      "type": "select",
+      "id": "image_alignment",
+      "label": "Image Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Contour Image"
+    },
+    {
+      "type": "textarea",
+      "id": "Contour_para",
+      "label": "Contour Paragraph"
+    },
+    {
+      "type": "image_picker",
+      "id": "Contour_image1",
+      "label": "Contour Image 1",
+      "info": "For Better Viewing Use Example Dimensions: 951x860 ( Aspect Ratio: 1.11:1 )"
+    },
+    {
+      "type": "html",
+      "id": "Contour_image_text1",
+      "label": "Contour Paragraph Html"
+    },
+    {
+      "type": "image_picker",
+      "id": "Contour_image2",
+      "label": "Contour Image 2",
+      "info": "For Better Viewing Use Example Dimensions: 951x860 ( Aspect Ratio: 1.11:1 )"
+    },
+    {
+      "type": "html",
+      "id": "Contour_image_text2",
+      "label": "Contour Paragraph"
+    },
+    {
+      "type": "header",
+      "content": "Clear Image Accordion"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "clear_image",
+      "label": "Select Image"
+    },
+    {
+      "type": "textarea",
+      "id": "clear_heading_txt1",
+      "label": "Paragraph 1"
+    },
+    {
+      "type": "textarea",
+      "id": "clear_heading_txt2",
+      "label": "Paragraph 2"
+    },
+    {
+      "type": "textarea",
+      "id": "clear_heading_txt3",
+      "label": "Paragraph 3"
+    },
+    {
+      "type": "textarea",
+      "id": "clear_heading_txt4",
+      "label": "Paragraph 4"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "textarea",
+      "id": "teatementpara",
+      "label": "Result Paragraph"
+    },
+    {
+      "type": "image_picker",
+      "id": "clear_image1",
+      "label": "Before Omnilux Contour Image ",
+      "info": "For Better Viewing Use Example Dimensions: 951x860 ( Aspect Ratio: 1.11:1 )"
+    },
+    {
+      "type": "html",
+      "id": "Clear_image_text1",
+      "label": "Before Omnilux Contour Paragraph html"
+    },
+    {
+      "type": "image_picker",
+      "id": "clear_image2",
+      "label": "After Omnilux Contour Image ",
+      "info": "For Better Viewing Use Example Dimensions: 951x860 ( Aspect Ratio: 1.11:1 )"
+    },
+    {
+      "type": "html",
+      "id": "Clear_image_text2",
+      "label": "After Omnilux Contour Paragraph html"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "skin_image_card",
+      "name": "Skin Image Card",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "skin_image",
+          "label": "Skin Image"
+        },
+        {
+          "type": "textarea",
+          "id": "skin_text",
+          "label": "Skin Image Bottom Text"
+        }
+      ]
+    },
+    {
+      "type": "clear_image_card",
+      "name": "Clear Skin Image Card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "clear_skin_image",
+          "label": "Skin Image"
+        },
+        {
+          "type": "textarea",
+          "id": "skin_text",
+          "label": "Skin Image Bottom Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion Block"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+
+

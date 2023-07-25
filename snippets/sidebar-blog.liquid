@@ -1,0 +1,213 @@
+<div class="sidebar-blog h-100 border-start ps-lg-5 {% if block.settings.sidebar_is_sticky %}sticky-top{% endif %}">
+  <div class="position-relative card border-0 py-3 d-none blog-search-box">
+    <form
+      action="/search"
+      method="get"
+      role="search"
+      class="d-flex h-100 align-items-center">
+      <div class="field">
+        <input
+          type="hidden"
+          name="type"
+          value="blog">
+        <input
+          class="form-control rounded-0 border-0 ps-lg-0"
+          type="search"
+          name="q"
+          value=""
+          placeholder="Search blog articles">
+        <button
+          class="search__button field__button focus-inset text-primary px-0"
+          aria-label="Search Our Store"
+          style="font-size: 22px;">
+          <span class="ox-search"></span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+ <div id="sidebarform" class="position-relative card border-0 py-lg-7 py-5">
+<div class="card-header pt-1 border-0 bg-transparent p-0 h6 ls-sm">Receive updates on special offers, products, new launches, and more</div>
+ <div class="text-left">
+<div id="footer_email_capture" class="klaviyo-form-TLyKnL"></div>
+          </div></div>
+
+  
+  {% for block in section.blocks %}
+    {% comment %} social sharing {% endcomment %}
+    {% if block.settings.enable_socials %}
+      <div class="position-relative card border-0 py-lg-7 py-5 card-socials" {{ block.shopify_attributes }}>
+        <div class="card-header pt-1 border-0 bg-transparent p-0 h6 ls-sm">{{ block.settings.socials_title }}</div>
+        <div class="card-body border-0 pt-3 mt-1 p-0 text-left">
+          <ul class="social-links list-unstyled list-inline mb-0">
+            {% if block.settings.social_icon_instagram %}
+              <li class="list-inline-item">
+                <a
+                  href="{{ settings.social_instagram_link }}"
+                  target="_blank"
+                  style="color: {{ section.settings.footer_top_link_color }};"
+                  title="Instagram"
+                  rel="nofollow"
+                  aria-label="Instagram">
+                  <span class="ox-instagram"></span>
+                </a>
+              </li>
+            {% endif %}
+
+            {% if block.settings.social_icon_facebook %}
+              <li class="list-inline-item">
+                <a
+                  href="{{ settings.social_facebook_link }}"
+                  target="_blank"
+                  style="color: {{ section.settings.footer_top_link_color }};"
+                  title="Facebook"
+                  rel="nofollow"
+                  aria-label="Facebook">
+                  <span class="ox-facebook"></span>
+                </a>
+              </li>
+            {% endif %}
+            {% if block.settings.social_icon_tiktok %}
+              <li class="list-inline-item">
+                <a
+                  href="{{ settings.social_tiktok_link }}"
+                  target="_blank"
+                  style="color: {{ section.settings.footer_top_link_color }};"
+                  title="tiktok"
+                  rel="nofollow"
+                  aria-label="tiktok">
+                  <span class="ox-tiktok"></span>
+                </a>
+              </li>
+            {% endif %}
+            {% if block.settings.social_icon_twitter %}
+              <li class="list-inline-item">
+                <a
+                  href="{{ settings.social_twitter_link }}"
+                  target="_blank"
+                  style="color: {{ section.settings.footer_top_link_color }};"
+                  title="Twitter"
+                  rel="nofollow"
+                  aria-label="Twitter">
+                  <span class="icon-twitter"></span>
+                </a>
+              </li>
+            {% endif %}
+
+            {% if block.settings.social_icon_youtube %}
+              <li class="list-inline-item">
+                <a
+                  href="{{ settings.social_youtube_link }}"
+                  target="_blank"
+                  style="color: {{ section.settings.footer_top_link_color }};"
+                  title="YouTube"
+                  rel="nofollow"
+                  aria-label="YouTube">
+                  <span class="ox-youtube"></span>
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    {% endif %}
+
+    {% comment %} recent articles {% endcomment %}
+    {% if block.settings.enable_recent_articles %}
+      <div class="position-relative card border-0 py-lg-7 py-5 card-recent-articles">
+        <div class="card-header pt-1 border-0 bg-transparent p-0 h6">{{ block.settings.recent_articles_title }}</div>
+        <div class="card-body border-0 pt-3 mt-1 p-0">
+          <ul class="list-unstyled mb-0">
+            {% assign total_recent_articles = block.settings.total_recent_articles %}
+            {% for article in blogs[blog.handle].articles limit: total_recent_articles %}
+              <li class="list-group-item {% unless forloop.last %}mb-5{% endunless %} ">
+                <div class="d-flex align-items-end">
+                  <div class="flex-shrink-0" style="width: 100%;max-width: 125px;">
+                    <a
+                      href="{{ article.url }}"
+                      class="d-block"
+                      title="{{ article.title }}"
+                      aria-label="{{ article.title }}">
+                      {%- if article.image.src != blank -%}
+                        <img
+                          class="d-flex mr-3 w-100"
+                          src="{{ article.image | image_url: width: 200, height: 200, crop: 'center' }}"
+                          class="img-fluid"
+                          alt="{{ article.title | escape }}"
+                          loading="lazy"
+                          width="{{ article.image.width }}"
+                          height="{{ article.image.width | divided_by: article.image.aspect_ratio }}">
+                      {%- else -%}
+                        <img
+                          class="d-flex mr-3 w-100"
+                          src="{{ settings.no_image | image_url: width: 200, height: 200, crop: 'center' }}"
+                          class="img-fluid"
+                          alt="{{ article.title | escape }}"
+                          loading="lazy"
+                          width="{{ settings.no_image.width }}"
+                          height="{{ settings.no_image.width | divided_by: settings.no_image.aspect_ratio }}">
+                      {%- endif -%}
+                    </a>
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <div class="mt-0 mb-0 fw-semibold">
+                      <a href="{{ article.url }}">{{ article.title }}</a>
+                    </div>
+                    <p class="py-0 d-none">{{ article.content | strip_html | truncatewords: 8 }}</p>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    {% endif %}
+
+
+    {% comment %} tags list {% endcomment %}
+    {% if block.settings.enable_tags %}
+      <div class="position-relative card border-0 py-lg-7 py-5 card-tags">
+        <div class="card-header pt-1 border-0 bg-transparent p-0 h6">{{ block.settings.tags_title }}</div>
+        <div class="card-body border-0 pt-3 mt-1 p-0">
+          {% for tag in blog.all_tags %}
+            {% if current_tags contains tag %}
+              <span class="badge badge-pill badge-dark">{{ tag }}</span>
+            {% else %}
+              <span class="badge badge-pill badge-light">{{ tag | link_to_tag: tag }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% comment %} Shop Favorites {% endcomment %}
+    {% if block.settings.enable_shop_favorites %}
+      <div class="position-relative border-0 py-lg-7 py-5 card-tags">
+        <div class="d-flex my-n2 align-items-center justify-content-between card-header pt-1 border-0 bg-transparent p-0 h6 flex-wrap">
+          <span class="py-2 pe-3">{{ block.settings.shop_favorites_title }}</span>
+          <span class="py-2">
+            {% if block.settings.btn_txt != blank %}
+              <a
+                {% if block.settings.btn_link %}
+                href="{{ block.settings.btn_link }}"
+                {% endif %}
+                class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }}">{{ block.settings.btn_txt }}</a>
+            {% endif %}
+          </span>
+        </div>
+        <div class="card-body border-0 pt-4 mt-1 p-0">
+          <div class="row justify-content-center mx-n2 my-n3 pb-1">
+            {% for i in (1..2) %}
+              {% capture product %}product_{{ i }}{% endcapture %}
+              <div class="px-2 col-12 py-3 col-sm-6 col-lg-12 col-xl-6">
+                {% render 'card-product-style-generic', product: block.settings[product] %}
+              </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+  {% endfor %}
+</div>

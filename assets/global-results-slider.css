@@ -1,0 +1,104 @@
+.rectangle-card{
+    padding-top:89%;
+}
+.contour-text:after, .contour-text::before,
+.before-text:after, .before-text::before {
+    content: 'Without Contour';
+    color: white;
+    position:absolute;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing:-1.04px;
+    line-height:1.2307692308;
+    bottom: 0;
+    left: 0;
+    width: calc(50% - 1px);
+    padding: 0 6.5px 16px 13px;
+}
+.contour-text::before{
+    content: 'With Contour';
+    left:calc(50% + 2px);
+}
+.before-text:after{
+    content: 'After';
+    left:calc(50% + 2px);
+}
+.before-text::before{
+    content: 'Before';
+}
+.arrow-center .results-slider-buttons {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.red-more-btn
+{
+    cursor: pointer;
+}
+@media (min-width:768px){
+    .contour-text:after, .contour-text::before,
+    .before-text:after, .before-text::before
+    {
+        font-size:16px;
+    }
+}
+@media (min-width:992px){
+    .contour-text:after, .contour-text::before,
+    .before-text:after, .before-text::before
+    {
+        font-size:18px;
+    }
+}
+@media (min-width:1400px){
+    .contour-text:after, .contour-text::before,
+    .before-text:after, .before-text::before
+    {
+        font-size: 26px;
+    }
+}
+.red-more-btn
+{
+    cursor: pointer;
+}
+.arrow-center.carousel .swiper-button-next {
+    top: 46%;
+    transform: translateY(-46%);
+}
+.arrow-center.carousel .swiper-button-prev {
+    top: 46%;
+    transform: translateY(-46%);
+}
+@media (max-width:559.85px)
+{
+    .global-results-slider-noplay .results-slider-list
+    {
+        overflow: visible !important;
+    }
+    .global-results-slider-noplay
+    {
+        overflow: hidden;
+    }
+    .global-results-slider-noplay .swiper-slide
+    {
+        transition: all 1s;
+    }
+    .global-results-slider-noplay .swiper-slide-prev:not(:nth-last-child(2))
+    {
+        opacity: 0;
+    }
+}
+.iframe-testimonial-buttons{
+    width: 110px;
+    bottom: 5%;
+}
+@media (min-width:576px){
+    .iframe-testimonial-buttons{
+        bottom: 13%;
+    }
+}
+@media (min-width: 1200px){
+    .iframe-testimonial-buttons{
+        bottom: 13%;
+    }
+}

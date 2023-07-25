@@ -1,0 +1,249 @@
+<section id="{{ section.settings.anchorid }}" class="section-content info-block-wrapper py-8 border-bottom py-lg-11"  data-section-id="{{ section.id }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+        <div class="row">
+            <div class="col-12 text-center d-flex flex-column justify-content-center mb-6 mb-lg-8 pb-1 pb-lg-0">
+                {%- if section.settings.heading_txt != blank -%}
+                  <h3 class="h2 section-title mb-3">{{ section.settings.heading_txt }}</h3>
+                {% endif %}
+                {%- if section.settings.lead_txt != blank -%}
+                  <p class="me-xl-n1 mb-0">
+                      {{ section.settings.lead_txt }}
+                  </p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {% assign blocks_size = section.blocks | size %}
+                {%- if blocks_size > 0 -%}
+                <div class="row my-n3" data-in-view>
+                    {% for block in section.blocks %}
+                    <div class="col-sm-4 py-3 col-12" {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                        <div class="card feature-block border-0">
+                            <div class="card-img text-center position-relative overflow-hidden" style="padding-top:105.64%;transform-origin: top;">
+                                {%- if block.settings.image != blank -%}
+                                <img src="{{ block.settings.image | image_url: width: 20, format: 'pjpg' }}"
+                                  srcset="
+                                  {%- if block.settings.image.width >= 280 -%}{{ block.settings.image | image_url: width: 280, format: 'pjpg' }} 280w,{%- endif -%}
+                                  {%- if block.settings.image.width >= 320 -%}{{ block.settings.image | image_url: width: 320, format: 'pjpg' }} 320w,{%- endif -%}
+                                  {%- if block.settings.image.width >= 345 -%}{{ block.settings.image | image_url: width: 345, format: 'pjpg' }} 345w,{%- endif -%}
+                                  {%- if block.settings.image.width >= 426 -%}{{ block.settings.image | image_url: width: 426, format: 'pjpg' }} 426w,{%- endif -%}
+                                  {%- if block.settings.image.width >= 460 -%}{{ block.settings.image | image_url: width: 460, format: 'pjpg' }} 460w,{%- endif -%}
+                                  {%- if block.settings.image.width >= 520 -%}{{ block.settings.image | image_url: width: 520, format: 'pjpg' }} 520w,{%- endif -%}
+                                  {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}"
+                                  sizes="(min-width: 991px) 426px, (min-width: 768px) 460px, (min-width: 576px) 50vw, 100vw"
+                                  alt="{{ block.settings.title | strip_html }}" loading="lazy"
+                                  width="{{ block.settings.image.width }}" class="w-100 h-100 position-absolute start-0 top-0 object-cover"
+                                  height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio }}"
+                                        >
+                                {% else %}
+                                <img src="{{ settings.no_image | image_url: width: 20, format: 'pjpg' }}" srcset="
+                                {%- if settings.no_image.width.width >= 280 -%}{{ settings.no_image.width | image_url: width: 280, format: 'pjpg' }} 280w,{%- endif -%}
+                                {%- if settings.no_image.width.width >= 320 -%}{{ settings.no_image.width | image_url: width: 320, format: 'pjpg' }} 320w,{%- endif -%}
+                                {%- if settings.no_image.width.width >= 345 -%}{{ settings.no_image.width | image_url: width: 345, format: 'pjpg' }} 345w,{%- endif -%}
+                                {%- if settings.no_image.width.width >= 426 -%}{{ settings.no_image.width | image_url: width: 426, format: 'pjpg' }} 426w,{%- endif -%}
+                                {%- if settings.no_image.width.width >= 460 -%}{{ settings.no_image.width | image_url: width: 460, format: 'pjpg' }} 460w,{%- endif -%}
+                                {%- if settings.no_image.width.width >= 520 -%}{{ settings.no_image.width | image_url: width: 520, format: 'pjpg' }} 520w,{%- endif -%}
+                                {%- if settings.no_image.width.width >= 550 -%}{{ settings.no_image.width | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}"
+                                sizes="(min-width: 991px) 426px, (min-width: 768px) 460px, (min-width: 576px) 50vw, 100vw"
+                                  alt="{{ block.settings.title | strip_html }}" loading="lazy"
+                                  width="{{ settings.no_image.width }}"  class="w-100 h-100 position-absolute start-0 top-0 object-cover"
+                                  height="{{ settings.no_image.width | divided_by: settings.no_image.aspect_ratio }}">
+                                {% endif %}
+                            </div>
+                            <div class="card-body d-flex flex-wrap p-0 flex-grow-0 pt-3">
+                                {%- if block.settings.title != blank -%}
+                                    <div class="h4 fw-light w-100 mb-0">{{ block.settings.title }}</div>
+                                {% endif %}
+                                {%- if block.settings.txt_info != blank -%}
+                                <div class="w-100 pb-md-3 pb-3">
+                                    {{ block.settings.txt_info }}
+                                </div>
+                                {% endif %}
+                                {%- if block.settings.btn_txt != blank -%}
+                                    <a class="btn w-sm-auto w-100 btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" href="{{ block.settings.btn_url }}">{{ block.settings.btn_txt }}</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+  </section>
+  {% schema %}
+{
+  "name": "Info Block",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+     {
+          "type": "text",
+          "id": "anchorid",
+          "label": "Anchor ID"
+        },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "lead_txt",
+      "label": "Lead Text",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo."
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "section_txt_color",
+      "label": "Text Color",
+      "default": "#000"
+    },
+    {
+      "type": "select",
+      "id": "btn_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
+        }
+      ],
+      "default": "outline"
+    },
+    {
+      "type": "select",
+      "id": "btn_variant",
+      "label": "Button Variant",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "btn_size",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Feature Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Info Image",
+          "info": "For Better Viewing Use Example dimentions: 802x847px ( Aspect Ratio: 0.95:1 )"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Info Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "txt_info",
+          "label": "Info Text"
+        },
+        {
+          "type": "text",
+          "id": "btn_txt",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_url",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Info Block",
+      "blocks": [
+        {
+          "type": "content"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  // const inview = document.querySelector('[data-in-view]');
+  // inViewport();
+  // document.addEventListener('scroll', inViewport)
+  // function inViewport() {
+  //   const { top, bottom } = inview.getBoundingClientRect();
+  //   if (window.innerHeight / 1.5 > top) {
+  //       inview.classList.add("in-view");
+  //   }
+  //   else
+  //   {
+  //       inview.classList.remove("in-view");
+  //   }
+  // }
+</script>

@@ -1,0 +1,277 @@
+<link rel="stylesheet" href="{{ 'global-ajax-cart-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'global-ajax-cart-drawer.css' | asset_url | stylesheet_tag }}</noscript>
+
+<!-- AJAX CART HTML -->
+<ajax-cart class="cart-drawer" style="visibility: hidden;" id="cart-drawer" updating="false" data-touch-moveable>
+    <div class="d-flex justify-content-center align-items-center section-header border-bottom mb-md-7 mb-5" id="cartdrawerheader">
+        <h1 class="cart-title fw-semibold mb-0 page-title" tabindex="0">{{ 'templates.cart.title' | t }} (<span data-drawer-cart-count>{{ cart.item_count }}</span>)</h1>
+        <a href="#close-cart" class="btn-close float-right close-ajax--cart d-none" role="button" tabindex="0" rel="nofollow" aria-label="Close" title="Close">
+            <span class="ox-close text-gray-900"></span>
+        </a>
+    </div>
+
+    <div class="row no-gutter">
+        <form data-cart-form action="{{ routes.cart_url }}" method="post">
+            {% if cart.item_count > 0 %}
+                {% if settings.enable_shipping_bar %}
+                    <div class="col-12">
+                        {% render 'cart-free-shipping-bar' %}
+                    </div>
+                {% endif %}
+
+                <div class="col-12">
+                    <div class="cart-header py-2 px-3 bg-gray-300">
+                        <div class="row align-items-center">
+                            <div class="col-4 col-md-6">{{ 'templates.cart.headings.product' | t }}</div>
+                            <div class="d-none d-md-block col-md-2 text-md-center">{{ 'templates.cart.headings.price' | t }}</div>
+                            <div class="col-4 col-md-2 text-center">{{ 'templates.cart.headings.quantity' | t }}</div>
+                            <div class="col-4 col-md-2 text-end">{{ 'templates.cart.headings.total' | t }}</div>
+                        </div>
+                    </div>
+                    <div class="cart-body">
+                    {%- for item in cart.items -%}
+
+                        {%- liquid
+                            assign currentVar = item.product.first_available_variant
+                            for var in item.product.variants
+                                if item.id == var.id
+                                    assign currentVar = var
+                                    break
+                                endif
+                            endfor
+
+                            assign varStatus = 'simple'
+                            if currentVar.inventory_management == 'shopify' and currentVar.inventory_policy == 'deny' and currentVar.inventory_quantity <= 0
+                                assign varStatus = 'sold_out'
+                            elsif currentVar.inventory_management == 'shopify' and currentVar.inventory_policy == 'deny' and item.quantity > currentVar.inventory_quantity
+                                assign varStatus = 'modify'
+                            elsif currentVar.inventory_management == 'shopify' and currentVar.inventory_policy == 'deny' and item.quantity == currentVar.inventory_quantity
+                                assign varStatus = 'locked'
+                            endif
+                        -%}
+
+                        <div class="cart-items py-4 px-2 px-md-3 border-bottom"  data-cart-item data-variant-id="{{ item.id }}" data-product-id="{{item.product.id}}">
+                            <div class="row align-items-center cart-item">
+                                <div class="col-12 mb-3 mb-md-0 col-md-6 cart-product-img">
+                                    <div class="d-flex align-items-center">
+                                        <div class="cart-img me-3 me-lg-4 {% unless item.image %}bg-gray-300{% endunless %}">
+                                        {% if item.image %}
+                                                <img class="img-fluid item-img"
+                                                src="{{ item.image | image_url: width: 150 }}"
+                                                alt="{{ item.image.alt | default: item.product_title | escape }}"
+                                                loading="lazy"
+                                                width="75"
+                                                height="{{ 75 | divided_by: item.image.aspect_ratio | ceil }}" >
+                                            {% else %}
+                                            <img class="img-fluid item-img"
+                                                src="{{ settings.no_image | image_url: width: 150 }}"
+                                                alt="{{ settings.no_image.alt | default: item.product_title | escape }}"
+                                                loading="lazy"
+                                                width="75"
+                                                height="{{ 75 | divided_by: settings.no_image.aspect_ratio | ceil }}" >
+                                            {% endif %}
+                                        </div>
+                                        <div class="cart-item-text">
+
+                                            {%- if section.settings.show_vendor -%}
+                                                <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
+                                            {%- endif -%}
+                                            <a href="{{ item.url }}" class="card-title"> {{ item.product.title | escape }} </a>
+                                            <div data-preorder-cartMessage class="font-size-lg fw-normal my-2"></div>
+                                            {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
+                                                {%- if item.product.has_only_default_variant == false -%}
+                                                    <ul class="list-unstyled">
+                                                    {%- for option in item.options_with_values -%}
+                                                        <li>
+                                                            <span class="text-muted small text-capitalize">{{ option.name }}:</span>
+                                                            <span class="text-muted small text-capitalize">{{ option.value }}</span>
+                                                        </li>
+                                                    {%- endfor -%}
+                                                    </ul>
+                                                {%- endif -%}
+
+                                                {% if item.properties.size != 0 %}
+                                                    <ul class="list-unstyled">
+                                                    {%- for property in item.properties -%}
+                                                        {%- assign property_first_char = property.first | slice: 0 -%}
+                                                        {%- if property.last != blank and property_first_char != '_' -%}
+                                                            <li>
+                                                                <span class="text-muted small text-capitalize">{{ property.first }}:</span>
+                                                                <span class="text-muted small text-capitalize">
+                                                                    {%- if property.last contains '/uploads/' -%}
+                                                                        <a href="{{ property.last }}" target="_blank">
+                                                                            {{ property.last | split: '/' | last }}
+                                                                        </a>
+                                                                    {%- else -%}
+                                                                        {{ property.last }}
+                                                                    {%- endif -%}
+                                                                </span>
+                                                            </li>
+                                                        {%- endif -%}
+                                                    {%- endfor -%}
+                                                    </ul>
+                                                {% endif %}
+
+                                                <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                                            {%- endif -%}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-md-2 text-md-center cart-price">
+                                    {% if item.properties['promo_product'] %}
+                                        <s class="text-muted m-0 p-0">{{ item.price | money }}</s>
+                                    {% else %}
+                                        <span class="m-0 p-0"> {{ item.price | money }} </span>
+                                    {% endif %}
+                                </div>
+                                <div class="col-5 col-md-2 quantity-box">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        {% if item.properties['promo_product'] %}
+                                            <input type="hidden" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" step="1" min="1" pattern="[0-9]*" inputmode="numeric" data-qty-input class="quantity form-control text-center">
+                                        {% else %}
+                                            <div class="quantity-wrapper mx-auto" data-qty-container>
+                                                <label for="{{ 'templates.cart.quantity.label' | t }}" title="{{ 'templates.cart.quantity.label' | t }}">{{ 'templates.cart.quantity.label' | t }}</label>
+                                                <div class="input-group input-group-sm">
+                                                    <div class="input-group-prepend">
+                                                        <a href="javascript:void(0);" class="input-group-text h-100" rel="nofollow" aria-label="{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}" title="{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}" data-for="decrease" data-qty-btn>
+                                                            <span class="btn-decrease d-flex h-100 align-items-center"><span class="ox-minus"></span></span>
+                                                            <span class="visually-hidden">{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <input type="number" name="updates[]" id="updates_{{ item.key }}" aria-label="{{ 'templates.cart.quantity.input_label' | t: product: item.title | escape }}" value="{{ item.quantity }}" step="1" min="1" inputmode="numeric" data-qty-input data-qty-input-mm data-index="{{ forloop.index }}" class="quantity form-control text-center" >
+                                                    <div class="input-group-append">
+                                                        <a href="javascript:void(0);" class="input-group-text h-100 {% if varStatus == 'modify' or varStatus == 'locked' %}disabled{% endif %}" rel="nofollow" aria-label="{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}" title="{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}" data-for="increase" data-qty-btn>
+                                                            <span class="btn-increase d-flex h-100 align-items-center"><span class="ox-plus"></span></span>
+                                                            <span class="visually-hidden">{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="my-0 text-danger ms-3"
+                                                href="javascript:void(0);"
+                                                title="{{ 'templates.cart.remove' | t }}"
+                                                aria-label="{{ 'templates.cart.remove' | t }}"
+                                                data-toggle="tooltip"
+                                                data-itemRemove data-index="{{ forloop.index }}"
+                                                data-placement="left">
+                                                <span class="ox-close"></span>
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="col-3 col-md-2 text-end cart-total-price">
+                                    {% if item.properties['promo_product'] or item.line_price == 0 %}
+                                        <s class="text-muted m-0 p-0">{{ 'templates.cart.free' | t }}</s>
+                                    {% else %}
+                                        <span class="m-0 p-0"> {{ item.line_price | money }} </span>
+                                    {% endif %}
+                                </div>
+                                {%- if varStatus == 'sold_out' -%}
+                                    <p class="text-danger"> {{ 'templates.cart.update_cart_message.sold_out' | t }}</p>
+                                {%- elsif varStatus == 'modify' -%}
+                                    <p class="text-danger">{{ 'templates.cart.update_cart_message.modify' | t: quantity: currentVar.inventory_quantity }}</p>
+                                {%- elsif varStatus == 'locked' -%}
+                                    <p class="text-danger">{{ 'templates.cart.update_cart_message.locked' | t: quantity: currentVar.inventory_quantityt }}</p>
+                                {%- endif -%}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% else %}
+                <div class="cart__warnings text-center section-min-height d-flex flex-column justify-content-center">
+                    <span class="ox-bag display-1 text-gray-500"></span>
+                    <h2 class="cart__empty-text">{{ 'templates.cart.empty' | t }}</h2>
+                    <a href="{{ routes.all_products_collection_url }}" class="link">
+                        {{ 'general.continue_shopping' | t }}
+                    </a>
+                </div>
+            {% endif %}
+        </form>
+        <div class="mt-auto {% unless cart.item_count > 0 %}d-none{% endunless %}" data-upsell-product>
+            <div id="sample-product-container">
+            {% if settings.enable-sample-products and sampleProductAdded == false %}
+                <div class="cart-sample-pro">
+                <div class="cart-sample-wrapper">
+                    <h6 class="d-flex align-items-center justify-content-center mb-3 pb-1">
+                    <img src="https://cdn.shopify.com/s/files/1/0616/3005/4554/files/sample-left.svg?v=1670415902" loading="lazy" width="26" height="22" class="me-2 pe-1" alt="{{ settings.sample-products-title }}"/>
+                    {{ settings.sample-products-title }}
+                    <img src="https://cdn.shopify.com/s/files/1/0616/3005/4554/files/sample-right.svg?v=1670415902" loading="lazy" width="26" height="22" class="ms-2 ps-1" alt="{{ settings.sample-products-title | escape }}"/>
+                    </h6>
+                    <div class="row align-items-center mx-n2" id="cart-sample-products-container">
+                    {% for product in settings.sample-products %}
+                        {%- comment %}<locksmith:d6ff>{% endcomment -%}
+                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: settings, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                        {%- comment %}</locksmith:d6ff>{% endcomment -%}
+                        <div class="col-6 px-2">
+                        <div class="d-flex align-items-center">
+                            <div class="sample-img">
+                            <img src="{{ product.featured_image | image_url: width: 300 }}" loading="lazy" width="80" height="80" alt="{{ product.title | escape }}" class="img-fluid"/>
+                            </div>
+                            <div class="ps-2">
+                            <p class="font-size-md mb-1 fw-semibold text-primary">{{ product.title | truncate: 26 }}
+                            </p>
+                            <a href="javascript:void(0);" role="button" data-sample-product data-id="{{ product.selected_or_first_available_variant.id }}" class="link-txt">+ add</a>
+                            </div>
+                        </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                </div>
+            {% endif %}
+            </div>
+            {% if settings.enable_cart_upsell and settings.upsell_collection != blank %}
+            <div class="cart-upsell-section overflow-hidden" style="background-image: url('https://cdn.shopify.com/s/files/1/0482/6736/2466/files/upsell.jpg?v=1671700903');background-size: 100% 100%;">
+                {% render 'cart-upsell', template: 'drawer' %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-12 cart-total mt-auto border-top position-sticky bottom-0 {% unless cart.item_count > 0 %}d-none{% endunless %}" data-checkoutBtns style="background-image: url('https://cdn.shopify.com/s/files/1/0482/6736/2466/files/total-bg.jpg?v=1671701148');background-size: 100% 100%;padding:8px 20px;z-index: 4;background-color: #fff;">
+            <div class="row no-gutters">
+                <div class="col">
+                    <h5 class="text-capitalize font-size-lg-20 my-0 fw-semibold hideabtest">{{ 'templates.cart.total' | t }}:</h5>
+                  {% comment %} <h5 class="text-capitalize font-size-lg-20 my-0 fw-semibold showabtest">Subtotal:</h5> {% endcomment %}
+                </div>
+                <div class="col-6 text-end hideabtest">
+                    <h5 class="text-capitalize font-size-lg-20 my-0 fw-semibold" data-cartTotal><span class="money">{{ cart.total_price | money }}</span></h5>
+                </div>
+            </div>
+          <div class="afterpay hideabtest">  <div class="cart-afterpay"></div></div>
+
+            {% if settings.enable_cart_notes %}
+                {%- assign cartNote = cart.note -%}
+                <div class="row mt-5" data-cartNote>
+                    <div class="col-12 mx-auto text-center">
+                    <p>{{ 'templates.cart.note' | t }}:</p>
+                        <textarea name="note" class="form-control" rows="4" data-default="{{ cartNote | strip }}">{{ cart.note }}</textarea>
+                        <button type="submit" class="btn m-auto text-decoration-underline" data-saveNote style="display: none;" data-default="Save" data-adding_txt="saving..">Save</button>
+                        <p class="font-size-sm text-center pt-3" data-resultMsg style="display: none;"></p>
+                    </div>
+                </div>
+            {% endif %}
+
+            <a href="/checkout" class="btn btn-primary btn-block mt-3 hideabtest">{{ 'templates.cart.checkout' | t }}</a>
+     <a href="/checkout" class="btn btn-primary btn-block mt-2 showabtest">PROCEED TO CHECKOUT →</a>
+
+            {% if additional_checkout_buttons %}
+                <span class="additional-checkout-buttons additional-checkout-buttons d-flex flex-column hideabtest">
+                    <div id="additional-checkout-buttons">
+                    {{ content_for_additional_checkout_buttons }}
+                    </div>
+                </span>
+            {% endif %}
+           <div class="afterpay showabtest" bis_skin_checked="1">
+            <p class="shopify-installments" id="shopify-installments">
+    <span class="shopify-installments__content" id="shopify-installments-content">Pay in full, or make 4 easy payments with <img class="shopify-installments__content-image" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/t/190/assets/6220a9b0912013c51947f9b8.png" style="display:inline;width:60px;">
+</span>
+  </p></div>
+            <div class="text-center fw-normal font-size-md hideabtest" style="line-height: 1.2142857143;">Shipping and taxes are calculated during checkout.</div>
+        </div>
+    </div>
+    <script type="application/json" data-cartScriptJSON>
+        {{ cart | json }}
+    </script>
+</ajax-cart>
+<!-- END of AJAX CART HTML -->

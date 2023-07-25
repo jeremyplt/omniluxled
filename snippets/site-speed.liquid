@@ -1,0 +1,40 @@
+{% if template contains 'index' %}
+  <script type="text/javascript" data-keep="1">
+    const observer=new MutationObserver(mutations=>{
+    mutations.forEach(({addedNodes})=>{
+                    addedNodes.forEach(node=>{
+                        //if(node.tagName === 'SCRIPT' && node.innerHTML.includes('asyncLoad')) {
+                            //console.log('asyncLoad', node);
+                               // node.type='text/spdnscript';
+                        //}
+                       // if(node.tagName === 'SCRIPT' && node.src != '' && node.src != undefined)
+                       // {
+                            //if(node.src.includes('cdn.shopify')){
+                               // console.log('cdn', node);
+                                //if(node.type.includes('json')){ 
+                                  //  node.type = 'application/ld+json';
+                               // } else {
+                                  //  node.type = 'text/javascript';
+                                //}
+                           // }else{
+                                //console.log('Not cdn', node);
+                               // node.type='text/spdnscript';
+                          //  }  
+                      //  }else{
+                           // if(node.tagName === 'SCRIPT' && node.dataset.keep == undefined){
+                              //  console.log('undefined', node);
+                              //  node.type='text/spdnscript';
+                            //}
+                       // }  
+                        if(node.tagName === 'SCRIPT' && node.src.indexOf('chrome-extension://') != -1) {
+                           // console.log('Chrome', node);
+                            node.type='text/spdnscript';
+                        }
+                    });
+                });
+            });
+            var ua = navigator.userAgent.toLowerCase();
+        if ((ua.indexOf('chrome') > -1 || ua.indexOf('firefox') > -1) && window.location.href.indexOf("no-optimization") === -1) {
+            observer.observe(document.documentElement,{childList:true,subtree:true}
+                            )}</script>
+{% endif %}

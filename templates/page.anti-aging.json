@@ -1,0 +1,832 @@
+{
+  "sections": {
+    "ddb14673-26c0-4c24-b3df-94f59e4ae21d": {
+      "type": "global-header-slider",
+      "blocks": {
+        "28aaeab3-6397-4b19-b7ae-99ed632cf504": {
+          "type": "video-slide",
+          "settings": {
+            "muted": true,
+            "controls": true,
+            "loop": true,
+            "logo_image__": "",
+            "title": "Omnilux Contour",
+            "subtitle": "<p>FDA-cleared, dermatologist-recommended red<\/p><p> light therapy devices clinically proven to <\/p><p>rejuvenate aging skin.<\/p>",
+            "heading__size": false,
+            "heading__lg": 60,
+            "heading__md": 55,
+            "heading__sm": 50,
+            "play_icon": false,
+            "play_btn": false,
+            "btn_txt_watch": "",
+            "btn_type_watch": "outline",
+            "btn_variant_watch": "secondary",
+            "btn_size_watch": "",
+            "btn_txt": "Shop Now",
+            "btn_link": "shopify:\/\/products\/omnilux-contour-face",
+            "btn_type": "",
+            "btn_variant": "white",
+            "btn_size": "",
+            "poster_type": "video",
+            "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b79bd960bcdb4f94bf689ec17145ae0a.mp4",
+            "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b79bd960bcdb4f94bf689ec17145ae0a.mp4",
+            "image": "shopify:\/\/shop_images\/anti-aging.jpg",
+            "video_type": "youtube",
+            "placement": "popup",
+            "video_id": "e6NyhRAxdoE",
+            "mobile_video_id": "e6NyhRAxdoE",
+            "section_bg_color": "#ffffff",
+            "section_text_color": "#ffffff",
+            "enable_overlay": true,
+            "overlay_bg_color": "#07272d",
+            "overlay_opacity": 0.3,
+            "alignment": "text-center text-md-start",
+            "video_alignment": "justify-content-md-start justify-content-center"
+          }
+        },
+        "c0691cf5-bbbe-4aae-9b7f-124fb34712f0": {
+          "type": "video-slide",
+          "settings": {
+            "muted": true,
+            "controls": true,
+            "loop": true,
+            "logo_image__": "",
+            "title": "Omnilux Contour",
+            "subtitle": "<p>FDA-cleared, dermatologist-recommended red<\/p><p> light therapy devices clinically proven to <\/p><p>rejuvenate aging skin.<\/p>",
+            "heading__size": false,
+            "heading__lg": 60,
+            "heading__md": 55,
+            "heading__sm": 50,
+            "play_icon": false,
+            "play_btn": false,
+            "btn_txt_watch": "",
+            "btn_type_watch": "border-0",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "btn_txt": "shop now",
+            "btn_link": "shopify:\/\/products\/omnilux-contour-neck-decollete",
+            "btn_type": "",
+            "btn_variant": "white",
+            "btn_size": "",
+            "poster_type": "",
+            "bg_video": "",
+            "mobile_bg_video": "",
+            "image": "shopify:\/\/shop_images\/pf-b291415f--Image2NECK_1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_414.jpg",
+            "video_type": "youtube",
+            "placement": "popup",
+            "video_id": "",
+            "mobile_video_id": "",
+            "section_bg_color": "#ffffff",
+            "section_text_color": "#ffffff",
+            "enable_overlay": true,
+            "overlay_bg_color": "#07272d",
+            "overlay_opacity": 0.3,
+            "alignment": "text-center text-md-start",
+            "video_alignment": "justify-content-md-start justify-content-center"
+          }
+        },
+        "38a29b39-e78c-45ea-9e24-d1880b6516e7": {
+          "type": "video-slide",
+          "settings": {
+            "muted": true,
+            "controls": true,
+            "loop": true,
+            "logo_image__": "",
+            "title": "Omnilux Contour",
+            "subtitle": "<p>FDA-cleared, dermatologist-recommended red<\/p><p> light therapy devices clinically proven to <\/p><p>rejuvenate aging skin.<\/p>",
+            "heading__size": false,
+            "heading__lg": 60,
+            "heading__md": 55,
+            "heading__sm": 50,
+            "play_icon": false,
+            "play_btn": false,
+            "btn_txt_watch": "",
+            "btn_type_watch": "border-0",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "btn_txt": "Shop Now",
+            "btn_link": "shopify:\/\/products\/omnilux-contour-glove",
+            "btn_type": "",
+            "btn_variant": "white",
+            "btn_size": "",
+            "poster_type": "",
+            "bg_video": "",
+            "mobile_bg_video": "",
+            "image": "shopify:\/\/shop_images\/pf-68b29141--Image3Glove.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_415.jpg",
+            "video_type": "youtube",
+            "placement": "popup",
+            "video_id": "e6NyhRAxdoE",
+            "mobile_video_id": "e6NyhRAxdoE",
+            "section_bg_color": "rgba(0,0,0,0)",
+            "section_text_color": "#ffffff",
+            "enable_overlay": true,
+            "overlay_bg_color": "#07272d",
+            "overlay_opacity": 0.3,
+            "alignment": "text-center text-md-start",
+            "video_alignment": "justify-content-md-start justify-content-center"
+          }
+        }
+      },
+      "block_order": [
+        "28aaeab3-6397-4b19-b7ae-99ed632cf504",
+        "c0691cf5-bbbe-4aae-9b7f-124fb34712f0",
+        "38a29b39-e78c-45ea-9e24-d1880b6516e7"
+      ],
+      "settings": {
+        "enabled": true,
+        "nav_arrows": false,
+        "nav_dots": true,
+        "nav_dots_right": true,
+        "height": "tallheight",
+        "top_padding_zero": true
+      }
+    },
+    "395e59c7-ebb9-444c-979a-1170f628c99d": {
+      "type": "global-features-grid",
+      "blocks": {
+        "template--16036439031970__395e59c7-ebb9-444c-979a-1170f628c99d-1670491639fe300d98-0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_1.svg?v=1669721646",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "1e2e3e7e-2b97-4cd1-a32a-2c939c193dec": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_2.svg?v=1669721646",
+            "title": "",
+            "txt": "<p><\/p>"
+          }
+        },
+        "ebf43edc-35f4-4e07-ae7f-de43d6d5e4d4": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_3.svg?v=1669721646",
+            "title": "",
+            "txt": "<p><\/p>"
+          }
+        },
+        "97b801ca-1360-44bc-bf8e-74b87c98e712": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_4.svg?v=1669721646",
+            "title": "",
+            "txt": "<p><\/p>"
+          }
+        },
+        "11cdb7a9-1255-4145-af80-44d78359412f": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_5.svg?v=1669721646",
+            "title": "",
+            "txt": "<p><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16036439031970__395e59c7-ebb9-444c-979a-1170f628c99d-1670491639fe300d98-0",
+        "1e2e3e7e-2b97-4cd1-a32a-2c939c193dec",
+        "ebf43edc-35f4-4e07-ae7f-de43d6d5e4d4",
+        "97b801ca-1360-44bc-bf8e-74b87c98e712",
+        "11cdb7a9-1255-4145-af80-44d78359412f"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "gradient_tone": true,
+        "icon_layout": false,
+        "grid_size": "2",
+        "heading_txt": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#000000",
+        "pt": 60,
+        "pb": 40,
+        "pts": 40,
+        "pbs": 40,
+        "border-top": false,
+        "border-bottom": false,
+        "css_class": ""
+      }
+    },
+    "f371fe0d-7eee-4fed-abc8-0a544ef9495a": {
+      "type": "global-image-with-text",
+      "blocks": {
+        "0d363323-2948-4e6c-8e6d-4b1936638f29": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Medical-grade light therapy rejuvenates your skin naturally",
+            "max_width": 530,
+            "txt": "<p>Based on the world’s leading Omnilux Medical light therapy technology, the Contour LED collection uses optimized wavelengths of red and near-infrared light to deliver dermatologist-level skin rejuvenating results.<\/p>",
+            "step_heading": "",
+            "steps_captions": "Stimulates collagen production for firmer, more youthful-looking skin\nImproves redness, inflammation and pigmentation\nRefines skin texture and tone for an effortless glow",
+            "steps_captions_2": "",
+            "btn_txt": "Shop now",
+            "btn_link": "shopify:\/\/products\/omnilux-contour-face",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "watch_video_id": "",
+            "watch_mobile_video_id": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Omnilux_Product_33.jpg",
+            "alignment": "text-left",
+            "image_alignment": "right"
+          }
+        },
+        "58f6f1eb-6234-477a-bc4e-3f05b585fa1f": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "98% agreed their skin looked better",
+            "max_width": 440,
+            "txt": "<p>In clinical studies, Omnilux Contour users agreed: <\/p><p><strong><br\/>98%<\/strong> said skin felt firmer<\/p><p><strong>96%<\/strong> said fine lines appeared less visible<\/p><p><strong>95%<\/strong> said skin was brighter and plumper<\/p><p><em>*After 3 treatmtets per week for 4 weeks.<\/em><\/p>",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "",
+            "btn_txt": "See How it works",
+            "btn_link": "shopify:\/\/pages\/how-it-works",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "outline",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "watch_video_id": "",
+            "watch_mobile_video_id": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Before_18.png",
+            "alignment": "text-left",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "0d363323-2948-4e6c-8e6d-4b1936638f29",
+        "58f6f1eb-6234-477a-bc4e-3f05b585fa1f"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "enable_background_tone": false,
+        "border_bottom": true,
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000"
+      }
+    },
+    "09d4042c-e101-486c-bf68-e1c8e4003d5c": {
+      "type": "global-featured-in",
+      "blocks": {
+        "53d3ea3a-a62f-492b-a387-b3df731aa8aa": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>“Continuously amazed by its ability to renew the skin.”<\/p>",
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/vogue.svg?v=1673240917",
+            "logo_img_height": 20
+          }
+        },
+        "a4da2d86-b1f1-4f56-b911-2e658a5cfcfc": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "heading_txt": "<p>“If you’re dealing with all-over face breakouts… then you might want to add this FDA-cleared LED mask to your routine.”<\/p>",
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/cosmopolitan.svg?v=1673240917",
+            "logo_img_height": 20
+          }
+        },
+        "f94d4f17-0eb0-499b-95cf-437485977160": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>“Designed to fit your face better than other options on the market”<\/p>",
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Marie_Claire_Magazine.svg?v=1673240917",
+            "logo_img_height": 20
+          }
+        },
+        "1cee7cc5-b6fb-4576-b4a2-137d98557bc6": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>“The lifting, toning, and luminosity is for real.”<\/p>",
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/who-what-wear-vector.svg?v=1673240917",
+            "logo_img_height": 60
+          }
+        },
+        "2f992473-4ce6-44fb-8465-6c849dbdd26e": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>“This mask uses red and infrared light to amp up the body’s cellular healing process and also provides anti-aging benefits.”<\/p>",
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/WH.svg?v=1673240918",
+            "logo_img_height": 20
+          }
+        },
+        "89fc49ae-2e90-4d29-92ed-d40c684ebd0d": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "heading_txt": "<p>“It’s one of the few masks that combines red and blue LED lights together at once, which is why we’re especially excited.”<\/p>",
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/allure.svg?v=1673240918",
+            "logo_img_height": 20
+          }
+        },
+        "08170ac2-0628-4e12-8077-862ddcf50394": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>“An adjustable mask makes it easier to get good results on your entire face.”<\/p>",
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Huffpost.svg?v=1673240917",
+            "logo_img_height": 20
+          }
+        },
+        "4ca024cf-d9c4-4a98-ac2c-62fd2893820f": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "heading_txt": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo.<\/p>",
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Self_magazine.svg?v=1673240917",
+            "logo_img_height": 20
+          }
+        }
+      },
+      "block_order": [
+        "53d3ea3a-a62f-492b-a387-b3df731aa8aa",
+        "a4da2d86-b1f1-4f56-b911-2e658a5cfcfc",
+        "f94d4f17-0eb0-499b-95cf-437485977160",
+        "1cee7cc5-b6fb-4576-b4a2-137d98557bc6",
+        "2f992473-4ce6-44fb-8465-6c849dbdd26e",
+        "89fc49ae-2e90-4d29-92ed-d40c684ebd0d",
+        "08170ac2-0628-4e12-8077-862ddcf50394",
+        "4ca024cf-d9c4-4a98-ac2c-62fd2893820f"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "heading": "Featured In"
+      }
+    },
+    "17acf862-4edc-467f-a138-fd22f137370c": {
+      "type": "global-text-with-right-video",
+      "settings": {
+        "fluid_layout": false,
+        "border_bottom": false,
+        "muted": false,
+        "controls": true,
+        "loop": false,
+        "video_style": "col-lg-8",
+        "video_style_large": "col-xl-8 padding-top",
+        "content_position": "align-items-center",
+        "title": "<h3 class=\"mb-3 pb-1 pe-xl-3\">Real stories.\n<br>\nReal results.<\/h3>",
+        "subtitle": "<p><em>“I've been a huge fan of Omnilux treatments at my dermatologist's office for years. The Omnilux Contour Face has far exceeded my expectations for treating my skin at home.”<\/em><\/p>",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "",
+        "btn_variant": "primary",
+        "btn_size": "",
+        "poster_type": "video",
+        "bg_video": "",
+        "mobile_bg_video": "",
+        "poster_image": "shopify:\/\/shop_images\/Untitled_design_45.png",
+        "enable_overlay": true,
+        "overlay_bg_color": "#07272d",
+        "overlay_opacity": 0.3,
+        "fluid_video_layout": true,
+        "video_type": "youtube",
+        "placement": "popup",
+        "video_id": "BcT9M0Ye6Is",
+        "mobile_video_id": "BcT9M0Ye6Is",
+        "video_btn_text": "Watch video review",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000",
+        "alignment": "text-start",
+        "video_alignment": "justify-content-start"
+      }
+    },
+    "e89b7930-b5f6-4d73-a927-927009449f9c": {
+      "type": "global-results-slider",
+      "blocks": {
+        "694d3e56-31bd-4d87-8549-9534bf050238": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_75.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "e7d594e3-c4b5-4b64-93aa-dd8c55ea6206": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_1606.jpg",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "bc4d258a-10f7-4c03-b2cd-ba66bd6ab2e7": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_74.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "c40ecdb1-d70b-4f86-8bfb-ff7f03fee8a0": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_79.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "4becbce7-bb0f-47b6-87f7-52469c2af010": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_77.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "f109e9ff-69e4-499b-89a4-5fa4541fc5b2": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_96.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "2e9d3536-f619-4702-87aa-0d5e968a0ad5": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_76.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "d193be64-2d08-49d7-80fc-35c5691d0363": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_78.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "3fb79a9b-73d9-4a10-a390-9c18b79bd8fb": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_14_copy_2.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        }
+      },
+      "block_order": [
+        "694d3e56-31bd-4d87-8549-9534bf050238",
+        "e7d594e3-c4b5-4b64-93aa-dd8c55ea6206",
+        "bc4d258a-10f7-4c03-b2cd-ba66bd6ab2e7",
+        "c40ecdb1-d70b-4f86-8bfb-ff7f03fee8a0",
+        "4becbce7-bb0f-47b6-87f7-52469c2af010",
+        "f109e9ff-69e4-499b-89a4-5fa4541fc5b2",
+        "2e9d3536-f619-4702-87aa-0d5e968a0ad5",
+        "d193be64-2d08-49d7-80fc-35c5691d0363",
+        "3fb79a9b-73d9-4a10-a390-9c18b79bd8fb"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "heading_style": "heading_style_1",
+        "pt": 0,
+        "pb": 78,
+        "pts": 0,
+        "pbs": 40,
+        "border-top": false,
+        "border-bottom": false,
+        "heading_txt": "",
+        "txt": "",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "",
+        "btn_variant": "dark",
+        "btn_size": "",
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#000000",
+        "autoplay_enable": false,
+        "loop_enable_": false,
+        "slider_enable": true,
+        "nav_arrows": true,
+        "nav_dots": false
+      }
+    },
+    "5c299e1a-d5dc-4622-8303-530866fd25b5": {
+      "type": "global-features-grid",
+      "blocks": {
+        "template--16039800701090__5c299e1a-d5dc-4622-8303-530866fd25b5-1670830952bb100841-0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Non-invasive.svg?v=1673250978",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "4b59b1b9-11f8-4938-bb22-75b81cdb28d8": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Safe_for_all_skin_types.svg?v=1673250978",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "5901ecdb-0d16-4963-8daa-4f1407ace0cc": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Flexible_silicone.svg?v=1673250978",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "1c1164c7-60f2-4c23-b4a4-3a3a1e8bb5ca": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Satisfaction_guaranteed_7beecd27-d222-4342-bfb5-0566ed2fe819.svg?v=1673250978",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "afb1ad02-aae9-4407-8e29-8929e106af82": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Natural_treatment.svg?v=1673250978",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "1c4685f7-37a0-416c-b11c-aff0bd28defa": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Portable.svg?v=1673250978",
+            "title": "",
+            "txt": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16039800701090__5c299e1a-d5dc-4622-8303-530866fd25b5-1670830952bb100841-0",
+        "4b59b1b9-11f8-4938-bb22-75b81cdb28d8",
+        "5901ecdb-0d16-4963-8daa-4f1407ace0cc",
+        "1c1164c7-60f2-4c23-b4a4-3a3a1e8bb5ca",
+        "afb1ad02-aae9-4407-8e29-8929e106af82",
+        "1c4685f7-37a0-416c-b11c-aff0bd28defa"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "gradient_tone": true,
+        "icon_layout": true,
+        "grid_size": "6",
+        "heading_txt": "",
+        "section_bg_color": "#ffffff",
+        "section_txt_color": "#000000",
+        "pt": 58,
+        "pb": 0,
+        "pts": 40,
+        "pbs": 32,
+        "border-top": true,
+        "border-bottom": false,
+        "css_class": ""
+      }
+    },
+    "305a9c02-a67c-4448-b931-6947cdb1d7dd": {
+      "type": "global-video-with-text",
+      "settings": {
+        "fluid_layout": true,
+        "disable_min_height": false,
+        "muted": true,
+        "controls": false,
+        "loop": true,
+        "title": "Get professional results at home",
+        "subtitle": "<p>Designed with the same optimized energy output and wavelengths of light as our gold-standard Omnilux Medical professional devices, you get professional results in a single, 10-minute treatment session, at a fraction of the cost.<\/p>",
+        "subtitle2": "",
+        "btn_txt_watch": "",
+        "btn_type_watch": "",
+        "btn_variant_watch": "primary",
+        "btn_size_watch": "",
+        "btn_txt": "See our proven results",
+        "btn_link": "shopify:\/\/pages\/reviews-results",
+        "btn_type": "outline",
+        "btn_variant": "white",
+        "btn_size": "",
+        "poster_type": "",
+        "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49825a6165874aacae5ae8a919751dde.mp4",
+        "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49825a6165874aacae5ae8a919751dde.mp4",
+        "poster_image": "shopify:\/\/shop_images\/Untitled_design_73.png",
+        "image_mobile": "shopify:\/\/shop_images\/Rectangle_5.jpg",
+        "disable_overlay": true,
+        "overlay_bg_color": "#07272d",
+        "overlay_opacity": 0.3,
+        "fluid_video_layout": true,
+        "video_type": "local",
+        "placement": "grid",
+        "video_id": "",
+        "mobile_video_id": "",
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#ffffff",
+        "alignment": "text-center",
+        "video_alignment": "justify-content-center",
+        "pt": 45,
+        "pb": 80,
+        "pts": 0,
+        "pbs": 56,
+        "border-top": false,
+        "border-bottom": false
+      }
+    },
+    "ebfad7dc-8010-4540-80fc-31e2f2f8629b": {
+      "type": "global-image-with-text",
+      "blocks": {
+        "840e56e7-3019-4023-a301-453117fd088d": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Proven to naturally reduce fine lines &amp; wrinkles",
+            "max_width": 530,
+            "txt": "<p>Omnilux stimulates the body’s own natural healing process, creating new collagen and elastin while also reducing the appearance of pigmentation, redness, and sun damage for rejuvenated, plumper skin.<\/p>",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "",
+            "btn_txt": "Shop now",
+            "btn_link": "shopify:\/\/collections",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "watch_video_id": "",
+            "watch_mobile_video_id": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/OMNILUX_4_04938_02703b1f-6ed6-49e6-9b27-dae54fa8ee92.jpg",
+            "alignment": "text-left",
+            "image_alignment": "right"
+          }
+        },
+        "ee8437fa-36b5-47a0-8dc0-5b7875c0087e": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Pro-level skincare that's budget-friendly (and unlimited)",
+            "max_width": 530,
+            "txt": "<p>Like most professional skin treatments, LED light therapy requires regular sessions to maintain results.<br\/><br\/>For the price of 2 or 3 in-clinic light treatments, you can have your own professional-quality Omnilux device and treat your skin in only 10 minutes, wherever and whenever you like.<\/p>",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "",
+            "btn_txt": "shop now",
+            "btn_link": "shopify:\/\/collections",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "watch_video_id": "",
+            "watch_mobile_video_id": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Omnilux_Product_1.jpg",
+            "alignment": "text-left",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "840e56e7-3019-4023-a301-453117fd088d",
+        "ee8437fa-36b5-47a0-8dc0-5b7875c0087e"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "enable_background_tone": true,
+        "border_bottom": false,
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000"
+      }
+    },
+    "88b6d89d-0747-43a8-ab7e-9b97ac68e591": {
+      "type": "global-testimonial",
+      "blocks": {
+        "e6d445a7-545a-43d0-b10b-45a7be63a587": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>I've only had my Omnilux mask for two days and I'm amazed by the results I've seen so far! My skin looks and feels tighter, especially my under eye bags. I look more refreshed and less tired.<\/p>",
+            "quote_author": "Sheri",
+            "alignment": "text-center"
+          }
+        },
+        "8403932c-0b6b-4145-9ed7-8336e0e1c978": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>Immediately after treatment, my skin looks refreshed, even, and plump. With continued use, the redness in my cheeks has decreased significantly.<\/p>",
+            "quote_author": "Rosanna",
+            "alignment": "text-center"
+          }
+        },
+        "bc012445-5eba-4d92-b909-5a5c27d14b6a": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>I love, love, love my Omnilux face mask!! It gives my complexion a glow that I can’t duplicate any other way.<\/p>",
+            "quote_author": "Ellen",
+            "alignment": "text-center"
+          }
+        },
+        "cccc51b2-91c5-40d1-929f-b01c0c387985": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>I'm 53 years old and I have done numerous treatments -- from chemical peels, oxygen facials, laser treatments and light therapy in a doctor's office. This device is worth the cost. Even though I have only been using it for a few weeks -- I already see the difference.<\/p>",
+            "quote_author": "Maria",
+            "alignment": "text-center"
+          }
+        },
+        "ddfa4833-0c21-4064-9e7a-b615ec064c0a": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>No longer do I need my old hand held device that was clumsy and timely to use because the mask provides easy, efficient use.<\/p>",
+            "quote_author": "M.E.",
+            "alignment": "text-center"
+          }
+        },
+        "2a51cd0b-4361-4533-bca5-a4e4a8342324": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>I’ve been using my Omnilux Contour for about 2 months now… even my aesthetician finds my skin to be wayyyy better since I started using it.<\/p>",
+            "quote_author": "Anny",
+            "alignment": "text-center"
+          }
+        }
+      },
+      "block_order": [
+        "e6d445a7-545a-43d0-b10b-45a7be63a587",
+        "8403932c-0b6b-4145-9ed7-8336e0e1c978",
+        "bc012445-5eba-4d92-b909-5a5c27d14b6a",
+        "cccc51b2-91c5-40d1-929f-b01c0c387985",
+        "ddfa4833-0c21-4064-9e7a-b615ec064c0a",
+        "2a51cd0b-4361-4533-bca5-a4e4a8342324"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "border_bottom": false,
+        "heading_txt": "What  they say",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000",
+        "autoplay_enable": true,
+        "nav_arrows": true,
+        "nav_dots": true
+      }
+    },
+    "1e3b195b-538e-4ed6-a818-9b12fed40407": {
+      "type": "glabal-featured-product-list",
+      "settings": {
+        "fluid_layout": false,
+        "nav_dots": false,
+        "nav_arrows": true,
+        "nav_arrows_outside": false,
+        "heading_alignment": "me-auto",
+        "heading_txt": "Omnilux collection",
+        "lead_txt": "",
+        "home_featured_collection": "products",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#000000",
+        "btn_text": "",
+        "btn_url": "",
+        "pt": 48,
+        "pb": 72,
+        "pts": 56,
+        "pbs": 56,
+        "border-top": false,
+        "border-bottom": false,
+        "slide_per_": false
+      }
+    }
+  },
+  "order": [
+    "ddb14673-26c0-4c24-b3df-94f59e4ae21d",
+    "395e59c7-ebb9-444c-979a-1170f628c99d",
+    "f371fe0d-7eee-4fed-abc8-0a544ef9495a",
+    "09d4042c-e101-486c-bf68-e1c8e4003d5c",
+    "17acf862-4edc-467f-a138-fd22f137370c",
+    "e89b7930-b5f6-4d73-a927-927009449f9c",
+    "5c299e1a-d5dc-4622-8303-530866fd25b5",
+    "305a9c02-a67c-4448-b931-6947cdb1d7dd",
+    "ebfad7dc-8010-4540-80fc-31e2f2f8629b",
+    "88b6d89d-0747-43a8-ab7e-9b97ac68e591",
+    "1e3b195b-538e-4ed6-a818-9b12fed40407"
+  ]
+}

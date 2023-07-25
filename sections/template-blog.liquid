@@ -1,0 +1,450 @@
+<link href="{{ 'blog.css' | asset_url }}" rel="stylesheet">
+{%- liquid
+assign fluid_layout = section.settings.fluid_layout
+assign items_per_page = section.settings.items_per_page
+assign sidebar_enabled = section.settings.enable_sidebar
+-%}
+
+{% if current_tags %}
+{% capture blog_title %}{{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}{% endcapture %}
+{% endif %}
+
+<div data-section-id="{{ section.id }}">
+  {% paginate blog.articles by items_per_page %}
+  <section class="section-content py-0 hero-blog-image overflow-hidden">
+    <div class="{% if fluid_layout %}container-fluid{% else %}container{% endif %}">
+      <div class="row">
+        <div class="col-12 position-relative mb-10" style="min-height:490px;">
+          <div class="header-content w-100 position-relative d-flex align-items-end h-100 px-lg-12 px-md-8 py-lg-12 py-md-8 px-3 py-6">
+            <div class="image-wrapper position-absolute top-0 start-0 w-100 h-100">
+              {%- if section.settings.image != blank -%}
+              {%- liquid
+                  assign mobileImage = section.settings.image
+                  if section.settings.image_mobile != blank
+                      assign mobileImage =  section.settings.image_mobile
+                  endif
+              -%}
+              <picture>
+                  {%- if mobileImage.width >= 375 -%}<source media="(max-width: 375px)" srcset="{{ mobileImage | image_url: width: 475 }}">{%- endif -%}
+                  {%- if mobileImage.width >= 550 -%}<source media="(max-width: 550px)" srcset="{{ mobileImage | image_url: width: 650 }}">{%- endif -%}
+                  {%- if mobileImage.width >= 767 -%}<source media="(max-width: 767px)" srcset="{{ mobileImage | image_url: width: 867 }}">{%- endif -%}
+                  {%- if section.settings.image.width >= 991 -%}<source media="(max-width: 991px)" srcset="{{ section.settings.image | image_url: width: 1000 }}">{%- endif -%}
+                  {%- if section.settings.image.width >= 1200 -%}<source media="(max-width: 1200px)" srcset="{{ section.settings.image | image_url: width: 1300 }}">{%- endif -%}
+                  {%- if section.settings.image.width >= 1500 -%}<source media="(min-width: 1201px)" srcset="{{ section.settings.image | image_url: width: 1500 }}">{%- endif -%}
+                  <img class="w-100 h-100 object-cover" src="{{ section.settings.image | image_url }}" loading="lazy"
+                  alt="{{ section.settings.image.alt | default: section.settings.heading | escape }}"
+                  width="{{ section.settings.image.width }}"
+                  height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio | round }}"
+                  >
+              </picture>
+              {%- else -%}
+              <img src="{{ settings.no_image | image_url }}" loading="lazy" width="400" height="400">
+              {%- endif -%}
+              {% if section.settings.enable_overlay %}
+              <div class="overlay"
+                style="mix-blend-mode: multiply;background-color: {{ section.settings.overlay_bg_color }}!important; opacity: {{ section.settings.overlay_opacity }}!important;">
+              </div>
+              {% endif %}
+            </div>
+            <div class="inside-block w-100 px-lg-1 position-relative" style="z-index:2">
+              <div class="text-white text-center text-md-start col-xl-6 col-lg-7 col-md-10">
+                <h1 class="mb-0 pb-4">{{ blog.title }}</h1>
+                {%- if section.settings.blog_content != blank -%}<p class="mb-0 lh-lg">{{ section.settings.blog_content }}</p>{%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row blog-categories position-relative">
+        <span id="blog-categories" class="d-lg-none"></span>
+        <div class="col-12 col-lg-8 position-relative">
+          <ul class="list-unstyled d-flex mb-0">
+            {% liquid
+              assign shop_domain = 'https://' | append: shop.domain
+              assign getURL = canonical_url | replace: shop_domain
+            %}
+
+            {%- for block in section.blocks -%}
+              {%- if block.type == "category" -%}
+                {%- if block.settings.url != blank -%}
+
+                  <li class=""><a class="{% if getURL == block.settings.url %}active{% endif %} trn font-size-md fw-bold d-inline-flex justify-content-center" href="{{ block.settings.url }}#blog-categories" style="line-height:1.571428571428571;">{{ block.settings.title }}</a></li>{%- endif -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+        <div class="col-lg-4 position-relative py-3 py-lg-0">
+          <form action="/search" method="get" role="search" class="d-flex h-100 align-items-center">
+            <div class="field ps-lg-5">
+              <input type="hidden" name="type" value="blog">
+              <input class="form-control rounded-0 border-0 ps-lg-0" type="search" name="q" value="" placeholder="Search blog articles">
+              <button class="search__button field__button focus-inset text-primary px-0" aria-label="Search Our Store" style="font-size: 22px;">
+                <span class="ox-search"></span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      {% if sidebar_enabled %}
+      {% comment %} layout with sidebar {% endcomment %}
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row justify-content-center pt-lg-11 pt-9">
+            {% for article in blog.articles %}
+            <div class="col-12 mb-8 d-flex align-items-stretch">
+              {% render 'card-article-style', article: article %}
+            </div>
+            {% endfor %}
+          </div>
+          {% if paginate.pages > 1 %}
+          <div class="row">
+            <div class="col-12 text-center mt-5">
+              {% render 'pagination', paginate: paginate %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        <div class="col-lg-4">
+          {% render 'sidebar-blog' %}
+        </div>
+      </div>
+
+      {% else %}
+
+      {% comment %} layout without sidebar {% endcomment %}
+      <div class="row justify-content-center pb-4">
+        {% for article in blog.articles %}
+        <div class="col-sm-6 col-lg-4 my-3 d-flex align-items-stretch">
+          {% render 'card-article-style', article: article %}
+        </div>
+        {% endfor %}
+      </div>
+      {% if paginate.pages > 1 %}
+      <div class="row">
+        <div class="col-12 text-center mt-5">
+          {% render 'pagination', paginate: paginate %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% endif %}
+
+    </div>
+  </section>
+  {% endpaginate %}
+</div>
+
+{% schema %}
+{
+  "name": "Blog Template",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image",
+      "info": "For Better Viewing Use Example dimentions: 2007x674px ( Aspect Ratio: 2.98:1 )"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Background Image",
+      "info": "For Better Viewing Use Example dimentions: 1100x1100px ( Aspect Ratio: 1:1 )"
+    },
+    {
+      "type": "textarea",
+      "id": "blog_content",
+      "label": "Blog Content",
+      "default": "A blog about all things light therapy,<br>by the leaders in light therapy."
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_overlay",
+      "label": "Enabled?",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "overlay_bg_color",
+      "label": "Overlay Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.6
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sidebar",
+      "label": "Enable Sidebar?",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "sidebar_is_sticky",
+      "label": "Sticky Sidebar?",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "items_per_page",
+      "label": "Articles Per Page",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "paragraph",
+      "content": "Use the section below to customize the sidebar content."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Add Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Blog Category Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Blog Category URL"
+        }
+      ]
+    },
+    {
+      "type": "socials",
+      "name": "Socials",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_socials",
+          "label": "Enabled?",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "socials_title",
+          "label": "Title",
+          "default": "Connect with Us"
+        },
+        {
+          "type": "paragraph",
+          "content": "Select Networks"
+        },
+        {
+          "type": "checkbox",
+          "id": "social_icon_facebook",
+          "label": "Facebook",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "social_icon_tiktok",
+          "label": "Tiktok",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "social_icon_twitter",
+          "label": "Twitter",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "social_icon_instagram",
+          "label": "Instagram",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "social_icon_reddit",
+          "label": "Reddit?",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "social_icon_youtube",
+          "label": "YouTube",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "recent-articles",
+      "name": "Recent Articles",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_recent_articles",
+          "label": "Enabled?",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "recent_articles_title",
+          "label": "Title",
+          "default": "Recent Articles"
+        },
+        {
+          "type": "range",
+          "id": "total_recent_articles",
+          "label": "Articles Limit",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 5
+        }
+      ]
+    },
+    {
+      "type": "tags",
+      "name": "Tags",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_tags",
+          "label": "Enabled?",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "tags_title",
+          "label": "Title",
+          "default": "Tags"
+        }
+      ]
+    },
+    {
+      "type": "shop-favorites",
+      "name": "Shop Your Favorites",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_shop_favorites",
+          "label": "Enabled?",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "shop_favorites_title",
+          "label": "Title",
+          "default": "shop your favorites"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "btn_txt",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "btn_type",
+          "label": "Button Type",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "",
+              "label": "Solid"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "btn_variant",
+          "label": "Button Variant",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "dark",
+              "label": "Dark"
+            }
+          ],
+          "default": "dark"
+        },
+        {
+          "type": "select",
+          "id": "btn_size",
+          "label": "Button Size",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn-sm",
+              "label": "Small"
+            },
+            {
+              "value": "btn-lg",
+              "label": "Large"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "product",
+          "id": "product_1",
+          "label": "Select Product 1"
+        },
+        {
+          "type": "product",
+          "id": "product_2",
+          "label": "Select Product 2"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

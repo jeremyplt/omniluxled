@@ -1,0 +1,91 @@
+.template-index .image-with-text .gradient-fair-tone
+{
+    background-image: url('https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient03M.jpg?v=1677741220');
+    background-size: 100% 100%;
+    top: 87%;
+    height:150vh;
+}
+.inside-block-col > .inside-block > div:not(.inside-block-inner) ul:last-child
+{
+    margin-bottom: 0 !important;
+}
+@media (min-width:992px)
+{
+    .image-with-text .banner-img
+    {
+        padding-top: 90.279% !important;
+    }
+    .template-index .image-with-text .inside-block-col
+    {
+        align-items: center !important;
+    }
+    .anti-aging .image-with-text .inside-block-col
+    {
+        align-items: center !important;
+    }
+    .template-index .image-with-text .inside-block-col .inside-block
+    {
+        padding-bottom: 1.5rem !important;
+    }
+    .template-index .image-with-text .gradient-fair-tone
+    {
+        background-image: url('https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient03.jpg?v=1677740079');
+        top: 72%;
+        height:150vh;
+    }
+    .image-with-table .inside-block-col 
+    {
+        border-right: 1.5px solid;
+        border-top:0 !important;
+    }
+}
+@media (min-width:1921px)
+{
+    .template-index .image-with-text .gradient-fair-tone
+    {
+        max-height: 110vh;
+    }
+}
+@media (max-width:992.85px)
+{
+    .image-with-text .row
+    {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .image-with-text .row > *
+    {
+        padding: 0 !important;
+    }
+}
+.background-tone .gradient-fair-tone{
+    background-image: url('https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient03.jpg?v=1677740079');
+        top: 72%;
+        height:135vh;
+        background-size: 100% 100%;
+}
+.readbody[data-redmore="false"] .red-more-btn > span:first-child + span,
+.readbody[data-redmore="true"] .red-more-btn > span:first-child
+{
+    display: none !important;
+}
+.readbody[data-redmore="true"] .red-more-btn i
+{
+    transform: rotate(180deg);
+}
+@media (max-width:991px)
+{
+    .readbody[data-redmore="false"] .readbody-text
+    {
+        display: none !important;
+    }
+    .image-with-table .readbody[data-redmore="false"] .readbody-text
+    {
+        display: block !important;
+        height: 150px;
+    }
+    .image-with-table .readbody[data-redmore="false"] .red-more-btn
+    {
+        margin-top: 21px !important;
+    }
+}

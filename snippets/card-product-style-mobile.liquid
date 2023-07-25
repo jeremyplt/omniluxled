@@ -1,0 +1,106 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<div class="{% if type == 'mobile_nav' %}col-12{% else %}col-xl-5 col-6{% endif %}">
+    <div class="card megamenu_product border-0">
+        <div class="card-img">
+            {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+
+    {% if current_variant and current_variant.image %}
+      {% assign secondaryImage = product.featured_image %}
+      <a href="{{ product.url | within: collection }}" class="square-card d-block w-100 position-relative" >
+            <img class="w-100 h-100 object-cover position-absolute start-0 top-0"
+            src="{{ current_variant.image | image_url: width: 16 }}" 
+            srcset="
+            {%- if current_variant.image.width >= 320 -%}{{ current_variant.image | image_url: width: 320 }} 320w,{%- endif -%}
+            {%- if current_variant.image.width >= 460 -%}{{ current_variant.image | image_url: width: 460 }} 460w,{%- endif -%}"
+            loading="lazy" 
+            sizes="(min-width: 992px) 320px, 50px"
+            data-feauredImage
+            alt="{{ megaMenuBlock.story_link_text | escape }}"
+            width="{{ current_variant.image.width }}"
+            height="{{ current_variant.image.height }}"> 
+        {%- if settings.show_secondary_image and secondaryImage -%}
+        <img class="w-100 h-100 object-cover position-absolute start-0 top-0"
+            src="{{ secondaryImage | image_url: width: 20 }}" 
+            srcset="
+            {%- if secondaryImage.width >= 320 -%}{{ secondaryImage | image_url: width: 320 }} 320w,{%- endif -%}
+            {%- if secondaryImage.width >= 460 -%}{{ secondaryImage | image_url: width: 460 }} 460w,{%- endif -%}"
+            loading="lazy" 
+            sizes="(min-width: 992px) 320px, 50px"
+            data-hoverImage
+            alt="{{ megaMenuBlock.story_link_text | escape }}"
+            width="{{ secondaryImage.width }}"
+            height="{{ secondaryImage.height }}"> 
+        {%- endif -%}
+      </a>
+    {% elsif product.featured_image.size > 0 %}
+        <a href="{{ product.url | within: collection }}" class="square-card d-block w-100 position-relative" >
+                <img
+                src="{{ product.featured_image | image_url: width: 20 }}" 
+                srcset="
+                {%- if product.featured_image.width >= 320 -%}{{ product.featured_image | image_url: width: 320 }} 320w,{%- endif -%}
+                {%- if product.featured_image.width >= 460 -%}{{ product.featured_image | image_url: width: 460 }} 460w,{%- endif -%}"
+                loading="lazy" 
+                sizes="(min-width: 992px) 320px, 50px" class="w-100 h-100 object-cover position-absolute start-0 top-0"                
+                loading="lazy"
+                data-feauredImage
+                alt="{{ product.featured_image.alt | default: current_variant.title | escape }}"
+                width="{{ product.featured_image.width }}"
+                height="{{ product.featured_image.height }}"
+              > 
+            {%- if settings.show_secondary_image and product.images[1] -%}
+            <img src="{{ product.images[1] | image_url: width: 20 }}" 
+                srcset="
+                {%- if product.images[1].width >= 320 -%}{{ product.images[1] | image_url: width: 320 }} 320w,{%- endif -%}
+                {%- if product.images[1].width >= 460 -%}{{ product.images[1] | image_url: width: 460 }} 460w,{%- endif -%}"
+                loading="lazy" 
+                sizes="(min-width: 992px) 320px, 50px" class="w-100 h-100 object-cover position-absolute start-0 top-0"                
+                loading="lazy"
+                data-hoverImage
+                alt="{{ product.images[1].alt | default: current_variant.title | escape }}"
+                width="{{ product.images[1].width }}"
+                height="{{ product.images[1].height }}" >
+            {%- endif -%}
+        </a>
+    {% elsif settings.no_image != blank %}
+      <a href="{{ product.url | within: collection }}" class="square-card d-block w-100 position-relative" >
+        <img src="{{ settings.no_image | image_url: width: 20 }}" 
+            srcset="
+            {%- if settings.no_image.width >= 320 -%}{{ settings.no_image | image_url: width: 320 }} 320w,{%- endif -%}
+            {%- if settings.no_image.width >= 460 -%}{{ settings.no_image | image_url: width: 460 }} 460w,{%- endif -%}"
+            loading="lazy" 
+            sizes="(min-width: 992px) 320px, 50px" class="w-100 h-100 object-cover position-absolute start-0 top-0"                
+            loading="lazy"
+            data-feauredImage
+            alt="{{ settings.no_image.alt | default: current_variant.title | escape }}"
+            width="{{ settings.no_image.width }}"
+            height="{{ settings.no_image.height }}" >
+      </a>
+    {% else %}
+        {{ 'product-' | append: current | placeholder_svg_tag: 'img-fluid' }}
+    {% endif %}
+        </div>
+        <div class="card-body px-0 pt-3 pb-0 lh-1">
+            <a href="{{ product.url }}" class="lh-1 fw-semibold text-capitalize mb-0">{{ product.title }}</a>
+            <div class="position-relative d-flex">
+                <div class="col-6 btn-card-hide trn fw-normal">
+                    <div class="card-price mt-2 pt-2 btn-card-hide trn">
+                        {{ current_variant.price | money }}
+                    </div>
+                </div>
+                <div class="col-6">
+                    {%- render 'form-product-grid', product: product, current_variant: current_variant gridType: 'mobile-grid' -%}
+                </div>
+
+                {% comment %} <button class="btn btn-card ls-sm position-absolute start-0 bottom-0 p-0 trn border-bottom"
+                    type="submit"
+                    name="add"
+                    aria-label="{{ 'products.product.add_to_cart' | t | escape }}"
+                    {% unless current_variant.available %}disabled{% endunless %}>
+                    <span class="add-text"><i class="fst-normal me-1">+</i>{{ 'products.product.add_to_cart' | t }}</span>
+                    <span class="spinner"></span>
+                </button> {% endcomment %}
+            </div>
+        </div>
+    </div>
+</div>

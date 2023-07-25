@@ -1,0 +1,68 @@
+{% assign article_image = article.image.src | image_url: width: 100, height: 100 %}
+
+<div class="card bg-white text-left border-0">
+  <div class="row blog-row flex-column flex-sm-row">
+    <div class="col-4 w-100 mb-sm-0 mb-4">
+      {% unless article_image contains 'no-image' %}
+        <a href="{{ article.url }}" class="card-img d-block square-card position-relative">
+          {%- if article.image.src != blank -%} 
+          <img
+              srcset="
+                {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                {{ article.image.src | image_url }} {{ article.image.src.width }}w"
+              src="{{ article.image.src | image_url: width: 533 }}"
+              sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 100 | divided_by: 3 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw"
+              alt="{{ article.image.src.alt | escape }}"
+              class="h-100 motion-reduce object-cover position-absolute start-0 top-0 w-100" loading="lazy"
+              width="{{ article.image.width }}"
+              height="{{ article.image.height }}"
+            >
+              {%- else -%}
+              <img
+                srcset="
+                  {%- if settings.no_image.width >= 360 -%}{{ settings.no_image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if settings.no_image.width >= 533 -%}{{ settings.no_image | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if settings.no_image.width >= 720 -%}{{ settings.no_image | image_url: width: 720 }} 720w,{%- endif -%}
+                  {{ settings.no_image | image_url }} {{ settings.no_image.width }}w"
+                src="{{ settings.no_image | image_url: width: 533 }}"
+                sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 100 | divided_by: 3 }}px, (min-width: 768px) calc((100vw - 130px) / 2), 50vw"
+                alt="{{ settings.no_image.alt | escape }}"
+                class="h-100 motion-reduce object-cover position-absolute start-0 top-0 w-100" loading="lazy"
+                width="{{ article.image.width }}"
+                height="{{ article.image.height }}"
+              >
+            {%- endif -%}
+            </a>
+      {% else %}
+        {% if settings.no_image != blank %}
+          <a href="{{ article.url }}" class="card-img d-block square-card position-relative">
+              <img srcset="{{ settings.no_image | image_url: width: 578, crop: 'center', format: 'pjpg' }}"
+              class="h-100 motion-reduce object-cover position-absolute start-0 top-0 w-100" loading="lazy"
+                  src="{{ settings.no_image | image_url }}"
+                  alt="{{ settings.no_image.alt | default: article.title | escape }}"
+                  width="{{ settings.no_image.width }}"
+                  height="{{ settings.no_image.width | divided_by: settings.no_image.aspect_ratio }}" >
+          </a>
+        {% endif %}
+      {% endunless %}
+    </div>
+    <div class="align-items-end col d-flex">
+      <div class="card-body p-0">
+        <div class="h6 mb-2 pb-1">
+          <ul class="d-flex list-unstyled mb-0 flex-wrap">
+            {%- for tag in article.tags -%}
+              <li class="article-tags"><a class="font-size-xs ls-sm" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a></li>
+            {%- endfor -%}
+          </ul>
+        </div>
+        <h5 class="mb-3"><a href="{{ article.url }}">{{ article.title }}</a></h5>
+        <div>
+          {{ article.content | strip_html | truncatewords: 32 }}
+        </div>
+        <a href="{{ article.url }}" class="btn btn-outline-primary mt-3">read more</a>
+      </div>
+    </div>
+  </div>
+</div>

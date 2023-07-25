@@ -1,0 +1,285 @@
+<link rel="stylesheet" href="{{ 'global-comparison.css' | asset_url }}">
+<script src="{{ 'optimize.js' | asset_url }}" defer></script>
+
+{% assign left_items = "" %}
+{% assign right_items = "" %}
+
+{% for item in section.blocks %}
+  {% if item.type == "feature-item-left" %}
+    {% assign left_items = left_items | append: ',' | append: item.settings.feature %}
+  {% else %}
+    {% assign right_items = right_items | append: ',' | append: item.settings.feature %}
+  {% endif %}
+{% endfor %}
+
+{% assign left_items = left_items | remove_first: ',' | split: "," %}
+{% assign right_items = right_items | remove_first: ',' | split: "," %}
+
+<section
+  id="product-comparison"
+  class="section-content feature-wrap {{ section.class }} ab-test"
+  data-section-id="{{ section.id }}">
+  <div class="container">
+    <h4 class="section-title mb-6 text-center fw-semibold">{{ section.settings.title }}</h4>
+    <p class="text-center fw-normal mb-4">{{ section.settings.subtitle }}</p>
+
+    <div class="row" style="position: relative;">
+      <div class="col-6">
+        <div class="2 position-relative square-card mb-4">
+          {%- if section.settings.image_left != blank -%}
+            <img
+              srcset="
+            {%- if section.settings.image_left.width >= 360 -%}
+              {{ section.settings.image_left | image_url: width: 360 }} 360w,{%- endif -%}
+            {%- if section.settings.image_left.width >= 520 -%}
+              {{ section.settings.image_left | image_url: width: 520 }} 520w,{%- endif -%}
+            {%- if section.settings.image_left.width >= 650 -%}
+              {{ section.settings.image_left | image_url: width: 650 }} 650w,{%- endif -%}
+            {%- if section.settings.image_left.width >= 780 -%}
+              {{ section.settings.image_left | image_url: width: 780 }} 780w,{%- endif -%}
+            {%- if section.settings.image_left.width >= 900 -%}
+              {{ section.settings.image_left | image_url: width: 900 }} 900w,{%- endif -%}
+            {%- if section.settings.image_left.width >= 1000 -%}
+              {{ section.settings.image_left | image_url: width: 1000 }} 1000w,{%- endif -%}"
+            src="{{ section.settings.image_left | image_url: width: 20 }}"
+            sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), 100vw"
+            alt="{{ section.settings.image_left.alt | escape }}"
+            class="h-100 object-cover position-absolute start-0 top-0 w-100"
+            loading="lazy"
+            width="{{ section.settings.image_left.width | divided_by: 3 }}"
+            height="{{ section.settings.image_left.height | divided_by: 3 }}">
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+      </div>
+
+      <div style="position: absolute; top: calc(50% - 36px); left: calc(50% - 30px); z-index: 1; width: 60px; height: 60px; background-color: black; border-radius: 999px; display: flex; justify-content: center; align-items: center;">
+        <p style="color: white; font-size: 1.5rem; font-weight: 400; margin: 0;">VS</p>
+      </div>
+
+      <div class="col-6">
+        <div class="2 position-relative square-card mb-4">
+          {%- if section.settings.image_right != blank -%}
+            <img
+              srcset="
+            {%- if section.settings.image_right.width >= 360 -%}
+              {{ section.settings.image_right | image_url: width: 360 }} 360w,{%- endif -%}
+            {%- if section.settings.image_right.width >= 520 -%}
+              {{ section.settings.image_right | image_url: width: 520 }} 520w,{%- endif -%}
+            {%- if section.settings.image_right.width >= 650 -%}
+              {{ section.settings.image_right | image_url: width: 650 }} 650w,{%- endif -%}
+            {%- if section.settings.image_right.width >= 780 -%}
+              {{ section.settings.image_right | image_url: width: 780 }} 780w,{%- endif -%}
+            {%- if section.settings.image_right.width >= 900 -%}
+              {{ section.settings.image_right | image_url: width: 900 }} 900w,{%- endif -%}
+            {%- if section.settings.image_right.width >= 1000 -%}
+              {{ section.settings.image_right | image_url: width: 1000 }} 1000w,{%- endif -%}"
+            src="{{ section.settings.image_right | image_url: width: 20 }}"
+            sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), 100vw"
+            alt="{{ section.settings.image_right.alt | escape }}"
+            class="h-100 object-cover position-absolute start-0 top-0 w-100"
+            loading="lazy"
+            width="{{ section.settings.image_right.width | divided_by: 3 }}"
+            height="{{ section.settings.image_right.height | divided_by: 3 }}">
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <h5 class="mb-2 text-center" style="font-size: 20px; font-weight: 600;">{{ section.settings.price_left }}</h5>
+      </div>
+
+      <div class="col-6">
+        <h5 class="mb-2 text-center" style="font-size: 20px; font-weight: 600;">{{ section.settings.price_right }}</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <p class="font-size-xl text-center">{{ section.settings.name_left }}</p>
+      </div>
+
+      <div class="col-6">
+        <p class="font-size-xl text-center">{{ section.settings.name_right }}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <p class="font-size-lg text-center fw-bold" style="color: #3A8565;">{{ section.settings.highlight_left }}</p>
+      </div>
+
+      <div class="col-6">
+        <p class="font-size-lg text-center fw-bold" style="color: #B93430;">{{ section.settings.highlight_right }}</p>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-6">
+        <div class="py-3" style="border-top: 1px solid rgb(128 128 128 / 50%); border-bottom: 1px solid rgb(128 128 128 / 50%); height: 100%;">
+          <p class="text-center font-size-md mb-0">{{ section.settings.description_left }}</p>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="py-3" style="border-top: 1px solid rgb(128 128 128 / 50%); border-bottom: 1px solid rgb(128 128 128 / 50%); height: 100%;">
+          <p class="text-center font-size-md mb-0">{{ section.settings.description_right }}</p>
+        </div>
+      </div>
+    </div>
+
+    {% for left_item in left_items %}
+      <div class="row align-items-center">
+        <div class="col-6">
+          <div class="d-flex align-items-center flex-nowrap mb-3">
+            <div class="flex-shrink-0 me-2" style="position: relative; width: 16px; height: 16px;">
+              <img
+                src="{{ section.settings.icon_left | image_url }}"
+                alt="{{ section.settings.icon_left.alt | escape }}"
+                width="16"
+                height="16"
+                loading="lazy"
+                class="w-100 h-100 position-absolute top-0 start-0">
+            </div>
+
+            <span class="font-size-sm">{{ left_item }}</span>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="d-flex align-items-center flex-nowrap mb-3">
+            <div class="flex-shrink-0 me-2" style="position: relative; width: 20px; height: 20px;">
+              <img
+                src="{{ section.settings.icon_right | image_url }}"
+                alt="{{ section.settings.icon_right.alt | escape }}"
+                width="20"
+                height="20"
+                loading="lazy"
+                class="w-100 h-100 position-absolute top-0 start-0">
+            </div>
+
+            {% assign index = forloop.index | minus: 1 %}
+            <span class="font-size-sm">{{ right_items[index] }}</span>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Product Comparison",
+    "class": "index-comparison",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "The beauty of clinical results from home - minus the ‘clinical’ costs"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "A daily 10 minute session is like going to the beauty clinic five times a week. Minus the on-going costs, the time commitment, the overpromises, the upselling."
+      },
+      {
+        "type": "header",
+        "content": "Left"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_left",
+        "label": "Image"
+      }, {
+        "type": "text",
+        "id": "price_left",
+        "label": "Price"
+      }, {
+        "type": "text",
+        "id": "name_left",
+        "label": "Product Name"
+      }, {
+        "type": "text",
+        "id": "highlight_left",
+        "label": "Feature Highlight"
+      }, {
+        "type": "textarea",
+        "id": "description_left",
+        "label": "Description"
+      }, {
+        "type": "image_picker",
+        "id": "icon_left",
+        "label": "Feature Icon"
+      }, {
+        "type": "header",
+        "content": "Right"
+      }, {
+        "type": "image_picker",
+        "id": "image_right",
+        "label": "Image"
+      }, {
+        "type": "text",
+        "id": "price_right",
+        "label": "Price"
+      }, {
+        "type": "text",
+        "id": "name_right",
+        "label": "Product Name"
+      }, {
+        "type": "text",
+        "id": "highlight_right",
+        "label": "Feature Highlight"
+      }, {
+        "type": "textarea",
+        "id": "description_right",
+        "label": "Description"
+      }, {
+        "type": "image_picker",
+        "id": "icon_right",
+        "label": "Feature Icon"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "feature-item-left",
+        "name": "Feature Items Left",
+        "settings": [
+          {
+            "type": "text",
+            "id": "feature",
+            "label": "Feature"
+          }
+        ]
+      }, {
+        "type": "feature-item-right",
+        "name": "Feature Items Right",
+        "settings": [
+          {
+            "type": "text",
+            "id": "feature",
+            "label": "Feature"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Comparison",
+        "blocks": [
+          {
+            "type": "feature-item-left"
+          }, {
+            "type": "feature-item-right"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

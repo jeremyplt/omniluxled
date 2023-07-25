@@ -1,0 +1,374 @@
+{{ 'global-results-slider.css' | asset_url | stylesheet_tag }}
+
+<section id="reviews-slider" class="section-content overflow-hidden position-relative global-results-slider {% if section.settings.border-bottom %}pb-11{% endif %} {% unless section.settings.autoplay_enable %}global-results-slider-noplay{% endunless %}" data-section-id="{{ section.id }}" style="background: {{ section.settings.section_bg_color }}; color:{{ section.settings.section_text_color }}">
+    {%- if section.settings.heading_style == 'heading_style_1' -%}
+    {%- if section.settings.heading_txt != blank -%}
+    <div class="container mb-4 mb-lg-3 pb-1 pt-1 pt-lg-0">
+        <div class="text-center heading_txt pt-1 d-flex align-items-center {% if section.settings.btn_txt != blank %}justify-content-lg-between{% endif %}  justify-content-center" style="z-index: 2;">
+            {% if section.settings.heading_txt != blank %}
+                <div class="h2 pe-3 {% unless section.settings.btn_txt != blank %}mb-lg-2 mb-0{% else %}mb-0{% endunless %}">{{ section.settings.heading_txt }}</div>
+            {% endif %}
+            {%- if section.settings.btn_txt != blank -%}
+                <{% if section.settings.btn_link != blank %}a{% else %}span{% endif %} {% if section.settings.btn_link != blank %} href="{{ section.settings.btn_link }}" {% endif %}class="btn w-sm-auto w-100 d-lg-inline-flex d-none btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">{{ section.settings.btn_txt }}</{% if section.settings.btn_link != blank %}a{% else %}span{% endif %}>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+      {%- else -%}
+    <div class="container mb-2 mb-lg-4">
+        <div class="col-12 col-lg-6 text-center mx-auto">
+            <div class="">
+                {%- if section.settings.heading_txt != blank -%}
+                <h2 class="mb-2 pb-1">{{ section.settings.heading_txt }}</h3>
+            {% endif %}
+            {%- if section.settings.txt != blank -%}
+            <p class="">{{ section.settings.txt }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+      {% endif %}
+    <div class="{% if section.settings.fluid_layout %}container-fluid px-0{% else %}container{% endif %} pb-lg-1">
+      {% if section.blocks.size > 0 %}
+          <slider-element class="arrow-center swiper-container carousel d-block">
+              <div class="swiper swiper-slider results-slider-list pb-lg-11 pb-7 pb-sm-10" data-slider='{
+                  "loop": true,
+                  {% if section.settings.autoplay_enable %}
+                  "slidesPerView": "auto",
+                  {% else %}
+                  "slidesPerView": "1.5",
+                  {% endif %}
+                  "spaceBetween": 10,
+                  "centeredSlides": false,
+                  "grabCursor": true,
+                  "preloadImages": false,
+                  "lazy": true,
+                  {% if section.settings.slider_enable %}
+                    "navigation": {
+                        "nextEl": ".testimonial-button-next",
+                        "prevEl": ".testimonial-button-prev"
+                    },
+                    "pagination": {
+                        "el": ".swiper-pagination"
+                    },
+                  "breakpoints": {
+                    "560": {
+                      "slidesPerView": 2,
+                      "spaceBetween": 20
+                    },
+                    "768": {
+                      "slidesPerView": 3,
+                      "spaceBetween": 30
+                    },
+                    "992": {
+                      "slidesPerView": 3,
+                      "spaceBetween": 30
+                    }
+                 },{% endif %}
+                  {% if section.settings.autoplay_enable %}
+                      "autoplay": {
+                          "delay": 0,
+                          "disableOnInteraction": false
+                      },
+                      "speed": 7000
+                  {% else %}
+                      "speed": 1000
+                  {% endif %}
+
+
+              }'>
+                  <div class="swiper-wrapper">
+                      {% for block in section.blocks %}
+                          <div class="{{ block.settings.alignment }} swiper-slide position-relative" data-block-id="{{ block.id }}">
+                              <div class="position-relative results-slider-iframe">
+                                  {%- if block.settings.watch_video_id != blank -%}
+                                  <iframe class="pf-ifr position-absolute start-0 top-0 w-100 h-100" src=" {{ block.settings.watch_video_id }} " allowfullscreen="" width="560" height="315" allow="autoplay" title="yt-video"></iframe>
+                                  {% endif %}
+                              </div>
+                          </div>
+                      {% endfor %}
+                  </div>
+                  {%- if section.settings.nav_arrows -%}
+                  <div class="position-absolute iframe-testimonial-buttons  start-0 end-0 mx-auto d-inline-flex">
+                        <div class="swiper-button-next testimonial-button-next ox-arrow-right"></div>
+                        <div class="swiper-button-prev testimonial-button-prev ox-arrow-left"></div>
+                  </div>
+                  {% endif %}
+                  {%- if section.settings.nav_dots -%}
+                      <div class="swiper-pagination results-slider-pagination w-100"></div>
+                  {% endif %}
+              </div>
+          </slider-element>
+      {% endif %}
+  </div>
+  {%- if section.settings.btn_txt != blank -%}
+    <div class="container d-lg-none pb-1">
+        <div class="text-center mb-4 pt-4 mt-1 heading_txt pb-xl-0 pb-2">
+                <a {% if section.settings.btn_link %} href="{{ section.settings.btn_link }}" {% endif %}class="btn w-sm-auto w-100 btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">{{ section.settings.btn_txt }}</a>
+
+        </div>
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Reviews Slider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "heading_style",
+      "label": "Heading Style",
+      "options": [
+        {
+          "value": "heading_style_1",
+          "label": "Heading Style 1"
+        },
+        {
+          "value": "heading_style_2",
+          "label": "Heading Style 2"
+        }
+      ],
+      "default": "heading_style_1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing & Border"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding Top(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding Bottom(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pts",
+      "label": "Padding Top(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pbs",
+      "label": "Padding Bottom(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading_txt",
+      "label": "Heading Text"
+    },
+    {
+      "type": "textarea",
+      "id": "txt",
+      "label": "Paragraph Text"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "btn_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "btn_variant",
+      "label": "Button Variant",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "dark"
+    },
+    {
+      "type": "select",
+      "id": "btn_size",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Carousel Option"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_enable",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "slider_enable",
+      "label": "Enable Slider",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_arrows",
+      "label": "Arrows Navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_dots",
+      "label": "Dots Navigation",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logowidthtext",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "textarea",
+          "id": "watch_video_id",
+          "label": "Video Id(Youtube)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews Slider",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}
+<style>
+    [data-section-id="{{ section.id }}"]
+    {
+      padding-top: {{ section.settings.pts }}px;
+      padding-bottom: {{ section.settings.pbs }}px;
+      {% if section.settings.border-top %}
+      border-top: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+      {% if section.settings.border-bottom %}
+      border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+    }
+    @media (min-width:992px)
+    {
+      [data-section-id="{{ section.id }}"]
+      {
+        padding-top: {{ section.settings.pt }}px;
+        padding-bottom: {{ section.settings.pb }}px;
+      }
+    }
+  </style>

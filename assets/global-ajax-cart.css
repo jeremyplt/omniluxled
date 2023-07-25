@@ -1,0 +1,31 @@
+#upsell_accordion .swiper-slide
+{
+    width: 130px !important;
+}
+.cart-upsell-section
+{
+    background: none !important;
+}
+[data-cart-form] ~ afterpay-placement
+{
+    display: none !important;
+}
+.template-cart .cart-items .item-img
+{
+    min-width: 131px;
+    max-width: 131px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+@media (min-width:768px)
+{
+    #upsell_accordion .swiper-slide
+    {
+        width: 222px !important;
+    }
+    .template-cart .cart-items .item-img
+    {
+        min-width: 150px;
+        max-width: 150px;
+    }
+}

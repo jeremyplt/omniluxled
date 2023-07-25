@@ -1,0 +1,248 @@
+{
+  "sections": {
+    "eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce": {
+      "type": "left-text-with-image",
+      "blocks": {
+        "template--16034908471458__eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce-16703050070505d1ba-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Clear self-assessment"
+          }
+        },
+        "template--16034908471458__eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce-16703050070505d1ba-1": {
+          "type": "text",
+          "settings": {
+            "text": "The typical appearance of acne is a mixture of the following: greasy skin, red pimples or spots, yellow pus-filled spots and scars.",
+            "text_2": "Omnilux Clear is intended to treat mild to moderate acne vulgaris of the face."
+          }
+        },
+        "template--16034908471458__eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce-16703050070505d1ba-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": "",
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "btn_type_2": "",
+            "btn_variant_2": "primary",
+            "btn_size_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16034908471458__eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce-16703050070505d1ba-0",
+        "template--16034908471458__eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce-16703050070505d1ba-1",
+        "template--16034908471458__eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce-16703050070505d1ba-2"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "background_imagetone": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Background_Gradient-c-a.png?v=1670478395",
+        "background_tone_height": 120,
+        "image": "shopify:\/\/shop_images\/bannerimage.jpg",
+        "txt_color": "#ffffff",
+        "enable_overlay": true,
+        "paragraph_bold": true,
+        "overlay_bg_color": "#07272d",
+        "overlay_opacity": 0.5,
+        "height": "tallheight",
+        "desktop_text_box_position": "flex-end",
+        "text_caption_align": "justify-content-start",
+        "text_align": "text-left",
+        "section_padding": false,
+        "content_width": 610,
+        "image_bg_tone": false,
+        "mobile_TEXT": true
+      }
+    },
+    "73b4d181-58f6-4262-a6c7-0d9bf94b16db": {
+      "type": "clear-assessment-table",
+      "blocks": {
+        "57887675-28a2-47ab-9d2e-ada597d42cff": {
+          "type": "heading",
+          "settings": {
+            "heading1": "acne type",
+            "heading2": "description",
+            "heading3": "Suitable for Omnilux Clear™"
+          }
+        },
+        "00ea9eb0-c2b9-45f8-bce8-341daaebf192": {
+          "type": "table",
+          "settings": {
+            "title": "CLEAR SKIN",
+            "image_with_text_image": "shopify:\/\/shop_images\/tableface.jpg",
+            "description_text": "No pimples or spots or yellow pus-filled spots. No whiteheads or blackheads.",
+            "true_or_false": false,
+            "suitable_text": "<p>Omnilux Clear is <strong>NOT <\/strong>indicated for clear skin. Omnilux Clear should <strong>NOT <\/strong>be used to prevent pimples or spots forming.<\/p>"
+          }
+        },
+        "e4439c57-da79-4149-964b-75dc1f662c0e": {
+          "type": "table",
+          "settings": {
+            "title": "MILD ACNE",
+            "image_with_text_image": "shopify:\/\/shop_images\/face.jpg",
+            "description_text": "A few pimples or spots, a few pus-filled spots, some whiteheads or blackheads",
+            "true_or_false": true,
+            "suitable_text": "<p>Mild acne is suitable for treatment with Omnilux Clear.<\/p>"
+          }
+        },
+        "6472b796-9b53-4517-8d76-22719b46b23c": {
+          "type": "table",
+          "settings": {
+            "title": "MODERATE ACNE",
+            "image_with_text_image": "shopify:\/\/shop_images\/face2.jpg",
+            "description_text": "Some pimples or spots, some pus-filled spots, only a few small nodules. Many whiteheads or blackheads.",
+            "true_or_false": true,
+            "suitable_text": "<p>Moderate acne is suitable for treatment with Omnilux Clear.<\/p>"
+          }
+        },
+        "53d20f3b-a7be-41a0-a0f6-fb09b1d4a317": {
+          "type": "table",
+          "settings": {
+            "title": "SEVERE ACNE",
+            "image_with_text_image": "shopify:\/\/shop_images\/pimpleface_2.jpg",
+            "description_text": "Many pimples or spots, many pus-filled spots. Some nodules. Many whiteheads or blackheads.",
+            "true_or_false": false,
+            "suitable_text": "<p>Omnilux Clear is <strong>NOT <\/strong>indicated for severe acne. Please consult your doctor for a more appropriate treatment.<\/p>"
+          }
+        },
+        "69a512f9-a354-48f8-81d3-04eb7aa582c9": {
+          "type": "table",
+          "settings": {
+            "title": "WHITEHEADS OR BLACKHEADS (COMEDONAL ACNE)",
+            "image_with_text_image": "shopify:\/\/shop_images\/faceomni.jpg",
+            "description_text": "Many whiteheads or blackheads. No pimples or spots. No pus-filled spots.",
+            "true_or_false": false,
+            "suitable_text": "<p>Omnilux Clear is <strong>NOT <\/strong>indicated for whiteheads or blackheads. Please consult your doctor for a more appropriate treatment.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "57887675-28a2-47ab-9d2e-ada597d42cff",
+        "00ea9eb0-c2b9-45f8-bce8-341daaebf192",
+        "e4439c57-da79-4149-964b-75dc1f662c0e",
+        "6472b796-9b53-4517-8d76-22719b46b23c",
+        "53d20f3b-a7be-41a0-a0f6-fb09b1d4a317",
+        "69a512f9-a354-48f8-81d3-04eb7aa582c9"
+      ],
+      "settings": {
+        "heading_text": "Use this chart to determine whether Omnilux Clear is suitable for you"
+      }
+    },
+    "088b9ee7-d08f-40c4-9cd0-f8ef12135c5d": {
+      "type": "important-information",
+      "blocks": {
+        "382804a2-8954-4a95-bea5-376fd8a2cb12": {
+          "type": "logowidthtext",
+          "settings": {
+            "heading": "Contraindications",
+            "information_text1": "DO NOT use Omnilux Clear for any other conditions other than mild to moderate acne vulgaris (detailed in the above chart). The Omnilux Clear device has not been tested for any other conditions than those listed, and the risk is unknown. DO NOT use the Omnilux Clear device if you suffer from any photosensitive disorder (sensitization to light) of the skin or eyes OR if you are taking any medication that can cause photosensitivity. If you use the Omnilux Clear device and you are sensitive to light or are taking any medication that can cause photosensitivity you may cause a severe reaction.",
+            "information_text2": "",
+            "information_text3": "",
+            "btn_text": "SEE FULL LIST",
+            "btn_link": "\/pages\/new-help-center"
+          }
+        },
+        "fa734893-75d9-4161-9f1e-f6be4ad45386": {
+          "type": "logowidthtext",
+          "settings": {
+            "heading": "Warnings",
+            "information_text1": "Some people are sensitive to light. Before using Omnilux Clear to treat your acne vulgaris you must carry out a sensitivity test on your inner arm and wait 6 hours. If after purchasing Omnilux Clear you find that you are photosensitive please return the device to the retailer within 45 days of purchase.",
+            "information_text2": "",
+            "information_text3": "",
+            "btn_text": "",
+            "btn_link": ""
+          }
+        },
+        "9ce69732-c9cb-43fc-8a60-e2b7994f127b": {
+          "type": "logowidthtext",
+          "settings": {
+            "heading": "What to expect",
+            "information_text1": "People who have undergone a course of 4 weekly treatments for 6 weeks using Omnilux Clear report a reduction of mild to moderate acne vulgaris.",
+            "information_text2": "",
+            "information_text3": "",
+            "btn_text": "",
+            "btn_link": ""
+          }
+        },
+        "e857ec8f-34f3-4443-886e-85bfca276419": {
+          "type": "logowidthtext",
+          "settings": {
+            "heading": "Potential risks",
+            "information_text1": "Immediately after treatment skin may appear red. Skin should return to normal within 1-2 hours. Some users have reported pigmentation, skin flaking or peeling, associated itchiness and dryness. This is short lived and clears within a few days.",
+            "information_text2": "Temporary headaches immediately following the light treatment. Headaches can be treated with an appropriate over the counter analgesic and rehydration.",
+            "information_text3": "This list although not exhaustive lists the most reported side effects.",
+            "btn_text": "",
+            "btn_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "382804a2-8954-4a95-bea5-376fd8a2cb12",
+        "fa734893-75d9-4161-9f1e-f6be4ad45386",
+        "9ce69732-c9cb-43fc-8a60-e2b7994f127b",
+        "e857ec8f-34f3-4443-886e-85bfca276419"
+      ],
+      "settings": {
+      }
+    },
+    "77ad3067-d65e-4eb1-8f29-08e961abfaac": {
+      "type": "global-accrodian",
+      "blocks": {
+        "76f6d43f-2fda-4346-b747-a3e92dd1618e": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Can I use CLEAR if I am also on Accutane?",
+            "answer": "<p>We do not recommend the use of light therapy devices while taking this medication. If you have stopped taking the medication for at least 5 days, the treatment can be safely administered. If you are unsure, please consult your prescribing physician.<\/p>"
+          }
+        },
+        "39796a30-2db0-4728-8414-ea84fa8dd2cc": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Can I use Omnilux Clear with my current skincare products?",
+            "answer": "<p>Omnilux Clear is compatible with most skincare routines, however we do not recommend using your device in conjunction with Accutane or retinol products. We recommend speaking with your prescribing physician before using the Omnilux Clear with prescribed products.<\/p>"
+          }
+        },
+        "9bddcdf2-70d3-4a2a-9d3d-7f23572729f1": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Can I use Omnilux CLEAR if I'm pregnant or breastfeeding?",
+            "answer": "<p>Our products have not been studied in pregnant or breastfeeding women. Red and blue light therapy is very safe overall but because we do not have enough information about use while pregnant or breastfeeding, we recommend not using unless approved by your doctor.<\/p>"
+          }
+        },
+        "08653017-177f-484b-aaf2-4d2c7614720d": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Is Clear safe for all ages?",
+            "answer": "<p>Omnilux Clear is intended for all persons over 14 years of age.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "76f6d43f-2fda-4346-b747-a3e92dd1618e",
+        "39796a30-2db0-4728-8414-ea84fa8dd2cc",
+        "9bddcdf2-70d3-4a2a-9d3d-7f23572729f1",
+        "08653017-177f-484b-aaf2-4d2c7614720d"
+      ],
+      "settings": {
+        "heading": "Need to knows",
+        "enable_accordion_btn": false,
+        "btn1_text": "",
+        "btn1_link": "",
+        "button1_disabled": false,
+        "btn2_text": "",
+        "btn2_link": "",
+        "button2_disabled": false
+      }
+    }
+  },
+  "order": [
+    "eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce",
+    "73b4d181-58f6-4262-a6c7-0d9bf94b16db",
+    "088b9ee7-d08f-40c4-9cd0-f8ef12135c5d",
+    "77ad3067-d65e-4eb1-8f29-08e961abfaac"
+  ]
+}

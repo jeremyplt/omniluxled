@@ -1,0 +1,95 @@
+ <section class="border-bottom mt-5 important-information" data-section-id="{{ section.id }}">
+    <div class="container mb-11">
+        <div class="row">
+            <div class="col-10 border mx-auto p-0">
+                {%- for block in section.blocks -%}
+                    <div class=" py-3">
+                        <div class=" {% if forloop.first %}mt-3{% endif %} {% unless forloop.last %}border-bottom{% endunless %}">
+                            <div class="mx-5">
+                                {% if block.settings.heading != blank %}
+                                <div class="mb-3 h5">{{ block.settings.heading }}</div>
+                                {% endif %}
+                                <div class="">
+                                    {% if block.settings.information_text1 != blank %}
+                                    <p class="mb-4">
+                                        {{ block.settings.information_text1 }}
+                                    </p>
+                                    {% endif %}
+                                    {% if block.settings.information_text2 != blank %}
+                                    <p class="mb-4">
+                                        {{ block.settings.information_text2 }}
+                                    </p>
+                                    {% endif %}
+                                    {% if block.settings.information_text3 != blank %}
+                                    <p class="">
+                                        {{ block.settings.information_text3 }}
+                                    </p>
+                                    {% endif %}
+                                    {% if block.settings.btn_text != blank %}
+                                    <div class="mb-6">
+                                        <a href="{{ block.settings.btn_link }} " class="btn btn-outline-primary ">{{ block.settings.btn_text }} </a>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Important Information",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "logowidthtext",
+      "name": "Information Block",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "information_text1",
+          "label": "Information text 1"
+        },
+        {
+          "type": "textarea",
+          "id": "information_text2",
+          "label": "Information text 2"
+        },
+        {
+          "type": "textarea",
+          "id": "information_text3",
+          "label": "Information text 3"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "text",
+          "id": "btn_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Important Information",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

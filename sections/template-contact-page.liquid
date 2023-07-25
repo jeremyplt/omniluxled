@@ -1,0 +1,177 @@
+<link rel="stylesheet" href="{{ 'template-contact-us.css' | asset_url }}" media="print" onload="this.media='all'">
+<span class="contact-us-gradient-fair-tone position-absolute w-100 start-0 top-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
+  <span class="white-anim"></span>
+</span>
+<section>
+        <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+            <div class="row align-items-center no-gutter">
+                <div class="col-12 py-9 text-center px-sm-4">
+                    <h1 class=" letter-spacing mb-2">{{ section.settings.heading }}</h1>
+                    <p class="col-xl-5 col-lg-8 mx-auto px-xl-1 px-3 fw-light letter-spacing mb-0">{{ section.settings.txt }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-us-blocks">
+            <div class=" container">
+                <div class="row">
+                    {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                        {%- when 'call' -%}
+                        <div class="col-12  col-md-4  col-lg-4 text-center py-10 contact-us-block c-block d-flex justify-content-center align-items-center align-items-md-start">
+                            <div class="">
+                                <h5 class="mb-3">{{ block.settings.heading | escape }}</h5>
+                                <div class="block_para">
+                                    <a href="tel:{{ block.settings.phone_number1 }}"><p>{{ block.settings.number1 | escape }}</p></a>
+                                    <a href="tel:{{ block.settings.phone_number2 }}"><p>{{ block.settings.number2 | escape }}</p></a>
+                                    <a href="tel:{{ block.settings.phone_number3 }}"><p class="m-0">{{ block.settings.number3 | escape }}</p></a>
+                                </div>
+                            </div>
+                        </div>
+                        {%- when 'email' -%}
+                        <div class="col-12 col-lg-4 col-md-4 text-center py-10 email_block c-block d-flex justify-content-center align-items-center align-items-md-start">
+                            <div class="">
+                                <h5 class="mb-3">{{ block.settings.email_heading | escape }}</h5>
+                                <div class="block_para">
+                                    <a href="mailto:{{ block.settings.email_id | escape }}"><p class="mb-0">{{ block.settings.email_id | escape }}</p></a>
+                                </div>
+                            </div>
+                        </div>
+                        {%- when 'address' -%}
+                        <div class="col-12 col-lg-4 col-md-4 text-center  py-10 address-block c-block d-flex justify-content-center align-items-center align-items-md-start">
+                            <div class="">
+                                <h5 class="mb-3">{{ block.settings.address_heading | escape }}</h5>
+                                <div class="block_para">
+                                    <p class="mb-0">{{ block.settings.address | escape }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {%- endcase -%}
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.page.name",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "call",
+      "name": "Call",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Call",
+          "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "number1",
+          "default": "US/Canada: +1 707.309.7024",
+          "label": "Call Number 1"
+        },
+        {
+          "type": "text",
+          "id": "phone_number1",
+          "default": "+1 707.309.7024",
+          "label": "Call Number "
+        },
+        {
+          "type": "text",
+          "id": "number2",
+          "default": "Australia/New Zealand/UK/EU International Toll-Free: +1 866.306.2022",
+          "label": "Call Number 2"
+        },
+        {
+          "type": "text",
+          "id": "phone_number2",
+          "default": "+1 866.306.2022",
+          "label": "Call Number "
+        },
+        {
+          "type": "text",
+          "id": "number3",
+          "default": "Administrative headquarters: +1 707.224.0200",
+          "label": "Call Number 3"
+        },
+        {
+          "type": "text",
+          "id": "phone_number3",
+          "default": "+1 707.224.0200",
+          "label": "Call Number "
+        }
+      ]
+    },
+    {
+      "type": "email",
+      "name": "Email",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "email_heading",
+          "default": "Email",
+          "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "email_id",
+          "default": "info@omniluxled.com",
+          "label": "Email ID"
+        }
+      ]
+    },
+    {
+      "type": "address",
+      "name": "Address",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "address_heading",
+          "default": "Address",
+          "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "address",
+          "default": "163 Camino Dorado, Ste B, Napa, CA 94558 United States",
+          "label": "Address"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.page.presets.name"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+
+

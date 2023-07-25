@@ -1,0 +1,468 @@
+<link rel="stylesheet" href="{{ 'global-video-with-text.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'global-video-with-text.css' | asset_url | stylesheet_tag }}</noscript>
+
+<section class="video-with-text text-with-right-video py-8 py-lg-11  {% if section.settings.border_bottom %}border-bottom{% endif %}" data-section-id="{{ section.id }}">
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+        <div class="custom-video-container row {{ section.settings.content_position }} justify-content-center">
+            <div class="col-12 {{ section.settings.video_style }}  order-lg-2 {{ section.settings.video_style_large }}">
+                <custom-video class="video-with--text position-relative d-block placement--{{ section.settings.placement }}"
+                    data-loop="{{ section.settings.loop }}" data-autoplay="true" data-controls="{{ section.settings.controls }}" data-muted="{{ section.settings.muted }}"
+                    data-video-type="{{ section.settings.video_type }}"  data-placement="{{ section.settings.placement }}"
+                    {% if section.settings.mobile_video_id != blank %}data-mobileVideo="{{ section.settings.mobile_video_id }}"{% endif %} data-video-id="{{ section.settings.video_id }}">
+                    <div class="cta-btn">
+                        <span class="d-inline-flex" role="button" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
+                            <span class="btn btn-outline-white d-flex align-items-center d-lg-inline-flex d-none"> {{ section.settings.video_btn_text }} <i class="ox-play ms-2" style="font-size:11px;"></i></span>
+                            <span class="d-inline-flex align-items-center justify-content-center d-lg-none text-white btn-play-mobile"><i class="ox-play-o"></i></span>
+                        </span>
+                        <span class="d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
+                            <span class="btn btn btn-outline-white">Watch video <i class="ox-play"></i></span>
+                        </span>
+                    </div>
+                    <div class="content-section">
+                        <div class="poster-image {{ section.settings.height }}">
+                            {%- if section.settings.poster_type == 'video' and section.settings.bg_video != blank -%}
+                                <video class="h-100 object-cover position-absolute start-0 top-0 w-100" data-posterVideo preload="yes" playsinline muted loop data-mobileSrc="{{ section.settings.mobile_bg_video }}">
+                                    <source src="{{ section.settings.bg_video }}" type="video/mp4">
+                                </video>
+                            {%- elsif section.settings.poster_image != blank -%}
+                                <img srcset="
+                                    {%- if section.settings.poster_image.width >= 320 -%}{{ section.settings.poster_image | image_url: width: 320, format: 'pjpg' }} 320w,{%- endif -%}
+                                    {%- if section.settings.poster_image.width >= 350 -%}{{ section.settings.poster_image | image_url: width: 350, format: 'pjpg' }} 350w,{%- endif -%}
+                                    {%- if section.settings.poster_image.width >= 550 -%}{{ section.settings.poster_image | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}
+                                    {%- if section.settings.poster_image.width >= 750 -%}{{ section.settings.poster_image | image_url: width: 750, format: 'pjpg' }} 750w,{%- endif -%}
+                                    {%- if section.settings.poster_image.width >= 991 -%}{{ section.settings.poster_image | image_url: width: 991, format: 'pjpg' }} 991w,{%- endif -%}
+                                    {%- if section.settings.poster_image.width >= 1200 -%}{{ section.settings.poster_image | image_url: width: 1200, format: 'pjpg' }} 1200w,{%- endif -%}
+                                    {%- if section.settings.poster_image.width >= 1500 -%}{{ section.settings.poster_image | image_url: width: 1500, format: 'pjpg' }} 1500w,{%- endif -%}"
+                                    src="{{ section.settings.poster_image | image_url: width: 1500, format: 'pjpg' }}" loading="lazy"
+                                    sizes="(min-width:992px) 550px, 100vw"
+                                    alt="{{ section.settings.poster_image.alt | default: section.settings.title | strip_html }}"
+                                    width="{{ section.settings.poster_image.width }}"
+                                    height="{{ section.settings.poster_image.width | divided_by: section.settings.poster_image.aspect_ratio | round }}"
+                                >
+                            {%- else -%}
+                            <img srcset="
+                                {%- if settings.no_image.width >= 320 -%}{{ settings.no_image | image_url: width: 320, format: 'pjpg' }} 320w,{%- endif -%}
+                                {%- if settings.no_image.width >= 350 -%}{{ settings.no_image | image_url: width: 350, format: 'pjpg' }} 350w,{%- endif -%}
+                                {%- if settings.no_image.width >= 550 -%}{{ settings.no_image | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}
+                                {%- if settings.no_image.width >= 750 -%}{{ settings.no_image | image_url: width: 750, format: 'pjpg' }} 750w,{%- endif -%}
+                                {%- if settings.no_image.width >= 991 -%}{{ settings.no_image | image_url: width: 991, format: 'pjpg' }} 991w,{%- endif -%}
+                                {%- if settings.no_image.width >= 1200 -%}{{ settings.no_image | image_url: width: 1200, format: 'pjpg' }} 1200w,{%- endif -%}
+                                {%- if settings.no_image.width >= 1500 -%}{{ settings.no_image | image_url: width: 1500, format: 'pjpg' }} 1500w,{%- endif -%}"
+                                src="{{ settings.no_image | image_url: width: 1500, format: 'pjpg' }}" loading="lazy"
+                                sizes="(min-width:992px) 550px, 100vw"
+                                alt="{{ settings.no_image.alt | default: section.settings.title | strip_html }}"
+                                width="{{ settings.no_image.width }}"
+                                height="{{ settings.no_image.width | divided_by: settings.no_image.aspect_ratio | round }}"
+                            >
+
+                            {%- endif -%}
+                        </div>
+                    </div>
+                    {%- if section.settings.placement == 'grid' -%}
+                        <div class="video-section {{ section.settings.height }}" tabindex="0"></div>
+                    {%- endif -%}
+                    {% if section.settings.enable_overlay %}
+                                <div class="poster-overlay {% if section.settings.placement == 'grid' %}poster-overlay-grid{% endif %}" style="background-color: {{ section.settings.overlay_bg_color }}!important; opacity: {{ section.settings.overlay_opacity }}!important;mix-blend-mode: multiply!important;"></div>
+                    {% endif %}
+                </custom-video>
+            </div>
+            <div class="col-12 {% if section.settings.video_style == 'col-lg-6' %}col-lg-6 col-xl-5{% else %}col-lg-4{% endif %} {% if section.settings.video_style_large == 'col-xl-5' %}col-xl-5{% else %}col-xl-4{% endif %}   mt-4 mt-lg-0 pt-1 pt-lg-0 order-lg-1 {{ section.settings.alignment }}">
+                <div class="inside-block" style="color:{{ section.settings.section_text_color }}">
+                    {% if section.settings.title != blank %}
+                    {{ section.settings.title }}
+
+                    {% endif %}
+                    {% if section.settings.subtitle != blank %}
+                        <p class="mb-4 pb-1">{{ section.settings.subtitle }}</p>
+                    {% endif %}
+                    <div class="footer-btn-warp">
+                        {% if section.settings.btn_txt != blank %}
+                            <a {% if section.settings.btn_link %} href="{{ section.settings.btn_link }}" {% endif %}class="btn btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">{{ section.settings.btn_txt }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Text With Right Video",
+  "class": "image-video-style",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border_bottom",
+      "label": "Border Bottom?",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "muted",
+      "label": "Video Muted",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "controls",
+      "label": "Video Controls",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Loop Video",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "video_style",
+      "label": "Video Content Style",
+      "options": [
+        {
+          "value": "col-lg-6",
+          "label": "Both Equal"
+        },
+        {
+          "value": "col-lg-8 ",
+          "label": "Video Larger"
+        }
+      ],
+      "default": "col-lg-6"
+    },
+    {
+      "type": "select",
+      "id": "video_style_large",
+      "label": "Video Content Style for XL width ",
+      "options": [
+        {
+          "value": "col-xl-5 ",
+          "label": "Both Equal"
+        },
+        {
+          "value": "col-xl-8 padding-top ",
+          "label": "Video Larger"
+        }
+      ],
+      "default": "col-xl-5 "
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Vertical Position",
+      "options": [
+        {
+          "value": "align-items-start",
+          "label": "Top"
+        },
+        {
+          "value": "align-items-center ",
+          "label": "Center"
+        },
+        {
+          "value": "align-items-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "align-items-end"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subheading"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "btn_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "btn_variant",
+      "label": "Button Variant",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "btn_size",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Poster"
+    },
+    {
+      "type": "select",
+      "id": "poster_type",
+      "label": "Poster Type",
+      "options": [
+        {
+          "value": "",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "paragraph",
+      "content": "Video"
+    },
+    {
+      "type": "textarea",
+      "id": "bg_video",
+      "label": "Poster Video URL",
+      "info": "Only Mute video can autoplay. Use local video URL."
+    },
+    {
+      "type": "textarea",
+      "id": "mobile_bg_video",
+      "label": "Mobile Poster Video URL",
+      "info": "Only Mute video can autoplay. Use local video URL."
+    },
+    {
+      "type": "paragraph",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "poster_image",
+      "label": "Select Image",
+      "info": "For Better Viewing Use Example dimentions: 1200x1200px ( Aspect Ratio: 1:1 )"
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_overlay",
+      "label": "Enabled?",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "overlay_bg_color",
+      "label": "Overlay Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.5
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_video_layout",
+      "label": "Full Width video?",
+      "default": true,
+      "info": "If checked only video with full width will be visible"
+    },
+    {
+      "type": "select",
+      "id": "video_type",
+      "label": "Video Type",
+      "options": [
+        {
+          "value": "youtube",
+          "label": "Youtube"
+        },
+        {
+          "value": "vimeo",
+          "label": "Vimeo"
+        },
+        {
+          "value": "local",
+          "label": "Local Video"
+        }
+      ],
+      "default": "local"
+    },
+    {
+      "type": "select",
+      "id": "placement",
+      "label": "Placement",
+      "options": [
+        {
+          "value": "grid",
+          "label": "Grid"
+        },
+        {
+          "value": "popup",
+          "label": "Modal"
+        }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "textarea",
+      "id": "video_id",
+      "label": "Video Id",
+      "info": "For Local video use file link. For Youtube and Vimeo use video ID"
+    },
+    {
+      "type": "textarea",
+      "id": "mobile_video_id",
+      "label": "Mobile Video Id",
+      "info": "Same as above. Only add details if need to show diff video in mobile device."
+    },
+    {
+      "type": "text",
+      "id": "video_btn_text",
+      "label": "Video Button Text",
+      "default": "Watch video"
+    },
+    {
+      "type": "header",
+      "content": "styling"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-start",
+          "label": "Left"
+        },
+        {
+          "value": "text-end",
+          "label": "Right"
+        }
+      ],
+      "default": "text-center"
+    },
+    {
+      "type": "select",
+      "id": "video_alignment",
+      "label": "Caption Alignment",
+      "options": [
+        {
+          "value": "justify-content-start",
+          "label": "Left"
+        },
+        {
+          "value": "justify-content-center",
+          "label": "Center"
+        },
+        {
+          "value": "justify-content-end",
+          "label": "Right"
+        }
+      ],
+      "default": "justify-content-center"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text With Right Video",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

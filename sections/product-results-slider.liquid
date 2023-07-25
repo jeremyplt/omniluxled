@@ -1,0 +1,319 @@
+{%- if section.settings.display_for_this_product == 'true' -%}
+{{ 'global-results-slider.css' | asset_url | stylesheet_tag }}
+<section class="section-content overflow-hidden position-relative global-results-slider {% unless section.settings.autoplay_enable %}global-results-slider-noplay{% endunless %}" data-section-id="{{ section.id }}" style="background: {{ section.settings.section_bg_color }}; color:{{ section.settings.section_text_color }}">
+    {% if section.settings.heading_style == 'heading_style_1' %}
+    {% if section.settings.heading_txt != blank %}
+    <div class="container mb-4 mb-lg-3 pb-1 pt-1 pt-lg-0">
+        <div class="text-center heading_txt pt-1 d-flex align-items-center {% if section.settings.btn_txt != blank %}justify-content-lg-between{% endif %}  justify-content-center" style="z-index: 2;">
+            {% if section.settings.heading_txt != blank %}
+                <div class="h3 pe-3 {% unless section.settings.btn_txt != blank %}mb-lg-2 mb-0{%else%}mb-0{% endunless %}">{{ section.settings.heading_txt }}</div>
+            {% endif %}
+            {% if section.settings.btn_txt != blank %}
+                <{% if section.settings.btn_link != blank %}a{% else %}span{% endif %} {% if section.settings.btn_link != blank %} href="{{ section.settings.btn_link_second }}" {% endif %}class="btn w-sm-auto w-100 d-lg-inline-flex d-none btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">{{ section.settings.btn_txt }}</{% if section.settings.btn_link != blank %}a{% else %}span{% endif %}>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+      {%- else -%}
+    <div class="container mb-2 mb-lg-4">
+        <div class="col-12 col-lg-6 text-center mx-auto">
+            <div class="">
+                {% if section.settings.heading_txt != blank %}
+                <h2 class="mb-4 mb-lg-2 pb-1">{{ section.settings.heading_txt }}</h3>
+            {% endif %}
+            {% if section.settings.txt != blank %}
+            <p class="">{{ section.settings.txt }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+      {% endif %}
+    <div class="{% if section.settings.fluid_layout %}container-fluid px-0{% else %}container{% endif %} pb-lg-1">
+      {% if section.blocks.size > 0 %}
+          <slider-element class="arrow-center swiper-container carousel d-block">
+              <div class="swiper swiper-slider results-slider-list" data-slider='{
+                  {% if section.settings.loop_enable %}
+                  "loop": true,
+                  {% endif %}
+                  {% if section.settings.autoplay_enable %}
+                  "slidesPerView": "auto",
+                  {% else %}
+                  "slidesPerView": "1.5",
+                  {% endif %}
+                  "spaceBetween": 10,
+                  "centeredSlides": false,
+                  "grabCursor": true,
+                  {% if section.settings.slider_enable %}
+                    "navigation": {
+                        "nextEl": ".results-slider-button-next",
+                        "prevEl": ".results-slider-button-prev"
+                    },
+                    "pagination": {
+                        "el": ".swiper-pagination"
+                    },
+                  "breakpoints": {
+                    "560": {
+                      "slidesPerView": 2,
+                      "spaceBetween": 20
+                    },
+                    "768": {
+                      "slidesPerView": 3,
+                      "spaceBetween": 30
+                    },
+                    "992": {
+                      "slidesPerView": 3,
+                      "spaceBetween": 30
+                    }
+                 },{% endif %}
+                  {% if section.settings.autoplay_enable %}
+                      "autoplay": {
+                          "delay": 0,
+                          "disableOnInteraction": false
+                      },
+                      "speed": 7000
+                  {% else %}
+                      "speed": 1000
+                  {% endif %}
+
+
+              }'>
+                  <div class="swiper-wrapper">
+                      {% for block in section.blocks %}
+                        {% if block.settings.image != blank %}
+                          <div class="{{ block.settings.alignment }} swiper-slide position-relative" data-block-id="{{ block.id }}" >
+                              <div class="">
+                                    <div class="rectangle-card position-relative  {% if block.settings.brfore_aftertext %}before-text{% endif %}">
+                                      <img src="{{ block.settings.image }}?format=pjpg"
+                                            alt="{{ section.settings.heading_txt | default:Reviews }}"
+                                            class="h-100 object-cover position-absolute start-0 top-0 w-100"
+                                            loading="lazy"
+                                            width="{{ block.settings.image.width | divided_by: 3 }}"
+                                            height="{{ block.settings.image.height | divided_by: 3 }}"
+                                        >
+                                    </div>
+                              </div>
+                          </div>
+                           {% endif %}
+                      {% endfor %}
+                  </div>
+                  {% if section.settings.nav_arrows %}
+                  <div class="position-absolute results-slider-buttons start-0 end-0 mx-auto d-inline-flex">
+                        <div class="swiper-button-next results-slider-button-next ox-arrow-right"></div>
+                        <div class="swiper-button-prev results-slider-button-prev ox-arrow-left"></div>
+                  </div>
+                  {% endif %}
+                  {% if section.settings.nav_dots %}
+                      <div class="swiper-pagination results-slider-pagination w-100"></div>
+                  {% endif %}
+              </div>
+          </slider-element>
+      {% endif %}
+  </div>
+  {% if section.settings.btn_txt != blank %}
+    <div class="container d-lg-none pb-1">
+        <div class="text-center mb-4 pt-4 mt-1 heading_txt pb-xl-0 pb-2">
+                <a {% if section.settings.btn_link %} href="{{ section.settings.btn_link_second }}" {% endif %}class="btn w-sm-auto w-100 btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">{{ section.settings.btn_txt }}</a>
+
+        </div>
+    </div>
+  {% endif %}
+</section>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Product:Results Slider",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "display_for_this_product",
+      "label": "Display For this Product"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "heading_style",
+      "label": "Heading Style",
+      "options": [
+        {
+          "value": "heading_style_1",
+          "label": "Heading Style 1"
+        },
+        {
+          "value": "heading_style_2",
+          "label": "Heading Style 2"
+        }
+      ],
+      "default": "heading_style_1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing & Border"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding Top(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding Bottom(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pts",
+      "label": "Padding Top(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pbs",
+      "label": "Padding Bottom(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "liquid",
+      "id": "heading_txt",
+      "label": "Heading Text"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Carousel Option"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_enable",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "loop_enable",
+      "label": "Loop Slide",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "slider_enable",
+      "label": "Enable Slider",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_arrows",
+      "label": "Arrows Navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_dots",
+      "label": "Dots Navigation",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logowidthtext",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "liquid",
+          "id": "image",
+          "label": "Result Image"
+        },
+        {
+          "type": "liquid",
+          "id": "brfore_aftertext",
+          "label": "Before After Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product:Results Slider",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}
+<style>
+    [data-section-id="{{ section.id }}"]
+    {
+      padding-top: {{ section.settings.pts }}px;
+      padding-bottom: {{ section.settings.pbs }}px;
+      {% if section.settings.border-top %}
+      border-top: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+      {% if section.settings.border-bottom %}
+      border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+    }
+    @media (min-width:992px)
+    {
+      [data-section-id="{{ section.id }}"]
+      {
+        padding-top: {{ section.settings.pt }}px;
+        padding-bottom: {{ section.settings.pb }}px;
+      }
+    }
+  </style>

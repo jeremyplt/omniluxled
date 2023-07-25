@@ -1,0 +1,417 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "2cb12f0d-e933-4333-b50d-2dff62cf6fcd": {
+      "type": "global-header-slider",
+      "blocks": {
+        "76a7a38c-9d9a-449e-8772-ccd3c36b9a06": {
+          "type": "video-slide",
+          "settings": {
+            "muted": true,
+            "controls": false,
+            "loop": true,
+            "logo_image__": "",
+            "title": "Advance your routine in just <strong><u>3 steps.<\/u><\/strong>",
+            "subtitle": "<p>Discover a power-packed skincare trio clinically proven to fight signs of aging and optimize Omnilux’s signature LED light therapy treatments.<\/p>",
+            "heading__size": false,
+            "heading__lg": 60,
+            "heading__md": 55,
+            "heading__sm": 50,
+            "play_icon": false,
+            "play_btn": false,
+            "btn_txt_watch": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "btn_txt": "Explore the line",
+            "btn_link": "#exploreline",
+            "btn_type": "",
+            "btn_variant": "white",
+            "btn_size": "",
+            "poster_type": "video",
+            "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1ef1fe8e2cb144e9bfe2388bd16b1810.mp4",
+            "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1ef1fe8e2cb144e9bfe2388bd16b1810.mp4",
+            "video_type": "local",
+            "placement": "grid",
+            "video_id": "",
+            "mobile_video_id": "",
+            "section_bg_color": "#ffffff",
+            "section_text_color": "#ffffff",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.5,
+            "alignment": "text-center text-md-start",
+            "video_alignment": "justify-content-md-start justify-content-center"
+          }
+        }
+      },
+      "block_order": [
+        "76a7a38c-9d9a-449e-8772-ccd3c36b9a06"
+      ],
+      "settings": {
+        "enabled": true,
+        "nav_arrows": false,
+        "nav_dots": false,
+        "nav_dots_right": false,
+        "height": "tallheight",
+        "top_padding_zero": true
+      }
+    },
+    "0815808e-a8b7-4e1d-b348-913b81d5e8b1": {
+      "type": "global-features-grid",
+      "blocks": {
+        "template--16169064104098__0815808e-a8b7-4e1d-b348-913b81d5e8b1-1684637742a4279aaf-0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/doctorformulated.png?v=1685650055",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "ca9aead8-b99c-4eff-b10b-6c356684e55c": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Safe_for_all_skin_types_svg.png?v=1685650062",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "c793978a-43fc-4e38-9e66-66871147b723": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/no_parabens_sulfates.png?v=1686158991",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "382f22bf-d4b3-496c-b20d-0f71a60d0b47": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/crueltyfree.png?v=1685650117",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "f5431301-e30f-41c2-b600-bd724527bc5c": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/vegan.png?v=1685650100",
+            "title": "",
+            "txt": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16169064104098__0815808e-a8b7-4e1d-b348-913b81d5e8b1-1684637742a4279aaf-0",
+        "ca9aead8-b99c-4eff-b10b-6c356684e55c",
+        "c793978a-43fc-4e38-9e66-66871147b723",
+        "382f22bf-d4b3-496c-b20d-0f71a60d0b47",
+        "f5431301-e30f-41c2-b600-bd724527bc5c"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "gradient_tone": true,
+        "icon_layout": false,
+        "grid_size": "2",
+        "heading_txt": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#000000",
+        "pt": 30,
+        "pb": 50,
+        "pts": 0,
+        "pbs": 40,
+        "border-top": false,
+        "border-bottom": false,
+        "css_class": ""
+      }
+    },
+    "23f2fda8-e8a7-4b2d-b176-998ae5de965a": {
+      "type": "global-imagevideo-withtext",
+      "blocks": {
+        "73592ee6-8522-41c9-8589-40155aef5e59": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Doctor-formulated for results you can’t resist",
+            "max_width": 530,
+            "poster_type": "",
+            "bg_video": "",
+            "mobile_bg_video": "",
+            "poster_image": "shopify:\/\/shop_images\/1683857591-image_48.jpg",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.5,
+            "fluid_video_layout": true,
+            "video_type": "local",
+            "placement": "grid",
+            "video_id": "",
+            "mobile_video_id": "",
+            "video_btn_text": "Watch video",
+            "section_bg_color": "#ffffff",
+            "section_text_color": "#000000",
+            "alignment": "text-center",
+            "video_alignment": "justify-content-center",
+            "txt": "An unmatched glow is 3 steps away. Renew, hydrate, and firm your skin with our professional-grade skincare line that includes the Enzyme Powder Cleanser, Hyaluronic Acid Serum, and Peptide Concentrate.",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "",
+            "btn_txt": "",
+            "btn_link": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "watch_video_id": "",
+            "watch_mobile_video_id": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "73592ee6-8522-41c9-8589-40155aef5e59"
+      ],
+      "settings": {
+        "display_for_this_product": "",
+        "fluid_layout": false,
+        "enable_background_tone": false,
+        "border_bottom": false,
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#000000"
+      }
+    },
+    "e38be45f-cef3-48f1-88e5-0e9ae227927c": {
+      "type": "global-rightvideo-text-skincare",
+      "settings": {
+        "fluid_layout": true,
+        "border_bottom": false,
+        "muted": false,
+        "controls": true,
+        "loop": false,
+        "video_style": "col-lg-6",
+        "video_style_large": "col-xl-5",
+        "content_position": "align-items-center",
+        "title": "Doctor-formulated for results you can’t resist",
+        "subtitle": "",
+        "txt": "",
+        "htmltxt": "<p>An unmatched glow is 3 steps away. Renew, hydrate, and firm your skin with our professional-grade skincare line that includes the Enzyme Powder Cleanser, Hyaluronic Acid Serum, and Peptide Concentrate.<\/p>\n<p>Pair this dynamic line with your Omnilux LED light therapy treatments to help:<\/p>\n<ul class=\"twocolumns\">\n<li>Brighten complexion<\/li>\n<li>Lock in essential hydration<\/li>\n<li>Even skin’s texture<\/li>\n<li>Restore fatigued skin<\/li>\n<li>Reduce the appearance of fine lines &amp; wrinkles<\/li>\n<li>Soothe redness &amp; inflammation<\/li>\n<\/ul>\n<p>Backed by nearly 20 years of aesthetics medicine expertise, world-renowned specialist Dr. Hany Abi Ghosn helped us carefully develop this 3-piece line with concentrated yet gentle ingredients.<\/p>",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "outline",
+        "btn_variant": "primary",
+        "btn_size": "",
+        "poster_type": "",
+        "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "poster_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/1683857591-image_48.jpg?v=1684337840",
+        "btn_txt_watch": "LEARN MORE",
+        "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "watch_mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "btn_type_watch": "outline",
+        "btn_variant_watch": "primary",
+        "btn_size_watch": "",
+        "enable_overlay": true,
+        "overlay_bg_color": "#000000",
+        "overlay_opacity": 0.1,
+        "fluid_video_layout": true,
+        "video_type": "local",
+        "placement": "popup",
+        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "video_btn_text": "Watch video",
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#000000",
+        "alignment": "text-start",
+        "video_alignment": "justify-content-center"
+      }
+    },
+    "98ce97d7-15c6-46d0-b111-c869d2a20b0b": {
+      "type": "global-info-block",
+      "blocks": {
+        "template--16169064104098__98ce97d7-15c6-46d0-b111-c869d2a20b0b-1684638177820ba2bb-0": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_18_copy_1.png",
+            "title": "<p>Enzyme Powder Cleanser <strong>PRE LED TREATMENT<\/strong><\/p>",
+            "txt_info": "<p>Cleanse, brighten, and improve texture with this gently exfoliating cleanser enriched with green tea, rice powder, and enzymes.<\/p>",
+            "btn_txt": "SHOP NOW",
+            "btn_url": "shopify:\/\/products\/enzyme-powder-cleanser"
+          }
+        },
+        "59a2a5b7-b6f5-4566-8ff2-3c5e06fec563": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_15_1_175b3185-e820-4e61-99b6-4023a8d6d33c.jpg",
+            "title": "<p>Hyaluronic Acid Serum <strong>DURING LED TREATMENT<\/strong><\/p>",
+            "txt_info": "<p>This serum amplifies your LED treatments with hyaluronic acid and niacinamide to hydrate, plump, and calm the skin.<\/p>",
+            "btn_txt": "SHOP NOW",
+            "btn_url": "https:\/\/omniluxled.com\/products\/hyaluronic-acid-serum"
+          }
+        },
+        "0771fb05-3ea9-446b-b6e9-deb71688b602": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_15_2_4f6ca987-3a77-4f83-9d69-336dc837c7dd.jpg",
+            "title": "<p>Peptide Concentrate <strong>POST LED TREATMENT<\/strong><\/p>",
+            "txt_info": "<p>Active peptides Matrixyl and Argireline help diminish fine lines and signs of fatigue, while soothing and firming the skin. <\/p>",
+            "btn_txt": "SHOP NOW",
+            "btn_url": "https:\/\/omniluxled.com\/products\/peptide-concentrate"
+          }
+        }
+      },
+      "block_order": [
+        "template--16169064104098__98ce97d7-15c6-46d0-b111-c869d2a20b0b-1684638177820ba2bb-0",
+        "59a2a5b7-b6f5-4566-8ff2-3c5e06fec563",
+        "0771fb05-3ea9-446b-b6e9-deb71688b602"
+      ],
+      "custom_css": [
+        ".border-bottom {border-bottom: 0 !important;}"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "anchorid": "exploreline",
+        "heading_txt": "We’re moving skincare forward.",
+        "lead_txt": "Elevate your routine with Omnilux’s clinically proven formulas — right at your fingertips.",
+        "section_bg_color": "",
+        "section_txt_color": "#000000",
+        "btn_type": "outline",
+        "btn_variant": "primary",
+        "btn_size": ""
+      }
+    },
+    "42776c1a-5bf9-4c69-870f-bdc44289f71c": {
+      "type": "global-title",
+      "custom_css": [
+        ".h3,.justify-content-lg-between {display: block !important;}",
+        ".h3.pe-3 {font-size: 18px !important; padding-right: 0 !important; line-height: 24px !important; margin-bottom: 10px !important;}",
+        "@media (max-width: 600px) {.mb-4.mb-lg-3 {margin-bottom: 0 !important; } .pt-4 {padding-top: 0 !important; margin-bottom: 3.5rem !important; }}",
+        ".border-top {border-top: 0px !important;}"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "css_class": "shopledkit",
+        "heading_txt": "Grab the full routine with just one click.",
+        "btn_txt": "SHOP THE LED ESSENTIALS KIT",
+        "btn_link": "shopify:\/\/products\/led-essentials-3-piece-kit",
+        "btn_type": "",
+        "btn_variant": "dark",
+        "btn_size": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000"
+      }
+    },
+    "473576ad-4bef-4b6a-af7e-fbea447f4426": {
+      "type": "global-image-with-text",
+      "blocks": {
+        "29f90a7a-02a7-428e-997c-3300aaebbeef": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Uncover even better skin.",
+            "max_width": 530,
+            "txt": "<p>Our trusted LED light therapy treatments just scored an upgrade. Pair the 3-step line with your Omnilux Contour or Omnilux Men devices to enhance the firming and brightening benefits that users already love.<\/p>",
+            "step_heading": "Clinical studies from Omnilux Contour users showed that:",
+            "steps_captions": "98% agreed their skin felt <em>firmer<\/em>.\n96% agreed their fine lines appeared <em>less visible<\/em>.\n95% agreed their skin was <em>brighter<\/em> and <em>plumper<\/em>.",
+            "steps_captions_2": "<p><em>* After 3 treatments per week for 4 weeks<\/em><\/p>",
+            "btn_txt": "SHOP THE LINE",
+            "btn_link": "#exploreline",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Untitled_design_110.png",
+            "alignment": "text-left",
+            "image_alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "29f90a7a-02a7-428e-997c-3300aaebbeef"
+      ],
+      "custom_css": [
+        ".container-fluid {padding-top: 5.5rem !important; padding-bottom: 4.5rem !important;}",
+        "@media (max-width: 600px) {.container-fluid {padding-top: 4.5rem !important; padding-bottom: 0rem !important; }}"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "enable_background_tone": false,
+        "border_bottom": false,
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#000000"
+      }
+    },
+    "14b5f872-142c-436c-aa91-9be1f604a443": {
+      "type": "global-video-with-text",
+      "settings": {
+        "fluid_layout": false,
+        "disable_min_height": true,
+        "muted": false,
+        "controls": true,
+        "loop": false,
+        "title": "Let’s get visible",
+        "subtitle": "We don’t like keeping secrets, especially when it comes to skincare. See why our users are showing it off.",
+        "subtitle2": "",
+        "btn_txt_watch": "Watch the video",
+        "btn_type_watch": "outline",
+        "btn_variant_watch": "primary",
+        "btn_size_watch": "",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "",
+        "btn_variant": "primary",
+        "btn_size": "",
+        "poster_type": "",
+        "bg_video": "",
+        "mobile_bg_video": "",
+        "poster_image": "shopify:\/\/shop_images\/testimonialdesktop.png",
+        "image_mobile": "shopify:\/\/shop_images\/testimonialmobile.png",
+        "disable_overlay": true,
+        "overlay_bg_color": "#000000",
+        "overlay_opacity": 0.3,
+        "fluid_video_layout": true,
+        "video_type": "local",
+        "placement": "popup",
+        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/fef82764e3a946918d9a98993d598af7.mp4",
+        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/fef82764e3a946918d9a98993d598af7.mp4",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#ffffff",
+        "alignment": "text-center",
+        "video_alignment": "justify-content-center",
+        "pt": 80,
+        "pb": 80,
+        "pts": 60,
+        "pbs": 60,
+        "border-top": true,
+        "border-bottom": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2cb12f0d-e933-4333-b50d-2dff62cf6fcd",
+    "0815808e-a8b7-4e1d-b348-913b81d5e8b1",
+    "23f2fda8-e8a7-4b2d-b176-998ae5de965a",
+    "e38be45f-cef3-48f1-88e5-0e9ae227927c",
+    "98ce97d7-15c6-46d0-b111-c869d2a20b0b",
+    "42776c1a-5bf9-4c69-870f-bdc44289f71c",
+    "473576ad-4bef-4b6a-af7e-fbea447f4426",
+    "14b5f872-142c-436c-aa91-9be1f604a443"
+  ]
+}

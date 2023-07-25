@@ -1,0 +1,59 @@
+.accordion__toggle[aria-expanded="true"] > span > .ox-plus,
+.accordion__toggle[aria-expanded="false"] > span > .ox-minus
+{
+    opacity: 0;
+    transform: rotate(45deg);
+}
+.help-categories ul
+{
+    overflow: auto;
+}
+.help-categories ul.tabs li a
+{
+    border: 1.5px solid;
+    border-bottom: 0;
+    padding: 22px 2%;
+    min-width:134px;
+    white-space: nowrap;
+}
+.help-categories ul li:not(.open):not(:hover) > a
+{
+    border-color: transparent;
+}
+.help-categories::after
+{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1.5px solid;
+    width: 100vw;
+    top: 77px;
+}
+.help-categories ul li a{
+    text-decoration: none;
+}
+.help-categories a{
+    text-decoration: none;
+}
+@media (min-width:768px)
+{
+    .help-categories ul.tabs li a
+    {
+        padding: 22px 20px;
+    }
+}
+custom-accordion .accordion__container .accordion__container:last-child {
+    border-bottom: 1.5px solid #000;
+}
+.help-categories .formatted-list ul li:before{
+    top: calc(50% + 1px) !important;
+    border: 3px solid !important;
+}
+.help-categories .formatted-list ul li{
+    padding-left: 19px !important;
+}
+.bibliography-tab .tab-content .tabcontent a{
+    color:#5cb8b2;
+    font-weight:400;
+}

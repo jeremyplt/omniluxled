@@ -1,0 +1,592 @@
+<div data-section-id="{{ section.id }}" data-template="product" class="{% if product.has_only_default_variant %}only-default-variant{% endif %}">
+  {%- liquid
+    assign productExcludeTag = settings.product_exclude_tag_text
+    assign fluid_layout = section.settings.fluid_layout
+    assign current_variant = product.selected_or_first_available_variant
+    assign featured_image = current_variant.featured_image | default: product.featured_image
+
+    capture current
+      cycle 1, 2
+    endcapture
+  -%}
+
+ 
+
+  <section class="section-content border-top pt-lg-6 pt-4 pb-0" data-product-container>
+    <div class="{% if fluid_layout %}container-fluid{% else %}container{% endif %} mt-lg-0 mt-n1">
+        <div class="row">
+            <div class="col-lg-7">
+                <div data-type="slider" class="product-images-wrapper pr-lg-4 text-center">
+                    <div class="row pdp-img-row {% if product.images.size == 1 %}pdp-one-img{% endif %}">
+                    {% if featured_image != blank %}
+                        <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
+                          {{ "accessibility.skip_to_product_info" | t }}
+                        </a>
+                        <slider-element class="swiper-container order-lg-2 overflow-hidden" data-main-slider>
+                            <div class="swiper swiper-slider product-carousel pdp-carousel mb-0" data-nav="product-thumbnails" data-slider='{
+                                    "loop": false,
+                                    "slidesPerView": "1",
+                                    "spaceBetween": 15,
+                                    "grabCursor": true,
+                                    "navigation": {
+                                        "nextEl": ".swiper-button-next-{{ section.id }}",
+                                        "prevEl": ".swiper-button-prev-{{ section.id }}"
+                                    },
+                                    "pagination": {
+                                        "el": ".swiper-pagination-{{ section.id }}"
+                                    }
+                                }' role="tree">
+                                <div class="swiper-wrapper">
+                                    {% for media in product.media %}
+                                      {% if media.media_type == 'image' %}
+                                        {% assign image = media %}
+                                        <div class="swiper-slide carousel-cell d-flex align-items-center product--media" data-mediaID="{{ image.id }}" role="treeitem">
+                                          <div class="square-card position-relative w-100">
+                                            <img class="img-fluid position-absolute top-0 start-0 object-cover w-100 h-100" srcset="
+                                                  {%- if image.src.width >= 350 -%}{{ image.src | image_url: width: 350 }} 350w,{%- endif -%}
+                                                  {%- if image.src.width >= 550 -%}{{ image.src | image_url: width: 550 }} 550w,{%- endif -%}
+                                                  {%- if image.src.width >= 750 -%}{{ image.src | image_url: width: 750 }} 750w,{%- endif -%}
+                                                  {%- if image.src.width >= 991 -%}{{ image.src | image_url: width: 991 }} 991w,{%- endif -%}
+                                                  {%- if image.src.width >= 1200 -%}{{ image.src | image_url: width: 1200 }} 1200w,{%- endif -%}
+                                                  {%- if image.src.width >= 1500 -%}{{ image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                                  {{ image.src | image_url }} {{ image.src.width }}w"
+                                                  src="{{ image.src | image_url: width: 1500 }}" loading="lazy"
+                                                  data-variant-title="{{ image.alt | escape }}"
+                                                  sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width }}, 100vw"
+                                                  alt="{{ image.alt | escape }}"
+                                                  width="{{ image.src.width }}"
+                                                  height="{{ image.src.width | divided_by: image.src.aspect_ratio | round }}"
+                                              >
+                                            </div>
+                                        </div>
+                                      {% elsif media.media_type == 'external_video' or media.media_type == 'video' %}
+                                        <div class="swiper-slide carousel-cell d-flex align-items-center product--media" data-mediaID="{{ media.id }}" role="treeitem">
+                                            {%- render 'media', media: media -%}
+                                        </div>
+                                      {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-{{ section.id }} bottom-0 w-100 text-center position-relative d-flex justify-content-center flex-wrap d-lg-none" style="margin-top: 10px;"></div>
+                                <div class="swiper-button-next swiper-button-next-{{ section.id }} d-lg-none ox-arrow-right" {% if product.images.size <= 1 %}style="display: none !important;"{% endif %}></div>
+                                <div class="swiper-button-prev swiper-button-prev-{{ section.id }} d-lg-none ox-arrow-left" {% if product.images.size <= 1 %}style="display: none !important;"{% endif %}></div>
+                            </div>
+                        </slider-element>
+
+                        <!-- Nav Slider functionality is not available directly. Custom Set up for Nav -->
+                        {% if product.images.size > 1 %}
+                          <div class="swiper-container col-auto d-none d-lg-flex order-md-1 align-items-center" data-thumbSlider data-direction="vertical">
+                              <div class="swiper swiper-slider product-thumbnails w-100 ms-0" data-slider='{
+                                      "direction":"horizontal",
+                                      "loop": false,
+                                      "slidesPerView": "5",
+                                      "spaceBetween": 10,
+                                      "grabCursor": true,
+                                      "slideToClickedSlide": true,
+                                      "navigation": {
+                                        "nextEl": ".swiper-button-next-t",
+                                        "prevEl": ".swiper-button-prev-t"
+                                      },
+                                      "breakpoints": {
+                                        "992": {
+                                          "direction":"vertical",
+                                          "slidesPerView": "3"
+                                        },
+                                        "1300": {
+                                          "direction":"vertical",
+                                          "slidesPerView": "5"
+                                        }
+                                      }
+                                  }' role="tree">
+                                  <div class="swiper-wrapper">
+                                    {% for media in product.media %}
+                                      {% if media.media_type == 'image' %}
+                                        {% assign image = media %}
+                                        <div class="swiper-slide product-thumb--image" data-mediaID="{{ image.id }}" role="treeitem">
+                                          <div class="square-card position-relative w-100">
+                                            <img class="img-fluid position-absolute top-0 start-0 object-cover w-100 h-100"
+                                            src="{{ image.src | image_url }}"
+                                            srcset="{{ image.src | image_url: width: 100 }}"
+                                            sizes="100px"
+                                            loading="lazy"
+                                            width="{{ image.width }}"
+                                            height="{{ image.width | divided_by: image.aspect_ratio }}"
+                                            alt="{{ image.alt | default: product.title | escape }}"/>
+                                          </div>
+                                        </div>
+                                      {% elsif media.media_type == 'external_video' or media.media_type == 'video' %}
+                                        <div class="swiper-slide product-thumb--image media--video" data-mediaID="{{ media.id }}" role="treeitem">
+                                          <div class="square-card position-relative w-100">
+                                            <img class="img-fluid position-absolute top-0 start-0 object-cover w-100 h-100"
+                                              src="{{ media.preview_image.src | image_url }}"
+                                              srcset="{{ media.preview_image.src | image_url: width: 100 }}"
+                                              sizes="100px"
+                                              loading="lazy"
+                                              width="{{ media.preview_image.width }}"
+                                              height="{{ media.preview_image.width | divided_by: media.preview_image.aspect_ratio }}"
+                                              alt="{{ media.alt | default: product.title | escape }}"/>
+                                              <span class="ox-play position-absolute"></span>
+                                          </div>
+                                        </div>
+                                      {% endif %}
+                                    {% endfor %}
+                                  </div>
+                                  <div class="swiper-button-next swiper-button-next-t ox-arrow-right text-primary bottom-0 start-0 end-0 mx-auto" {% if product.images.size <= 1 %}style="display: none !important;"{% endif %}></div>
+                                    <div class="swiper-button-prev swiper-button-prev-t ox-arrow-left text-primary top-0 start-0 end-0 mx-auto" {% if product.images.size <= 1 %}style="display: none !important;"{% endif %}></div>
+                              </div>
+                          </div>
+                        {% endif %}
+                    {% else %}
+                    <img class="img-fluid"
+                      src="{{ settings.no_image | image_url }}"
+                      srcset="{{ settings.no_image | image_url: width: 250 }}"
+                      sizes="250px"
+                      loading="lazy"
+                      width="{{ settings.no_image.width }}"
+                      height="{{ settings.no_image.width | divided_by: settings.no_image.aspect_ratio }}"
+                      alt="{{ settings.no_image.alt | default: product.title | escape }}"/>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 ps-xl-6" id="ProductInfo-{{ section.id }}">
+                <div class="product-details-wrapper mt-2 pt-1 mt-lg-0 pt-lg-0 d-flex flex-column" data-slider_type="{{ section.settings.slider_type }}">
+                  {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                    {%- when '@app' -%}
+                        {% render block %}
+                    {%- when 'name' -%}
+                        <h1 class="mt-2 h3">{{ product.title }}</h1>
+                    {%- when 'subtitle' -%}
+                      {% if block.settings.subtitle != '' %}
+                        <div class="align-items-center mt-2 mb-lg-3 mb-2 py-1 formatted-list fw-normal">
+                            {{ block.settings.subtitle }}
+                        </div>
+                        {% endif %}
+                    {%- when 'vendor' -%}
+                        {% assign show_vendor = block.settings.show_vendor %}
+                        <div class="align-items-center">
+                            {% if show_vendor %} <span class="my-0">{{ product.vendor }}</span> {% endif %}
+                        </div>
+                    {%- when 'price' -%}
+                        <div class="price-wrapper mt-2 d-flex align-items-center flex-wrap">
+                            {%- if current_variant.compare_at_price > current_variant.price -%}<s class="text-gray-600 me-2 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>{%- endif -%}
+                            <span class="fw-bold actual-price money me-2" data-currentPrice>{{ current_variant.price | money }}</span>
+                            <span class="free-shipping text-uppercase fw-bold font-size-md ls-0" style="line-height: 1.7857142857;">+ free shipping*</span>
+                        </div>
+                        {%- form 'product', product, data-productid: product.id, id: 'product-form-installment', class: 'installment caption-large mt-3' -%}
+                            <input type="hidden" name="id" data-productid="{{ product.id }}" value="{{ product.selected_or_first_available_variant.id }}">
+                            {{ form | payment_terms }}
+                        {%- endform -%}
+                    {%- when 'description' -%}
+                        {% if product.description %}
+                            <div class="rte mt-3 mb-n3 formatted-list">
+                                {{ product.description }}
+                            </div>
+                        {% endif %}
+                    {%- when 'product-tabs' -%}
+                      {%- liquid
+                        if block.settings.enable_product_tabs and section.settings.product_tabs_placement == 'beside_slider'
+                          render 'block-product-tabs', block: block
+                        endif
+                      -%}
+                    {%- when 'product_form' -%}
+                      {%- liquid
+                        
+                          assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
+                          assign checkWholesaleProducts = false
+                          for tag in hideWholesalersProducts
+                            assign tag = tag | downcase
+                            if product.tags contains tag
+                              assign checkWholesaleProducts = true
+                            endif
+                          endfor
+                       
+                        unless checkWholesaleProducts == true 
+                        unless product.tags contains productExcludeTag
+                          render 'form-product', product: product, current_variant: current_variant, format: 'product-page'
+                        endunless
+                        endunless
+                      -%}
+                    {%- when 'share' -%}
+                        {% if block.settings.show_social_share %}
+                            <div class="d-flex align-items-center mt-5 mb-3">
+                              <h6 class="me-2 mb-0">{{ 'products.product.share' | t }}</h6>
+                              {% render 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
+                            </div>
+                        {% endif %}
+                    {%- endcase -%}
+                  {%- endfor -%}
+                </div>
+
+            </div>
+        </div>
+    </div>
+  </section>
+
+  {%- liquid
+    for block in section.blocks
+      case block.type
+      when 'product-tabs'
+        if block.settings.enable_product_tabs and section.settings.product_tabs_placement == 'below_slider'
+          render 'block-product-tabs', block: block
+        endif
+      when 'related-products'
+        if block.settings.enable_related_products
+          render 'block-related-products', block: block
+        endif
+      endcase
+    endfor
+  -%}
+</div>
+
+<script type="application/json" data-productMedia>
+  {{ product.media | json }}
+</script>
+
+{% schema %}
+{
+  "name": "Template Product Men",
+  "tag": "section",
+  "class": "product-section spaced-section",
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "name",
+      "name": "Product Name",
+      "limit": 1
+    },
+    {
+      "type": "vendor",
+      "name": "Vendor",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_vendor",
+          "default": true,
+          "label": "Show Vendor"
+        }
+      ]
+    },
+    {
+      "type": "price",
+      "name": "Price",
+      "limit": 1
+    },
+    {
+      "type": "product_form",
+      "name": "Product Form",
+      "limit": 1
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1
+    },
+    {
+      "type": "subtitle",
+      "name": "SubTitle",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "SubTitle"
+        }
+      ]
+    },
+    {
+      "type": "share",
+      "name": "Share",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_social_share",
+          "default": true,
+          "label": "Show Social Sharing"
+        }
+      ]
+    },
+    {
+      "type": "faqs",
+      "name": "FAQ's Tabs",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "faqs_title_sub",
+          "label": "FAQ's Title",
+          "default": "FAQ's Title"
+        },
+        {
+          "type": "richtext",
+          "id": "faqs_content_sub",
+          "label": "FAQ's Content"
+        }
+      ]
+    },
+    {
+      "type": "product-tabs",
+      "name": "Product Tabs",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_product_tabs",
+          "label": "Enabled?",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "product_tabs_fluid_layout",
+          "label": "Full Width Layout?",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "product_tabs_layout",
+          "label": "Product Tabs Layout",
+          "options": [
+            {
+              "value": "tabify",
+              "label": "Tabify"
+            },
+            {
+              "value": "accordion",
+              "label": "Accordion"
+            }
+          ],
+          "default": "tabify"
+        },
+        {
+          "type": "header",
+          "content": "Tabs"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_descripion_tab",
+          "label": "Enable Description Tab?",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_custom_tab_1",
+          "label": "Enable Custom Tab 1?"
+        },
+        {
+          "type": "text",
+          "id": "tab_1_title",
+          "label": "Tab 1 Title",
+          "default": "Tab Title 1"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_1_content",
+          "label": "Tab 1 Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_custom_tab_2",
+          "label": "Enable Custom Tab 2?"
+        },
+        {
+          "type": "text",
+          "id": "tab_2_title",
+          "label": "Tab 2 Title",
+          "default": "Tab Title 2"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_2_content",
+          "label": "Tab 2 Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_custom_faq",
+          "label": "Enable FAQ's Tab 3?"
+        },
+        {
+          "type": "paragraph",
+          "content": "FAQ's Title"
+        },
+        {
+          "type": "text",
+          "id": "faq_title",
+          "label": "FAQ's Title",
+          "default": "FAQS"
+        },
+        {
+          "type": "text",
+          "id": "btn_txt",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_custom_tab_4",
+          "label": "Enable Custom Tab 4?"
+        },
+        {
+          "type": "text",
+          "id": "tab_4_title",
+          "label": "Tab 4 Title",
+          "default": "Tab Title 4"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_4_content",
+          "label": "Tab 4 Content"
+        }
+      ]
+    },
+    {
+      "type": "related-products",
+      "name": "Related Products",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_related_products",
+          "label": "Enabled?"
+        },
+        {
+          "type": "checkbox",
+          "id": "related_products_fluid_layout",
+          "label": "Full Width Layout?",
+          "default": false
+        },
+        {
+          "type": "range",
+          "id": "related_products_view",
+          "label": "Total Items to Show",
+          "min": 0,
+          "max": 16,
+          "step": 1,
+          "default": 9
+        },
+        {
+          "type": "range",
+          "id": "related_products_auto_play",
+          "label": "Autoplay",
+          "info": "Duration of animation between slides (in seconds). Set to zero if you don't want the slider to autoplay.",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "textarea",
+          "id": "related_products_heading_txt",
+          "label": "Heading Text",
+          "default": "Related Products"
+        },
+        {
+          "type": "select",
+          "id": "product_type",
+          "label": "Product Type",
+          "options": [
+            {
+              "value": "product-recommendations",
+              "label": "Product Recommendations"
+            },
+            {
+              "value": "related-products",
+              "label": "Related Products"
+            }
+          ],
+          "default": "product-recommendations"
+        },
+        {
+          "type": "paragraph",
+          "content": "Product Recommendations: Products comes from Shopify."
+        },
+        {
+          "type": "paragraph",
+          "content": "Related Products: Products which belongs to same collection."
+        },
+        {
+          "type": "header",
+          "content": "Styling"
+        },
+        {
+          "type": "color",
+          "id": "related_products_section_bg_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "related_products_section_color",
+          "label": "Text Color",
+          "default": "#343a40"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Features"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show Vendor?",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_dynamic_checkout",
+      "label": "Enable Dynamic checkout Buttons?",
+      "default": false,
+      "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+    },
+    {
+      "type": "select",
+      "id": "product_tabs_placement",
+      "label": "Product Tabs Placement",
+      "options": [
+        {
+          "value": "beside_slider",
+          "label": "Beside Product Slider"
+        },
+        {
+          "value": "below_slider",
+          "label": "Below Product Slider"
+        }
+      ],
+      "default": "below_slider"
+    }
+  ]
+}
+{% endschema %}

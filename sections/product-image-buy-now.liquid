@@ -1,0 +1,235 @@
+{%- if section.settings.display_for_this_product == 'true' -%}
+<section class="section-content image-with-text-block"  data-section-id="{{ section.id }}" >
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 col-lg-5 me-auto {% if section.settings.image_alignment == 'left' %}order-md-1{% else %}order-md-2{% endif %}">
+                <div class="2 position-relative square-card">
+                    {%- if section.settings.image != blank -%}
+                        
+                        <img
+                            src="{{ section.settings.image }}"
+                            
+                            alt="{{ section.settings.image.alt | escape }}"
+                            class="h-100 object-cover position-absolute start-0 top-0 w-100"
+                            loading="lazy"
+                            width="{{ section.settings.image.width | divided_by: 3 }}"
+                            height="{{ section.settings.image.height | divided_by: 3 }}"
+                        >
+                    {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-5 mt-4 ms-auto mt-md-0 pt-lg-0 pt-1 {% if section.settings.image_alignment == 'left' %}order-md-2{% else %}order-md-1{% endif %}">
+                <div class="inside-block {{ section.settings.alignment }}">
+                    <div {% unless section.settings.max_width == 700 %}style="max-width:{{ section.settings.max_width }}px;"{% endunless %}>
+                        {% if section.settings.heading_txt != blank %}
+                            <h3 class="mb-3 pe-lg-5">{{ section.settings.heading_txt }}</h3>
+                        {% endif %}
+                        {% if section.settings.img_text1 != blank %}
+                            <div class="mb-5">{{ section.settings.img_text1 }}</div>
+                        {% endif %}
+                        {% if section.settings.img_text2 != blank %}
+                            <p class="mb-3">{{ section.settings.img_text2 }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="pe-lg-5">
+                        
+                        {% liquid
+                            assign product = all_products[section.settings.buynow_product]
+                            assign current_variant_buy = product.selected_or_first_available_variant 
+                            render 'form-product', product: product, current_variant: current_variant_buy, format: 'product-page-buynow' 
+                        %}
+                        {{ all_products[section.settings.buynow_product].object }}
+                        
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Product:Image-Buy Now",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "display_for_this_product",
+      "label": "Display For this Product"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Image With Text"
+    },
+    {
+      "type": "liquid",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    },
+    {
+      "type": "liquid",
+      "id": "img_text1",
+      "label": "Paragraph 1"
+    },
+    {
+      "type": "liquid",
+      "id": "img_text2",
+      "label": "Paragraph 2"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Content Max Width",
+      "min": 400,
+      "max": 700,
+      "step": 3,
+      "default": 700
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "liquid",
+      "id": "image",
+      "label": "Select Image",
+      "info": "For Better Viewing Use Example dimentions: 775*735 ( Aspect Ratio: 1.05 )"
+    },
+    {
+      "type": "liquid",
+      "id": "buynow_product",
+      "label": "Select product"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-end",
+          "label": "Right"
+        }
+      ],
+      "default": "text-left"
+    },
+    {
+      "type": "select",
+      "id": "image_alignment",
+      "label": "Image Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Spacing & Border"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding Top(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding Bottom(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pts",
+      "label": "Padding Top(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pbs",
+      "label": "Padding Bottom(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product:Image-Buy Now"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+    [data-section-id="{{ section.id }}"]
+    {
+      padding-top: {{ section.settings.pts }}px;
+      padding-bottom: {{ section.settings.pbs }}px;
+      {% if section.settings.border-top %}
+      border-top: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+      {% if section.settings.border-bottom %}
+      border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+    }
+    @media (min-width:992px)
+    {
+      [data-section-id="{{ section.id }}"]
+      {
+        padding-top: {{ section.settings.pt }}px;
+        padding-bottom: {{ section.settings.pb }}px;
+      }
+    }
+  </style>

@@ -1,0 +1,303 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+<section data-template="account" data-account-address data-customer-addresses>
+
+  <div class="pt-lg-7 pt-6 pb-9 pb-lg-7 account-bg-tone border-bottom">
+    <span class="account-fair-tone position-absolute w-100 start-0 top-0 overflow-hidden gradient-fair-tone" style="pointer-events: none;z-index: -1;">
+    </span>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-12 mx-auto text-center">
+                <h6 class="m-0">{{ settings.welcome_text }}</h6>
+                <h1 class="mb-lg-5 mb-4 pb-1">My Account</h1>
+                <div class="custom-select-wrap">
+                    <custom-select class="sortby-dropdown d-block position-relative">
+                        <div class="bg-transparent border-0 default border-bottom d-flex d-lg-none position-relative pt-0 px-0 py-2 align-items-end">
+                            <span class="option_txt fw-medium text-capitalize">{{ 'customer.account.view_addresses' | t }}</span><span class="ox-arrow-down ms-auto font-size-xs"></span></div>
+                            <div class="custom--select">
+                                <ul class="list-unstyled m-0 toggle-content d-lg-flex flex-wrap justify-content-lg-center m-0 account_nav text-lg-center text-start" data-type="content" style="height: 0px;">
+                                    <li data-value="{{ 'customer.orders.title' | t }}" class="px-lg-3 px-0 lh-lg">
+                                        <a class=" text-capitalize fw-normal pb-lg-1" href="/account" title="{{ 'customer.orders.title' | t }}" rel="nofollow" aria-label="{{ 'customer.orders.title' | t }}">
+                                        {{ 'customer.orders.title' | t }}
+                                        </a>
+                                    </li>
+                                    <li data-value="{{ 'customer.orders.wishlist' | t }}" class="px-lg-3 px-0 lh-lg">
+                                        <a class=" text-capitalize fw-normal pb-lg-1" href="" title="{{ 'customer.orders.title' | t }}" rel="nofollow" aria-label="{{ 'customer.orders.title' | t }}">
+                                        {{ 'customer.orders.wishlist' | t }}
+                                        </a>
+                                    </li>
+                                    <li data-value="{{ 'customer.account.view_addresses' | t }}" class="px-lg-3 px-0 lh-lg d-lg-block d-none">
+                                        <a class=" text-capitalize fw-normal active pb-lg-1" href="{{ routes.account_addresses_url }}">
+                                            {{ 'customer.account.view_addresses' | t }}
+                                        </a>
+                                    </li>
+                                    <li data-value="{{ 'customer.log_out' | t }}" class="px-lg-3 px-0 lh-lg">
+                                        <a class=" text-capitalize fw-normal pb-lg-1" href="{{ routes.account_logout_url }}">
+                                            {{ 'customer.log_out' | t }}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </custom-select>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-3 mb-lg-0 mb-5 profile-border position-relative  pt-6 pb-5 pb-lg-9 text-center text-lg-start">
+                <div class="d-flex align-items-center justify-content-center justify-content-lg-start mb-3 mb-lg-4">
+                    <div class="profile position-relative me-3">
+                        <h5 class="m-0 font-family-heading text-uppercase text-white position-absolute">{{ customer.first_name | slice: 0 }}{{ customer.last_name | slice: 0 }}</h5>
+                    </div>
+                    <h5 class="text-capitalize profile-text lh-lg font-family-heading m-0">{{ customer.name }}</h5>
+                </div>
+                <div class="email-block">
+                    <p class="mb-3">{{ customer.email }}</p>
+                    <p class="mb-3">{{ 'customer.account.password_label' | t }}: **********  <a href="/account/login#recover" class="text-primary ms-2">{{ 'customer.account.reset_label' | t }}</a></p>
+                    <p class="mb-2">{{ 'customer.account.total_orders' | t }}: {{ customer.orders.size }}</p>
+                </div>
+            </div>
+            <div class="col-lg w-100 ps-lg-4 ps-xl-8 pt-1 pt-lg-7 pb-lg-9 pb-5 pb-lg-0">
+                <div class="d-flex justify-content-between flex-wrap flex-column flex-lg-row align-items-center align-items-lg-start pb-1 pb-lg-0">
+                  <h5 class="pb-1 pb-lg-0">{{ 'customer.addresses.title' | t }}</h5>
+                  <a href="javascript:void(0);" class="btn btn-outline-primary  mb-4 mt-3 mt-lg-0" data-edit-address data-for="add_address" aria-expanded="false" data-toggle="collapse" data-target="#AddAddress">
+                    <span>{{ 'customer.addresses.add_new' | t }}</span>
+                  </a>
+                </div>
+                <div data-newAddressContainer>
+                  <div id="AddAddress" class="toggle-content customer-form" data-type="content">
+                    <div class="mb-4">
+                      {% form 'customer_address', customer.new_address %}
+                        <h5 class="mb-3">
+                          {{ 'customer.addresses.add_new' | t }}
+                        </h5>
+
+                        <div class="row mx-n2">
+
+                          <div class="col-md-6 col-12 mb-3 px-2">
+                            <div class="form-floating">
+                              <input placeholder="{{ 'customer.addresses.first_name' | t }}" type="text" id="AddressFirstNameNew" class="form-control " name="address[first_name]" value="{{ form.first_name }}" autocapitalize="words">
+                              <label for="customerEmail">{{ 'customer.addresses.first_name' | t }}</label>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-12 mb-3 px-2">
+                            <div class="form-floating">
+                              <input placeholder="{{ 'customer.addresses.last_name' | t }}" type="text" id="AddressLastNameNew" class="form-control " name="address[last_name]" value="{{ form.last_name }}" autocapitalize="words">
+                              <label for="customerEmail">{{ 'customer.addresses.last_name' | t }}</label>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-12 mb-3 px-2">
+                            <div class="form-floating">
+                              <input placeholder="{{ 'customer.addresses.phone' | t }}" type="tel" id="AddressPhoneNew" class="form-control " name="address[phone]" value="{{ form.phone }}" pattern="[0-9\-]*">
+                              <label for="customerEmail">{{ 'customer.addresses.phone' | t }}</label>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-12 mb-3 px-2">
+                            <div class="form-floating">
+                              <input placeholder="{{ 'customer.addresses.company' | t }}" type="text" id="AddressCompanyNew" class="form-control " name="address[company]" value="{{ form.company }}" autocapitalize="words">
+                              <label for="customerEmail">{{ 'customer.addresses.company' | t }}</label>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-12 mb-3 px-2">
+                            <div class="form-floating">
+                              <input placeholder="{{ 'customer.addresses.address1' | t }}" type="text" id="AddressAddress1New" class="form-control " name="address[address1]" value="{{ form.address1 }}" autocapitalize="words">
+                              <label for="customerEmail">{{ 'customer.addresses.address1' | t }}</label>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-12 mb-3 px-2">
+                            <div class="form-floating">
+                              <input placeholder="{{ 'customer.addresses.address2' | t }}" type="text" id="AddressAddress2New" class="form-control " name="address[address2]" value="{{ form.address2 }}" autocapitalize="words">
+                              <label for="customerEmail">{{ 'customer.addresses.address2' | t }}</label>
+                            </div>
+                          </div>
+
+                          <div class="col-12 px-2">
+                            <div class="row mx-n2">
+                              <div class="col-md mb-3 px-2">
+                                <div class="form-floating">
+                                  <input placeholder="{{ 'customer.addresses.city' | t }}" type="text" id="AddressCityNew" class="form-control " name="address[city]" value="{{ form.city }}" autocapitalize="words">
+                                  <label for="customerEmail">{{ 'customer.addresses.city' | t }}</label>
+                                </div>
+                              </div>
+
+                              <div class="col-md mb-3 px-2">
+                                <select placeholder="{{ 'customer.addresses.country' | t }}" id="AddressCountryNew" class="form-control " name="address[country]" data-default="{{ shop.address.country }}" data-form-id="{{ form.id }}" data-address-country-select>
+                                  {{ all_country_option_tags }}
+                                </select>
+                              </div>
+
+                              <div class="col-md mb-3 px-2" id="AddressProvinceContainerNew" style="display:none">
+                                <select placeholder="{{ 'customer.addresses.province' | t }}" id="AddressProvinceNew" class="form-control " name="address[province]" data-default="{{ form.province }}"></select>
+                              </div>
+
+                              <div class="col-md mb-3 px-2">
+                                <div class="form-floating">
+                                  <input placeholder="{{ 'customer.addresses.zip' | t }}" type="text" id="AddressZipNew" class="form-control " name="address[zip]" value="{{ form.zip }}" autocapitalize="characters">
+                                  <label for="customerEmail">{{ 'customer.addresses.zip' | t }}</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="address[default]" value="1" checked>
+                            <label class="form-check-label text-capitalize" for="flexCheckChecked">{{ 'customer.addresses.set_default' | t }}</label>
+                          </div>
+                        </div>
+
+                        <div class="card-footer bg-transparent border-0 p-0">
+                            <button type="submit" class="btn btn-primary btn-sm me-2">
+                              <span>{{ 'customer.addresses.add' | t }}</span>
+                            </button>
+                            <button class="btn btn-outline-primary btn-sm" type="button" data-reset-address aria-expanded="false" aria-controls="AddAddress">
+                              <span>{{ 'customer.addresses.cancel' | t }}</span>
+                            </button>
+                        </div>
+                      {% endform %}
+                    </div>
+                  </div>
+                </div>
+                {% paginate customer.addresses by 6 %}
+                  <div class="row">
+                    {% for address in customer.addresses %}
+                      <div class="col-12 col-md-6 col-sm-8 col-xl-4 mb-4 pb-1 mx-auto mx-xl-0 address_block">
+                          <div class="card border bounded text-center text-lg-start px-5 py-4 min-h-100 fw-normal">
+                            <div class="card-body p-0">
+                              <div class="position-absolute end-0 top-0">
+                                {% comment %} <p class="d-inline-block mb-0 me-2">{{ address.first_name | capitalize }} {{ address.last_name | capitalize }}</p> {% endcomment %}
+                                {% if address == customer.default_address %}<span style="font-size: 10px;" class="bg-black badge badge-pill badge-warning px-2">{{ 'customer.addresses.default' | t }}</span>{% endif %}
+                              </div>
+                              <div class="card-text">
+                                <p class="">{{ address | format_address }}</p>
+                              </div>
+                            </div>
+                            <div class="card-footer border-0 p-0 bg-transparent pt-2">
+                              <a class="card-link btn btn-outline-primary" href="javascript:void(0);" data-toggle="collapse" data-edit-address data-for="edit_address" data-target="#collapseAddressEdit-{{ address.id }}">{{ 'customer.addresses.edit' | t }}</a>
+                              <a href="javascript:void(0);" class="d-block mt-3 fw-medium"
+                                aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
+                                data-target="{{ address.url }}"
+                                data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}">{{ 'customer.addresses.delete' | t }}</a>
+                            </div>
+                          </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+
+                  <div class="form--container" data-editAddressContainer>
+                    {% for address in customer.addresses %}
+                      <div id="collapseAddressEdit-{{ address.id }}" class="toggle-content customer-form">
+                        <div class="mb-4">
+                          {% form 'customer_address', address %}
+
+                            <h5 class="mb-3">{{ 'customer.addresses.edit_address' | t }}</h5>
+
+                            <div class="row mx-n2">
+                              <div class="col-md-6 col-12 mb-3 px-2">
+                                <div class="form-floating">
+                                  <input placeholder="{{ 'customer.addresses.first_name' | t }}" type="text" id="AddressFirstName_{{ form.id }}" class="form-control" name="address[first_name]" value="{{ form.first_name }}" autocapitalize="words">
+                                  <label for="customerEmail">{{ 'customer.addresses.first_name' | t }}</label>
+                                </div>
+                              </div>
+
+                              <div class="col-md-6 col-12 mb-3 px-2">
+                                <div class="form-floating">
+                                  <input placeholder="{{ 'customer.addresses.last_name' | t }}" type="text" id="AddressLastName_{{ form.id }}" class="form-control" name="address[last_name]" value="{{ form.last_name }}" autocapitalize="words">
+                                  <label for="customerEmail">{{ 'customer.addresses.last_name' | t }}</label>
+                                </div>
+                              </div>
+
+                              <div class="col-md-6 col-12 mb-3 px-2">
+                                <div class="form-floating">
+                                  <input placeholder="{{ 'customer.addresses.phone' | t }}" type="tel" id="AddressPhone_{{ form.id }}" class="form-control" name="address[phone]" value="{{ form.phone }}" pattern="[0-9\-]*">
+                                  <label for="customerEmail">{{ 'customer.addresses.phone' | t }}</label>
+                                </div>
+                              </div>
+
+                              <div class="col-md-6 col-12 mb-3 px-2">
+                                <div class="form-floating">
+                                  <input placeholder="{{ 'customer.addresses.company' | t }}" type="text" id="AddressCompany_{{ form.id }}" class="form-control" name="address[company]" value="{{ form.company }}" autocapitalize="words">
+                                  <label for="customerEmail">{{ 'customer.addresses.company' | t }}</label>
+                                </div>
+                              </div>
+
+                              <div class="col-md-6 col-12 mb-3 px-2">
+                                <div class="form-floating">
+                                  <input placeholder="{{ 'customer.addresses.address1' | t }}" type="text" id="AddressAddress1_{{ form.id }}" class="form-control" name="address[address1]" value="{{ form.address1 }}" autocapitalize="words">
+                                  <label for="customerEmail">{{ 'customer.addresses.address1' | t }}</label>
+                                </div>
+                              </div>
+
+                              <div class="col-md-6 col-12 mb-3 px-2">
+                                <div class="form-floating">
+                                  <input placeholder="{{ 'customer.addresses.address2' | t }}" type="text" id="AddressAddress2_{{ form.id }}" class="form-control" name="address[address2]" value="{{ form.address2 }}" autocapitalize="words">
+                                  <label for="customerEmail">{{ 'customer.addresses.address2' | t }}</label>
+                                </div>
+                              </div>
+
+                              <div class="col-12 px-2">
+                                <div class="row mx-n2">
+                                  <div class="col-md mb-3 px-2">
+                                    <div class="form-floating">
+                                      <input placeholder="{{ 'customer.addresses.city' | t }}" type="text" id="AddressCity_{{ form.id }}" class="form-control" name="address[city]" value="{{ form.city }}" autocapitalize="words">
+                                      <label for="customerEmail">{{ 'customer.addresses.city' | t }}</label>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-md mb-3 px-2">
+                                    <select placeholder="{{ 'customer.addresses.country' | t }}" id="AddressCountry_{{ form.id }}" name="address[country]" class="form-control" data-default="{{ form.country }}" data-form-id="{{ form.id }}" data-address-country-select>{{ all_country_option_tags }}</select>
+                                  </div>
+
+                                  <div class="col-md mb-3 px-2" id="AddressProvinceContainer_{{ form.id }}" style="display:none">
+                                    <select placeholder="{{ 'customer.addresses.province' | t }}" id="AddressProvince_{{ form.id }}" class="form-control" name="address[province]" data-default="{{ form.province }}"></select>
+                                  </div>
+
+                                  <div class="col-md mb-3 px-2">
+                                    <div class="form-floating">
+                                      <input placeholder="{{ 'customer.addresses.zip' | t }}" type="text" id="AddressZip_{{ form.id }}" class="form-control" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters">
+                                      <label for="customerEmail">{{ 'customer.addresses.zip' | t }}</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="mb-3">
+                                <input class="form-check-input" type="checkbox" id="address_default_address_6688631455923" name="address[default]" value="">
+                                <label class="form-check-label text-capitalize" for="address_default_address_{{ form.id }}">{{ 'customer.addresses.set_default' | t }}</label>
+                              </div>
+                            </div>
+
+                            <div class="mb-3">
+                              <button type="submit" class="btn btn-primary btn-sm me-2">
+                                <span>{{ 'customer.addresses.update' | t }}</span>
+                              </button>
+                              <button class="btn btn-outline-primary btn-sm" type="reset" data-reset-address aria-expanded="false" aria-controls="collapseAddressEdit-{{ address.id }}">
+                                <span>{{ 'customer.addresses.cancel' | t }}</span>
+                              </button>
+                            </div>
+
+                          {% endform %}
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+
+                  {% if paginate.pages > 1 %}
+                    <div class="text-center">
+                      {% render 'pagination', paginate: paginate %}
+                    </div>
+                  {% endif %}
+                {% endpaginate %}
+            </div>
+
+        </div>
+    </div>
+  </div>
+</section>

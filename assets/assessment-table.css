@@ -1,0 +1,203 @@
+table {
+	width:100%;
+	border-collapse: collapse;
+	margin:50px auto;
+	}
+
+/* Zebra striping */
+
+th {
+	color:black;
+	font-weight: bold;
+    text-transform: uppercase;
+    text-align:left;
+	}
+td {
+	padding:29px;
+	border: 1.5px solid #000;
+    border-bottom: 0;
+    border-top: 0;
+	}
+/* tr td:first-child{
+    border-left:0;
+} */
+tr td:last-child{
+    border-right:0;
+}
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 768px),
+(min-device-width: 768px) and (max-device-width: 991px)  {
+    tbody > :first-child .acne-type{
+        padding-top: 0;
+    }
+    td{
+        padding-left: 0;
+        padding-right: 0;
+        position: relative;
+    }
+    td:after{
+    content: "";
+    left: 50%;
+    border-bottom: 1.5px solid #000;
+    position: absolute;
+    width: 100vw;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%);
+    opacity: 0.2;
+    }
+    .table-tr{
+        position: relative;
+    }
+    .table-tr::after{
+        content: "";
+    left: 50%;
+    border-bottom: 1.5px solid #000;
+    position: absolute;
+    width: 100vw;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%);
+    }
+    .table-omnilux-width{
+        text-align: center;
+    }
+    .table-omnilux-width .table-d-flex {
+        padding-top: 20px;
+    }
+    .acne-type{
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+    }
+    tbody > .acne-type{
+        padding-top: 0;
+    }
+    .table-description-width{
+        text-align: center;
+    }
+    .table-description-width .table-image-parent {
+        margin:20px auto;
+    }
+	table {
+	  	width: 100%;
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	/* tr { border: 1.5px solid #ccc; } */
+
+	td {
+		border: none;
+		/* border-bottom: 1.5px solid #000; */
+		/* position: relative;
+		padding-left: 50%; */
+	}
+
+	td:before {
+		/* Now like a table header */
+		/* Top/left values mimic padding */
+		width: 100%;
+		/* padding-right: 10px; */
+		content: attr(data-column);
+		color: #000;
+		font-weight: bold;
+        line-height: 22px;
+        padding-bottom:20px;
+	}
+    .table-omnilux-width p{
+        margin-bottom: 0;
+    }
+    .table-d-flex .table-text {
+        margin-top: 20px !important;
+    }
+
+}
+
+@media (min-width:768px){
+
+}
+
+@media (min-width:992px){
+    .table-d-flex{
+        display: flex;
+    }
+    tr td:first-child{
+        border-left:0;
+        padding-left:0;
+    }
+    .table-acne-width{
+        width: 16.66667% !important;
+    }
+    .table-description-width{
+        width: 41.66667% !important;
+        padding-left: 30px;
+    }
+    .table-omnilux-width{
+        width: 41.66667% !important;
+        padding-left: 30px;
+        padding-right:0 !important;
+    }
+    .table-omnilux-width p{
+        margin: 0;
+    }
+    tbody .table-description-width::before{
+        content: "";
+        left: 50%;
+        border-bottom: 1.5px solid #000;
+        position: absolute;
+        width: 100vw;
+        right: 0;
+        top: 0;
+        transform: translate(-50%);
+    }
+    tbody tr:last-child:after{
+        content: "";
+        left: 50%;
+        border-bottom: 1.5px solid #000;
+        position: absolute;
+        width: 100vw;
+        right: 0;
+        bottom: 0;
+        transform: translate(-50%);
+    }
+}
+.table-img{
+    width:100%;
+    position: relative;
+    padding-top:88%;
+}
+.table-image-parent{
+   max-width:114px;
+   width: 100%;
+}
+.table-img img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.table-img-btn {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: 800;
+    border: 1.5px solid #000;
+}

@@ -1,0 +1,276 @@
+<section class="section-content image-with-text-block"  data-section-id="{{ section.id }}" >
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 col-lg-5 me-auto {% if section.settings.image_alignment == 'left' %}order-md-1{% else %}order-md-2{% endif %}">
+                <div class="2 position-relative square-card">
+                    {%- if section.settings.image != blank -%}
+                        <img
+                            srcset="
+                            {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                            {%- if section.settings.image.width >= 520 -%}{{ section.settings.image | image_url: width: 520 }} 520w,{%- endif -%}
+                            {%- if section.settings.image.width >= 650 -%}{{ section.settings.image | image_url: width: 650 }} 650w,{%- endif -%}
+                            {%- if section.settings.image.width >= 780 -%}{{ section.settings.image | image_url: width: 780 }} 780w,{%- endif -%}
+                            {%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1000 -%}{{ section.settings.image | image_url: width: 1000 }} 1000w,{%- endif -%}"
+                            src="{{ section.settings.image | image_url: width: 20 }}"
+                            sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), 100vw"
+                            alt="{{ section.settings.image.alt | escape }}"
+                            class="h-100 object-cover position-absolute start-0 top-0 w-100"
+                            loading="lazy"
+                            width="{{ section.settings.image.width | divided_by: 3 }}"
+                            height="{{ section.settings.image.height | divided_by: 3 }}"
+                        >
+                    {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-5 mt-4 ms-auto mt-md-0 pt-lg-0 pt-1 {% if section.settings.image_alignment == 'left' %}order-md-2{% else %}order-md-1{% endif %}">
+                <div class="inside-block {{ section.settings.alignment }}">
+                    <div {% unless section.settings.max_width == 700 %}style="max-width:{{ section.settings.max_width }}px;"{% endunless %}>
+                        {% if section.settings.heading_txt != blank %}
+                            <h3 class="mb-3 pe-lg-5">{{ section.settings.heading_txt }}</h3>
+                        {% endif %}
+                        {% if section.settings.img_text1 != blank %}
+                            <div class="mb-5">{{ section.settings.img_text1 }}</div>
+                        {% endif %}
+                        {% if section.settings.img_text2 != blank %}
+                            <p class="mb-3">{{ section.settings.img_text2 }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="pe-lg-5">
+                        <product-form class="product-form">
+                            <form method="post" action="/cart/add" id="product-form-5702727631010" accept-charset="UTF-8" class="mt-4" enctype="multipart/form-data" data-productid="5702727631010" data-product-form="" data-product-id="5702727631010" data-type="add-to-cart-form" data-format="product-page">
+                                <input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
+                                <input type="hidden" name="id" value="36101054169250">
+                                <div class="row">
+                                    <div class="col-12 d-flex justify-content-between flex-column">
+                                    </div>
+                                </div>
+                                <noscript>
+                                    <div class="row d-none">
+                                        <div class="col">
+                                            <select name="id" data-productid="5702727631010">
+                                                <option
+                                                    data-sku="111AOCF" data-product-id="5702727631010" data-variant-id="36101054169250"
+                                                    value="36101054169250" >
+                                                    Default Title - <span class=money>$395.00 USD</span>
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </noscript>
+                                <div class="row">
+                                    <div class="col-auto pe-0" style="min-width: 134px;max-width: 134px;">
+                                        <div class="quantity-wrapper mb-0 h-100" data-qty-container="">
+                                            <div class="input-group h-100">
+                                                <div class="input-group-prepend">
+                                                    <a href="javascript:void(0);" class="input-group-text" rel="nofollow" aria-label="Decrease quantity for Omnilux Contour FACE" title="Decrease quantity for Omnilux Contour FACE" data-for="decrease" data-qty-btn="">
+                                                    <span class="btn-decrease"><span class="ox-minus"></span></span>
+                                                    <span class="visually-hidden">Decrease quantity for Omnilux Contour FACE</span>
+                                                    </a>
+                                                </div>
+                                                <input type="number" name="quantity" aria-label="Quantity for Omnilux Contour FACE" value="1" step="1" min="1" inputmode="numeric" data-qty-input="" class="quantity form-control text-center">
+                                                <div class="input-group-append">
+                                                    <a href="javascript:void(0);" class="input-group-text" rel="nofollow" aria-label="Increase quantity for Omnilux Contour FACE" title="Increase quantity for Omnilux Contour FACE" data-for="increase" data-qty-btn="">
+                                                    <span class="btn-increase"><span class="ox-plus"></span></span>
+                                                    <span class="visually-hidden">Increase quantity for Omnilux Contour FACE</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto d-flex" style="width:calc(100% - 134px);padding-left: 10px;">
+                                        <button class="btn btn-outline-dark flex-grow-1 px-2" type="submit" name="add" aria-label="Add to cart">
+                                        <span class="add-text">Add to cart</span>
+                                        <span class="spinner"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <script class="variantsJSON-5702727631010" data-variantjson="" type="application/json">
+                                    [{"id":36101054169250,"title":"Default Title","option1":"Default Title","option2":null,"option3":null,"sku":"111AOCF","requires_shipping":true,"taxable":true,"featured_image":null,"available":true,"name":"Omnilux Contour FACE","public_title":null,"options":["Default Title"],"price":39500,"weight":1588,"compare_at_price":null,"inventory_management":"shopify","barcode":"5060534510128","requires_selling_plan":false,"selling_plan_allocations":[]}]
+                                </script>
+                            </form>
+                        </product-form>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image with Buy Now",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Image With Text"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "img_text1",
+      "label": "Paragraph 1"
+    },
+    {
+      "type": "textarea",
+      "id": "img_text2",
+      "label": "Paragraph 2",
+      "info": "Each entry must be on a new line."
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Content Max Width",
+      "min": 400,
+      "max": 700,
+      "step": 3,
+      "default": 700
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select Image",
+      "info": "For Better Viewing Use Example dimentions: 775*735 ( Aspect Ratio: 1.05 )"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-end",
+          "label": "Right"
+        }
+      ],
+      "default": "text-left"
+    },
+    {
+      "type": "select",
+      "id": "image_alignment",
+      "label": "Image Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Spacing & Border"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding Top(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding Bottom(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pts",
+      "label": "Padding Top(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pbs",
+      "label": "Padding Bottom(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with Buy Now"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+    [data-section-id="{{ section.id }}"]
+    {
+      padding-top: {{ section.settings.pts }}px;
+      padding-bottom: {{ section.settings.pbs }}px;
+      {% if section.settings.border-top %}
+      border-top: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+      {% if section.settings.border-bottom %}
+      border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+    }
+    @media (min-width:992px)
+    {
+      [data-section-id="{{ section.id }}"]
+      {
+        padding-top: {{ section.settings.pt }}px;
+        padding-bottom: {{ section.settings.pb }}px;
+      }
+    }
+  </style>

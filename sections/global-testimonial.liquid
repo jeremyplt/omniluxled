@@ -1,0 +1,182 @@
+{{ 'global-testimonial.css' | asset_url | stylesheet_tag }}
+<section class="section-content overflow-hidden position-relative global-testimonial py-0 border-top pb-xl-13 pb-8 {% if section.settings.border_bottom %}border-bottom{% endif %}" data-section-id="{{ section.id }}" style="background: {{ section.settings.section_bg_color }}; color:{{ section.settings.section_text_color }}">
+  <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+      <div class="text-center mb-4 start-0 end-0 pt-xl-11 pt-8 heading_txt pb-xl-0 pb-2" style="z-index: 2;">
+          {% if section.settings.heading_txt != blank %}
+              <h3 class="">{{ section.settings.heading_txt }}</h3>
+          {% endif %}
+      </div>
+      {% if section.blocks.size > 0 %}
+          <slider-element class="swiper-container carousel d-block">
+              <div class="swiper swiper-slider testimonial-list pt-xl-13 pb-xl-11 pb-6" data-slider='{
+                  "loop": true,
+                  "slidesPerView": 1,
+                  "spaceBetween": 0,
+                  "centeredSlides": true,
+                  "grabCursor": true,
+                  {% if section.settings.autoplay_enable %}
+                      "autoplay": {
+                          "delay": 3500,
+                          "disableOnInteraction": false
+                      },
+                  {% endif %}
+                  "breakpoints": {
+                    "1200": {
+                        "slidesPerView": 3
+                    }
+                },
+                  "navigation": {
+                      "nextEl": ".testimonial-button-next",
+                      "prevEl": ".testimonial-button-prev"
+                  },
+                  "pagination": {
+                      "el": ".testimonial-pagination"
+                  }
+              }'>
+                  <div class="swiper-wrapper">
+                      {% for block in section.blocks %}
+                          <div class="{{ block.settings.alignment }} swiper-slide position-relative" data-block-id="{{ block.id }}">
+                              <div class="col-lg-11 col-md-10 mt-xl-2 mx-auto pt-xl-8 px-2">
+                                  {% if block.settings.title != blank %}
+                                        <div class="ox-qts d-inline-flex"></div>
+                                      <div class="qts-text mt-3 fw-normal pt-1 lh-lg mb-2 pb-1">{{ block.settings.title }}</div>
+                                      <div class="qts-author pb-xl-0 pb-1">- {{ block.settings.quote_author }}</div>
+                                  {% endif %}
+                              </div>
+                          </div>
+                      {% endfor %}
+                  </div>
+                  {% if section.settings.nav_arrows %}
+                  <div class="position-absolute testimonial-buttons start-0 end-0 mx-auto d-none d-xl-inline-flex">
+                        <div class="swiper-button-next testimonial-button-next ox-arrow-right"></div>
+                      <div class="swiper-button-prev testimonial-button-prev ox-arrow-left"></div>
+                  </div>
+                  {% endif %}
+                  {% if section.settings.nav_dots %}
+                      <div class="swiper-pagination testimonial-pagination w-100 d-xl-none"></div>
+                  {% endif %}
+              </div>
+          </slider-element>
+      {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonial",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border_bottom",
+      "label": "Border-bottom ?",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "heading_txt",
+      "label": "Heading Text"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Carousel Option"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_enable",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_arrows",
+      "label": "Arrows Navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_dots",
+      "label": "Dots Navigation",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logowidthtext",
+      "name": "Testimonials",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Description",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo.</p>"
+        },
+        {
+          "type": "text",
+          "id": "quote_author",
+          "label": "Author Name"
+        },
+        {
+          "type": "header",
+          "content": "Styling"
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Alignment",
+          "options": [
+            {
+              "value": "text-center",
+              "label": "Center"
+            },
+            {
+              "value": "text-start",
+              "label": "Left"
+            },
+            {
+              "value": "text-end",
+              "label": "Right"
+            }
+          ],
+          "default": "text-center"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

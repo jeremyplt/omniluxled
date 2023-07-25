@@ -1,0 +1,93 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-contact-page",
+      "blocks": {
+        "f121a3f9-e962-46f7-856e-4854941d487c": {
+          "type": "call",
+          "settings": {
+            "heading": "Call",
+            "number1": "US\/Canada: +1 707.309.7024",
+            "phone_number1": "+1 707.309.7024",
+            "number2": "Australia\/New Zealand\/UK\/EU International Toll-Free: +1 866.306.2022",
+            "phone_number2": "+1 866.306.2022",
+            "number3": "",
+            "phone_number3": ""
+          }
+        },
+        "d51d40a9-deb3-4910-afdb-aeabba05922b": {
+          "type": "email",
+          "settings": {
+            "email_heading": "Email",
+            "email_id": "info@omniluxled.com"
+          }
+        },
+        "fd9531e2-0aee-4dd4-91f9-90f465ecffa7": {
+          "type": "address",
+          "settings": {
+            "address_heading": "Mailing Address",
+            "address": "163 Camino Dorado, Ste B, Napa, CA 94558 United States"
+          }
+        }
+      },
+      "block_order": [
+        "f121a3f9-e962-46f7-856e-4854941d487c",
+        "d51d40a9-deb3-4910-afdb-aeabba05922b",
+        "fd9531e2-0aee-4dd4-91f9-90f465ecffa7"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "heading": "Contact us"
+      }
+    },
+    "48a9a30e-426c-4859-b8c1-d77451f158c6": {
+      "type": "template-contact-us-banner",
+      "blocks": {
+        "b6f2101e-5433-47a7-aa7e-9a5851f3c384": {
+          "type": "heading",
+          "settings": {
+            "heading": "Interested in becoming a provider, retailer, or distributor?"
+          }
+        },
+        "40fc4ee8-716d-47e2-a2c1-1d85324f5e2d": {
+          "type": "text",
+          "settings": {
+            "text": "Set up your provider account."
+          }
+        },
+        "922321ab-7373-453a-bfaa-b8686ec2c20d": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Create Account",
+            "button_link_1": "https:\/\/wholesale.omniluxled.com\/account\/register",
+            "btn_type_1": "outline",
+            "btn_variant_1": "white",
+            "btn_size_1": ""
+          }
+        }
+      },
+      "block_order": [
+        "b6f2101e-5433-47a7-aa7e-9a5851f3c384",
+        "40fc4ee8-716d-47e2-a2c1-1d85324f5e2d",
+        "922321ab-7373-453a-bfaa-b8686ec2c20d"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_1574.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_1574.jpg",
+        "txt_color": "#ffffff",
+        "enable_overlay": true,
+        "overlay_bg_color": "#07272d",
+        "overlay_opacity": 0.5,
+        "height": "tallheight",
+        "desktop_text_box_position": "center",
+        "text_caption_align": "justify-content-center",
+        "text_align": "text-center",
+        "section_padding": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "48a9a30e-426c-4859-b8c1-d77451f158c6"
+  ]
+}

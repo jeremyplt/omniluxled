@@ -1,0 +1,486 @@
+{%- comment %}<locksmith:3b5f>{% endcomment -%}
+  {%- include 'locksmith' -%}
+{%- comment %}</locksmith:3b5f>{% endcomment -%}
+
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>   {{ locksmith_initializations }}
+{% render 'site-speed' %}
+  <script src="https://www.googleoptimize.com/optimize.js?id=OPT-KT8DKGH"></script>
+
+<!-- begin Convert Experiences code-->
+<script type="text/javascript" src="//cdn-4.convertexperiments.com/js/1004940-1004874.js"></script>
+<!-- end Convert Experiences code -->
+
+{% comment %} {% render 'pagefly-head' %} {% endcomment %}
+    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content=""> <link rel="canonical" href="{{ canonical_url }}">
+    {%- comment -%}Favicon Icon{%- endcomment -%}
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+    {%- comment -%}Pre-connects{%- endcomment -%}
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://monorail-edge.shopifysvc.com" crossorigin>
+    <title>{{ page_title }}</title>
+
+      {%- comment %}<locksmith:674a>{% endcomment -%}
+        {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape | default: shop.description | default: shop.name }}">{% endif -%}
+        {%- comment %}original: <meta name="description" content="{{ page_description | escape | default: shop.description | default: shop.name }}">{%- endcomment %}
+      {%- comment %}</locksmith:674a>{% endcomment -%}
+
+    {% comment %}theme-check-disable LiquidTag{% endcomment %}
+    {%- render 'meta-tags' -%}
+    {% capture CFH %}{{ content_for_header }}
+{%- render 'bold-common' -%}
+{%- render 'bold-includes' -%}{% endcapture %}
+    {% if template.name != 'product' and template.name != 'cart' %}
+      {% capture CFH %}
+        {{ CFH | replace: 'data-source-attribution="shopify.dynamic-checkout"', 'data-source-attribution="shopify.dynamic-checkout" type="text/gzip"' }}{% endcapture %}
+    {% endif %}
+    {% comment %}theme-check-enable LiquidTag{% endcomment %}
+    {{ CFH }}
+    {% comment %}preloads{% endcomment %}
+    <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient-HD.jpg?v=1672819271">
+    <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/OmniLux_Logo.svg?v=1669202901">
+    <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient-HM.jpg?v=1672819385">
+    <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient02M.jpg?v=1677741220">
+    <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient03M.jpg?v=1677741220">
+
+    {% comment %} <link rel="prefetch" as="style" href="{{ 'aos.css' | asset_url }}" >
+    <link rel="prefetch" as="style" href="{{ 'global-icon.css' | asset_url }}" >
+    <link rel="prefetch" as="script" href="{{ 'aos.js' | asset_url }}">
+    <link rel="preload" as="style" href="{{ 'global.css' | asset_url }}">
+    <link rel="preload" as="script" href="{{ 'utility.js' | asset_url }}">
+    <link rel="preload" as="script" href="{{ 'global.js' | asset_url }}"> {% endcomment %}
+    {%- render 'styles-tags' -%}
+
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+
+  {% include 'sm-red' %}
+  {% include 'omnilux-pixelscripts' %}
+
+  <!-- Extend -- Load Extend SDK Configuration script -->
+  {% render 'extend-configuration' %}
+  <!-- Extend -- End Extend code -->
+
+     {{ 'custom.css' | asset_url | stylesheet_tag }}
+  
+  {% render 'qikify-apps' %}
+
+  <!-- Start NB Pixel Snippet -->
+  <script>
+    !(function (e, n, t, i, p, a, s) {
+      e[i] ||
+        (((p = e[i] =
+          function () {
+            p.process ? p.process.apply(p, arguments) : p.queue.push(arguments);
+          }).queue = []),
+        (p.t = +new Date()),
+        ((a = n.createElement(t)).async = 1),
+        (a.src = 'https://static.newsbreak.com/business/tracking/nbpixel.js?t=' + 864e5 * Math.ceil(new Date() / 864e5)),
+        (s = n.getElementsByTagName(t)[0]).parentNode.insertBefore(a, s));
+    })(window, document, 'script', 'nbpix'),
+      nbpix('init', 'ID-1659663097311125505'),
+      nbpix('event', 'pageload');
+  </script>
+<!-- End NB Pixel Snippet -->
+
+
+<script>(() => {const installerKey = 'docapp-discount-auto-install'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(installerKey)) {window.sessionStorage.setItem(installerKey, JSON.stringify({integrationId: urlParams.get('docapp-integration-id'), divClass: urlParams.get('docapp-install-class'), check: urlParams.get('docapp-check')}));}})();</script>
+
+<script>(() => {const previewKey = 'docapp-discount-test'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(previewKey)) {window.sessionStorage.setItem(previewKey, JSON.stringify({active: true, integrationId: urlParams.get('docapp-discount-inst-test')}));}})();</script>
+</head>
+
+  <body class="template-{{ template.name }} {{ page.handle }} {{ collection.handle }} {{ product.handle }} {% if product.tags contains 'men_product' %}product-men{% endif %} ab-test-cartdrawer"
+    data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}">
+    <img src="https://trkn.us/pixel/conv/ppt=22138;g=sitewide;gid=51408;ord={{ 'now' | date: '%s' }}" height="0" width="0" border="0" style="display:none"/>
+
+    <script>window.KlarnaThemeGlobals={};{%case template.name%} {%when"product"%} {% if product.first_available_variant.price %}window.KlarnaThemeGlobals.data_purchase_amount = {{ product.first_available_variant.price }};{% endif %}window.KlarnaThemeGlobals.productVariants={{product.variants|json}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%when"cart"%} window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%endcase%}</script>
+
+    <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZHVZRD"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+      {{ "accessibility.skip_to_text" | t }}
+    </a>
+    {%- liquid
+      assign checkWholesale = false
+      for tag in customer.tags
+          assign tagD  = tag | downcase
+          if tagD == 'wholesale'
+              assign checkWholesale = true
+          endif
+      endfor
+    -%}
+   
+    <site-overlay class="d-block {% if checkWholesale == true %}overlay--body{% endif %}" id="site-overlay"></site-overlay>
+    {% section 'header' %}
+    {% section 'mobile-nav-drawer' %}
+    {%- comment -%}{% section 'search-layer' %}{%- endcomment -%}
+    {%- section 'newsletter' -%}
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    {% if template.name != 'cart' and settings.enable_cart_drawer %}
+      {%- render 'cart-drawer' -%}
+    {% endif %}
+
+    {% comment %} {% if settings.enable_quickshop %}
+      <quick-shop></quick-shop>
+    {% endif %} {% endcomment %}
+
+
+    <modal-dialog id="PopupModal-video">
+      <div class="modal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" data-customVideoPopup>
+          <div class="modal-content">
+            <div class="modal-head">
+              <button class="btn p-2 close-quickshop text-white" type="button" id="ModalClose-video" aria-label="{{ 'sections.video-with-text.close_video' | t }}">
+                <span class="ox-close"></span>
+              </button>
+            </div>
+            <div class="modal-body video-section"></div>
+          </div>
+        </div>
+      </div>
+    </modal-dialog>
+
+    <modal-dialog id="wholesale-request">
+      <div class="modal {% if checkWholesale == true %}open{% endif %}" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-xl" data-customVideoPopup>
+          <div class="modal-content">
+            <div class="modal-head">
+              <button class="btn p-2 close-quickshop text-white" type="button" id="ModalClose-video" aria-label="{{ 'sections.video-with-text.close_video' | t }}">
+                <span class="ox-close"></span>
+              </button>
+            </div>
+            <div class="modal-body py-10">
+              <div class="">
+                <div class="text-center">
+                  <h4>Seems like you are not on our wholesale store</h3>
+                    <p class="mt-1 mt-lg-3 font-size-lg-20">Please visit <a href="https://wholesale.omniluxled.com/" style="color:#5cb8b2">wholesale store</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </modal-dialog>
+
+    <custom-notification>
+      <div class="snotifyToast">
+        <div class="snotifyToast-dialog">
+          <div class="snotifyToast__progressBar">
+            <span class="snotifyToast__progressBar__percentage" data-toast-pr></span>
+          </div>
+          <div class="snotifyToast__inner">
+            <div class="snotifyToast__title"></div>
+            <div class="snotifyToast__body"></div>
+            <div class="snotify-icon">
+              {%- render 'snotify-icon' -%}
+            </div>
+          </div>
+          <div class="snotifyToast__buttons">
+            <button type="button" class="snotifyToast__close snotifyToast__buttons--bold">Close</button>
+          </div>
+        </div>
+      </div>
+    </custom-notification>
+
+    {% section 'footer' %}
+
+    {% section 'app-optimization' %}
+
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+    </ul>
+
+    <script type="text/javascript">
+      window.globalVariables = {
+        no_image: '{{ settings.no_image | image_url }}',
+        cart: {{ cart | json }},
+        product:{%- if template.name == 'product' -%}{{ product | json }}
+        {%- else -%}
+          {}{%- endif -%},
+        collection:{%- if template.name == 'collection' -%}{
+            all_products_count: {{ collection.all_products_count }},
+            products: {{ collection.products | json }}
+          }
+        {%- else -%}
+          {}{%- endif -%},
+        template: '{{ template.name }}',
+        templateSuffix: '{{ template.suffix }}',
+        cart_drawer: {{ settings.enable_cart_drawer | json }},
+        money_format: {{ shop.money_format | json }}
+      };
+
+      window.routes = {
+        predictive_searh: '{{ routes.search_url }}/suggest.json',
+        cart_fetch_url: '{{ routes.cart_url }}',
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}'
+      };
+
+      window.cartStrings = {
+        error: `{{ 'sections.cart.cart_error' | t }}`,
+        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t }}`
+      }
+
+      window.variantStrings = {
+        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
+        upsellAddText: `{{ 'products.product.upsell_add' | t }}`,
+        soldOut: `{{ 'products.product.sold_out' | t }}`,
+        unavailable: `{{ 'products.product.unavailable' | t }}`
+      }
+    </script>
+
+    {% if settings.enable_login_helper %}
+      <script type="application/json" data-login-json>
+        {
+          "settings": {
+            "type": "default",
+            "enable":{% if settings.enable_login_helper %}true
+            {% else %}
+              false
+            {% endif %},
+            "account_not_found": "{% if settings.account_not_found %}
+              {{ settings.account_not_found | escape }}
+            {% else %}
+              null
+            {% endif %}",
+            "account_enable": "{% if settings.account_enable %}
+              {{ settings.account_enable | escape }}
+            {% else %}
+              null
+            {% endif %}",
+            "account_disable": "{% if settings.account_disable %}
+              {{ settings.account_disable | escape }}
+            {% else %}
+              null
+            {% endif %}",
+            "account_invited": "{% if settings.account_invited %}
+              {{ settings.account_invited | escape }}
+            {% else %}
+              null
+            {% endif %}",
+            "account_declined": "{% if settings.account_declined %}
+              {{ settings.account_declined | escape }}
+            {% else %}
+              null
+            {% endif %}"
+          },
+          "sender_email":{% if settings.sender_email %}"{{ settings.sender_email | escape }}"
+          {% else %}
+            null
+          {% endif %},
+          "status": null,
+          "message": null,
+          "customerEmail": "{{ customer.email }}",
+          "isLoginFormVisible": true
+        }
+      </script>
+    {% endif %}
+
+    {%- render 'json-structured-data' -%}
+    {%- if settings.enable_swatches -%}
+      {%- render 'json-swatches-colorlist' -%}
+    {%- endif -%}
+    {%- render 'script-tags' -%}
+
+    {% if template.name != 'product' and template.name != 'cart' %}
+      <script type="text/javascript" defer>
+        (function manageDynamicCheckoutJS() {
+          let checkoutBtn = document.querySelector('#additional-checkout-buttons');
+          if (checkoutBtn != null) {
+            const onIntersection = (entries) => {
+              for (const entry of entries) {
+                if (entry.isIntersecting) {
+                  let checkoutScript = document.createElement('script');
+                  let paymentTarget = document.querySelector('[data-source-attribution="shopify.dynamic-checkout"]');
+                  checkoutScript.integrity = paymentTarget.getAttribute('integrity');
+                  checkoutScript.setAttribute('data-source-attribution', "shopify.dynamic-checkout");
+                  checkoutScript.src = paymentTarget.getAttribute('src');
+                  checkoutScript.setAttribute('crossorigin', "anonymous");
+                  document.head.appendChild(checkoutScript);
+                  observer.disconnect();
+                }
+              }
+            };
+            const observer = new IntersectionObserver(onIntersection);
+            observer.observe(checkoutBtn);
+          }
+        })();
+      </script>
+    {% endif %}
+
+      <script type="text/javascript" src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=VjyT7K" ></script>
+  <script  >!function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?function(){var n;(n=window._klOnsite).push.apply(n,arguments)}:function(){for(var n=arguments.length,o=new Array(n),w=0;w<n;w++)o[w]=arguments[w];var t="function"==typeof o[o.length-1]?o.pop():void 0,e=new Promise((function(n){window._klOnsite.push([i].concat(o,[function(i){t&&t(i),n(i)}]))}));return e}}})}catch(n){window.klaviyo=window.klaviyo||[],window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();</script>
+ {% if product %}
+    <script type="text/javascript">
+      var _learnq = _learnq || [];
+      var addToCartbuttons = document.querySelectorAll('[name="add"]');
+      var addToCart = function() {
+          _learnq.push(['track', 'Added to Cart', item]);
+      };
+
+      for (var i = 0; i < addToCartbuttons.length; i++) {
+        addToCartbuttons[i].addEventListener('click', addToCart, false);
+      }
+    </script>
+{% endif %}
+     <script type="text/javascript" src="https://s.skimresources.com/js/190873X1662057.skimlinks.js"></script>
+    <script>
+  (function(w, d){
+   var id='pdst-capture', n = 'script';
+   if (!d.getElementById(id)){
+     w.pdst = w.pdst || function() {(w.pdst.q = w.pdst.q || []).push(arguments);};
+     var e = d.createElement(n); e.id = id; e.async=1;
+     e.src = 'https://cdn.pdst.fm/ping.min.js';
+     var s = d.getElementsByTagName(n)[0];
+     s.parentNode.insertBefore(e, s);
+   }
+   w.pdst('conf', { key: '60e313508a3a48ebb5d0f55121409b24' });
+   w.pdst('view');
+  })(window, document);
+</script>
+    <script defer src="https://static.myshlf.us/Affiliates/sms_aff_clicktrack.js"></script>
+
+
+<!--Gorgias Chat Widget Start-->
+<script id="gorgias-chat-widget-install-v3" 
+    src="https://config.gorgias.chat/bundle-loader/01GYCC13AFC0VPQF151BNTM8BR?source=shopify1click">
+</script>
+<script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});
+</script>
+<!--Gorgias Chat Widget End-->
+
+
+    <!--MNTN Tracking Pixel-->
+<script type="text/javascript">
+	(function(){"use strict";var e=null,b="4.0.0",
+	n="33677",
+	additional="term=value",
+	t,r,i;try{t=top.document.referer!==""?encodeURIComponent(top.document.referrer.substring(0,2048)):""}catch(o){t=document.referrer!==null?document.referrer.toString().substring(0,2048):""}try{r=window&&window.top&&document.location&&window.top.location===document.location?document.location:window&&window.top&&window.top.location&&""!==window.top.location?window.top.location:document.location}catch(u){r=document.location}try{i=parent.location.href!==""?encodeURIComponent(parent.location.href.toString().substring(0,2048)):""}catch(a){try{i=r!==null?encodeURIComponent(r.toString().substring(0,2048)):""}catch(f){i=""}}var l,c=document.createElement("script"),h=null,p=document.getElementsByTagName("script"),d=Number(p.length)-1,v=document.getElementsByTagName("script")[d];if(typeof l==="undefined"){l=Math.floor(Math.random()*1e17)}h="dx.mountain.com/spx?"+"dxver="+b+"&shaid="+n+"&tdr="+t+"&plh="+i+"&cb="+l+additional;c.type="text/javascript";c.src=("https:"===document.location.protocol?"https://":"http://")+h;v.parentNode.insertBefore(c,v)})()
+</script>
+
+      
+<!-- Stamped - Begin script -->
+{% comment %} <script async type="text/javascript" id="stamped-script-widget" data-api-key="pubkey-0222n1h8tQ2vG56Mr6Mv363g3UUEeN" src="https://cdn1.stamped.io/files/widget.min.js"></script> {% endcomment %}
+<!-- Stamped - End script -->
+ 
+
+{% include 'swymSnippet' %}
+
+
+<!-- **BEGIN** Hextom USB Integration // Main Include - DO NOT MODIFY -->
+    {% render 'hextom_usb_main', product: product, customer: customer %}
+    <!-- **END** Hextom USB Integration // Main Include - DO NOT MODIFY -->
+
+<!-- BEGIN KLAVIYO Back in Stock Snippet -->
+ <script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+<script>
+    var klaviyo = klaviyo || [];
+    klaviyo.init({
+      account: "VjyT7K",
+      platform: "shopify"
+    });
+    klaviyo.enable("backinstock",{ 
+    trigger: {
+    product_page_text: "Notify Me When Available",
+    product_page_class: "btn",
+    product_page_text_align: "center",
+    product_page_margin: "0px",
+    alternate_anchor: "AddToCart",
+    replace_anchor: true
+    }, 
+    modal: {
+     headline: "{product_name}",
+     body_content: "Register to receive a notification when this item comes back in stock.",
+     email_field_label: "Email",
+     button_label: "Notify me when available",
+     subscription_success_label: "You're in! We'll let you know when it's back.",
+     footer_content: '',
+     additional_styles: "@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue');",
+     drop_background_color: "#000",
+     background_color: "#fff",
+     text_color: "#222",
+     button_text_color: "#fff",
+     button_background_color: "#439fdb",
+     close_button_color: "#ccc",
+     error_background_color: "#fcd6d7",
+     error_text_color: "#C72E2F",
+     success_background_color: "#d3efcd",
+     success_text_color: "#1B9500"
+    }
+  });
+</script>
+<!-- END KLAVIYO Back in Stock Snippet -->
+  {{ 'custompdp.js' | asset_url | script_tag }}
+
+    <!-- ACCESSIBILITYSPARK START -->
+    {% render 'accessibility-spark-widget' %}
+    <!-- ACCESSIBILITYSPARK END -->
+  </body>
+</html>
+
+ <!-- Begin Shopify-Afterpay JavaScript Snippet (v1.1.5) -->
+{% if cart.currency.iso_code == shop.currency %}
+  <script type="text/javascript">
+  // Overrides:
+  // var afterpay_min = 1.00;       // As per your Afterpay contract.
+  // var afterpay_max = 2000.00;    // As per your Afterpay contract.
+  // var afterpay_msg_size = 'sm';  // Can be 'xs', 'sm', 'md' or 'lg'.
+  // var afterpay_bold_amount = true;
+  // var afterpay_logo_theme = 'colour';  // Can be 'colour', 'black' or 'white'.
+  // var afterpay_modal_open_icon = true;
+  // var afterpay_hide_upper_limit = false;
+  // var afterpay_hide_lower_limit = true;
+  // var afterpay_show_if_outside_limits = true;
+  // var afterpay_cbt_enabled = false;
+  // var afterpay_apr_loans_available = false;
+
+  // var afterpay_product_integration_enabled = true;
+  // var afterpay_product_selector = '#product-price-selector';
+  // var afterpay_variable_price_fallback = false;
+  // var afterpay_variable_price_fallback_selector = '';
+  // var afterpay_variable_price_fallback_method = 'mutation';  // Can be 'mutation' or 'interval'.
+
+  // var afterpay_cart_integration_enabled = true;
+  // var afterpay_cart_static_selector = '#cart-subtotal-selector';
+  // var afterpay_variable_subtotal_fallback = false;
+  // var afterpay_variable_subtotal_fallback_selector = '';
+  // var afterpay_variable_subtotal_fallback_method = 'mutation'; // Can be 'mutation' or 'interval'.
+  // var afterpay_cart_dynamic_integration_enabled = false;
+
+  // var afterpay_footer_logo_enabled = true;
+  // var afterpay_footer_logo_format = 'icon';  // Can be 'icon', 'stacked' or 'logo'.
+  // var afterpay_footer_logo_theme = 'colour'; // Can be 'colour', 'black' or 'white'.
+  // var afterpay_footer_logo_background = 'border';  // Can be 'border' or 'transparent'.
+  // var afterpay_footer_logo_container = 'footer ul.payment-icons';
+  // var afterpay_footer_logo_template = '<li class="payment-icon"><object data="{logo_path}" type="image/svg+xml"></object></li>';
+
+  // Non-editable fields:
+  var afterpay_product_selector = '.cc_prod_price_selector';
+  var afterpay_js_language = {{ localization.language.iso_code | slice: 0, 2 | json }};
+  var afterpay_js_country = {{ localization.country.iso_code | json }};
+  var afterpay_shop_currency = {{ shop.currency | json }};
+  var afterpay_cart_currency = {{ cart.currency.iso_code | json }};
+  var afterpay_shop_money_format = {{ shop.money_format | json }};
+  var afterpay_shop_permanent_domain = {{ shop.permanent_domain | json }};
+  var afterpay_theme_name = {{ theme.name | json }};
+  var afterpay_product = {{ product | json }};
+  var afterpay_current_variant = {{ product.selected_or_first_available_variant | json }};
+  var afterpay_cart_total_price = {{ cart.total_price | json }};
+  var afterpay_js_snippet_version = '1.1.5';
+  </script>
+  <script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
+  {% else %}
+  <!-- Afterpay disabled: {{ cart.currency.iso_code }} != {{ shop.currency }} -->
+  {% endif %}
+  <!-- End Shopify-Afterpay JavaScript Snippet (v1.1.5) -->

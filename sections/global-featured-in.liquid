@@ -1,0 +1,164 @@
+{{ 'global-featured-in.css' | asset_url | stylesheet_tag }}
+
+  <div class="section-content global-featured-in overflow-hidden border-bottom py-8 pt-xl-11"data-section-id="{{ section.id }}" data-type="slider">
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+        <div class="row justify-content-center text-center">
+            <div class="col-xl-6 col-lg-7 col-md-8 mb-2"> 
+                {% if section.settings.heading != '' %}
+                    <div class="h6 mb-2 text-uppercase">{{ section.settings.heading }}</div>
+                {% endif %}
+            </div>
+        </div>
+        {% if section.blocks.size > 0 %}
+            <slider-element class="swiper-container" data-main-slider>
+                <div class="swiper swiper-slider" data-nav="testimonial-thumbnails" data-slider='{
+                        "loop": true,
+                        "slidesPerView": "1",
+                        "spaceBetween": 15,
+                        "effect": "fade",
+                        "grabCursor": true,
+                        "observer": true,
+                        "autoplay": {
+                            "delay": 3500,
+                            "disableOnInteraction": false
+                          },
+                        "navigation": {
+                            "nextEl": ".swiper-button-next",
+                            "prevEl": ".swiper-button-prev"
+                        },
+                        "pagination": {
+                            "el": ".swiper-pagination{{ section.id }}"
+                        },
+                        "breakpoints": {
+                            "1200": {
+                                "loop": false
+                            }
+                        }
+                    }' >
+                    <div class="swiper-wrapper">
+                        {% for block in section.blocks %}
+                            {% if block.settings.heading_txt != blank %}
+                            <div class="swiper-slide carousel-cell justify-content-center" >
+                                <div class="col-12 col-lg-11 mx-auto text-center h4 fw-light">{{ block.settings.heading_txt }}</div> 
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>    
+            </slider-element>
+        
+            <div class="swiper-container mt-2 mx-n5" data-thumbSlider data-direction="horizontal">
+                <div class="swiper swiper-slider testimonial-thumbnails" data-slider='{
+                        "slidesPerView": 2,
+                        "spaceBetween": 20,
+                        "loop": true,
+                        "slideToClickedSlide": true,
+                        "centeredSlides": true,
+                        "observer": true,
+                        "breakpoints": {
+                            "768": {
+                                "slidesPerView": 4,
+                                "slideToClickedSlide": true
+                            },
+                            "992": {
+                                "slidesPerView": 4.2,
+                                "slideToClickedSlide": true
+                            },
+                            "1200": {
+                                "centeredSlides": false,
+                                "slidesPerView": 8,
+                                "loop": false
+                            }
+                        }
+                    }' >
+                    <div class="swiper-wrapper logo-list pb-7">
+                        {% for block in section.blocks %}
+                            <div class="swiper-slide" >
+                                <div class="logo-list-img text-center d-flex align-items-center justify-content-center position-relative"> 
+                                    {% if block.settings.logo_img == '' %} 
+                                    <img loading="lazy" class="mw-100 lazyload position-absolute mh-100" style="height:{{ block.settings.logo_img_height }}px;"
+                                        src="{{ settings.no_image | image_url }}"
+                                        alt="{{ settings.no_image.alt | default: 'Featured In' | escape }}"
+                                        width="{{ settings.no_image.width }}"
+                                        height="{{ settings.no_image.height }}" >
+                                       
+                                    {% else %}
+                                        <img loading="lazy" class="mw-100 lazyload position-absolute mh-100" style="height:{{ block.settings.logo_img_height }}px;"
+                                            src="{{ block.settings.icon_img }}"
+                                            alt="{{ block.settings.icon_img.alt | default: 'Featured In' | escape }}"
+                                            width="{{ block.settings.logo_img_height }}"
+                                            height="{{ block.settings.logo_img_height }}" >
+                                    {% endif %} 
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination swiper-pagination{{ section.id }}"></div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+  </div>
+    
+  {% schema %}
+{
+  "name": "Featured In",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Add Logo With Text Block",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "heading_txt",
+          "label": "Description",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo.</p>"
+        },
+        {
+          "type": "text",
+          "id": "icon_img",
+          "label": "Icon SVG Image"
+        },
+        {
+          "type": "range",
+          "id": "logo_img_height",
+          "label": "Logo Image Height",
+          "min": 10,
+          "max": 200,
+          "step": 2,
+          "unit": "px",
+          "default": 20
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured In",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

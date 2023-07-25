@@ -1,0 +1,275 @@
+{
+  "sections": {
+    "main": {
+      "type": "left-text-with-image",
+      "blocks": {
+        "447a1921-6c8c-4c21-a3be-989d36adece7": {
+          "type": "html",
+          "settings": {
+            "html": "<h1 class=\"banner__heading  mb-3 \">\nOur story\n<\/h1>"
+          }
+        },
+        "a5df27d4-dc0f-4e06-83a9-d8cef64e10aa": {
+          "type": "text",
+          "settings": {
+            "text": "Since 2003, Omnilux has redefined skincare <br>as the world leader in medical-grade LED light therapy.",
+            "text_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "447a1921-6c8c-4c21-a3be-989d36adece7",
+        "a5df27d4-dc0f-4e06-83a9-d8cef64e10aa"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "background_imagetone": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Background_Gradient-a-u.png?v=1670497276",
+        "background_tone_height": 120,
+        "image": "shopify:\/\/shop_images\/mask_bg.jpg",
+        "txt_color": "#ffffff",
+        "enable_overlay": true,
+        "paragraph_bold": true,
+        "overlay_bg_color": "#000000",
+        "overlay_opacity": 0.5,
+        "height": "tallheight",
+        "desktop_text_box_position": "flex-end",
+        "text_caption_align": "justify-content-center",
+        "text_align": "text-left",
+        "section_padding": false,
+        "content_width": 715,
+        "image_bg_tone": false,
+        "mobile_TEXT": true
+      }
+    },
+    "395e59c7-ebb9-444c-979a-1170f628c99d": {
+      "type": "global-features-grid",
+      "blocks": {
+        "template--16036439031970__395e59c7-ebb9-444c-979a-1170f628c99d-1670491639fe300d98-0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_1.svg?v=1669721646",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "1e2e3e7e-2b97-4cd1-a32a-2c939c193dec": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_2.svg?v=1669721646",
+            "title": "",
+            "txt": "<p><\/p>"
+          }
+        },
+        "ebf43edc-35f4-4e07-ae7f-de43d6d5e4d4": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_3.svg?v=1669721646",
+            "title": "",
+            "txt": "<p><\/p>"
+          }
+        },
+        "97b801ca-1360-44bc-bf8e-74b87c98e712": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_4.svg?v=1669721646",
+            "title": "",
+            "txt": "<p><\/p>"
+          }
+        },
+        "11cdb7a9-1255-4145-af80-44d78359412f": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_5.svg?v=1669721646",
+            "title": "",
+            "txt": "<p><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16036439031970__395e59c7-ebb9-444c-979a-1170f628c99d-1670491639fe300d98-0",
+        "1e2e3e7e-2b97-4cd1-a32a-2c939c193dec",
+        "ebf43edc-35f4-4e07-ae7f-de43d6d5e4d4",
+        "97b801ca-1360-44bc-bf8e-74b87c98e712",
+        "11cdb7a9-1255-4145-af80-44d78359412f"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "icon_layout": false,
+        "grid_size": "2",
+        "heading_txt": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#000000",
+        "pt": 9,
+        "pb": 33,
+        "pts": 40,
+        "pbs": 40,
+        "border-top": false,
+        "border-bottom": false
+      }
+    },
+    "f371fe0d-7eee-4fed-abc8-0a544ef9495a": {
+      "type": "global-image-with-text",
+      "blocks": {
+        "0d363323-2948-4e6c-8e6d-4b1936638f29": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Skincare, light years ahead",
+            "max_width": 530,
+            "txt": "<p>Backed by over 40 peer-reviewed clinical studies and decades of continuous research, Omnilux is the brand most trusted and used by dermatologists worldwide. <br\/><br\/>Omnilux can be found in more than 5,000 dermatologist and aesthetic offices across the globe and is used to treat a wide variety of skin conditions with proven results, including fine lines and wrinkles, redness, pigmentation, discoloration, acne, and many others. <br\/><br\/>With more FDA-approved indications than any other brand, Omnilux has now pioneered the use of their gold-standard medical LED technology in convenient at-home devices, paving the way for unlimited, transformative skincare treatments without a clinical visit.<\/p>",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "",
+            "btn_txt": "",
+            "btn_link": "",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/WEBSITE_10.png",
+            "alignment": "text-left",
+            "image_alignment": "right"
+          }
+        },
+        "58f6f1eb-6234-477a-bc4e-3f05b585fa1f": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "",
+            "max_width": 530,
+            "txt": "<p>Omnilux is a family affair, and innovation is part of their DNA. The executive team comprises six siblings who manage business strategy, operations, marketing, product development, and finance with one goal: to create effective, innovative, affordable treatments that boost self-esteem and help users feel more confident in their own skin. <br\/><br\/>Omnilux believes that everyone deserves access to professional-quality skincare solutions.<\/p>",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "",
+            "btn_txt": "",
+            "btn_link": "",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/WEBSITE_6.png",
+            "alignment": "text-left",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "0d363323-2948-4e6c-8e6d-4b1936638f29",
+        "58f6f1eb-6234-477a-bc4e-3f05b585fa1f"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "enable_background_tone": false,
+        "border_bottom": true,
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000"
+      }
+    },
+    "c36a099f-85d5-4c35-84ca-eb8d7c43f35d": {
+      "type": "about-us-block",
+      "blocks": {
+        "d2f5a6fd-f5ec-41d9-b5bc-ab53435607b5": {
+          "type": "product-tabs",
+          "settings": {
+            "enable_custom_tab_1": true,
+            "tab_1_image": "shopify:\/\/shop_images\/board-block.jpg",
+            "tab_1_name": "Dr. Jared Jagdeo <br>MD, MS",
+            "tab_1_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nASSOCIATE PROFESSOR OF DERMATOLOGY, SUNY DOWNSTATE MEDICAL CENTER <br>DIRECTOR OF THE CENTER FOR PHOTOMEDICINE, SUNY DOWNSTATE MEDICAL CENTER                                                                            <\/p>",
+            "tab_1_content": "<p>Dr. Jagdeo is a board-certified dermatologist and leader in the field of lasers and light-based medicine. A doctoral graduate of Brown University, Dr. Jagdeo established the Laser, Aesthetics and Body Institute in 2018 to bring state-of-the-art laser technology and cosmetic services to dermatology patients at SUNY Downstate. His ongoing clinical research involves aesthetics, lasers and light therapy.<br\/><br\/> Dr. Jagdeo has co-authored 90 peer-reviewed journal articles, edited several books and co-authored book chapters. He’s won numerous awards and honors, including the NIH-UC Davis CTSC K12 Mentored Career Development Award, NIH-UC Davis Innovation Grant, designation as an American Society for Dermatologic Surgery Future Leader, the Laser Florence Young Dermatologist Abstract Competition 1st Place Winner and the Dr. Horace Furumoto Innovations Young Investigator Award from the American Society for Laser Medicine & Surgery.<\/p>",
+            "enable_custom_tab_2": true,
+            "tab_2_image": "shopify:\/\/shop_images\/Mask_Group_8_e1dd7b75-3cf3-448b-8396-466be4f6ae81.jpg",
+            "tab_2_name": "Dr. Glynis Ablon <br>MD, FAAD",
+            "tab_2_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nASSOCIATE CLINICAL PROFESSOR, UCLA <br>DIRECTOR, ABLON SKIN INSTITUTE &amp; RESEARCH CENTER                                                                            <\/p>",
+            "tab_2_content": "<p>Dr. Ablon, a native Californian, is a board-certified dermatologist who completed her training at Baylor College of Medicine in Houston, Texas. She has focused her attention on cosmetic surgery since the beginning of her training, performing a fellowship in oculoplastic surgery at the Sinsky Eye Institute in Santa Monica, CA. Dr. Ablon is certified to perform laser surgery (including facial resurfacing), liposuction, blepharoplasty, sclerotherapy, collagen and Botox ®.<br\/><br\/>Since receiving the Award in Dermatology from George Washington University Medical School, Dr. Ablon continues to publish research and has presented some of her work in Paris, France. Dr. Ablon, an Associate Clinical Professor at UCLA, serves as an on-camera medical consultant for E! Entertainment, The Doctors, ABC, NBC and CBS. A Fellow of the American Academy of Dermatology, American Academy of Liposuction Surgery, and the American Society for Laser Medicine and Surgery to name a few, Dr. Ablon is current on all the newest trends in cosmetic surgery.<\/p>",
+            "enable_custom_tab_3": true,
+            "tab_3_image": "shopify:\/\/shop_images\/board-member.jpg",
+            "tab_3_name": "Dr. Hany Abi Ghosn <br>MD",
+            "tab_3_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nFounder &amp; CEO, Dr. Hany Abi Ghosn<br>\nAesthetic Medicine &amp; Longevity                                                                           <\/p>",
+            "tab_3_content": "<p>Dr. Hany is a world expert in Medical Aesthetics, speaker at international conferences and Key Opinion Leader for numerous International Labs: CosmoSoft France, Cutera USA, Be Ceuticals Switzerland, SRS Belgium, Biotech UK. He was the winner of the prestigious title: Best Medical Practice Award Europe 2018, granted by the European Medical Association (EMA) & the Oxford Royal Academy in England.<\/p><p>Dr. Hany specializes in aesthetics, with recent focuses in non-surgical procedures including light therapy, ThreadLift, face sculpting and profile balancing.<\/p>",
+            "enable_custom_tab_4": true,
+            "tab_4_image": "shopify:\/\/shop_images\/board-member2_b4464c20-19ec-4e99-bbc0-161cf93fef98.jpg",
+            "tab_4_name": "Dr. Klaus Fritz <br>MD",
+            "tab_4_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nPresident, German Academy of Dermatology\nFormer President and Board Member, European Society of Laser Dermatology (ESLD)\nSecretary General, European Society for Cosmetic and Aesthetic Dermatology (ESCAD)                                                                         <\/p>",
+            "tab_4_content": "<p>Dr. Fritz received his medical degree from Frankfurt Johann Wolfgang Goethe Universität Frankfurt and his specialization at the university clinic Bonn. Having previously worked in private practice in southwestern Germany, Dr. Fritz is now a visiting research fellow to the Ludwigs Maximilian University in Munich, and an associate professor at the Carol Davila University for Medicine and Pharmacy in Bukarest. Dr. Fritz specializes in dermatology, allergy, cosmetic dermatology and lasers.<\/p><p>Dr. Fritz has served as the head of Periderm Institute for Clinical Studies and is a member of the Editorial and Scientific Board of several journals. He also serves as a member of several Scientific Advisory Boards and is a consultant to various companies in laser, cosmetic and pharmaceutical industries. He has founded and co-organizes the annual dermatolgy congress DERM in Germany, Derma Alpin in Austria and the 5 CC Congress in Barcelona.<\/p>",
+            "enable_custom_tab_5": true,
+            "tab_5_image": "shopify:\/\/shop_images\/board-member3.jpg",
+            "tab_5_name": "Dr. Daniel Siegel <br>MD, MS",
+            "tab_5_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nClinical Professor of Dermatology, SUNY Downstate Health Sciences University\n\nFormer President, American Academy of Dermatology (AAD)                                                                           <\/p>",
+            "tab_5_content": "<p>A former President and honorary member of the American Academy of Dermatology (AAD), Dr. Siegel is a graduate of Albany Medical College in New York, completing his residency in dermatology at Parkland Memorial Hospital in Dallas, Texas, followed by a fellowship in Mohs Micrographic Surgery and Dermatologic Surgery at Baylor College of Medicine in Houston, Texas.<\/p><p>Dr. Siegel serves or has served on boards of the American College of Mohs Surgery (ACMS), the American Dermatological Association, the Women’s Dermatologic Society, the Noah Worcester Dermatological society, the International League of Dermatological Societies, IDEOM and the New York Dermatological Society among others.<\/p><p>Dr. Siegel has published over 200 articles and book chapters in major medical journals and textbooks. Dr. Siegel has received many prestigious awards for his work in dermatology, including the 2013 American Skin Association Public Policy & Medical Education Award and the 2012 Clinical Educator Award from the 2012 Winter Clinical Dermatology Conference. For several years in a row, Dr. Siegel has been listed as one of Castle Connolly’s New York Metro Area “Top Doctors.” In recognition of his years of service to the profession, he was awarded honorary membership in the American Academy of Dermatology.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d2f5a6fd-f5ec-41d9-b5bc-ab53435607b5"
+      ],
+      "settings": {
+        "heading_txt": "Scientific advisory board",
+        "heading_paragraph": "Omnilux has assembled a world-class scientific advisory board of renowned experts in the fields of dermatology and LED phototherapy."
+      }
+    },
+    "e6685462-6de0-4a83-bd49-862b21dfaf94": {
+      "type": "global-image-with-text",
+      "blocks": {
+        "6bccd330-87b9-4d5b-88ac-039a940b0a1e": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": true,
+            "heading_txt": "The first. The finest.",
+            "max_width": 530,
+            "txt": "<p>Omnilux was born at the UK Paterson Institute for Cancer Research as a novel approach to treating non-melanoma skin cancers, through a process called Photodynamic Therapy (PDT). Due to its flexibility, portability, and effectiveness in safely and non-invasively treating areas all over the body, the Omnilux Medical™ device quickly became the gold standard for LED light therapy treatment and maintains the preferred device of dermatologists and clinicians worldwide for both medical and aesthetic applications.<br\/><br\/>Omnilux Medical’s three light panel heads (red, near-infrared and blue) enable a wide range of treatment applications including skin rejuvenation and wrinkle reduction, pigmentation and sun spots, rosacea, eczema, acne, wound healing, joint inflammation and non-melanoma skin cancers.<br\/><br\/>Today, you can find Omnilux technology in over 5,000 dermatology offices, aesthetician’s clinics and med-spas around the globe.<\/p>",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "",
+            "btn_txt": "",
+            "btn_link": "",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/about-us-page.jpg",
+            "alignment": "text-left",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "6bccd330-87b9-4d5b-88ac-039a940b0a1e"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "enable_background_tone": false,
+        "border_bottom": false,
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "395e59c7-ebb9-444c-979a-1170f628c99d",
+    "f371fe0d-7eee-4fed-abc8-0a544ef9495a",
+    "c36a099f-85d5-4c35-84ca-eb8d7c43f35d",
+    "e6685462-6de0-4a83-bd49-862b21dfaf94"
+  ]
+}

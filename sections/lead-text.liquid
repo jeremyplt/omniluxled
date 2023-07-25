@@ -1,0 +1,163 @@
+
+<div class="position-relative">
+  <link rel="stylesheet" href="{{ 'lead-text.css' | asset_url }}" media="print" onload="this.media='all'">
+  {% if section.settings.background_imagetone != blank %}
+<span class="lead-fair-tone light-tone-top position-absolute w-100 start-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
+  <span class="white-anim"></span>
+</span>
+{% endif %}
+<section class="lead-text " data-section-id="{{ section.id }}">
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+        <div class="row">
+            <div class="col-lg-6 col-12 mx-auto text-center">
+                {% if section.settings.title != blank %}
+                <h1 class="lead-text-heading ">{{ section.settings.title }}</h1>
+                {% endif %}
+                {% if section.settings.heading_txt != blank %}
+                <h4 class="mb-4 mb-lg-7">{{ section.settings.heading_txt }}</h4>
+                {% endif %}
+                {% if section.settings.txt != blank %}
+                <p class="font-size-md mb-2 lh-lg">{{ section.settings.txt }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "Lead Text",
+  "class": "lead-text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "STYLING"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "background_imagetone",
+      "label": "Background Image gradient tone",
+      "info": "Background Image tone"
+    },
+    {
+      "type": "range",
+      "id": "background_tone_height",
+      "min": 50,
+      "max": 200,
+      "step": 5,
+      "unit": "vh",
+      "label": "Background Tone Height",
+      "default": 70
+    },
+    {
+      "type": "header",
+      "content": "Spacing & Border"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding Top(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding Bottom(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pts",
+      "label": "Padding Top(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pbs",
+      "label": "Padding Bottom(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    },
+    {
+      "type": "text",
+      "id": "txt",
+      "label": "Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lead Text",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}
+<style>
+  [data-section-id="{{ section.id }}"]
+  {
+    padding-top: {{ section.settings.pts }}px;
+    padding-bottom: {{ section.settings.pbs }}px;
+    {% if section.settings.border-top %}
+    border-top: 1.5px solid {{ section.settings.section_txt_color }};
+    {% endif %}
+    {% if section.settings.border-bottom %}
+    border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+    {% endif %}
+  }
+  @media (min-width:992px)
+  {
+    [data-section-id="{{ section.id }}"]
+    {
+      padding-top: {{ section.settings.pt }}px;
+      padding-bottom: {{ section.settings.pb }}px;
+    }
+  }
+  .lead-fair-tone {
+    height:{{ section.settings.background_tone_height }}vh;
+    background-image: url({{ section.settings.background_imagetone }});
+    background-size:cover;
+    background-size: 100% 100%;
+    top:-68%
+    }
+</style>

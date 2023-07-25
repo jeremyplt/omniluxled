@@ -1,0 +1,273 @@
+.account-fair-tone{
+    background-image: url('https://cdn.shopify.com/s/files/1/0693/1811/5606/files/account.jpg?v=1672050675');
+    background-size: cover;
+    height:47vh;
+}
+.profile {
+    background-color:#07272D;
+    border-radius:50%;
+    height: 60px;
+    min-width: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-text {
+    font-size:20px;
+    letter-spacing: normal;
+}
+.address_block .card p{
+    line-height:30px;
+}
+.arrow-left{
+    rotate: 90deg;
+    font-size: 10px;
+}
+
+.account-table{
+    border-collapse: unset;
+    border-spacing: unset;
+}
+.account-table thead th {
+    border-top: 0;
+    border-bottom: 1.5px solid #000;
+    padding-bottom:5px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.account-table tbody td{
+    padding:20px 0;
+    border-bottom: 1.5px solid #000;
+    border-top: 0;
+}
+.order-table .table thead th{
+    border: 0;
+}
+.order-table .table th{
+    padding: 0.75rem 20px;
+    padding-bottom: 5px;
+}
+.order-table .table td{
+    padding: 0.75rem 20px;
+}
+.order-table .table tfoot td{
+    padding:20px 20px;
+}
+.order-table .table tfoot td{
+    border: 0;
+}
+.order-table .table tbody{
+    border: 1.5px solid #000;
+}
+.order-table .table{
+    border-collapse: unset;
+    border-spacing: unset;
+}
+.order-table .table tbody td,
+.order-table .table tbody td{
+    border: 0;
+    vertical-align: middle;
+}
+.address-title{
+    padding:13px 0px;
+    padding-bottom:5px;
+}
+.billing-address{
+    line-height: 30px;
+}
+#customerLoginForm .form-group input{
+    background-color: transparent !important;
+}
+#customerRegisterForm .form-group input{
+    background-color: transparent !important;
+}
+
+@media (min-width:992px){
+    .profile-border{
+        border-right:1.5px solid #000;
+        max-width: 297px;
+    }
+    /* .account-table td:first-child,
+    .account-table th:first-child
+    {
+        width:30%;
+    }
+    .account-table td:nth-child(2),
+    .account-table th:nth-child(2)
+    {
+        width:23%;
+    }
+    .account-table td:nth-child(3),
+    .account-table th:nth-child(3)
+    {
+        width:12.5%;
+    }
+    .account-table td:nth-child(4),
+    .account-table th:nth-child(4)
+    {
+        width:12.5%;
+    }
+    .account-table td:last-child,
+    .account-table th:last-child
+    {
+        width:22%;
+    } */
+    .table-m
+    {
+        display: none !important;
+    }
+    .account-table tbody td{
+        vertical-align: middle;
+    }
+    .sortby-dropdown .toggle-content
+    {
+        height: auto !important;
+        overflow: visible !important;
+    }
+    .sortby-dropdown .toggle-content .active,
+    .sortby-dropdown .toggle-content a:hover
+    {
+        border-bottom: 1.5px solid;
+    }
+    .order-table tbody td:first-child,
+    .order-table tbody th:first-child
+    {
+        width:44%;
+    }
+    .order-table tbody td:nth-child(2),
+    .order-table tbody th:nth-child(2)
+    {
+        width:14.5%;
+    }
+    .order-table tbody td:nth-child(3),
+    .order-table tbody th:nth-child(3)
+    {
+        width:16.5%;
+    }
+    .order-table tbody td:last-child,
+    .order-table tbody th:last-child
+    {
+        width:17%;
+    }
+    .order-table tfoot td:last-child
+    {
+        min-width: 167px;
+    }
+    .p-order-table.order-table tbody td:first-child,
+    .p-order-table.order-table tbody th:first-child
+    {
+        width: 34%;
+    }
+    .p-order-table.order-table tbody td:nth-child(2),
+    .p-order-table.order-table tbody th:nth-child(2)
+    {
+        width: 15%;
+    }
+    .p-order-table.order-table tbody td:nth-child(3),
+    .p-order-table.order-table tbody th:nth-child(3)
+    {
+        width: 12.5%;
+    }
+    .p-order-table.order-table tbody td:nth-child(4),
+    .p-order-table.order-table tbody th:nth-child(4)
+    {
+        width: 13.5%;
+    }
+    .p-order-table.order-table tbody td:last-child,
+    .p-order-table.order-table tbody th:last-child
+    {
+        width: 25%;
+    }
+    .account-fair-tone{
+        background-image: url(https://cdn.shopify.com/s/files/1/0482/6736/2466/files/account.jpg?v=1671616863);
+        height:47vh;
+    }
+}
+@media (max-width:991.85px)
+{
+    .table-d
+    {
+        display: none !important;
+    }
+    .profile-border{
+        border-bottom:1.5px solid #000;
+    }
+    .sortby-dropdown .toggle-content
+    {
+        position: absolute;
+        background-color: #fff!important;
+        width: 100%;
+        left: 0;
+        padding: 0 20px;
+        max-height: 50vh;
+        overflow: auto;
+        z-index: 4;
+    }
+    .sortby-dropdown .custom--select::after
+    {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: calc(100% + 7px);
+        left: 0;
+        top: -7px;
+        background: #fff;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+    .sortby-dropdown .custom--select.open::after
+    {
+        opacity: 1;
+    }
+    .sortby-dropdown .toggle-content li
+    {
+        padding-top: 25px;
+    }
+    .sortby-dropdown .toggle-content li:last-child
+    {
+        padding-bottom: 25px;
+    }
+    .sortby-dropdown
+    {
+        margin: 0 -20px;
+        padding: 0 20px;
+    }
+    .order-table tfoot td:first-child
+    {
+        width: 64%;
+    }
+    .order-table tfoot td:last-child
+    {
+        width: 36%;
+    }
+    .profile-border::after
+    {
+        content: "";
+        border-bottom: 1.5px solid;
+        position: absolute;
+        left: -5px;
+        width: 100vw;
+        bottom: -1.5px;
+    }
+    .order-table.p-order-table .table tbody td
+    {
+        vertical-align: initial;
+    }
+    .order-table.p-order-table tr:nth-child(2) > td
+    {
+        width: 33.33%;
+    }
+    .order-table.p-order-table .quantity-active > div:first-child
+    {
+        max-width: 39.1%;
+    }
+    .order-table.p-order-table .quantity-active > div:last-child
+    {
+        width: 100%;
+    }
+    .order-summary-col .font-size-lg-20
+    {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,334 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-page",
+      "settings": {
+      }
+    },
+    "86f1dff3-88ca-43dc-a893-db0ce7e17342": {
+      "type": "global-accrodian",
+      "blocks": {
+        "50df4d7d-6fad-42fc-9cf6-9215b3d0b510": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "What is the difference between the Contour, Clear and Men devices?",
+            "answer": "<p>Our Contour devices have LED bulbs that emit both red (633 nanometers) and near-infrared (830 nanometers) wavelengths of light. Red light helps prompt cellular repair and circulation for a more vibrant complexion. Near-infrared light stimulates new collagen and elastin production, resulting in plumper, firmer, more youthful-looking skin.<\/p><p>Our Clear device has LED bulbs that emit both blue (415 nanometers) and red (633 nanometers) wavelengths of light. Blue light works on a cellular level to neutralize and kill acne-forming bacteria on the surface of the skin. Red light reduces inflammation, boosts blood oxygen levels in the skin, and reduces sebum (oil) production by targeting the sebaceous glands.<\/p><p>Omnilux Men devices have LED bulbs that emit red (633 nanometers) and near-infrared (830 nanometers and 1072 nanometers) wavelengths of light. Red light helps prompt cellular repair and circulation for a more vibrant complexion. Near-infrared light stimulates new collagen and elastin production, resulting in plumper, firmer, more youthful-looking skin. 1072nm is ideal for men’s thicker skin as it penetrates deeper into the skin.<\/p><p>Although all devices have red light, they are indicated for different skin concerns. <\/p>"
+          }
+        },
+        "298a055b-9af1-45f7-8a42-5d6241990828": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "What is the best LED light therapy for me?",
+            "answer": "<p>This all depends on your specific skin concerns. If you would like to reduce fine lines and wrinkles, either the Contour or Omnilux Men devices may be best for you. If you would like to target acne and reduce breakouts, we recommend the Clear device. <\/p>"
+          }
+        },
+        "658279cf-cbcc-4b7c-bd97-dec760a27397": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Do I need to clean the device? How do I clean it?",
+            "answer": "<p>You should clean your device with a water-based wipe before every treatment. Baby wipes work great! Stubborn stains can be removed by wiping gently with 70% alcohol. Always softly wipe the LED side of the device and let air dry before starting treatment.<\/p>"
+          }
+        },
+        "c598a69c-af6b-4f36-a54b-851ca38fb122": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How do I charge my battery? How long should it charge it for?",
+            "answer": "<p>Select the appropriate plug-type wall socket adapter for your country and connect to the power supply plug.<br\/><br\/>Insert USB-C charging cable into the oval-shaped controller<br\/><br\/>The 3 lights on the controller will flash, indicating the level of charge. The controller battery will be fully charged when all 3 lights are illuminated. This can take up 5-6 hours.<br\/><br\/>Unplug controller once fully charged. *DO NOT OVER CHARGE*<br\/><br\/><strong>NOTE: USB ATTACHED TO DEVICE SHOULD NOT BE CONNECT TO THE CONTROLLER WHILE CHARGING. THIS MAY DAMAGE THE DEVICE.<\/strong><\/p>"
+          }
+        },
+        "55053f3d-f5c3-4ad2-b30b-a6ae5424247c": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How many treatments should I be able to complete on a full battery?",
+            "answer": "<p>With proper use, you should be able to receive at least 10 individual treatments from a fully charged controller. Because the Glove device is equipped with more LEDs, charging may be more frequent, with about 3-4 individual treatments out of a full charge.<br\/><br\/>PLEASE NOTE: OVER CHARGING CAN AFFECT THE BATTERY POWER OVER TIME<\/p>"
+          }
+        },
+        "772fc311-1a91-44f5-9f35-e3bfc9c95f07": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "What forms of payment do you accept?",
+            "answer": "<p>We accept debit cards and all major credit cards. You may also complete purchases using interest free installment plans through Pay Pal, Shop Pay, Afterpay, and Klarna.<\/p>"
+          }
+        },
+        "88d2e11f-a4ca-4c43-aab9-dcecd0e023f0": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Do you offer installment payments?",
+            "answer": "<p>We do! We offer interest-free installment payments through Shop Pay, Afterpay and Klarna. PLEASE NOTE: Shop Pay and Klarna are only available for US customers.<\/p>"
+          }
+        },
+        "d387a7ba-2dd2-4509-9bf6-220b05957f3e": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Is tax included in my order?",
+            "answer": "<p>Yes. For applicable countries, VAT tax and\/or customs & duties charges are included in the advertised pricing.<\/p>"
+          }
+        },
+        "fa4633c1-f42a-4d71-b391-5750df5732c0": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How can I get an invoice for my order?",
+            "answer": "<p>Please reach out to our customer service team at <a href=\"mailto:info@omniluxled.com\" title=\"mailto:info@omniluxled.com\">info@omniluxled.com<\/a> and someone will be in touch shortly to help you with your request. *All invoices must be requested.<\/p>"
+          }
+        },
+        "e50a0a78-e1d7-486b-9729-75a5b52ca622": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Do I need to pay customs for my international order?",
+            "answer": "<p>In most regions we ship locally so there is no customs tax that is required upon delivery. <\/p>"
+          }
+        },
+        "abef59de-6d15-42d9-bdce-91502998c770": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Are your devices FSA\/HSA eligible?",
+            "answer": "<p>Unfortunately, we don't accept FSA\/HSA at this time. You can complete your order using all major credit cards or payment options available such as installments offered through Shop Pay, Afterpay, Klarna, and PayPal.<\/p>"
+          }
+        },
+        "8351305f-e718-45b4-baf1-0428b13b5545": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Are Omnilux devices FDA cleared?",
+            "answer": "<p>Yes! All Omnilux devices have been FDA cleared, TGA approved, and CE certified. In addition, all devices conform to international safety standards, including eye safety. <\/p>"
+          }
+        },
+        "b62ad9ca-b861-4562-966e-04d86898bc12": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Can I use my device outside of the USA?",
+            "answer": "<p>Omnilux devices are built for global use, so each device comes with four different power adapters and have universal voltage with an electrical input of 100-240Vac\/47-63Hz.<\/p>"
+          }
+        },
+        "9702f62a-02fc-43ab-a52d-af72906b7580": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Can I use Omnilux devices while moving around or do I have to remain plugged into a wall outlet while using it?",
+            "answer": "<p>One of the benefits of all our devices is that they are completely portable, so you can easily move around while wearing them. Some users like to lay back and relax, while others choose to move around their house during LED treatments!<\/p>"
+          }
+        },
+        "0a826fe0-b020-4201-a435-b3eb5617b82a": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Should I use the device morning or night?",
+            "answer": "<p>Omnilux devices have benefits for both AM and PM users. Early Birds, wake up those skin cells, and start your day with an instant glow that lasts all day. Night Owls, ease your skin into its regenerative process and calm your skin for your best sleep. Consistency is key, so find what works best with your routine!<\/p>"
+          }
+        },
+        "2b823951-41c9-4433-9c68-a84cd9f4e0fe": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Are there any reverse side effects if I stop treatments?",
+            "answer": "<p>To maintain best results, we advise that you continue with your Omnilux treatments. If you stop treatments, you may notice your skin starting to lose the progress it has made. It’s a commitment to bettering your skin, consistency will give the best results.<\/p>"
+          }
+        },
+        "de641953-8c83-4092-ad71-3742dd97daa5": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Do you have clinical studies?",
+            "answer": "<p>Of Course! You can review our bibliography of over 40 clinical studies <a href=\"\/pages\/clinical-bibliography\" title=\"Clinical Bibliography\">here<\/a>.<\/p>"
+          }
+        },
+        "a93ef0d5-93ac-47a7-90f0-6494d6e5d0b7": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Can I use while pregnant or breastfeeding?",
+            "answer": "<p>While red light therapy is very safe, our LED devices have not been specifically studied with pregnant or breastfeeding women. For this reason, we do not recommend the use of LED unless approved by your doctor.<\/p>"
+          }
+        },
+        "1dcdc488-5560-41de-8092-56b3b3cfcade": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Can I use if I have cancer?",
+            "answer": "<p>Photosensitivity is a common side effect of various chemotherapy drugs. It is not advised to use LED light therapy if you have cancer or are undergoing cancer treatment. If you are unsure about any medications you may be taking, please consult your healthcare provider.<\/p>"
+          }
+        },
+        "c3876f86-2b34-4a55-9073-be3f0044515b": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How can I repair my device?",
+            "answer": "<p>Our devices are not repairable. If you are still under warranty and suspect there is a fault in your device, please reach out to our Customer Service Team and someone will gladly help you file a warranty claim .<br\/><br\/>PLEASE NOTE: Any repairs made to the device will void warranty.<\/p>"
+          }
+        },
+        "2fb3647d-479b-482c-bdbb-57666691fbf2": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How do I become a stockist\/provider?",
+            "answer": "<p>You can register to join our wholesale Provider Partnership program <a href=\"https:\/\/omniluxled.com\/account\/register\" target=\"_self\">here<\/a>. Please check the box indicating you are a provider, fill out the information on the form and our team will review for approval.<\/p>"
+          }
+        },
+        "42ea885e-41b9-415c-9d60-660c2b055943": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "My face is red after treatments, is that normal?",
+            "answer": "<p>Yes, some users might feel a slight warming sensation, but this warming effect is usually minimal. Since your body produces natural warmth, having the device so close to your body can create a warming sensation. Your device should never feel hot to the touch.<\/p>"
+          }
+        },
+        "61a3d993-ee05-4f51-9b87-2bb05d0f53b2": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "I am getting pimples after using the device, is that normal?",
+            "answer": "<p>No, users should not experience pimples after treatments. Please be sure that you are cleaning your device thoroughly before each use to avoid bacteria growth on the device. <br\/><br\/>Omnilux Clear users: There may be a chance that you experience some acne breakouts after your initial treatments, as a result of your skin's purging process. We encourage you to continue.<\/p>"
+          }
+        },
+        "30ea60ce-9e39-4949-b942-4fb09019f521": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "My face feels dry after treatment, is that normal?",
+            "answer": "<p>Omnilux treatments may leave your face feeling dry. We recommend following your treatments with your favorite moisturizer and serum. For extra hydration during Contour or Omnilux Men treatments, we recommend using our Hydrogel Masks.<\/p>"
+          }
+        },
+        "0371e8e3-da38-4d20-9652-f3242d09b5e9": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How much is shipping?",
+            "answer": "<p>We currently offer free shipping on all LED devices. This applies to ground shipping rates only. Excludes Hawaii, Alaska, New Zealand, and Northern Ireland.  <\/p>"
+          }
+        },
+        "5f500928-2e2a-46dc-889e-53025d51346c": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Where can I find my tracking information?",
+            "answer": "<p>You can find your tracking number in your shipping email confirmation. You can check the status of your shipment on the carrier website with your tracking number.<\/p>"
+          }
+        },
+        "d0c2bd9c-04a2-41dc-a084-d0bd562b958d": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Why do I not qualify for free shipping?",
+            "answer": "<p>Free shipping applies only to Ground shipping for all LED devices. You may be charged for shipping if you are in a region that requires overseas shipping. Hawaii, Alaska, New Zealand, and Northern Ireland are regions excluded from free shipping.<\/p>"
+          }
+        },
+        "bd0287fc-4d3d-4e65-867e-54a12b9d7c9e": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Do you ship internationally?",
+            "answer": "<p>We currently ship to the US, Canada, Australia, New Zealand, the United Kingdom and all EU countries except Bosnia and Herzegovina, Iceland, Latvia and Lithuania.<br\/><br\/>We’re rapidly expanding to other countries and encourage you to sign up for our mailing list to stay updated on our latest news.<\/p>"
+          }
+        },
+        "f60e0f1f-0e9a-4f22-88ea-e76e48de84ba": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How long will it take for my order to ship?",
+            "answer": "<p>Processing can take anywhere from 2-3 business days. Once your order has shipped, you will receive an email with shipping information and updates.<\/p>"
+          }
+        },
+        "fe6dfd30-f2de-4e76-acde-acebf093a9f4": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Do you ship to APO, DPO, or FPO addresses?",
+            "answer": "<p>We do! Add your APO, DPO, or FPO address at checkout, and we will handle the rest to make sure your order arrives at your postal address.<\/p>"
+          }
+        },
+        "87e2db98-80e8-4ba2-8683-20a74e1e488b": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Where is my order being shipped from?",
+            "answer": "<p>Good news! We ship directly out of most of our serviced regions. There is a good chance that your order is coming from closer than you thought.<br\/><br\/>If you wish to know the exact location, please reach out to our customer service team at <a href=\"mailto:info@omniluxled.com\" target=\"_blank\" title=\"mailto:info@omniluxled.com\">info@omniluxled.com<\/a> and someone from the team will help answer your question.<\/p>"
+          }
+        },
+        "7a837e20-5e1b-42fd-af54-3a3e8b4a7e18": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Can I change or cancel my order once it has been placed?",
+            "answer": "<p>If you would like to change or cancel your order, please reach out to <a href=\"mailto:info@omniluxled.com\" target=\"_blank\" title=\"mailto:info@omniluxled.com\">info@omniluxled.com<\/a> as soon as possible and someone will be happy to assist you with your request. <br\/><br\/>PLEASE NOTE: ANY CHANGES TO YOUR ORDER MAY RESULT IN DELAYS.<\/p>"
+          }
+        },
+        "ee89efc7-4687-4c86-8f31-95143550c617": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "What is the return policy?",
+            "answer": "<p>You may return your LED device within 30 days of receiving your Contour and Men devices and 45 days for the Clear device. Absolutely no returns will be accepted thereafter. <\/p>"
+          }
+        },
+        "4adce347-986f-41e7-8af2-7c302d14d95d": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How do I return my product?",
+            "answer": "<p>To return your device you will need to request a Return Authorization form and a return shipping label from our customer service team. <br\/><br\/>Please reach out to <a href=\"mailto:info@omniluxled.com\" target=\"_blank\" title=\"mailto:info@omniluxled.com\">info@omniluxled.com<\/a> and a team member will provide you with everything you will need to process your return<\/p>"
+          }
+        },
+        "9f0516c3-ad93-4489-8055-ea70f4a3b2d1": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "What is your warranty policy?",
+            "answer": "<p>All Omnilux devices are warrantied for 2 years from the date of delivery. The controller is warrantied for 1 year from date of delivery. The warranty does not cover accidental damages. <br\/><br\/>If you suspect that there is an issue with your device, please reach out <a href=\"mailto:info@omniluxled.com\" target=\"_blank\" title=\"mailto:info@omniluxled.com\">info@omniluxled.com<\/a> and a team member will be happy to assist you.<\/p>"
+          }
+        },
+        "e5bef886-38bd-49fd-992f-90f79e8b0b41": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How do I file a warranty claim?",
+            "answer": "<p>Please reach out to <a href=\"mailto:info@omniluxled.com\" target=\"_blank\" title=\"mailto:info@omniluxled.com\">info@omniluxled.com<\/a> and a team member will help you start the process for a warranty claim.<\/p>"
+          }
+        },
+        "2831e512-07af-4a8a-9e2b-813a5128f1db": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "I purchased the wrong device; can I exchange it for a different one?",
+            "answer": "<p>We cannot process exchanges. You will need to return the item for a refund and then reorder the correct item.<\/p>"
+          }
+        },
+        "46db6400-7a8e-4ee6-a41b-148769cf7286": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Do you offer wholesale for medical professionals?",
+            "answer": "<p>Yes we do, here is the link for the <a href=\"https:\/\/omnilux-wholesale.myshopify.com\/\" target=\"_blank\" title=\"https:\/\/omnilux-wholesale.myshopify.com\/\">wholesale site<\/a>.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "50df4d7d-6fad-42fc-9cf6-9215b3d0b510",
+        "298a055b-9af1-45f7-8a42-5d6241990828",
+        "658279cf-cbcc-4b7c-bd97-dec760a27397",
+        "c598a69c-af6b-4f36-a54b-851ca38fb122",
+        "55053f3d-f5c3-4ad2-b30b-a6ae5424247c",
+        "772fc311-1a91-44f5-9f35-e3bfc9c95f07",
+        "88d2e11f-a4ca-4c43-aab9-dcecd0e023f0",
+        "d387a7ba-2dd2-4509-9bf6-220b05957f3e",
+        "fa4633c1-f42a-4d71-b391-5750df5732c0",
+        "e50a0a78-e1d7-486b-9729-75a5b52ca622",
+        "abef59de-6d15-42d9-bdce-91502998c770",
+        "8351305f-e718-45b4-baf1-0428b13b5545",
+        "b62ad9ca-b861-4562-966e-04d86898bc12",
+        "9702f62a-02fc-43ab-a52d-af72906b7580",
+        "0a826fe0-b020-4201-a435-b3eb5617b82a",
+        "2b823951-41c9-4433-9c68-a84cd9f4e0fe",
+        "de641953-8c83-4092-ad71-3742dd97daa5",
+        "a93ef0d5-93ac-47a7-90f0-6494d6e5d0b7",
+        "1dcdc488-5560-41de-8092-56b3b3cfcade",
+        "c3876f86-2b34-4a55-9073-be3f0044515b",
+        "2fb3647d-479b-482c-bdbb-57666691fbf2",
+        "42ea885e-41b9-415c-9d60-660c2b055943",
+        "61a3d993-ee05-4f51-9b87-2bb05d0f53b2",
+        "30ea60ce-9e39-4949-b942-4fb09019f521",
+        "0371e8e3-da38-4d20-9652-f3242d09b5e9",
+        "5f500928-2e2a-46dc-889e-53025d51346c",
+        "d0c2bd9c-04a2-41dc-a084-d0bd562b958d",
+        "bd0287fc-4d3d-4e65-867e-54a12b9d7c9e",
+        "f60e0f1f-0e9a-4f22-88ea-e76e48de84ba",
+        "fe6dfd30-f2de-4e76-acde-acebf093a9f4",
+        "87e2db98-80e8-4ba2-8683-20a74e1e488b",
+        "7a837e20-5e1b-42fd-af54-3a3e8b4a7e18",
+        "ee89efc7-4687-4c86-8f31-95143550c617",
+        "4adce347-986f-41e7-8af2-7c302d14d95d",
+        "9f0516c3-ad93-4489-8055-ea70f4a3b2d1",
+        "e5bef886-38bd-49fd-992f-90f79e8b0b41",
+        "2831e512-07af-4a8a-9e2b-813a5128f1db",
+        "46db6400-7a8e-4ee6-a41b-148769cf7286"
+      ],
+      "settings": {
+        "heading": "",
+        "enable_accordion_btn": true,
+        "btn1_text": "GENERAL FAQS",
+        "btn1_link": "",
+        "button1_disabled": true,
+        "btn2_text": "PRODUCT FAQS & GUIDES",
+        "btn2_link": "shopify:\/\/pages\/help-center-products",
+        "button2_disabled": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "86f1dff3-88ca-43dc-a893-db0ce7e17342"
+  ]
+}

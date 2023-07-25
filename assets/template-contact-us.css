@@ -1,0 +1,72 @@
+
+/* .contact-us-block{
+    border-top: 1.5px solid #000;
+    border-bottom: 1.5px solid #000; ;
+} */
+.contact-us-block .block_para{
+    max-width: 343px;
+    margin: 0 auto;
+}
+.contact-us-gradient-fair-tone{
+    height:71vh;
+    background-image: url(https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background_Gradient.png?v=1670418437);
+    background-size:cover;
+    background-size: 100% 100%;
+}
+.contact-us-blocks{
+    border-top: 1.5px solid #000;
+    border-bottom: 1.5px solid #000;
+}
+.contact-us-block{
+    position: relative;
+}
+.contact-us-block::before{
+    content: "";
+    left: 50%;
+    border-bottom: 1.5px solid #000;
+    position: absolute;
+    width: 100vw;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%);
+}
+.email_block{
+    position: relative;
+}
+.email_block::before{
+    content: "";
+    left: 50%;
+    border-bottom: 1.5px solid #000;
+    position: absolute;
+    width: 100vw;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%);
+}
+@media (min-width:768px){
+    .contact-us-block::before{
+        content:none;
+    }
+    .email_block::before{
+        content:none;
+    }
+    .email_block{
+        border-right: 1.5px solid #000;
+        border-left: 1.5px solid #000;
+    }
+    .contact-us-blocks{
+        border-top: 1.5px solid #000;
+        border-bottom: 1.5px solid #000;
+    }
+    .contact-us-block{
+        border-top: 0;
+        border-bottom:0;
+    }
+}
+@media (max-width:767.85px)
+{
+    .contact-us-blocks .c-block
+    {
+        min-height: 312px;
+    }
+}

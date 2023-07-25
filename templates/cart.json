@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "cart-items": {
+      "type": "template-cart",
+      "settings": {
+        "show_vendor": false,
+        "show_back_btn": false
+      }
+    }
+  },
+  "order": [
+    "cart-items"
+  ]
+}

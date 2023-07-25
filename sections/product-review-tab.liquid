@@ -1,0 +1,71 @@
+<style>
+    .font-sticty-footer{
+        font-size: 14px;
+    }
+    @media (min-width: 992px) {
+        .font-sticty-footer{
+        font-size:16px ;
+    }
+    }
+</style>
+<section class="border-top position-fixed bottom-0 {% if section.settings.border-bottom %}pb-11{% endif %} {% unless section.settings.autoplay_enable %}global-results-slider-noplay{% endunless %}" data-section-id="{{ section.id }}" style="z-index:1000;background-color:#fff;">
+    <div class="{% if section.settings.fluid_layout %}container-fluid px-0{% else %}container{% endif %} ">
+      {% if section.blocks.size > 0 %}
+        <div class="row" style="padding:29px 0;">
+            {% for block in section.blocks %}
+                <div class=" col-3 " data-block-id="{{ block.id }}">
+                    <div class="text-center">
+                        <a href=" {{ block.settings.btn_link }}" class="fw-semibold ls-0 text-capitalize font-sticty-footer"> {{ block.settings.btn_txt }}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Product Review Tab",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logowidthtext",
+      "name": "Product Review Tab",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "btn_txt",
+          "label": "Button Text"
+        },
+        {
+          "type": "text",
+          "id": "btn_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Review Tab",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}
+

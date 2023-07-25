@@ -1,0 +1,1263 @@
+
+
+{% if section.settings.enabled %}
+<section data-section-id="{{ section.id }}" data-type="slider" class="header-slider overflow-hidden" {{ section.settings.height }}>
+<span class="gradient-fair-tone position-absolute w-100 start-0 top-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
+    <span class="white-anim"></span>
+</span>
+  {% comment %}Carousel for larger screens {% endcomment %}
+    <div class="container-fluid {% if section.settings.height == 'tallheight' %}px-0{% endif %}" {% if section.settings.height == 'tallheight' %} data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="700" {% endif %}>
+      {% if section.blocks.size == 1 %}
+        
+          <div class=" header-slider-desktop {{ section.settings.height }} " >
+              <div class="">
+                  {% for block in section.blocks limit: section.blocks.limit %}
+                      {%- liquid
+                          capture current
+                              cycle 1, 2
+                          endcapture
+                          assign mobileImage = block.settings.image
+                          if block.settings.image_mobile != blank
+                              assign mobileImage =  block.settings.image_mobile
+                          endif
+                      -%}
+
+                      {%- if forloop.first -%}
+                          {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+                      {%- endif -%}
+
+                      {% if block.type == 'image' %}
+                          <div class="swiper-slide d-flex align-items-end slide-{{ block.id }}"
+                              {{ block.shopify_attributes }}
+                              data-block-id="{{ block.id }}"
+                              data-slide-type="image">
+                              {% if block.type == 'image' %}
+                                  {%- if block.settings.image != blank -%}
+                                      {% if block.settings.image_mobile != blank %}
+                                      <picture>
+                                          {%- if mobileImage.width >= 375 -%}<source media="(max-width: 375px)" srcset="{{ mobileImage | image_url: width: 375, format: 'pjpg' }}">{%- endif -%}
+                                          {%- if mobileImage.width >= 550 -%}<source media="(max-width: 550px)" srcset="{{ mobileImage | image_url: width: 550, format: 'pjpg' }}">{%- endif -%}
+                                          {%- if mobileImage.width >= 767 -%}<source media="(max-width: 767px)" srcset="{{ mobileImage | image_url: width: 767, format: 'pjpg' }}">{%- endif -%}
+                                          {%- if block.settings.image.width >= 991 -%}<source media="(max-width: 991px)" srcset="{{ block.settings.image | image_url: width: 991, format: 'pjpg' }}">{%- endif -%}
+                                          {%- if block.settings.image.width >= 1200 -%}<source media="(max-width: 1200px)" srcset="{{ block.settings.image | image_url: width: 1200, format: 'pjpg' }}">{%- endif -%}
+                                          {%- if block.settings.image.width >= 1500 -%}<source media="(max-width: 1500px)" srcset="{{ block.settings.image | image_url: width: 1500, format: 'pjpg' }}">{%- endif -%}
+                                          {%- if block.settings.image.width >= 1720 -%}<source media="(max-width: 1720px)" srcset="{{ block.settings.image | image_url: width: 1720, format: 'pjpg' }}">{%- endif -%}
+                                          {%- if block.settings.image.width >= 1920 -%}<source media="(max-width: 1920px)" srcset="{{ block.settings.image | image_url: width: 1920, format: 'pjpg' }}">{%- endif -%}
+                                          {%- if block.settings.image.width >= 2560 -%}<source media="(max-width: 2560px)" srcset="{{ block.settings.image | image_url: width: 2560, format: 'pjpg' }}">{%- endif -%}
+                                          {%- if block.settings.image.width >= 3800 -%}<source media="(max-width: 3800px)" srcset="{{ block.settings.image | image_url: width: 3800, format: 'pjpg' }}">{%- endif -%}
+                                          <img class="media-wrap" src="{{ block.settings.image | image_url }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                          alt="{{ block.settings.image.alt | default: block.settings.heading | escape }}"
+                                          width="{{ block.settings.image.width }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                          height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
+                                          >
+                                      </picture>
+                                      {% else %}
+                                      <img class="media-wrap" srcset="
+                                          {%- if mobileImage.width >= 375 -%}{{ mobileImage | image_url: width: 375, format: 'pjpg' }} 375w,{%- endif -%}
+                                          {%- if mobileImage.width >= 550 -%}{{ mobileImage | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}
+                                          {%- if mobileImage.width >= 767 -%}{{ mobileImage | image_url: width: 767, format: 'pjpg' }} 767w,{%- endif -%}
+                                          {%- if block.settings.image.width >= 991 -%}{{ block.settings.image | image_url: width: 991, format: 'pjpg' }} 991w,{%- endif -%}
+                                          {%- if block.settings.image.width >= 1200 -%}{{ block.settings.image | image_url: width: 1200, format: 'pjpg' }} 1200w,{%- endif -%}
+                                          {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500, format: 'pjpg' }} 1500w,{%- endif -%}
+                                          {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | image_url: width: 1780, format: 'pjpg' }} 1780w,{%- endif -%}
+                                          {%- if block.settings.image.width >= 1920 -%}{{ block.settings.image | image_url: width: 1920, format: 'pjpg' }} 1920w,{%- endif -%}
+                                          {%- if block.settings.image.width >= 2560 -%}{{ block.settings.image | image_url: width: 2560, format: 'pjpg' }} 2560w,{%- endif -%}
+                                          {%- if block.settings.image.width >= 3800 -%}{{ block.settings.image | image_url: width: 3800, format: 'pjpg' }} 3800w,{%- endif -%}
+                                          {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+                                          src="{{ block.settings.image | image_url: width: 1500, format: 'pjpg' }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                          alt="{{ block.settings.image.alt | default: block.settings.heading | escape }}"
+                                          width="{{ block.settings.image.width }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                          height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
+                                          sizes="(max-width: 375px) 375px,
+                                          (max-width: 550px) 550px,
+                                          (max-width: 767px) 767px,
+                                          (max-width: 991px) 991px,
+                                          (max-width: 1200px) 1200px,
+                                          (max-width: 1500px) 1500px,
+                                          (max-width: 1780px) 1780px,
+                                          (max-width: 1920px) 1920px,
+                                          (max-width: 2560px) 2560px,
+                                          (max-width: 3800px) 3800px, {{ block.settings.image.width }}px">
+                                      {% endif %}
+                                  {%- else -%}
+                                      {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                                  {%- endif -%}
+                              {% endif %}
+                              {% if block.settings.heading != blank or block.settings.caption != blank %}
+                                  <div class="slider-content w-100 media-text-wrap">
+                                      <div class="container px-0 {{ block.settings.alignment }}">
+                                          <div class="row mx-auto col-md-11 col-lg-10 col-12 px-0 py-xl-13 py-lg-10 mb-xl-2 py-md-5 py-10 {{ block.settings.caption_alignment }}">
+                                              <div class="col-xl-4 col-lg-6 col-md-6 col-12 pe-0 ps-0 ">
+                                                  <h2 class="h1 px-4 px-md-0 heading_txt mb-3" style="color: {{ block.settings.heading_txt_color }};">{{ block.settings.heading }}</h2>
+                                                  <p class="px-4 px-md-0 caption_txt fw-normal mb-1 pb-2" style="color: {{ block.settings.caption_txt_color }};">{{ block.settings.caption | escape }}</p>
+                                                  {% if block.settings.btn_txt != blank %}
+                                                      <a {% if block.settings.btn_link %} href="{{ block.settings.btn_link }}" {% endif %} class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }} mt-3">{{ block.settings.btn_txt }}</a>
+                                                  {% endif %}
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              {% endif %}
+
+                              {% if block.settings.enable_overlay %}
+                                  <div class="overlay" style="background-color: {{ block.settings.overlay_bg_color }}!important; opacity: {{ block.settings.overlay_opacity }}!important; mix-blend-mode: multiply !important; "></div>
+                              {% endif %}
+                              {% if block.settings.heading__size %}
+                              <style>
+                                [data-block-id="{{ block.id }}"] .media-text-wrap h2
+                                {
+                                  font-size: {{ block.settings.heading__sm }}px;
+                                }
+                                @media (min-width:768px)
+                                {
+                                  [data-block-id="{{ block.id }}"] .media-text-wrap h2
+                                  {
+                                    font-size: {{ block.settings.heading__md }}px;
+                                  }
+                                }
+                                @media (min-width:1025px)
+                                {
+                                  [data-block-id="{{ block.id }}"] .media-text-wrap h2
+                                  {
+                                    font-size: {{ block.settings.heading__lg }}px;
+                                  }
+                                }
+                              </style>
+                              {% endif %}
+                          </div>
+                      {% elsif block.type == 'video-slide' %}
+                          <div data-block-id="{{ block.id }}" class="custom-video-container {% unless block.settings.play_icon %}full-video-layout{% endunless %} header-video-slide w-100 swiper-slide d-flex align-items-end slide-{{ block.id }}">
+                              <custom-video class="video-with--text media-wrap position-relative d-block w-100 h-100 placement--{{ block.settings.placement }}"
+                                  data-loop="{{ block.settings.loop }}" data-autoplay="true" data-controls="{{ block.settings.controls }}" data-muted="{{ block.settings.muted }}"
+                                  data-video-type="{{ block.settings.video_type }}"  data-placement="{{ block.settings.placement }}"
+                                  {% if block.settings.mobile_video_id != blank %}data-mobileVideo="{{ block.settings.mobile_video_id }}"{% endif %} data-video-id="{{ block.settings.video_id }}">
+                                  <div class="content-section">
+                                      <div class="cta-btn {% unless block.settings.play_icon %}d-none{% endunless %}">
+                                          <button class="play__button btn btn-primary" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
+                                              <span class="icon-play text-body"></span>
+                                          </button>
+                                          <button class="bg-transparent border-2 border-white btn btn-primary p-3 pause__button rounded-pill d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
+                                              <span class="ox-play" style="position: relative;right: -2px;"></span>
+                                          </button>
+                                      </div>
+
+                                      <div class="poster-image {{ block.settings.height }}">
+                                          {%- if block.settings.poster_type == 'video' and block.settings.bg_video != blank -%}
+                                              <video data-posterVideo preload="yes" class="h-100 object-cover w-100" playsinline muted loop data-mobileSrc="{{ block.settings.mobile_bg_video }}">
+                                                  <source src="{{ block.settings.bg_video }}" type="video/mp4">
+                                              </video>
+                                          {%- else -%}
+                                              {%- if block.settings.image != blank -%}
+                                                  {%- if block.settings.image_mobile != blank -%}
+                                                      <picture>
+                                                          {%- if mobileImage.width >= 375 -%}<source media="(max-width: 375px)" srcset="{{ mobileImage | image_url: width: 375, format: 'pjpg' }}">{%- endif -%}
+                                                          {%- if mobileImage.width >= 550 -%}<source media="(max-width: 550px)" srcset="{{ mobileImage | image_url: width: 550, format: 'pjpg' }}">{%- endif -%}
+                                                          {%- if mobileImage.width >= 767 -%}<source media="(max-width: 767px)" srcset="{{ mobileImage | image_url: width: 767, format: 'pjpg' }}">{%- endif -%}
+                                                          {%- if block.settings.image.width >= 991 -%}<source media="(max-width: 991px)" srcset="{{ block.settings.image | image_url: width: 991, format: 'pjpg' }}">{%- endif -%}
+                                                          {%- if block.settings.image.width >= 1200 -%}<source media="(max-width: 1200px)" srcset="{{ block.settings.image | image_url: width: 1200, format: 'pjpg' }}">{%- endif -%}
+                                                          {%- if block.settings.image.width >= 1500 -%}<source media="(max-width: 1500px)" srcset="{{ block.settings.image | image_url: width: 1500, format: 'pjpg' }}">{%- endif -%}
+                                                          {%- if block.settings.image.width >= 1720 -%}<source media="(max-width: 1720px)" srcset="{{ block.settings.image | image_url: width: 1720, format: 'pjpg' }}">{%- endif -%}
+                                                          {%- if block.settings.image.width >= 1920 -%}<source media="(max-width: 1920px)" srcset="{{ block.settings.image | image_url: width: 1920, format: 'pjpg' }}">{%- endif -%}
+                                                          {%- if block.settings.image.width >= 2560 -%}<source media="(max-width: 2560px)" srcset="{{ block.settings.image | image_url: width: 2560, format: 'pjpg' }}">{%- endif -%}
+                                                          {%- if block.settings.image.width >= 3800 -%}<source media="(max-width: 3800px)" srcset="{{ block.settings.image | image_url: width: 3800, format: 'pjpg' }}">{%- endif -%}
+                                                          <img src="{{ block.settings.image | image_url }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                                          alt="{{ block.settings.image.alt | default: block.settings.heading | escape }}"
+                                                          width="{{ block.settings.image.width }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                                          height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}" >
+                                                      </picture>
+                                                  {%- else -%}
+                                                      <img srcset="
+                                                          {%- if mobileImage.width >= 375 -%}{{ mobileImage | image_url: width: 375, format: 'pjpg' }} 375w,{%- endif -%}
+                                                          {%- if mobileImage.width >= 550 -%}{{ mobileImage | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}
+                                                          {%- if mobileImage.width >= 767 -%}{{ mobileImage | image_url: width: 767, format: 'pjpg' }} 767w,{%- endif -%}
+                                                          {%- if block.settings.image.width >= 991 -%}{{ block.settings.image | image_url: width: 991, format: 'pjpg' }} 991w,{%- endif -%}
+                                                          {%- if block.settings.image.width >= 1200 -%}{{ block.settings.image | image_url: width: 1200, format: 'pjpg' }} 1200w,{%- endif -%}
+                                                          {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500, format: 'pjpg' }} 1500w,{%- endif -%}
+                                                          {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | image_url: width: 1780, format: 'pjpg' }} 1780w,{%- endif -%}
+                                                          {%- if block.settings.image.width >= 1920 -%}{{ block.settings.image | image_url: width: 1920, format: 'pjpg' }} 1920w,{%- endif -%}
+                                                          {%- if block.settings.image.width >= 2560 -%}{{ block.settings.image | image_url: width: 2560, format: 'pjpg' }} 2560w,{%- endif -%}
+                                                          {%- if block.settings.image.width >= 3800 -%}{{ block.settings.image | image_url: width: 3800, format: 'pjpg' }} 3800w,{%- endif -%}
+                                                          {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+                                                          src="{{ block.settings.image | image_url: width: 1500, format: 'pjpg' }}"
+                                                          width="{{ block.settings.image.width }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                                          height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
+                                                          alt="{{ block.settings.image.alt | default: block.settings.heading | escape }}"
+                                                          sizes="(max-width: 375px) 375px, (max-width: 550px) 550px, (max-width: 767px) 767px, (max-width: 991px) 991px,
+                                                          (max-width: 1200px) 1200px, (max-width: 1500px) 1500px, (max-width: 1780px) 1780px, (max-width: 1920px) 1920px,
+                                                          (max-width: 2560px) 2560px, (max-width: 3800px) 3800px, {{ block.settings.image.width }}px">
+                                                  {%- endif -%}
+                                              {%- else -%}
+                                                  {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                                              {%- endif -%}
+                                          {%- endif -%}
+                                      </div>
+                                  </div>
+                                  {%- if block.settings.placement == 'grid' -%}
+                                      <div class="video-section {{ block.settings.height }}" tabindex="0"></div>
+                                  {%- endif -%}
+                              </custom-video>
+                              <div class="position-absolute full-video-caption text-center media-text-wrap">
+                                  <div class="inside-block container px-md-0 px-3 col-12 col-md-11 col-lg-10 pb-xl-13 py-lg-10 mb-xl-2 py-md-5 py-10 {{ block.settings.alignment }} d-flex {{ block.settings.video_alignment }}" style="color:{{ block.settings.section_text_color }};opacity: 0;">
+                                      <div class="px-md-0 pe-0 mx-md-0 mx-auto {% if template.name == 'page' %}col-xl-6 col-md-8 lp-page-m{% else %}col-md-12{% endif %} ">
+                                          {% if block.settings.logo_image__ != blank %}
+                                              <img src="{{ block.settings.logo_image__ }}" class="h-auto position-relative w-auto mb-4" width="214" height="214" alt="{{ shop.name | escape }}" />
+                                          {% endif %}
+                                          {% if block.settings.title != blank %}
+                                              <h2 class="mb-3 h1">{{ block.settings.title }}</h2>
+                                          {% endif %}
+                                          {% if block.settings.subtitle != blank %}
+                                              <div class="caption_txt fw-normal mb-1 pb-2">{{ block.settings.subtitle }}</div>
+                                          {% endif %}
+                                          <div>
+                                              {% if block.settings.play_btn %}
+                                                  <a data-trigger-videobtn href="javascript:void(0);" class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }}" title="{{ 'sections.video-with-text.play_video' | t }}">
+                                                      {{ 'sections.video-with-text.play_video' | t }}
+                                                  </a>
+                                              {% endif %}
+                                              {% if block.settings.btn_txt != blank %}
+                                                  <a data-check="soimple" {% if block.settings.btn_link %} href="{{ block.settings.btn_link }}" {% endif %}class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }}" title="{{ block.settings.btn_txt }}">{{ block.settings.btn_txt }}</a>
+                                              {% endif %}
+                                              {% if block.settings.btn_txt_watch != blank %}
+                                              <span data-trigger-videobtn  class="cursor-pointer ls-0 fw-semibold text-white bg-transparent text-capitalize  btn {% if block.settings.btn_type_watch == "border-0" %}border-0{% endif %} btn{% if block.settings.btn_type_watch == 'outline' %}-{% endif %}{% if block.settings.btn_type_watch != "border-0" %}{{ block.settings.btn_type_watch }}{% endif %}-{{ block.settings.btn_variant_watch }} {{ block.settings.btn_size_watch }}" title="{{ block.settings.btn_txt_watch }}" style="font-size:16px;">
+                                                  {{ block.settings.btn_txt_watch }}
+                                                  <i class="ox-play ms-2" style="font-size:11px;margin-bottom:-2px;"></i>
+                                              </span>
+                                              {% endif %}
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              {% if block.settings.enable_overlay %}
+                                  <div class="overlay" style="background-color: {{ block.settings.overlay_bg_color }}!important; opacity: {{ block.settings.overlay_opacity }}!important; mix-blend-mode: multiply!important; "></div>
+                              {% endif %}
+                          </div>
+                          {% if block.settings.heading__size %}
+                          <style>
+                            [data-block-id="{{ block.id }}"] .media-text-wrap h2
+                            {
+                              font-size: {{ block.settings.heading__sm }}px;
+                            }
+                            @media (min-width:768px)
+                            {
+                              [data-block-id="{{ block.id }}"] .media-text-wrap h2
+                              {
+                                font-size: {{ block.settings.heading__md }}px;
+                              }
+                            }
+                            @media (min-width:1025px)
+                            {
+                              [data-block-id="{{ block.id }}"] .media-text-wrap h2
+                              {
+                                font-size: {{ block.settings.heading__lg }}px;
+                              }
+                            }
+                          </style>
+                          {% endif %}
+                      {% endif %}
+
+                      {%- if forloop.first -%}
+                          {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+                      {%- endif -%}
+                  {% endfor %}
+              </div>
+              
+          </div>
+    
+      {%- else -%}
+        <slider-element class="d-block" >
+            <div class="swiper swiper-slider header-slider-desktop {{ section.settings.height }} {% if section.settings.nav_dots_right %}nav-dots-right {% endif %}" data-slider='{
+                "observer": true,
+                "observeParents": true,
+                "loop": false,
+                "grabCursor": true,
+                "navigation": {
+                    "nextEl": ".hero-button-next",
+                    "prevEl": ".hero-button-prev"
+                },
+                "pagination": {
+                    "el": ".swiper-pagination"
+                }
+            }'>
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks limit: section.blocks.limit %}
+                        {%- liquid
+                            capture current
+                                cycle 1, 2
+                            endcapture
+                            assign mobileImage = block.settings.image
+                            if block.settings.image_mobile != blank
+                                assign mobileImage =  block.settings.image_mobile
+                            endif
+                        -%}
+
+                        {%- if forloop.first -%}
+                            {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+                        {%- endif -%}
+
+                        {% if block.type == 'image' %}
+                            <div class="swiper-slide d-flex align-items-end slide-{{ block.id }}"
+                                 {{ block.shopify_attributes }}
+                                data-block-id="{{ block.id }}"
+                                data-slide-type="image">
+                                {% if block.type == 'image' %}
+                                    {%- if block.settings.image != blank -%}
+                                        {% if block.settings.image_mobile != blank %}
+                                        <picture>
+                                            {%- if mobileImage.width >= 375 -%}<source media="(max-width: 375px)" srcset="{{ mobileImage | image_url: width: 375 }}">{%- endif -%}
+                                            {%- if mobileImage.width >= 550 -%}<source media="(max-width: 550px)" srcset="{{ mobileImage | image_url: width: 550 }}">{%- endif -%}
+                                            {%- if mobileImage.width >= 767 -%}<source media="(max-width: 767px)" srcset="{{ mobileImage | image_url: width: 767 }}">{%- endif -%}
+                                            {%- if block.settings.image.width >= 991 -%}<source media="(max-width: 991px)" srcset="{{ block.settings.image | image_url: width: 991 }}">{%- endif -%}
+                                            {%- if block.settings.image.width >= 1200 -%}<source media="(max-width: 1200px)" srcset="{{ block.settings.image | image_url: width: 1200 }}">{%- endif -%}
+                                            {%- if block.settings.image.width >= 1500 -%}<source media="(max-width: 1500px)" srcset="{{ block.settings.image | image_url: width: 1500 }}">{%- endif -%}
+                                            {%- if block.settings.image.width >= 1720 -%}<source media="(max-width: 1720px)" srcset="{{ block.settings.image | image_url: width: 1720 }}">{%- endif -%}
+                                            {%- if block.settings.image.width >= 1920 -%}<source media="(max-width: 1920px)" srcset="{{ block.settings.image | image_url: width: 1920 }}">{%- endif -%}
+                                            {%- if block.settings.image.width >= 2560 -%}<source media="(max-width: 2560px)" srcset="{{ block.settings.image | image_url: width: 2560 }}">{%- endif -%}
+                                            {%- if block.settings.image.width >= 3800 -%}<source media="(max-width: 3800px)" srcset="{{ block.settings.image | image_url: width: 3800 }}">{%- endif -%}
+                                            <img class="media-wrap" src="{{ block.settings.image | image_url }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                            alt="{{ block.settings.image.alt | default: block.settings.heading | escape }}"
+                                            width="{{ block.settings.image.width }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                            height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
+                                            >
+                                        </picture>
+                                        {% else %}
+                                        <img class="media-wrap" srcset="
+                                            {%- if mobileImage.width >= 375 -%}{{ mobileImage | image_url: width: 375 }} 375w,{%- endif -%}
+                                            {%- if mobileImage.width >= 550 -%}{{ mobileImage | image_url: width: 550 }} 550w,{%- endif -%}
+                                            {%- if mobileImage.width >= 767 -%}{{ mobileImage | image_url: width: 767 }} 767w,{%- endif -%}
+                                            {%- if block.settings.image.width >= 991 -%}{{ block.settings.image | image_url: width: 991 }} 991w,{%- endif -%}
+                                            {%- if block.settings.image.width >= 1200 -%}{{ block.settings.image | image_url: width: 1200 }} 1200w,{%- endif -%}
+                                            {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                            {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                                            {%- if block.settings.image.width >= 1920 -%}{{ block.settings.image | image_url: width: 1920 }} 1920w,{%- endif -%}
+                                            {%- if block.settings.image.width >= 2560 -%}{{ block.settings.image | image_url: width: 2560 }} 2560w,{%- endif -%}
+                                            {%- if block.settings.image.width >= 3800 -%}{{ block.settings.image | image_url: width: 3800 }} 3800w,{%- endif -%}
+                                            {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+                                            src="{{ block.settings.image | image_url: width: 1500 }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                            alt="{{ block.settings.image.alt | default: block.settings.heading | escape }}"
+                                            width="{{ block.settings.image.width }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                            height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
+                                            sizes="(max-width: 375px) 375px,
+                                            (max-width: 550px) 550px,
+                                            (max-width: 767px) 767px,
+                                            (max-width: 991px) 991px,
+                                            (max-width: 1200px) 1200px,
+                                            (max-width: 1500px) 1500px,
+                                            (max-width: 1780px) 1780px,
+                                            (max-width: 1920px) 1920px,
+                                            (max-width: 2560px) 2560px,
+                                            (max-width: 3800px) 3800px, {{ block.settings.image.width }}px">
+                                        {% endif %}
+                                    {%- else -%}
+                                        {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                                    {%- endif -%}
+                                {% endif %}
+                                {% if block.settings.heading != blank or block.settings.caption != blank %}
+                                    <div class="slider-content w-100 media-text-wrap">
+                                        <div class="inside-block container px-0 {{ block.settings.alignment }}" style="opacity: 0;">
+                                            <div class="row mx-auto col-md-11 col-lg-10 col-12 px-0 py-xl-13 py-lg-10 mb-xl-2 py-md-5 py-10 {{ block.settings.caption_alignment }}">
+                                                <div class="col-xl-4 col-lg-6 col-md-6 col-12 pe-0 ps-0 ">
+                                                    <h2 class="h1 px-4 px-md-0 heading_txt mb-3" style="color: {{ block.settings.heading_txt_color }};">{{ block.settings.heading }}</h2>
+                                                    <p class="px-4 px-md-0 caption_txt fw-normal mb-1 pb-2" style="color: {{ block.settings.caption_txt_color }};">{{ block.settings.caption | escape }}</p>
+                                                    {% if block.settings.btn_txt != blank %}
+                                                        <a {% if block.settings.btn_link %} href="{{ block.settings.btn_link }}" {% endif %} class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }} mt-3">{{ block.settings.btn_txt }}</a>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+
+                                {% if block.settings.enable_overlay %}
+                                    <div class="overlay" style="background-color: {{ block.settings.overlay_bg_color }}!important; opacity: {{ block.settings.overlay_opacity }}!important; mix-blend-mode: multiply !important; "></div>
+                                {% endif %}
+                                {% if block.settings.heading__size %}
+                                <style>
+                                [data-block-id="{{ block.id }}"] .media-text-wrap h2
+                                {
+                                  font-size: {{ block.settings.heading__sm }}px;
+                                }
+                                @media (min-width:768px)
+                                {
+                                  [data-block-id="{{ block.id }}"] .media-text-wrap h2
+                                  {
+                                    font-size: {{ block.settings.heading__md }}px;
+                                  }
+                                }
+                                @media (min-width:1025px)
+                                {
+                                  [data-block-id="{{ block.id }}"] .media-text-wrap h2
+                                  {
+                                    font-size: {{ block.settings.heading__lg }}px;
+                                  }
+                                }
+                              </style>
+                              {% endif %}
+                            </div>
+                        {% elsif block.type == 'video-slide' %}
+                            <div data-block-id="{{ block.id }}" class="custom-video-container {% unless block.settings.play_icon %}full-video-layout{% endunless %} header-video-slide w-100 swiper-slide d-flex align-items-end slide-{{ block.id }}">
+                                <custom-video class="video-with--text media-wrap position-relative d-block w-100 h-100 placement--{{ block.settings.placement }}"
+                                    data-loop="{{ block.settings.loop }}" data-autoplay="true" data-controls="{{ block.settings.controls }}" data-muted="{{ block.settings.muted }}"
+                                    data-video-type="{{ block.settings.video_type }}"  data-placement="{{ block.settings.placement }}"
+                                    {% if block.settings.mobile_video_id != blank %}data-mobileVideo="{{ block.settings.mobile_video_id }}"{% endif %} data-video-id="{{ block.settings.video_id }}">
+                                    <div class="content-section">
+                                        <div class="cta-btn {% unless block.settings.play_icon %}d-none{% endunless %}">
+                                            <button class="play__button btn btn-primary" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
+                                                <span class="icon-play text-body"></span>
+                                            </button>
+                                            <button class="bg-transparent border-2 border-white btn btn-primary p-3 pause__button rounded-pill d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
+                                                <span class="ox-play" style="position: relative;right: -2px;"></span>
+                                            </button>
+                                        </div>
+
+                                        <div class="poster-image {{ block.settings.height }}">
+                                            {%- if block.settings.poster_type == 'video' and block.settings.bg_video != blank -%}
+                                                <video data-posterVideo preload="yes" class="h-100 object-cover w-100" playsinline muted loop data-mobileSrc="{{ block.settings.mobile_bg_video }}">
+                                                    <source src="{{ block.settings.bg_video }}" type="video/mp4">
+                                                </video>
+                                            {%- else -%}
+                                                {%- if block.settings.image != blank -%}
+                                                    {%- if block.settings.image_mobile != blank -%}
+                                                        <picture>
+                                                            {%- if mobileImage.width >= 375 -%}<source media="(max-width: 375px)" srcset="{{ mobileImage | image_url: width: 375 }}">{%- endif -%}
+                                                            {%- if mobileImage.width >= 550 -%}<source media="(max-width: 550px)" srcset="{{ mobileImage | image_url: width: 550 }}">{%- endif -%}
+                                                            {%- if mobileImage.width >= 767 -%}<source media="(max-width: 767px)" srcset="{{ mobileImage | image_url: width: 767 }}">{%- endif -%}
+                                                            {%- if block.settings.image.width >= 991 -%}<source media="(max-width: 991px)" srcset="{{ block.settings.image | image_url: width: 991 }}">{%- endif -%}
+                                                            {%- if block.settings.image.width >= 1200 -%}<source media="(max-width: 1200px)" srcset="{{ block.settings.image | image_url: width: 1200 }}">{%- endif -%}
+                                                            {%- if block.settings.image.width >= 1500 -%}<source media="(max-width: 1500px)" srcset="{{ block.settings.image | image_url: width: 1500 }}">{%- endif -%}
+                                                            {%- if block.settings.image.width >= 1720 -%}<source media="(max-width: 1720px)" srcset="{{ block.settings.image | image_url: width: 1720 }}">{%- endif -%}
+                                                            {%- if block.settings.image.width >= 1920 -%}<source media="(max-width: 1920px)" srcset="{{ block.settings.image | image_url: width: 1920 }}">{%- endif -%}
+                                                            {%- if block.settings.image.width >= 2560 -%}<source media="(max-width: 2560px)" srcset="{{ block.settings.image | image_url: width: 2560 }}">{%- endif -%}
+                                                            {%- if block.settings.image.width >= 3800 -%}<source media="(max-width: 3800px)" srcset="{{ block.settings.image | image_url: width: 3800 }}">{%- endif -%}
+                                                            <img src="{{ block.settings.image | image_url }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                                            alt="{{ block.settings.image.alt | default: block.settings.heading | escape }}"
+                                                            width="{{ block.settings.image.width }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                                            height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}" >
+                                                        </picture>
+                                                    {%- else -%}
+                                                        <img srcset="
+                                                            {%- if mobileImage.width >= 375 -%}{{ mobileImage | image_url: width: 375 }} 375w,{%- endif -%}
+                                                            {%- if mobileImage.width >= 550 -%}{{ mobileImage | image_url: width: 550 }} 550w,{%- endif -%}
+                                                            {%- if mobileImage.width >= 767 -%}{{ mobileImage | image_url: width: 767 }} 767w,{%- endif -%}
+                                                            {%- if block.settings.image.width >= 991 -%}{{ block.settings.image | image_url: width: 991 }} 991w,{%- endif -%}
+                                                            {%- if block.settings.image.width >= 1200 -%}{{ block.settings.image | image_url: width: 1200 }} 1200w,{%- endif -%}
+                                                            {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                                            {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                                                            {%- if block.settings.image.width >= 1920 -%}{{ block.settings.image | image_url: width: 1920 }} 1920w,{%- endif -%}
+                                                            {%- if block.settings.image.width >= 2560 -%}{{ block.settings.image | image_url: width: 2560 }} 2560w,{%- endif -%}
+                                                            {%- if block.settings.image.width >= 3800 -%}{{ block.settings.image | image_url: width: 3800 }} 3800w,{%- endif -%}
+                                                            {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+                                                            src="{{ block.settings.image | image_url: width: 1500 }}"
+                                                            width="{{ block.settings.image.width }}" {% unless forloop.first %}loading="lazy"{% endunless %}
+                                                            height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
+                                                            alt="{{ block.settings.image.alt | default: block.settings.heading | escape }}"
+                                                            sizes="(max-width: 375px) 375px, (max-width: 550px) 550px, (max-width: 767px) 767px, (max-width: 991px) 991px,
+                                                            (max-width: 1200px) 1200px, (max-width: 1500px) 1500px, (max-width: 1780px) 1780px, (max-width: 1920px) 1920px,
+                                                            (max-width: 2560px) 2560px, (max-width: 3800px) 3800px, {{ block.settings.image.width }}px">
+                                                    {%- endif -%}
+                                                {%- else -%}
+                                                    {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                                                {%- endif -%}
+                                            {%- endif -%}
+                                        </div>
+                                    </div>
+                                    {%- if block.settings.placement == 'grid' -%}
+                                        <div class="video-section {{ block.settings.height }}" tabindex="0"></div>
+                                    {%- endif -%}
+                                </custom-video>
+                                <div class="position-absolute full-video-caption text-center media-text-wrap">
+                                    <div class="inside-block container px-md-0 px-3 col-12 col-md-11 col-lg-10 pb-xl-13 py-lg-10 mb-xl-2 py-md-5 py-10 {{ block.settings.alignment }} d-flex {{ block.settings.video_alignment }}" style="color:{{ block.settings.section_text_color }};opacity: 0;">
+                                        <div class="px-md-0 pe-0 mx-md-0 mx-auto {% if template.name == 'page' %}col-xl-6 col-md-8 lp-page-m{% else %}col-md-12{% endif %} ">
+                                            {% if block.settings.logo_image__ != blank %}
+                                                <img src="{{ block.settings.logo_image__ }}" class="h-auto position-relative w-auto mb-4" width="214" height="214" alt="{{ block.settings.title | default: shop.name | escape }}"/>
+                                            {% endif %}
+                                            {% if block.settings.title != blank %}
+                                                <h2 class="mb-3 h1">{{ block.settings.title }}</h2>
+                                            {% endif %}
+                                            {% if block.settings.subtitle != blank %}
+                                                <div class="caption_txt mb-1 pb-2">{{ block.settings.subtitle }}</div>
+                                            {% endif %}
+                                            <div>
+                                                {% if block.settings.play_btn %}
+                                                    <a data-trigger-videobtn href="javascript:void(0);" class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }}" title="{{ 'sections.video-with-text.play_video' | t }}">
+                                                        {{ 'sections.video-with-text.play_video' | t }}
+                                                    </a>
+                                                {% endif %}
+                                                {% if block.settings.btn_txt != blank %}
+                                                    <a data-check="soimple" {% if block.settings.btn_link %} href="{{ block.settings.btn_link }}" {% endif %}class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }}" title="{{ block.settings.btn_txt }}">{{ block.settings.btn_txt }}</a>
+                                                {% endif %}
+                                                {% if block.settings.btn_txt_watch != blank %}
+                                                <span data-trigger-videobtn  class="cursor-pointer ls-0 fw-semibold text-white bg-transparent text-capitalize  btn {% if block.settings.btn_type_watch == "border-0" %}border-0{% endif %} btn{% if block.settings.btn_type_watch == 'outline' %}-{% endif %}{% if block.settings.btn_type_watch != "border-0" %}{{ block.settings.btn_type_watch }}{% endif %}-{{ block.settings.btn_variant_watch }} {{ block.settings.btn_size_watch }}" title="{{ block.settings.btn_txt_watch }}" style="font-size:16px;">
+                                                    {{ block.settings.btn_txt_watch }}
+                                                    <i class="ox-play ms-2" style="font-size:11px;margin-bottom:-2px;"></i>
+                                                </span>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% if block.settings.enable_overlay %}
+                                    <div class="overlay" style="background-color: {{ block.settings.overlay_bg_color }}!important; opacity: {{ block.settings.overlay_opacity }}!important; mix-blend-mode: multiply!important; "></div>
+                                {% endif %}
+                                {% if block.settings.heading__size %}
+                                <style>
+                                [data-block-id="{{ block.id }}"] .media-text-wrap h2
+                                {
+                                  font-size: {{ block.settings.heading__sm }}px;
+                                }
+                                @media (min-width:768px)
+                                {
+                                  [data-block-id="{{ block.id }}"] .media-text-wrap h2
+                                  {
+                                    font-size: {{ block.settings.heading__md }}px;
+                                  }
+                                }
+                                @media (min-width:1025px)
+                                {
+                                  [data-block-id="{{ block.id }}"] .media-text-wrap h2
+                                  {
+                                    font-size: {{ block.settings.heading__lg }}px;
+                                  }
+                                }
+                              </style>
+                              {% endif %}
+                            </div>
+                        {% endif %}
+
+                        {%- if forloop.first -%}
+                            {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+                        {%- endif -%}
+                    {% endfor %}
+                </div>
+                {% if section.settings.nav_arrows %}
+                    <div class="swiper-button-next hero-button-next ox-arrow-right"></div>
+                    <div class="swiper-button-prev hero-button-prev ox-arrow-left"></div>
+                {% endif %}
+                {% if section.settings.nav_dots %}
+                    <div class="swiper-pagination"></div>
+                {% endif %}
+            </div>
+        </slider-element>
+      {% endif %}
+    </div>
+</section>
+{% endif %}
+
+
+{{ 'global-header-slider.css' | asset_url | stylesheet_tag }}
+{{ 'global-video-with-text.css' | asset_url | stylesheet_tag }}
+{% if section.settings.top_padding_zero %}
+  <style>
+  .header-slider .container-fluid.aos-init{
+      padding-top: 0 !important;
+  }
+</style>
+  {%- endif -%}
+
+{% schema %}
+{
+  "name": "Header Slider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Enabled?",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_arrows",
+      "label": "Arrows Navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_dots",
+      "label": "Dots Navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_dots_right",
+      "label": "Dots Navigation Bottom Right and White",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "label": "Slider Height",
+      "options": [
+        {
+          "value": "shortheight",
+          "label": "Short"
+        },
+        {
+          "value": "tallheight",
+          "label": "Tall"
+        },
+        {
+          "value": "fullheight",
+          "label": "Full Height"
+        }
+      ],
+      "default": "tallheight"
+    },
+{
+      "type": "checkbox",
+      "label": "Top Padding Zero?",
+      "id": "top_padding_zero"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Index Header Slider",
+      "category": "Content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop Image",
+          "info": "For Better Viewing Use Example dimentions: 3757*1794 ( Aspect Ratio: 2.09:1 )"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Mobile Image",
+          "info": "For Better Viewing Use Example dimentions: 875*1807 ( Aspect Ratio: 0.48:1 )"
+        },
+        {
+          "type": "color",
+          "id": "slide_bg_color",
+          "label": "Background Color for Mobile",
+          "default": "#ffffff"
+        },
+        {
+          "type": "header",
+          "content": "Overlay"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_overlay",
+          "label": "Enabled?",
+          "default": true
+        },
+        {
+          "type": "color",
+          "id": "overlay_bg_color",
+          "label": "Overlay Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "label": "Overlay Opacity",
+          "min": 0.1,
+          "max": 1,
+          "step": 0.1,
+          "default": 0.5
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "select",
+          "id": "caption_alignment",
+          "label": "Caption Alignment",
+          "options": [
+            {
+              "value": "justify-content-center",
+              "label": "Center"
+            },
+            {
+              "value": "justify-content-md-start justify-content-center",
+              "label": "Left"
+            },
+            {
+              "value": "justify-content-md-end justify-content-center",
+              "label": "Right"
+            }
+          ],
+          "default": "justify-content-center"
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Text Alignment",
+          "options": [
+            {
+              "value": "text-center",
+              "label": "Center"
+            },
+            {
+              "value": "text-center text-md-start",
+              "label": "Left"
+            },
+            {
+              "value": "text-center text-md-end",
+              "label": "Right"
+            }
+          ],
+          "default": "text-center"
+        },
+        {
+          "type": "html",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "caption",
+          "label": "Caption"
+        },
+        {
+          "type": "header",
+          "content": "Heading Font Size"
+        },
+        {
+          "type": "checkbox",
+          "id": "heading__size",
+          "label": "Custom Font Size?",
+          "default": false
+        },
+        {
+          "type": "number",
+          "id": "heading__lg",
+          "label": "Desktop Font Size",
+          "default": 60
+        },
+        {
+          "type": "number",
+          "id": "heading__md",
+          "label": "Tablet Font Size",
+          "default": 55
+        },
+        {
+          "type": "number",
+          "id": "heading__sm",
+          "label": "Mobile Font Size",
+          "default": 50
+        },
+        {
+          "type": "header",
+          "content": "Styling"
+        },
+        {
+          "type": "color",
+          "id": "heading_txt_color",
+          "label": "Heading Color"
+        },
+        {
+          "type": "color",
+          "id": "caption_txt_color",
+          "label": "Caption Color"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "btn_txt",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "btn_type",
+          "label": "Button Type",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "",
+              "label": "Solid"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "btn_variant",
+          "label": "Button Variant",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "dark",
+              "label": "Dark"
+            }
+          ],
+          "default": "dark"
+        },
+        {
+          "type": "select",
+          "id": "btn_size",
+          "label": "Button Size",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn-sm",
+              "label": "Small"
+            },
+            {
+              "value": "btn-lg",
+              "label": "Large"
+            }
+          ],
+          "default": ""
+        }
+      ]
+    },
+    {
+      "type": "video-slide",
+      "name": "Video Slide",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "type": "checkbox",
+          "id": "muted",
+          "label": "Video Muted",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "controls",
+          "label": "Video Controls",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "loop",
+          "label": "Loop Video",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "logo_image__",
+          "label": "Logo Image",
+          "info": "Displays above heading"
+        },
+        {
+          "type": "html",
+          "id": "title",
+          "label": "Heading",
+          "default": "Awesome Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Subheading"
+        },
+        {
+          "type": "header",
+          "content": "Heading Font Size"
+        },
+        {
+          "type": "checkbox",
+          "id": "heading__size",
+          "label": "Custom Font Size?",
+          "default": false
+        },
+        {
+          "type": "number",
+          "id": "heading__lg",
+          "label": "Desktop Font Size",
+          "default": 60
+        },
+        {
+          "type": "number",
+          "id": "heading__md",
+          "label": "Tablet Font Size",
+          "default": 55
+        },
+        {
+          "type": "number",
+          "id": "heading__sm",
+          "label": "Mobile Font Size",
+          "default": 50
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "checkbox",
+          "id": "play_icon",
+          "label": "Play Icon Enabled?",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "play_btn",
+          "label": "Play Button Enabled?",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Watch Video"
+        },
+        {
+          "type": "text",
+          "id": "btn_txt_watch",
+          "label": "Watch Button Text"
+        },
+        {
+          "type": "select",
+          "id": "btn_type_watch",
+          "label": "Button Type for Watch",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "border-0",
+              "label": "No Outline"
+            },
+            {
+              "value": "",
+              "label": "Solid"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "btn_variant_watch",
+          "label": "Button Variant for Watch",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "dark",
+              "label": "Dark"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "select",
+          "id": "btn_size_watch",
+          "label": "Button Size for Watch",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn-sm",
+              "label": "Small"
+            },
+            {
+              "value": "btn-lg",
+              "label": "Large"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "btn_txt",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "btn_type",
+          "label": "Button Type",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "",
+              "label": "Solid"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "btn_variant",
+          "label": "Button Variant",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "dark",
+              "label": "Dark"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "select",
+          "id": "btn_size",
+          "label": "Button Size",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn-sm",
+              "label": "Small"
+            },
+            {
+              "value": "btn-lg",
+              "label": "Large"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "header",
+          "content": "Poster"
+        },
+        {
+          "type": "select",
+          "id": "poster_type",
+          "label": "Poster Type",
+          "options": [
+            {
+              "value": "",
+              "label": "Image"
+            },
+            {
+              "value": "video",
+              "label": "Video"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "paragraph",
+          "content": "Video"
+        },
+        {
+          "type": "textarea",
+          "id": "bg_video",
+          "label": "Poster Video URL",
+          "info": "Only Mute video can autoplay. Use local video URL."
+        },
+        {
+          "type": "textarea",
+          "id": "mobile_bg_video",
+          "label": "Mobile Poster Video URL",
+          "info": "Only Mute video can autoplay. Use local video URL."
+        },
+        {
+          "type": "paragraph",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop",
+          "info": "For Better Viewing Use Example dimentions: 3757*1794 ( Aspect Ratio: 2.09:1 )"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Mobile",
+          "info": "For best results, use an image with a 0.97:1 aspect ratio (Example dimentions: 780*806)"
+        },
+        {
+          "type": "header",
+          "content": "Video"
+        },
+        {
+          "type": "select",
+          "id": "video_type",
+          "label": "Video Type",
+          "options": [
+            {
+              "value": "youtube",
+              "label": "Youtube"
+            },
+            {
+              "value": "vimeo",
+              "label": "Vimeo"
+            },
+            {
+              "value": "local",
+              "label": "Local Video"
+            }
+          ],
+          "default": "local"
+        },
+        {
+          "type": "select",
+          "id": "placement",
+          "label": "Placement",
+          "options": [
+            {
+              "value": "grid",
+              "label": "Grid"
+            },
+            {
+              "value": "popup",
+              "label": "Modal"
+            }
+          ],
+          "default": "grid"
+        },
+        {
+          "type": "textarea",
+          "id": "video_id",
+          "label": "Video Id",
+          "info": "For Local video use file link. For Youtube and Vimeo use video ID"
+        },
+        {
+          "type": "textarea",
+          "id": "mobile_video_id",
+          "label": "Mobile Video Id",
+          "info": "Same as above. Only add details if need to show diff video in mobile device."
+        },
+        {
+          "type": "header",
+          "content": "styling"
+        },
+        {
+          "type": "color",
+          "id": "section_bg_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "section_text_color",
+          "label": "Text Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Overlay"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_overlay",
+          "label": "Enabled?",
+          "default": true
+        },
+        {
+          "type": "color",
+          "id": "overlay_bg_color",
+          "label": "Overlay Background Color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "label": "Overlay Opacity",
+          "min": 0.1,
+          "max": 1,
+          "step": 0.1,
+          "default": 0.5
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Text Alignment",
+          "options": [
+            {
+              "value": "text-center",
+              "label": "Center"
+            },
+            {
+              "value": "text-center text-md-start",
+              "label": "Left"
+            },
+            {
+              "value": "text-center text-md-end",
+              "label": "Right"
+            }
+          ],
+          "default": "text-center"
+        },
+        {
+          "type": "select",
+          "id": "video_alignment",
+          "label": "Caption Alignment",
+          "options": [
+            {
+              "value": "justify-content-md-start justify-content-center",
+              "label": "Left"
+            },
+            {
+              "value": "justify-content-center",
+              "label": "Center"
+            },
+            {
+              "value": "justify-content-md-end justify-content-center",
+              "label": "Right"
+            }
+          ],
+          "default": "justify-content-center"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,580 @@
+{{ 'global-image-banner.css' | asset_url | stylesheet_tag }}
+{{ 'left-text-image-banner.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+    assign mobileImage = section.settings.image
+    if section.settings.image_mobile != blank
+        assign mobileImage =  section.settings.image_mobile
+    endif
+-%}
+{%- if section.settings.background_imagetone != blank -%}
+<div class="{% if section.settings.image_bg_tone %}position-relative top-20{% endif %} left-text-with-image">
+    <span class="back-ground-fair-tone position-absolute w-100 start-0 top-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
+        <span class="white-anim"></span>
+    </span>
+    {% endif %}
+    <section class="{% if section.settings.section_padding %}section-content py-lg-11 py-8{% else %}mb-lg-10 mb-8 {% endif %}"  data-section-id="{{ section.id }}">
+        <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+            <div id="Banner-{{ section.id }}" class="banner-section position-relative {{ section.settings.height }}">
+                {%- if section.settings.image != blank -%}
+                    <div class="banner__media">
+                      {% if section.settings.image_mobile != blank %}
+                        <picture>
+                            {%- if mobileImage.width >= 375 -%}<source media="(max-width: 375px)" srcset="{{ mobileImage | image_url: width: 375, format: 'pjpg' }}">{%- endif -%}
+                            {%- if mobileImage.width >= 550 -%}<source media="(max-width: 550px)" srcset="{{ mobileImage | image_url: width: 550, format: 'pjpg' }}">{%- endif -%}
+                            {%- if mobileImage.width >= 767 -%}<source media="(max-width: 767px)" srcset="{{ mobileImage | image_url: width: 767, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 991 -%}<source media="(max-width: 991px)" srcset="{{ section.settings.image | image_url: width: 991, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 1200 -%}<source media="(max-width: 1200px)" srcset="{{ section.settings.image | image_url: width: 1200, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 1500 -%}<source media="(max-width: 1500px)" srcset="{{ section.settings.image | image_url: width: 1500, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 1720 -%}<source media="(max-width: 1720px)" srcset="{{ section.settings.image | image_url: width: 1720, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 1920 -%}<source media="(max-width: 1920px)" srcset="{{ section.settings.image | image_url: width: 1920, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 2560 -%}<source media="(max-width: 2560px)" srcset="{{ section.settings.image | image_url: width: 2560, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 3800 -%}<source media="(max-width: 3800px)" srcset="{{ section.settings.image | image_url: width: 3800, format: 'pjpg' }}">{%- endif -%}
+                            <img src="{{ section.settings.image | image_url: width:section.settings.image.width, format: 'pjpg' }}" loading="lazy"
+                            alt="{{ section.settings.image.alt | default: block.settings.heading | escape }}"
+                            width="{{ section.settings.image.width }}"
+                            height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio | round }}"
+                            >
+                        </picture>
+                      {% else %}
+                          <img srcset="
+                            {%- if mobileImage.width >= 375 -%}{{ mobileImage | image_url: width: 375, format: 'pjpg' }} 375w,{%- endif -%}
+                            {%- if mobileImage.width >= 550 -%}{{ mobileImage | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}
+                            {%- if mobileImage.width >= 768 -%}{{ mobileImage | image_url: width: 768, format: 'pjpg' }} 767w,{%- endif -%}
+                            {%- if section.settings.image.width >= 991 -%}{{ section.settings.image | image_url: width: 991, format: 'pjpg' }} 991w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1200 -%}{{ section.settings.image | image_url: width: 1200, format: 'pjpg' }} 1200w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500, format: 'pjpg' }} 1500w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | image_url: width: 1780, format: 'pjpg' }} 1780w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1920 -%}{{ section.settings.image | image_url: width: 1920, format: 'pjpg' }} 1920w,{%- endif -%}
+                            {%- if section.settings.image.width >= 2560 -%}{{ section.settings.image | image_url: width: 2560, format: 'pjpg' }} 2560w,{%- endif -%}
+                            {%- if section.settings.image.width >= 3800 -%}{{ section.settings.image | image_url: width: 3800, format: 'pjpg' }} 3800w,{%- endif -%}
+                            {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+                            src="{{ section.settings.image | image_url: width: 1500, format: 'pjpg' }}" loading="lazy"
+                            alt="{{ section.settings.image.alt | default: block.settings.heading | escape }}"
+                            width="{{ section.settings.image.width }}"
+                            height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio | round }}"
+                            sizes="(max-width: 375px) 375px, (max-width: 550px) 550px, (max-width: 750px) 750px,
+                                   (max-width: 991px) 991px, (max-width: 1200px) 1200px, (max-width: 1500px) 1500px, (max-width: 1780px) 1780px, (max-width: 1920px) 1920px,
+                                   (max-width: 2560px) 2560px, (max-width: 3800px) 3800px, {{ section.settings.image.width }}px" >
+                      {% endif %}
+                        {% if section.settings.enable_overlay %}
+                            <div class="overlay" style="background-color: {{ section.settings.overlay_bg_color }}!important; opacity: {{ section.settings.overlay_opacity }}!important; mix-blend-mode: multiply;"></div>
+                        {% endif %}
+                    </div>
+                {%- else -%}
+                    <div class="banner__media placeholder">
+                    {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                    </div>
+                {%- endif -%}
+                <div class="banner__content  py-md-11 {% if section.settings.mobile_TEXT %}mobile_text_center{% endif %} {{ section.settings.text_caption_align }}" style="align-items: {{ section.settings.desktop_text_box_position }};">
+                    <div class="container px-0 mx-0">
+                        <div class="col-md-11  ms-auto col-12 px-0  text-left {{ section.settings.text_align }}" style="color: {{ section.settings.txt_color }}">
+                        <div class="assessment-content px-3 px-md-0">
+                            {%- for block in section.blocks -%}
+                        {%- case block.type -%}
+                            {%- when 'heading' -%}
+                            <h1 class="banner__heading  mb-3 " {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                                <span>{{ block.settings.heading | escape }}</span>
+                            </h1>
+                            {%- when 'html' -%}
+                                {{ block.settings.html }}
+                            {%- when 'text' -%}
+                            <div class="banner__text " {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                                <p class="{% if section.settings.paragraph_bold %}font-size-lg-20 fw-normal{% else %}mt-3 {% endif %} {% if block.settings.text_2 != blank %}mb-4{%- endif -%} ">{{ block.settings.text }}</p>
+                            </div>
+                            {% if block.settings.text_2 != blank %}
+                            <div class="banner__text " {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                                <p class=" {% if section.settings.paragraph_bold %}font-size-lg-20 fw-normal{% endif %} mb-2">{{ block.settings.text_2 | escape }}</p>
+                            </div>
+                            {%- endif -%}
+                            {%- when 'buttons' -%}
+                                <div class="mt-4 mt-md-5" {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                                    {%- if block.settings.button_label_1 != blank -%}
+                                        <a href="{{ block.settings.button_link_1 }}" class="btn btn{% if block.settings.btn_type_1 == 'outline' %}-{% endif %}{{ block.settings.btn_type_1 }}-{{ block.settings.btn_variant_1 }} {{ block.settings.btn_size_1 }}">{{ block.settings.button_label_1 | escape }}</a>
+                                    {%- endif -%}
+                                    {%- if block.settings.button_label_2 != blank -%}
+                                        <a href="{{ block.settings.button_link_2 }}" class="btn btn{% if block.settings.btn_type_2 == 'outline' %}-{% endif %}{{ block.settings.btn_type_2 }}-{{ block.settings.btn_variant_2 }} {{ block.settings.btn_size_2 }}">{{ block.settings.button_label_2 | escape }}</a>
+                                    {%- endif -%}
+                                </div>
+                            {%- endcase -%}
+                        {%- endfor -%}
+                        </div>
+                    </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% schema %}
+{
+  "name": "Image With Left text",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "header",
+      "content": "STYLING"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "background_imagetone",
+      "label": "Background Image gradient tone",
+      "info": "Background Image tone"
+    },
+    {
+      "type": "range",
+      "id": "background_tone_height",
+      "min": 50,
+      "max": 200,
+      "step": 5,
+      "unit": "vh",
+      "label": "Background Tone Height",
+      "default": 70
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Desktop Image",
+      "info": "For Better Viewing Use Example dimentions:2600*1200 "
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile Image",
+      "info": "For Better Viewing Use Example dimentions: 768*1110 "
+    },
+    {
+      "type": "color",
+      "id": "txt_color",
+      "label": "Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_overlay",
+      "label": "Enabled?",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "paragraph_bold",
+      "label": "Paragraph Bold?",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "overlay_bg_color",
+      "label": "Overlay Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.5
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "label": "Section Height",
+      "options": [
+        {
+          "value": "shortheight",
+          "label": "Short"
+        },
+        {
+          "value": "tallheight",
+          "label": "Tall"
+        },
+        {
+          "value": "mediumheight",
+          "label": "600px"
+        },
+        {
+          "value": "fullheight",
+          "label": "Full Height"
+        }
+      ],
+      "default": "tallheight"
+    },
+    {
+      "type": "select",
+      "id": "desktop_text_box_position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "t:sections.image-banner.settings.desktop_text_box_position.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-banner.settings.desktop_text_box_position.options__2.label"
+        },
+        {
+          "value": "flex-end",
+          "label": "t:sections.image-banner.settings.desktop_text_box_position.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.image-banner.settings.desktop_text_box_position.label"
+    },
+    {
+      "type": "select",
+      "id": "text_caption_align",
+      "options": [
+        {
+          "value": "justify-content-start",
+          "label": "Left"
+        },
+        {
+          "value": "justify-content-center",
+          "label": "center"
+        },
+        {
+          "value": "justify-content-end",
+          "label": "right"
+        }
+      ],
+      "default": "justify-content-center",
+      "label": "Caption Horizontal Alignment"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "options": [
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-center",
+          "label": "center"
+        },
+        {
+          "value": "text-right",
+          "label": "right"
+        }
+      ],
+      "default": "text-center",
+      "label": "Text Alignment"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_padding",
+      "label": "Section Padding?",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "min": 400,
+      "max": 800,
+      "step": 5,
+      "unit": "px",
+      "label": "Content Width",
+      "default": 610
+    },
+    {
+      "type": "checkbox",
+      "id": "image_bg_tone",
+      "label": "Image Background Tone",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_TEXT",
+      "label": "Mobile Text center?",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.image-banner.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Image banner",
+          "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.image-banner.blocks.text.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Give customers details about the banner image(s) or content on the template.",
+          "label": "t:sections.image-banner.blocks.text.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "text_2",
+          "default": "Give customers details about the banner image(s) or content on the template.",
+          "label": "t:sections.image-banner.blocks.text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "html",
+      "name": "HTML",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "html",
+          "id": "html",
+          "label": "HTML"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.image-banner.blocks.buttons.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "default": "Button label",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+        },
+        {
+          "type": "select",
+          "id": "btn_type_1",
+          "label": "Button Type",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "",
+              "label": "Solid"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "btn_variant_1",
+          "label": "Button Variant",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "dark",
+              "label": "Dark"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "select",
+          "id": "btn_size_1",
+          "label": "Button Size",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn-sm",
+              "label": "Small"
+            },
+            {
+              "value": "btn-lg",
+              "label": "Large"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "default": "Button label",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+        },
+        {
+          "type": "select",
+          "id": "btn_type_2",
+          "label": "Button Type",
+          "options": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "",
+              "label": "Solid"
+            }
+          ],
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "btn_variant_2",
+          "label": "Button Variant",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "dark",
+              "label": "Dark"
+            }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "select",
+          "id": "btn_size_2",
+          "label": "Button Size",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn-sm",
+              "label": "Small"
+            },
+            {
+              "value": "btn-lg",
+              "label": "Large"
+            }
+          ],
+          "default": ""
+        }
+      ]
+    },
+    {
+      "type": "countdown",
+      "name": "Countdown",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Countdown Settings"
+        },
+        {
+          "type": "checkbox",
+          "id": "countdown_enable",
+          "label": "Countdown enable",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "countdown_pretext",
+          "label": "countdown Lable",
+          "default": "Time Running Out"
+        },
+        {
+          "type": "text",
+          "id": "countdown_text",
+          "label": "Countdown",
+          "info": "November 20, 2021 23:59",
+          "default": "November 20, 2021 23:59"
+        },
+        {
+          "type": "paragraph",
+          "content": "Stlying"
+        },
+        {
+          "type": "color",
+          "id": "countdown_bg_color",
+          "label": "Countdown BG color",
+          "default": "#222b45"
+        },
+        {
+          "type": "color",
+          "id": "countdown_text_color",
+          "label": "Countdown Text color",
+          "default": "#ffffff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image With Left text",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "buttons"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+<style>
+    .back-ground-fair-tone{
+    height:{{ section.settings.background_tone_height }}vh;
+    background-image: url({{ section.settings.background_imagetone }});
+    background-size: 100% 100%;
+    }
+    .assessment-content{
+    max-width:{{ section.settings.content_width }}px;
+    }
+    .mobile_text_center {
+      padding-bottom:70px;
+        text-align: center;
+    }
+    @media (min-width:768px){
+    .mobile_text_center {
+        align-items: flex-end !important;
+        text-align: left;
+     }
+    }
+</style>

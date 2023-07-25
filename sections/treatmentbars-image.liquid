@@ -1,0 +1,359 @@
+
+{%- if section.settings.gradient_tone != blank -%}
+<span class="gradient-fair-tone-how gradient-fair-tone light-tone-top position-absolute w-100 start-0 top-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
+    <span class="white-anim"></span>
+  </span>
+{%- endif -%}
+
+<section class="section-content image-with-text-block"  data-section-id="{{ section.id }}" >
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+        <div class="row align-items-center mb-6">
+            <div class="col-12 col-md-6 col-lg-5 me-auto {% if section.settings.image_alignment == 'left' %}order-md-1{% else %}order-md-2{% endif %}">
+                <div class="1 position-relative  treatment-image">
+                    {%- if section.settings.image != blank -%}
+                        <img
+                            srcset="
+                            {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+                            {%- if section.settings.image.width >= 520 -%}{{ section.settings.image | image_url: width: 520, format: 'pjpg' }} 520w,{%- endif -%}
+                            {%- if section.settings.image.width >= 650 -%}{{ section.settings.image | image_url: width: 650, format: 'pjpg' }} 650w,{%- endif -%}
+                            {%- if section.settings.image.width >= 780 -%}{{ section.settings.image | image_url: width: 780, format: 'pjpg' }} 780w,{%- endif -%}
+                            {%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900, format: 'pjpg' }} 900w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1000 -%}{{ section.settings.image | image_url: width: 1000, format: 'pjpg' }} 1000w,{%- endif -%}"
+                            src="{{ section.settings.image | image_url: width: 16, format: 'pjpg' }}"
+                            sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), 100vw"
+                            alt="{{ section.settings.heading_txt | escape }}"
+                            class="h-100 object-cover position-absolute start-0 top-0 w-100"
+                            loading="lazy"
+                            width="{{ section.settings.image.width | divided_by: 3 }}"
+                            height="{{ section.settings.image.height | divided_by: 3 }}"
+                        >
+                    {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-5 mt-4 ms-auto mt-md-0 pt-lg-0 pt-1 {% if section.settings.image_alignment == 'left' %}order-md-2{% else %}order-md-1{% endif %}">
+                <div class="inside-block {{ section.settings.alignment }}" >
+                    {% if section.settings.heading_txt != blank %}
+                        <div class="h3 mb-3 pe-lg-3" {% unless section.settings.max_width == 700 %}style="max-width:{{ section.settings.max_width }}px;"{% endunless %}>{{ section.settings.heading_txt }}</div>
+                    {% endif %}
+                    {% if section.settings.img_text1 != blank %}
+                        <div class="mb-3">{{ section.settings.img_text1 }}</div>
+                    {% endif %}
+                    {% if section.settings.img_text2 != blank %}
+                        <p class="mb-2 mb-md-3">{{ section.settings.img_text2 }}</p>
+                    {% endif %}
+
+                  {%- for block in section.blocks -%}
+                    <div class="row mb-3 no-gutter align-items-center">
+                        <div class="col-9 pe-0">
+                            <div class="contentContainer">
+                                <div class="treatmentBar">
+                                  <div class="position-relative treatmentBarContainer">
+                                    <div class="fw-medium position-absolute ps-5 text-treatment">{{ block.settings.title }}</div>
+                                    <div class="position-absolute treatmentBarValue start-0 top-0" style="width:{{ block.settings.percentage }}%"
+                                        ></div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-2 h4 ms-2">{{ block.settings.percentage }}%</div>
+                    </div>
+                  {%- endfor -%}
+                    {% if section.settings.btn_txt_watch != blank %}
+                    <div class="m-lg-n3 m-n2 my-n2 d-flex flex-wrap pt-lg-0" style="padding-top: 11px;">
+                        <div class="px-lg-3 py-2 p-2 w-100 w-sm-auto">
+                            <a data-trigger-videobtn href="javascript:void(0);" class="btn w-100 w-sm-auto {% if section.settings.btn_type_watch == "border-0" %}border-0{% endif %} btn{% if section.settings.btn_type_watch == 'outline' %}-{% endif %}{% if section.settings.btn_type_watch != "border-0" %}{{ section.settings.btn_type_watch }}{% endif %}-{{ section.settings.btn_variant_watch }} {{ section.settings.btn_size_watch }}" title="{{ section.settings.btn_txt_watch }}">
+                                {{ section.settings.btn_txt_watch }}
+                                <i class="ox-play ms-2" style="font-size:11px;"></i>
+                            </a>
+                        </div>
+                        <div class="px-lg-3 py-2 p-2 w-100 w-sm-auto">
+                            <a data-trigger-videobtn href="javascript:void(0);" class="btn w-100 w-sm-auto {% if section.settings.btn_type == "border-0" %}border-0{% endif %} btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{% if section.settings.btn_type != "border-0" %}{{ section.settings.btn_type }}{% endif %}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">
+                                {{ section.settings.btn_txt }}
+                                <i class="ox-play ms-2" style="font-size:11px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .treatmentBar div:empty{
+        display:block
+    }
+
+
+      .treatmentBarContainer {
+        width: 100%;
+        height:48px;
+        background: #FFFFFF;
+        background: #FFFFFF;
+        background: #FFFFFF;
+        overflow: hidden;
+        border: 1px solid;
+      }
+      .text-treatment{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+        z-index: 2;
+        height: 46px;
+        }
+      .treatmentBarValue {
+        height:48px;
+        float: left;
+        background:#0866dc;
+        background: #E5E1E6;
+        background: #E5E1E6;
+      }
+      .treatment-image{
+        padding-top:100%;
+      }
+      @media (min-width: 992px) {
+            .treatment-image{
+            padding-top:90%;
+        }
+      }
+      /*///////////////////////////////////////////////////
+          // Animation \\
+      ///////////////////////////////////////////////////*/
+      @-webkit-keyframes slideIn {
+        0% { width: 0; }
+        25% { width:100%; }
+        100% { width: normal; }
+      }
+      @-moz-keyframes slideIn {
+        0% { width: 0; }
+        25% { width:100%; }
+        100% { width: normal; }
+      }
+      @-ms-keyframes slideIn {
+        0% { width: 0; }
+        25% { width:100%; }
+        100% { width: normal; }
+      }
+      @-o-keyframes slideIn {
+        0% { width: 0; }
+        25% { width:100%; }
+        100% { width: normal; }
+      }
+      @keyframes slideIn {
+        0% { width: 0; }
+        25% { width:100%; }
+        100% { width: normal; }
+      }
+      .treatmentBarValue {
+        -webkit-animation: slideIn 2s;
+        -moz-animation: slideIn 2s;
+        -o-animation: slideIn 2s;
+        animation: slideIn 2s;
+      }
+</style>
+{% schema %}
+{
+  "name": "Treatment bar with Image",
+  "tag": "section",
+  "class": "spaced-section image-with-text-block-main treatment-bars",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "gradient_tone",
+      "label": "Gradient Tone?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Image With Text"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "img_text1",
+      "label": "Paragraph 1"
+    },
+    {
+      "type": "textarea",
+      "id": "img_text2",
+      "label": "Paragraph 2",
+      "info": "Each entry must be on a new line."
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Heading Max Width",
+      "min": 400,
+      "max": 700,
+      "step": 3,
+      "default": 700
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select Image",
+      "info": "For Better Viewing Use Example dimentions: 775*735 ( Aspect Ratio: 1.05 )"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-end",
+          "label": "Right"
+        }
+      ],
+      "default": "text-left"
+    },
+    {
+      "type": "select",
+      "id": "image_alignment",
+      "label": "Image Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Spacing & Border"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding Top(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding Bottom(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pts",
+      "label": "Padding Top(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pbs",
+      "label": "Padding Bottom(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "treatment-bar",
+      "name": "Treatment Bar",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "text",
+          "label": "Percentage",
+          "id": "percentage"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Treatment bar with Image"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+    [data-section-id="{{ section.id }}"]
+    {
+      padding-top: {{ section.settings.pts }}px;
+      padding-bottom: {{ section.settings.pbs }}px;
+      {% if section.settings.border-top %}
+      border-top: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+      {% if section.settings.border-bottom %}
+      border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+    }
+    @media (min-width:992px)
+    {
+      [data-section-id="{{ section.id }}"]
+      {
+        padding-top: {{ section.settings.pt }}px;
+        padding-bottom: {{ section.settings.pb }}px;
+      }
+    }
+  </style>
+
+
+
+
+

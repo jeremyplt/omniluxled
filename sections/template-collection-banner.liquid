@@ -1,0 +1,102 @@
+<section data-collectionBanner id="clctn" class="section-content collection-hero__banner position-relative d-flex align-items-center border-bottom py-lg-7 py-4" style="background: {{ section.settings.section_bg_color }}">
+    
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %} collection-banner__caption">
+        <div class="row py-1 py-lg-0">
+            <div class="col-12 col-lg-7 px-sm-4 text-center {{ section.settings.alignment }} {{ section.settings.caption_alignment }}" style="color: {{ section.settings.txt_color }};">
+                <div class="fancy-heading">
+                    <h1 id="clctn-ttl" class="page-title mb-3 text-capitalize"> 
+                        {{- collection.title | escape -}}
+                    </h1>
+                    {%- if section.settings.show_collection_description -%}
+                        <p class="fw-normal mb-0 mx-auto page-sub-title col-lg-11 px-lg-0 px-1">{{ collection.description }}</p>
+                    {%- endif -%}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+  #clctn {
+    min-height: 0 !important;
+    height: 120px !important;
+  }
+  @media screen and (max-width: 992px) {
+  #clctn {
+    height: 120px !important;
+  }
+  @media screen and (max-width: 423px) {
+  #clctn {
+    height: 150px !important;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "t:sections.template-collection-banner.name",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.template-collection-banner.settings.paragraph.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "default": true,
+      "label": "t:sections.template-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-start",
+          "label": "Left"
+        },
+        {
+          "value": "text-end",
+          "label": "Right"
+        }
+      ],
+      "default": "text-start"
+    },
+    {
+      "type": "select",
+      "id": "caption_alignment",
+      "label": "Caption Alignment",
+      "options": [
+        {
+          "value": "mx-auto",
+          "label": "Center"
+        },
+        {
+          "value": "me-auto",
+          "label": "Left"
+        },
+        {
+          "value": "ms-auto",
+          "label": "Right"
+        }
+      ],
+      "default": "mx-auto"
+    }
+  ]
+}
+{% endschema %}

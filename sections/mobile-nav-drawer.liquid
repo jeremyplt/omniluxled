@@ -1,0 +1,598 @@
+{{ 'mobile-nav-drawer.css' | asset_url | stylesheet_tag }}
+<mobile-nav tabindex="0" data-touch-moveable>
+    <div data-section-id="{{ section.id }}" class="mobile-nav-drawer d-flex flex-column" id="mobile-menu-drawer" data-role="drawer">
+        {% assign main_menu = section.settings.main_menu_linklist %}
+        {% assign secondary_menu = section.settings.secondary_menu_linklist %}
+        {% assign mega_menu = section.settings.mega_menu %}
+        
+        <div class="drawer-header d-flex justify-content-between align-items-center bg-white">
+            <span  class="cursor-pointer d-none btn-close ml-auto float-right close-mobile--navbar" title="close" rel="nofollow" aria-label="Close">
+                <span class="ox-close"></span>
+            </span>
+        </div>
+       
+        <div class="drawer-body">
+        {%- if settings.enable_search -%}
+        <search-modal class="header__search d-block position-static">
+            <div class="searchform">
+              <div class="search-modal modal__content bg-white" role="dialog" aria-modal="true" aria-label="{{ 'general.search.placeholder' | t }}">
+                
+                  <div class="search-modal__content" tabindex="-1">
+                    <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+                      {%- capture searchType -%}{%- if settings.enable_search_product -%}product,{%- endif -%}{%- if settings.enable_search_article -%}article,{%- endif -%}{%- if settings.enable_search_page -%}page{%- endif -%}{%- endcapture -%}
+                      <div class="field">
+                        <input class="search__input form-control border-bottom border-0 border-gray-800 rounded-0 ps-8" style="padding: 17.25px;" id="Search-In-Modal1" data-search-input type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}">
+                        <input type="hidden" name="type" value="{{ searchType }}">
+                        <button style="font-size: 22px;" class="search__button field__button focus-inset text-primary" aria-label="{{ 'general.search.placeholder' | t }}">
+                          <span class="ox-search"></span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                
+              </div>
+            </div>
+          </search-modal>
+        {%- endif -%}
+        {% if main_menu %}
+            <nav class="navbar-mobile py-0 navbar-mobile-dropdown" aria-label="main-menu-list">
+                <ul class="navbar-nav" id="main-menu-list">
+                {%- comment %}<locksmith:0a18>{% endcomment -%}
+                  {%- assign locksmith_08d1_forloop__size = 0 %}{% for link in linklists[main_menu].links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[main_menu], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_08d1_forloop__size = locksmith_08d1_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_08d1_forloop__index = nil -%}
+                {%- comment %}</locksmith:0a18>{% endcomment -%}
+                {% for link in linklists[main_menu].links %}
+                    {%- comment %}<locksmith:7c63>{% endcomment -%}
+                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[main_menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_08d1_forloop__index == nil %}{% assign locksmith_08d1_forloop__index = 1 %}{% assign locksmith_08d1_forloop__index0 = 0 %}{% else %}{% assign locksmith_08d1_forloop__index = locksmith_08d1_forloop__index | plus: 1 %}{% assign locksmith_08d1_forloop__index0 = locksmith_08d1_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_08d1_forloop__index == 1 %}{% assign locksmith_08d1_forloop__first = true %}{% else %}{% assign locksmith_08d1_forloop__first = false %}{% endif %}{% if locksmith_08d1_forloop__index == locksmith_08d1_forloop__size %}{% assign locksmith_08d1_forloop__last = true %}{% else %}{% assign locksmith_08d1_forloop__last = false %}{% endif %}{% assign locksmith_08d1_forloop__rindex = locksmith_08d1_forloop__size | minus: locksmith_08d1_forloop__index | minus: 1 %}{% assign locksmith_08d1_forloop__rindex0 = locksmith_08d1_forloop__size | minus: locksmith_08d1_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                    {%- comment %}</locksmith:7c63>{% endcomment -%}
+                    {% assign child_list_handle = link.title | handleize %}
+                    
+                    {% if link.links != blank %}
+                    <li class="nav-item dropdown {% if link.active %}active{% endif %} second-level">
+                        <a class="nav-link submenu-toggle d-flex align-items-center {{ link.handle }}" is="drop-down" tabindex="0" role="button" data-toggle="open" data-target="#submenu-{{ child_list_handle }}" aria-expanded="false" title="{{ link.title }}" aria-label="{{ link.title }}">
+                            {{ link.title }}
+                            <span class="menu-icon position-relative d-inline-flex d-inline-flex justify-content-center align-items-center"><span class="ox-plus text-center trn"></span><span class="ox-minus position-absolute trn"></span></span>
+                        </a>
+                        <div class="submenu submenu-div dropdown-menu pb-2 toggle-content" id="submenu-{{ child_list_handle }}" data-type="content">
+                            {%- comment %}<locksmith:3437>{% endcomment -%}
+                              {%- assign locksmith_1d84_forloop__size = 0 %}{% for childlink in link.links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_1d84_forloop__size = locksmith_1d84_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_1d84_forloop__index = nil -%}
+                            {%- comment %}</locksmith:3437>{% endcomment -%}
+                            {% for childlink in link.links %}
+                                {%- comment %}<locksmith:81ec>{% endcomment -%}
+                                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_1d84_forloop__index == nil %}{% assign locksmith_1d84_forloop__index = 1 %}{% assign locksmith_1d84_forloop__index0 = 0 %}{% else %}{% assign locksmith_1d84_forloop__index = locksmith_1d84_forloop__index | plus: 1 %}{% assign locksmith_1d84_forloop__index0 = locksmith_1d84_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_1d84_forloop__index == 1 %}{% assign locksmith_1d84_forloop__first = true %}{% else %}{% assign locksmith_1d84_forloop__first = false %}{% endif %}{% if locksmith_1d84_forloop__index == locksmith_1d84_forloop__size %}{% assign locksmith_1d84_forloop__last = true %}{% else %}{% assign locksmith_1d84_forloop__last = false %}{% endif %}{% assign locksmith_1d84_forloop__rindex = locksmith_1d84_forloop__size | minus: locksmith_1d84_forloop__index | minus: 1 %}{% assign locksmith_1d84_forloop__rindex0 = locksmith_1d84_forloop__size | minus: locksmith_1d84_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                                {%- comment %}</locksmith:81ec>{% endcomment -%}
+                                {% assign subchild_list_handle = childlink.title | handleize %}
+                                {% if childlink.links != blank %}
+                                    <div class="nav-item">
+                                        <div is="simple-menu-item" class="nav-link d-flex align-items-center {% if childlink.active %} active{% endif %} {{ childlink.handle }} fw-medium" href="{{ childlink.url }}" title="{{ childlink.title }}" aria-label="{{ childlink.title }}">
+                                            {{ childlink.title }}
+                                        </div>
+                                    </div>
+                                    {% for subchildlink in childlink.links %}
+                                      {%- comment %}<locksmith:ec32>{% endcomment -%}
+                                        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: subchildlink, subject_parent: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                      {%- comment %}</locksmith:ec32>{% endcomment -%}
+                                      <div class="nav-item ps-2">
+                                          <a is="simple-menu-item" class="nav-link d-flex align-items-center {% if subchildlink.active %} active{% endif %} {{ subchildlink.handle }} {% if childlink.title == 'Shop All' %}fw-semibold{% endif %}" href="{{ subchildlink.url }}" title="{{ subchildlink.title }}" aria-label="{{ subchildlink.title }}">
+                                              {{ subchildlink.title }}
+                                          </a>
+                                      </div>
+                                    {% endfor %}
+
+                                    {% comment %} <div class="nav-item dropdown {% if forloop.first %}open{% endif %}">
+                                        <a class="nav-link submenu-toggle d-flex align-items-center {{ link.handle }}" is="drop-down" tabindex="0" role="button" data-toggle="open" data-target="#submenu-{{ subchild_list_handle }}" aria-expanded="false" title="{{ childlink.title }}" aria-label="{{ childlink.title }}">
+                                            <span class="nav-link-title">{{ childlink.title }}</span> <span class="menu-icon position-relative d-inline-flex d-inline-flex justify-content-center align-items-center"><span class="ox-plus text-center trn"></span><span class="ox-minus position-absolute trn"></span></span>
+                                        </a>
+                                        <div class="submenu submenu-div pt-2 dropdown-menu toggle-content" id="submenu-{{ subchild_list_handle }}" data-type="content">
+                                            {% for subchildlink in childlink.links %}
+                                                {%- comment %}<locksmith:cb9b>{% endcomment -%}
+                                                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: subchildlink, subject_parent: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                                {%- comment %}</locksmith:cb9b>{% endcomment -%}
+                                                <div class="nav-item ps-3">
+                                                    <a is="simple-menu-item" class="nav-link d-flex align-items-center {% if subchildlink.active %} active{% endif %} {{ subchildlink.handle }} {% if childlink.title == 'Shop All' %}fw-semibold{% endif %}" href="{{ subchildlink.url }}" title="{{ subchildlink.title }}" aria-label="{{ subchildlink.title }}">
+                                                        {{ subchildlink.title }}
+                                                    </a>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div> {% endcomment %}
+                                {% elsif childlink.title != "Shop All" %}
+                                    <div class="nav-item">
+                                        <a is="simple-menu-item" class="nav-link d-flex align-items-center {% if childlink.active %} active{% endif %} {{ childlink.handle }} {% if childlink.title == 'Shop All' %}fw-semibold{% endif %}" href="{{ childlink.url }}" title="{{ childlink.title }}" aria-label="{{ childlink.title }}">
+                                            {{ childlink.title }}
+                                        </a>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                            <!-- Megamenu goes here -->
+                            <div class="container shop pb-2 pt-1 ms-0">
+                                {% assign child_list_handle = link.title | handleize %}
+                                {%- liquid 
+                                    assign menuType = 'normal'
+                                    assign megaMenuBlock = null
+                                    for block in section.blocks
+                                        if block.type == 'megamenu_with_product' and block.settings.title == link.title
+                                            assign menuType = 'megamenu_with_product'
+                                            assign megaMenuBlock = block.settings
+                                            break
+                                        elsif block.type == 'megamenu_with_story' and block.settings.title == link.title
+                                            assign menuType = 'megamenu_with_story'
+                                            assign megaMenuBlock = block.settings
+                                            break
+                                        endif    
+                                    endfor
+                                -%}
+                                {% if menuType == 'megamenu_with_product' %}
+                                    <div class="col">
+                                        <div class="row h-100 mb-8">
+                                            {% for i in (1..6) %}
+                                                {% capture product %}product_{{ i }}{% endcapture %}
+                                                {% assign current_product = megaMenuBlock[product] %}
+                                                {% assign current_variant = current_product.selected_or_first_available_variant %}
+                                                {% if current_product != null %}
+                                                <div class="container mega_menu_container col-6 mx-0">                                                  
+                                                  <a href="{{ current_product.url | within: collection }}">
+                                                    <div class="row">
+                                                      <div class="col-12 mega_menu_image_container">
+                                                          <img src="{{current_product.featured_image | image_url: width: 850 }}"/>    
+                                                      </div>
+                                                      <div class="col-12">
+                                                          <div class="card-title mx-0 mt-1 mb-0 font-family-base lh-1 fw-semibold order-1 order-lg-0">
+                                                            <span class="product-link lh-1">{{ current_product.title }}</span>
+                                                          </div>
+                                                          
+                                                          {% capture product_data_attribute %}data-oke-reviews-product-id="shopify-{{ current_product.id }}"{% endcapture %} 
+                                                          {% if current_product.metafields.okendo.StarRatingSnippet %}<div data-oke-star-rating {{ product_data_attribute }} style="display:flex">{{ current_product.metafields.okendo.StarRatingSnippet }}</div>{% endif %}
+
+                                                          <span class="product-price" data-currentPrice>
+                                                            {% if current_variant and current_variant.compare_at_price > current_variant.price %}
+                                                                                  <s class="fs-smal price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
+                                                                                {% elsif product.compare_at_price > product.price %}
+                                                                                  <s class="fs-smal price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
+                                                            {% endif %}
+                                                            {% if current_variant %}
+                                                            {{ current_variant.price | money }}
+                                                            {% elsif current_product.price_varies %}
+                                                              {% assign minPrice = current_product.price_min | money %}
+                                                              {% assign maxPrice = current_product.price_max | money %}
+                                                              {{ 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape }}
+                                                            {% else %}
+                                                              {{ current_product.price | money }}
+                                                            {% endif %}
+                                                          </span>
+                                                          {% comment %} {% assign min = 65 %}
+                                                          {% assign max = 80 %}
+                                                          {% assign diff = max | minus: min %}
+                                                          {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+                                                          {%- assign product_form_id = 'product-form-' | append: current_product.id | append:'-' | append: randomNumber -%}
+                                                          {% form 'product', current_product, data-productid: current_product.id, id: product_form_id, class: "", data-product-form: "", data-product-id: current_product.id, data-type: 'add-to-cart-form', data-format: 'grid' %}
+                                                            <input type="hidden" name="id" value="{{ current_variant.id }}">
+                                                            <input type="hidden" name="quantity" value="1" />
+                                                            <button class="btn-add_to_cart btn btn-card p-0 mt-1 trn"
+                                                              type="submit"
+                                                              name="add"
+                                                              aria-label="{{ 'products.product.add_to_cart' | t | escape }}"
+                                                              {% unless current_variant.available %}disabled{% endunless %}>
+                                                              <span class="add-text">{%- if current_variant.available -%}<i class="fst-normal me-1">+</i>{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span>
+                                                              <span class="spinner"></span>
+                                                            </button>
+                                                          {% endform %} {% endcomment %}
+                                                          <ul class="mega_menu_ul">                                                            
+                                                          <ul>
+                                                      </div>
+                                                    </div>
+                                                  </a>
+                                                </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <div class="card-title m-0 font-family-base lh-1 fw-semibold order-1 order-lg-0 mt-2 mt-lg-0">
+                                                <a class="product-link lh-1" href="{{ link.url }}">Shop All</a>
+                                             </div>
+                                        </div>
+                                    </div>
+                                {% elsif menuType == 'megamenu_with_story' %}
+                                    <div class="col">
+                                        <div class="card-img">
+                                            <a class="square-card d-block w-100 position-relative" href="{{ megaMenuBlock.story_link }}">
+                                            {%- if megaMenuBlock.story_image != blank -%}
+                                            <img
+                                                src="{{ megaMenuBlock.story_image | image_url: width: 20 }}" 
+                                                srcset="
+                                                {%- if megaMenuBlock.story_image.width >= 320 -%}{{ megaMenuBlock.story_image | image_url: width: 320 }} 320w,{%- endif -%}
+                                                {%- if megaMenuBlock.story_image.width >= 460 -%}{{ megaMenuBlock.story_image | image_url: width: 460 }} 460w,{%- endif -%}"
+                                                sizes="(max-width: 991px) 320px, 50px" class="w-100 h-100 object-cover position-absolute start-0 top-0"                
+                                                loading="lazy"
+                                                data-feauredImage
+                                                alt="{{ megaMenuBlock.story_link_text | escape }}"
+                                                width="{{ megaMenuBlock.story_image.width }}"
+                                                height="{{ megaMenuBlock.story_image.height }}"
+                                            > 
+                                            {%- else -%}
+                                            <img src="{{ settings.no_image | image_url: width: 16 }}" 
+                                                srcset="
+                                                {%- if settings.no_image.width >= 320 -%}{{ settings.no_image | image_url: width: 320 }} 320w,{%- endif -%}
+                                                {%- if settings.no_image.width >= 460 -%}{{ settings.no_image | image_url: width: 460 }} 460w,{%- endif -%}"
+                                                sizes="(max-width: 991px) 320px, 50px" class="w-100 h-100 object-cover position-absolute start-0 top-0"                
+                                                loading="lazy"
+                                                data-feauredImage
+                                                alt="{{ megaMenuBlock.story_link_text | escape }}"
+                                                width="{{ settings.no_image.width.width }}"
+                                                height="{{ settings.no_image.width.height }}"> 
+                                            {%- endif -%}
+                                            </a>
+                                        </div>
+                                        <div class="card-body px-0 pb-0">
+                                            <div style="line-height: 1.5625;">
+                                                {{ megaMenuBlock.story_paragraph }}
+                                            </div>
+                                            <a class="btn-link" style="line-height:1.1875;" href="{{ megaMenuBlock.story_link }}">{{ megaMenuBlock.story_link_text }}</a>
+                                        </div>
+                                {% endif %}
+                            </div>
+                            
+                        </div>
+                    </li>
+                    {% else %}
+                    <li class="nav-item {% if link.active %} active{% endif %} {% if link.title == 'Shop All' %}fw-semibold{% endif %}">
+                        <a class="nav-link d-flex align-items-center" href="{{ link.url }}" is="simple-menu-item" title="{{ link.title }}" aria-label="{{ link.title }}">
+                        {{ link.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </nav>
+        {% endif %}
+             
+        {% if secondary_menu %}
+            <nav class="navbar-mobile navbar-mobile-secondary pb-0 pt-5" aria-label="secondary-menu-list" style="margin-top:-20px">
+                <ul class="navbar-nav pb-5" id="secondary-menu-list">
+                    {% for link in linklists[secondary_menu].links %}
+                        {%- comment %}<locksmith:fa74>{% endcomment -%}
+                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[secondary_menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                        {%- comment %}</locksmith:fa74>{% endcomment -%}
+                        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[secondary_menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                        {% assign child_list_handle = link.title | handleize %}
+                            {% if link.links != blank %}
+                                <li class="nav-item dropdown {% if link.active %}active{% endif %}">
+                                    <a is="drop-down" class="nav-link submenu-toggle d-flex align-items-center justify-content-between" data-href="{{ link.url }}" title="{{ link.title }}" aria-label="{{ link.title }}" tabindex="0" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="menu">
+                                        <span>{{ link.title }}</span> <span class="icon-arrow-right"></span>
+                                    </a>
+                                    <div class="submenu dropdown-menu pb-2 toggle-content" id="submenu-{{ child_list_handle }}" data-type="content">
+                                        {% for childlink in link.links %}
+                                            {%- comment %}<locksmith:fbb7>{% endcomment -%}
+                                              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                            {%- comment %}</locksmith:fbb7>{% endcomment -%}
+                                            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                            <a class="nav-link d-flex align-items-center {% if childlink.active %} active{% endif %}" is="simple-menu-item" href="{{ childlink.url }}" title="{{ childlink.title }}" aria-label="{{ childlink.title }}">
+                                                {{ childlink.title }}
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                </li>
+                            {% else %}
+                            <li class="nav-item {% if link.active %} active{% endif %}">
+                                <a is="simple-menu-item" class="nav-link d-flex align-items-center" href="{{ link.url }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                    {{ link.title }}
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </nav>
+        {% endif %}
+                <div class="drawer-footer text-left pt-12">
+            {% if section.settings.mobile_nav_show_social_links %}
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            {% if section.settings.col_3_heading != blank %}
+                                <h6 class="small mb-3 px-3">{{ section.settings.col_3_social_heading }}</h6>
+                            {% endif %}
+                    
+                            <ul class="list-unstyled list-inline social-icons">
+                                {% if section.settings.social_icon_instagram %}
+                                <li class="list-inline-item">
+                                    <a href="{{ settings.social_instagram_link }}" title="Instagram" rel="nofollow" aria-label="Instagram"><span class="ox-instagram"></span></a>
+                                </li>
+                                {% endif %}
+                                {% if section.settings.social_icon_facebook %}
+                                <li class="list-inline-item">
+                                    <a href="{{ settings.social_facebook_link }}" title="Facebook" rel="nofollow" aria-label="Facebook"><span class="ox-facebook"></span></a>
+                                </li>
+                                {% endif %}
+                                {% if section.settings.social_icon_tiktok %}
+                                <li class="list-inline-item">
+                                    <a href="{{ settings.social_tiktok_link }}" title="Tiktok" rel="nofollow" aria-label="Tiktok"><span class="ox-tiktok"></span></a>
+                                </li>
+                                {% endif %}
+                                {% if section.settings.social_icon_youtube %}
+                                <li class="list-inline-item">
+                                    <a href="{{ settings.social_youtube_link }}" title="Youtube" rel="nofollow" aria-label="Youtube"><span class="ox-youtube"></span></a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            </div>
+            {% comment %} <div class="container" style="margin-top:10px; padding:0">
+                <div class="row">
+                    <div class="col drawer_account"><img src="{{ 'account.svg' | asset_url }}" style="margin-top:5px"/></span><p>Account</p></div>
+                    <div class="col drawer_off"><p>GET 10% OFF</p></div>
+                </div>
+            </div>  {% endcomment %}
+        </div>
+    </div>
+</mobile-nav>
+
+<style>
+  .fs-smal {
+    font-size: 12px !important;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Mobile Drawer",
+  "settings": [
+   
+    {
+      "type": "link_list",
+      "id": "main_menu_linklist",
+      "label": "Select Main Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "secondary_menu_linklist",
+      "label": "Select Secondary Menu"
+    },
+    
+    {
+      "type": "header",
+      "content": "Social Networks"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_nav_show_social_links",
+      "label": "Show Socials?",
+      "default": true
+    },
+    {
+      "type": "paragraph",
+      "content": "Select Networks"
+    },
+    {
+      "type": "checkbox",
+      "id": "social_icon_instagram",
+      "label": "Instagram",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "social_icon_facebook",
+      "label": "Facebook",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "social_icon_tiktok",
+      "label": "Tiktok",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "social_icon_youtube",
+      "label": "Youtube",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "megamenu_with_product",
+      "name": "MegaMenu with Product",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Menu Title",
+          "info": "Use Exact string as header"
+        },
+        {
+          "type": "text",
+          "id": "link_text_1",
+          "label": "Link text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_1",
+          "label": "URL"
+        },
+        {
+          "type": "header",
+          "content": "Styling"
+        },
+        {
+          "type": "color",
+          "id": "megamenu_bg_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "megamenu_txt_color",
+          "label": "Text Color",
+          "default": "#343434"
+        },
+        {
+          "type": "header",
+          "content": "products"
+        },
+        {
+          "type": "paragraph", 
+          "content": "product 1"
+        },        
+        {
+          "type": "product",
+          "id": "product_1",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_1",
+          "label": "Sub title 1"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_2",
+          "label": "Sub title 2"
+        },
+        {
+          "type": "product",
+          "id": "product_2",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_3",
+          "label": "Sub title 3"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_4",
+          "label": "Sub title 4"
+        },
+        {
+          "type": "paragraph",
+          "content": "product 2"
+        },
+        {
+          "type": "product",
+          "id": "product_3",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_5",
+          "label": "Sub title 5"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_6",
+          "label": "Sub title 6"
+        },
+        {
+          "type": "product",
+          "id": "product_4",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_7",
+          "label": "Sub title 7"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_8",
+          "label": "Sub title 8"
+        },
+        {
+          "type": "product",
+          "id": "product_5",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_9",
+          "label": "Sub title 9"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_10",
+          "label": "Sub title 10"
+        },
+        {
+          "type": "product",
+          "id": "product_6",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_11",
+          "label": "Sub title 11"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_12",
+          "label": "Sub title 12"
+        }
+      ]
+    },
+    {
+      "type": "megamenu_with_story",
+      "name": "MegaMenu with Story",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Menu Title",
+          "info": "Use Exact string as header"
+        },
+        {
+          "type": "text",
+          "id": "link_text_1",
+          "label": "Link text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_1",
+          "label": "URL"
+        },
+        {
+          "type": "header",
+          "content": "Styling"
+        },
+        {
+          "type": "color",
+          "id": "megamenu_bg_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "megamenu_txt_color",
+          "label": "Text Color",
+          "default": "#343434"
+        },
+        {
+          "type": "header",
+          "content": "Story content"
+        },
+        {
+          "type": "image_picker",
+          "id": "story_image",
+          "label": "Story Image",
+          "info": "For Better Viewing Use Example dimentions: 550*665 ( Aspect Ratio: 0.82:1 )"
+        },
+        {
+          "type": "richtext",
+          "id": "story_paragraph",
+          "label": "Story Paragraph"
+        },
+        {
+          "type": "text",
+          "id": "story_link_text",
+          "label": "Story Link",
+          "default": "Read Our Story"
+        },
+        {
+          "type": "url",
+          "id": "story_link",
+          "label": "URL"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

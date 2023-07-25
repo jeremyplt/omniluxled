@@ -1,0 +1,165 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+<div class="pt-lg-7 pt-6 pb-9 pb-lg-7 account-bg-tone border-bottom">
+    <span class="account-fair-tone position-absolute w-100 start-0 top-0 overflow-hidden gradient-fair-tone" style="pointer-events: none;z-index: -1;">
+    </span>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-12 mx-auto text-center">
+                <h6 class="m-0">{{ settings.welcome_text }}</h6>
+                <h1 class="mb-lg-5 mb-4 pb-1">My Account</h1>
+                <div class="custom-select-wrap">
+                    <custom-select class="sortby-dropdown d-block position-relative">
+                        <div class="bg-transparent border-0 default border-bottom d-flex d-lg-none position-relative pt-0 px-0 py-2 align-items-end">
+                            <span class="option_txt fw-medium text-capitalize">{{ 'customer.orders.title' | t }}</span><span class="ox-arrow-down ms-auto font-size-xs"></span></div>
+                            <div class="custom--select">
+                                <ul class="list-unstyled m-0 toggle-content d-lg-flex flex-wrap justify-content-lg-center m-0 account_nav text-lg-center text-start" data-type="content" style="height: 0px;">
+                                    <li data-value="{{ 'customer.orders.title' | t }}" class="px-lg-3 px-0 lh-lg d-lg-block d-none">
+                                        <a class=" text-capitalize fw-normal active pb-lg-1" href="/account" title="{{ 'customer.orders.title' | t }}" rel="nofollow" aria-label="{{ 'customer.orders.title' | t }}">
+                                        {{ 'customer.orders.title' | t }}
+                                        </a>
+                                    </li>
+                                    <li data-value="{{ 'customer.orders.wishlist' | t }}" class="px-lg-3 px-0 lh-lg">
+                                        <a class=" text-capitalize fw-normal pb-lg-1" href="#swym-wishlist" title="{{ 'customer.orders.title' | t }}" rel="nofollow" aria-label="{{ 'customer.orders.title' | t }}">
+                                        {{ 'customer.orders.wishlist' | t }}
+                                        </a>
+                                    </li>
+                                    <li data-value="{{ 'customer.account.view_addresses' | t }}" class="px-lg-3 px-0 lh-lg">
+                                        <a class=" text-capitalize fw-normal pb-lg-1" href="{{ routes.account_addresses_url }}">
+                                            {{ 'customer.account.view_addresses' | t }}
+                                        </a>
+                                    </li>
+                                    <li data-value="{{ 'customer.log_out' | t }}" class="px-lg-3 px-0 lh-lg">
+                                        <a class=" text-capitalize fw-normal pb-lg-1" href="{{ routes.account_logout_url }}">
+                                            {{ 'customer.log_out' | t }}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </custom-select>
+                </div>
+                <!-- <div class="mt-6">
+                    <a href="/pages/purchase-order"  class="btn btn-primary w-lg-auto w-100 px-lg-5 px-2" title="START NEW PURCHASE ORDER">START NEW PURCHASE ORDER</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 mb-lg-0 mb-5 profile-border position-relative  pt-6 pb-5 pb-lg-9 text-center text-lg-start">
+                <div class="d-flex align-items-center justify-content-center justify-content-lg-start mb-3 mb-lg-4">
+                    <div class="profile position-relative me-3">
+                        <h5 class="m-0 font-family-heading text-uppercase text-white position-absolute">{{ customer.first_name | slice: 0 }}{{ customer.last_name | slice: 0 }}</h5>
+                    </div>
+                    <h5 class="text-capitalize profile-text lh-lg font-family-heading m-0">{{ customer.name }}</h5>
+                </div>
+                <div class="email-block">
+                    <p class="mb-3">{{ customer.email }}</p>
+                    <p class="mb-3">{{ 'customer.account.password_label' | t }}: **********  <a href="/account/login#recover" class="text-primary ms-2">{{ 'customer.account.reset_label' | t }}</a></p>
+                    <p class="mb-2">{{ 'customer.account.total_orders' | t }}: {{ customer.orders.size }}</p>
+                </div>
+            </div>
+            <div class="col-lg w-100 ps-lg-4 ps-xl-8 pt-1 pt-lg-7 pb-lg-9 pb-4 pb-lg-0">
+                <h5 class="mb-lg-4 mb-3 pb-1 pb-lg-0 order_title fw-medium text-center text-lg-start">{{ 'customer.orders.title' | t }}</h5>
+                {%- if customer.orders.size > 0 -%}
+                    {% paginate customer.orders by 15 %}
+
+                        <table role="table" class="order-history account-table table mb-0 table-d">
+                            <caption class="visually-hidden">{{ 'customer.orders.title' | t }}</caption>
+                            <thead role="rowgroup" class="group-name">
+                            <tr role="row">
+                                <th id="ColumnOrder" scope="col" role="columnheader" class="h6 pe-2 fw-bold ">{{ 'customer.orders.order_number' | t }} & {{ 'customer.orders.date' | t }}</th>
+                                <th id="ColumnFulfillment" scope="col" role="columnheader" class="h6 pe-2 fw-bold ">{{ 'customer.orders.payment_status' | t }}</th>
+                                <th id="ColumnFulfillment" scope="col" role="columnheader" class="h6 pe-2 fw-bold">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                                <th id="ColumnTotal" scope="col" role="columnheader" class="h6 pe-2 fw-bold text-end">{{ 'customer.orders.total' | t }}</th>
+                            </tr>
+                            </thead>
+                            <tbody role="rowgroup">
+                            {%- for order in customer.orders -%}
+                                <tr role="row">
+                                    <td role="cell" class="pe-2"
+                                        headers="ColumnOrder"
+                                        data-label="{{ 'customer.orders.order_number' | t }}">
+                                        <div class="d-flex align-items-center flex-wrap" style="margin: -2px 0;">
+                                            <span class="d-md-inline-flex d-flex py-1" style="padding:2px 0;">
+                                                <a href="{{ order.customer_url }}" class="text-primary fw-medium border-bottom me-3" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">
+                                                    {{ order.name }}
+                                                </a>
+                                            </span>
+                                            <span class="d-inline-flex" style="padding:2px 0;"><span class="me-1">on</span> {{ order.created_at | time_tag: format: 'basic' }}</span>
+                                        </div>
+                                    </td>
+                                    <td headers="ColumnFulfillment" class="pe-2" role="cell" data-label="{{ 'customer.orders.payment_status' | t }}">
+                                        {{ order.financial_status_label }}
+                                    </td>
+                                    <td headers="ColumnFulfillment" class="pe-2" role="cell" data-label="{{ 'customer.orders.fulfillment_status' | t }}">
+                                        {{ order.fulfillment_status_label }}
+                                    </td>
+                                    <td class="text-end pe-2" headers="ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
+                                        {{ order.total_price | money }}
+                                    </td>
+
+                                </tr>
+                            {%- endfor -%}
+                            </tbody>
+                        </table>
+                        {%- for order in customer.orders -%}
+                        <table role="table" class="account-table border order-history table table-m" style="padding: 20px;margin-bottom: 20px;">
+                            <tbody role="rowgroup">
+                                <tr role="row">
+                                    <th id="ColumnOrder" scope="col" role="columnheader" class="h6 p-0 pe-2 fw-bold border-0">{{ 'customer.orders.order_number' | t }} & {{ 'customer.orders.date' | t }}</th>
+                                    <th id="ColumnTotal" scope="col" role="columnheader" class="h6 fw-bold text-end border-0 p-0">{{ 'customer.orders.total' | t }}</th>
+                                </tr>
+                                <tr role="row">
+                                    <td role="cell" class="pe-2 border-0 pt-1"
+                                        headers="ColumnOrder"
+                                        data-label="{{ 'customer.orders.order_number' | t }}">
+                                        <div class="d-flex align-items-center flex-wrap" style="margin: -2px 0;">
+                                            <span class="d-md-inline-flex d-flex py-1 w-100" style="padding:2px 0;">
+                                                <a href="{{ order.customer_url }}" class="text-primary fw-medium border-bottom me-3" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">
+                                                    {{ order.name }}
+                                                </a>
+                                            </span>
+                                            <span class="d-inline-flex" style="padding:2px 0;"><span class="me-1">on</span> {{ order.created_at | time_tag: format: 'basic' }}</span>
+                                        </div>
+                                    </td>
+                                    <td class="text-end border-0 pt-1" headers="ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
+                                        {{ order.total_price | money }}
+                                    </td>
+                                </tr>
+                                <tr role="row">
+                                    <th id="ColumnFulfillment" scope="col" role="columnheader" class="h6 pe-2 p-0 fw-bold border-0">{{ 'customer.orders.payment_status' | t }}</th>
+                                    <th id="ColumnFulfillment" scope="col" role="columnheader" class="h6 fw-bold text-end border-0 p-0">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                                </tr>
+                                <tr role="row">
+                                    <td headers="ColumnFulfillment" class="border-0 pe-2 pt-1 pb-0" role="cell" data-label="{{ 'customer.orders.payment_status' | t }}">
+                                        {{ order.financial_status_label }}
+                                    </td>
+                                    <td headers="ColumnFulfillment" class="text-end border-0 pt-1 pb-0" role="cell" data-label="{{ 'customer.orders.fulfillment_status' | t }}">
+                                        {{ order.fulfillment_status_label }}
+                                    </td>
+                                </tr>
+                                <tr role="row">
+                                    <td colspan="2" class="text-center border-0 p-0">
+                                        <span  id="hulk-reorder-list" style="display:none">{hulk.reorder.list:{{ order.id }}}</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        {%- endfor -%}
+                        {%- if paginate.pages > 1 -%}
+                            <div class="mt-4">
+                                {% render 'pagination', paginate: paginate %}
+                            </div>
+                        {%- endif -%}
+                    {% endpaginate %}
+                {%- else -%}
+                    <p>{{ 'customer.orders.none' | t }}</p>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+</div>

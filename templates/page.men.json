@@ -1,0 +1,519 @@
+{
+  "sections": {
+    "main": {
+      "type": "global-header-slider",
+      "blocks": {
+        "51588165-6ea4-4757-981f-f645f9497f5a": {
+          "type": "video-slide",
+          "settings": {
+            "muted": true,
+            "controls": true,
+            "loop": true,
+            "logo_image__": "",
+            "title": "One tool.<br> <em class=\"fw-light\">Powerful <\/em>results.",
+            "subtitle": "<p>Introducing Omnilux Men, the latest LED<\/p><p> technology designed to treat men’s skin in one<\/p><p> simple step.<\/p>",
+            "heading__size": false,
+            "heading__lg": 60,
+            "heading__md": 55,
+            "heading__sm": 50,
+            "play_icon": false,
+            "play_btn": false,
+            "btn_txt_watch": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "white",
+            "btn_size_watch": "",
+            "btn_txt": "shop now",
+            "btn_link": "shopify:\/\/products\/omnilux-men",
+            "btn_type": "",
+            "btn_variant": "white",
+            "btn_size": "",
+            "poster_type": "video",
+            "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9e7c3b73988c46778177316aa13d2721.mp4",
+            "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9e7c3b73988c46778177316aa13d2721.mp4",
+            "image": "shopify:\/\/shop_images\/Add_a_heading_32.png",
+            "image_mobile": "shopify:\/\/shop_images\/Untitled_design_-_2023-06-06T111349.071.png",
+            "video_type": "local",
+            "placement": "grid",
+            "video_id": "",
+            "mobile_video_id": "",
+            "section_bg_color": "#ffffff",
+            "section_text_color": "#ffffff",
+            "enable_overlay": true,
+            "overlay_bg_color": "#07272d",
+            "overlay_opacity": 0.3,
+            "alignment": "text-center text-md-start",
+            "video_alignment": "justify-content-md-start justify-content-center"
+          }
+        },
+        "bfa233dd-2a43-4795-ae66-66189b6e51e2": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Add_a_heading_32.png",
+            "image_mobile": "shopify:\/\/shop_images\/Untitled_design_-_2023-06-06T111349.071.png",
+            "slide_bg_color": "#ffffff",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.2,
+            "caption_alignment": "justify-content-md-start justify-content-center",
+            "alignment": "text-center text-md-start",
+            "heading": "LED made <br> for <em class=\"fw-light\">him<\/em>",
+            "caption": "Shop for dad and save $45 USD on Omnilux Men",
+            "heading__size": false,
+            "heading__lg": 60,
+            "heading__md": 55,
+            "heading__sm": 50,
+            "heading_txt_color": "#ffffff",
+            "caption_txt_color": "#ffffff",
+            "btn_txt": "SHOP NOW",
+            "btn_link": "shopify:\/\/products\/omnilux-men",
+            "btn_type": "",
+            "btn_variant": "white",
+            "btn_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "51588165-6ea4-4757-981f-f645f9497f5a",
+        "bfa233dd-2a43-4795-ae66-66189b6e51e2"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "enabled": true,
+        "nav_arrows": true,
+        "nav_dots": false,
+        "nav_dots_right": true,
+        "height": "tallheight",
+        "top_padding_zero": true
+      }
+    },
+    "8f8db248-c389-4867-aa55-f99789a04ceb": {
+      "type": "global-features-grid",
+      "blocks": {
+        "template--16044246073506__8f8db248-c389-4867-aa55-f99789a04ceb-1671266950c119735d-0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_1.svg?v=1669721646",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "200afcfa-dcba-4a88-b1e4-21219cd67ef4": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_2.svg?v=1669721646",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "e3d77915-0ad1-48a2-ab0f-b5844d9ab6a8": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_3.svg?v=1669721646",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "a583044f-8ee3-46ea-a5a6-fb5c59789d9d": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_4.svg?v=1669721646",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "aac49889-d03a-4ce9-9504-a6250302c47b": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_5.svg?v=1669721646",
+            "title": "",
+            "txt": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16044246073506__8f8db248-c389-4867-aa55-f99789a04ceb-1671266950c119735d-0",
+        "200afcfa-dcba-4a88-b1e4-21219cd67ef4",
+        "e3d77915-0ad1-48a2-ab0f-b5844d9ab6a8",
+        "a583044f-8ee3-46ea-a5a6-fb5c59789d9d",
+        "aac49889-d03a-4ce9-9504-a6250302c47b"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "gradient_tone": true,
+        "icon_layout": false,
+        "grid_size": "2",
+        "heading_txt": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#222222",
+        "pt": 60,
+        "pb": 49,
+        "pts": 40,
+        "pbs": 40,
+        "border-top": false,
+        "border-bottom": false,
+        "css_class": ""
+      }
+    },
+    "70dfccab-4164-4b13-ba0e-deed8723313d": {
+      "type": "global-image-with-text",
+      "blocks": {
+        "b9072bfd-0bc2-4c94-b308-b989dbfd7c6a": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Engineered for men’s skin",
+            "max_width": 540,
+            "txt": "<p>Omnilux Men is premium tech engineered to address a man’s unique skincare needs. From razor burn & dryness to fine lines, dark circles, & under-eye bags, Omnilux’s advanced LED light therapy technology provides visible, dermatologist-level results.<\/p>",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "",
+            "btn_txt": "try it risk free",
+            "btn_link": "shopify:\/\/products\/omnilux-men",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "watch_video_id": "",
+            "watch_mobile_video_id": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/WEBSITE_13.png",
+            "alignment": "text-left",
+            "image_alignment": "right"
+          }
+        },
+        "6dabefad-9c36-420e-86ee-0a65a66ac83c": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Level up with 1072nm",
+            "max_width": 530,
+            "txt": "<p>On average, men’s skin is 25% thicker. Omnilux Men is the only LED mask calibrated with the deepest penetrating wavelength of near-infrared light (1072nm) to meet men’s unique skin needs.<\/p>",
+            "step_heading": "",
+            "steps_captions": "Triggers a more robust cellular response during LED treatment\nReduces fine lines & wrinkles, redness, irritation, dark circles and under-eye bags for a smoother, more even-toned complexion",
+            "steps_captions_2": "",
+            "btn_txt": "",
+            "btn_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9464d3162eb14de7b68d2622ac642ec9.mp4",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "outline",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "How It Works",
+            "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9464d3162eb14de7b68d2622ac642ec9.mp4",
+            "watch_mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9464d3162eb14de7b68d2622ac642ec9.mp4",
+            "btn_type_watch": "outline",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/WEBSITE_18.png",
+            "alignment": "text-left",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "b9072bfd-0bc2-4c94-b308-b989dbfd7c6a",
+        "6dabefad-9c36-420e-86ee-0a65a66ac83c"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "enable_background_tone": false,
+        "border_bottom": true,
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000"
+      }
+    },
+    "1f797e7e-0d00-4e4c-a71e-876eea8ca4e1": {
+      "type": "lead-text",
+      "settings": {
+        "fluid_layout": false,
+        "background_imagetone": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Bg-Gradient.jpg?v=1671606370",
+        "background_tone_height": 165,
+        "pt": 100,
+        "pb": 0,
+        "pts": 40,
+        "pbs": 0,
+        "border-top": false,
+        "border-bottom": true,
+        "title": "96%",
+        "heading_txt": "Agreed their fine lines appeared <br><em>less visible.*<\/em>",
+        "txt": "*Based on a clinical study after using Omnilux for 4 weeks."
+      }
+    },
+    "68af8dda-7743-4ee3-bd9d-793a42a29e3d": {
+      "type": "global-pop-up-video",
+      "settings": {
+        "fluid_layout": true,
+        "disable_min_height": false,
+        "muted": true,
+        "controls": true,
+        "loop": true,
+        "title": "See it in action",
+        "subtitle": "",
+        "btn_txt_watch": "WATCH VIDEO",
+        "btn_type_watch": "outline",
+        "btn_variant_watch": "primary",
+        "btn_size_watch": "",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "",
+        "btn_variant": "primary",
+        "btn_size": "",
+        "poster_type": "",
+        "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4128bdc1179940759fcfb8470fa11277.mp4",
+        "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4128bdc1179940759fcfb8470fa11277.mp4",
+        "poster_image": "shopify:\/\/shop_images\/sixsectionbkdesktop-1666799503887.jpg",
+        "disable_overlay": true,
+        "overlay_bg_color": "#07272d",
+        "overlay_opacity": 0.2,
+        "fluid_video_layout": true,
+        "video_type": "local",
+        "placement": "popup",
+        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4128bdc1179940759fcfb8470fa11277.mp4",
+        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4128bdc1179940759fcfb8470fa11277.mp4",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#ffffff",
+        "alignment": "text-center",
+        "video_alignment": "justify-content-center",
+        "pt": 80,
+        "pb": 80,
+        "pts": 56,
+        "pbs": 56,
+        "border-top": false,
+        "border-bottom": true
+      }
+    },
+    "1bddca11-8da1-4f0f-8d7a-913ff2722567": {
+      "type": "global-results-slider",
+      "blocks": {
+        "2f81eebe-3e82-47db-bfa2-c17006ab7904": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/menbefore.jpg",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "35e99666-f4a7-4e6d-b66f-d290ec326f0c": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/menbefore3.jpg",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "c8cf3aec-e238-4f1e-bef3-f83fbcbc6827": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BA_WEBSITE_2.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "e1ab2c5d-9402-45d3-8432-3c28d8f801f4": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BA_WEBSITE.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "95b5cc18-0940-4a96-a11c-2ed890fcdd76": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/menbefore2.jpg",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        }
+      },
+      "block_order": [
+        "2f81eebe-3e82-47db-bfa2-c17006ab7904",
+        "35e99666-f4a7-4e6d-b66f-d290ec326f0c",
+        "c8cf3aec-e238-4f1e-bef3-f83fbcbc6827",
+        "e1ab2c5d-9402-45d3-8432-3c28d8f801f4",
+        "95b5cc18-0940-4a96-a11c-2ed890fcdd76"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "heading_style": "heading_style_2",
+        "pt": 66,
+        "pb": 75,
+        "pts": 40,
+        "pbs": 60,
+        "border-top": false,
+        "border-bottom": false,
+        "heading_txt": "Real users, real results",
+        "txt": "",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "",
+        "btn_variant": "dark",
+        "btn_size": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000",
+        "autoplay_enable": false,
+        "loop_enable_": false,
+        "slider_enable": true,
+        "nav_arrows": true,
+        "nav_dots": false
+      }
+    },
+    "6251f33d-dc36-4209-b5eb-5d8c8acd6b8d": {
+      "type": "lead-board-slider",
+      "blocks": {
+        "71e689e5-4a1f-4b05-9c08-25fbab067b22": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>“I am incredibly excited for the first of its kind men’s LED device by Omnilux. Mens skin has been scientifically demonstrated to be different from women’s, and an LED mask tailored specifically for men is a game-changer in this industry. I treat a lot of men in my clinic and can now recommend Omnilux’s mask for excellent results at home. “<\/p>",
+            "expert_name": "Dr. Jared Jagdeo, MD",
+            "expert_postion": "Associate professor of dermatology, SUNY Downstate Medical Center",
+            "image": "shopify:\/\/shop_images\/experts.jpg",
+            "button_label_1": "",
+            "button_link_1": "",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": ""
+          }
+        },
+        "de24739d-b63c-4b52-ad9c-ca0897fdb306": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>\"Omnilux is once again leading the way by introducing the first 1072nm wavelength in a home-use mask. The proven benefits are clear; this wavelength provides a powerful anti-inflammatory and healing response for men’s skin.\"<\/p>",
+            "expert_name": "Dr. Sebastián Cintolesi, MD",
+            "expert_postion": "",
+            "image": "shopify:\/\/shop_images\/cintoweb-1667596895038.webp",
+            "button_label_1": "",
+            "button_link_1": "",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": ""
+          }
+        },
+        "4dc86e01-9430-4950-a01f-c2247b8499e8": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>\"Omnilux Men is a great way for men to achieve younger-looking skin without invasive treatments. The results I’ve seen are significant, such as improved texture and overall skin-rejuvenating benefits. I love it.\"<\/p>",
+            "expert_name": "- Dr. Hany Abi Ghosn, MD",
+            "expert_postion": "Aesthetic Medicine, Winner Best Medical Practice Award, Europe 2018",
+            "image": "shopify:\/\/shop_images\/3-1632167041643.webp",
+            "button_label_1": "",
+            "button_link_1": "",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": ""
+          }
+        },
+        "93ac2ebf-693e-417a-85f9-769e74562c3a": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>“Of all the current techniques that I use to treat my client’s skin, I have definitely noticed the greatest improvements have come with the incorporation of infrared light. I am continually amazed by its ability to renew the skin... and it’s been the Omnilux mask that I am particularly obsessed with! Not only is it portable and incredibly easy to use, but my clients and I all notice an almost immediate decrease in puffiness (we know it reduces inflammation) and gives the skin a beautiful luminosity after masking - the mask is still somewhat of a skin miracle to me!”<\/p>",
+            "expert_name": "- Kristyn Smith, Licensed Aesthetician",
+            "expert_postion": "Founder, Practise NYC",
+            "image": "shopify:\/\/shop_images\/2-1632167041636.webp",
+            "button_label_1": "",
+            "button_link_1": "",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": ""
+          }
+        }
+      },
+      "block_order": [
+        "71e689e5-4a1f-4b05-9c08-25fbab067b22",
+        "de24739d-b63c-4b52-ad9c-ca0897fdb306",
+        "4dc86e01-9430-4950-a01f-c2247b8499e8",
+        "93ac2ebf-693e-417a-85f9-769e74562c3a"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "bg_tone": false,
+        "pt": 70,
+        "pb": 69,
+        "pts": 40,
+        "pbs": 40,
+        "border-top": true,
+        "border-bottom": true,
+        "title": "The LED brand most trusted by dermatologists and aesthetic experts:"
+      }
+    },
+    "caddee66-a5bc-41d3-886f-cdeba7c1f4da": {
+      "type": "left-text-with-image",
+      "blocks": {
+        "5bfb4683-fe66-4131-b356-cbcc3db78642": {
+          "type": "html",
+          "settings": {
+            "html": "<h3 class=\"mb-4\">0% complicated, 100% efficient<\/h3>"
+          }
+        },
+        "template--16044246073506__caddee66-a5bc-41d3-886f-cdeba7c1f4da-167145606839a6bf0a-1": {
+          "type": "text",
+          "settings": {
+            "text": "Ideal for men who want to simplify their routine, yet enjoy all of the benefits of high-performance skincare.",
+            "text_2": "With one simple tool and just 10 minutes, you can achieve pro-level results from the convenience of home."
+          }
+        },
+        "template--16044246073506__caddee66-a5bc-41d3-886f-cdeba7c1f4da-167145606839a6bf0a-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP NOW",
+            "button_link_1": "shopify:\/\/products\/omnilux-men",
+            "btn_type_1": "",
+            "btn_variant_1": "white",
+            "btn_size_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "btn_type_2": "",
+            "btn_variant_2": "primary",
+            "btn_size_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "5bfb4683-fe66-4131-b356-cbcc3db78642",
+        "template--16044246073506__caddee66-a5bc-41d3-886f-cdeba7c1f4da-167145606839a6bf0a-1",
+        "template--16044246073506__caddee66-a5bc-41d3-886f-cdeba7c1f4da-167145606839a6bf0a-2"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "background_imagetone": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Rectangle_36.jpg?v=1671604746",
+        "background_tone_height": 145,
+        "image": "shopify:\/\/shop_images\/sevensectionbkdesktop-1666800355048.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Ideal-for-men.jpg",
+        "txt_color": "#ffffff",
+        "enable_overlay": false,
+        "paragraph_bold": false,
+        "overlay_bg_color": "#000000",
+        "overlay_opacity": 0.5,
+        "height": "mediumheight",
+        "desktop_text_box_position": "center",
+        "text_caption_align": "justify-content-start",
+        "text_align": "text-left",
+        "section_padding": true,
+        "content_width": 540,
+        "image_bg_tone": true,
+        "mobile_TEXT": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8f8db248-c389-4867-aa55-f99789a04ceb",
+    "70dfccab-4164-4b13-ba0e-deed8723313d",
+    "1f797e7e-0d00-4e4c-a71e-876eea8ca4e1",
+    "68af8dda-7743-4ee3-bd9d-793a42a29e3d",
+    "1bddca11-8da1-4f0f-8d7a-913ff2722567",
+    "6251f33d-dc36-4209-b5eb-5d8c8acd6b8d",
+    "caddee66-a5bc-41d3-886f-cdeba7c1f4da"
+  ]
+}

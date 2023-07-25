@@ -1,0 +1,56 @@
+.images__tabs {
+	display: flex;
+	border: solid 1px #000;
+	border-radius: 10px;
+	width: 100%;
+	max-width: 450px;
+	justify-content: space-between;
+	margin: 0 auto;
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+.images__tab {
+	padding: 3px 18px;
+	border-radius: 8px;
+	cursor: pointer;
+	text-align: center;
+	flex: 1;
+}
+
+.images__tab, .images__tab a {
+	font-size: 13px;
+	text-decoration: none;
+}
+
+.images__tab.active, .images__tab.active a {
+	background-color: #000;
+	color: #fff;
+}
+
+slider-element {
+	position: relative;
+}
+
+.product-images--slider .swiper-pagination {
+	display: none !important;
+}
+
+[data-main-slider] .swiper-button-next, [data-main-slider] .swiper-button-prev {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+[data-main-slider] .swiper-button-next {
+	right: 10px;
+}
+
+[data-main-slider] .swiper-button-prev {
+	left: 10px;
+}
+
+@media (min-width: 992px) {
+	.images__tabs {
+		display: none;
+	}
+}

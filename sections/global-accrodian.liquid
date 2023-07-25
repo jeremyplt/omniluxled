@@ -1,0 +1,152 @@
+
+<section class="my-11" data-section-id="{{ section.id }}">
+    <div class="container ">
+        <div class="row">
+            <div class="col-12 col-md-10 mx-auto">
+                {% if section.settings.heading != blank %}
+                <div class="block-heading text-center mb-5">
+                    <div class="h3 fw-medium lh-base letter-spacing mb-0">{{ section.settings.heading }}</div>
+                </div>
+                {% endif %}
+                {% if section.settings.enable_accordion_btn %}
+                    <div class="text-center mb-6 mb-lg-8">
+                        <a href="{{ section.settings.btn1_link }}" class="btn btn-outline-dark {% if section.settings.button1_disabled %}disabled{% endif %}">
+                            {{ section.settings.btn1_text }}
+                        </a>
+                        <a href="{{ section.settings.btn2_link }}" class="mt-4 mt-sm-0 btn btn-outline-dark ms-sm-4{% if section.settings.button2_disabled %}disabled{% endif %}">
+                            {{ section.settings.btn2_text }}
+                        </a>
+                    </div>
+                {% endif %}
+                <custom-accordion {{ block.shopify_attributes }} data-accordionType="single">
+                    {% for block in section.blocks %}
+                        {% if block.settings.title != blank and block.settings.answer != blank %}
+                            <div class="accordion__container  border-top {% if forloop.last == true %}border-bottom{% endif %} py-3">
+                                <a class="accordion__toggle d-flex align-items-center pe-2 justify-content-between" href="javascript:void(0);" title="Open Are all products made with organic ingredients?" rel="nofollow" aria-label="Open Are all products made with organic ingredients?" role="button" aria-expanded="false" aria-controls="faq-product-information-1">
+                                    <p class="m-0 fw-bold font-size-md h6 ls-1">{{ block.settings.title }}</p>
+                                    <span class="ox-plus d-block font-size-sm"></span>
+                                </a>
+                                <div class="accordion__block toggle-content" id="faq-{{ block.settings.heading | handleize }}-{{ forloop.index }}" data-type="content">
+                                    <div class="fw-light letter-spacing rpt-5 pt-4">
+                                        {{ block.settings.answer }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </custom-accordion>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .accordion__container.open span:before{
+    content: "\e927";
+    }
+</style>
+<!-- <script>
+    const accordions = document.querySelectorAll(".accordion__container");
+    console.log(accordions);
+
+const openAccordion = (accordion) => {
+	const content = accordion.querySelector(".accordion__content");
+	accordion.classList.add("accordion__active");
+	content.style.maxHeight = content.scrollHeight + "px";
+};
+
+const closeAccordion = (accordion) => {
+	const content = accordion.querySelector(".accordion__content");
+	accordion.classList.remove("accordion__active");
+	content.style.maxHeight = null;
+};
+
+accordions.forEach((accordion) => {
+	const intro = accordion.querySelector(".accordion__toggle ");
+	const content = accordion.querySelector(".toggle-content ");
+
+	intro.onclick = () => {
+		if (content.style.maxHeight) {
+			closeAccordion(accordion);
+		} else {
+			accordions.forEach((accordion) => closeAccordion(accordion));
+			openAccordion(accordion);
+		}
+	};
+});
+
+    </script> -->
+
+{% schema %}
+{
+  "name": "Global Accrodian",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_accordion_btn",
+      "label": "Enable Accrodian Buttons",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "btn1_text",
+      "label": "Button 1 text"
+    },
+    {
+      "type": "url",
+      "id": "btn1_link",
+      "label": "Button 1 link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button1_disabled",
+      "label": "Button 1 disabled ?",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "btn2_text",
+      "label": "Button 2 text"
+    },
+    {
+      "type": "url",
+      "id": "btn2_link",
+      "label": "Button 2 link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button2_disabled",
+      "label": "Button 2 disabled ?",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logowidthtext",
+      "name": "Accrodian Block",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Information text 2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Global Accrodian",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

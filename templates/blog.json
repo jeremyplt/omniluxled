@@ -1,0 +1,103 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-blog",
+      "blocks": {
+        "social_sharing": {
+          "type": "socials",
+          "settings": {
+            "enable_socials": true,
+            "socials_title": "follow us",
+            "social_icon_facebook": true,
+            "social_icon_tiktok": true,
+            "social_icon_twitter": false,
+            "social_icon_instagram": true,
+            "social_icon_reddit": false,
+            "social_icon_youtube": true
+          }
+        },
+        "recent-articles": {
+          "type": "recent-articles",
+          "settings": {
+            "enable_recent_articles": true,
+            "recent_articles_title": "most read articles",
+            "total_recent_articles": 3
+          }
+        },
+        "8ca9dc98-f8f2-4fff-893e-1abd3ee87674": {
+          "type": "shop-favorites",
+          "settings": {
+            "enable_shop_favorites": true,
+            "shop_favorites_title": "shop your favorites",
+            "btn_txt": "Shop All",
+            "btn_link": "\/collections\/all",
+            "btn_type": "outline",
+            "btn_variant": "dark",
+            "btn_size": "btn-sm",
+            "product_1": "omnilux-contour-neck-decollete",
+            "product_2": "omnilux-contour-glove"
+          }
+        },
+        "7ce9c93e-702c-4f64-9bec-0142ce9b5cc6": {
+          "type": "category",
+          "settings": {
+            "title": "HOME",
+            "url": "\/blogs\/light-reads"
+          }
+        },
+        "79793a2e-121d-4839-948c-9505090db994": {
+          "type": "category",
+          "settings": {
+            "title": "NEWS",
+            "url": "\/blogs\/light-reads\/tagged\/news"
+          }
+        },
+        "a2940008-9253-42dd-a402-0c096f54be46": {
+          "type": "category",
+          "settings": {
+            "title": "THE SCIENCE",
+            "url": "\/blogs\/light-reads\/tagged\/the-science"
+          }
+        },
+        "0435d6d3-1076-4cf6-8e28-bfd25c15a020": {
+          "type": "category",
+          "settings": {
+            "title": "HOW TO",
+            "url": "\/blogs\/light-reads\/tagged\/how-to"
+          }
+        },
+        "41ae9308-9cc7-4dd0-ba42-23d9df0390b3": {
+          "type": "category",
+          "settings": {
+            "title": "SAFETY & EFFICACY",
+            "url": "\/blogs\/light-reads\/tagged\/safety-efficacy"
+          }
+        }
+      },
+      "block_order": [
+        "social_sharing",
+        "recent-articles",
+        "8ca9dc98-f8f2-4fff-893e-1abd3ee87674",
+        "7ce9c93e-702c-4f64-9bec-0142ce9b5cc6",
+        "79793a2e-121d-4839-948c-9505090db994",
+        "a2940008-9253-42dd-a402-0c096f54be46",
+        "0435d6d3-1076-4cf6-8e28-bfd25c15a020",
+        "41ae9308-9cc7-4dd0-ba42-23d9df0390b3"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "image": "shopify:\/\/shop_images\/Mask_Group_30-min.jpg",
+        "blog_content": "A blog about all things light therapy,<br>by the leaders in light therapy.",
+        "enable_overlay": true,
+        "overlay_bg_color": "#07272d",
+        "overlay_opacity": 0.6,
+        "enable_sidebar": true,
+        "sidebar_is_sticky": false,
+        "items_per_page": 12
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

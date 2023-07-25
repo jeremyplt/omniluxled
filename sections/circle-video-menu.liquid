@@ -1,0 +1,106 @@
+<div class="circle-video-menu-wrap circle-video-menu-wrap--{{ section.id }}">
+  <div class="circle-video-menu circle-video-menu--{{ section.id }} {% if section.settings.ignore %}circle-vide-menu--ignore{% endif %}">
+    <div class="circle-menu-items">
+      {% for block in section.blocks %}
+        <a class="circle-video-menu-item">
+          <span class="circle-video-menu-item-image">
+            <img loading="lazy" class="circle-menu-item-img" src="{{ block.settings.image | img_url: 'master' }}">
+            {% render 'icon-play' %}
+          </span>
+          <span class="circle-menu-item-label">{{ block.settings.label }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% for block in section.blocks %}
+    <div class="circle-video-menu-modal">
+      <div class="width">
+        <div class="circle-video-menu-modal-inner">
+          <button class="circle-video-menu-modal-close">{% render 'icon-close' %}</button>
+          <video playsinline preload="none" controls>
+            {% for source in block.settings.video.sources %}
+              <source src="{{ source.url }}" type="{{ source.mime_type }}">
+            {% endfor %}
+          </video>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+  .circle-video-menu--{{ section.id }} .circle-video-menu-item-image {
+    border-color: {{ section.settings.border_color }};
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.circle-video-menu--{{ section.id }} .circle-video-menu-item').forEach((item, i) => {
+    item.addEventListener('click', () => {
+      const root = item.closest('.circle-video-menu-wrap');
+      const modal = root.querySelectorAll(`.circle-video-menu-modal`)[i];
+      const video = modal.querySelector('video');
+
+      modal.classList.add('circle-video-menu-modal--active');
+      video.play();
+    });
+  });
+
+  document.querySelectorAll('.circle-video-menu-wrap--{{ section.id }} .circle-video-menu-modal').forEach((el) => {
+    el.addEventListener('click', () => {
+      const video = el.querySelector('video');
+      video.pause();
+      el.classList.remove('circle-video-menu-modal--active');
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Circle video menu",
+  "class": "circle-video-menu-wrap-wrap",
+  "settings": [
+    {
+      "label": "Border color",
+      "id": "border_color",
+      "type": "color",
+      "default": "#000000"
+    },
+    {
+      "label": "Ignore theme fonts",
+      "id": "ignore",
+      "type": "checkbox",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Circle link",
+      "type": "circle-link",
+      "settings": [
+        {
+          "label": "Image",
+          "id": "image",
+          "type": "image_picker"
+        },
+        {
+          "label": "Label",
+          "id": "label",
+          "type": "text"
+        },
+        {
+          "label": "Video url",
+          "id": "video",
+          "type": "video"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Circle video menu"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,180 @@
+<style>
+    #insta-feed{width:{{ section.settings.feed_width }}%;}
+    #insta-feed h2{font-size:{{ section.settings.heading_size }}px;font-family: {{ section.settings.heading_font.family }}; }
+    {{ section.settings.heading_font | font_face }}
+</style>
+
+{{ section.settings.html_area }}
+<section class="section-content overflow-hidden position-relative global-insta-feed py-lg-10 pt-lg-4 pt-7 pb-4" data-section-id="{{ section.id }}" style="background: {{ section.settings.section_bg_color }}; color:{{ section.settings.section_text_color }}">
+  <div class="container">
+    <div class="text-center heading_txt pt-lg-1 pt-2 d-flex align-items-center justify-content-lg-between justify-content-center">
+        {% if section.settings.heading_txt != blank %}
+            <h3 class="mb-0 pe-3">{{ section.settings.heading_txt }}</h3>
+        {% endif %}
+      {% if section.settings.btn_txt != blank %}
+          <a rel="noopener noreferrer" target="_blank" {% if section.settings.btn_link != blank %} href="{{ section.settings.btn_link }}" {% endif %}class="btn w-sm-auto w-100 d-lg-inline-flex d-none btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">{{ section.settings.btn_txt }}</a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="{% if section.settings.fluid_layout %}container-fluid px-0{% else %}container{% endif %} pb-lg-1">
+    {% unless section.settings.html_area contains "feed-" %}
+      <div id="insta-feed"></div>
+    {% endunless %}
+  </div>
+<div class="container d-lg-none pb-1">
+  <div class="text-center mb-4 pt-4 mt-1 heading_txt pb-xl-0 pb-2">
+      {% if section.settings.btn_txt != blank %}
+          <a rel="noopener noreferrer" target="_blank" {% if section.settings.btn_link %} href="{{ section.settings.btn_link_second }}" {% endif %}class="btn w-sm-auto w-100 btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">{{ section.settings.btn_txt }}</a>
+      {% endif %}
+  </div>
+</div>
+</section>  
+{% schema %}
+{
+  "name": "Instafeed App",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "heading_txt",
+      "label": "Heading Text"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "btn_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "btn_variant",
+      "label": "Button Variant",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "dark"
+    },
+    {
+      "type": "select",
+      "id": "btn_size",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "font_picker",
+      "label": "Heading font.",
+      "id": "heading_font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Heading Size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "feed_width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Feed Width",
+      "default": 100
+    },
+    {
+      "type": "textarea",
+      "id": "html_area",
+      "label": "Custom Code (optional)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Instafeed App",
+      "category": "Instagram Feed"
+    }
+  ]
+}
+{% endschema %}

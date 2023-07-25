@@ -1,0 +1,174 @@
+.image-hero .shortheight .swiper-slide {
+  min-height: 70vh;
+  height: auto !important;
+}
+
+.image-hero .tallheight .swiper-slide {
+  min-height: 400px;
+}
+
+.image-hero .tallheight .swiper-slide {
+  height: calc(100vh - 140px);
+  min-height: 50vw !important;
+}
+
+@media (min-width: 768px) {
+  .image-hero .shortheight .swiper-slide {
+    min-height: 55vh;
+  }
+}
+
+.image-hero .container-fluid .inside-block {
+  opacity: 1;
+  transition: all 0.7s;
+  transition-delay: 1.4s;
+  transform-origin: center;
+}
+
+.image-hero .fullheight .swiper-slide {
+  height: calc(100vh - 120px);
+}
+
+.image-hero .container-fluid .tallheight .swiper-slide {
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.image-hero .container-fluid {
+  padding: 101.01px 20px 20px 20px !important;
+}
+
+.template-index .image-hero .container-fluid {
+  padding: 118.01px 20px 20px 20px !important;
+}
+
+#shopify-section-template--16184566120610__4650e625-58c1-458d-8bb0-ff104d2e5c72
+  > section
+  > div {
+  padding: 101.01px 20px 20px !important;
+}
+
+.image-hero .media-wrap img,
+.image-hero .media-wrap svg,
+.image-hero .media-wrap {
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+}
+.content {
+  position: relative;
+  z-index: 2;
+}
+.overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block !important;
+  width: 100%;
+  height: 100%;
+  background-color: #000000 !important;
+  opacity: 0.4 !important;
+  mix-blend-mode: multiply !important;
+}
+.image-hero .swiper-button-next,
+.image-hero .swiper-button-prev {
+  z-index: 3;
+}
+
+.image-hero .swiper-button-next {
+  right: 20px;
+}
+
+.image-hero .swiper-button-prev {
+  left: 20px;
+}
+
+.caption_txt {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+}
+.image-hero .gradient-fair-tone {
+  height: 169vh;
+  background-image: url('https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient-HM-min.jpg?v=1678788486');
+}
+.anti-aging .image-hero .gradient-fair-tone {
+  height: 138vh;
+  background-image: url('https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient-HM-min.jpg?v=1678788486');
+}
+.image-hero .media-text-wrap {
+  position: relative !important;
+  width: 100% !important;
+}
+
+.heading_txt {
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 72px;
+}
+
+.heading_txt span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+@media (min-width: 992px) {
+  .caption_txt {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .image-hero .lazy {
+    background-image: none;
+  }
+  .image-hero .gradient-fair-tone {
+    height: 137vh;
+    background-image: url('https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient-HD-min.jpg?v=1678788486');
+  }
+}
+@media (max-width: 490px) {
+  .image-hero-desktop .caption_txt > * {
+    display: inline;
+  }
+  .heading_txt {
+    font-size: 40px;
+    line-height: 42px;
+  }
+}
+
+/**
+ * A/B 
+**/
+/** Hide all test variants by default **/
+.ab-variant {
+  display: none;
+}
+/** show one variant **/
+body.show-variant-1 .ab-variant-1 {
+  display: block !important;
+}
+/** hide original hero on variants **/
+body.show-variant section.header-slider {
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+  /** show one variant **/
+  body.show-variant-1 .ab-variant-1 {
+    display: none !important;
+  }
+  /** hide original hero on variants **/
+  body.show-variant section.header-slider {
+    display: block !important;
+  }
+}

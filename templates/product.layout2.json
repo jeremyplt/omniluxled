@@ -1,0 +1,526 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-product-layout-2",
+      "blocks": {
+        "84295844-2a16-4973-a77f-86f37b4f8898": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "use_metafields": true,
+            "sku_tagtype": "sku",
+            "is_featured_product": false,
+            "featured_product_handle": ""
+          }
+        },
+        "dbbd2e0d-3d94-4448-b166-f2d746801314": {
+          "type": "name",
+          "settings": {
+          }
+        },
+        "3b316236-d91e-4dd0-953a-173c1f40bfcf": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "fcbf423b-3c83-4097-901c-ca70b8b80e5c": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "b253ffff-d04d-43a0-9d68-fabdd77b595a": {
+          "type": "product_form",
+          "settings": {
+          }
+        },
+        "f74187b8-c891-42b8-9a6b-2c67a497b018": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "<ul><li>30-day money back guarantee<\/li><li>Backed by a 2-year manufacturer's warranty<\/li><\/ul>"
+          }
+        },
+        "product-tabs": {
+          "type": "product-tabs",
+          "settings": {
+            "enable_product_tabs": true,
+            "product_tabs_fluid_layout": true,
+            "product_tabs_layout": "accordion",
+            "enable_descripion_tab": false,
+            "enable_custom_tab_1": true,
+            "tab_1_title": "Clinically proven benefits",
+            "tab_1_content": "<ul><li>Reduces fine lines and wrinkles<\/li><li>Reduces the appearance of pigmentation and redness<\/li><li>Promotes healthier, younger-looking skin<\/li><li>All natural. No pain, side effects, or downtime<\/li><\/ul>",
+            "enable_custom_tab_2": true,
+            "tab_2_title": "Use",
+            "tab_2_content": "<ul><li>Three to five, 10-minute treatments per week for 4-6 weeks followed by maintenance as desired<\/li><li><a href=\"#\" title=\"View the how-to video here.\">View the how-to video here.<\/a><\/li><\/ul>",
+            "enable_custom_faq": true,
+            "faq_title": "FAQS",
+            "btn_txt": "Click here for full list.",
+            "btn_link": "",
+            "enable_custom_tab_4": true,
+            "tab_4_title": "Contraindications",
+            "tab_4_content": "<p>DO NOT use the Omnilux Contour™ LED system to treat any other conditions apart from those listed in the indications for use. The Omnilux Contour™ LED system has not been tested for any other conditions than those listed and the risk is unknown.<br\/><br\/>DO NOT use the Omnilux Contour™ LED system if you are pregnant, planning on becoming pregnant or breastfeeding. The Omnilux Contour™ LED system has NOT been tested on pregnant or breast-feeding women and therefore the risk to the fetus, neonate or pregnant women is unknown.<br\/><br\/><a href=\"#\" title=\"Click here for full list.\">Click here for full list.<\/a><\/p>"
+          }
+        },
+        "66b0df01-36e0-43a9-be92-84aa1699a008": {
+          "type": "faqs",
+          "settings": {
+            "faqs_title_sub": "What is Omnilux Contour?",
+            "faqs_content_sub": "<p><strong>Lorem Ipsum <\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<\/p>"
+          }
+        },
+        "3140fcef-f4c5-4528-8dce-9be71fe9ba00": {
+          "type": "faqs",
+          "settings": {
+            "faqs_title_sub": "How does it work",
+            "faqs_content_sub": "<p><strong>Lorem Ipsum <\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "84295844-2a16-4973-a77f-86f37b4f8898",
+        "dbbd2e0d-3d94-4448-b166-f2d746801314",
+        "3b316236-d91e-4dd0-953a-173c1f40bfcf",
+        "fcbf423b-3c83-4097-901c-ca70b8b80e5c",
+        "b253ffff-d04d-43a0-9d68-fabdd77b595a",
+        "f74187b8-c891-42b8-9a6b-2c67a497b018",
+        "product-tabs",
+        "66b0df01-36e0-43a9-be92-84aa1699a008",
+        "3140fcef-f4c5-4528-8dce-9be71fe9ba00"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "show_vendor": true,
+        "enable_dynamic_checkout": false,
+        "product_tabs_placement": "beside_slider"
+      }
+    },
+    "fe8cb400-1b52-49b2-a588-3e271b6b46e3": {
+      "type": "global-features-grid",
+      "blocks": {
+        "template--16047756640418__fe8cb400-1b52-49b2-a588-3e271b6b46e3-167161792075c70d88-0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_1.svg?v=1669721646",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "e790abbf-514a-4b60-aa46-ed91cd23d52c": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_2.svg?v=1669721646",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "8065c396-0a3f-4d03-b98b-a672c6cc2626": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_3.svg?v=1669721646",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "fd51fa9e-021c-4808-b649-47b606fdfc1e": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_4.svg?v=1669721646",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "7fcc6227-90ee-46da-8d12-894be806077b": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_5.svg?v=1669721646",
+            "title": "",
+            "txt": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16047756640418__fe8cb400-1b52-49b2-a588-3e271b6b46e3-167161792075c70d88-0",
+        "e790abbf-514a-4b60-aa46-ed91cd23d52c",
+        "8065c396-0a3f-4d03-b98b-a672c6cc2626",
+        "fd51fa9e-021c-4808-b649-47b606fdfc1e",
+        "7fcc6227-90ee-46da-8d12-894be806077b"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "grid_size": "2",
+        "heading_txt": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#000000",
+        "pt": 80,
+        "pb": 40,
+        "pts": 60,
+        "pbs": 20,
+        "border-top": false,
+        "border-bottom": false
+      }
+    },
+    "e543139a-7624-4c99-b377-8c2ed49caed5": {
+      "type": "template-page-banner-text",
+      "settings": {
+        "fluid_layout": false,
+        "gradient_tone": true,
+        "heading": "",
+        "txt": "",
+        "heading_txt": "Engineered for men's thicker skin",
+        "img_text1": "<p>On average, men's skin is 25% thicker. Omnilux Men is the only LED mask calibrated with the deepest penetrating wavelength of near-infrared light (1072nm) to meet men's unique skin needs.<br\/><br\/>From razor burn & dryness to fine lines, dark circles, & under-eye bags, Omnilux’s advanced LED light therapy technology provides visible, dermatologist-level results proven for men.<\/p>",
+        "img_text2": "",
+        "max_width": 493,
+        "image": "shopify:\/\/shop_images\/Engineered_for_men_s_thicker_skin.jpg",
+        "alignment": "text-left",
+        "image_alignment": "right",
+        "pt": 7,
+        "pb": 80,
+        "pts": 40,
+        "pbs": 60,
+        "border-top": false,
+        "border-bottom": true,
+        "play_icon": false,
+        "play_btn": true,
+        "btn_txt_watch": "",
+        "btn_type_watch": "",
+        "btn_variant_watch": "primary",
+        "btn_size_watch": "",
+        "btn_txt": "",
+        "btn_type": "",
+        "btn_variant": "primary",
+        "btn_size": ""
+      }
+    },
+    "565b9680-20c4-4fc1-8ac7-2b8338d7e127": {
+      "type": "global-results-slider",
+      "blocks": {
+        "c4aca90d-9b62-4082-a0d8-1cc23f28dac4": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Real_users_real_results_m01.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "9f5a208e-17df-490e-be6f-9638377f0465": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Real_users_real_results_m02.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "075d1210-3ac4-4c31-af71-63896ea22421": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Real_users_real_results_m03.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        }
+      },
+      "block_order": [
+        "c4aca90d-9b62-4082-a0d8-1cc23f28dac4",
+        "9f5a208e-17df-490e-be6f-9638377f0465",
+        "075d1210-3ac4-4c31-af71-63896ea22421"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "heading_style": "heading_style_1",
+        "pt": 80,
+        "pb": 75,
+        "pts": 54,
+        "pbs": 60,
+        "border-top": false,
+        "border-bottom": false,
+        "heading_txt": "Real users, real results",
+        "txt": "",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "",
+        "btn_variant": "dark",
+        "btn_size": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000",
+        "autoplay_enable": false,
+        "slider_enable": true,
+        "nav_arrows": false,
+        "nav_dots": false
+      }
+    },
+    "bb7f1503-cd56-4abf-b2f7-15064101b112": {
+      "type": "global-pop-up-video",
+      "settings": {
+        "fluid_layout": true,
+        "disable_min_height": true,
+        "muted": true,
+        "controls": true,
+        "loop": true,
+        "title": "See it in action",
+        "subtitle": "",
+        "btn_txt_watch": "Watch video",
+        "btn_type_watch": "",
+        "btn_variant_watch": "white",
+        "btn_size_watch": "",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "",
+        "btn_variant": "primary",
+        "btn_size": "",
+        "poster_type": "",
+        "bg_video": "",
+        "mobile_bg_video": "",
+        "poster_image": "shopify:\/\/shop_images\/men_mask_659363ff-7e41-4d7c-8808-4571fc818058.jpg",
+        "disable_overlay": true,
+        "overlay_bg_color": "#000000",
+        "overlay_opacity": 0.2,
+        "fluid_video_layout": true,
+        "video_type": "local",
+        "placement": "popup",
+        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49825a6165874aacae5ae8a919751dde.mp4",
+        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/49825a6165874aacae5ae8a919751dde.mp4",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#ffffff",
+        "alignment": "text-center",
+        "video_alignment": "justify-content-center",
+        "pt": 0,
+        "pb": 80,
+        "pts": 0,
+        "pbs": 60,
+        "border-top": false,
+        "border-bottom": false
+      }
+    },
+    "27e9e26c-9434-4db8-9f00-8e6428bf807a": {
+      "type": "global-image-with-text",
+      "blocks": {
+        "92e13a03-3cdc-4f9c-90ec-6379bba7add4": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Level up with 1072nm",
+            "max_width": 530,
+            "txt": "<p>The optimized 1072nm near-infrared wavelength is a longer beam of light - it targets your deepest skin layer and produces the most effective LED treatment for men.<\/p>",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "<ul><li>Perfectly activates cellular structures in thicker skin<\/li><li>Reduces fine lines, wrinkles, redness, irritation, dark circles, &<br\/>under-eye bags<\/li><li>Promotes a smoother, more even-toned complexion<\/li><\/ul>",
+            "btn_txt": "",
+            "btn_link": "",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Level_up_with_1072nm.jpg",
+            "alignment": "text-left",
+            "image_alignment": "right"
+          }
+        },
+        "b8e4fc00-4206-4e43-a8fe-c8de9742d566": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "How to use",
+            "max_width": 530,
+            "txt": "<p>We recommend three to five 10-minute treatments per week for four to six weeks, followed by maintenance as desired.<\/p>",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "<ul><li>Prepare your skin by washing your face<\/li><li>Charge controller & connect it to the device<\/li><li>Secure device using the velcro straps<\/li><li>Start the 10-minute treatment<\/li><li>Remove mask & apply moisturizer to skin<\/li><\/ul>",
+            "btn_txt": "",
+            "btn_link": "",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "Watch how-to video",
+            "btn_type_watch": "outline",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "See Our Quick Start Guide",
+            "link_url": "shopify:\/\/pages\/quick-start-guide",
+            "image": "shopify:\/\/shop_images\/men2.jpg",
+            "alignment": "text-left",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "92e13a03-3cdc-4f9c-90ec-6379bba7add4",
+        "b8e4fc00-4206-4e43-a8fe-c8de9742d566"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "enable_background_tone": false,
+        "border_bottom": true,
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000"
+      }
+    },
+    "71add312-bf35-407d-a2c9-787aee85c237": {
+      "type": "global-image-with-table",
+      "blocks": {
+        "af8599e2-c61e-4a15-b1a6-cfb112a3f76e": {
+          "type": "content",
+          "settings": {
+            "title": "Led type",
+            "details_table": "<p>Red and near-infrared<\/p>"
+          }
+        },
+        "1229527c-6593-4cab-8883-932efa8edad4": {
+          "type": "content",
+          "settings": {
+            "title": "Wavelengths",
+            "details_table": "<ul><li>633nm (red)<\/li><li>830nm (near-infrared)<\/li><li>1072nm (near-infrared)<\/li><\/ul>"
+          }
+        },
+        "d7bb3c2a-32b6-42a2-9310-a94e5e78451b": {
+          "type": "content",
+          "settings": {
+            "title": "Number of leds",
+            "details_table": "<ul><li>132 LEDs (2 per LED bulb) <\/li><li>66 LED bulbs<\/li><\/ul>"
+          }
+        },
+        "06ad18b1-b941-43b4-bc9c-ce850d8a03ec": {
+          "type": "content",
+          "settings": {
+            "title": "Weight",
+            "details_table": "<p>600g (MASK AND CONTROLLER)<\/p>"
+          }
+        },
+        "9caedc24-47af-4f4f-b86b-abb2cbcd1ad9": {
+          "type": "content",
+          "settings": {
+            "title": "Targeted use",
+            "details_table": "<p>Face<\/p>"
+          }
+        },
+        "c53a3d64-6d52-4ee1-bcbc-e2a6854a5187": {
+          "type": "content",
+          "settings": {
+            "title": "Certifications",
+            "details_table": "<p>FDA, CE, TAG<\/p>"
+          }
+        },
+        "ab9d4415-488c-4399-a433-853274f3d46f": {
+          "type": "content",
+          "settings": {
+            "title": "Warranty",
+            "details_table": "<ul><li>2 Years: Device<\/li><li>1 Year: Controller<\/li><\/ul>"
+          }
+        },
+        "d12a85a9-2f71-427d-a6f0-4b90d1376275": {
+          "type": "content",
+          "settings": {
+            "title": "Includes",
+            "details_table": "<ul><li>Flexible silicone Omnilux Men device<\/li><li>Rechargeable battery controller<\/li><li>Power supply and plug adaptors<\/li><li>USB-C line to USB-A connector<\/li><li>Head straps<\/li><li>Carry bag<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "af8599e2-c61e-4a15-b1a6-cfb112a3f76e",
+        "1229527c-6593-4cab-8883-932efa8edad4",
+        "d7bb3c2a-32b6-42a2-9310-a94e5e78451b",
+        "06ad18b1-b941-43b4-bc9c-ce850d8a03ec",
+        "9caedc24-47af-4f4f-b86b-abb2cbcd1ad9",
+        "c53a3d64-6d52-4ee1-bcbc-e2a6854a5187",
+        "ab9d4415-488c-4399-a433-853274f3d46f",
+        "d12a85a9-2f71-427d-a6f0-4b90d1376275"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "enable_background_tone": false,
+        "border-top": false,
+        "border-bottom": true,
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000",
+        "fullwidth_content": false,
+        "heading_txt": "Technical specifications",
+        "max_width": 530,
+        "txt": "",
+        "step_heading": "",
+        "steps_captions": "",
+        "image": "shopify:\/\/shop_images\/3d02.png",
+        "alignment": "text-left",
+        "image_alignment": "right"
+      }
+    },
+    "167162186202b4b8a9": {
+      "type": "apps",
+      "blocks": {
+        "e28a93cd-515e-41ab-9af5-7e95e8dac998": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": true,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "e28a93cd-515e-41ab-9af5-7e95e8dac998"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "8374c351-70e9-4f46-8d4b-1950ba27efe5": {
+      "type": "glabal-featured-product-list",
+      "settings": {
+        "fluid_layout": false,
+        "nav_dots": false,
+        "nav_arrows": false,
+        "nav_arrows_outside": false,
+        "heading_alignment": "me-lg-auto ms-lg-0 mx-auto",
+        "heading_txt": "You might also like",
+        "lead_txt": "",
+        "home_featured_collection": "all",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#000000",
+        "btn_text": "",
+        "btn_url": "",
+        "pt": 80,
+        "pb": 46,
+        "pts": 59,
+        "pbs": 44,
+        "border-top": true,
+        "border-bottom": false,
+        "slide_per_": true
+      }
+    },
+    "fae525e8-4af2-43f8-95c2-3b91e87ae05b": {
+      "type": "info-text",
+      "settings": {
+        "fluid_layout": false,
+        "img_text1": "<p>*Applies to Ground shipping rates only. Excludes Hawaii, Alaska, New Zealand, Bosnia & Herzegovina, Iceland, Latvia, Lithuania, and Northern Ireland<\/p>",
+        "pt": 0,
+        "pb": 5,
+        "pts": 0,
+        "pbs": 5,
+        "border-top": false,
+        "border-bottom": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "fe8cb400-1b52-49b2-a588-3e271b6b46e3",
+    "e543139a-7624-4c99-b377-8c2ed49caed5",
+    "565b9680-20c4-4fc1-8ac7-2b8338d7e127",
+    "bb7f1503-cd56-4abf-b2f7-15064101b112",
+    "27e9e26c-9434-4db8-9f00-8e6428bf807a",
+    "71add312-bf35-407d-a2c9-787aee85c237",
+    "167162186202b4b8a9",
+    "8374c351-70e9-4f46-8d4b-1950ba27efe5",
+    "fae525e8-4af2-43f8-95c2-3b91e87ae05b"
+  ]
+}

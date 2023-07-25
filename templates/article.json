@@ -1,0 +1,60 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-article",
+      "blocks": {
+        "social_sharing": {
+          "type": "socials",
+          "settings": {
+            "enable_socials": true,
+            "socials_title": "follow us",
+            "social_icon_facebook": true,
+            "social_icon_tiktok": true,
+            "social_icon_twitter": false,
+            "social_icon_instagram": true,
+            "social_icon_reddit": false,
+            "social_icon_youtube": true
+          }
+        },
+        "recent-articles": {
+          "type": "recent-articles",
+          "settings": {
+            "enable_recent_articles": true,
+            "recent_articles_title": "most read articles",
+            "total_recent_articles": 3
+          }
+        },
+        "e66a15a0-213a-457f-9013-8e55df279e09": {
+          "type": "shop_favorites",
+          "settings": {
+            "enable_shop_favorites": true,
+            "shop_favorites_title": "shop your favorites",
+            "btn_txt": "shop all",
+            "btn_link": "shopify:\/\/collections",
+            "btn_type": "outline",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "product_1": "omnilux-contour-neck-decollete",
+            "product_2": "omnilux-contour-glove"
+          }
+        }
+      },
+      "block_order": [
+        "social_sharing",
+        "recent-articles",
+        "e66a15a0-213a-457f-9013-8e55df279e09"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "enable_social_sharing": true,
+        "enable_sidebar": true,
+        "sidebar_is_sticky": false,
+        "enable_article_navigation": true,
+        "navigation_type": "simple"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

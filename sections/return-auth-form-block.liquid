@@ -1,0 +1,138 @@
+{{ 'return-auth-form-block.css' | asset_url | stylesheet_tag }}
+<section >
+  <div class="section-content" data-section-id="{{ section.id }}">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-8 col-md-6 col-lg-5 mx-auto contact-form">
+          <div class="col-12 text-center">
+            {% if section.settings.heading_txt != blank %}
+            <h4 id="heading_txt" class="mb-3">{{ section.settings.heading_txt }}</h4>
+            {% endif %}
+          </div>
+          {%- assign formId = 'ContactForm' -%}
+          {% form 'contact', id: formId %}
+            {% if form.posted_successfully? %}
+              <p><strong>Thanks for contacting us. We'll get back to you as soon as possible.</strong></p>
+            {% else %}
+              {% if form.errors %}
+                <ul class="errors">
+                  {% for field in form.errors %}
+                    <li>{{ field | replace: 'body','Message' | capitalize }} - {{ form.errors.messages[field] }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              <div class="my-4">
+                <p>Will you return or replace?</p>
+                <span class="form-check form-check-inline">
+                <label class="form-check-label" for="{{ formId }}-return-method" title="Yes#">
+                  <input type="radio" id="{{ formId }}-return-method" name="contact[return_replace_method]" class="form-check-input" value="Yes" checked>
+                  <span class="small">Return</span>
+                </label>
+                </span>
+                <span class="form-check form-check-inline">
+                  <label class="form-check-label" for="{{ formId }}-replace-method" title="No#">
+                    <input type="radio" id="{{ formId }}-replace-method" name="contact[return_replace_method]" class="form-check-input" value="No">
+                    <span class="small">Replace</span>
+                  </label>
+                </span>
+              </div>
+              <div class="form-group form-floating">
+                <input type="text" id="{{ formId }}-first-name" name="contact[first_name]" class="form-control " placeholder="First name" required>
+                <label for="{{ formId }}-first-name">First name</label>
+              </div>
+              <div class="form-group form-floating">
+                <input type="text" id="{{ formId }}-last-name" name="contact[last_name]" class="form-control " placeholder="Last name" required>
+                <label for="{{ formId }}-last-name">Last name</label>
+              </div>
+              <div class="form-group form-floating">
+                <input type="email" id="{{ formId }}-email" name="contact[email]" class="form-control " placeholder="Email" required>
+                <label for="{{ formId }}-email">Email</label>
+              </div>
+              <div class="form-group form-floating">
+                <input 
+                  type="date" 
+                  id="{{ formId }}-purchase-date" 
+                  name="contact[purchase_date]" 
+                  class="form-control " 
+                  placeholder="Purchase Date" 
+                  required
+                >
+                <label for="{{ formId }}purchase-date">Purchase Date</label>
+              </div>
+              <div class="mb-4">
+                <p>Did you purchase directly?</p>
+                <span class="form-check form-check-inline">
+                <label class="form-check-label" for="{{ formId }}-purchase-method-direct" title="Yes#">
+                  <input type="radio" id="{{ formId }}-purchase-method-direct" name="contact[purchase_method]" class="form-check-input" value="Yes" checked>
+                  <span class="small">Yes</span>
+                </label>
+                </span>
+                <span class="form-check form-check-inline">
+                  <label class="form-check-label" for="{{ formId }}-purchase-method-nodirect" title="No#">
+                    <input type="radio" id="{{ formId }}-purchase-method-nodirect" name="contact[purchase_method]" class="form-check-input" value="No">
+                    <span class="small">No</span>
+                  </label>
+                </span>
+              </div>
+              <div id="orderNumberInput" class="form-group form-floating" >
+                <input type="text" id="{{ formId }}-order-number" name="contact[order_number]" class="form-control " placeholder="Order Number" required>
+                <label for="{{ formId }}-order-number">Order Number</label>
+              </div>              
+              {% comment %} <label for="{{ formId }}-attach-image" class="drop-container">
+                <span class="drop-title">Attach image file here</span>
+                <input type="file" id="{{ formId }}-attach-image" name="contact[attach_image]" accept="image/png, image/gif, image/jpeg">
+              </label> {% endcomment %}
+              <div class="form-group mt-4">
+                <label for="{{ formId }}-product" class="mb-2">Products</label>
+                <select class="form-select" id="{{ formId }}-product" name="contact[product]">
+                  {% for product in collections['all'].products %}
+                      {%- comment %}<locksmith:5dba>{% endcomment -%}
+                        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collections.all, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                      {%- comment %}</locksmith:5dba>{% endcomment -%}
+                      <option value='{{product.tags | join: "|"}}'>{{product.title}}</option>
+                    {% endfor %}
+                </select>
+              </div>
+              <div class="form-group form-floating">
+                <input type="text" id="{{ formId }}-serial-number" name="contact[serial_number]" class="form-control" placeholder="Product Serial Number" required>
+                <label for="{{ formId }}-serial-number">Product Serial Number</label>
+              </div>
+              <div class="form-group form-floating">
+                <textarea id="{{ formId }}-message" name="contact[body]" class="form-control" rows="10" placeholder="Description" required></textarea>                      
+                <label for="{{ formId }}-message">Description</label>
+              </div>
+              <input type="submit" class="btn btn-primary btn-block" value="Submit">
+            {% endif %}
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{{'return-auth-form-block.js' |  asset_url}}"></script>
+
+{% schema %}
+{
+  "name": "Return Authorization Form",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Return Authorization Form"
+    }
+  ],
+  "blocks": [    
+  ],
+  "presets": [
+    {
+      "name": "Return Authorization Form"
+    }
+  ]
+}
+{% endschema %}

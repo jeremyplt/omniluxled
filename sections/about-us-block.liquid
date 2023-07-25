@@ -1,0 +1,401 @@
+{{ 'about-us-block.css' | asset_url | stylesheet_tag }}
+<section >
+    <div id="advisoryBlock" class="section-content"  data-section-id="{{ section.id }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 text-center mx-auto">
+                    {% if section.settings.heading_txt != blank %}
+                    <h2 class="mb-3">{{ section.settings.heading_txt }}</h1>
+                    {% endif %}
+                    {% if section.settings.heading_paragraph != blank %}
+                        <p class="m-0">{{ section.settings.heading_paragraph }}</p>
+                    {% endif %}
+                </div>
+                <div class="col-12 mt-4 mt-lg-7">
+                    {%- for block in section.blocks -%}
+                        <custom-tabs class="bg-white d-block" {{ block.shopify_attributes }}>
+                            <div class="">
+                                <div id="productTabs" data-product-tabs>
+                                  <slider-element class="swiper-container  carousel collection-slider-style-3 d-block position-relative ">
+                                    <div class="swiper swiper-slider  pb-3" data-slider='{
+                                        "loop": false,
+                                        "slidesPerView": 1.1,
+                                        "spaceBetween": 0,
+                                        "shortSwipes": true,
+                                        "grabCursor": true,
+                                        "pagination": {
+                                            "el": ".swiper-pagination"
+                                        },
+                                        "breakpoints": {
+                                          "560": {
+                                              "slidesPerView": 2
+                                          },
+                                          "768": {
+                                              "slidesPerView": 3
+                                          },
+                                          "992": {
+                                              "slidesPerView": 4
+                                          },
+                                          "1200": {
+                                            "slidesPerView": 5
+                                        }
+                                      }
+                                    }'>
+                                        <div class="swiper-wrapper  board-tabs">
+                                          {%- if block.settings.enable_custom_tab_1 -%}
+                                            <div class="swiper-slide   carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
+                                              <div class="tablink triangle  w-100 open board-block-border" role="tab">
+                                                <a class="nav-link" data-toggle="tab" href="#custom-tab-1" data-tabcontent="#custom-tab-1" aria-expanded="false">
+                                                  <div class="py-4  ">
+                                                    <div class="">
+                                                      <div class="borad-block-img">
+                                                        <img src=" {{ block.settings.tab_1_image | image_url: width: 360, format: 'pjpg' }} " alt="" class="card-img-top" loading="lazy" width="360" height="360">
+                                                      </div>
+                                                    </div>
+                                                    <div class="text-center pt-3 mx-4">
+                                                      <h5 class="board-member-name">
+                                                        {{ block.settings.tab_1_name }}
+                                                      </h5>
+                                                    </div>
+                                                  </div>
+                                                </a>
+                                              </div>
+                                            </div>
+                                            {% endif %}
+                                            {%- if block.settings.enable_custom_tab_2 -%}
+                                            <div class="swiper-slide  carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
+                                              <div class="tablink triangle w-100  board-block-border" role="tab">
+                                                <a class="nav-link" data-toggle="tab" href="#custom-tab-2" data-tabcontent="#custom-tab-2" aria-expanded="false">
+                                                  <div class="py-4  ">
+                                                    <div class="borad-block-img">
+                                                      <img src=" {{ block.settings.tab_2_image | image_url: width: 360, format: 'pjpg' }} " width="360" height="360" alt="" class="card-img-top" loading="lazy">
+                                                    </div>
+                                                    <div class="text-center pt-3 mx-4">
+                                                      <h5 class="board-member-name">
+                                                        {{ block.settings.tab_2_name }}
+                                                      </h5>
+                                                    </div>
+                                                  </div>
+                                                </a>
+                                              </div>
+                                            </div>
+                                            {% endif %}
+                                            {%- if block.settings.enable_custom_tab_3 -%}
+                                            <div class="swiper-slide carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
+                                              <div class="tablink triangle w-100 board-block-border " role="tab">
+                                                <a class="nav-link" data-toggle="tab" href="#custom-tab-3" data-tabcontent="#custom-tab-3" aria-expanded="false">
+                                                  <div class="py-4  ">
+                                                    <div class="borad-block-img">
+                                                      <img src=" {{ block.settings.tab_3_image | image_url: width: 360, format: 'pjpg' }} " width="360" height="360" alt="" class="card-img-top" loading="lazy">
+                                                    </div>
+                                                    <div class="text-center pt-3 mx-4">
+                                                      <h5 class="board-member-name">
+                                                        {{ block.settings.tab_3_name }}
+                                                      </h5>
+                                                    </div>
+                                                  </div>
+                                                </a>
+                                              </div>
+                                            </div>
+                                            {% endif %}
+                                            {%- if block.settings.enable_custom_tab_4 -%}
+                                            <div class="swiper-slide   carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
+                                              <div class="tablink triangle w-100  board-block-border" role="tab">
+                                                <a class="nav-link" data-toggle="tab" href="#custom-tab-4" data-tabcontent="#custom-tab-4" aria-expanded="false">
+                                                  <div class="py-4  ">
+                                                    <div class="borad-block-img">
+                                                      <img src=" {{ block.settings.tab_4_image | image_url: width: 360, format: 'pjpg' }} " width="360" height="360" alt="" class="card-img-top" loading="lazy">
+                                                    </div>
+                                                    <div class="text-center pt-3 mx-4">
+                                                      <h5 class="board-member-name">
+                                                        {{ block.settings.tab_4_name }}
+                                                      </h5>
+                                                    </div>
+                                                  </div>
+                                                </a>
+                                              </div>
+                                            </div>
+                                            {% endif %}
+                                            {%- if block.settings.enable_custom_tab_5 -%}
+                                            <div class="swiper-slide  carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
+                                              <div class="tablink triangle w-100 board-block-border board-block-end" role="tab">
+                                                <a class="nav-link" data-toggle="tab" href="#custom-tab-5" data-tabcontent="#custom-tab-5" aria-expanded="false">
+                                                  <div class="py-4  ">
+                                                    <div class="borad-block-img">
+                                                      <img src=" {{ block.settings.tab_5_image | image_url: width: 360, format: 'pjpg' }} " alt="" class="card-img-top" width="360" height="360" loading="lazy">
+                                                    </div>
+                                                    <div class="text-center pt-3 mx-4">
+                                                      <h5 class="board-member-name">
+                                                        {{ block.settings.tab_5_name }}
+                                                      </h5>
+                                                    </div>
+                                                  </div>
+                                                </a>
+                                              </div>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </slider-element>
+                                <div class="tab-content text-left" id="productTabsContent">
+                                    {%- if block.settings.enable_custom_tab_1 -%}
+                                    <div class="tab-pane tabcontent open" id="custom-tab-1" role="tabpanel">
+                                      <div class="col-lg-6 pt-8 text-center mx-auto lh-xl">
+                                        {{ block.settings.tab_1_title }}
+                                      </div>
+                                      <div class="col-12 col-lg-8 mx-auto">
+                                        <div class="rte  text-center">
+                                          <p>
+                                            {{ block.settings.tab_1_content }}
+                                          </p>
+                                      </div>
+                                      </div>
+                                    </div>
+                                    {% endif %}
+                                    {%- if block.settings.enable_custom_tab_2 -%}
+                                    <div class="tab-pane tabcontent " id="custom-tab-2" role="tabpanel">
+                                      <div class="col-lg-6 pt-8 text-center mx-auto lh-xl">
+                                        {{ block.settings.tab_2_title }}
+                                      </div>
+                                      <div class="col-12 col-lg-8 mx-auto">
+                                        <div class="rte  text-center">
+                                          <p>
+                                            {{ block.settings.tab_2_content }}
+                                          </p>
+                                      </div>
+                                      </div>
+                                    </div>
+                                    {% endif %}
+                                    {%- if block.settings.enable_custom_tab_3 -%}
+                                    <div class="tab-pane tabcontent " id="custom-tab-3" role="tabpanel">
+                                      <div class="col-lg-6 pt-8 text-center mx-auto lh-xl">
+                                        {{ block.settings.tab_3_title }}
+                                      </div>
+                                      <div class="col-12 col-lg-8 mx-auto">
+                                        <div class="rte  text-center">
+                                          <p>
+                                            {{ block.settings.tab_3_content }}
+                                          </p>
+                                      </div>
+                                      </div>
+                                    </div>
+                                    {% endif %}
+                                    {%- if block.settings.enable_custom_tab_4 -%}
+                                    <div class="tab-pane tabcontent " id="custom-tab-4" role="tabpanel">
+                                      <div class="col-lg-6 pt-8 text-center mx-auto text-uppercase lh-xl">
+                                        {{ block.settings.tab_4_title }}
+                                      </div>
+                                      <div class="col-12 col-lg-8 mx-auto">
+                                        <div class="rte  text-center">
+                                          <p>
+                                            {{ block.settings.tab_4_content }}
+                                          </p>
+                                      </div>
+                                      </div>
+                                    </div>
+                                    {% endif %}
+                                    {%- if block.settings.enable_custom_tab_5 -%}
+                                    <div class="tab-pane tabcontent " id="custom-tab-5" role="tabpanel">
+                                      <div class="col-lg-6 pt-8 text-center mx-auto  lh-xl">
+                                        {{ block.settings.tab_5_title }}
+                                      </div>
+                                      <div class="col-12 col-lg-8 mx-auto">
+                                        <div class="rte  text-center">
+                                          <p>
+                                            {{ block.settings.tab_5_content }}
+                                          </p>
+                                      </div>
+                                      </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                              </div>
+                        </custom-tabs>
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "About Us Board",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_paragraph",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product-tabs",
+      "name": "Advisory board Tabs",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Tabs"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_custom_tab_1",
+          "label": "Enable Custom Tab 1?"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_1_image",
+          "label": "Tab Image 1 ",
+          "info": "For Better Viewing Use Example dimentions: 150*150 ( Aspect Ratio: 1:1)"
+        },
+        {
+          "type": "textarea",
+          "id": "tab_1_name",
+          "label": "Tab 1 content name",
+          "default": "Tab Name 1"
+        },
+        {
+          "type": "html",
+          "id": "tab_1_title",
+          "label": "Tab 1 content Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_1_content",
+          "label": "Tab 1 Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_custom_tab_2",
+          "label": "Enable Custom Tab 2?"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_2_image",
+          "label": "Tab Image 2 ",
+          "info": "For Better Viewing Use Example dimentions: 150*150 ( Aspect Ratio: 1:1)"
+        },
+        {
+          "type": "textarea",
+          "id": "tab_2_name",
+          "label": "Tab 2 content name",
+          "default": "Tab Name 2"
+        },
+        {
+          "type": "html",
+          "id": "tab_2_title",
+          "label": "Tab 2 content Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_2_content",
+          "label": "Tab 2 Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_custom_tab_3",
+          "label": "Enable Custom Tab 3?"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_3_image",
+          "label": "Tab Image 3 ",
+          "info": "For Better Viewing Use Example dimentions: 150*150 ( Aspect Ratio: 1:1)"
+        },
+        {
+          "type": "textarea",
+          "id": "tab_3_name",
+          "label": "Tab 3 content name",
+          "default": "Tab Name 3"
+        },
+        {
+          "type": "html",
+          "id": "tab_3_title",
+          "label": "Tab 3 content Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_3_content",
+          "label": "Tab 3 Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_custom_tab_4",
+          "label": "Enable Custom Tab 4?"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_4_image",
+          "label": "Tab Image 4 ",
+          "info": "For Better Viewing Use Example dimentions: 150*150 ( Aspect Ratio: 1:1)"
+        },
+        {
+          "type": "textarea",
+          "id": "tab_4_name",
+          "label": "Tab 4 content name",
+          "default": "Tab Name 4"
+        },
+        {
+          "type": "html",
+          "id": "tab_4_title",
+          "label": "Tab 4 content Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_4_content",
+          "label": "Tab 4 Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_custom_tab_5",
+          "label": "Enable Custom Tab 5?"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_5_image",
+          "label": "Tab Image 5 ",
+          "info": "For Better Viewing Use Example dimentions: 150*150 ( Aspect Ratio: 1:1)"
+        },
+        {
+          "type": "textarea",
+          "id": "tab_5_name",
+          "label": "Tab 5 content name",
+          "default": "Tab Name 5"
+        },
+        {
+          "type": "html",
+          "id": "tab_5_title",
+          "label": "Tab 5 content Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_5_content",
+          "label": "Tab 5 Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Us Board",
+      "blocks": [
+        {
+          "type": "product-tabs"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

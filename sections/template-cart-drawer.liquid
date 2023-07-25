@@ -1,0 +1,274 @@
+<!-- Convert Experiments conversion tracking -->  <script type="text/javascript">  window._conv_q = window._conv_q || [];  _conv_q.push(["triggerConversion", "10047507"]);  </script> 
+<section data-section-id="{{ section.id }}" >
+    <div class="section-content">
+        <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+            <ajax-cart class="cart-page d-flex flex-column" style="visibility: hidden;" updating="false">
+                <div class="d-flex justify-content-center align-items-center section-header mb-md-7 mb-5">
+                        <h1 class="page-title cart-title mb-0" tabindex="0">{{ 'templates.cart.title' | t }}</h1>
+                        <a href="#close-cart" class="btn-close float-right close-ajax--cart d-none" role="button" tabindex="0" rel="nofollow" aria-label="Close" title="Close">
+                            <span class="ox-close text-gray-900"></span>
+                        </a>
+                </div>
+
+                <div class="row">
+                    <form data-cart-form action="{{ routes.cart_url }}" method="post">
+                        {% if cart.item_count > 0 %}
+                            {% if settings.enable_shipping_bar %}
+                                <div class="col-12">
+                                    {% render 'cart-free-shipping-bar' %}
+                                </div>
+                            {% endif %}
+
+                            <div class="col-12">
+                                <div class="cart-header py-2 px-3 bg-gray-300">
+                                    <div class="row align-items-center">
+                                        <div class="col-4 col-md-6">{{ 'templates.cart.headings.product' | t }}</div>
+                                        <div class="d-none d-md-block col-md-2 text-md-center">{{ 'templates.cart.headings.price' | t }}</div>
+                                        <div class="col-4 col-md-2 text-center">{{ 'templates.cart.headings.quantity' | t }}</div>
+                                        <div class="col-4 col-md-2 text-end">{{ 'templates.cart.headings.total' | t }}</div>
+                                    </div>
+                                </div>
+                                <div class="cart-body">
+                                {%- for item in cart.items -%}
+
+                                    {%- liquid
+                                        assign currentVar = item.product.first_available_variant
+                                        for var in item.product.variants
+                                            if item.id == var.id
+                                                assign currentVar = var
+                                                break 
+                                            endif
+                                        endfor
+
+                                        assign varStatus = 'simple'
+                                        if currentVar.inventory_management == 'shopify' and currentVar.inventory_policy == 'deny' and currentVar.inventory_quantity <= 0 
+                                            assign varStatus = 'sold_out'
+                                        elsif currentVar.inventory_management == 'shopify' and currentVar.inventory_policy == 'deny' and item.quantity > currentVar.inventory_quantity
+                                            assign varStatus = 'modify'
+                                        elsif currentVar.inventory_management == 'shopify' and currentVar.inventory_policy == 'deny' and item.quantity == currentVar.inventory_quantity 
+                                            assign varStatus = 'locked'
+                                        endif
+                                    -%}
+
+                                    <div class="cart-items border-bottom"  data-cart-item data-variant-id="{{ item.id }}" data-product-id="{{item.product.id}}">
+                                        <div class="row align-items-center cart-item position-relative">
+                                            <div class="col-12 col-md-6 cart-product-img">
+                                                <div class="d-flex">
+                                                    <div class="cart-img align-self-start">
+                                                        <div class="w-100 h-100 position-relative square-card">
+                                                            {% if item.image %}
+                                                                <img class="img-fluid item-im position-absolute top-0 start-0 w-100 h-100 object-cover"
+                                                                src="{{ item.image | image_url: width: 150 }}"
+                                                                alt="{{ item.image.alt | default: item.product_title | escape }}"
+                                                                loading="lazy"
+                                                                width="75"
+                                                                height="{{ 75 | divided_by: item.image.aspect_ratio | ceil }}" >
+                                                            {% else %}
+                                                            <img class="img-fluid item-img position-absolute top-0 start-0 w-100 h-100 object-cover"
+                                                                src="{{ settings.no_image | image_url: width: 150 }}"
+                                                                alt="{{ settings.no_image.alt | default: item.product_title | escape }}"
+                                                                loading="lazy"
+                                                                width="75"
+                                                                height="{{ 75 | divided_by: settings.no_image.aspect_ratio | ceil }}" >
+                                                                
+                                                            {% endif %}
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-item-text d-flex flex-column justify-content-between">
+                                                        <div style="line-height: 1.3571428571;" class="fw-normal pe-4">
+                                                            {%- if section.settings.show_vendor -%}
+                                                                <p class="font-size-sm mb-0 text-uppercase fw-normal">{{ item.product.vendor }}</p>
+                                                            {%- endif -%}
+                                                            <a href="{{ item.url }}" style="line-height: 1.1875;" class="card-title fw-semibold"> {{ item.product.title | escape }} </a>
+
+                                                            <div data-preorder-cartMessage class="font-size-lg fw-normal my-2"></div>
+                                                            {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
+                                                                {%- if item.product.has_only_default_variant == false -%}
+                                                                    <ul class="list-unstyled font-size-md mb-1">
+                                                                    {%- for option in item.options_with_values -%}
+                                                                        <li>
+                                                                            <span class="text-muted small text-capitalize">{{ option.name }}:</span>
+                                                                            <span class="text-muted small text-capitalize">{{ option.value }}</span>
+                                                                        </li>
+                                                                    {%- endfor -%}
+                                                                    </ul>
+                                                                {%- endif -%}
+
+                                                                {% if item.properties.size != 0 %}
+                                                                    <ul class="list-unstyled font-size-md mb-1">
+                                                                    {%- for property in item.properties -%}
+                                                                        {%- assign property_first_char = property.first | slice: 0 -%}
+                                                                        {%- if property.last != blank and property_first_char != '_' -%}
+                                                                            <li>
+                                                                                <span class="text-muted small text-capitalize">{{ property.first }}:</span>
+                                                                                <span class="text-muted small text-capitalize">
+                                                                                    {%- if property.last contains '/uploads/' -%}
+                                                                                        <a href="{{ property.last }}" target="_blank">
+                                                                                            {{ property.last | split: '/' | last }}
+                                                                                        </a>
+                                                                                    {%- else -%}
+                                                                                        {{ property.last }}
+                                                                                    {%- endif -%}
+                                                                                </span>
+                                                                            </li>
+                                                                        {%- endif -%}
+                                                                    {%- endfor -%}
+                                                                    </ul> 
+                                                                {% endif %}
+
+                                                                <p class="product-option font-size-md mb-1">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                                                            {%- endif -%}
+                                                        </div>
+
+                                                        <div class="d-flex quantity-box-wrap justify-content-between align-items-center mt-3">
+                                                            <div class="quantity-box">
+                                                                <div class="d-flex align-items-center justify-content-center">
+                                                                    {% if item.properties['promo_product'] or item.line_price == 0 %}
+                                                                        <input type="hidden" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" step="1" min="1" pattern="[0-9]*" inputmode="numeric" data-qty-input class="quantity form-control text-center">
+                                                                    {% else %}
+                                                                        <div class="quantity-wrapper mx-auto" data-qty-container>
+                                                                            <label for="{{ 'templates.cart.quantity.label' | t }}" title="{{ 'templates.cart.quantity.label' | t }}">{{ 'templates.cart.quantity.label' | t }}</label>
+                                                                            <div class="input-group input-group-sm">
+                                                                                <div class="input-group-prepend">
+                                                                                    <span  class="input-group-text h-100 cursor-pointer" rel="nofollow" aria-label="{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}" title="{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}" data-for="decrease" data-qty-btn>
+                                                                                        <span class="btn-decrease d-flex h-100 align-items-center"><span class="ox-minus"></span></span>
+                                                                                        <span class="visually-hidden">{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}</span>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <input type="number" name="updates[]" id="updates_{{ item.key }}" aria-label="{{ 'templates.cart.quantity.input_label' | t: product: item.title | escape }}" value="{{ item.quantity }}" step="1" min="1" inputmode="numeric" data-qty-input data-index="{{ forloop.index }}" class="quantity form-control text-center py-2"
+                                                                                    data-qty-input-cart-update
+                                                                                >
+                                                                                <div class="input-group-append">
+                                                                                    <span class="input-group-text h-100 cursor-pointer {% if varStatus == 'modify' or varStatus == 'locked' %}disabled{% endif %}" rel="nofollow" aria-label="{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}" title="{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}" data-for="increase" data-qty-btn>
+                                                                                        <span class="btn-increase d-flex h-100 align-items-center"><span class="ox-plus"></span></span>
+                                                                                        <span class="visually-hidden">{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}</span>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <span class="cart-item-close position-absolute top-0 font-size-xs end-0 me-3 cursor-pointer"
+                                                                            href="javascript:void(0);"
+                                                                            title="{{ 'templates.cart.remove' | t }}"
+                                                                            aria-label="{{ 'templates.cart.remove' | t }}"
+                                                                            data-toggle="tooltip"
+                                                                            data-itemRemove data-index="{{ forloop.index }}"
+                                                                            data-placement="left">
+                                                                            <span class="ox-close"></span>
+                                                                        </span>
+                                                                    {% endif %}
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-end cart-total-price ps-3 fw-normal">
+                                                                {% if item.properties['promo_product'] or item.line_price == 0 %}
+                                                                    <span class="m-0 p-0">{{ 'templates.cart.free' | t }}</span>
+                                                                {% else %}
+                                                                    <span class="m-0 p-0"> {{ item.line_price | money }} </span>
+                                                                {% endif %}
+                                                            </div>
+                                                        </div>
+                                                                                <div class="showabtest">
+                                        <span data-extend-wrapper-custom class="cursor-pointer btn-link font-size-md fw-bold ls-1 text-uppercase" style="line-height: 1.2857142857;"> 
+                                        {% comment %} + add accident protection for $27.99  {% endcomment %}
+                                    </span>
+                                        <!-- + add accident protection for $27.99 -->
+                                            {%- comment -%}
+                                            <div class="col-4 col-md-2 text-md-center cart-price">
+                                                {% if item.properties['promo_product'] or item.original_price == 0 %}
+                                                    <span class="m-0 p-0">{{ 'templates.cart.free' | t }}</span>
+                                                {% elsif item.price == 0 %}
+                                                    <s class="text-muted m-0 p-0">{{ item.original_price | money }}</s>
+                                                {% else %}
+                                                    <span class="m-0 p-0">{{ item.price | money }}</span>
+                                                {% endif %}
+                                            </div>
+                                            {%- endcomment -%}
+                                              
+                                            
+<div class="hideabtest">
+                                             <!-- + add accident protection for $27.99 -->
+                                        <span data-extend-wrapper-custom class="cursor-pointer btn-link font-size-md fw-bold ls-1 text-uppercase mt-3 pt-1 hideabtest" style="line-height: 1.2857142857;"> 
+                                        {% comment %} + add accident protection for $27.99  {% endcomment %}
+                                    </span>
+</div>
+                                              </div></div>  </div>
+                                                </div>
+                                        <!-- + add accident protection for $27.99 -->
+                                            {%- comment -%}
+                                            <div class="col-4 col-md-2 text-md-center cart-price">
+                                                {% if item.properties['promo_product'] or item.original_price == 0 %}
+                                                    <span class="m-0 p-0">{{ 'templates.cart.free' | t }}</span>
+                                                {% elsif item.price == 0 %}
+                                                    <s class="text-muted m-0 p-0">{{ item.original_price | money }}</s>
+                                                {% else %}
+                                                    <span class="m-0 p-0">{{ item.price | money }}</span>
+                                                {% endif %}
+                                            </div>
+                                            {%- endcomment -%}
+                                            {%- if varStatus == 'sold_out' -%}
+                                                <p class="text-danger"> {{ 'templates.cart.update_cart_message.sold_out' | t }}</p>
+                                            {%- elsif varStatus == 'modify' -%}
+                                                <p class="text-danger">{{ 'templates.cart.update_cart_message.modify' | t: quantity: currentVar.inventory_quantity }}</p>
+                                            {%- elsif varStatus == 'locked' -%}
+                                                <p class="text-danger">{{ 'templates.cart.update_cart_message.locked' | t: quantity: currentVar.inventory_quantityt }}</p>
+                                            {%- endif -%}
+                                        </div>
+                                       
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="cart__warnings text-center section-min-height d-flex flex-column justify-content-center">
+                                <span class="ox-bag justify-content-center h2"></span>
+                                <h5 class="cart__empty-text">{{ 'templates.cart.empty' | t }}</h5>
+                                <a href="{{ routes.all_products_collection_url }}" class="link">
+                                    {{ 'general.continue_shopping' | t }}
+                                </a>
+                            </div>
+                        {% endif %}
+                    </form>
+
+                    <div class="col-12 cart-total {% unless cart.item_count > 0 %}d-none{% endunless %}" data-checkoutBtns>
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <h5 class="text-uppercase my-0">{{ 'templates.cart.total' | t }}:</h5>
+                            </div>
+                            <div class="col-6 text-end" style="display: none;">
+                                <h5 class="my-0" data-cartTotal><span class="money">{{ cart.total_price | money }}</span></h5>
+                            </div>
+                        </div>
+
+                        {% if settings.enable_cart_notes %}
+                            {%- assign cartNote = cart.note -%}
+                            <div class="row mt-5" data-cartNote>
+                                <div class="col-12 mx-auto text-center">
+                                <p>{{ 'templates.cart.note' | t }}:</p>
+                                    <textarea name="note" class="form-control" rows="4" data-default="{{ cartNote | strip }}">{{ cart.note }}</textarea>
+                                    <button type="submit" class="btn m-auto text-decoration-underline" data-saveNote style="display: none;" data-default="Save" data-adding_txt="saving..">Save</button>
+                                    <p class="font-size-sm text-center pt-3" data-resultMsg style="display: none;"></p>
+                                </div>
+                            </div>
+                        {% endif %}
+            
+                        <p class="small font-italic mt-3 text-center">{{ 'templates.cart.shipping_at_checkout' | t }}</p>
+                        <a href="/checkout" class="btn btn-primary btn-block">{{ 'templates.cart.checkout' | t }}</a>
+                        <a href="/cart" class="btn d-block m-auto">{{ 'templates.cart.View_Shopping_cart' | t }}</a>
+
+                        {% if additional_checkout_buttons %}
+                            <span class="additional-checkout-buttons">
+                                <div id="additional-checkout-buttons">
+                                {{ content_for_additional_checkout_buttons }}
+                                </div>
+                            </span>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <script type="application/json" data-cartScriptJSON>
+                    {{ cart | json }}
+                </script>
+            </ajax-cart>
+        </div>
+    </div>
+  </section>
+  

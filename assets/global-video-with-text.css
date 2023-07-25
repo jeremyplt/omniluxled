@@ -1,0 +1,142 @@
+.cta-btn {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.video-section,
+.content-section {
+    position: relative;
+    padding-top: 120%;
+    min-height: 600px;
+}
+.men .video-section,
+.men .content-section {
+    position: relative;
+    padding-top: 120%;
+    min-height: 450px;
+}
+.video-with-text.text-with-right-video .video-section,
+.video-with-text.text-with-right-video .content-section
+{
+    padding-top: 100%;
+    min-height: 1px;
+}
+@media (min-width: 576px) {
+    .video-section,
+    .content-section {
+        padding-top: 44.844%;
+    }
+    .men .video-section,
+    .men .content-section {
+    position: relative;
+    padding-top: 42.844%;
+    min-height: 600px;
+}
+}
+
+.video-section iframe,
+.video-section video,
+.content-section .poster-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position:center;
+}
+
+.content-section .poster-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center;
+}
+
+.full-video-caption {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    z-index: 2;
+}
+
+.full-video-layout.playing--video .full-video-caption {
+    display: none !important;
+}
+
+.full-video-layout .play__button {
+    display: none !important;
+}
+
+/* .custom-video-container.video--playing{
+    position: relative;
+    z-index: 99;
+} */
+
+.pause__button{
+    display: none;
+}
+
+.custom-video-container.video--paused .show--video .cta-btn{
+    display: block;
+}
+.custom-video-container.video--paused .pause__button{
+    display: block;
+}
+.custom-video-container.video--paused .play__button,
+.custom-video-container.video--playing .play__button{
+    display: none;
+}
+.poster-overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block !important;
+    width: 100%;
+    height: 100%;
+}
+.padding-top .content-section{
+    padding-top:100% !important;
+}
+.disable_min_height .video-section,
+.disable_min_height .content-section
+{
+    padding-top: 100% !important;
+    min-height: 1px;
+}
+.template-index .text-with-right-video .footer-btn-warp
+{
+    margin-top: 26px !important;
+}
+@media (min-width:992px) {
+    .padding-top .video-section,
+    .padding-top .content-section{
+        padding-top: 51% !important;
+    }
+    .disable_min_height .video-section,
+    .disable_min_height .content-section
+    {
+        padding-top: 44.844% !important;
+    }
+}
+.full-video-caption .lp-page-m .caption_txt{
+    margin-bottom:18px !important;
+}
+.full-video-caption .lp-page-m .caption_txt p{
+    margin-bottom: 0;
+}
+
+@media(max-width:999px){
+  .cta-btn {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 30%;
+    transform: translate(-20%, -50%);
+}
+}

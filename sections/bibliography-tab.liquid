@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="{{ 'help-center-products.css' | asset_url }}">
+<section class="pb-3 overflow-hidden" data-section-id="{{ section.id }}">
+  <div class="container pt-lg-8 pt-6 bibliography-tab">
+        <div class="row">
+            <div class="col-12 col-md-10 mx-auto">
+                <custom-tabs class="d-block help-categories position-relative" {{ block.shopify_attributes }}>
+                    <div class="">
+                      <div id="productTabs" class="d-flex flex-wrap" data-product-tabs>
+                        <ul class="tabs d-flex list-unstyled text-uppercase fw-medium border-0 mx-auto" role="tablist">
+                            {%- for block in section.blocks -%}
+                                {%- if block.settings.title != blank -%}
+                                    <li class="tablink px-md-3 px-2 {% if forloop.first %}open{% endif %}" role="tab">
+                                        <a class=" trn font-size-md fw-bold d-inline-flex justify-content-center" data-toggle="tab" href="#custom-tab-{{section.id}}-{{ forloop.index }}" data-tabcontent="#custom-tab-{{section.id}}-{{ forloop.index }}" aria-expanded="{% if forloop.first %}false{% else %}true{% endif %}">{{ block.settings.title }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                        <div class="tab-content text-left w-100" id="productTabsContent">
+                          {%- for block in section.blocks -%}
+                            {%- if block.settings.bibliography_content != blank -%}
+                                <div class="tab-pane tabcontent {% if forloop.first %}open{% endif %}" id="custom-tab-{{section.id}}-{{ forloop.index }}" role="tabpanel">
+                                    <div class="rte pt-lg-7 px-lg-6">
+                                        <div class="">
+                                            {{ block.settings.bibliography_content }}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+                      </div>
+                  </custom-tabs>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Bibliography Tab",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "bibliography-tab",
+      "name": "Bibliography Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Button Text"
+        },
+        {
+          "type": "richtext",
+          "id": "bibliography_content",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bibliography Tab",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

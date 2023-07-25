@@ -1,0 +1,369 @@
+{{ 'desktop-nav-drawer.css' | asset_url | stylesheet_tag }}
+{% assign logo_svg = section.settings.logo_svg %}
+{% assign main_nav_links = linklists[section.settings.menu].links %}
+{% assign half_links = main_nav_links.size | plus: 2 | divided_by: 2 | floor %}
+<div class="row align-items-center w-100 mx-0 font-size-md fw-normal">
+  <div class="col px-0">
+        {%- if request.page_type == 'index' -%}
+        <div class="header__heading mb-0">
+            {%- endif -%}
+            <a href="{{ routes.root_url }}" class="d-block navbar-brand me-0" name="{{ shop.name | escape }}"
+                title="{{ shop.name | escape }}" aria-label="{{ shop.name | escape }}">
+                {%- if logo_svg != '' -%}
+                <img src="{{ logo_svg }}" alt="{{ shop.name | escape }}" class="img-fluid"
+                    style="width: {{ section.settings.logo_width }}px" width="{{ section.settings.logo_width }}" height="{{ section.settings.logo_width }}">
+                {%- elsif section.settings.logo != blank -%}
+                <img srcset="{{ section.settings.logo | image_url: width: 500 }}"
+                    src="{{ section.settings.logo | image_url: width: 16 }}" class="img-fluid lazyload"
+                    width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}"
+                    alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+                    style="max-width: {{ section.settings.logo_width }}px">
+                {%- else -%}
+                <span class="h5 text-primary">{{ shop.name }}</span>
+                {%- endif -%}
+            </a>
+            {%- if request.page_type == 'index' -%}
+        </div>
+        {%- endif -%}
+    </div>
+    <div class="col px-0">
+        <ul class="navbar-nav align-items-center main-menu-link ms-n3 justify-content-center">
+            {%- comment %}<locksmith:14bc>{% endcomment -%}
+              {%- assign locksmith_e56e_forloop__size = 0 %}{% for link in main_nav_links limit: half_links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_e56e_forloop__size = locksmith_e56e_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_e56e_forloop__index = nil -%}
+            {%- comment %}</locksmith:14bc>{% endcomment -%}
+            {% for link in main_nav_links limit: half_links %}
+                {%- comment %}<locksmith:d38d>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_e56e_forloop__index == nil %}{% assign locksmith_e56e_forloop__index = 1 %}{% assign locksmith_e56e_forloop__index0 = 0 %}{% else %}{% assign locksmith_e56e_forloop__index = locksmith_e56e_forloop__index | plus: 1 %}{% assign locksmith_e56e_forloop__index0 = locksmith_e56e_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_e56e_forloop__index == 1 %}{% assign locksmith_e56e_forloop__first = true %}{% else %}{% assign locksmith_e56e_forloop__first = false %}{% endif %}{% if locksmith_e56e_forloop__index == locksmith_e56e_forloop__size %}{% assign locksmith_e56e_forloop__last = true %}{% else %}{% assign locksmith_e56e_forloop__last = false %}{% endif %}{% assign locksmith_e56e_forloop__rindex = locksmith_e56e_forloop__size | minus: locksmith_e56e_forloop__index | minus: 1 %}{% assign locksmith_e56e_forloop__rindex0 = locksmith_e56e_forloop__size | minus: locksmith_e56e_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                {%- comment %}</locksmith:d38d>{% endcomment -%}
+                {% assign child_list_handle = link.title | handleize %}
+                {%- liquid 
+                    assign menuType = 'normal'
+                    assign megaMenuBlock = null
+                   
+                    for block in section.blocks
+                        assign checkBold = block.settings.checkMainBold
+                        if block.type == 'megamenu_with_product' and block.settings.title == link.title
+                            assign menuType = 'megamenu_with_product'
+                            assign megaMenuBlock = block.settings
+                            break
+                        elsif block.type == 'megamenu_with_story' and block.settings.title == link.title
+                            assign menuType = 'megamenu_with_story'
+                            assign megaMenuBlock = block.settings
+                            break
+                        endif    
+                    endfor
+                -%}
+                {% if menuType == 'megamenu_with_product' %}
+                    <li class="a nav-item nav-item-anim dropdown {% if menuType == 'megamenu_with_product' %}megamenu{% endif %} {% if link.active %}active{% endif %}" >
+                        <a data-href="{{ link.url }}" {% if menuType == 'megamenu_with_product' %}is="drop-down"{%- endif -%} class="nav-link d-flex align-items-center justify-content-between text-uppercase {{ link.handle }}" tabindex="0" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="menu" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                            <span>{{ link.title }}</span> <i class="icon-arrow-down ms-1 font-size-xs"></i>
+                        </a>
+                        <ul class="dropdown-menu megamenu megamenu_with_product py-0" style="background-color: {{ megaMenuBlock.megamenu_bg_color }}; color: {{ megaMenuBlock.megamenu_txt_color }}; ">
+                            <div class="container dropdown-menu-container">
+                                <div class="row">
+                                    <div class="col-2 py-3 pb-8 bg-white column-white-bg d-flex">
+                                        <ul class="list-unstyled" style="width: 100%;max-width: 290px;">
+                                            {%- comment %}<locksmith:7538>{% endcomment -%}
+                                              {%- assign locksmith_98a7_forloop__size = 0 %}{% for childlink in menus[child_list_handle].links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: menus[child_list_handle], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_98a7_forloop__size = locksmith_98a7_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_98a7_forloop__index = nil -%}
+                                            {%- comment %}</locksmith:7538>{% endcomment -%}
+                                            {% for childlink in menus[child_list_handle].links %}
+                                                {%- comment %}<locksmith:e9e4>{% endcomment -%}
+                                                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: menus[child_list_handle], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_98a7_forloop__index == nil %}{% assign locksmith_98a7_forloop__index = 1 %}{% assign locksmith_98a7_forloop__index0 = 0 %}{% else %}{% assign locksmith_98a7_forloop__index = locksmith_98a7_forloop__index | plus: 1 %}{% assign locksmith_98a7_forloop__index0 = locksmith_98a7_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_98a7_forloop__index == 1 %}{% assign locksmith_98a7_forloop__first = true %}{% else %}{% assign locksmith_98a7_forloop__first = false %}{% endif %}{% if locksmith_98a7_forloop__index == locksmith_98a7_forloop__size %}{% assign locksmith_98a7_forloop__last = true %}{% else %}{% assign locksmith_98a7_forloop__last = false %}{% endif %}{% assign locksmith_98a7_forloop__rindex = locksmith_98a7_forloop__size | minus: locksmith_98a7_forloop__index | minus: 1 %}{% assign locksmith_98a7_forloop__rindex0 = locksmith_98a7_forloop__size | minus: locksmith_98a7_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                                                {%- comment %}</locksmith:e9e4>{% endcomment -%}
+                                                {% assign third_list_handle = childlink.title | handleize %}
+                                                <li class="nav-item nav-item-anim py-0">
+                                                    {% unless menus[third_list_handle].links != blank %}
+                                                        {% if childlink.title == "Shop All Products" %}
+                                                            <a class="mega-menu__list  mega_menu_hover_line shop_all list-unstyled mega-menu__link custom_mega-menu_link" href="{{ childlink.url }}" title="{{childlink.title}}">{{childlink.title}}</a>            
+                                                        {% else %}
+                                                        <a  title="{{childlink.title}}" class="mega-menu__list  mega_menu_hover_line {% if locksmith_98a7_forloop__index == 1 %}mega-menu__link--active{% endif %} list-unstyled mega-menu__link custom_mega-menu_link" href="{{ childlink.url }}" title="{{childlink.title}}">{{childlink.title}}
+                                                            <span style="float: right;">
+                                                            <img src="{{'arrow.png' |  asset_url}}"style="width:5px; height:10px;"/>
+                                                        </span></a>
+                                                        {% endif %}  
+                                                    {% else %}
+                                                        <a href="{{ childlink.url }}"   title="{{childlink.title}}" class="mega_menu_hover_line {% if checkBold %}fw-semibold{% endif %} sub-menu-link nav-link lh-1 px-0 {% if childlink.title == 'Shop All' %}fw-semibold{% endif %}" name="{{ childlink.url }}" title="{{ childlink.url }}" aria-label="{{ childlink.url }}">
+                                                            <span class="text-capitalize"><span>{{ childlink.title }}</span></span>
+                                                        </a>
+                                                    {% endunless %}
+                                                    <ul class="list-unstyled nav-item-anim {% if menus[third_list_handle].links.size > 0 %}mt-3 pt-1{% endif %}">
+                                                        {% for thirdlink in menus[third_list_handle].links %}
+                                                            {%- comment %}<locksmith:0eeb>{% endcomment -%}
+                                                              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: thirdlink, subject_parent: menus[third_list_handle], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                                            {%- comment %}</locksmith:0eeb>{% endcomment -%}
+                                                            <li class="nav-item nav-item-anim py-1">
+                                                                <a href="{{ thirdlink.url }}" class="nav-link lh-1 px-0 {% if thirdlink.title == 'Shop All' %}fw-semibold{% endif %}" name="{{ thirdlink.title }}" title="{{ thirdlink.title }}" aria-label="{{ thirdlink.title }}"><span>{{ thirdlink.title }}<span></a>
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </li>
+                                            {% endfor %}
+                                           
+                                        </ul>
+                                        
+                                    </div>
+                                    {% if megaMenuBlock != null %}
+                                        <div class="col-10 py-3 pb-8">
+                                            <div class="row justify-content-center px-1 h-100">
+                                                {% for block in section.blocks %}
+                                                    {% if block.type == 'sub_menu' or block.type == 'sub_menu_second' %}
+                                                        <div data-menu-title="{{block.settings.menu_title}}" class="sub_menu {% if block.settings.menu_title == 'Devices' %}active{% endif %}">
+                                                            <div class="row">
+                                                                {% for i in (1..6) %}
+                                                                    {% capture product %}sub_menu_product_{{ i }}{% endcapture %}
+                                                                    {% assign current_product = block.settings[product] %}
+                                                                    {% assign current_variant = current_product.selected_or_first_available_variant %}             
+                                                                    {% if current_product != null %}
+                                                                    <div class="{% if block.type == 'sub_menu_second' %}mega-menu-item-call-second{% else %}mega-menu-item-call{% endif %}">                                                                                       
+                                                                        <div class="mega_menu_container col-12">
+                                                                            <div>
+                                                                                <a class="" href="{{ current_product.url | within: collection }}">
+                                                                                    <img class="img-fluid" src="{{current_product.featured_image | image_url: width: 850 }}"/>    
+                                                                                </a>
+                                                                            </div> 
+                                                                            <div class="card-title m-0 font-family-base lh-1 fw-semibold order-1 order-lg-0 mt-lg-1">
+                                                                                <a class="product-link lh-1 fw-semibold" href="{{ current_product.url | within: collection }}">{{ current_product.title }}</a>
+                                                                            </div>
+
+                                                                            {% capture product_data_attribute %}data-oke-reviews-product-id="shopify-{{ current_product.id }}"{% endcapture %} 
+                                                         
+                                                                            {% if current_product.metafields.okendo.StarRatingSnippet %}<div data-oke-star-rating {{ product_data_attribute }} style="display:flex">{{ current_product.metafields.okendo.StarRatingSnippet }}</div>{% endif %}
+                                                          
+                                                                            <span class="price">
+                                                                                {% if current_variant and current_variant.compare_at_price > current_variant.price %}
+                                                                                  <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
+                                                                                {% elsif product.compare_at_price > product.price %}
+                                                                                  <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
+                                                                                {% endif %}
+                                                                                {% if current_variant %}
+                                                                                {{ current_variant.price | money }}
+                                                                                {% elsif current_product.price_varies %}
+                                                                                    {% assign minPrice = current_product.price_min | money %}
+                                                                                    {% assign maxPrice = current_product.price_max | money %}
+                                                                                    {{ 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape }}
+                                                                                {% else %}
+                                                                                    {{ current_product.price | money }}
+                                                                                {% endif %}
+                                                                            </span>
+                                                                            <div class="add-cart-form">
+                                                                                {% assign max = 80 %}
+                                                                                {% assign diff = max | minus: min %}
+                                                                                {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+                                                                                {%- assign product_form_id = 'product-form-' | append: current_product.id | append:'-' | append: randomNumber -%}
+                                                                                {%- render 'form-product-grid', product: current_product, current_variant: current_variant gridType: 'mobile-grid' -%}                                                                          
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    {% endif %}
+                                                                {% endfor %}                                                                                  
+                                                            </div>
+                                                        </div>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                {% elsif menuType == 'megamenu_with_story' %}
+                    <li class="b nav-item nav-item-anim dropdown {% if menuType == 'megamenu_with_story' %}megamenu{% endif %} {% if link.active %}active{% endif %}" >
+                        <a data-href="{{ link.url }}" {% if menuType == 'megamenu_with_story' %}is="drop-down"{%- endif -%} class="nav-link d-flex align-items-center justify-content-between text-uppercase {{ link.handle }}" tabindex="0" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="menu" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                            <span>{{ link.title }}</span> <i class="icon-arrow-down ms-1 font-size-xs"></i>
+                        </a>
+                        <ul class="dropdown-menu megamenu megamenu_with_story py-0" style="background-color: {{ megaMenuBlock.megamenu_bg_color }}; color: {{ megaMenuBlock.megamenu_txt_color }};">
+                            <div class="container dropdown-menu-container pb-5 px-12">
+                                <div class="row container px-12">
+                                    <div class="col-8 py-3 bg-white column-white-bg d-flex ps-14">
+                                        <ul class="megamenu_with_story-items-container list-unstyled" style="overflow: auto;width:100%;">
+                                            {% if child_list_handle == "learn" %}
+                                            {% assign menu_links = linklists.web_normal_menu_learn.links %}
+                                            {% else  %}
+                                            {% assign menu_links = menus[child_list_handle].links %}
+                                            {% endif %}
+                                            {% for childlink in menu_links %}                                                
+                                                {%- comment %}<locksmith:f16f>{% endcomment -%}
+                                                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                                {%- comment %}</locksmith:f16f>{% endcomment -%}                                                
+                                                {% assign third_list_handle = childlink.title | handleize %}
+                                                <li class="nav-item nav-item-anim py-0 px-0" >
+                                                    {% unless menus[third_list_handle].links != blank %}
+                                                        <a class="{% if checkBold %}fw-semibold{% endif %} nav-link lh-1 px-0" name="{{ childlink.title }}" title="{{ childlink.title }}" aria-label="{{ childlink.title }}">
+                                                            <span>{{ childlink.title }}</span>
+                                                        </a>
+                                                    {% else %}
+                                                        <div class="{% if checkBold %}fw-semibold{% endif %} nav-link lh-1 px-0" name="{{ childlink.url }}" title="{{ childlink.url }}" aria-label="{{ childlink.url }}">
+                                                            <span class="text-capitalize"><span>{{ childlink.title }}</span></span>
+                                                        </div>
+                                                    {% endunless %}
+                                                    <ul class="list-unstyled nav-item-anim mega_sub_menu_container {% if menus[third_list_handle].links.size > 0 %}mt-0 pt-1{% endif %}">
+                                                        {% for thirdlink in menus[third_list_handle].links %}
+                                                            {%- comment %}<locksmith:9757>{% endcomment -%}
+                                                              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: thirdlink, subject_parent: menus[third_list_handle], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                                            {%- comment %}</locksmith:9757>{% endcomment -%}
+                                                            {% if thirdlink.links != blank %}
+                                                                <li class="nav-item nav-item-anim py-0 px-0 mt-2">                                                                
+                                                                    <div class="nav-link lh-1 px-0" name="{{ thirdlink.title }}" title="{{ thirdlink.title }}" aria-label="{{ thirdlink.title }}">
+                                                                        <span class="fw-medium">{{ thirdlink.title }}<span>
+                                                                    </div>                                   
+                                                                    <ul class="list-unstyled nav-item-anim mega_sub_menu_container {% if menus[third_list_handle].links.size > 0 %}mt-0 pt-1{% endif %}">
+                                                                        {% for fourthlink in thirdlink.links %}                             
+                                                                            {%- comment %}<locksmith:3e21>{% endcomment -%}
+                                                                              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: fourthlink, subject_parent: thirdlink, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                                                            {%- comment %}</locksmith:3e21>{% endcomment -%}                             
+                                                                            <li class="nav-item nav-item-anim py-0 px-0">                                                                
+                                                                                <a href="{{ fourthlink.url }}" class="nav-link lh-1 px-0" name="{{ fourthlink.title }}" title="{{ fourthlink.title }}" aria-label="{{ fourthlink.title }}">
+                                                                                    <span>{{ fourthlink.title }}<span>
+                                                                                </a>                                                                            
+                                                                            </li>                                                                            
+                                                                        {% endfor %}
+                                                                    </ul>
+                                                                </li>
+                                                            {% else %}
+                                                                <li class="nav-item nav-item-anim py-0 px-0">                                                                
+                                                                    <a href="{{ thirdlink.url }}" class="nav-link lh-1 px-0" name="{{ thirdlink.title }}" title="{{ thirdlink.title }}" aria-label="{{ thirdlink.title }}">
+                                                                        <span>{{ thirdlink.title }}<span>
+                                                                    </a>                                                                
+                                                                </li>
+                                                            {% endif %}                                                            
+                                                        {% endfor %}
+                                                    </ul>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    {% if megaMenuBlock != null %}
+                                        <div class="col-4 py-3">
+                                            <div class="row justify-content-center px-1 h-100">
+                                                <div class="col-xl-10 col-12 h-100">
+                                                    <div class="card megamenu_product custom_megamenu_product border-0 h-100">
+                                                        <div class="h-100 align-items-center">
+                                                            <div class="col-12">
+                                                                <div class="card-img" style="max-height: 274px">
+                                                                    <a class="square-card d-block w-100 position-relative" href="{{ megaMenuBlock.story_link }}">
+                                                                    <img class="w-100 object-cover position-absolute start-0 top-0"
+                                                                        src="{{ megaMenuBlock.story_image | image_url: width: 16 }}" 
+                                                                        srcset="
+                                                                        {%- if megaMenuBlock.story_image.width >= 320 -%}{{ megaMenuBlock.story_image | image_url: width: 320 }} 320w,{%- endif -%}
+                                                                        {%- if megaMenuBlock.story_image.width >= 460 -%}{{ megaMenuBlock.story_image | image_url: width: 460 }} 460w,{%- endif -%}"
+                                                                        loading="lazy" 
+                                                                        sizes="(min-width: 992px) 320px, 50vw"  
+                                                                        data-feauredImage
+                                                                        alt="{{ megaMenuBlock.story_link_text | escape }}"
+                                                                        width="{{ megaMenuBlock.story_image.width }}"
+                                                                        height="{{ megaMenuBlock.story_image.height }}"> 
+                                                                    </a>
+                                                                </div>
+                                                                <div class="card-body mt-2 px-0 pb-0">
+                                                                    <div>
+                                                                        {{ megaMenuBlock.story_paragraph }}
+                                                                    </div>
+                                                                    <a class="btn-link story-link" href="{{ megaMenuBlock.story_link }}">{{ megaMenuBlock.story_link_text }}</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </ul>
+                    </li>     
+                {% elsif menus[child_list_handle].links != blank %}
+                    <li class="c nav-item nav-item-anim dropdown {% if link.active %} active{% endif %}">
+                        <a data-href="{{ link.url }}" {%- if menus[child_list_handle].links.size > 0 -%}is="drop-down"{%- endif -%} class="nav-link text-uppercase {{ link.handle }}" tabindex="0" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="menu" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                            <span>{{ link.title }}</span>
+                        </a>
+                        <ul class="dropdown-menu" data-type="content">
+                            {% for childlink in menus[child_list_handle].links %}
+                                {%- comment %}<locksmith:5753>{% endcomment -%}
+                                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: menus[child_list_handle], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                {%- comment %}</locksmith:5753>{% endcomment -%}
+                                <li class="nav-item">
+                                    <a class="nav-link{% if childlink.active %} active{% endif %} {{ childlink.handle }}"
+                                        href="{{ childlink.url }}" name="{{ childlink.title }}" title="{{ childlink.title }}"
+                                        aria-label="{{ childlink.title }}">
+                                        {{ childlink.title }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% else %}
+                    <li class="d nav-item nav-item-anim {% if link.active %} active{% endif %}">
+                        <a class="nav-link text-uppercase {{ link.handle }}" href="{{ link.url }}"
+                            name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                            <span>{{ link.title }}</span>
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="col px-0">
+        <div class="navbar-desktop-secondary d-flex align-items-center justify-content-end">
+            <ul class="navbar-nav align-items-center">
+                {% for link in main_nav_links offset: half_links %}
+                    {%- comment %}<locksmith:b88e>{% endcomment -%}
+                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                    {%- comment %}</locksmith:b88e>{% endcomment -%}
+                    {% assign child_list_handle = link.title | handleize %}
+                    {% if menus[child_list_handle].links != blank %}
+                        <li class="nav-item dropdown {% if link.active %} active{% endif %}">
+                            <a data-href="{{ link.url }}" {%- if menus[child_list_handle].links.size > 0 -%}is="drop-down"{%- endif -%} class="nav-link text-uppercase {{ link.handle }}" tabindex="0" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="menu" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                <span>{{ link.title }}</span>
+                            </a>
+                            <ul class="dropdown-menu" data-type="content">
+                                {% for childlink in menus[child_list_handle].links %}
+                                    {%- comment %}<locksmith:1fe2>{% endcomment -%}
+                                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: childlink, subject_parent: menus[child_list_handle], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                    {%- comment %}</locksmith:1fe2>{% endcomment -%}
+                                    <li class="nav-item">
+                                        <a class="nav-link{% if childlink.active %} active{% endif %} {{ childlink.handle }}"
+                                            href="{{ childlink.url }}" name="{{ childlink.title }}" title="{{ childlink.title }}"
+                                            aria-label="{{ childlink.title }}">
+                                            {{ childlink.title }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li class="nav-item nav-item-anim {% if link.active %} active{% endif %}">
+                            <a class="nav-link text-uppercase {{ link.handle }}" href="{{ link.url }}"
+                                name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                <span>{{ link.title }}</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul class="navbar-nav navbar-icon-links align-items-center ps-3">
+                {%- if settings.enable_search -%}
+                    <li class="nav-item">
+                        <a href="{{ routes.search_url }}" class="nav-link modal__toggle open-searchform" aria-haspopup="dialog" aria-label="{{ 'general.search.title' | t }}">
+                            <i class="ox-search"></i>
+                        </a>
+                    </li>
+                {%- endif -%}
+                <li class="nav-item">
+                    <a href="{{ routes.cart_url }}" class="nav-link header__icon--cart" id="cart-icon-desktop" rel="nofollow" name="cart" title="cart" rel="nofollow" aria-label="Cart">
+                        <i class="ox-bag position-relative">
+                            {%- if cart != empty -%}
+                            {%- if cart.item_count < 100 -%}
+                                <span aria-hidden="true" class="cart-count ms-2 fw-medium font-family-base">{{ cart.item_count }}</span>
+                            {%- endif -%}
+                            {%- endif -%}
+                        </i>
+                    </a>
+                </li>
+            </ul>
+        </div>   
+    </div>
+</div>
+
+<script src="{{'custom.js' |  asset_url}}"></script>

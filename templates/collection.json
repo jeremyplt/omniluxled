@@ -1,0 +1,139 @@
+{
+  "wrapper": "section",
+  "sections": {
+    "banner": {
+      "type": "template-collection-banner",
+      "settings": {
+        "fluid_layout": false,
+        "show_collection_description": true,
+        "alignment": "text-center",
+        "caption_alignment": "mx-auto"
+      }
+    },
+    "product-grid": {
+      "type": "template-collection",
+      "settings": {
+        "products_per_page": 16,
+        "pagination_type": "numbers",
+        "enable_sub_collections": false,
+        "sub_collections": "",
+        "enable_filtering": false,
+        "filter_type": "default",
+        "price_filter_layout": "list",
+        "price_filter_values": "",
+        "enable_custom_pagination": false,
+        "custom_pagination": "16,24,32",
+        "open_single_accordians": false,
+        "enable_sorting": false
+      }
+    },
+    "a427aa1e-07c5-4c27-bb23-6f7e1ca98c62": {
+      "type": "global-results-slider",
+      "blocks": {
+        "24d362fa-8328-4dfc-8fe1-89efec14d327": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_91.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "5529f550-fbcc-4e26-8c91-bdd82be55d06": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_77.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "08f9853c-cf7f-4897-818d-4e79a2535749": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_80.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "4d8a7b33-198a-459e-ab6d-cb4b96facf3e": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BA_WEBSITE_2.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "86bc02a4-5135-4787-810c-934239173886": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_90.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "67a92370-39d3-49bc-9dbc-4eebad8fbc70": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_86.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "2370ff6d-546f-4bd9-baf2-0eb5f1a22429": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_74_8a59c6a5-d2c8-4c4d-b3c9-e4690f34f7a0.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "ae76aa1f-9260-4a8f-bd40-ec333399d92d": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_75.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        }
+      },
+      "block_order": [
+        "24d362fa-8328-4dfc-8fe1-89efec14d327",
+        "5529f550-fbcc-4e26-8c91-bdd82be55d06",
+        "08f9853c-cf7f-4897-818d-4e79a2535749",
+        "4d8a7b33-198a-459e-ab6d-cb4b96facf3e",
+        "86bc02a4-5135-4787-810c-934239173886",
+        "67a92370-39d3-49bc-9dbc-4eebad8fbc70",
+        "2370ff6d-546f-4bd9-baf2-0eb5f1a22429",
+        "ae76aa1f-9260-4a8f-bd40-ec333399d92d"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "heading_style": "heading_style_1",
+        "pt": 80,
+        "pb": 40,
+        "pts": 40,
+        "pbs": 40,
+        "border-top": true,
+        "border-bottom": false,
+        "heading_txt": "See for yourself",
+        "txt": "",
+        "btn_txt": "Reviews & results",
+        "btn_link": "shopify:\/\/pages\/reviews-results",
+        "btn_type": "outline",
+        "btn_variant": "primary",
+        "btn_size": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000",
+        "autoplay_enable": true,
+        "loop_enable_": true,
+        "slider_enable": false,
+        "nav_arrows": false,
+        "nav_dots": false
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "a427aa1e-07c5-4c27-bb23-6f7e1ca98c62"
+  ]
+}

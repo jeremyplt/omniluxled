@@ -1,0 +1,281 @@
+/* section-header */
+
+#shopify-section-header {
+    z-index: 1125;
+    position: sticky;
+    top: 0;
+    transition: transform 0.15s ease-out;
+}
+
+#shopify-section-header.shopify-section-header-sticky {
+    position: sticky;
+    top: 0;
+}
+.template-index #shopify-section-header,
+.anti-aging #shopify-section-header,
+.anti-acne #shopify-section-header,
+.men #shopify-section-header
+{
+    position: fixed !important;
+    width: 100%;
+}
+
+.site-header
+{
+    transition: all 0.5s;
+}
+body:not(.opened-menu-drawer) #shopify-section-header:not(.shopify-section-header-sticky):not(:hover) .site-header
+{
+    background-color: transparent !important;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar > .container,
+.navbar > .container-fluid {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.collapse:not(.show) {
+    display: none;
+}
+.navbar-expand .navbar-collapse {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+}
+.navbar-main .nav-item .nav-link {
+    padding: 0;
+    display: inline-block;
+    color: var(--bs-body-color);
+    transition: ease-in-out 0.25s;
+}
+
+.navbar-main .nav-item .nav-link:hover {
+    color: var(--bs-color-primary);
+}
+.navbar-main .nav-item.active > .nav-link {
+    color: var(--bs-color-primary);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.navbar-main .navbar-nav > .nav-item {
+    padding: 0;
+}
+.navbar-main .navbar-nav > .nav-item > .nav-link {
+    padding: 25px 16px;
+    position: relative;
+    line-height: 1.285714285714286;
+    letter-spacing: 0.06em;
+}
+.main-menu-link > li + li
+{
+    margin-left: 18px;
+}
+@media (min-width: 992px) {
+    .navbar-expand-xl {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+    .navbar-expand-xl .navbar-nav {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+    .navbar-expand-xl .navbar-collapse {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    }
+    .navbar-main .navbar-nav > .nav-item > .nav-link {
+        padding: 31px 16px;
+    }
+    .navbar-main .navbar-nav.navbar-icon-links .nav-item .nav-link{
+        padding: 26px 12px;
+        font-size: 22px;
+    }
+}
+
+.navbar-main .navbar-icon-links .nav-item:first-child .nav-link{
+    padding-left: 0 !important;
+}
+.navbar-main .navbar-icon-links .nav-item:last-child .nav-link {
+    padding-right: 0 !important;
+}
+
+.navbar-main .nav-item .icon {
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.navbar-main .dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display:block;
+    opacity: 0;
+    visibility: hidden;
+    top: 100%;
+    padding: 0.5rem 0rem;
+    margin: 0;
+    font-size: 1rem;
+    color: var(--bs-body-color);
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+.navbar-main .megamenu .dropdown-menu{
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.navbar-main .dropdown-menu .nav-item{
+    padding: 0.5rem 1rem;
+}
+.navbar-main .dropdown-menu .nav-item + .nav-item
+{
+    margin-top: 26px;
+}
+.dropdown.open > .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.navbar-icon-links .nav-item,
+.navbar-icon-links .nav-item .nav-link{
+    display: flex;
+    align-items: center;
+    font-size:22px;
+}
+.navbar-icon-links .nav-item + .nav-item
+{
+    margin-left: 5px;
+}
+.topbar{
+    transition: 0.25s ease-in-out;
+}
+
+.cart-count {
+    font-size: 10px;
+    min-width: 13px;
+    height: 13px;
+    color: #fff;
+    text-align: center;
+    background: #000;
+    border-radius: 50%;
+    line-height: normal;
+    position: absolute;
+    right: 0;
+    top: -6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: -0.04em;
+    padding: 0 1px;
+}
+.nav-item-anim > a > span
+{
+    position: relative;
+}
+.nav-item-anim > a > span::after
+{
+    content: "";
+    width: 100%;
+    border-bottom: 1.5px solid;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all 0.3s;
+}
+.nav-item-anim > a:not(:hover):not([aria-expanded="true"]) > span::after{
+    opacity: 0;
+}
+.navbar-icon-links a:hover > i
+{
+    color: var(--bs-color-secondary) !important;
+}
+@media (min-width:992px)
+{
+    .cart-count {
+        width: 15px;
+        height: 15px;
+    }
+}
+@media (max-width:991.85px)
+{
+    .header__heading img
+    {
+        max-width: 144.02px;
+    }
+    .navbar-mobile:not(.navbar-mobile-dropdown):not(.navbar-mobile-secondary)
+    {
+        padding: 10.51px 0 !important;
+    }
+    #mobile-menu-drawer .header__search
+    {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+    #mobile-menu-drawer .field__button
+    {
+        left: 0;
+        right: auto;
+    }
+    .navbar-mobile #mobile-menu span
+    {
+        transition: all 0.3s;
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+        opacity: 1;
+    }
+    .navbar-mobile #mobile-menu[aria-expanded="false"] .ox-close,
+    .navbar-mobile #mobile-menu[aria-expanded="true"] .ox-menu
+    {
+        -webkit-transform: rotateX(80deg);
+            transform: rotateX(80deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width:600px){
+ .anti-aging #shopify-section-header, .anti-acne #shopify-section-header, .men #shopify-section-header{
+    position: sticky!important;}
+  .template-collection.anti-aging #MainContent, .template-collection.anti-acne #MainContent{top:0!important;}
+}

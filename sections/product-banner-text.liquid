@@ -1,0 +1,560 @@
+{%- if section.settings.display_for_this_product == 'true' -%}
+<link rel="stylesheet" href="{{ 'template-how-its-work.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- if section.settings.gradient_tone != blank -%}
+<span class="gradient-fair-tone-how gradient-fair-tone light-tone-top position-absolute w-100 start-0 top-0 overflow-hidden mmmm" style="pointer-events: none;z-index: -1;">
+    <span class="white-anim"></span>
+  </span>
+{%- endif -%}
+  {%- if section.settings.heading != blank -%}
+<section>
+        <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+            <div class="row align-items-center no-gutter">
+                <div class="col-12 py-9 text-center px-sm-4">
+                    <h1 class="mb-3">{{ section.settings.heading }}</h1>
+                    <p class="banner-text-para fw-normal">{{ section.settings.txt }}</p>
+                </div>
+            </div>
+        </div>
+</section>
+{%- endif -%}
+<section class="section-content image-with-text-block"  data-section-id="{{ section.id }}" >
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 col-lg-5 me-auto {% if section.settings.image_alignment == 'left' %}order-md-1{% else %}order-md-2{% endif %}">
+                <div class="1 position-relative square-card">
+                    {% comment %} srcset="
+                            {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                            {%- if section.settings.image.width >= 520 -%}{{ section.settings.image | image_url: width: 520 }} 520w,{%- endif -%}
+                            {%- if section.settings.image.width >= 650 -%}{{ section.settings.image | image_url: width: 650 }} 650w,{%- endif -%}
+                            {%- if section.settings.image.width >= 780 -%}{{ section.settings.image | image_url: width: 780 }} 780w,{%- endif -%}
+                            {%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1000 -%}{{ section.settings.image | image_url: width: 1000 }} 1000w,{%- endif -%}" 
+                        sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), 100vw"
+                        {% endcomment %}
+                    {%- if section.settings.image != blank -%}
+                        <img 
+                            data-mm
+                            src="{{ section.settings.image }}?format=pjpg"
+                            alt="{{ section.settings.image.alt | escape }}"
+                            class="h-100 object-cover position-absolute start-0 top-0 w-100"
+                            loading="lazy"
+                            width="{{ section.settings.image.width | divided_by: 3 }}"
+                            height="{{ section.settings.image.height | divided_by: 3 }}"
+                        >
+                    {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-5 mt-4 ms-auto mt-md-0 pt-lg-0 pt-1 {% if section.settings.image_alignment == 'left' %}order-md-2{% else %}order-md-1{% endif %}">
+                <div class="inside-block {{ section.settings.alignment }}" >
+                    {% if section.settings.heading_txt != blank %}
+                        <div class="h3 mb-3 pe-lg-3" {% unless section.settings.max_width == 700 %}style="max-width:{{ section.settings.max_width }}px;"{% endunless %}>{{ section.settings.heading_txt }}</div>
+                    {% endif %}
+                    {% if section.settings.img_text1 != blank %}
+                        <div class="mb-3 mb-lg-5 formatted-list">{{ section.settings.img_text1 }}</div>
+                    {% endif %}
+                    {% if section.settings.img_text2 != blank %}
+                        <p class="mb-2 mb-md-3">{{ section.settings.img_text2 }}</p>
+                    {% endif %}
+                      {% if section.settings.link_txt != blank %}
+                            <div class="mt-3 pt-1">
+                                <a {% if section.settings.link_url %} href="{{ section.settings.link_url }}" {% endif %} class="btn btn{% if section.settings.btn_type_l == 'outline' %}-{% endif %}{{ section.settings.btn_type_l }}-{{ section.settings.btn_variant_l }} {{ section.settings.btn_size_l }}">{{ section.settings.link_txt }}</a>
+                            </div>
+                        {% endif %}
+                    {% if section.settings.btn_txt_watch != blank %}
+                    <div class="m-lg-n3 m-n2 my-n2 d-flex flex-wrap pt-lg-0" style="padding-top: 11px;">
+                        <div class="px-lg-3 py-2 p-2 w-100 w-sm-auto">
+                            <div class="custom-video-container d-flex flex-column {% if section.settings.fluid_video_layout %} full-video-layout position-relative{% else %} align-items-center{% endif %}">
+                                <span data-trigger-videobtn  class="cursor-pointer btn w-100 w-sm-auto {% if section.settings.btn_type_watch == "border-0" %}border-0{% endif %} btn{% if section.settings.btn_type_watch == 'outline' %}-{% endif %}{% if section.settings.btn_type_watch != "border-0" %}{{ section.settings.btn_type_watch }}{% endif %}-{{ section.settings.btn_variant_watch }} {{ section.settings.btn_size_watch }}" title="{{ section.settings.btn_txt_watch }}">
+                                    {{ section.settings.btn_txt_watch }}
+                                    <i class="ox-play ms-2" style="font-size:11px;"></i>
+                                </span>
+
+                                <custom-video class="video-with--text position-relative d-block placement--popup"
+                                    data-loop="true" data-autoplay="true" data-controls="true" data-muted="false"
+                                    data-video-type="local"  data-placement="popup"
+                                    {% if section.settings.video_watch_mobile_id != blank %}data-mobileVideo="{{ section.settings.video_watch_mobile_id }}"{% endif %}
+                                    data-video-id="{{ section.settings.video_watch_id }}">
+                                    <div class="cta-btn d-none">
+                                        <button class="play__button btn btn-primary" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
+                                            <span class="icon-play"></span>
+                                        </button>
+                                        <button class="bg-transparent border-2 border-white btn btn-primary p-3 pause__button rounded-pill d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
+                                            <span class="ox-play" style="position: relative;right: -2px;"></span>
+                                        </button>
+                                    </div>
+                                </custom-video>
+
+                            </div>
+
+                        </div>
+                        <div class="px-lg-3 py-2 p-2 w-100 w-sm-auto">
+
+
+
+
+                            <div class="custom-video-container d-flex flex-column {% if section.settings.fluid_video_layout %} full-video-layout position-relative{% else %} align-items-center{% endif %}">
+                                <span data-trigger-videobtn  class="cursor-pointer btn w-100 w-sm-auto {% if section.settings.btn_type == "border-0" %}border-0{% endif %} btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{% if section.settings.btn_type != "border-0" %}{{ section.settings.btn_type }}{% endif %}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">
+                                    {{ section.settings.btn_txt }}
+                                    <i class="ox-play ms-2" style="font-size:11px;"></i>
+                                </span>
+
+                                <custom-video class="video-with--text position-relative d-block placement--popup"
+                                    data-loop="true" data-autoplay="true" data-controls="true" data-muted="false"
+                                    data-video-type="youtube"  data-placement="popup"
+                                    {% if section.settings.video_review_mobile_id != blank %}data-mobileVideo="{{ section.settings.video_review_mobile_id }}"{% endif %}
+                                    data-video-id="{{ section.settings.video_review_id }}">
+                                    <div class="cta-btn d-none">
+                                        <button class="play__button btn btn-primary" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
+                                            <span class="icon-play"></span>
+                                        </button>
+                                        <button class="bg-transparent border-2 border-white btn btn-primary p-3 pause__button rounded-pill d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
+                                            <span class="ox-play" style="position: relative;right: -2px;"></span>
+                                        </button>
+                                    </div>
+                                </custom-video>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Product:Image with Text",
+  "tag": "section",
+  "class": "spaced-section image-with-text-block-main",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "display_for_this_product",
+      "label": "Display For this Product"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "gradient_tone",
+      "label": "Gradient Tone?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Image With Text"
+    },
+    {
+      "type": "liquid",
+      "id": "heading_txt",
+      "label": "Heading Text"
+    },
+    {
+      "type": "liquid",
+      "id": "img_text1",
+      "label": "Paragraph 1"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Heading Max Width",
+      "min": 400,
+      "max": 700,
+      "step": 3,
+      "default": 700
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "liquid",
+      "id": "image",
+      "label": "Select Image",
+      "info": "For Better Viewing Use Example dimentions: 775*735 ( Aspect Ratio: 1.05 )"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-end",
+          "label": "Right"
+        }
+      ],
+      "default": "text-left"
+    },
+    {
+      "type": "select",
+      "id": "image_alignment",
+      "label": "Image Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Spacing & Border"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding Top(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding Bottom(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pts",
+      "label": "Padding Top(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pbs",
+      "label": "Padding Bottom(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "play_icon",
+      "label": "Play Icon Enabled?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "play_btn",
+      "label": "Play Button Enabled?",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Watch Video"
+    },
+    {
+      "type": "liquid",
+      "id": "btn_txt_watch",
+      "label": "Watch Button Text"
+    },
+    {
+      "type": "liquid",
+      "id": "video_watch_id",
+      "label": "Video ID"
+    },
+    {
+      "type": "liquid",
+      "id": "video_watch_mobile_id",
+      "label": "Mobile Video ID"
+    },
+    {
+      "type": "select",
+      "id": "btn_type_watch",
+      "label": "Button Type for Watch",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "border-0",
+          "label": "No Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "btn_variant_watch",
+      "label": "Button Variant for Watch",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "btn_size_watch",
+      "label": "Button Size for Watch",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "liquid",
+      "id": "btn_txt",
+      "label": "Watch Button Text"
+    },
+    {
+      "type": "liquid",
+      "id": "video_review_id",
+      "label": "Video ID"
+    },
+    {
+      "type": "liquid",
+      "id": "video_review_mobile_id",
+      "label": "Mobile Video ID"
+    },
+    {
+      "type": "select",
+      "id": "btn_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "btn_variant",
+      "label": "Button Variant",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "btn_size",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Button with link"
+    },
+    {
+      "type": "liquid",
+      "id": "link_txt",
+      "label": "Link Text"
+    },
+    {
+      "type": "liquid",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "select",
+      "id": "btn_type_l",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "btn_variant_l",
+      "label": "Button Variant",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "btn_size_l",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product:Image with Text"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+    [data-section-id="{{ section.id }}"]
+    {
+      padding-top: {{ section.settings.pts }}px;
+      padding-bottom: {{ section.settings.pbs }}px;
+      {% if section.settings.border-top %}
+      border-top: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+      {% if section.settings.border-bottom %}
+      border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+    }
+    @media (min-width:992px)
+    {
+      [data-section-id="{{ section.id }}"]
+      {
+        padding-top: {{ section.settings.pt }}px;
+        padding-bottom: {{ section.settings.pb }}px;
+      }
+    }
+  </style>
+
+
+
+
+

@@ -1,0 +1,13 @@
+.banner-text-para{
+    font-size:20px;
+    letter-spacing: -0.8px;
+}
+.gradient-fair-tone-how{
+    height:52vh;
+    background-image: url(https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background_Gradient.jpg?v=1672138602);
+    background-size:cover;
+    background-size: 100% 100%;
+}
+.image-with-text-block-main .image-with-text-block .square-card{
+    padding-top:90%;
+}

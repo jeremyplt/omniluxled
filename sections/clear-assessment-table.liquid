@@ -1,0 +1,168 @@
+{{ 'assessment-table.css' | asset_url | stylesheet_tag }}
+
+<section class="  border-top overflow-hidden"  data-section-id="{{ section.id }}">
+
+    <div class="container mt-lg-11 mt-5">
+        {%- if section.settings.heading_text != blank -%}
+            <div class="row">
+                <div class= "col-12 col-lg-6 mx-auto pb-lg-3 text-center">
+                    <div class="h3">
+                        {{ section.settings.heading_text }}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        <table>
+            <thead>
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                        {%- when 'heading' -%}
+                            <tr>
+                                {%- if block.settings.heading1 != blank -%}
+                                    <th class="table-acne-width font-size-md pb-5">{{ block.settings.heading1 }}</th>
+                                {% endif %}
+                                {%- if block.settings.heading2 != blank -%}
+                                    <th class="table-description-width font-size-md pb-5">{{ block.settings.heading2 }}</th>
+                                {% endif %}
+                                {%- if block.settings.heading3 != blank -%}
+                                    <th class="table-omnilux-width font-size-md pb-5">{{ block.settings.heading3 }}</th>
+                                {% endif %}
+                            </tr>
+                    {%- endcase -%}
+                {%- endfor -%}
+            </thead>
+            <tbody>
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                        {%- when 'table' -%}
+                            <tr class="position-relative table-tr">
+                                {%- if block.settings.title != blank -%}
+                                    <td data-column="ACNE TYPE" class="font-size-md table-acne-width ls-1 acne-type">{{ block.settings.title }}</td>
+                                {% endif %}
+                                <td data-column="DESCRIPTION" class="table-description-width">
+                                    <div class="table-d-flex align-items-center">
+                                        {%- if block.settings.image_with_text_image != blank -%}
+                                            <div class="table-image-parent">
+                                                <div class="table-img">
+                                                    <img src="{{ block.settings.image_with_text_image | image_url: width: 360, format: 'pjpg' }}" height="360" width="360" loading="lazy" alt="" class="">
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {%- if block.settings.description_text != blank -%}
+                                            <div class="ms-md-5 mt-3 mt-md-0">
+                                                <p class="m-0">
+                                                   {{ block.settings.description_text }}
+                                                </p>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                                <td data-column="SUITABLE FOR OMNILUX CLEAR™" class="table-omnilux-width">
+                                    <div class="table-d-flex align-items-center">
+                                        <div class="table-btn">
+                                            {%- if block.settings.true_or_false -%}
+                                                <button name="check-button" aria-label="Check Button" class="ox-check bg-black table-img-btn d-inline-block text-white"></button>
+                                            {% else %}
+                                                <button name="close-button" aria-label="Close Button" class="ox-close  table-img-btn d-inline-block"></button>
+                                            {% endif %}
+                                        </div>
+                                        <div class="ms-md-5 mt-3 mt-md-0 table-text">
+                                            {%- if block.settings.suitable_text != blank -%}
+                                                {{ block.settings.suitable_text }}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    {%- endcase -%}
+                {%- endfor -%}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Clear Assessment Table",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading_text",
+      "label": "Table Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Table Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading1",
+          "label": "Firest column Heading"
+        },
+        {
+          "type": "text",
+          "id": "heading2",
+          "label": "Second column Heading"
+        },
+        {
+          "type": "text",
+          "id": "heading3",
+          "label": "Thired column Heading"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "name": "Table Row",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "title",
+          "default": "CLEAR SKIN",
+          "label": "ACNE TYPE Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_with_text_image",
+          "label": "DESCRIPTION Image"
+        },
+        {
+          "type": "textarea",
+          "id": "description_text",
+          "label": "DESCRIPTION Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "true_or_false",
+          "label": "True Or False Icon",
+          "default": false
+        },
+        {
+          "type": "richtext",
+          "id": "suitable_text",
+          "label": "SUITABLE  Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clear Assessment Table",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "table"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

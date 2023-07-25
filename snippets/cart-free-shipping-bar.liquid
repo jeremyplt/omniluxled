@@ -1,0 +1,42 @@
+{%- liquid
+    assign cartSubTotal = cart.total_price
+    assign eligibleBar = 0
+    assign leftAmount = 0
+    assign freeShippingBar = 100
+
+    if settings.free_shipping_value
+        assign eligibleBar = settings.free_shipping_value | times: 100
+    endif
+-%}
+{%- assign flag = false -%}
+  {% comment %}
+{%- for item in cart.items -%}
+
+    {%- assign productype = item.product.type | downcase | strip -%}
+        {% if productype == "accessories" %}
+            {%- assign cartSubTotal = cartSubTotal | minus:item.final_line_price  -%}
+        {% endif %}
+    {% if productype == "led mask" %}
+    {%- assign flag = true -%}
+    {% endif %}
+  
+{% endfor %}
+<div class="{% if flag == false %}d-none{% endif %}">{% endcomment %}
+
+  <div>
+    {% if eligibleBar > 0 %}
+    {% assign freeShippingBar = cartSubTotal | divided_by: settings.free_shipping_value | round: 5 %}
+    <div class="delivery-shipping d-flex mb-3 pt-3">
+        {%- if cartSubTotal > eligibleBar -%}
+            <p class="mb-0 font-size-md fw-normal" style="line-height: 1.214285714285714;">{{ settings.free_shipping_txt }}</p>
+        {%- else -%}
+            {%- assign leftAmount = eligibleBar | minus: cartSubTotal | money -%}
+            {%- assign leftAmountMsg = settings.free_shipping_left | replace: '${addMoreForFreeShip}', leftAmount -%}
+            <p class="mb-0 font-size-md fw-normal" style="line-height: 1.214285714285714;">{{ leftAmountMsg }}</p>
+        {%- endif -%}
+    </div>
+    <div class="progress" style="background-color: #00000014;">
+        <div class="progress-bar d-block" style="width:{{ freeShippingBar }}%;" role="progressbar"></div>
+    </div>
+{% endif %}
+</div>

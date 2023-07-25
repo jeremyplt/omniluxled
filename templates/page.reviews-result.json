@@ -1,0 +1,794 @@
+{
+  "sections": {
+    "eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce": {
+      "type": "left-text-with-image",
+      "blocks": {
+        "905d430d-f1fd-4e89-bfda-56eccd0b38be": {
+          "type": "html",
+          "settings": {
+            "html": "<h1 class=\"banner__heading  mb-3 \">Reviews<br>and results<\/h1>"
+          }
+        },
+        "template--16034908471458__eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce-16703050070505d1ba-1": {
+          "type": "text",
+          "settings": {
+            "text": "If you’re wondering whether Omnilux will work for you, you’ve come to the right place. Read reviews from dermatologists and real customers like you.",
+            "text_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "905d430d-f1fd-4e89-bfda-56eccd0b38be",
+        "template--16034908471458__eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce-16703050070505d1ba-1"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "background_imagetone": "",
+        "background_tone_height": 120,
+        "image": "shopify:\/\/shop_images\/Untitled_design_101.png",
+        "image_mobile": "shopify:\/\/shop_images\/Untitled_design_102.png",
+        "txt_color": "#ffffff",
+        "enable_overlay": true,
+        "paragraph_bold": true,
+        "overlay_bg_color": "#07272d",
+        "overlay_opacity": 0.3,
+        "height": "tallheight",
+        "desktop_text_box_position": "flex-end",
+        "text_caption_align": "justify-content-start",
+        "text_align": "text-left",
+        "section_padding": false,
+        "content_width": 435,
+        "image_bg_tone": false,
+        "mobile_TEXT": true
+      }
+    },
+    "d0b3210a-add7-4ed1-8e75-b30dea150cdf": {
+      "type": "treatmentbars-image",
+      "blocks": {
+        "3281781a-7d90-43e0-8cad-11be42726a4c": {
+          "type": "treatment-bar",
+          "settings": {
+            "title": "Skin felt firmer",
+            "percentage": "98"
+          }
+        },
+        "9f8fe757-15d1-4d4a-92b0-dd4c6a6317d5": {
+          "type": "treatment-bar",
+          "settings": {
+            "title": "Fine lines appeared less visible",
+            "percentage": "96"
+          }
+        },
+        "86b5e1f9-148d-423c-869e-6131a203a8f8": {
+          "type": "treatment-bar",
+          "settings": {
+            "title": "Skin was brighter and plumper",
+            "percentage": "95"
+          }
+        }
+      },
+      "block_order": [
+        "3281781a-7d90-43e0-8cad-11be42726a4c",
+        "9f8fe757-15d1-4d4a-92b0-dd4c6a6317d5",
+        "86b5e1f9-148d-423c-869e-6131a203a8f8"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "gradient_tone": false,
+        "heading_txt": "In clinical studies, Omnilux Contour users agreed:",
+        "img_text1": "<p>After 3 treatments per week for 4 weeks<\/p>",
+        "img_text2": "",
+        "max_width": 700,
+        "image": "shopify:\/\/shop_images\/smilebkdesktop-1660850033672.jpg",
+        "alignment": "text-left",
+        "image_alignment": "right",
+        "pt": 80,
+        "pb": 40,
+        "pts": 55,
+        "pbs": 10,
+        "border-top": true,
+        "border-bottom": true
+      }
+    },
+    "0fcac62f-7c22-4c99-ae84-1ce6f3ccd760": {
+      "type": "global-results-slider",
+      "blocks": {
+        "5fe76aaf-0834-427f-a462-31c18cd24cc0": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_75.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "8291f145-0e4c-4a27-8582-289a017ed8f5": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_74.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "22e0e41a-758f-4ba5-bb59-5ecfc7c25f7f": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BA_WEBSITE_2.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "68801411-6193-4278-b13e-050ad1fdfcc5": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_86.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "f1b0bd24-a890-41de-a9f2-953cb25c4e25": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_76.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "99fe7d6f-8738-465a-9c06-3de427556c04": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_77.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "8e23d46d-ccbf-454b-ad2c-1123c21ed5e0": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_80.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "feddfe56-a981-4b67-b6aa-bbacd98c441a": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_79.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "83079703-ddf5-40bc-a0f8-5e2dedf6b33e": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_78.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "6f740b83-981b-454c-98ef-d4634c7290d7": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_87.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "4c51e92d-ba11-42a0-9ae0-cf1f872d7ad2": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_90.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "a170e9d0-a495-4666-9f54-755a1c6e5223": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_96.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "1b477a41-8c17-4a78-ac97-262a01bd2407": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_88.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "7176f99e-3e44-4adc-b018-fc8dc10c1020": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_89.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "1534121f-d71e-4e68-a7ed-57be91497b51": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_91.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "cc371970-de19-4a25-93eb-8a32be470037": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BA_WEBSITE.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "2f7ec11a-f647-4a04-819d-6a4441059772": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_93.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "a3a57743-3c49-4280-a1df-a8a680796ac1": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_14_copy_2.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "1d1727c6-66c4-462d-86f8-bcb97a0e7386": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_83.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "36fa4613-b8c0-4c7d-89b0-4dfedf162c10": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_85.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "6185f82d-1722-4dbf-be96-3d73e7ae3520": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_94.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
+        "0cd2d7d7-06fb-402a-927a-b3e3c0ddd274": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_92.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        }
+      },
+      "block_order": [
+        "5fe76aaf-0834-427f-a462-31c18cd24cc0",
+        "8291f145-0e4c-4a27-8582-289a017ed8f5",
+        "22e0e41a-758f-4ba5-bb59-5ecfc7c25f7f",
+        "68801411-6193-4278-b13e-050ad1fdfcc5",
+        "f1b0bd24-a890-41de-a9f2-953cb25c4e25",
+        "99fe7d6f-8738-465a-9c06-3de427556c04",
+        "8e23d46d-ccbf-454b-ad2c-1123c21ed5e0",
+        "feddfe56-a981-4b67-b6aa-bbacd98c441a",
+        "83079703-ddf5-40bc-a0f8-5e2dedf6b33e",
+        "6f740b83-981b-454c-98ef-d4634c7290d7",
+        "4c51e92d-ba11-42a0-9ae0-cf1f872d7ad2",
+        "a170e9d0-a495-4666-9f54-755a1c6e5223",
+        "1b477a41-8c17-4a78-ac97-262a01bd2407",
+        "7176f99e-3e44-4adc-b018-fc8dc10c1020",
+        "1534121f-d71e-4e68-a7ed-57be91497b51",
+        "cc371970-de19-4a25-93eb-8a32be470037",
+        "2f7ec11a-f647-4a04-819d-6a4441059772",
+        "a3a57743-3c49-4280-a1df-a8a680796ac1",
+        "1d1727c6-66c4-462d-86f8-bcb97a0e7386",
+        "36fa4613-b8c0-4c7d-89b0-4dfedf162c10",
+        "6185f82d-1722-4dbf-be96-3d73e7ae3520",
+        "0cd2d7d7-06fb-402a-927a-b3e3c0ddd274"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "heading_style": "heading_style_2",
+        "pt": 80,
+        "pb": 78,
+        "pts": 42,
+        "pbs": 59,
+        "border-top": false,
+        "border-bottom": false,
+        "heading_txt": "Real Omnilux Users",
+        "txt": "",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "",
+        "btn_variant": "dark",
+        "btn_size": "",
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#000000",
+        "autoplay_enable": false,
+        "loop_enable_": false,
+        "slider_enable": true,
+        "nav_arrows": true,
+        "nav_dots": false
+      }
+    },
+    "2053d303-d5d1-4192-9d60-984e8fa26a73": {
+      "type": "lead-board-slider",
+      "blocks": {
+        "06712044-9bc0-48eb-95aa-fd5242d788e8": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>“I trust Omnilux Contour as it’s backed by clinical evidence and based on the same Omnilux Medical devices we’ve used in our clinic for years. And my patients love it - they appreciate the excellent results and convenience of in-home treatments.” <\/p>",
+            "expert_name": "-Dr. Jared Jagdeo, MD",
+            "expert_postion": "Associate Professor of Dermatology, SUNY Downstate Medical Center",
+            "image": "shopify:\/\/shop_images\/experts_8045d12c-b119-4701-bb9e-5718d7894a26.jpg",
+            "button_label_1": "",
+            "button_link_1": "",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": ""
+          }
+        },
+        "0dd9d57f-e876-49b0-95a4-54e5fdde5740": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>“The amount of LED bulbs, the ease of use, maneuverability, portability, and significant results all played a part in my choice of purchasing not one but two Omnilux Medical devices for my office - and to offer the home-use Contour and CLEAR units to my patients.”<\/p>",
+            "expert_name": "- Dr. Glynis Ablon, MD, FAAD",
+            "expert_postion": "Associate Clinical Professor, UCLA",
+            "image": "shopify:\/\/shop_images\/dr-ablon_headshot-1660844700521.jpg",
+            "button_label_1": "",
+            "button_link_1": "",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": ""
+          }
+        },
+        "19670a3d-38bd-42df-b6aa-18b2a25fe649": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>\"The devices provide them with a powerful tool to achieve excellent clearance from home without the adverse effects from more aggressive treatments. It is a must for those looking for non-invasive and sustainable results.\"<\/p>",
+            "expert_name": "- Dr. Hany Abi Ghosn, MD",
+            "expert_postion": "Aesthetic Medicine, Winner Best Medical Practice Award, Europe 2018",
+            "image": "shopify:\/\/shop_images\/3-1632167041643.jpg",
+            "button_label_1": "",
+            "button_link_1": "",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": ""
+          }
+        },
+        "835231b4-e69b-4ddd-8390-18699b98b40e": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>“The Ominilux Contour Mask is the best home device ever! Just three (3) treatments a week produces very noticeable results such as a brightening of the complexion, reducing pigmentation, inflammation and redness, and smoothing fine lines. At Total Glow we know firsthand the superior performance of the Omnilux Professional FDA-approved LED device, and therefore had high expectations for the home-use Omnilux Contour mask. We were not disappointed!” <\/p>",
+            "expert_name": "- Terrie Absher Kochman, Licensed Medical Aesthetican",
+            "expert_postion": "Founder, Total Glow Medical Spa",
+            "image": "shopify:\/\/shop_images\/34-1632167041640.jpg",
+            "button_label_1": "",
+            "button_link_1": "",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": ""
+          }
+        },
+        "d0028987-bb8e-4676-a79b-199d037ead0e": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>“The Omnilux Contour mask is great for general rejuvenation of the skin. The red light is going to work really well on pigmentation, redness and inflammation of the skin. The red light brightens up the skin and the white light [the near-infrared light] means you’re going to be producing more collagen which has the benefit of softer, smoother, more dewy, healthy skin – you just get a beautiful glow.”<\/p>",
+            "expert_name": "- Dr. Clara Hurst, Aesthetic Expert",
+            "expert_postion": "Founder, Blanc Skin",
+            "image": "shopify:\/\/shop_images\/dr_clara_hurst_blanc_720x1-1660844760440.jpg",
+            "button_label_1": "",
+            "button_link_1": "",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": ""
+          }
+        },
+        "04d8a039-bd52-43d3-a536-b6ae96602937": {
+          "type": "content",
+          "settings": {
+            "heading_txt": "<p>“Of all the current techniques that I use to treat my client’s skin, I have definitely noticed the greatest improvements have come with the incorporation of infrared light. I am continually amazed by its ability to renew the skin... and it’s been the Omnilux mask that I am particularly obsessed with! Not only is it portable and incredibly easy to use, but my clients and I all notice an almost immediate decrease in puffiness (we know it reduces inflammation) and gives the skin a beautiful luminosity after masking - the mask is still somewhat of a skin miracle to me!”<\/p>",
+            "expert_name": "- Kristyn Smith, Licensed Aesthetician",
+            "expert_postion": "Founder, Practise NYC",
+            "image": "shopify:\/\/shop_images\/2-1632167041636.jpg",
+            "button_label_1": "",
+            "button_link_1": "",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": ""
+          }
+        }
+      },
+      "block_order": [
+        "06712044-9bc0-48eb-95aa-fd5242d788e8",
+        "0dd9d57f-e876-49b0-95a4-54e5fdde5740",
+        "19670a3d-38bd-42df-b6aa-18b2a25fe649",
+        "835231b4-e69b-4ddd-8390-18699b98b40e",
+        "d0028987-bb8e-4676-a79b-199d037ead0e",
+        "04d8a039-bd52-43d3-a536-b6ae96602937"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "bg_tone": true,
+        "pt": 80,
+        "pb": 67,
+        "pts": 44,
+        "pbs": 40,
+        "border-top": true,
+        "border-bottom": false,
+        "title": "The LED brand most trusted by dermatologists and aesthetic experts:"
+      }
+    },
+    "821783c1-8b1f-4f14-a8dc-bb1979c99173": {
+      "type": "global-testimonial",
+      "blocks": {
+        "8f0efc7c-8f10-4e61-a8a5-66e3679c7e3f": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>I’m a huge fan of my Omnilux Contour! Immediately after treatment, my skin looks refreshed, even, and plump. With continued use, the redness in my cheeks has decreased significantly.<\/p>",
+            "quote_author": "Rosanna",
+            "alignment": "text-center"
+          }
+        },
+        "f492ebef-89e4-4066-a7b8-fb8e90f6e9e8": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>Last night was my first time using this mask…surprisingly, my skin looked better after one use.<\/p>",
+            "quote_author": "Roy",
+            "alignment": "text-center"
+          }
+        },
+        "af279a6c-4367-447f-93d5-26c2bf95945e": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>I'm 53 years old and I have done numerous treatments - from chemical peels, oxygen facials, laser treatments and light therapy in a doctor's office. This device is worth the cost. Even though I have only been using it for a few weeks - I already see the difference.<\/p>",
+            "quote_author": "Maria",
+            "alignment": "text-center"
+          }
+        },
+        "1feb27da-0e40-4ab6-a986-11bae9d59e67": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>I’ve spent SO much time and money trying to fix my acne, and this is the only thing that has ever worked. While this mask is not cheap, it is so dang effective.<\/p>",
+            "quote_author": "Laina",
+            "alignment": "text-center"
+          }
+        },
+        "500b26e8-f169-4112-917d-2b1bf76a3af0": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>I could see improvement in pore size and overall smoothness in skin tone after only a few sessions. It is so easy to use.<\/p>",
+            "quote_author": "Cynthia",
+            "alignment": "text-center"
+          }
+        },
+        "d3535fd8-cbf1-4857-9759-2ae1a6117da1": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>I love, love, love my Omnilux face mask!! It gives my complexion a glow that I can’t duplicate any other way.<\/p>",
+            "quote_author": "Ellen",
+            "alignment": "text-center"
+          }
+        },
+        "66e894aa-f798-4777-bbf7-f9546d6fa63f": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>I researched a lot on LED masks before deciding on the Omnilux Contour Face because a few Dermatologists actually recommend the product. It is easy to pack on a carry on bag as I travel a lot with my job.<\/p>",
+            "quote_author": "Dorothy",
+            "alignment": "text-center"
+          }
+        },
+        "068d7aca-1e1c-4da2-a3af-e8f6693fef18": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "<p>It’s so perfect and I love the fact that it’s rechargeable - will be the perfect flight companion!<\/p>",
+            "quote_author": "Ryan",
+            "alignment": "text-center"
+          }
+        }
+      },
+      "block_order": [
+        "8f0efc7c-8f10-4e61-a8a5-66e3679c7e3f",
+        "f492ebef-89e4-4066-a7b8-fb8e90f6e9e8",
+        "af279a6c-4367-447f-93d5-26c2bf95945e",
+        "1feb27da-0e40-4ab6-a986-11bae9d59e67",
+        "500b26e8-f169-4112-917d-2b1bf76a3af0",
+        "d3535fd8-cbf1-4857-9759-2ae1a6117da1",
+        "66e894aa-f798-4777-bbf7-f9546d6fa63f",
+        "068d7aca-1e1c-4da2-a3af-e8f6693fef18"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "border_bottom": false,
+        "heading_txt": "What they say",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000",
+        "autoplay_enable": true,
+        "nav_arrows": true,
+        "nav_dots": true
+      }
+    },
+    "45fafdba-c9b0-4de3-b2d8-d6f544b665f4": {
+      "type": "global-reviews-slider",
+      "blocks": {
+        "b66383b5-05b4-49f3-8c1b-d4d1b5cad399": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": "https:\/\/www.youtube.com\/embed\/BcT9M0Ye6Is?\nstart=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+          }
+        },
+        "f491fad9-9ef8-4267-aa85-877fec1053ba": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": "https:\/\/www.youtube.com\/embed\/iZ3gGDVdRH8?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+          }
+        },
+        "ce0e55dc-a6ca-411a-9949-ad8f27dca4a7": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": "https:\/\/www.youtube.com\/embed\/-Ph4qs79HBA?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+          }
+        },
+        "c6c547de-705f-446d-a450-a4ca38239b04": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": "https:\/\/www.youtube.com\/embed\/fdYkRP4jUwo?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+          }
+        },
+        "2baf53bb-a630-4895-a9de-2d597129033d": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": "https:\/\/www.youtube.com\/embed\/EA4E5y-pEL4?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+          }
+        },
+        "517e17cb-35c2-4f0a-bf5c-c079b6aac8e4": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": "https:\/\/www.youtube.com\/embed\/MVKhth_oRdw?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+          }
+        },
+        "5235f133-1990-4af0-a2a5-ea975010a765": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": "https:\/\/www.youtube.com\/embed\/EmKJfqoLXgk?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+          }
+        }
+      },
+      "block_order": [
+        "b66383b5-05b4-49f3-8c1b-d4d1b5cad399",
+        "f491fad9-9ef8-4267-aa85-877fec1053ba",
+        "ce0e55dc-a6ca-411a-9949-ad8f27dca4a7",
+        "c6c547de-705f-446d-a450-a4ca38239b04",
+        "2baf53bb-a630-4895-a9de-2d597129033d",
+        "517e17cb-35c2-4f0a-bf5c-c079b6aac8e4",
+        "5235f133-1990-4af0-a2a5-ea975010a765"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "heading_style": "heading_style_1",
+        "pt": 20,
+        "pb": 58,
+        "pts": 10,
+        "pbs": 70,
+        "border-top": false,
+        "border-bottom": false,
+        "heading_txt": "Watch video reviews",
+        "txt": "",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "",
+        "btn_variant": "dark",
+        "btn_size": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000",
+        "autoplay_enable": false,
+        "slider_enable": true,
+        "nav_arrows": true,
+        "nav_dots": false
+      }
+    },
+    "9d5f3b68-01f1-45f1-93e8-7f24d77b65b7": {
+      "type": "global-image-with-text",
+      "blocks": {
+        "d4a34814-1287-4582-8749-c36575349c53": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": true,
+            "heading_txt": "The most tested &amp; trusted <br> LED brand on the market",
+            "max_width": 530,
+            "txt": "",
+            "step_heading": "",
+            "steps_captions": "More FDA approved indications than any other brand\nFound in over 5,000 dermatology & aesthetic offices worldwide\nValidated by the Journals of Cosmetic and Laser Therapy, Photochemistry and Photobiology B, ASLMS, and many others\nContinuous research for new and novel indications and applications",
+            "steps_captions_2": "",
+            "btn_txt": "",
+            "btn_link": "",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Before_13.png",
+            "alignment": "text-left",
+            "image_alignment": "right"
+          }
+        },
+        "7b46dd6e-08f0-4c9b-b43f-14ba0fc9dad4": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": true,
+            "heading_txt": "Over 40 peer-reviewed <br> clinical papers &amp; studies",
+            "max_width": 530,
+            "txt": "<p>Use the button below to explore the bibliography of Omnilux clinical studies and papers.<\/p>",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "",
+            "btn_txt": "OMNILUX CLINICAL BIBLIOGRAPHY",
+            "btn_link": "shopify:\/\/pages\/clinical-bibliography",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "outline",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Before_15.png",
+            "alignment": "text-left",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "d4a34814-1287-4582-8749-c36575349c53",
+        "7b46dd6e-08f0-4c9b-b43f-14ba0fc9dad4"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "enable_background_tone": false,
+        "border_bottom": true,
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000"
+      }
+    },
+    "5466ea2d-54f2-423e-8c4d-28c789c0796a": {
+      "type": "product-reviews",
+      "blocks": {
+        "template--16054092365986__5466ea2d-54f2-423e-8c4d-28c789c0796a-1672652775d0f1c2b4-0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/01_9d1ca6ee-319d-4c14-a722-9594e2553df3_2x-min_500x.png?v=1672482590",
+            "title": "Omnilux Contour Face Reviews",
+            "title_link": "\/products\/omnilux-contour-face\/#stamped-reviews-tab",
+            "txt": ""
+          }
+        },
+        "5c5f40da-84fb-4d01-9d75-f74d7ef97ac9": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/01_31dc58bc-0a54-4fdf-a126-e23a50952786_2x-min_500x.png?v=1672483642",
+            "title": "Omnilux Contour Neck & Décolleté Reviews",
+            "title_link": "\/products\/omnilux-contour-neck-decollete\/#stamped-reviews-tab",
+            "txt": ""
+          }
+        },
+        "d0b350aa-d22b-4226-8e56-9fb3001bce65": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/01_646bbcc9-166d-40d3-8b3e-1e7e5e776f3f_2x-min_500x.png?v=1672483612",
+            "title": "Omnilux Contour Glove Reviews",
+            "title_link": "\/products\/omnilux-contour-glove\/#stamped-reviews-tab",
+            "txt": ""
+          }
+        },
+        "96e63d89-dfb6-445a-b8f7-cecde3ce6c0d": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/01_compact_2x-min_500x.png?v=1672483594",
+            "title": "Omnilux Clear Reviews",
+            "title_link": "\/products\/omnilux-clear\/#stamped-reviews-tab",
+            "txt": ""
+          }
+        },
+        "1959be02-11ec-4579-bc1d-af4aaac5f144": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/nine-fixed_2x-min_500x.png?v=1672483544",
+            "title": "Omnilux Men Reviews",
+            "title_link": "\/products\/omnilux-men\/#stamped-reviews-tab",
+            "txt": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16054092365986__5466ea2d-54f2-423e-8c4d-28c789c0796a-1672652775d0f1c2b4-0",
+        "5c5f40da-84fb-4d01-9d75-f74d7ef97ac9",
+        "d0b350aa-d22b-4226-8e56-9fb3001bce65",
+        "96e63d89-dfb6-445a-b8f7-cecde3ce6c0d",
+        "1959be02-11ec-4579-bc1d-af4aaac5f144"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "grid_size": "2",
+        "heading_txt": "More product reviews",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#000000",
+        "pt": 80,
+        "pb": 40,
+        "pts": 40,
+        "pbs": 40,
+        "border-top": false,
+        "border-bottom": false
+      }
+    },
+    "0081f2f1-d898-4163-b23c-6c133570324a": {
+      "type": "product-review-tab",
+      "blocks": {
+        "fdbe6e1d-6b9c-4fcd-a702-b0b9d574fc35": {
+          "type": "logowidthtext",
+          "settings": {
+            "btn_txt": "See Before & Afters",
+            "btn_link": "#result-slider"
+          }
+        },
+        "54c67fcf-531e-45b6-8fca-e18d8b10810d": {
+          "type": "logowidthtext",
+          "settings": {
+            "btn_txt": "Read Dr. Reviews",
+            "btn_link": "#lead-board-slider"
+          }
+        },
+        "899dbcbc-8bcd-44c2-a64e-0094218f2d4e": {
+          "type": "logowidthtext",
+          "settings": {
+            "btn_txt": "Watch Reviews",
+            "btn_link": "#reviews-slider"
+          }
+        },
+        "1ad857a1-033a-4721-a3ba-f0ba9da7b15e": {
+          "type": "logowidthtext",
+          "settings": {
+            "btn_txt": "View Clinical Studies",
+            "btn_link": "#image-with-text"
+          }
+        }
+      },
+      "block_order": [
+        "fdbe6e1d-6b9c-4fcd-a702-b0b9d574fc35",
+        "54c67fcf-531e-45b6-8fca-e18d8b10810d",
+        "899dbcbc-8bcd-44c2-a64e-0094218f2d4e",
+        "1ad857a1-033a-4721-a3ba-f0ba9da7b15e"
+      ],
+      "settings": {
+        "fluid_layout": false
+      }
+    }
+  },
+  "order": [
+    "eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce",
+    "d0b3210a-add7-4ed1-8e75-b30dea150cdf",
+    "0fcac62f-7c22-4c99-ae84-1ce6f3ccd760",
+    "2053d303-d5d1-4192-9d60-984e8fa26a73",
+    "821783c1-8b1f-4f14-a8dc-bb1979c99173",
+    "45fafdba-c9b0-4de3-b2d8-d6f544b665f4",
+    "9d5f3b68-01f1-45f1-93e8-7f24d77b65b7",
+    "5466ea2d-54f2-423e-8c4d-28c789c0796a",
+    "0081f2f1-d898-4163-b23c-6c133570324a"
+  ]
+}

@@ -1,0 +1,57 @@
+<script async src="https://www.googleoptimize.com/optimize.js?id=OPT-KT8DKGH"></script>
+
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NZHVZRD');</script>
+
+<!-- Begin: Northbeam Pixel -->
+<script async type="text/javascript" src="//j.northbeam.io/ota-sp/464c948b-3ded-4ff9-b035-be3974299c0f.js"></script>
+<!-- End: Northbeam Pixel -->
+
+<!-- instructions from here https://docs.google.com/document/d/1FGHxfebq-hTRrped6t01YuQIg36jJTS_lhmu0KkWPLc/edit -->
+<script>
+!function(){var o=window.tdl=window.tdl||[];if(o.invoked)window.console&&console.error&&console.error("Tune snippet has been included more than once.");else{o.invoked=!0,o.methods=["init","identify","convert"],o.factory=function(n){return function(){var e=Array.prototype.slice.call(arguments);return e.unshift(n),o.push(e),o}};for(var e=0;e<o.methods.length;e++){var n=o.methods[e];o[n]=o.factory(n)}o.init=function(e){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://js.go2sdk.com/v2/tune.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(n,t),o.domain=e}}}();
+
+tdl.init("https://www.inflcr.co")
+tdl.identify()
+</script>
+
+<meta name="facebook-domain-verification" content="npd8aatzsm7bjfwhs9736stg5h4gs7" />
+
+
+<!-- Hotjar Tracking Code for omniluxled.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2032256,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+
+<!-- MNTN Shopify DataLayer -->
+{% if product %}
+   <script type="text/javascript" async>
+      let mntn_product_name = {{product.title | json}}
+      let mntn_product_price = {{product.price | money_without_trailing_zeros | json}}
+      let mntn_product_image = {{product.featured_image | json}}
+      let mntn_product_sku = {{product.id | json}}     
+      let mntn_product_in_stock = {{product.available | json}}
+      let mntn_product_data = {{product | json}}
+   </script>
+{% endif %}
+{% if cart.item_count > 0 %}
+   <script type="text/javascript" async>
+      let mntn_cart_quantity = {{cart.item_count | json}}
+      let mntn_cart_value = {{cart.items_subtotal_price | money_without_trailing_zeros | json}}
+      let mntn_cart_data = {{cart | json}}
+   </script>
+{% endif %}
+    <!-- End MNTN Shopify DataLayer -->

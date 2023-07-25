@@ -1,0 +1,86 @@
+[class^="ox-"], [class*=" ox-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'omnilux-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ox-3d:before {
+  content: "\e900";
+}
+.ox-check:before {
+  content: "\e919";
+}
+.ox-grid-1:before {
+  content: "\e91a";
+}
+.ox-grid-2:before {
+  content: "\e91b";
+}
+.ox-grid-2m:before {
+  content: "\e91c";
+}
+.ox-grid-4:before {
+  content: "\e91d";
+}
+.ox-arrow-down:before {
+  content: "\e91e";
+}
+.ox-arrow-left:before {
+  content: "\e91f";
+}
+.ox-arrow-right:before {
+  content: "\e920";
+}
+.ox-arrow-up:before {
+  content: "\e921";
+}
+.ox-bag:before {
+  content: "\e922";
+}
+.ox-close:before {
+  content: "\e923";
+}
+.ox-facebook:before {
+  content: "\e924";
+}
+.ox-instagram:before {
+  content: "\e925";
+}
+.ox-menu:before {
+  content: "\e926";
+}
+.ox-minus:before {
+  content: "\e927";
+}
+.ox-play:before {
+  content: "\e928";
+}
+.ox-play-o:before {
+  content: "\e929";
+}
+.ox-plus:before {
+  content: "\e92a";
+}
+.ox-qts:before {
+  content: "\e92b";
+}
+.ox-search:before {
+  content: "\e92c";
+}
+.ox-tiktok:before {
+  content: "\e92d";
+}
+.ox-youtube:before {
+  content: "\e92e";
+}

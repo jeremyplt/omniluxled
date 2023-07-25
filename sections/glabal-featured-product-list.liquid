@@ -1,0 +1,299 @@
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
+  {% assign collection_grid_type = section.settings.collection_grid_type %}
+  {% assign productExcludeTag = settings.product_exclude_tag_text %}
+
+  <section class="section-content {% if section.settings.slide_per_ %}outer-slide-visible{% endif %}" data-section-id="{{ section.id }}" data-grid-type="{{ collection_grid_type }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
+      <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}" {% if collection_grid_type == 'grid' %}data-type="slider"{% endif %}>
+        <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 mb-4 pb-1 {{ section.settings.heading_alignment }} {% if section.settings.heading_alignment == 'mx-auto' %}text-center{% elsif section.settings.heading_alignment == 'ms-auto' %}text-center text-lg-end {% else %}text-center text-lg-start{% endif %}">
+                {% if section.settings.heading_txt != blank %}
+                    <h3 class="section-title mb-2">{{ section.settings.heading_txt | escape }}</h3>
+                {% endif %}
+                {% if section.settings.lead_txt != blank %}
+                    <p>
+                        {{ section.settings.lead_txt }}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+      </div>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-12">
+                        <slider-element class="arrow-center swiper-container carousel d-block position-relative arrow-inside">
+                            <div class="swiper swiper-slider featured-collection-slider card-carousel" data-slider='{
+                                  "loop": false,
+                                  "shortSwipes": false,
+                                  "freeMode": true,
+                                  "slidesPerView": "1.34",
+                                  "spaceBetween": 15,
+                                  "grabCursor": true,
+                                  "preloadImages": false,
+                                  "lazy": true,
+                                  "navigation": {
+                                      "nextEl": ".product-button-next",
+                                      "prevEl": ".product-button-prev"
+                                  },
+                                  "pagination": {
+                                      "el": ".swiper-pagination"
+                                  },
+                                  "breakpoints": {
+                                    "660": {
+                                      "slidesPerView": 2,
+                                      "spaceBetween": 30
+                                    },
+                                    "992": {
+                                      "slidesPerView":3,
+                                      "spaceBetween": 10
+                                    }
+                                 }
+                              }'>
+                                  <div class="swiper-wrapper">
+                                        {% for product in collections[section.settings.home_featured_collection].products limit: 8 %}
+                                          {%- comment %}<locksmith:b2b7>{% endcomment -%}
+                                            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collections[section.settings.home_featured_collection], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                          {%- comment %}</locksmith:b2b7>{% endcomment -%}
+                                          {% liquid 
+                                            assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
+                                            assign checkWholesaleProducts = false
+                                            for tag in hideWholesalersProducts
+                                              assign tag = tag | downcase
+                                              if product.tags contains tag
+                                                assign checkWholesaleProducts = true
+                                              endif
+                                            endfor
+                                          %}
+                                          {% unless checkWholesaleProducts == true %}
+                                            {% unless product.tags contains productExcludeTag %}
+                                              <div class="swiper-slide">
+                                                  {% render 'card-product-style-generic', product: product %}
+                                              </div>
+                                            {% endunless %}
+                                          {% endunless %}
+                                          {% endfor %}
+                                  </div>
+                                  {% if section.settings.nav_dots %}
+                                      <div class="swiper-pagination bottom-0 w-100 text-center mt-3 position-relative"></div>
+                                  {% endif %}
+                              </div>
+                              {% if section.settings.nav_arrows %}
+                                  <div class="swiper-button-next product-button-next collection-style-4-next icon-next ox-arrow-right"></div>
+                                  <div class="swiper-button-prev product-button-prev collection-style-4-prev icon-previous ox-arrow-left"></div>
+                              {% endif %}
+                          </slider-element>
+                      </div>
+                  </div>
+              </div>
+
+      </div>
+  </section>
+  <style>
+.arrow-center.carousel .swiper-button-next {
+    top: 46%;
+    transform: translateY(-46%);
+}
+.arrow-center.carousel .swiper-button-prev {
+    top: 46%;
+    transform: translateY(-46%);
+}
+.outer-slide-visible{
+    overflow: hidden;
+}
+.outer-slide-visible .swiper{
+    overflow: visible;
+}
+  </style>
+{% schema %}
+{
+  "name": "Featured Select Product",
+  "tag": "section",
+  "class": "index-featured-collectiion",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_dots",
+      "label": "Dots Navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_arrows",
+      "label": "Arrows Navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_arrows_outside",
+      "label": "Navigation Arrow Outside",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Text alignment",
+      "options": [
+        {
+          "value": "mx-auto",
+          "label": "Center"
+        },
+        {
+          "value": "me-lg-auto ms-lg-0 mx-auto",
+          "label": "left"
+        },
+        {
+          "value": "ms-lg-auto me-lg-0 mx-auto",
+          "label": "Right"
+        }
+      ],
+      "default": "me-lg-auto ms-lg-0 mx-auto"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Featured Collection"
+    },
+    {
+      "type": "textarea",
+      "id": "lead_txt",
+      "label": "Lead Text"
+    },
+    {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
+      "type": "collection",
+      "id": "home_featured_collection",
+      "label": "Select Collection"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "section_txt_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "SHOP ALL"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "header",
+      "content": "Spacing & Border"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding Top(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding Bottom(Desktop)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "pts",
+      "label": "Padding Top(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "pbs",
+      "label": "Padding Bottom(Mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 56
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_per_",
+      "label": "Outer Slide visiable ?",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Select Product",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}
+  <style>
+    [data-section-id="{{ section.id }}"]
+    {
+      padding-top: {{ section.settings.pts }}px;
+      padding-bottom: {{ section.settings.pbs }}px;
+      {% if section.settings.border-top %}
+      border-top: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+      {% if section.settings.border-bottom %}
+      border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+    }
+    @media (min-width:992px)
+    {
+      [data-section-id="{{ section.id }}"]
+      {
+        padding-top: {{ section.settings.pt }}px;
+        padding-bottom: {{ section.settings.pb }}px;
+      }
+    }
+  </style>

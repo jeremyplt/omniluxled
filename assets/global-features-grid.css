@@ -1,0 +1,95 @@
+.feature-wrap .feature
+{
+    max-width: 105px;
+}
+.feature-wrap .feature-six .feature{
+    width:100%;
+    margin-top: 10px;
+}
+.feature-wrap .feature-six .feature h6{
+    margin-bottom: 0 !important;
+}
+.feature-wrap .feature-row-wrap
+{
+    max-width: 331px;
+}
+@media (min-width:992px){
+    .feature-wrap .feature-six .feature
+    {
+        max-width: 175px;
+    }
+}
+@media (min-width:768px){
+    .feature-wrap .feature
+    {
+        max-width: 120px;
+    }
+    .feature-wrap .feature-row-wrap
+    {
+        max-width: 920px;
+    }
+    .feature-wrap .feature-six .feature{
+        margin-top: 22px;
+    }
+    .feature-wrap .feature-six .square-card-wrap
+    {
+        max-width: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .feature-wrap .feature-six.only-icon .square-card-wrap
+    {
+        max-width: 120px;
+    }
+}
+@media (max-width:767px){
+    .feature-six .feature
+    {
+        max-width: 100%;
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+    .feature-six .feature .square-card-wrap
+    {
+        max-width: 50px;
+        width: 100%;
+    }
+    .feature-six .feature .square-card-wrap + div
+    {
+        max-width:calc(100% - 50px);
+    }
+    .feature-six .feature-text-wrap h6
+    {
+        padding-left: 10px;
+        font-size: 12px !important;
+    }
+    .feature-wrap .feature-six.only-icon .square-card-wrap
+    {
+        max-width: 90px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .feature-wrap .feature-six.only-icon
+    {
+        width: 33.33%;
+    }
+}
+@media (max-width:370px){
+    .feature-wrap .feature-six
+    {
+        width: 100% !important;
+    }
+    .feature-wrap .feature-six.only-icon
+    {
+        width: 50% !important;
+    }
+}
+.template-product .feature-six .feature-text-wrap h6{
+    letter-spacing: 0.6px !important;
+}
+@media (min-width: 992px){
+    .template-product .feature-six .feature-text-wrap h6{
+        letter-spacing: 1.4px !important;
+    }
+}

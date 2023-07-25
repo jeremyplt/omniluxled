@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "return-auth-form-block",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

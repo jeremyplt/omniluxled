@@ -1,0 +1,339 @@
+<script>
+    async function load() {
+      let url = '/browsing_context_suggestions.json',
+          obj = await (await fetch(url)).json(),
+          countrycode = obj.detected_values.country.handle,
+          euCountryCodes = ["AT", "BE", "BG", "HR", "CY",
+                            "CZ", "DK", "EE", "FI", "FR",
+                            "DE", "GR", "HU", "IE", "IT",
+                            "LV", "LT", "LU", "MT", "NL",
+                            "PL", "PT", "RO", "SK", "SI",
+                            "ES", "SE", "NO"];
+
+        /* If is some of the EU countryies we grouped under EU */
+      if (euCountryCodes.includes(countrycode)) {
+        $('body').addClass('eu_country_code_' + countrycode);
+        countrycode = 'EU';
+      }
+      if(countrycode == 'GB'){
+        $('body').addClass('country_code_UK');
+      }else{
+        $('body').addClass('country_code_' + countrycode);
+      }
+      $(document).trigger( "countryCodeSet", [ countrycode ] );
+
+
+      {% if template == 'collection' %}
+      let grids = $('#collection-product-grid [data-prod-type]');
+       $.each(grids, function(index,grid){
+        //alert(countrycode)
+         console.log($(this).attr('data-prod-type'))
+        if(countrycode == 'US'){
+          
+        }else{
+          
+          if($.trim($(this).attr('data-prod-type')) == 'Gift Cards'){
+            $(this).attr('style','display:none !important');
+          }
+        }
+      });
+      {% endif %}
+  }
+  load();
+  let productsMessagesMap = [
+    {%- liquid
+      assign loopIndex = 0
+      assign totalProducts = collection.products.count
+      assign productExcludeTag = settings.product_exclude_tag_text
+    -%}
+    {%- comment %}<locksmith:8c8d>{% endcomment -%}
+      {%- assign locksmith_d3b3_forloop__size = 0 %}{% for product in collections['all'].products %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collections.all, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_d3b3_forloop__size = locksmith_d3b3_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_d3b3_forloop__index = nil -%}
+    {%- comment %}</locksmith:8c8d>{% endcomment -%}
+    {% for product in collections['all'].products %}
+      {%- comment %}<locksmith:93ae>{% endcomment -%}
+        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collections.all, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_d3b3_forloop__index == nil %}{% assign locksmith_d3b3_forloop__index = 1 %}{% assign locksmith_d3b3_forloop__index0 = 0 %}{% else %}{% assign locksmith_d3b3_forloop__index = locksmith_d3b3_forloop__index | plus: 1 %}{% assign locksmith_d3b3_forloop__index0 = locksmith_d3b3_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_d3b3_forloop__index == 1 %}{% assign locksmith_d3b3_forloop__first = true %}{% else %}{% assign locksmith_d3b3_forloop__first = false %}{% endif %}{% if locksmith_d3b3_forloop__index == locksmith_d3b3_forloop__size %}{% assign locksmith_d3b3_forloop__last = true %}{% else %}{% assign locksmith_d3b3_forloop__last = false %}{% endif %}{% assign locksmith_d3b3_forloop__rindex = locksmith_d3b3_forloop__size | minus: locksmith_d3b3_forloop__index | minus: 1 %}{% assign locksmith_d3b3_forloop__rindex0 = locksmith_d3b3_forloop__size | minus: locksmith_d3b3_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+      {%- comment %}</locksmith:93ae>{% endcomment -%}
+      {% unless product.type == "Gift Cards" %}
+      {% liquid
+        assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
+        assign checkWholesaleProducts = false
+        for tag in hideWholesalersProducts
+          assign tag = tag | downcase
+          if product.tags contains tag
+            assign checkWholesaleProducts = true
+          endif
+        endfor
+      %}
+      {% unless checkWholesaleProducts == true %}
+      {% unless product.tags contains productExcludeTag %}
+          {% assign loopIndex = loopIndex | plus: 1 %}
+          {
+            "prodId": "{{product.id}}",
+            "countryMessaging": [
+                {% if product.metafields.custom.ca_preorder %}{'countryCode':'CA','messaging':'{{product.metafields.custom.custom.ca_add_to_cart_button_text}}', 'action': 'replace','cartMessage':'{{product.metafields.custom.ca_cart_page_messaging | strip_newlines }}','productMessage':'{{product.metafields.custom.ca_product_page_messaging | replace: "\n", ""}}'},{% endif %}
+                {% if product.metafields.custom.eu_preorder %}{'countryCode':'EU','messaging':'{{product.metafields.custom.eu_add_to_cart_button_text}}', 'action': 'replace','cartMessage':'{{product.metafields.custom.eu_cart_page_messaging | strip_newlines }}', 'productMessage':'{{product.metafields.custom.eu_product_page_messaging | strip_newlines }}'},{% endif %}
+                {% if product.metafields.custom.uk_preorder %}{'countryCode':'UK','messaging':'{{product.metafields.custom.uk_add_to_cart_button_text}}', 'action': 'replace','cartMessage':'{{product.metafields.custom.uk_cart_page_messaging | strip_newlines }}','productMessage':'{{product.metafields.custom.uk_product_page_messaging | strip_newlines }}'},{% endif %}
+                {% if product.metafields.custom.au_preorder %}{'countryCode':'AU','messaging':'{{product.metafields.custom.custom.au_add_to_cart_button_text}}', 'action': 'append','cartMessage':'{{product.metafields.custom.au_cart_page_messaging | strip_newlines }}','productMessage':'{{product.metafields.custom.au_product_page_messaging | strip_newlines }}'},{% endif %}
+                {% if product.metafields.custom.us_preorder %}{'countryCode':'US','messaging':'{{ product.metafields.custom.custom.us_add_to_cart_button_text }}', 'action': 'append','cartMessage':'{{product.metafields.custom.us_cart_page_messaging | strip_newlines }}','productMessage':'{{product.metafields.custom.us_product_page_messaging | strip_newlines }}'},{% endif %}
+                {% if product.metafields.custom.nz_preorder %}{'countryCode':'NZ','messaging':'{{product.metafields.custom.custom.nz_add_to_cart_button_text}}', 'action': 'append','cartMessage':'{{product.metafields.custom.nz_cart_page_messaging | strip_newlines }}','productMessage':'{{product.metafields.custom.nz_product_page_messaging | strip_newlines }}'},{% endif %}
+                {% if product.metafields.custom.ar_preorder %}{'countryCode':'AR','messaging':'{{product.metafields.custom.custom.ar_add_to_cart_button_text}}', 'action': 'replace','cartMessage':'{{product.metafields.custom.ar_cart_page_messaging | strip_newlines }}','productMessage':'{{product.metafields.custom.ar_product_page_messaging | strip_newlines }}'}{% endif %}
+            ]
+          }{% unless locksmith_d3b3_forloop__last %},{% endunless %}
+      {% endunless %}
+    {% endunless %}
+  {% endunless %}
+    {% endfor %}
+];
+
+  $(function() {
+   setTimeout(function(){
+          productsMessagesMap.forEach( function(prodData, index, array) {
+            var prodId = prodData.prodId,
+            $prod = $('form[data-product-id="'+prodId+'"]');
+            let btns = $('form[data-product-id="'+prodId+'"] button[type="submit"]');
+            $.each(btns, function(index,btn){
+              $(this).addClass('countryMessaging')
+            });
+            prodData.countryMessaging.forEach( function(countryMessage, index, array) {
+              if ($('body').hasClass('country_code_'+countryMessage.countryCode)) {
+                let btns = $('form[data-product-id="'+prodId+'"] button[type="submit"]');
+                countryMessage.messaging = countryMessage.messaging != '' ? countryMessage.messaging : 'Pre-Order';
+                $.each(btns, function(index,btn){
+                  $(this).html(countryMessage.messaging);
+                });
+
+                {% if template == 'product' %}
+                    let msgProducts = $('form[data-product-id="'+prodId+'"] [data-product-preorder-message]');
+                    $.each(msgProducts, function(index,msgProduct){
+                        console.log('index----',index);
+
+                        $(this).html(countryMessage.productMessage);
+                    });
+                
+                {% endif %}
+
+               
+                  
+                let cartMessages = $('.cart-items[data-product-id="'+prodId+'"] [data-preorder-cartmessage]');
+                $.each(cartMessages, function(index,cartMessage){
+                    $(this).html(countryMessage.cartMessage);
+                });
+              }
+            });
+          });
+        },900);
+  });
+  </script>
+ 
+  {% capture 'customProdsPreOrderMetaFields' %}
+  {
+      {% for product in collections.metafields-expose.products %}
+          {%- comment %}<locksmith:0d68>{% endcomment -%}
+            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collections.metafields-expose, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+          {%- comment %}</locksmith:0d68>{% endcomment -%}
+          "{{ product.id }}" : {
+              handle : "{{ product.handle}}",
+              default : {
+                add_to_cart_button_text : "{{product.metafields.custom.default_add_to_cart_button_text}}",
+                add_to_cart_button_status : "{{product.metafields.custom.default_add_to_cart_button_status}}",
+                back_in_stock_date_messaging : "{{product.metafields.custom.default_back_in_stock_date_messaging}}",
+                collection_page_replace_messaging : "{{product.metafields.custom.default_collection_page_replace_messaging}}",
+                collection_messaging_page : "{{product.metafields.custom.default_collection_messaging_page}}",
+                cart_page_messaging : "{{product.metafields.custom.default_cart_page_messaging | strip_newlines }}",
+                pre_order_status : "{{product.metafields.custom.default_preorder}}"
+              },
+              us : {
+                add_to_cart_button_text : "{{product.metafields.custom.us_add_to_cart_button_text}}",
+                add_to_cart_button_status : "{{product.metafields.custom.us_add_to_cart_button_status}}",
+                back_in_stock_date_messaging : "{{product.metafields.custom.us_product_page_messaging | strip_newlines }}",
+                collection_page_replace_messaging : "{{product.metafields.custom.us_collection_page_replace_messaging}}",
+                collection_messaging_page : "{{product.metafields.custom.us_collection_messaging_page}}",
+                cart_page_messaging : "{{product.metafields.custom.us_cart_page_messaging | strip_newlines }}",
+                pre_order_status : "{{product.metafields.custom.us_preorder}}"
+              },
+              gb : {
+                add_to_cart_button_text : "{{product.metafields.custom.uk_add_to_cart_button_text}}",
+                add_to_cart_button_status : "{{product.metafields.custom.uk_add_to_cart_button_status}}",
+                back_in_stock_date_messaging : "{{product.metafields.custom.uk_product_page_messaging | strip_newlines }}",
+                collection_page_replace_messaging : "{{product.metafields.custom.uk_collection_page_replace_messaging}}",
+                collection_messaging_page : "{{product.metafields.custom.uk_collection_messaging_page}}",
+                cart_page_messaging : "{{product.metafields.custom.uk_cart_page_messaging | strip_newlines }}",
+                pre_order_status : "{{product.metafields.custom.uk_preorder}}"
+              },
+              uk : {
+                add_to_cart_button_text : "{{product.metafields.custom.uk_add_to_cart_button_text}}",
+                add_to_cart_button_status : "{{product.metafields.custom.uk_add_to_cart_button_status}}",
+                back_in_stock_date_messaging : "{{product.metafields.custom.uk_product_page_messaging | strip_newlines }}",
+                collection_page_replace_messaging : "{{product.metafields.custom.uk_collection_page_replace_messaging}}",
+                collection_messaging_page : "{{product.metafields.custom.uk_collection_messaging_page}}",
+                cart_page_messaging : "{{product.metafields.custom.uk_cart_page_messaging | strip_newlines }}",
+                pre_order_status : "{{product.metafields.custom.uk_preorder}}"
+              },
+              ca : {
+                add_to_cart_button_text : "{{product.metafields.custom.ca_add_to_cart_button_text}}",
+                add_to_cart_button_status : "{{product.metafields.custom.ca_add_to_cart_button_status}}",
+                back_in_stock_date_messaging : "{{product.metafields.custom.ca_product_page_messaging }}",
+                collection_page_replace_messaging : "{{product.metafields.custom.ca_collection_page_replace_messaging}}",
+                collection_messaging_page : "{{product.metafields.custom.ca_collection_messaging_page}}",
+                cart_page_messaging : "{{product.metafields.custom.ca_cart_page_messaging | strip_newlines }}",
+                pre_order_status : "{{product.metafields.custom.ca_preorder}}"
+              },
+
+              au : {
+                add_to_cart_button_text : "{{product.metafields.custom.au_add_to_cart_button_text}}",
+                add_to_cart_button_status : "{{product.metafields.custom.au_add_to_cart_button_status}}",
+                back_in_stock_date_messaging : "{{product.metafields.custom.au_product_page_messaging | strip_newlines }}",
+                collection_page_replace_messaging : "{{product.metafields.custom.au_collection_page_replace_messaging}}",
+                collection_messaging_page : "{{product.metafields.custom.au_collection_messaging_page}}",
+                cart_page_messaging : "{{product.metafields.custom.au_cart_page_messaging | strip_newlines }}",
+                pre_order_status : "{{product.metafields.custom.au_preorder}}"
+              },
+
+              nz : {
+                add_to_cart_button_text : "{{product.metafields.custom.nz_add_to_cart_button_text}}",
+                add_to_cart_button_status : "{{product.metafields.custom.nz_add_to_cart_button_status}}",
+                back_in_stock_date_messaging : "{{product.metafields.custom.nz_product_page_messaging | strip_newlines }}",
+                collection_page_replace_messaging : "{{product.metafields.custom.nz_collection_page_replace_messaging}}",
+                collection_messaging_page : "{{product.metafields.custom.nz_collection_messaging_page}}",
+                cart_page_messaging : "{{product.metafields.custom.nz_cart_page_messaging | strip_newlines }}",
+                pre_order_status : "{{product.metafields.custom.nz_preorder}}"
+              },
+
+              eu : {
+                add_to_cart_button_text : "{{product.metafields.custom.eu_add_to_cart_button_text}}",
+                add_to_cart_button_status : "{{product.metafields.custom.eu_add_to_cart_button_status}}",
+                back_in_stock_date_messaging : "{{product.metafields.custom.eu_product_page_messaging | strip_newlines }}",
+                collection_page_replace_messaging : "{{product.metafields.custom.eu_collection_page_replace_messaging}}",
+                collection_messaging_page : "{{product.metafields.custom.eu_collection_messaging_page}}",
+                cart_page_messaging : "{{product.metafields.custom.eu_cart_page_messaging | strip_newlines }}",
+                pre_order_status : "{{product.metafields.custom.eu_preorder}}"
+              }
+          },
+      {% endfor %}
+  }
+
+{% endcapture %}
+
+
+<script type = "text/javascript">
+
+$(document).on( "countryCodeSet", function(e,countrycode) {
+
+  let customProdsPreOrderMetaFields = {{ customProdsPreOrderMetaFields }};
+  customProdsPreOrderMetaFields['validCountries'] = 'us,uk,ca,au,nz,eu,gb';
+  $(document).trigger( "prodsMetafieldSet", [ countrycode, customProdsPreOrderMetaFields ] );
+
+});
+
+
+
+<!-- END custom metafield exposure to manage visibility per each country on collection, cart and product pages. -->
+/* when conuntry code is set  and metafields too */
+$(document).on( "prodsMetafieldSet", function(e,countrycode, customProdsPreOrderMetaFields) {
+    var $cartWrapper = $('#shopify-section-cart-template'),
+        $collectionWrapper = $('#shopify-section-collection-template'),
+        $productWrapper = $('body.product'),
+        countryIndex = 'default';
+    setTimeout(function() {
+        if (countrycode != '') {
+            countryIndex = countrycode.toLowerCase();
+        }
+        /* if not on the permitted list going to default value */
+        if (!customProdsPreOrderMetaFields.validCountries.includes(countrycode.toLowerCase())) {
+          countryIndex = 'default';
+        }
+
+        /* START Cart page messaging  */
+
+        if ($cartWrapper.length > 0 ) {
+            /* grabbing cart */
+            $.getJSON('/cart.js', function(cart) {
+              cart.items.forEach( function(cartItem) {
+                if (undefined != customProdsPreOrderMetaFields[cartItem.product_id]) {
+                  var prodId = cartItem.product_id,
+                      $prodShippingMessaging = $(".prod_id_" +prodId +".shipping-messaging"),
+                      cartMessaging = customProdsPreOrderMetaFields[prodId][countryIndex].cart_page_messaging,
+                      preOrderStatus = customProdsPreOrderMetaFields[prodId][countryIndex].pre_order_status;
+            //console.log(countryIndex);
+            //console.log(customProdsPreOrderMetaFields[prodId][countryIndex]);
+                      /* If some message is set we will show it */
+                      if (preOrderStatus && cartMessaging != '') {
+                        $prodShippingMessaging.html(cartMessaging).show();
+                      }
+                }
+              });
+            });
+        }
+
+        /* END Cart page messaging  */
+
+
+        /* START Collection page messaging  */
+
+        if ($collectionWrapper.length > 0 ) {
+          for (var prodId in customProdsPreOrderMetaFields) {
+            /* Avoid looping a conf entry just prods. */
+            if (prodId != 'validCountries') {
+              var prodConf = customProdsPreOrderMetaFields[prodId][countryIndex],
+                  collection_messaging_page = prodConf['collection_messaging_page'],
+                  collection_page_replace_messaging = prodConf['collection_page_replace_messaging'],
+                  preOrderStatus = prodConf['pre_order_status'];
+          //console.log(countryIndex);
+          //console.log(prodConf);
+              $prod = $("[data-prod-id='" +prodId +"'].product-details");
+              $prod.find('.price').addClass('countryMessaging');
+
+
+              /* if there is something to show */
+              if ( preOrderStatus && collection_messaging_page != '') {
+                /* if we need to replace the price for it */
+                if (collection_page_replace_messaging != '' && collection_page_replace_messaging) {
+                  $prod.find('.price').html(collection_messaging_page);
+                } else {
+                  $prod.find('.price').after('<span>'+collection_messaging_page+'</span>');
+                }
+              }
+            }
+          }
+
+        }
+
+        /* END Collection page messaging  */
+
+
+
+        /* START Products page messaging and tempering with add to cart button */
+        if ($productWrapper.length > 0 ) {
+          let prodId = $('body').attr('data-prod-id'),
+              prodConf = customProdsPreOrderMetaFields[prodId][countryIndex],
+              add_to_cart_button_status = customProdsPreOrderMetaFields[prodId][countryIndex].add_to_cart_button_status,
+              add_to_cart_button_text = customProdsPreOrderMetaFields[prodId][countryIndex].add_to_cart_button_text,
+              back_in_stock_date_messaging = customProdsPreOrderMetaFields[prodId][countryIndex].back_in_stock_date_messaging,
+              preOrderStatus = customProdsPreOrderMetaFields[prodId][countryIndex].pre_order_status,
+              $backInStockMessagingSelector = $('.backInStockMessaging'),
+              $addToCartButtonSelector = $('button.addtocart'),
+              $addToCartTextButtonSelector = $('button.addtocart span');
+
+          //console.log(countryIndex);
+
+          //console.log(prodConf);
+          if (preOrderStatus) {
+            if ('' != add_to_cart_button_status && add_to_cart_button_status == 'false') {
+              $addToCartButtonSelector.attr('disabled',true);
+
+            }
+            if ('' != back_in_stock_date_messaging) {
+              $backInStockMessagingSelector.html(back_in_stock_date_messaging).show();
+            }
+            if ('' != add_to_cart_button_text) {
+              $addToCartTextButtonSelector.html(add_to_cart_button_text);
+            }
+          }
+        }
+
+        /* END Products page messaging  */
+
+      }, 300);
+
+} );
+</script>

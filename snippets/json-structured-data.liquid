@@ -1,0 +1,273 @@
+{% comment %} Breadcrumbs {% endcomment %}
+{% unless template.name == 'index' or template.name == 'cart' %}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "{{ shop.url }}",
+        "name": "{{ 'general.breadcrumbs.home' | t }}"
+      }
+    }
+
+    {% if template contains 'product' %}
+      {% if collection and collection.handle %}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/collections/{{ collection.handle }}",
+          "name": "{{ collection.title | escape }}"
+        }
+      }
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "{{ shop.url }}/collections/{{ collection.handle }}/products/{{ product.handle }}",
+          "name": "{{ product.title | escape }}"
+        }
+      }
+      {% else %}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/products/{{ product.handle }}",
+          "name": "{{ product.title | escape }}"
+        }
+      }
+      {% endif %}
+    {% endif %}
+
+    {% if template contains 'collection' and collection.handle %}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/collections",
+          "name": "All Collections"
+        }
+      }
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "{{ shop.url }}/collections/{{ collection.handle }}",
+          "name": "{{ collection.title | escape }}"
+        }
+      }
+    {% endif %}
+
+    {% if template contains 'blog' %}
+      {% if current_tags %}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/blogs/{{ blog.handle }}",
+          "name": "{{ blog.title | escape }}"
+        }
+      }
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "{{ shop.url }}/blogs/{{ blog.handle }}/tagged/{{ current_tags.first }}",
+          "name": "{{ blog.title | escape }} tagged {{ current_tags.first }}"
+        }
+      }
+      {% else %}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/blogs/{{ blog.handle }}",
+          "name": "{{ blog.title | escape }}"
+        }
+      }
+      {% endif %}
+    {% endif %}
+
+    {% if template contains 'article' %}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/blogs/{{ blog.handle }}",
+          "name": "{{ blog.title | escape }}"
+        }
+      }
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "{{ shop.url }}/blogs/{{ blog.handle }}/{{ article.handle }}",
+          "name": "{{ article.title | escape }}"
+        }
+      }
+    {% endif %}
+
+    {% if template contains 'page' %}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "{{ shop.url }}/pages/{{ page.handle }}",
+          "name": "{{ page.title | escape }}"
+        }
+      }
+    {% endif %}
+  ]
+}
+</script>
+{% endunless %}
+
+{% comment %} Collection Carousel {% endcomment %}
+{% if template.name == 'collection' %}
+  
+
+{% assign productExcludeTag = settings.product_exclude_tag_text %}
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type":"ItemList",
+    "itemListElement":[
+      {% paginate collection.products by 10 %}
+        {%- comment %}<locksmith:ed16>{% endcomment -%}
+          {%- assign locksmith_bd0d_forloop__size = 0 %}{% for product in collection.products %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_bd0d_forloop__size = locksmith_bd0d_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_bd0d_forloop__index = nil -%}
+        {%- comment %}</locksmith:ed16>{% endcomment -%}
+        {% for product in collection.products %}
+          {%- comment %}<locksmith:2b61>{% endcomment -%}
+            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_bd0d_forloop__index == nil %}{% assign locksmith_bd0d_forloop__index = 1 %}{% assign locksmith_bd0d_forloop__index0 = 0 %}{% else %}{% assign locksmith_bd0d_forloop__index = locksmith_bd0d_forloop__index | plus: 1 %}{% assign locksmith_bd0d_forloop__index0 = locksmith_bd0d_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_bd0d_forloop__index == 1 %}{% assign locksmith_bd0d_forloop__first = true %}{% else %}{% assign locksmith_bd0d_forloop__first = false %}{% endif %}{% if locksmith_bd0d_forloop__index == locksmith_bd0d_forloop__size %}{% assign locksmith_bd0d_forloop__last = true %}{% else %}{% assign locksmith_bd0d_forloop__last = false %}{% endif %}{% assign locksmith_bd0d_forloop__rindex = locksmith_bd0d_forloop__size | minus: locksmith_bd0d_forloop__index | minus: 1 %}{% assign locksmith_bd0d_forloop__rindex0 = locksmith_bd0d_forloop__size | minus: locksmith_bd0d_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+          {%- comment %}</locksmith:2b61>{% endcomment -%}
+          {% liquid 
+            assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
+            assign checkWholesaleProducts = false
+            for tag in hideWholesalersProducts
+              assign tag = tag | downcase
+              if product.tags contains tag
+                assign checkWholesaleProducts = true
+              endif
+            endfor
+          %}
+          {% unless checkWholesaleProducts == true %}
+          {% unless product.tags contains productExcludeTag %}
+          {
+            "@type":"ListItem",
+            "position": {{ locksmith_bd0d_forloop__index }},
+            "url": "{{ shop.url }}{{ product.url | within: collection }}"
+          }{% unless locksmith_bd0d_forloop__last == true %},{% endunless %}
+          {% endunless %}
+        {% endunless %}
+        {% endfor %}
+      {% endpaginate %}
+    ]
+  }
+</script>
+{% endif %}
+
+{% comment %} Product {% endcomment %}
+{% comment %} Do not remove or change the ID {% endcomment %}
+{% if template.name contains 'product' %}
+ {% assign current_variant = product.selected_or_first_available_variant %}
+<script type="application/ld+json">
+{
+       "@context": "http://schema.org/",
+       "@type": "Product",
+  	   "url": "{{shop.secure_url | escape}}{{ product.url | escape }}",
+  	   "name": "{{ product.title | escape }}",
+       "image": "https:{{ product.featured_image.src | img_url: 'master' }}",
+       "description": "{{ product.description | escape }}",
+       "brand": {
+           "name": "{{ product.vendor }}"
+       },           
+       "sku": "{{ product.variants.first.sku }}",
+       "mpn": "{{ product.variants.first.sku }}",
+       "offers": {
+           "@type": "Offer",
+           "priceCurrency": "{{ shop.currency }}",
+           "price": "{{ current_variant.price | money_without_currency }}",
+           "availability": "http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+           "seller": {
+               "@type": "Organization",
+                "name": "{{ shop.name }}"
+           },
+           "url": "{{shop.secure_url | escape}}{{ product.url | escape }}"
+       }
+ {% if product.metafields.stamped.reviews_count and product.metafields.stamped.reviews_count != "0" %},"aggregateRating": {
+"@type": "AggregateRating",
+"ratingValue": {{ product.metafields.stamped.reviews_average | round:2 }},
+"reviewCount": {{ product.metafields.stamped.reviews_count }},
+"bestRating": 5,
+"worstRating": 1
+}
+{% endif %}
+}
+</script>
+
+
+   <script type="text/javascript">
+    var _learnq = _learnq || [];
+    var addToCartbuttons = document.querySelectorAll('[data-checkout="cart"]');
+    var addToCart = function() {
+        _learnq.push(['track', 'Added to Cart', item]);
+      }; 
+    for (var i = 0; i < addToCartbuttons.length; i++) {
+      addToCartbuttons[i].addEventListener('click', addToCart, false);
+    }
+  </script>
+{% endif %}
+
+{% comment %} Article {% endcomment %}
+{% if template.name contains 'article' %}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": "{{ article.content | strip_html | strip_newlines }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ shop.url }}{{ page.url }}"
+  },
+  "headline": "{{ article.title | escape }}",
+  {% if article.excerpt != blank %}
+    "description": "{{ article.excerpt | strip_html | strip_newlines }}",
+  {% endif %}
+  {% if article.image %}
+    "image": [
+      "https:{{ article | image_url: width: 100, height: 100 }}"
+    ],
+  {% endif %}
+  "datePublished": "{{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+  "dateCreated": "{{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ article.author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if settings.share_image %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": "{{ settings.share_image.height }}",
+        "url": "https:{{ settings.share_image | image_url: width: 100, height: 100 }}",
+        "width": "{{ settings.share_image.width }}"
+      },
+    {% elsif article.image %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": "{{ article.image.height }}",
+        "url": "https:{{ article.image | image_url: width: 100, height: 100 }}",
+        "width": "{{ article.image.width }}"
+      },
+    {% endif %}
+    "name": "{{ shop.name }}"
+  }
+}
+</script>
+{% endif %}

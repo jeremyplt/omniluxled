@@ -1,0 +1,174 @@
+
+
+{% if block.settings.enable_custom_tab_1 == "true" or block.settings.enable_custom_tab_2 == "true" or block.settings.enable_custom_faq == "true" or block.settings.enable_custom_tab_4  == "true" %}
+{% if block.settings.product_tabs_layout == 'tabify' %}
+<custom-tabs class="d-block" {{ block.shopify_attributes }}>
+  <div class="{% if block.settings.product_tabs_fluid_layout %}container-fluid px-0{% else %}container{% endif %}">
+    <div id="productTabs" data-product-tabs>
+      <ul class="tabs d-flex list-unstyled text-uppercase fw-medium" role="tablist">
+        {% if block.settings.enable_descripion_tab == "true" and product.description != blank %}
+        <li class="tablink open" role="tab">
+          <a class="nav-link" data-toggle="tab" href="#description" data-tabcontent="#description" aria-expanded="true">{{ 'products.product.description' | t }}</a>
+        </li>
+        {% endif %}
+        {% if block.settings.enable_custom_tab_1 == "true" %}
+        <li class="tablink {% unless block.settings.enable_descripion_tab %}open{% endunless %}" role="tab">
+          <a class="nav-link" data-toggle="tab" href="#custom-tab-1" data-tabcontent="#custom-tab-1" aria-expanded="false">{{ block.settings.tab_1_title }}</a>
+        </li>
+        {% endif %}
+        {% if block.settings.enable_custom_tab_2 == "true" %}
+        <li class="tablink" role="tab">
+          <a class="nav-link" data-toggle="tab" href="#custom-tab-2" data-tabcontent="#custom-tab-2" aria-expanded="false">{{ block.settings.tab_2_title }}</a>
+        </li>
+        {% endif %}
+      </ul>
+
+      <div class="tab-content text-left" id="productTabsContent">
+        {% if block.settings.enable_descripion_tab and product.description %}
+        <div class="tab-pane tabcontent open" id="description" role="tabpanel">
+          <div class="rte pt-3 px-lg-6">{{ product.description }}</div>
+        </div>
+        {% endif %}
+        {% if block.settings.enable_custom_tab_1 %}
+        <div class="tab-pane tabcontent" id="custom-tab-1" role="tabpanel">
+          <div class="rte pt-3">{{ pages[block.settings.tab_1_content].content }}</div>
+        </div>
+        {% endif %}
+        {% if block.settings.enable_custom_tab_2 %}
+        <div class="tab-pane tabcontent" id="custom-tab-2" role="tabpanel">
+          <div class="rpt-5">{{ block.settings.tab_2_content }}</div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+</custom-tabs>
+{% else %}
+<custom-accordion class="d-block" {{ block.shopify_attributes }} data-accordionType="multiple">
+  <div class="{% if block.settings.product_tabs_fluid_layout %}container-fluid px-0{% else %}container{% endif %}">
+    <div id="productAccordion" data-product-accordion>
+      {% if block.settings.enable_descripion_tab == "true" and product.description != blank %}
+        <div class="accordion__container py-3 open">
+          <a class="accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open {{ 'products.product.description' | t }}" rel="nofollow" aria-label="Open {{ 'products.product.description' | t }}" role="button" aria-expanded="true" aria-controls="accordion_description">
+            <span>{{ 'products.product.description' | t }}</span>
+            <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+              <span class="ox-plus trn"></span>
+              <span class="ox-minus position-absolute trn"></span>
+            </span>
+          </a>
+          <div class="accordion__block toggle-content formatted-list" id="accordion_description" data-type="content">
+            {{ product.description }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if block.settings.enable_custom_tab_1 == "true" %}
+        <div class="accordion__container py-3 open">
+          <a class="accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open {{ block.settings.tab_1_title }}" rel="nofollow" aria-label="Open {{ block.settings.tab_1_title }}" role="button" aria-expanded="true" aria-controls="accordion_customTab1">
+            <span>{{ block.settings.tab_1_title }}</span>
+            <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+              <span class="ox-plus trn"></span>
+              <span class="ox-minus position-absolute trn"></span>
+            </span>
+          </a>
+          <div class="accordion__block toggle-content open" id="accordion_customTab1" data-type="content">
+            <div class="rte pt-3 formatted-list">{{ block.settings.tab_1_content }}</div>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if block.settings.enable_custom_tab_2 == "true" %}
+        <div class="accordion__container py-3">
+          <a class="accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open {{ block.settings.tab_2_title }}" rel="nofollow" aria-label="Open {{ block.settings.tab_2_title }}" role="button" aria-expanded="false" aria-controls="accordion_customTab2">
+            <span>{{ block.settings.tab_2_title }}</span>
+            <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+              <span class="ox-plus trn"></span>
+              <span class="ox-minus position-absolute trn"></span>
+            </span>
+          </a>
+          <div class="accordion__block toggle-content" id="accordion_customTab2" data-type="content">
+            <div class="rte pt-3 formatted-list">
+
+
+            <div class="custom-video-container d-flex flex-column ps-3{% if section.settings.fluid_video_layout %} full-video-layout position-relative{% else %}row align-items-center{% endif %}">
+
+              {{ block.settings.tab_2_content }}
+
+                  <custom-video class="video-with--text position-relative d-block placement--popup"
+                      data-loop="true" data-autoplay="true" data-controls="true" data-muted="mute"
+                      data-video-type="local"  data-placement="popup"
+                      {% if block.settings.mobile_video_id != blank %}data-mobileVideo="{{ block.settings.mobile_video_id }}"{% endif %}
+                      data-video-id="{{ block.settings.video_id }}">
+                      <div class="cta-btn d-none">
+                          <button class="play__button btn btn-primary" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
+                              <span class="icon-play"></span>
+                          </button>
+                          <button class="bg-transparent border-2 border-white btn btn-primary p-3 pause__button rounded-pill d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
+                              <span class="ox-play" style="position: relative;right: -2px;"></span>
+                          </button>
+                      </div>
+                  </custom-video>
+
+
+          </div>
+          </div>
+          </div>
+
+
+        </div>
+      {% endif %}
+
+      {% if block.settings.enable_custom_faq == "true" %}
+        <div class="accordion__container py-3">
+          <a class="accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open {{ block.settings.faq_title }}" rel="nofollow" aria-label="Open {{ block.settings.faq_title }}" role="button" aria-expanded="false" aria-controls="accordion_customTab3">
+            <span>{{ block.settings.faq_title }}</span>
+            <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+              <span class="ox-plus trn"></span>
+              <span class="ox-minus position-absolute trn"></span>
+            </span>
+          </a>
+          <div class="accordion__block toggle-content" id="accordion_customTab3" data-type="content">
+            <div class="pt-2 formatted-list px-xl-4 pe-xl-6 px-2 pe-md-3 pe-2">
+              {% for block in section.blocks %}
+              {%- if block.type == 'faqs' and block.settings.faqs_title_sub != blank -%}
+                <div class="accordion__container py-2" style="line-height: 1.1875;">
+                  <a class="accordion__toggle d-flex mb-0 fw-normal" href="javascript:void(0);" title="Open {{ block.settings.faqs_title_sub }}" rel="nofollow" aria-label="Open {{ block.settings.faqs_title_sub }}" role="button" aria-expanded="false" aria-controls="faqs{{ forloop.index }}">
+                    <span>{{ block.settings.faqs_title_sub }}</span>
+                    <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                      <span class="ox-plus trn"></span>
+                      <span class="ox-minus position-absolute trn"></span>
+                    </span>
+                  </a>
+                  <div class="accordion__block toggle-content" id="faqs{{ forloop.index }}" data-type="content">
+                    <div class="rte pt-3 formatted-list">{{ block.settings.faqs_content_sub }}</div>
+                  </div>
+                </div>
+                {%- endif -%}
+              {% endfor %}
+              {% if block.settings.btn_txt != blank %}
+                <div class="mt-3">
+                  <a target="_blank" {% if block.settings.btn_link %} href="{{ block.settings.btn_link }}" {% endif %} class="text-decoration-underline">{{ block.settings.btn_txt }}</a>
+                </div>
+              {% endif %}
+            </div>
+           </div>
+        </div>
+      {% endif %}
+      {% if block.settings.enable_custom_tab_4 == "true"%}
+        <div class="accordion__container py-3">
+          <a class="accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open {{ block.settings.tab_4_title }}" rel="nofollow" aria-label="Open {{ block.settings.tab_4_title }}" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
+            <span>{{ block.settings.tab_4_title }}</span>
+            <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+              <span class="ox-plus trn"></span>
+              <span class="ox-minus position-absolute trn"></span>
+            </span>
+          </a>
+          <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content">
+            <div class="rte pt-3 formatted-list">{{ block.settings.tab_4_content }}</div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</custom-accordion>
+{% endif %}
+{%- endif -%}

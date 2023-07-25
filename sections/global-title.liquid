@@ -1,0 +1,144 @@
+<section class="section-content overflow-hidden position-relative global-results-slider border-top py-lg-10 pt-7 pb-0 {{ section.settings.css_class }}" data-section-id="{{ section.id }}" style="background: {{ section.settings.section_bg_color }}; color:{{ section.settings.section_text_color }}">
+    <div class="{% if section.settings.fluid_layout %}container-fluid px-0{% else %}container{% endif %} mb-4 mb-lg-3 pb-1 pt-1 pt-lg-0">
+      <div class="text-center heading_txt pt-1 d-flex align-items-center justify-content-lg-between justify-content-center" style="z-index: 2;">
+          {% if section.settings.heading_txt != blank %}
+              <div class="h3 mb-0 pe-3">{{ section.settings.heading_txt }}</div>
+          {% endif %}
+        {% if section.settings.btn_txt != blank %}
+            <{% if section.settings.btn_link != blank %}a{% else %}span{% endif %} {% if section.settings.btn_link != blank %} href="{{ section.settings.btn_link }}" {% endif %}class="btn w-sm-auto w-100 d-lg-inline-flex d-none btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">{{ section.settings.btn_txt }}</{% if section.settings.btn_link != blank %}a{% else %}span{% endif %}>
+        {% endif %}
+      </div>
+    </div>
+    
+    <div class="{% if section.settings.fluid_layout %}container-fluid px-0{% else %}container{% endif %} d-lg-none pb-1">
+        <div class="text-center mb-4 pt-4 mt-1 heading_txt pb-xl-0 pb-2">
+            {% if section.settings.btn_txt != blank %}
+                <a {% if section.settings.btn_link %} href="{{ section.settings.btn_link }}" {% endif %}class="btn w-sm-auto w-100 btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">{{ section.settings.btn_txt }}</a>
+            {% endif %}
+        </div>
+    </div>
+</section>  
+  
+{% schema %}
+{
+  "name": "Title",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS class"
+    },
+    {
+      "type": "text",
+      "id": "heading_txt",
+      "label": "Heading Text"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "btn_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "btn_variant",
+      "label": "Button Variant",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "dark"
+    },
+    {
+      "type": "select",
+      "id": "btn_size",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Title",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

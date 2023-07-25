@@ -1,0 +1,2514 @@
+<link rel="stylesheet" href="{{ 'help-center-products.css' | asset_url }}">
+<section class="pb-lg-10 pb-7 overflow-hidden" data-section-id="{{ section.id }}">
+  <div class="border-bottom">
+    <span class="account-fair-tone gradient-fair-tone position-absolute w-100 start-0 top-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
+    </span>
+    <div class="container">
+        <div class="row">
+          <div class="section-content col-12 px-sm-4 text-center ">
+            <h1 class="page-title">{{ section.settings.title }}</h1>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="container pt-lg-8 pt-6">
+        <div class="row">
+            <div class="col-12 col-md-10 mx-auto">
+                {% if section.settings.enable_accordion_btn %}
+                    <div class="text-center m-lg-n3 m-n2 d-flex justify-content-center flex-wrap pb-lg-7 pb-4">
+                        <div class="p-lg-3 p-2">
+                          <a href="{{ section.settings.btn1_link }}" class="btn btn-outline-dark {% if section.settings.button1_disabled %}disabled{% endif %}">
+                              {{ section.settings.btn1_text }}
+                          </a>
+                        </div>
+                        <div class="p-lg-3 p-2">
+                          <a href="{{ section.settings.btn2_link }}" class="btn btn-outline-dark {% if section.settings.button2_disabled %}disabled{% endif %}">
+                            {{ section.settings.btn2_text }}
+                          </a>
+                        </div>
+                    </div>
+                {% endif %}
+
+                <custom-tabs class="d-block help-categories position-relative" {{ block.shopify_attributes }}>
+                    <div class="">
+                      <div id="productTabs" class="d-flex flex-wrap" data-product-tabs>
+                        <ul class="tabs d-flex list-unstyled text-uppercase fw-medium border-0 mx-auto" role="tablist">
+                          <li class="tablink px-md-3 px-2 open" role="tab" data-tablink="#{{ section.settings.pro_btn1 | handle }}">
+                            <a class=" trn font-size-md fw-bold d-inline-flex justify-content-center" data-toggle="tab" href="#description" data-tabcontent="#description" aria-expanded="true">{{ section.settings.pro_btn1 }}</a>
+                          </li>
+                          <li class="tablink px-md-3 px-2" role="tab" data-tablink="#{{ section.settings.pro_btn2 | handle }}">
+                            <a class=" trn font-size-md fw-bold d-inline-flex justify-content-center" data-toggle="tab" href="#custom-tab-2" data-tabcontent="#custom-tab-2" aria-expanded="false">{{ section.settings.pro_btn2 }}</a>
+                          </li>
+                          <li class="tablink px-md-3 px-2" role="tab" data-tablink="#{{ section.settings.pro_btn3 | handle }}">
+                            <a class=" trn font-size-md fw-bold d-inline-flex justify-content-center" data-toggle="tab" href="#custom-tab-3" data-tabcontent="#custom-tab-3" aria-expanded="false">{{ section.settings.pro_btn3 }}</a>
+                          </li>
+                          <li class="tablink px-md-3 px-2" role="tab" data-tablink="#{{ section.settings.pro_btn4 | handle }}">
+                            <a class=" trn font-size-md fw-bold d-inline-flex justify-content-center" data-toggle="tab" href="#custom-tab-4" data-tabcontent="#custom-tab-4" aria-expanded="false">{{ section.settings.pro_btn4 }}</a>
+                          </li>
+                          <li class="tablink px-md-3 px-2" role="tab" data-tablink="#{{ section.settings.pro_btn5 | handle }}">
+                            <a class=" trn font-size-md fw-bold d-inline-flex justify-content-center" data-toggle="tab" href="#custom-tab-5" data-tabcontent="#custom-tab-5" aria-expanded="false">{{ section.settings.pro_btn5 }}</a>
+                          </li>
+                           <li class="tablink px-md-3 px-2" role="tab" data-tablink="#{{ section.settings.pro_btn6 | handle }}">
+                            <a class=" trn font-size-md fw-bold d-inline-flex justify-content-center" data-toggle="tab" href="#custom-tab-6" data-tabcontent="#custom-tab-6" aria-expanded="false">{{ section.settings.pro_btn6 }}</a>
+                          </li>
+                        </ul>
+
+                        <div class="tab-content text-left w-100" id="productTabsContent">
+                          <div class="tab-pane tabcontent open" id="description" role="tabpanel">
+                            <div class="rte pt-lg-7 px-lg-6">
+                                <custom-accordion  data-accordionType="single">
+                                    <div class="accordion__container py-3 border-top{% if forloop.last %} border-bottom{% endif %}">
+                                        <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab3">
+                                          <span>{{ section.settings.tabTitle1 }}</span>
+                                          <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                            <span class="ox-plus trn"></span>
+                                            <span class="ox-minus position-absolute trn"></span>
+                                          </span>
+                                        </a>
+                                        <div class="accordion__block toggle-content" id="accordion_customTab3" data-type="content" style="height: 0px;">
+                                          <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                             {%- for block in section.blocks -%}
+                                              {%- if block.type == 'contour_face_faq' -%}
+                                              {%- liquid
+                                                  capture current
+                                                      cycle 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                                                  endcapture
+                                                -%}
+                                              {% for i in (1..10) %}
+                                                {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                                {% assign quentionsid =  'question' | append: forloop.index %}
+                                                {% assign answerid =  'answer' | append: forloop.index %}
+                                                {% if block.settings[enableFaq] %}
+                                                  {% if block.settings[quentionsid] != blank %}
+                                                    <div class="accordion__container py-3 border-top " style="line-height: 1.1875;">
+                                                      <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                        <span>{{ block.settings[quentionsid] }}</span>
+                                                        <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                          <span class="ox-plus trn"></span>
+                                                          <span class="ox-minus position-absolute trn"></span>
+                                                        </span>
+                                                      </a>
+                                                      <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                        <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                                      </div>
+                                                    </div>
+                                                    {% endif %}
+                                                  {% endif %}
+                                                {% endfor %}
+                                                {% endif %}
+                                            {% endfor %}
+                                          </div>
+                                        </div>
+                                    </div>
+                                  <div class="accordion__container py-3 border-top border-bottom">
+                                        <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
+                                          <span>{{ section.settings.tabTitle2 }}</span>
+                                          <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                            <span class="ox-plus trn"></span>
+                                            <span class="ox-minus position-absolute trn"></span>
+                                          </span>
+                                        </a>
+                                        <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content" style="height: 0px;">
+                                          <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                            <div class="text-center">
+                                              <h4 class="mb-3 mb-lg-6">{{ section.settings.tabsubTitle2 }}</h4>
+                                            </div>
+                                             {%- for block in section.blocks  -%}
+                                              {%- if block.type == 'contour_face_user_guides' -%}
+                                              {% for i in (1..6) %}
+                                                {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                                {% assign quentionsid =  'question' | append: forloop.index %}
+                                                {% assign answerid =  'answer' | append: forloop.index %}
+                                                {% if block.settings[enableFaq] %}
+                                                {% if block.settings[quentionsid] != blank %}
+                                                        <div class="accordion__container py-3 border-top" style="line-height: 1.1875;">
+                                                            <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                              <span>{{ block.settings[quentionsid] }}</span>
+                                                              <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                                <span class="ox-plus trn"></span>
+                                                                <span class="ox-minus position-absolute trn"></span>
+                                                              </span>
+                                                            </a>
+                                                            <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                              <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                                            </div>
+                                                        </div>
+                                                      {% endif %}
+                                                  {% endif %}
+                                                    {% endfor %}
+                                                {% endif %}
+                                            {% endfor %}
+                                          </div>
+                                        </div>
+                                  </div>
+                                </custom-accordion>
+                            </div>
+                          </div>
+                          <div class="tab-pane tabcontent" id="custom-tab-2" role="tabpanel">
+                            <div class="rte pt-lg-7 px-lg-6">
+                              <custom-accordion  data-accordionType="single">
+                                <div class="accordion__container py-3 border-top{% if forloop.last %} border-bottom{% endif %}">
+                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab3">
+                                      <span>{{ section.settings.tabTitle1 }}</span>
+                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                        <span class="ox-plus trn"></span>
+                                        <span class="ox-minus position-absolute trn"></span>
+                                      </span>
+                                    </a>
+                                    <div class="accordion__block toggle-content" id="accordion_customTab3" data-type="content" style="height: 0px;">
+                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                         {%- for block in section.blocks -%}
+                                          {%- if block.type == 'contour_nd_faq' -%}
+                                          {%- liquid
+                                          capture current
+                                              cycle 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                                          endcapture
+                                        -%}
+                                      {% for i in (1..10) %}
+                                         {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                        {% assign quentionsid =  'question' | append: forloop.index %}
+                                        {% assign answerid =  'answer' | append: forloop.index %}
+                                         {% if block.settings[enableFaq] %}
+                                          {% if block.settings[quentionsid] != blank %}
+                                            <div class="accordion__container py-3 border-top " style="line-height: 1.1875;">
+                                              <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                <span>{{ block.settings[quentionsid] }}</span>
+                                                <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                  <span class="ox-plus trn"></span>
+                                                  <span class="ox-minus position-absolute trn"></span>
+                                                </span>
+                                              </a>
+                                              <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                              </div>
+                                            </div>
+                                          {% endif %}
+                                           {% endif %}
+                                        {% endfor %}
+                                            {% endif %}
+                                        {% endfor %}
+                                      </div>
+                                    </div>
+                                </div>
+                              <div class="accordion__container py-3 border-top border-bottom">
+                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
+                                      <span>{{ section.settings.tabTitle2 }}</span>
+                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                        <span class="ox-plus trn"></span>
+                                        <span class="ox-minus position-absolute trn"></span>
+                                      </span>
+                                    </a>
+                                    <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content" style="height: 0px;">
+                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                        <div class="text-center">
+                                          <h4 class="mb-3 mb-lg-6">{{ section.settings.tabsubTitle2 }}</h4>
+                                        </div>
+                                         {%- for block in section.blocks -%}
+                                          {%- if block.type == 'contour_nd_user' -%}
+
+                                          {% for i in (1..6) %}
+                                            {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                            {% assign quentionsid =  'question' | append: forloop.index %}
+                                            {% assign answerid =  'answer' | append: forloop.index %}
+                                            {% if block.settings[enableFaq] %}
+                                            {% if block.settings[quentionsid] != blank %}
+                                                    <div class="accordion__container py-3 border-top" style="line-height: 1.1875;">
+                                                        <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                          <span>{{ block.settings[quentionsid] }}</span>
+                                                          <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                            <span class="ox-plus trn"></span>
+                                                            <span class="ox-minus position-absolute trn"></span>
+                                                          </span>
+                                                        </a>
+                                                        <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                          <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                                        </div>
+                                                    </div>
+                                              {% endif %}
+                                                  {% endif %}
+                                                {% endfor %}
+
+                                            {% endif %}
+                                        {% endfor %}
+                                      </div>
+                                    </div>
+                              </div>
+                            </custom-accordion>
+                            </div>
+                          </div>
+                          <div class="tab-pane tabcontent" id="custom-tab-3" role="tabpanel">
+                            <div class="rte pt-lg-7 px-lg-6">
+                              <custom-accordion  data-accordionType="single">
+                                <div class="accordion__container py-3 border-top{% if forloop.last %} border-bottom{% endif %}">
+                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab3">
+                                      <span>{{ section.settings.tabTitle1 }}</span>
+                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                        <span class="ox-plus trn"></span>
+                                        <span class="ox-minus position-absolute trn"></span>
+                                      </span>
+                                    </a>
+                                    <div class="accordion__block toggle-content" id="accordion_customTab3" data-type="content" style="height: 0px;">
+                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                         {%- for block in section.blocks -%}
+                                          {%- if block.type == 'contour_glove_faq' -%}
+                                          {%- liquid
+                                          capture current
+                                              cycle 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                                          endcapture
+                                        -%}
+                                      {% for i in (1..10) %}
+                                        {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                        {% assign quentionsid =  'question' | append: forloop.index %}
+                                        {% assign answerid =  'answer' | append: forloop.index %}
+                                         {% if block.settings[enableFaq] %}
+                                          {% if block.settings[quentionsid] != blank %}
+                                            <div class="accordion__container py-3 border-top " style="line-height: 1.1875;">
+                                              <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                <span>{{ block.settings[quentionsid] }}</span>
+                                                <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                  <span class="ox-plus trn"></span>
+                                                  <span class="ox-minus position-absolute trn"></span>
+                                                </span>
+                                              </a>
+                                              <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                              </div>
+                                            </div>
+                                          {% endif %}
+                                           {% endif %}
+                                        {% endfor %}
+                                            {% endif %}
+                                        {% endfor %}
+                                      </div>
+                                    </div>
+                                </div>
+                              <div class="accordion__container py-3 border-top border-bottom">
+                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
+                                      <span>{{ section.settings.tabTitle2 }}</span>
+                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                        <span class="ox-plus trn"></span>
+                                        <span class="ox-minus position-absolute trn"></span>
+                                      </span>
+                                    </a>
+                                    <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content" style="height: 0px;">
+                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                        <div class="text-center">
+                                          <h4 class="mb-3 mb-lg-6">{{ section.settings.tabsubTitle2 }}</h4>
+                                        </div>
+                                         {%- for block in section.blocks -%}
+                                          {%- if block.type == 'contour_glove_user_guides' -%}
+
+                                          {% for i in (1..6) %}
+                                            {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                            {% assign quentionsid =  'question' | append: forloop.index %}
+                                            {% assign answerid =  'answer' | append: forloop.index %}
+                                            {% if block.settings[enableFaq] %}
+                                            {% if block.settings[quentionsid] != blank %}
+                                                    <div class="accordion__container py-3 border-top" style="line-height: 1.1875;">
+                                                        <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                          <span>{{ block.settings[quentionsid] }}</span>
+                                                          <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                            <span class="ox-plus trn"></span>
+                                                            <span class="ox-minus position-absolute trn"></span>
+                                                          </span>
+                                                        </a>
+                                                        <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                          <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                                        </div>
+                                                    </div>
+                                              {% endif %}
+                                                  {% endif %}
+                                                {% endfor %}
+
+                                            {% endif %}
+                                        {% endfor %}
+                                      </div>
+                                    </div>
+                              </div>
+                              </custom-accordion>
+                          </div>
+                          </div>
+                          <div class="tab-pane tabcontent" id="custom-tab-4" role="tabpanel">
+                            <div class="rte pt-lg-7 px-lg-6">
+                              <custom-accordion  data-accordionType="single">
+                                <div class="accordion__container py-3 border-top{% if forloop.last %} border-bottom{% endif %}">
+                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab3">
+                                      <span>{{ section.settings.tabTitle1 }}</span>
+                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                        <span class="ox-plus trn"></span>
+                                        <span class="ox-minus position-absolute trn"></span>
+                                      </span>
+                                    </a>
+                                    <div class="accordion__block toggle-content" id="accordion_customTab3" data-type="content" style="height: 0px;">
+                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                         {%- for block in section.blocks -%}
+                                          {%- if block.type == 'Clear_glove_faq' -%}
+                                          {%- liquid
+                                          capture current
+                                              cycle 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                                          endcapture
+                                        -%}
+                                      {% for i in (1..10) %}
+                                         {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                        {% assign quentionsid =  'question' | append: forloop.index %}
+                                        {% assign answerid =  'answer' | append: forloop.index %}
+                                        {% if block.settings[enableFaq] %}
+                                          {% if block.settings[quentionsid] != blank %}
+                                            <div class="accordion__container py-3 border-top " style="line-height: 1.1875;">
+                                              <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                <span>{{ block.settings[quentionsid] }}</span>
+                                                <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                  <span class="ox-plus trn"></span>
+                                                  <span class="ox-minus position-absolute trn"></span>
+                                                </span>
+                                              </a>
+                                              <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                              </div>
+                                            </div>
+                                            {% endif %}
+                                          {% endif %}
+                                        {% endfor %}
+                                            {% endif %}
+                                        {% endfor %}
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="accordion__container py-3 border-top ">
+                                  <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
+                                    <span>{{ section.settings.tabTitle3 }}</span>
+                                    <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                      <span class="ox-plus trn"></span>
+                                      <span class="ox-minus position-absolute trn"></span>
+                                    </span>
+                                  </a>
+                                  <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content" style="height: 0px;">
+                                    <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                      {%- for block in section.blocks -%}
+                                        {%- if block.type == 'clear_face_assesment' -%}
+                                            <div class="rte pt-3 formatted-list ps-3">{{ block.settings.answer }}</div>
+                                        {% endif %}
+                                      {% endfor %}
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion__container py-3 border-top border-bottom">
+                                      <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
+                                        <span>{{ section.settings.tabTitle2 }}</span>
+                                        <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                          <span class="ox-plus trn"></span>
+                                          <span class="ox-minus position-absolute trn"></span>
+                                        </span>
+                                      </a>
+                                      <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content" style="height: 0px;">
+                                        {%- for block in section.blocks -%}
+                                            {%- if block.type == 'Clear_glove_user_guides' -%}
+                                            <div class="rte pt-3 formatted-list ps-3">{{ block.settings.answer }}</div>
+                                            {% endif %}
+                                            {% endfor %}
+                                      </div>
+                                </div>
+                              </custom-accordion>
+                          </div>
+                          </div>
+                          <div class="tab-pane tabcontent" id="custom-tab-5" role="tabpanel">
+                            <div class="rte pt-lg-7 px-lg-6">
+                              <custom-accordion  data-accordionType="single">
+                                <div class="accordion__container py-3 border-top{% if forloop.last %} border-bottom{% endif %}">
+                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab3">
+                                      <span>{{ section.settings.tabTitle1 }}</span>
+                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                        <span class="ox-plus trn"></span>
+                                        <span class="ox-minus position-absolute trn"></span>
+                                      </span>
+                                    </a>
+                                    <div class="accordion__block toggle-content" id="accordion_customTab3" data-type="content" style="height: 0px;">
+                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                         {%- for block in section.blocks -%}
+                                          {%- if block.type == 'men_glove_faq' -%}
+                                          {%- liquid
+                                          capture current
+                                              cycle 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                                          endcapture
+                                        -%}
+                                      {% for i in (1..10) %}
+                                        {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                        {% assign quentionsid =  'question' | append: forloop.index %}
+                                        {% assign answerid =  'answer' | append: forloop.index %}
+                                        {% if block.settings[enableFaq] %}
+                                          {% if block.settings[quentionsid] != blank %}
+                                            <div class="accordion__container py-3 border-top " style="line-height: 1.1875;">
+                                              <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                <span>{{ block.settings[quentionsid] }}</span>
+                                                <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                  <span class="ox-plus trn"></span>
+                                                  <span class="ox-minus position-absolute trn"></span>
+                                                </span>
+                                              </a>
+                                              <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                              </div>
+                                            </div>
+                                            {% endif %}
+                                          {% endif %}
+                                        {% endfor %}
+                                            {% endif %}
+                                        {% endfor %}
+                                      </div>
+                                    </div>
+                                </div>
+                              <div class="accordion__container py-3 border-top border-bottom">
+                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
+                                      <span>{{ section.settings.tabTitle2 }}</span>
+                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                        <span class="ox-plus trn"></span>
+                                        <span class="ox-minus position-absolute trn"></span>
+                                      </span>
+                                    </a>
+                                    <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content" style="height: 0px;">
+                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                        <div class="text-center">
+                                          <h4 class="mb-3 mb-lg-6">{{ section.settings.tabsubTitle2 }}</h4>
+                                        </div>
+                                         {%- for block in section.blocks -%}
+                                          {%- if block.type == 'men_user_guides' -%}
+
+                                          {% for i in (1..6) %}
+                                            {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                            {% assign quentionsid =  'question' | append: forloop.index %}
+                                            {% assign answerid =  'answer' | append: forloop.index %}
+                                            {% if block.settings[enableFaq] %}
+                                            {% if block.settings[quentionsid] != blank %}
+                                                    <div class="accordion__container py-3 border-top" style="line-height: 1.1875;">
+                                                        <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                          <span>{{ block.settings[quentionsid] }}</span>
+                                                          <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                            <span class="ox-plus trn"></span>
+                                                            <span class="ox-minus position-absolute trn"></span>
+                                                          </span>
+                                                        </a>
+                                                        <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                          <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                                        </div>
+                                                    </div>
+                                              {% endif %}
+                                                  {% endif %}
+                                                {% endfor %}
+
+                                            {% endif %}
+                                        {% endfor %}
+                                      </div>
+                                    </div>
+                              </div>
+                              </custom-accordion>
+                          </div>
+                          </div>
+                          <div class="tab-pane tabcontent" id="custom-tab-6" role="tabpanel">
+                            <div class="rte pt-lg-7 px-lg-6">
+                              <custom-accordion  data-accordionType="single">
+
+                                {% comment %} Put this div back and delete next line if you add in user guides <div class="accordion__container py-3 border-top{% if forloop.last %} border-bottom{% endif %}">{% endcomment %}
+                                <div class="accordion__container py-3 border-top border-bottom">
+                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab3">
+                                      <span>{{ section.settings.tabTitle1 }}</span>
+                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                        <span class="ox-plus trn"></span>
+                                        <span class="ox-minus position-absolute trn"></span>
+                                      </span>
+                                    </a>
+                                    <div class="accordion__block toggle-content" id="accordion_customTab3" data-type="content" style="height: 0px;">
+                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                         {%- for block in section.blocks -%}
+                                          {%- if block.type == 'skincare_glove_faq' -%}
+                                          {%- liquid
+                                          capture current
+                                              cycle 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                                          endcapture
+                                        -%}
+                                      {% for i in (1..10) %}
+                                        {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                        {% assign quentionsid =  'question' | append: forloop.index %}
+                                        {% assign answerid =  'answer' | append: forloop.index %}
+                                        {% if block.settings[enableFaq] %}
+                                          {% if block.settings[quentionsid] != blank %}
+                                            <div class="accordion__container py-3 border-top " style="line-height: 1.1875;">
+                                              <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                <span>{{ block.settings[quentionsid] }}</span>
+                                                <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                  <span class="ox-plus trn"></span>
+                                                  <span class="ox-minus position-absolute trn"></span>
+                                                </span>
+                                              </a>
+                                              <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                              </div>
+                                            </div>
+                                            {% endif %}
+                                          {% endif %}
+                                        {% endfor %}
+                                            {% endif %}
+                                        {% endfor %}
+                                      </div>
+                                    </div>
+                                </div>
+                                 {% comment %} No user guide for skincare right now
+                              <div class="accordion__container py-3 border-top border-bottom">
+                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
+                                      <span>{{ section.settings.tabTitle2 }}</span>
+                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                        <span class="ox-plus trn"></span>
+                                        <span class="ox-minus position-absolute trn"></span>
+                                      </span>
+                                    </a>
+                                    <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content" style="height: 0px;">
+                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                        <div class="text-center">
+                                          <h4 class="mb-3 mb-lg-6">{{ section.settings.tabsubTitle2 }}</h4>
+                                        </div>
+                                         {%- for block in section.blocks -%}
+                                          {%- if block.type == 'skincare_user_guides' -%}
+
+                                          {% for i in (1..6) %}
+                                            {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                            {% assign quentionsid =  'question' | append: forloop.index %}
+                                            {% assign answerid =  'answer' | append: forloop.index %}
+                                            {% if block.settings[enableFaq] %}
+                                            {% if block.settings[quentionsid] != blank %}
+                                                    <div class="accordion__container py-3 border-top" style="line-height: 1.1875;">
+                                                        <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                          <span>{{ block.settings[quentionsid] }}</span>
+                                                          <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                            <span class="ox-plus trn"></span>
+                                                            <span class="ox-minus position-absolute trn"></span>
+                                                          </span>
+                                                        </a>
+                                                        <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                          <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                                        </div>
+                                                    </div>
+                                              {% endif %}
+                                                  {% endif %}
+                                                {% endfor %}
+
+                                            {% endif %}
+                                        {% endfor %}
+                                      </div>
+                                    </div>
+                              </div> {% endcomment %}
+                              </custom-accordion>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                  </custom-tabs>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <style>
+    .accordion__container.open span:before{
+    content: "\e927";
+    }
+</style> -->
+
+{% schema %}
+{ 
+  "name": "Help Center Accrodian",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_accordion_btn",
+      "label": "Enable Accrodian Buttons",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Page title"
+    },
+    {
+      "type": "text",
+      "id": "btn1_text",
+      "label": "Button 1 text"
+    },
+    {
+      "type": "url",
+      "id": "btn1_link",
+      "label": "Button 1 link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button1_disabled",
+      "label": "Button 1 disabled ?",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "btn2_text",
+      "label": "Button 2 text"
+    },
+    {
+      "type": "url",
+      "id": "btn2_link",
+      "label": "Button 1 link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button2_disabled",
+      "label": "Button 2 disabled ?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Product Buttons (Contour Face)"
+    },
+    {
+      "type": "text",
+      "id": "pro_btn1",
+      "label": "Product Button 1"
+    },
+    {
+      "type": "header",
+      "content": "Product Buttons (Contour N&D)"
+    },
+    {
+      "type": "text",
+      "id": "pro_btn2",
+      "label": "Product Button 2"
+    },
+    {
+      "type": "text",
+      "id": "pro_btn3",
+      "label": "Product Button 3"
+    },
+    {
+      "type": "text",
+      "id": "pro_btn4",
+      "label": "Product Button 4"
+    },
+    {
+      "type": "text",
+      "id": "pro_btn5",
+      "label": "Product Button 5"
+    },
+    {
+      "type": "text",
+      "id": "pro_btn6",
+      "label": "Product Button 6"
+    },
+    {
+      "type": "text",
+      "id": "tabTitle1",
+      "label": "Tab Title 1"
+    },
+    {
+      "type": "text",
+      "id": "tabsubTitle1",
+      "label": "Tab Sub Title 1"
+    },
+    {
+      "type": "text",
+      "id": "tabTitle2",
+      "label": "Tab Title 2"
+    },
+    {
+      "type": "text",
+      "id": "tabsubTitle2",
+      "label": "Tab Sub Title 2"
+    },
+    {
+      "type": "text",
+      "id": "tabTitle3",
+      "label": "Tab Title 3"
+    },
+    {
+      "type": "text",
+      "id": "tabsubTitle3",
+      "label": "Tab Sub Title 3"
+    },
+    {
+      "type": "header",
+      "content": "Product Buttons (Contour N&D)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "contour_face_faq",
+      "name": "Contour Face FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 1",
+          "id": "enableFaq1",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question1",
+          "label": "Question 1"
+        },
+        {
+          "type": "richtext",
+          "id": "answer1",
+          "label": "Answer 1"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 2",
+          "id": "enableFaq2",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question2",
+          "label": "Question 2"
+        },
+        {
+          "type": "richtext",
+          "id": "answer2",
+          "label": "Answer 2"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 3",
+          "id": "enableFaq3",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question3",
+          "label": "Question 3"
+        },
+        {
+          "type": "richtext",
+          "id": "answer3",
+          "label": "Answer 3"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 4",
+          "id": "enableFaq4",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question4",
+          "label": "Question 4"
+        },
+        {
+          "type": "richtext",
+          "id": "answer4",
+          "label": "Answer 4"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 5",
+          "id": "enableFaq5",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question5",
+          "label": "Question 5"
+        },
+        {
+          "type": "richtext",
+          "id": "answer5",
+          "label": "Answer 5"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 6",
+          "id": "enableFaq6",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question6",
+          "label": "Question 6"
+        },
+        {
+          "type": "richtext",
+          "id": "answer6",
+          "label": "Answer 6"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 7",
+          "id": "enableFaq7",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question7",
+          "label": "Question 7"
+        },
+        {
+          "type": "richtext",
+          "id": "answer7",
+          "label": "Answer 7"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 8",
+          "id": "enableFaq8",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question8",
+          "label": "Question 8"
+        },
+        {
+          "type": "richtext",
+          "id": "answer8",
+          "label": "Answer 8"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 9",
+          "id": "enableFaq9",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question9",
+          "label": "Question 9"
+        },
+        {
+          "type": "richtext",
+          "id": "answer9",
+          "label": "Answer 9"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 10",
+          "id": "enableFaq10",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question10",
+          "label": "Question 10"
+        },
+        {
+          "type": "richtext",
+          "id": "answer10",
+          "label": "Answer 10"
+        }
+      ]
+    },
+    {
+      "type": "contour_face_user_guides",
+      "name": "Contour Face User FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 1",
+          "id": "enableFaq1",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question1",
+          "label": "Question 1"
+        },
+        {
+          "type": "richtext",
+          "id": "answer1",
+          "label": "Answer 1"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 2",
+          "id": "enableFaq2",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question2",
+          "label": "Question 2"
+        },
+        {
+          "type": "richtext",
+          "id": "answer2",
+          "label": "Answer 2"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 3",
+          "id": "enableFaq3",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question3",
+          "label": "Question 3"
+        },
+        {
+          "type": "richtext",
+          "id": "answer3",
+          "label": "Answer 3"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 4",
+          "id": "enableFaq4",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question4",
+          "label": "Question 4"
+        },
+        {
+          "type": "richtext",
+          "id": "answer4",
+          "label": "Answer 4"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 5",
+          "id": "enableFaq5",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question5",
+          "label": "Question 5"
+        },
+        {
+          "type": "richtext",
+          "id": "answer5",
+          "label": "Answer 5"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 6",
+          "id": "enableFaq6",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question6",
+          "label": "Question 6"
+        },
+        {
+          "type": "richtext",
+          "id": "answer6",
+          "label": "Answer 6"
+        }
+      ]
+    },
+    {
+      "type": "contour_face_assesment",
+      "name": "Contour Face Asses_ FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ",
+          "id": "enableFaq",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    },
+    {
+      "type": "contour_nd_faq",
+      "name": "N&D FAQ ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 1",
+          "id": "enableFaq1",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question1",
+          "label": "Question 1"
+        },
+        {
+          "type": "richtext",
+          "id": "answer1",
+          "label": "Answer 1"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 2",
+          "id": "enableFaq2",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question2",
+          "label": "Question 2"
+        },
+        {
+          "type": "richtext",
+          "id": "answer2",
+          "label": "Answer 2"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 3",
+          "id": "enableFaq3",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question3",
+          "label": "Question 3"
+        },
+        {
+          "type": "richtext",
+          "id": "answer3",
+          "label": "Answer 3"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 4",
+          "id": "enableFaq4",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question4",
+          "label": "Question 4"
+        },
+        {
+          "type": "richtext",
+          "id": "answer4",
+          "label": "Answer 4"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 5",
+          "id": "enableFaq5",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question5",
+          "label": "Question 5"
+        },
+        {
+          "type": "richtext",
+          "id": "answer5",
+          "label": "Answer 5"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 6",
+          "id": "enableFaq6",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question6",
+          "label": "Question 6"
+        },
+        {
+          "type": "richtext",
+          "id": "answer6",
+          "label": "Answer 6"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 7",
+          "id": "enableFaq7",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question7",
+          "label": "Question 7"
+        },
+        {
+          "type": "richtext",
+          "id": "answer7",
+          "label": "Answer 7"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 8",
+          "id": "enableFaq8",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question8",
+          "label": "Question 8"
+        },
+        {
+          "type": "richtext",
+          "id": "answer8",
+          "label": "Answer 8"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 9",
+          "id": "enableFaq9",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question9",
+          "label": "Question 9"
+        },
+        {
+          "type": "richtext",
+          "id": "answer9",
+          "label": "Answer 9"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 10",
+          "id": "enableFaq10",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question10",
+          "label": "Question 10"
+        },
+        {
+          "type": "richtext",
+          "id": "answer10",
+          "label": "Answer 10"
+        }
+      ]
+    },
+    {
+      "type": "contour_nd_user",
+      "name": "N&D User FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 1",
+          "id": "enableFaq1",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question1",
+          "label": "Question 1"
+        },
+        {
+          "type": "richtext",
+          "id": "answer1",
+          "label": "Answer 1"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 2",
+          "id": "enableFaq2",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question2",
+          "label": "Question 2"
+        },
+        {
+          "type": "richtext",
+          "id": "answer2",
+          "label": "Answer 2"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 3",
+          "id": "enableFaq3",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question3",
+          "label": "Question 3"
+        },
+        {
+          "type": "richtext",
+          "id": "answer3",
+          "label": "Answer 3"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 4",
+          "id": "enableFaq4",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question4",
+          "label": "Question 4"
+        },
+        {
+          "type": "richtext",
+          "id": "answer4",
+          "label": "Answer 4"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 5",
+          "id": "enableFaq5",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question5",
+          "label": "Question 5"
+        },
+        {
+          "type": "richtext",
+          "id": "answer5",
+          "label": "Answer 5"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 6",
+          "id": "enableFaq6",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question6",
+          "label": "Question 6"
+        },
+        {
+          "type": "richtext",
+          "id": "answer6",
+          "label": "Answer 6"
+        }
+      ]
+    },
+    {
+      "type": "contour_nd_face_assesment",
+      "name": "N&D Assesment FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ",
+          "id": "enableFaq",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    },
+    {
+      "type": "contour_glove_faq",
+      "name": "Contour Glove FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 1",
+          "id": "enableFaq1",
+          "default": true
+        },
+        
+        {
+          "type": "textarea",
+          "id": "question1",
+          "label": "Question 1"
+        },
+        {
+          "type": "richtext",
+          "id": "answer1",
+          "label": "Answer 1"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 2",
+          "id": "enableFaq2",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question2",
+          "label": "Question 2"
+        },
+        {
+          "type": "richtext",
+          "id": "answer2",
+          "label": "Answer 2"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 3",
+          "id": "enableFaq3",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question3",
+          "label": "Question 3"
+        },
+        {
+          "type": "richtext",
+          "id": "answer3",
+          "label": "Answer 3"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 4",
+          "id": "enableFaq4",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question4",
+          "label": "Question 4"
+        },
+        {
+          "type": "richtext",
+          "id": "answer4",
+          "label": "Answer 4"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 5",
+          "id": "enableFaq5",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question5",
+          "label": "Question 5"
+        },
+        {
+          "type": "richtext",
+          "id": "answer5",
+          "label": "Answer 5"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 6",
+          "id": "enableFaq6",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question6",
+          "label": "Question 6"
+        },
+        {
+          "type": "richtext",
+          "id": "answer6",
+          "label": "Answer 6"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 7",
+          "id": "enableFaq7",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question7",
+          "label": "Question 7"
+        },
+        {
+          "type": "richtext",
+          "id": "answer7",
+          "label": "Answer 7"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 8",
+          "id": "enableFaq8",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question8",
+          "label": "Question 8"
+        },
+        {
+          "type": "richtext",
+          "id": "answer8",
+          "label": "Answer 8"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 9",
+          "id": "enableFaq9",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question9",
+          "label": "Question 9"
+        },
+        {
+          "type": "richtext",
+          "id": "answer9",
+          "label": "Answer 9"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 10",
+          "id": "enableFaq10",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question10",
+          "label": "Question 10"
+        },
+        {
+          "type": "richtext",
+          "id": "answer10",
+          "label": "Answer 10"
+        }
+      ]
+    },
+    {
+      "type": "contour_glove_user_guides",
+      "name": "Glove User FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 1",
+          "id": "enableFaq1",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question1",
+          "label": "Question 1"
+        },
+        {
+          "type": "richtext",
+          "id": "answer1",
+          "label": "Answer 1"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 2",
+          "id": "enableFaq2",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question2",
+          "label": "Question 2"
+        },
+        {
+          "type": "richtext",
+          "id": "answer2",
+          "label": "Answer 2"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 3",
+          "id": "enableFaq3",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question3",
+          "label": "Question 3"
+        },
+        {
+          "type": "richtext",
+          "id": "answer3",
+          "label": "Answer 3"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 4",
+          "id": "enableFaq4",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question4",
+          "label": "Question 4"
+        },
+        {
+          "type": "richtext",
+          "id": "answer4",
+          "label": "Answer 4"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 5",
+          "id": "enableFaq5",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question5",
+          "label": "Question 5"
+        },
+        {
+          "type": "richtext",
+          "id": "answer5",
+          "label": "Answer 5"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 6",
+          "id": "enableFaq6",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question6",
+          "label": "Question 6"
+        },
+        {
+          "type": "richtext",
+          "id": "answer6",
+          "label": "Answer 6"
+        }
+      ]
+    },
+    {
+      "type": "contour_g_face_assesment",
+      "name": "Glove Assesment FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ",
+          "id": "enableFaq",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    },
+    {
+      "type": "Clear_glove_faq",
+      "name": "Clear FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 1",
+          "id": "enableFaq1",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question1",
+          "label": "Question 1"
+        },
+        {
+          "type": "richtext",
+          "id": "answer1",
+          "label": "Answer 1"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 2",
+          "id": "enableFaq2",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question2",
+          "label": "Question 2"
+        },
+        {
+          "type": "richtext",
+          "id": "answer2",
+          "label": "Answer 2"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 3",
+          "id": "enableFaq3",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question3",
+          "label": "Question 3"
+        },
+        {
+          "type": "richtext",
+          "id": "answer3",
+          "label": "Answer 3"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 4",
+          "id": "enableFaq4",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question4",
+          "label": "Question 4"
+        },
+        {
+          "type": "richtext",
+          "id": "answer4",
+          "label": "Answer 4"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 5",
+          "id": "enableFaq5",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question5",
+          "label": "Question 5"
+        },
+        {
+          "type": "richtext",
+          "id": "answer5",
+          "label": "Answer 5"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 6",
+          "id": "enableFaq6",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question6",
+          "label": "Question 6"
+        },
+        {
+          "type": "richtext",
+          "id": "answer6",
+          "label": "Answer 6"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 7",
+          "id": "enableFaq7",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question7",
+          "label": "Question 7"
+        },
+        {
+          "type": "richtext",
+          "id": "answer7",
+          "label": "Answer 7"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 8",
+          "id": "enableFaq8",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question8",
+          "label": "Question 8"
+        },
+        {
+          "type": "richtext",
+          "id": "answer8",
+          "label": "Answer 8"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 9",
+          "id": "enableFaq9",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question9",
+          "label": "Question 9"
+        },
+        {
+          "type": "richtext",
+          "id": "answer9",
+          "label": "Answer 9"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 10",
+          "id": "enableFaq10",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question10",
+          "label": "Question 10"
+        },
+        {
+          "type": "richtext",
+          "id": "answer10",
+          "label": "Answer 10"
+        }
+      ]
+    },
+    {
+      "type": "Clear_glove_user_guides",
+      "name": "Clear User FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ",
+          "id": "enableFaq",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    },
+    {
+      "type": "clear_face_assesment",
+      "name": "Clear Assesment FAQ?",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ",
+          "id": "enableFaq",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    },
+    {
+      "type": "men_glove_faq",
+      "name": "Men FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 1",
+          "id": "enableFaq1",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question1",
+          "label": "Question 1"
+        },
+        {
+          "type": "richtext",
+          "id": "answer1",
+          "label": "Answer 1"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 2",
+          "id": "enableFaq2",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question2",
+          "label": "Question 2"
+        },
+        {
+          "type": "richtext",
+          "id": "answer2",
+          "label": "Answer 2"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 3",
+          "id": "enableFaq3",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question3",
+          "label": "Question 3"
+        },
+        {
+          "type": "richtext",
+          "id": "answer3",
+          "label": "Answer 3"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 4",
+          "id": "enableFaq4",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question4",
+          "label": "Question 4"
+        },
+        {
+          "type": "richtext",
+          "id": "answer4",
+          "label": "Answer 4"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 5",
+          "id": "enableFaq5",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question5",
+          "label": "Question 5"
+        },
+        {
+          "type": "richtext",
+          "id": "answer5",
+          "label": "Answer 5"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 6",
+          "id": "enableFaq6",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question6",
+          "label": "Question 6"
+        },
+        {
+          "type": "richtext",
+          "id": "answer6",
+          "label": "Answer 6"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 7",
+          "id": "enableFaq7",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question7",
+          "label": "Question 7"
+        },
+        {
+          "type": "richtext",
+          "id": "answer7",
+          "label": "Answer 7"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 8",
+          "id": "enableFaq8",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question8",
+          "label": "Question 8"
+        },
+        {
+          "type": "richtext",
+          "id": "answer8",
+          "label": "Answer 8"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 9",
+          "id": "enableFaq9",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question9",
+          "label": "Question 9"
+        },
+        {
+          "type": "richtext",
+          "id": "answer9",
+          "label": "Answer 9"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 10",
+          "id": "enableFaq10",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question10",
+          "label": "Question 10"
+        },
+        {
+          "type": "richtext",
+          "id": "answer10",
+          "label": "Answer 10"
+        }
+      ]
+    },
+    {
+      "type": "men_user_guides",
+      "name": "Men User FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 1",
+          "id": "enableFaq1",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question1",
+          "label": "Question1"
+        },
+        {
+          "type": "richtext",
+          "id": "answer1",
+          "label": "Answer 1"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 2",
+          "id": "enableFaq2",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question2",
+          "label": "Question 2"
+        },
+        {
+          "type": "richtext",
+          "id": "answer2",
+          "label": "Answer 2"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 3",
+          "id": "enableFaq3",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question3",
+          "label": "Question 3"
+        },
+        {
+          "type": "richtext",
+          "id": "answer3",
+          "label": "Answer 3"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 4",
+          "id": "enableFaq4",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question4",
+          "label": "Question 4"
+        },
+        {
+          "type": "richtext",
+          "id": "answer4",
+          "label": "Answer 4"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 5",
+          "id": "enableFaq5",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question5",
+          "label": "Question 5"
+        },
+        {
+          "type": "richtext",
+          "id": "answer5",
+          "label": "Answer 5"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 6",
+          "id": "enableFaq6",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question6",
+          "label": "Question 6"
+        },
+        {
+          "type": "richtext",
+          "id": "answer6",
+          "label": "Answer 6"
+        }
+      ]
+    },
+    {
+      "type": "men_face_assesment",
+      "name": "Men Assesment FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ",
+          "id": "enableFaq",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    },
+    {
+      "type": "skincare_glove_faq",
+      "name": "Skincare FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 1",
+          "id": "enableFaq1",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question1",
+          "label": "Question 1"
+        },
+        {
+          "type": "richtext",
+          "id": "answer1",
+          "label": "Answer 1"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 2",
+          "id": "enableFaq2",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question2",
+          "label": "Question 2"
+        },
+        {
+          "type": "richtext",
+          "id": "answer2",
+          "label": "Answer 2"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 3",
+          "id": "enableFaq3",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question3",
+          "label": "Question 3"
+        },
+        {
+          "type": "richtext",
+          "id": "answer3",
+          "label": "Answer 3"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 4",
+          "id": "enableFaq4",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question4",
+          "label": "Question 4"
+        },
+        {
+          "type": "richtext",
+          "id": "answer4",
+          "label": "Answer 4"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 5",
+          "id": "enableFaq5",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question5",
+          "label": "Question 5"
+        },
+        {
+          "type": "richtext",
+          "id": "answer5",
+          "label": "Answer 5"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 6",
+          "id": "enableFaq6",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question6",
+          "label": "Question 6"
+        },
+        {
+          "type": "richtext",
+          "id": "answer6",
+          "label": "Answer 6"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 7",
+          "id": "enableFaq7",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question7",
+          "label": "Question 7"
+        },
+        {
+          "type": "richtext",
+          "id": "answer7",
+          "label": "Answer 7"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 8",
+          "id": "enableFaq8",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question8",
+          "label": "Question 8"
+        },
+        {
+          "type": "richtext",
+          "id": "answer8",
+          "label": "Answer 8"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 9",
+          "id": "enableFaq9",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question9",
+          "label": "Question 9"
+        },
+        {
+          "type": "richtext",
+          "id": "answer9",
+          "label": "Answer 9"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 10",
+          "id": "enableFaq10",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question10",
+          "label": "Question 10"
+        },
+        {
+          "type": "richtext",
+          "id": "answer10",
+          "label": "Answer 10"
+        }
+      ]
+    },
+    {
+      "type": "skincare_user_guides",
+      "name": "Skincare User FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 1",
+          "id": "enableFaq1",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question1",
+          "label": "Question1"
+        },
+        {
+          "type": "richtext",
+          "id": "answer1",
+          "label": "Answer 1"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 2",
+          "id": "enableFaq2",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question2",
+          "label": "Question 2"
+        },
+        {
+          "type": "richtext",
+          "id": "answer2",
+          "label": "Answer 2"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 3",
+          "id": "enableFaq3",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question3",
+          "label": "Question 3"
+        },
+        {
+          "type": "richtext",
+          "id": "answer3",
+          "label": "Answer 3"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 4",
+          "id": "enableFaq4",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question4",
+          "label": "Question 4"
+        },
+        {
+          "type": "richtext",
+          "id": "answer4",
+          "label": "Answer 4"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 5",
+          "id": "enableFaq5",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question5",
+          "label": "Question 5"
+        },
+        {
+          "type": "richtext",
+          "id": "answer5",
+          "label": "Answer 5"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ 6",
+          "id": "enableFaq6",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question6",
+          "label": "Question 6"
+        },
+        {
+          "type": "richtext",
+          "id": "answer6",
+          "label": "Answer 6"
+        }
+      ]
+    },
+    {
+      "type": "skincare_face_assesment",
+      "name": "Skincare Assesment FAQ?",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Add text to identify into customization"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable FAQ",
+          "id": "enableFaq",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product:Help Center",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,275 @@
+<link rel="stylesheet" href="{{ 'global-image-with-text.css' | asset_url }}">
+
+<section class="section-content image-with-text image-with-table py-0 position-relative {% if section.settings.enable_background_tone %}background-tone{% endif %}"  data-section-id="{{ section.id }}" style="background:{{ section.settings.section_bg_color }}; color:{{ section.settings.section_txt_color }}">
+    {% if section.settings.enable_background_tone %}
+    <span class="gradient-fair-tone light-tone-top position-absolute w-100 start-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
+        <span class="white-anim"></span>
+    </span>
+    {% endif %}
+    <div class="{% if section.settings.fluid_layout %}container-fluid px-0 overflow-hidden{% else %}container{% endif %}">
+        <div class="row">
+            <div class="col-12 col-lg-6 {% if section.settings.image_alignment == 'left' %}order-lg-1 pe-0{% else %}order-lg-2 ps-0{% endif %}">
+                <div class="banner-img w-100 position-relative square-card h-100 {{ section.settings.height }}">
+                    {%- if section.settings.image != blank -%}
+                        <img
+                            srcset="
+                            {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                            {%- if section.settings.image.width >= 520 -%}{{ section.settings.image | image_url: width: 520 }} 520w,{%- endif -%}
+                            {%- if section.settings.image.width >= 650 -%}{{ section.settings.image | image_url: width: 650 }} 650w,{%- endif -%}
+                            {%- if section.settings.image.width >= 780 -%}{{ section.settings.image | image_url: width: 780 }} 780w,{%- endif -%}
+                            {%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1000 -%}{{ section.settings.image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1300 -%}{{ section.settings.image | image_url: width: 1300 }} 1300w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1600 -%}{{ section.settings.image | image_url: width: 1600 }} 1600w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1900 -%}{{ section.settings.image | image_url: width: 1900 }} 1900w,{%- endif -%}"
+                            src="{{ section.settings.image | image_url: width: 20 }}"
+                            sizes="(min-width: 992px) 50vw, 100vw"
+                            alt="{{ section.settings.image.alt | escape }}"
+                            class="h-100 p-3 end-0 mx-auto top-0 start-0 position-absolute object-contain w-100"
+                            loading="lazy" style="max-width: 602px;"
+                            width="{{ section.settings.image.width | divided_by: 3 }}"
+                            height="{{ section.settings.image.height | divided_by: 3 }}"
+                        >
+                    {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 d-flex border-top align-items-center inside-block-col {% if section.settings.image_alignment == 'left' %}order-lg-2{% else %}order-lg-1{% endif %}">
+                <div class="inside-block w-100 {{ section.settings.alignment }} {% if section.settings.image_alignment == 'left' %}text-p-end ps-5{% else %}ms-lg-auto text-p-start{% endif %}  pb-lg-10 pt-lg-11 pt-8 mb-lg-0 mb-1 pb-6 pe-20 ps-20" style="max-width:675px">
+                    <div class="inside-block-inner pe-lg-3 ps-0 {% if section.settings.fullwidth_content %} col-12 {% else %}col-sm-10 col-12{% endif %}">
+                        {% if section.settings.heading_txt != blank %}
+                            <h3 class="mb-3 w-100" style="max-width:{{ section.settings.max_width }}px;">{{ section.settings.heading_txt }}</h3>
+                        {% endif %}
+                        {% if section.settings.txt != blank %}
+                            <div class="{% if section.settings.btn_txt != blank or section.settings.btn_txt_watch != blank or section.settings.steps_captions != blank or section.settings.step_heading != blank or section.settings.steps_captions_2 != blank %}pb-2 mb-1{% else %}mb-n3 pb-0{% endif %}">{{ section.settings.txt }}</div>
+                        {% endif %}
+                        {% if section.settings.step_heading != blank %}
+                            <p class="mb-2 mb-md-3 ">{{ section.settings.step_heading }}</p>
+                        {% endif %}
+                        {% if section.settings.steps_captions != blank %}
+                         {% assign caption = section.settings.steps_captions | newline_to_br | strip_newlines | split: '<br />' %}
+                            <ul class="list-unstyled mb-5">
+                                {% for cap in caption %}
+                                    <li class="mb-2 mb-md-3 position-relative ps-4">{{ cap }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        {% assign blocks_size = section.blocks | size %}
+                        {% if blocks_size > 0 %}
+                        <div class="pb-2 mb-1 readbody mt-n2 pt-lg-4" data-redmore="false" data-redmore-id="instructions_{{ forloop.index }}">
+                            <div class="readbody-text overflow-hidden formatted-list list-style-o mt-n1 pb-3 pb-lg-0">
+                                {% for block in section.blocks %}
+                                    <div class="row mt-4">
+                                        <div class="col-lg-4">
+                                            <div class="h6 ls-1 position-relative" style="line-height: 1.5714285714;top: -3px;">{{ block.settings.title }}</div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="mb-n3 mt-n1">{{ block.settings.details_table }}</div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                             </div>
+                            <div class="align-items-center d-inline-flex d-lg-none fw-semibold red-more-btn" onclick="readMore('instructions_{{ forloop.index }}')">
+                                <span class="me-1">Show More </span><span class="me-1">Show Less </span>Specifications <i class="ms-2 font-size-xs ox-arrow ox-arrow-down mt-1"></i>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Image With Table",
+  "class": "image-text-style",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_background_tone",
+      "label": "Background Tone",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "styling"
+    },
+    {
+      "type": "checkbox",
+      "id": "border-top",
+      "label": "Border Top?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "border-bottom",
+      "label": "Border Bottom?",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "section_text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "fullwidth_content",
+      "label": "Full Width content?",
+      "default": false
+    },
+    {
+      "type": "html",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 100,
+      "max": 570,
+      "step": 10,
+      "unit": "px",
+      "label": "Heading max-width",
+      "default": 530
+    },
+    {
+      "type": "richtext",
+      "id": "txt",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "step_heading",
+      "label": "Step Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "steps_captions",
+      "label": "Details List",
+      "info": "Each entry must be on a new line."
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select Image",
+      "info": "For Better Viewing Use Example dimentions: 775*735 ( Aspect Ratio: 1.05 )"
+    },
+    {
+      "type": "header",
+      "content": "styling"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-end",
+          "label": "Right"
+        }
+      ],
+      "default": "text-left"
+    },
+    {
+      "type": "select",
+      "id": "image_alignment",
+      "label": "Image Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Add Data",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "details_table",
+          "label": "Details"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image With Table",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}
+<script>
+    function readMore(instructions) {
+        let readFlag = event.currentTarget.closest('.readbody');
+        if (readFlag.getAttribute('data-redmore') === "true") {
+            readFlag.setAttribute("data-redMore", "false");
+        } else {
+            readFlag.setAttribute("data-redMore", "true");
+        }
+    }
+</script>
+<style>
+    [data-section-id="{{ section.id }}"]
+    {
+      {% if section.settings.border-top %}
+      border-top: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+      {% if section.settings.border-bottom %}
+      border-bottom: 1.5px solid {{ section.settings.section_txt_color }};
+      {% endif %}
+    }
+  </style>
