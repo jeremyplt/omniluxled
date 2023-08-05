@@ -27,7 +27,7 @@
                                     {% endif %}
                                     {% if block.settings.btn_text != blank %}
                                     <div class="mb-6">
-                                        <a href="{{ block.settings.btn_link }} " class="btn btn-outline-primary ">{{ block.settings.btn_text }} </a>
+                                        <a href="{{ block.settings.btn_link }} " class="btn btn-outline-primary btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }}">{{ block.settings.btn_text }} </a>
                                     </div>
                                     {% endif %}
                                 </div>
@@ -81,8 +81,67 @@
           "type": "text",
           "id": "btn_link",
           "label": "Button Link"
+        },
+         {
+      "type": "select",
+      "id": "btn_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
         }
       ]
+    },
+        {
+      "type": "select",
+      "id": "btn_variant",
+      "label": "Button Variant",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "btn_size",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    }
+  ]
     }
   ],
   "presets": [

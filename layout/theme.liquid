@@ -92,6 +92,7 @@
 <script>(() => {const installerKey = 'docapp-discount-auto-install'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(installerKey)) {window.sessionStorage.setItem(installerKey, JSON.stringify({integrationId: urlParams.get('docapp-integration-id'), divClass: urlParams.get('docapp-install-class'), check: urlParams.get('docapp-check')}));}})();</script>
 
 <script>(() => {const previewKey = 'docapp-discount-test'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(previewKey)) {window.sessionStorage.setItem(previewKey, JSON.stringify({active: true, integrationId: urlParams.get('docapp-discount-inst-test')}));}})();</script>
+    {% include 'dp-config' %}
 </head>
 
   <body class="template-{{ template.name }} {{ page.handle }} {{ collection.handle }} {{ product.handle }} {% if product.tags contains 'men_product' %}product-men{% endif %} ab-test-cartdrawer"
@@ -426,6 +427,51 @@
     <!-- ACCESSIBILITYSPARK START -->
     {% render 'accessibility-spark-widget' %}
     <!-- ACCESSIBILITYSPARK END -->
+
+  <script>
+    function waitForElement(querySelector, timeout) {
+  return new Promise((resolve, reject) => {
+    var timer = false;
+    if (document.querySelectorAll(querySelector).length) return resolve();
+    const observer = new MutationObserver(() => {
+      if (document.querySelectorAll(querySelector).length) {
+        observer.disconnect();
+        if (timer !== false) clearTimeout(timer);
+        return resolve();
+      }
+    });
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+    if (timeout)
+      timer = setTimeout(() => {
+        observer.disconnect();
+        reject();
+      }, timeout);
+  });
+}
+
+function moveFormElement() {
+  const container = document.querySelector(".cbb-frequently-bought-container");
+  const form = document.querySelector(".cbb-frequently-bought-form");
+
+  if (window.innerWidth < 649) {
+    container.insertAdjacentElement('beforeend', form);
+  }
+}
+
+waitForElement(".cbb-frequently-bought-form", 5000)
+  .then(() => {
+    moveFormElement();
+    window.addEventListener('resize', moveFormElement);
+    console.log("done", window.innerWidth)
+  })
+  .catch((e) => {
+    console.log("error message")
+    console.error(e.message)
+  })
+  </script>
   </body>
 </html>
 

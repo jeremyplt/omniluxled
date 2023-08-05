@@ -236,7 +236,7 @@
         font-family: var(--bs-font-family-base);
         font-weight: 400;
         font-size: 12px;
-        line-height: 11px;
+        /* line-height: 11px; */
     }
 
     .btn-add_to_cart {

@@ -7,6 +7,19 @@
     if collection == null or collection.handle == 'frontpage' or collection.handle == 'all'
         assign found_a_collection = false
         for c in product.collections
+            comment
+              <locksmith:44a9> Code added automatically by the Locksmith app. Do not modify or remove.
+            endcomment
+            capture var
+              render 'locksmith-variables', scope: 'subject', subject: c, subject_parent: product, variable: 'transparent'
+            endcapture
+            if var == "true"
+            else
+              continue
+            endif
+            comment
+              </locksmith:44a9> End Locksmith code block.
+            endcomment
             if found_a_collection == false and c.handle != 'frontpage' and c.handle != 'all' and c.all_products_count > 1
                 assign found_a_collection = true
                 assign collection = c
@@ -82,17 +95,17 @@
       
 
                                 {% comment %}theme-check-disable LiquidTag{% endcomment %}
-                                {%- comment %}<locksmith:ffde>{% endcomment -%}
-                                  {%- assign locksmith_66d3_forloop__size = 0 %}{% for subProduct in productsArray limit: total_items %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: subProduct, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_66d3_forloop__size = locksmith_66d3_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_66d3_forloop__index = nil -%}
-                                {%- comment %}</locksmith:ffde>{% endcomment -%}
+                                {%- comment %}<locksmith:0ccf>{% endcomment -%}
+                                  {%- assign locksmith_fc26_forloop__size = 0 %}{% for subProduct in productsArray limit: total_items %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: subProduct, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_fc26_forloop__size = locksmith_fc26_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_fc26_forloop__index = nil -%}
+                                {%- comment %}</locksmith:0ccf>{% endcomment -%}
                                 {% for subProduct in productsArray limit: total_items %}
-                                    {%- comment %}<locksmith:6ce4>{% endcomment -%}
-                                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: subProduct, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_66d3_forloop__index == nil %}{% assign locksmith_66d3_forloop__index = 1 %}{% assign locksmith_66d3_forloop__index0 = 0 %}{% else %}{% assign locksmith_66d3_forloop__index = locksmith_66d3_forloop__index | plus: 1 %}{% assign locksmith_66d3_forloop__index0 = locksmith_66d3_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_66d3_forloop__index == 1 %}{% assign locksmith_66d3_forloop__first = true %}{% else %}{% assign locksmith_66d3_forloop__first = false %}{% endif %}{% if locksmith_66d3_forloop__index == locksmith_66d3_forloop__size %}{% assign locksmith_66d3_forloop__last = true %}{% else %}{% assign locksmith_66d3_forloop__last = false %}{% endif %}{% assign locksmith_66d3_forloop__rindex = locksmith_66d3_forloop__size | minus: locksmith_66d3_forloop__index | minus: 1 %}{% assign locksmith_66d3_forloop__rindex0 = locksmith_66d3_forloop__size | minus: locksmith_66d3_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-                                    {%- comment %}</locksmith:6ce4>{% endcomment -%}
+                                    {%- comment %}<locksmith:1633>{% endcomment -%}
+                                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: subProduct, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_fc26_forloop__index == nil %}{% assign locksmith_fc26_forloop__index = 1 %}{% assign locksmith_fc26_forloop__index0 = 0 %}{% else %}{% assign locksmith_fc26_forloop__index = locksmith_fc26_forloop__index | plus: 1 %}{% assign locksmith_fc26_forloop__index0 = locksmith_fc26_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_fc26_forloop__index == 1 %}{% assign locksmith_fc26_forloop__first = true %}{% else %}{% assign locksmith_fc26_forloop__first = false %}{% endif %}{% if locksmith_fc26_forloop__index == locksmith_fc26_forloop__size %}{% assign locksmith_fc26_forloop__last = true %}{% else %}{% assign locksmith_fc26_forloop__last = false %}{% endif %}{% assign locksmith_fc26_forloop__rindex = locksmith_fc26_forloop__size | minus: locksmith_fc26_forloop__index | minus: 1 %}{% assign locksmith_fc26_forloop__rindex0 = locksmith_fc26_forloop__size | minus: locksmith_fc26_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                                    {%- comment %}</locksmith:1633>{% endcomment -%}
                                     {% if subProduct.handle == current_product.handle %}
                                         {% assign current_product_found = true %}
                                     {% else %}
-                                        {% unless current_product_found == false and locksmith_66d3_forloop__last and subProduct.tags %}
+                                        {% unless current_product_found == false and locksmith_fc26_forloop__last and subProduct.tags %}
                                             {% liquid 
                                                 assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
                                                 assign checkWholesaleProducts = false

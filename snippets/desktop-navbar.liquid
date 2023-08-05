@@ -115,7 +115,7 @@
                                                                     {% assign current_variant = current_product.selected_or_first_available_variant %}             
                                                                     {% if current_product != null %}
                                                                     <div class="{% if block.type == 'sub_menu_second' %}mega-menu-item-call-second{% else %}mega-menu-item-call{% endif %}">                                                                                       
-                                                                        <div class="mega_menu_container col-12">
+                                                                        <div class="card-body mega_menu_container col-12 p-0" data-nav-menu-product-id="{{ current_product.id }}">
                                                                             <div>
                                                                                 <a class="" href="{{ current_product.url | within: collection }}">
                                                                                     <img class="img-fluid" src="{{current_product.featured_image | image_url: width: 850 }}"/>    
@@ -129,21 +129,21 @@
                                                          
                                                                             {% if current_product.metafields.okendo.StarRatingSnippet %}<div data-oke-star-rating {{ product_data_attribute }} style="display:flex">{{ current_product.metafields.okendo.StarRatingSnippet }}</div>{% endif %}
                                                           
-                                                                            <span class="price">
-                                                                                {% if current_variant and current_variant.compare_at_price > current_variant.price %}
-                                                                                  <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
-                                                                                {% elsif product.compare_at_price > product.price %}
-                                                                                  <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
-                                                                                {% endif %}
-                                                                                {% if current_variant %}
-                                                                                {{ current_variant.price | money }}
-                                                                                {% elsif current_product.price_varies %}
-                                                                                    {% assign minPrice = current_product.price_min | money %}
-                                                                                    {% assign maxPrice = current_product.price_max | money %}
-                                                                                    {{ 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape }}
-                                                                                {% else %}
-                                                                                    {{ current_product.price | money }}
-                                                                                {% endif %}
+                                                                            {% if current_variant and current_variant.compare_at_price > current_variant.price %}
+                                                                                <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
+                                                                            {% elsif product.compare_at_price > product.price %}
+                                                                                <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
+                                                                            {% endif %}
+                                                                            <span class="price" data-currentPrice>
+                                                                            {% if current_variant %}
+                                                                            {{ current_variant.price | money }}
+                                                                            {% elsif current_product.price_varies %}
+                                                                                {% assign minPrice = current_product.price_min | money %}
+                                                                                {% assign maxPrice = current_product.price_max | money %}
+                                                                                {{ 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape }}
+                                                                            {% else %}
+                                                                                {{ current_product.price | money }}
+                                                                            {% endif %}
                                                                             </span>
                                                                             <div class="add-cart-form">
                                                                                 {% assign max = 80 %}
@@ -240,7 +240,7 @@
                                                     <div class="card megamenu_product custom_megamenu_product border-0 h-100">
                                                         <div class="h-100 align-items-center">
                                                             <div class="col-12">
-                                                                <div class="card-img" style="max-height: 274px">
+                                                                <div class="card-img" style="max-height: 294px">
                                                                     <a class="square-card d-block w-100 position-relative" href="{{ megaMenuBlock.story_link }}">
                                                                     <img class="w-100 object-cover position-absolute start-0 top-0"
                                                                         src="{{ megaMenuBlock.story_image | image_url: width: 16 }}" 

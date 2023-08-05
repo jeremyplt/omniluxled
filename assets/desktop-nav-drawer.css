@@ -66,6 +66,9 @@
     color: #000000;
 }
 
+.dualPrice {
+    display: initial !important;
+}
 .mega-menu-item-call {
     width: 16%;
 }
@@ -146,17 +149,17 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 11px;
+    /* line-height: 11px; */
     letter-spacing: -0.02em;
     color: #000000;
 }
 
 .mega_menu_container:hover .price, .mega_menu_container .add-cart-form {
-    display: none;
+    display: none !important;
 }
 
 .mega_menu_container:hover .add-cart-form{
-    display: block;
+    display: block !important;
 }
 
 ul.mega-menu__list.page-width.mega-menu__list--condensed {
@@ -210,7 +213,8 @@ ul.mega-menu__list.page-width.mega-menu__list--condensed {
 }
 
 .custom_megamenu_product.megamenu_product img {
-    max-height: 274px;
+   /* max-height: 274px; */
+  padding-bottom:10px;
 }
 
 .megamenu_with_product .container {

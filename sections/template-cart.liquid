@@ -166,7 +166,7 @@
                                                 {% if item.properties['promo_product'] or item.line_price == 0 %}
                                                     <span class="m-0 p-0">{{ 'templates.cart.free' | t }}</span>
                                                 {% else %}
-                                                    <span class="m-0 p-0"> {{ item.line_price | money }} </span>
+                                                    <span class="price m-0 p-0"> {{ item.line_price | money }} </span>
                                                 {% endif %}
                                             </div>
                                             {%- if varStatus == 'sold_out' -%}
@@ -212,7 +212,23 @@
                             <h5 class="text-capitalize font-size-lg-20 my-0 fw-semibold">{{ 'templates.cart.total' | t }}:</h5>
                         </div>
                         <div class="col-6 text-end">
-                            <h5 class="text-capitalize font-size-lg-20 my-0 fw-semibold" data-cartTotal><span class="money">{{ cart.total_price | money }}</span></h5>
+                            <h5 class="text-capitalize font-size-lg-20 my-0 fw-semibold"><span class="money">{{ cart.total_price | money }}</span></h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <span class="font-size-lg-18 ls-0 fw-lighter my-0">Subtotal</span>
+                        </div>
+                        <div class="col-6 text-end">
+                            <span class="font-size-lg-18 my-0 fw-semibold" data-cartTotal>{{ cart.total_price | money }}</span>
+                        </div>
+                    </div>
+                    <div class="row" id="preTax">
+                        <div class="col">
+                            <span class="font-size-lg-18 ls-0 fw-lighter my-0">Pre tax</span>
+                        </div>
+                        <div class="col-6 text-end">
+                            <span class="font-size-lg-18 my-0 fw-semibold" data-preTaxCartTotal>{{ cart.total_price | money }}</span>
                         </div>
                     </div>
                     <div class="cart-afterpay"></div>

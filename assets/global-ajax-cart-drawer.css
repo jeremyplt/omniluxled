@@ -102,6 +102,12 @@
 .cart-drawer .section-min-height{
     min-height: auto;
 }
+.cart-drawer .cart-total span{
+    font-size: 18px;
+}
+.cart-drawer .cart-total #preTax {
+    display: none;
+}
 
 .swatch input {
     display: none;

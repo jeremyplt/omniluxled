@@ -234,8 +234,13 @@
                     <h5 class="text-capitalize font-size-lg-20 my-0 fw-semibold hideabtest">{{ 'templates.cart.total' | t }}:</h5>
                   {% comment %} <h5 class="text-capitalize font-size-lg-20 my-0 fw-semibold showabtest">Subtotal:</h5> {% endcomment %}
                 </div>
-                <div class="col-6 text-end hideabtest">
-                    <h5 class="text-capitalize font-size-lg-20 my-0 fw-semibold" data-cartTotal><span class="money">{{ cart.total_price | money }}</span></h5>
+                <div class="col-12 d-flex">
+                    <span class="flex-fill font-size-lg-20 fw-bold">Subtotal</span>
+                    <span class="font-size-lg-20 my-0" data-cartTotal>{{ cart.total_price | money }}</span>
+                </div>
+                <div class="col-12" id="preTax">
+                    <span class="flex-fill font-size-lg-20 fw-bold">Pre tax</span>
+                    <span class="font-size-lg-20 my-0" data-preTaxCartTotal>{{ cart.total_price | money }}</span>
                 </div>
             </div>
           <div class="afterpay hideabtest">  <div class="cart-afterpay"></div></div>

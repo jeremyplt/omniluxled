@@ -88,11 +88,33 @@
                                       <div class="container px-0 {{ block.settings.alignment }}">
                                           <div class="row mx-auto col-md-11 col-lg-10 col-12 px-0 py-xl-13 py-lg-10 mb-xl-2 py-md-5 py-10 {{ block.settings.caption_alignment }}">
                                               <div class="col-xl-4 col-lg-6 col-md-6 col-12 pe-0 ps-0 ">
+{% if block.settings.trustedbytxt != blank %}
+   <div class="review-ctr">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <p class="rev-txt">&nbsp; &nbsp;{{ block.settings.trustedbytxt }}</p>
+                  </div>
+                     {% endif %}                           
                                                   <h2 class="h1 px-4 px-md-0 heading_txt mb-3" style="color: {{ block.settings.heading_txt_color }};">{{ block.settings.heading }}</h2>
                                                   <p class="px-4 px-md-0 caption_txt fw-normal mb-1 pb-2" style="color: {{ block.settings.caption_txt_color }};">{{ block.settings.caption | escape }}</p>
                                                   {% if block.settings.btn_txt != blank %}
                                                       <a {% if block.settings.btn_link %} href="{{ block.settings.btn_link }}" {% endif %} class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }} mt-3">{{ block.settings.btn_txt }}</a>
                                                   {% endif %}
+                                {% if block.settings.trustedbytxt != blank %}
+  <div class="review-ctr-mbl">
+                    <div class="ds-flx">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    </div>
+                    <p class="rev-txt-mbl">&nbsp; &nbsp;{{ block.settings.trustedbytxt }}</p>
+                  </div>
+                                            {% endif %}
                                               </div>
                                           </div>
                                       </div>
@@ -199,7 +221,20 @@
                               <div class="position-absolute full-video-caption text-center media-text-wrap">
                                   <div class="inside-block container px-md-0 px-3 col-12 col-md-11 col-lg-10 pb-xl-13 py-lg-10 mb-xl-2 py-md-5 py-10 {{ block.settings.alignment }} d-flex {{ block.settings.video_alignment }}" style="color:{{ block.settings.section_text_color }};opacity: 0;">
                                       <div class="px-md-0 pe-0 mx-md-0 mx-auto {% if template.name == 'page' %}col-xl-6 col-md-8 lp-page-m{% else %}col-md-12{% endif %} ">
-                                          {% if block.settings.logo_image__ != blank %}
+                                        
+                        {% if block.settings.trustedbytxt != blank %}
+   <div class="review-ctr">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <p class="rev-txt">&nbsp; &nbsp;{{ block.settings.trustedbytxt }}</p>
+                  </div>
+                     {% endif %}
+                        
+                        
+                        {% if block.settings.logo_image__ != blank %}
                                               <img src="{{ block.settings.logo_image__ }}" class="h-auto position-relative w-auto mb-4" width="214" height="214" alt="{{ shop.name | escape }}" />
                                           {% endif %}
                                           {% if block.settings.title != blank %}
@@ -223,6 +258,18 @@
                                                   <i class="ox-play ms-2" style="font-size:11px;margin-bottom:-2px;"></i>
                                               </span>
                                               {% endif %}
+                                      {% if block.settings.trustedbytxt != blank %}
+  <div class="review-ctr-mbl">
+                    <div class="ds-flx">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    </div>
+                    <p class="rev-txt-mbl">&nbsp; &nbsp;{{ block.settings.trustedbytxt }}</p>
+                  </div>
+                                            {% endif %}
                                           </div>
                                       </div>
                                   </div>
@@ -356,11 +403,36 @@
                                         <div class="inside-block container px-0 {{ block.settings.alignment }}" style="opacity: 0;">
                                             <div class="row mx-auto col-md-11 col-lg-10 col-12 px-0 py-xl-13 py-lg-10 mb-xl-2 py-md-5 py-10 {{ block.settings.caption_alignment }}">
                                                 <div class="col-xl-4 col-lg-6 col-md-6 col-12 pe-0 ps-0 ">
-                                                    <h2 class="h1 px-4 px-md-0 heading_txt mb-3" style="color: {{ block.settings.heading_txt_color }};">{{ block.settings.heading }}</h2>
+                                                    
+                                  {% if block.settings.trustedbytxt != blank %}
+   <div class="review-ctr">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <p class="rev-txt">&nbsp; &nbsp;{{ block.settings.trustedbytxt }}</p>
+                  </div>
+                     {% endif %}
+                                                  
+                                                  
+                                                  <h2 class="h1 px-4 px-md-0 heading_txt mb-3" style="color: {{ block.settings.heading_txt_color }};">{{ block.settings.heading }}</h2>
                                                     <p class="px-4 px-md-0 caption_txt fw-normal mb-1 pb-2" style="color: {{ block.settings.caption_txt_color }};">{{ block.settings.caption | escape }}</p>
                                                     {% if block.settings.btn_txt != blank %}
                                                         <a {% if block.settings.btn_link %} href="{{ block.settings.btn_link }}" {% endif %} class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }} mt-3">{{ block.settings.btn_txt }}</a>
                                                     {% endif %}
+                                            {% if block.settings.trustedbytxt != blank %}
+  <div class="review-ctr-mbl">
+                    <div class="ds-flx">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    </div>
+                    <p class="rev-txt-mbl">&nbsp; &nbsp;{{ block.settings.trustedbytxt }}</p>
+                  </div>
+                                            {% endif %}
                                                 </div>
                                             </div>
                                         </div>
@@ -467,7 +539,21 @@
                                 <div class="position-absolute full-video-caption text-center media-text-wrap">
                                     <div class="inside-block container px-md-0 px-3 col-12 col-md-11 col-lg-10 pb-xl-13 py-lg-10 mb-xl-2 py-md-5 py-10 {{ block.settings.alignment }} d-flex {{ block.settings.video_alignment }}" style="color:{{ block.settings.section_text_color }};opacity: 0;">
                                         <div class="px-md-0 pe-0 mx-md-0 mx-auto {% if template.name == 'page' %}col-xl-6 col-md-8 lp-page-m{% else %}col-md-12{% endif %} ">
-                                            {% if block.settings.logo_image__ != blank %}
+                                           
+                          
+                          {% if block.settings.trustedbytxt != blank %}
+   <div class="review-ctr">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <p class="rev-txt">&nbsp; &nbsp;{{ block.settings.trustedbytxt }}</p>
+                  </div>
+                     {% endif %}
+                          
+                          
+                          {% if block.settings.logo_image__ != blank %}
                                                 <img src="{{ block.settings.logo_image__ }}" class="h-auto position-relative w-auto mb-4" width="214" height="214" alt="{{ block.settings.title | default: shop.name | escape }}"/>
                                             {% endif %}
                                             {% if block.settings.title != blank %}
@@ -491,6 +577,19 @@
                                                     <i class="ox-play ms-2" style="font-size:11px;margin-bottom:-2px;"></i>
                                                 </span>
                                                 {% endif %}
+                          
+                                    {% if block.settings.trustedbytxt != blank %}
+  <div class="review-ctr-mbl">
+                    <div class="ds-flx">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    </div>
+                    <p class="rev-txt-mbl">&nbsp; &nbsp;{{ block.settings.trustedbytxt }}</p>
+                  </div>
+                                            {% endif %}
                                             </div>
                                         </div>
                                     </div>
@@ -709,6 +808,11 @@
           ],
           "default": "text-center"
         },
+         {
+          "type": "html",
+          "id": "trustedbytxt",
+          "label": "Trusted By Text"
+        },
         {
           "type": "html",
           "id": "heading",
@@ -872,6 +976,11 @@
           "id": "logo_image__",
           "label": "Logo Image",
           "info": "Displays above heading"
+        },
+        {
+          "type": "html",
+          "id": "trustedbytxt",
+          "label": "Trusted By Text"
         },
         {
           "type": "html",

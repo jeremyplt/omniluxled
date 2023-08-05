@@ -76,7 +76,7 @@ This is another test
                                                             {% endif %}
                                                         </div>
                                                     </div>
-                                                    <div class="cart-item-text d-flex flex-column justify-content-between">
+                                                    <div class="cart-item-text d-flex flex-column justify-content-between p-0">
                                                         <div style="line-height: 1.3571428571;" class="fw-normal pe-4">
                                                             {%- if section.settings.show_vendor -%}
                                                                 <p class="font-size-sm mb-0 text-uppercase fw-normal">{{ item.product.vendor }}</p>
@@ -161,16 +161,18 @@ This is another test
                                                                 </div>
                                                             </div>
                                                             <div class="text-end cart-total-price ps-3 fw-normal">
+
                                                                 {% if item.variant.price < item.variant.compare_at_price %}
                                                                     <span class="item__compare-at-price">
                                                                     {{ item.variant.compare_at_price | times: item.quantity | money }}
                                                                     </span>
+
                                                                 {% endif %}
                                                                 <span {% if item.variant.price < item.variant.compare_at_price %}class="item__price--sale"{% endif%}>
                                                                     {% if item.properties['promo_product'] or item.line_price == 0 %}
                                                                         <span class="m-0 p-0">{{ 'templates.cart.free' | t }}</span>
                                                                     {% else %}
-                                                                        <span class="m-0 p-0"> {{ item.line_price | money }} </span>
+                                                                        <span class="price m-0 p-0"> {{ item.line_price | money }} </span>
                                                                     {% endif %}
                                                                 </span>
                                                             </div>

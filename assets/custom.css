@@ -1,3 +1,47 @@
+/*trusted by stars*/
+.review-ctr {
+    display: flex;
+}
+  .review-ctr-mbl {
+    display: none;
+}
+.star-img {
+    width: 19px;
+    height: 19px;
+    padding: 1px;
+}
+.rev-txt {
+    color: white;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+@media(max-width:767px){
+.review-ctr {
+    display: none;
+}
+  .review-ctr-mbl {
+    display: block;
+    margin-top: 10px;
+}
+  .ds-flx {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+  .star-img-mbl {
+    width: 20px !important;
+    height: 20px !important;
+    padding: 3px !important;
+}
+  .rev-txt-mbl {
+    color: white;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 2px;
+}
+}
+
 /*sidebar form*/
 #sidebarform form.klaviyo-form{background:#fff!important;padding-left:0!important;padding-right:0!important;}
 #sidebarform .klaviyo-form div.kl-private-reset-css-Xuajs1{padding:0!important;row-gap:10px;background:#fff!important;}
@@ -312,7 +356,13 @@ body .cart-drawer .docapp-volume-discounts-legacy-promo {
 .cart-drawer .docapp-coupon-input--input {
   margin-bottom: 0 !important;
 }
-
+.cart-total .docapp-cart-with-coupon-summary--summary, 
+.cart-drawer .docapp-cart-with-coupon-summary--summary {
+  display: none;
+}
+.cart-total #preTax{
+  display: none;
+}
 .cart-total .docapp-cart-with-coupon-summary .docapp-coupon-input--button,
 .cart-total
   .docapp-cart-with-coupon-summary
@@ -389,6 +439,16 @@ body.ab-test-cartdrawer .cart-drawer .docapp-volume-discounts-legacy-promo {
   top: 4px;
 }
 /*new skincare pages*/
+.template-page.skincare-awareness-1 .image-hero .container-fluid{padding-top:0!important;}
+.btn-outline-primary.btn-dark:before,.btn-outline-primary.btn-dark:after{border:0!important;}
+
+@media (min-width: 768px){
+.template-page.skincare-awareness-1 .tallheight .swiper-slide {
+    height: calc(100vh - 140px)!important;
+  min-height:0px!important;
+}
+}
+
 .skin-care .banner__content .banner__text .fw-normal {
   font-weight: 300 !important;
 }
@@ -953,7 +1013,7 @@ li.dropdown a.reviews-results{display:block!important;}
   }
 }
 
-#shopify-section-template--16184566874274__c578fea6-30d9-45c3-a052-ad86f35eb32a {
+#shopify-section-template--16184566874274__c578fea6-30d9-45c3-a052-ad86f35eb32a,#shopify-section-template--16184566120610__b001f34c-2df8-4b58-af50-b86bb7012553 {
   display: none;
 }
 
@@ -963,7 +1023,7 @@ html .swiper-button-next:hover::after
     border-color: black !important;
 }
 #shopify-section-template--16184566120610__6ec0e2ef-40e2-4265-a008-778c56929061 {
-  display: none;
+  display: block;
 }
 
 /* Cart Drawer */
@@ -975,4 +1035,58 @@ html .swiper-button-next:hover::after
 
 .item__price--sale {
   font-weight: bold;
+}
+
+/* App - Frequently Bought Together */
+
+html .cbb-frequently-bought-container {
+  padding: 1.5rem !important;
+  background-color: #f9f9f9 !important;
+  border: solid 1px black !important;
+}
+
+html .cbb-frequently-bought-total-price-text, html .cbb-frequently-bought-total-price-regular-price span {
+  font-weight: bold !important;
+}
+
+html .cbb-frequently-bought-total-price-regular-price span, html .cbb-frequently-bought-total-price-sale-price .money {
+  font-size: 20px !important;
+}
+
+html .cbb-frequently-bought-selector-link {
+  text-decoration: underline !important;
+}
+
+html .cbb-frequently-bought-selector-label-regular-price .money {
+  font-weight: bold !important;
+}
+
+html .cbb-frequently-bought-plus-icon {
+  font-weight: 700 !important;
+}
+
+html .cbb-frequently-bought-add-button {
+  background-color: transparent !important;
+  border: solid 1px black !important;
+  color: black !important;
+  transition: all .2s ease-in-out;
+}
+
+html .cbb-frequently-bought-add-button:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+html .cbb-frequently-bought-selector-label-name span {
+  font-weight: normal !important;
+}
+
+html .cbb-frequently-bought-selector-label-name .cbb-frequently-bought-this-item-label {
+  font-weight: bold !important;
+}
+
+@media (max-width: 549px) {
+  html .cbb-frequently-bought-title {
+    text-align: center !important;
+  }
 }

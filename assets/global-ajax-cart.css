@@ -17,6 +17,9 @@
     object-fit: cover;
     aspect-ratio: 1 / 1;
 }
+.template-cart .locale-selectors__container {
+    display: none;
+}
 @media (min-width:768px)
 {
     #upsell_accordion .swiper-slide

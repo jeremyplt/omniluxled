@@ -621,14 +621,14 @@
           "type": "image-with-text-block",
           "settings": {
             "fullwidth_content": false,
-            "heading_txt": "Newest addition:<br>\nOmnilux Men",
+            "heading_txt": "Newest addition:<br>\nTopical Skincare",
             "max_width": 530,
-            "txt": "<p>Men's skincare just got better. Introducing Omnilux Men: the only LED mask specifically engineered to treat thicker skin, by providing the deepest penetrating wavelength of near-infrared light available for home use.<\/p>",
+            "txt": "<p>Discover a power-packed skincare trio clinically proven to fight signs of aging and optimize Omnilux’s signature LED light therapy treatments.<\/p>",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
             "btn_txt": "Shop now",
-            "btn_link": "shopify:\/\/products\/omnilux-men",
+            "btn_link": "https:\/\/omniluxled.com\/collections\/skin-care",
             "triggerbtn_txt": "",
             "triggerto": "",
             "btn_type": "",
@@ -642,7 +642,7 @@
             "btn_size_watch": "",
             "link_txt": "",
             "link_url": "",
-            "image": "shopify:\/\/shop_images\/WEBSITE_19.png",
+            "image": "shopify:\/\/shop_images\/ss-ok.png",
             "alignment": "text-left",
             "image_alignment": "left"
           }
