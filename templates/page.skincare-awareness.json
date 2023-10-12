@@ -9,17 +9,19 @@
     "31736764-28bb-42e2-b7bc-442e2939e3fd": {
       "type": "image_hero_2",
       "custom_css": [
-        "h2.h1 {font-weight: 500 !important; text-shadow: none !important;}",
+        ".overlay {opacity: 0.1 !important;}",
         ".btn {padding-left: 35px !important; padding-right: 35px !important;}",
         "@media (min-width: 1200px) {.col-xl-4.col-md-6 {width: 55% !important; }}",
         "@media (min-width: 992px) {.col-lg-10.py-xl-14 {width: 83.33333% !important; text-align: left !important; padding-top: 0rem !important; padding-bottom: 6.8rem !important; margin-left: 3.9rem !important; }}",
-        "@media (min-width: 768px) {.col-md-6 {width: 70% !important; }}"
+        "@media (min-width: 768px) {.col-md-6 {width: 70% !important; }}",
+        "@media (max-width: 600px) {.overlay {opacity: 0.15 !important; }}"
       ],
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/protect-img.jpg",
-        "title": "Healthy skin goes beyond how we look.",
-        "subtitle": "This September, we are donating a portion of every purchase to help kids with chronic skin conditions feel more confident just as they are. ",
-        "btn_text": "SHOP & SUPPORT",
+        "image_desktop": "shopify:\/\/shop_images\/Untitled-12de.png",
+        "image_mobile": "shopify:\/\/shop_images\/Untitled_design_113.png",
+        "title": "Skincare that empowers",
+        "subtitle": " Every purchase this month supports the AAD’s Camp Discovery program, where kids learn that different is beautiful.",
+        "btn_text": "SHOP NOW",
         "btn_link": "https:\/\/omniluxled.com\/collections\/all",
         "content_position": "2",
         "custom_class": ""
@@ -32,11 +34,11 @@
           "type": "logowidthtext",
           "settings": {
             "heading": "Our Commitment",
-            "information_text1": "At Omnilux, we’re committed to science, education, innovation—and most of all—healthy, confidence-forward skin. That’s why we are donating a portion of every purchase in September to support kids with chronic skin conditions through the American Academy of Dermatology’s Camp Discovery program.",
-            "information_text2": "<strong>Join us in sending these deserving kids to summer camp! <\/strong>",
+            "information_text1": "At Omnilux, we’re committed to science, education, innovation—and most of all—healthy skin. That’s why we are donating a portion of every purchase in September to support kids with chronic skin conditions through the American Academy of Dermatology’s Camp Discovery program.",
+            "information_text2": "<strong>Shop now to help us brighten a child's life by sending them to summer camp!<\/strong>",
             "information_text3": "",
             "btn_text": "Shop & Support",
-            "btn_link": "https:\/\/omniluxled.com\/collections\/skin-care",
+            "btn_link": "https:\/\/omniluxled.com\/collections\/all",
             "btn_type": "",
             "btn_variant": "dark",
             "btn_size": "btn-lg"
@@ -47,6 +49,7 @@
         "e22ea5c1-2360-47b6-bc2a-7ec901e12b5b"
       ],
       "custom_css": [
+        "p {max-width: 800px; margin: 0 auto;}",
         ".h5 {font-size: var(--bs-h2-font-size); text-align: center;}",
         ".border {border: 0 !important;}",
         ".btn,.btn-dark {margin: 0 auto; background: #000 !important;}",
@@ -63,12 +66,12 @@
           "type": "image-with-text-block",
           "settings": {
             "fullwidth_content": false,
-            "heading_txt": "Doctor-formulated for results you can’t resist",
+            "heading_txt": "",
             "max_width": 530,
             "poster_type": "",
             "bg_video": "",
             "mobile_bg_video": "",
-            "poster_image": "shopify:\/\/shop_images\/1683857591-image_48.jpg",
+            "poster_image": "shopify:\/\/shop_images\/Blog_Images_-_New_Site_34.png",
             "enable_overlay": true,
             "overlay_bg_color": "#000000",
             "overlay_opacity": 0.5,
@@ -82,7 +85,7 @@
             "section_text_color": "#000000",
             "alignment": "text-center",
             "video_alignment": "justify-content-center",
-            "txt": "An unmatched glow is 3 steps away. Renew, hydrate, and firm your skin with our professional-grade skincare line that includes the Enzyme Powder Cleanser, Hyaluronic Acid Serum, and Peptide Concentrate.",
+            "txt": "",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
@@ -127,22 +130,22 @@
         "video_style": "col-lg-6",
         "video_style_large": "col-xl-5",
         "content_position": "align-items-center",
-        "title": "What is Camp Discovery?",
+        "title": "What is AAD's Camp Discovery?",
         "subtitle": "",
         "txt": "",
         "htmltxt": "<p>Founded in 1993, Camp Discovery offers inclusive summer camp experiences for kids ages 8-16 living with chronic and complex skin conditions. Under the care of volunteer dermatologists and nurses, campers can safely experience a week filled with adventure, friendship, and personal growth alongside peers with similar skin conditions. From fishing and swimming to archery and horseback riding, Camp Discovery brings together kids from around the world to enjoy the thrills of summertime, just as all kids should. <\/p><p>\n\n<\/p><p>Camp Discovery is 100% free for campers. All fees (including transportation) are covered by the American Academy of Dermatology through generous member and outside donations.<\/p><p><\/p>",
         "btn_txt": "",
         "btn_link": "",
-        "btn_type": "outline",
+        "btn_type": "",
         "btn_variant": "primary",
         "btn_size": "",
         "poster_type": "",
-        "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
-        "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
-        "poster_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/1683857591-image_48.jpg?v=1684337840",
+        "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ccc063ddd40649b5aebc855252e1c8d8.mp4",
+        "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ccc063ddd40649b5aebc855252e1c8d8.mp4",
+        "poster_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Blog_Images_-_New_Site_34.png?v=1692637408",
         "btn_txt_watch": "LEARN MORE",
-        "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
-        "watch_mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ccc063ddd40649b5aebc855252e1c8d8.mp4",
+        "watch_mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ccc063ddd40649b5aebc855252e1c8d8.mp4",
         "btn_type_watch": "outline",
         "btn_variant_watch": "primary",
         "btn_size_watch": "",
@@ -152,8 +155,8 @@
         "fluid_video_layout": true,
         "video_type": "local",
         "placement": "popup",
-        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
-        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ccc063ddd40649b5aebc855252e1c8d8.mp4",
+        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ccc063ddd40649b5aebc855252e1c8d8.mp4",
         "video_btn_text": "Watch video",
         "section_bg_color": "#ffffff",
         "section_text_color": "#000000",
@@ -223,17 +226,27 @@
         ".h3,.justify-content-lg-between {display: block !important;}",
         ".h3.pe-3 {font-size: 18px !important; padding-right: 0 !important; line-height: 24px !important; margin-bottom: 10px !important;}",
         "@media (max-width: 999px) {.pb-2 {padding-bottom: 3.5rem !important; } .pt-4 {padding-top: 0 !important; }}",
-        "@media (max-width: 600px) {.mb-4.mb-lg-3 {margin-bottom: 0 !important; } .pt-4 {padding-top: 0 !important; margin-bottom: 0 !important; }}"
+        "@media (max-width: 600px) {.pt-1 {padding-top: 0 !important; } .mb-4.mb-lg-3 {margin-bottom: 0 !important; } .pt-4 {padding-top: 0 !important; margin-bottom: 0 !important; }}"
       ],
       "settings": {
         "fluid_layout": false,
         "css_class": "skincareawareness-shopandsupport",
         "heading_txt": "",
         "btn_txt": "Shop and Support",
-        "btn_link": "shopify:\/\/collections",
+        "btn_link": "https:\/\/omniluxled.com\/collections\/all",
         "btn_type": "",
         "btn_variant": "primary",
         "btn_size": "",
+        "btn_txt2": "",
+        "btn_link2": "",
+        "btn_type2": "",
+        "btn_variant2": "dark",
+        "btn_size2": "",
+        "btn_txt3": "",
+        "btn_link3": "",
+        "btn_type3": "",
+        "btn_variant3": "dark",
+        "btn_size3": "",
         "section_bg_color": "rgba(0,0,0,0)",
         "section_text_color": "#000000"
       }
@@ -251,8 +264,8 @@
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
-            "btn_txt": "SHOP & SUPPORT",
-            "btn_link": "https:\/\/omniluxled.com\/collections\/skin-care",
+            "btn_txt": "BRIGHTEN A CHILD'S LIFE",
+            "btn_link": "https:\/\/omniluxled.com\/collections\/all",
             "triggerbtn_txt": "",
             "triggerto": "",
             "btn_type": "",
@@ -266,7 +279,7 @@
             "btn_size_watch": "",
             "link_txt": "",
             "link_url": "",
-            "image": "shopify:\/\/shop_images\/Untitled_design_110.png",
+            "image": "shopify:\/\/shop_images\/Blog_Images_-_New_Site_35.png",
             "alignment": "text-left",
             "image_alignment": "right"
           }
@@ -293,19 +306,46 @@
         ".h3,.justify-content-lg-between {display: block !important; text-shadow: none; color: #000;}",
         ".h3.pe-3 {margin-bottom: 20px !important;}",
         "@media (max-width: 999px) {.heading_txt.pt-4.pb-2 {padding-top: 0 !important; padding-bottom: 1rem !important; }}",
-        "@media (max-width: 600px) {.mb-4.mb-lg-3 {margin-bottom: 0 !important; } .pt-4 {padding-top: 0 !important; margin-bottom: 3.5rem !important; }}"
+        "@media (max-width: 600px) {.mb-4, .mb-4.mb-lg-3 {margin-bottom: 0 !important; } .pt-4 {padding-top: 0 !important; }}"
       ],
       "settings": {
         "fluid_layout": false,
         "css_class": "skincare-getinvolved",
         "heading_txt": "Want to get further involved?",
-        "btn_txt": "Learn More",
-        "btn_link": "shopify:\/\/collections",
+        "btn_txt": "DONATE TO THE AAD",
+        "btn_link": "https:\/\/www.aad.org\/donate",
         "btn_type": "",
         "btn_variant": "primary",
         "btn_size": "btn-lg",
+        "btn_txt2": "CAMP DISCOVERY WEBSITE",
+        "btn_link2": "https:\/\/www.aad.org\/public\/public-health\/camp-discovery\/about-camp-discovery",
+        "btn_type2": "",
+        "btn_variant2": "primary",
+        "btn_size2": "btn-lg",
+        "btn_txt3": "AAD RESOURCES",
+        "btn_link3": "https:\/\/www.aad.org\/public\/everyday-care",
+        "btn_type3": "",
+        "btn_variant3": "primary",
+        "btn_size3": "btn-lg",
         "section_bg_color": "#ffffff",
         "section_text_color": "#000000"
+      }
+    },
+    "ef6b2326-d2f9-46cc-af7d-180d8d94d699": {
+      "type": "info-text",
+      "custom_css": [
+        "p {margin-top: -20px;}",
+        "@media (max-width: 999px) {p {margin-top: 0px; }}"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "img_text1": "<p>* 1% of every Omnilux sale in September will be donated to the American Academy of Dermatology's Camp Discovery program<\/p>",
+        "pt": 0,
+        "pb": 40,
+        "pts": 0,
+        "pbs": 40,
+        "border-top": false,
+        "border-bottom": false
       }
     }
   },
@@ -318,6 +358,7 @@
     "98ce97d7-15c6-46d0-b111-c869d2a20b0b",
     "42776c1a-5bf9-4c69-870f-bdc44289f71c",
     "473576ad-4bef-4b6a-af7e-fbea447f4426",
-    "890fc315-da7e-4ea3-94f3-0a98469a3f48"
+    "890fc315-da7e-4ea3-94f3-0a98469a3f48",
+    "ef6b2326-d2f9-46cc-af7d-180d8d94d699"
   ]
 }

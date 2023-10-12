@@ -150,6 +150,7 @@ class SearchModal extends HTMLElement {
   open(_event) {
     this.onBodyClickEvent = this.onBodyClickEvent || this.onBodyClick.bind(this);
     this.searchFormContainer.setAttribute('open', true);
+    this.searchFormContainer.removeAttribute('aria-hidden');
     // siteOverlay.prototype.showOverlay();
     this.classList.add('open__modal');
     this.removeAttribute('style');
@@ -169,6 +170,7 @@ class SearchModal extends HTMLElement {
   close(_focusToggle = true) {
     Utility.removeTrapFocus();
     this.searchFormContainer.removeAttribute('open');
+    this.searchFormContainer.setAttribute('aria-hidden', true);
     this.classList.remove('open__modal');
     siteOverlay.prototype.hideOverlay(); 
     // console.log('hi',_focusToggle) 

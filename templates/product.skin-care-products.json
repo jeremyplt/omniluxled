@@ -187,7 +187,10 @@
             "btn_link": "{{ product.metafields['custom']['faq_btn_link'] }}",
             "enable_custom_tab_4": "{{product.metafields.custom.enable_tab_4}}",
             "tab_4_title": "{{product.metafields.custom.tab_title_4}}",
-            "tab_4_content": "{{product.metafields.custom.tab_description_4}}"
+            "tab_4_content": "{{product.metafields.custom.tab_description_4}}",
+            "enable_custom_tab_5": "{{product.metafields.custom.enable_tab_5}}",
+            "tab_5_title": "{{product.metafields.custom.tab_title_5}}",
+            "tab_5_content": "{{product.metafields.custom.tab_description_4}}"
           }
         },
         "3fc244f3-9eea-4a61-874a-b551b0227aff": {
@@ -232,6 +235,7 @@
       ],
       "settings": {
         "product_grid": false,
+        "product_tabs_mobile": false,
         "fluid_layout": false,
         "enable_background_tone": true,
         "show_vendor": true,
@@ -313,7 +317,6 @@
     },
     "8d4dfa60-174c-4b28-9812-ab31ef599696": {
       "type": "global-reviews-slider",
-      "disabled": true,
       "blocks": {
         "b4cbdc09-0aa5-488f-9877-fb7f9789d4bc": {
           "type": "logowidthtext",
@@ -339,6 +342,7 @@
         "0fb9a067-2046-4361-9075-78ba613a0a94",
         "76e7d130-868f-4603-9228-3ce3e820fb17"
       ],
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "heading_style": "heading_style_1",
@@ -365,7 +369,6 @@
     },
     "9954540e-30e3-44b7-ab1d-975166604760": {
       "type": "product-comparison",
-      "disabled": true,
       "blocks": {
         "template--16158637228194__9954540e-30e3-44b7-ab1d-975166604760-168370753910924a9b-0": {
           "type": "feature-item-left",
@@ -440,6 +443,7 @@
         "a9b9c97b-f347-4b13-b4f8-6852c00c9768",
         "2e4830fd-2714-4224-b53e-df03409593a8"
       ],
+      "disabled": true,
       "settings": {
         "title": "The beauty of clinical results from home - minus the ‘clinical’ costs",
         "subtitle": "A daily 10 minute session is like going to the beauty clinic five times a week. Minus the on-going costs, the time commitment, the overpromises, the upselling.",
@@ -459,7 +463,6 @@
     },
     "ee32d731-64d8-43e4-a200-3aad66c37be5": {
       "type": "product-results-slider",
-      "disabled": true,
       "blocks": {
         "035acd3d-cf76-4c29-bd3c-4baed3173be8": {
           "type": "logowidthtext",
@@ -528,6 +531,7 @@
         "e0220851-db31-4de2-911f-c185123f1a25",
         "acc38b90-e2e1-4897-b77b-54c8cbe0a5eb"
       ],
+      "disabled": true,
       "settings": {
         "display_for_this_product": "{{ product.metafields['custom']['results_enabled'] }}",
         "fluid_layout": false,
@@ -602,7 +606,7 @@
             "fullwidth_content": false,
             "heading_txt": "{{ product.metafields['custom']['iwt_heading_1'] }}",
             "max_width": 530,
-            "txt": "{{ product.metafields['custom']['iwt_text_1'] }}",
+            "txt": "",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "{{ product.metafields['custom']['iwt_read_more_text_1'] }}",
@@ -636,56 +640,6 @@
         "border_bottom": false,
         "section_bg_color": "rgba(0,0,0,0)",
         "section_text_color": "#000000"
-      }
-    },
-    "90f4e8ae-86ff-446a-857e-a0d8dbc1d00e": {
-      "type": "global-infoblock-liquid",
-      "blocks": {
-        "template--16163273212066__90f4e8ae-86ff-446a-857e-a0d8dbc1d00e-1684611083daca586d-0": {
-          "type": "content",
-          "settings": {
-            "image": "{{ product.metafields['custom']['featured_threecol_img'] }}",
-            "title": "{{ product.metafields['custom']['featured_threecol_heading'] }}",
-            "txt_info": "{{ product.metafields['custom']['featured_threecol_text'] }}",
-            "btn_txt": "{{ product.metafields['custom']['featured_threecol_btntext'] }}",
-            "btn_url": "{{ product.metafields['custom']['featured_threecol_btnurl'] }}"
-          }
-        },
-        "a22b2918-1508-4582-a1e7-5f77b77a0861": {
-          "type": "content",
-          "settings": {
-            "image": "{{ product.metafields['custom']['featured_threecol_img2'] }}",
-            "title": "{{ product.metafields['custom']['featured_threecol_heading2'] }}",
-            "txt_info": "{{ product.metafields['custom']['featured_threecol_text2'] }}",
-            "btn_txt": "{{ product.metafields['custom']['featured_threecol_btntext2'] }}",
-            "btn_url": "{{ product.metafields['custom']['featured_threecol_btnurl2'] }}"
-          }
-        },
-        "e047742c-76ea-453d-bcae-cbd8fbced664": {
-          "type": "content",
-          "settings": {
-            "image": "{{ product.metafields['custom']['featured_threecol_img3'] }}",
-            "title": "{{ product.metafields['custom']['featured_threecol_heading3'] }}",
-            "txt_info": "{{ product.metafields['custom']['featured_threecol_text3'] }}",
-            "btn_txt": "{{ product.metafields['custom']['featured_threecol_btntext3'] }}",
-            "btn_url": "{{ product.metafields['custom']['featured_threecol_btnurl3'] }}"
-          }
-        }
-      },
-      "block_order": [
-        "template--16163273212066__90f4e8ae-86ff-446a-857e-a0d8dbc1d00e-1684611083daca586d-0",
-        "a22b2918-1508-4582-a1e7-5f77b77a0861",
-        "e047742c-76ea-453d-bcae-cbd8fbced664"
-      ],
-      "settings": {
-        "fluid_layout": true,
-        "heading_txt": "Some things are meant to be together",
-        "lead_txt": "Complete your Omnilux routine for maximum results.",
-        "section_bg_color": "",
-        "section_txt_color": "#000000",
-        "btn_type": "",
-        "btn_variant": "primary",
-        "btn_size": ""
       }
     },
     "e74cca30-9a8e-4f0e-8e87-cac411799484": {
@@ -737,7 +691,6 @@
     },
     "97a2b9bb-60a0-4ea3-9483-40b6b6ca80f1": {
       "type": "product-image-with-table",
-      "disabled": true,
       "blocks": {
         "9855c66d-4fe9-4172-8d5e-51dd980b069e": {
           "type": "content",
@@ -806,6 +759,7 @@
         "14f6e5cf-c71e-4aa0-820c-70378b4c19df",
         "41c32f0d-e415-4065-8c5d-a1e89dc61a46"
       ],
+      "disabled": true,
       "settings": {
         "display_for_this_product": "{{ product.metafields['custom']['table_image_enabled'] }}",
         "fluid_layout": true,
@@ -850,7 +804,6 @@
     },
     "6f9dbd95-0f1e-423e-8185-0f80ef755574": {
       "type": "product-features-grid",
-      "disabled": true,
       "blocks": {
         "template--16049829019810__6f9dbd95-0f1e-423e-8185-0f80ef755574-16718232555ebd91ce-0": {
           "type": "content",
@@ -903,6 +856,7 @@
         "a16384a3-c8e6-4278-90ce-1fb7ccee3bc7",
         "05546c56-3c4c-4ef7-98f7-748698d5ca5d"
       ],
+      "disabled": true,
       "settings": {
         "display_for_product": "{{ product.metafields['custom']['featured_grid_display_2'] }}",
         "fluid_layout": false,
@@ -943,13 +897,6 @@
         "border-bottom": true
       }
     },
-    "167152762813570154": {
-      "type": "apps",
-      "disabled": true,
-      "settings": {
-        "include_margins": true
-      }
-    },
     "3b0cd3cc-5517-4d50-b829-9db880165ae6": {
       "type": "glabal-featured-product-list",
       "disabled": true,
@@ -973,6 +920,73 @@
         "border-top": true,
         "border-bottom": false,
         "slide_per_": false
+      }
+    },
+    "c549a3a4-de45-49b9-9465-365bae9afb8e": {
+      "type": "template-faq-block",
+      "blocks": {
+        "e71d626d-e56f-48a9-820b-4d763c2d5595": {
+          "type": "question",
+          "settings": {
+            "title": "{{product.metafields.custom.faq_question_1}}",
+            "answer": "{{product.metafields.custom.faq_answer_1}}"
+          }
+        },
+        "4ffaf759-3314-47fc-b17e-3aafdcb7532a": {
+          "type": "question",
+          "settings": {
+            "title": "{{product.metafields.custom.faq_question_2}}",
+            "answer": "{{product.metafields.custom.faq_answer_2}}"
+          }
+        },
+        "3d244255-f21c-4616-a214-38c9282f01b8": {
+          "type": "question",
+          "settings": {
+            "title": "{{product.metafields.custom.faq_question_3}}",
+            "answer": "{{product.metafields.custom.faq_answer_3}}"
+          }
+        },
+        "16b66dc2-0b4d-45eb-9225-0a87a3b8a2f2": {
+          "type": "question",
+          "settings": {
+            "title": "Are these products cruelty free?",
+            "answer": "Yes, all of our products are cruelty free."
+          }
+        },
+        "5bd3014b-1003-4474-98d9-af538ca2fbac": {
+          "type": "question",
+          "settings": {
+            "title": "Are these products vegan?",
+            "answer": "Yes, all of our products are vegan."
+          }
+        },
+        "47528763-90be-4d50-b2d9-7cfb45cd70a9": {
+          "type": "question",
+          "settings": {
+            "title": "Are these products gluten free?",
+            "answer": "Yes, all of our products are gluten free."
+          }
+        },
+        "109d7128-d2f9-4b5a-8f69-00660f9c810b": {
+          "type": "question",
+          "settings": {
+            "title": "Are these products natural\/organic?",
+            "answer": "Enzyme Powder Cleanser: 90% organic.\n\nHyaluronic Acid Serum: 94% organic.\n\nPeptide Concentrate: 70% organic"
+          }
+        }
+      },
+      "block_order": [
+        "e71d626d-e56f-48a9-820b-4d763c2d5595",
+        "4ffaf759-3314-47fc-b17e-3aafdcb7532a",
+        "3d244255-f21c-4616-a214-38c9282f01b8",
+        "16b66dc2-0b4d-45eb-9225-0a87a3b8a2f2",
+        "5bd3014b-1003-4474-98d9-af538ca2fbac",
+        "47528763-90be-4d50-b2d9-7cfb45cd70a9",
+        "109d7128-d2f9-4b5a-8f69-00660f9c810b"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "FAQ"
       }
     },
     "1676318184d0f06530": {
@@ -1022,14 +1036,13 @@
     "ee32d731-64d8-43e4-a200-3aad66c37be5",
     "fa9b8a1b-146c-4f3f-8be9-721ab7ff5c69",
     "d98aede5-e4b5-4863-b5ad-7c8b265e3e58",
-    "90f4e8ae-86ff-446a-857e-a0d8dbc1d00e",
     "e74cca30-9a8e-4f0e-8e87-cac411799484",
     "97a2b9bb-60a0-4ea3-9483-40b6b6ca80f1",
     "dbd05fbc-dda9-418a-80a7-141ddac090f5",
     "6f9dbd95-0f1e-423e-8185-0f80ef755574",
     "eb389eae-606a-437d-9986-2e6235168f36",
-    "167152762813570154",
     "3b0cd3cc-5517-4d50-b829-9db880165ae6",
+    "c549a3a4-de45-49b9-9465-365bae9afb8e",
     "1676318184d0f06530",
     "4f65bf04-3141-4ace-b69f-74d2f7c94563"
   ]

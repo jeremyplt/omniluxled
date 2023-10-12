@@ -1,0 +1,200 @@
+{{ 'hoox-hero.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign sectionStarImage = section.settings.section_star_image
+  assign sectionStarText = section.settings.section_star_text
+  assign sectionStarAchorId = section.settings.section_star_anchor_id
+  assign sectionTitle = section.settings.section_title
+  assign sectionDescription = section.settings.section_description
+  assign sectionBtnText = section.settings.section_btn_text
+  assign sectionBtnUrl = section.settings.section_btn_url
+  assign sectionShippingText = section.settings.section_shipping_text
+  assign sectionMainImage = section.settings.section_main_image
+%}
+
+<section class="hoox-hero">
+    <div class="hoox-hero__wrapper">
+    <div class="hoox-hero__content">
+      <div class="hoox-hero__content-inner">
+  {% if sectionStarImage != 'blank' %}
+    <a
+      {% if sectionStarAchorId != 'blank' %}
+        href="#{{ sectionStarAchorId }}"
+      {% endif %}
+    >
+      <div class="hoox-hero-star__image">
+        {% render 'snippet-image', image: sectionStarImage %}
+        {% if sectionStarText != 'blank' %}
+          <a href="#hoox-reviews" class="hoox-hero-star__text hoox-text-small">
+            {{ sectionStarText }}
+          </a>
+        {% endif %}
+      </div>
+    </a>
+  {% endif %}
+
+  {% if sectionTitle != 'blank' %}
+    <h2 class="hoox-hero__title hoox-title">
+      {{ sectionTitle }}
+    </h2>
+  {% endif %}
+
+  {% if sectionDescription != 'blank' %}
+    <p class="hoox-hero__description hoox-text-primary">
+      {{ sectionDescription }}
+    </p>
+  {% endif %}
+
+  <ul class="hoox-hero__bullets">
+    {% for block in section.blocks %}
+      {% if block.type == 'bullets' %}
+        {% liquid
+          assign bulletText = block.settings.bullet_text
+        %}
+        <li class="hoox-hero__bullet hoox-text-primary">
+          {% render 'hoox-icon-checkmark' %}
+          {{ bulletText }}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  {%- if sectionBtnUrl -%}
+    <div class="hoox-hero__btn-wrapper">
+      <a
+        href="{{ sectionBtnUrl }}"
+        title="{{ sectionBtnText }}"
+        class="hoox-btn"
+      >
+        {{- sectionBtnText -}}
+      </a>
+      {% if sectionShippingText != 'blank' %}
+      <p class="hoox-hero__shipping-text">
+        {{ sectionShippingText }}
+      </p>
+    {% endif %}
+    </div>
+  {%- endif -%}
+  <div class="hoox-hero__items-desk">
+    {% for block in section.blocks %}
+      {% if block.type == 'usp' %}
+        {% liquid
+          assign sectionBadge = block.settings.section_badge_image
+        %}
+        <div class="hoox-hero__item">
+          <figure class="hoox-hero__badge">
+            {% render 'snippet-image', image: sectionBadge, loadingLazy: 'false' %}
+          </figure>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+</div>
+<div class="hoox-hero__media">
+  {%- if sectionMainImage -%}
+    <figure class="hoox-hero__main-image">
+      {% render 'snippet-image', image: sectionMainImage, loadingLazy: 'false' %}
+    </figure>
+  {%- endif -%}
+</div>
+<div class="hoox-hero__items-mob">
+  {% for block in section.blocks %}
+    {% if block.type == 'usp' %}
+      {% liquid
+        assign sectionBadge = block.settings.section_badge_image
+      %}
+      <div class="hoox-hero__item">
+        <figure class="hoox-hero__badge">
+          {% render 'snippet-image', image: sectionBadge, loadingLazy: 'false' %}
+        </figure>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+</div>
+</section>
+
+{% comment %} Js file {% endcomment %}
+
+{% schema %}
+{
+  "name": "Hoox Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "section_star_image",
+      "label": "Section Star Image"
+    },
+    {
+      "type": "text",
+      "id": "section_star_text",
+      "label": "Section Star Text"
+    },
+    {
+      "type": "url",
+      "id": "section_star_anchor_id",
+      "label": "Section Star Text Anchor Id"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "section_description",
+      "label": "Section Description"
+    },
+    {
+      "type": "text",
+      "id": "section_btn_text",
+      "label": "Section Button Text"
+    },
+    {
+      "type": "url",
+      "id": "section_btn_url",
+      "label": "Section Button Url"
+    },
+    {
+      "type": "text",
+      "id": "section_shipping_text",
+      "label": "Section Shipping Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_main_image",
+      "label": "Section Main Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "bullets",
+      "name": "Section Checkmarks",
+      "settings": [
+        {
+          "type": "text",
+          "id": "bullet_text",
+          "label": "Bullet text"
+        }
+      ]
+    },
+    {
+      "type": "usp",
+      "name": "Section Badge Images",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "section_badge_image",
+          "label": "Section Badge Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hoox Hero"
+    }
+  ]
+}
+{% endschema %}

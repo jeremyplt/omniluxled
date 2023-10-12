@@ -1,0 +1,58 @@
+.hoox-ugc-videos{
+    padding: 48px 0;
+}
+.hoox-ugc-videos__title{
+    max-width: 223px;
+    margin-bottom: 51px;
+    margin-inline: auto;
+}
+.hoox-ugc-videos__video{
+    min-height: 500px;
+    display: grid;
+    place-items: center;
+}
+
+
+.hoox-ugc-videos__video iframe{
+    max-width: 282px;
+    min-height: 500px;
+    border-radius: 16px;
+}
+
+.hoox-ugc-videos__navigation{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+@media (min-width: 1024px) {
+    .hoox-ugc-videos{
+        padding: 80px 0;
+    }
+    .hoox-ugc-videos__title{
+        max-width: unset;
+        margin-bottom: 56px;
+    }
+
+    .hoox-ugc-videos__video iframe {
+        min-height: 500px;
+    }
+
+    .hoox-ugc-videos .swiper-wrapper {
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .hoox-ugc-videos .swiper-slide {
+        max-width: 282px;
+    }
+  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .hoox-ugc-videos__title {
+        max-width: 500px;
+    }
+}

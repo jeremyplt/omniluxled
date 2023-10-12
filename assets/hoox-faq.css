@@ -1,0 +1,162 @@
+.hoox-faq {
+    padding: 48px 0;
+    position: relative;
+    background: linear-gradient(177deg, #D2D4E1 0%, #FFF 25.37%);
+}
+
+.hoox-faq__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 40px;
+}
+
+.hoox-faq__background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    max-height: 800px;
+}
+
+.hoox-faq__background img {
+    width: 100%;
+    max-height: 800px;
+}
+
+.hoox-faq__items {
+    border-bottom: 1px solid var(--hoox-color-black);
+}
+
+.hoox-accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 16px 0;
+    gap: 16px;
+    border-top: 1px solid var(--hoox-color-black);
+}
+
+.hoox-accordion__title {
+    font-weight: 600;
+    color: var(--hoox-color-black);
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.hoox-accordion__panel {
+    font-weight: 300;
+    color: var(--hoox-color-black);
+    font-size: 16px;
+    line-height: 150%;
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    padding: 0 16px 0 0;
+}
+
+.hoox-accordion__panel span {
+    font-weight: 700;
+}
+
+.hoox-accordion__button {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+}
+
+.hoox-accordion__button-open,
+.hoox-accordion__button-close {
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hoox-accordion__button-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hoox-accordion__button-close {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hoox-accordion.show-text .hoox-accordion__button-close {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hoox-accordion.show-text .hoox-accordion__button-open {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.hoox-accordion__icon-close {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hoox-accordion__icon-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hoox-accordion.show-text .hoox-accordion__panel {
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 16px;
+}
+
+.hoox-accordion.show-text .hoox-accordion__icon-close {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hoox-accordion.show-text .hoox-accordion__icon-open {
+    visibility: visible;
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+    .hoox-faq {
+        padding: 80px 0 62px;
+        background: linear-gradient(233deg, #CED4E4 0%, #FEFEFE 41.05%, #FFF 71.66%);
+    }
+
+    .hoox-faq__background {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        max-height: 900px;
+    }
+
+    .hoox-faq__background img {
+        width: 100%;
+        max-height: 900px;
+    }
+    
+    .hoox-faq__title {
+        font-size: 48px;
+        margin-bottom: 56px;
+    }
+
+    .hoox-faq__items {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}

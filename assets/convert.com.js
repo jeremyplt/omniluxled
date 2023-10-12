@@ -1,24 +1,26 @@
-function activateAddToCartGoal() {
-  window.runExperiment = 1;
+/**
+ * FAQ on PDP - Above the fold
+ */
+let fold =
+  document.getElementById('hoox-reviews')?.parentElement?.offsetTop || 500;
 
-  window._conv_q = window._conv_q || [];
-  window._conv_q.push(['triggerConversion', '10046163']);
-  _conv_q.push(['triggerConversion', '10046163']);
-}
+window.addEventListener('scroll', function (e) {
+  if (this.scrollY > fold - window.innerHeight) {
+    if (window.runExperiment != 'before-after') {
+      window.runExperiment = 'before-after';
 
-const targetEl = document.getElementById('cart-drawer');
+      window._conv_q = window._conv_q || [];
+      window._conv_q.push(['executeExperiment', '100430641']);
+      _conv_q.push(['executeExperiment', '100430641']);
 
-// create a new observer instance
-const cartObserver = new MutationObserver(function (mutations) {
-  mutations.forEach(function (mutation) {
-    if (
-      mutation.attributeName === 'class' &&
-      mutation.target.classList.contains('opened-drawer')
-    ) {
-      activateAddToCartGoal();
+      console.log('Activated FAQs A/B Experiment');
+
+      window._conv_q.push(['triggerConversion', '100418583']);
+      _conv_q.push(['triggerConversion', '100418583']);
+      
+      console.log("before-after run correctly")
     }
-  });
-});
 
-// pass in the target node, as well as the observer options
-cartObserver.observe(targetEl, { attributes: true });
+    console.log(window.runExperiment);
+  } 
+});

@@ -1,0 +1,59 @@
+{% comment %}theme-check-disable{% endcomment %}
+
+{% liquid
+    assign imageSrc = image
+    assign imageSrcMobile = imageMobile
+
+    if image.id != ''
+        assign imageSrc = image | image_url
+    endif
+
+    if imageMobile.id != ''
+        assign imageSrcMobile = imageMobile | image_url
+    endif
+%}
+
+{% if imageMobile %}
+  <picture>
+    <source media="(max-width: 767px)" srcset="{{ imageSrcMobile }}" />
+  {% endif %}
+  <img
+    class="c-image{% if class != blank %} {{ class }}{% endif %}"
+    alt="{{ image.alt }}"
+    title="{{ image.alt }}"
+    width="{{ image.width }}"
+    height="{{ image.height }}"
+    src="{{ imageSrc }}"
+    {% if loadingLazy != 'false' %}
+    loading="lazy"
+    {% endif %} />
+  {% if imageMobile %}
+  </picture>
+{% endif %}
+
+{% comment %}
+<!-- EXAMPLE OF USE -->
+
+<!-- img object -->
+{% render 'hoox-snippet-image'
+image: settings.img_test %}
+
+<!-- img object -->
+{% render 'hoox-snippet-image'
+image: 'https://via.placeholder.com/1440x554/FFFFFF/000000' %}
+
+<!-- Picture with img object -->
+{% render 'hoox-snippet-image'
+image: settings.img_test
+imageMobile: settings.img_test2 %}
+
+<!-- Picture with placeholders -->
+{% render 'hoox-snippet-image'
+image: 'https://via.placeholder.com/1440x554/FFFFFF/000000'
+imageMobile: 'https://via.placeholder.com/375x600/FFFFFF/000000' %}
+
+<!-- Props -->
+image: String or Shopify Image Object
+imageMobile: String or Shopify Image Object.
+class: String; will add class to c-image
+{% endcomment %}

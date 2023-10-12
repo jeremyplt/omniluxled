@@ -1,0 +1,432 @@
+{{ 'hoox-comparison-table.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign obj = section.settings
+  assign ComparisonHeadline = obj.compare_headline
+  assign ComparisonSectionFirstImage = obj.compare_section_first_image
+  assign ComparisonSectionLastImage = obj.compare_section_last_image
+  assign CombareColumnBGColor = obj.compare_highlight_column_color
+  assign sectionBlockSize = section.blocks.size
+  assign enableSliderCount = 2
+  assign enableSliderFromColumn = 2
+  assign isSwiperDivRendered = false
+%}
+<div class="b-comparison-table">
+  <div class="l">
+    <header class="b-comparison-table__header">
+      {%- if ComparisonHeadline -%}
+        <h2 class="b-comparison-table__headline c-text-color--primary c-title-size--primary">{{ ComparisonHeadline }}</h2>
+      {%- endif -%}
+    </header>
+
+    <div class="b-comparison-table__wrapper">
+      {% if ComparisonSectionFirstImage %}
+        <figure class="compare-section-first__image">
+          {% render 'snippet-image', image: ComparisonSectionFirstImage %}
+        </figure>
+      {% endif %}
+  
+      <div class="b-comparison-table__table">
+        <div class="b-comparison-table__table-container">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'column-title' -%}
+              {% liquid
+                assign rowOneTitle = block.settings.first_column_title_one
+                assign rowTwoTitle = block.settings.first_column_title_two
+                assign rowThreeTitle = block.settings.first_column_title_three
+                assign rowFourTitle = block.settings.first_column_title_four
+                assign rowFiveTitle = block.settings.first_column_title_five
+                assign rowSixTitle = block.settings.first_column_title_six
+               %}
+              <div class="b-comparison-table__column-title">
+                <div class="row-one-title row-title row-title--empty"></div>
+                {%- if rowOneTitle != blank -%}
+                  <div class="row-one-title row-title">
+                    <p>{{ rowOneTitle }}</p>
+                  </div>
+                {%- endif -%}
+  
+                {%- if rowTwoTitle != blank -%}
+                  <div class="row-two-title row-title">
+                    <p>{{ rowTwoTitle }}
+                  </div>
+                {%- endif -%}
+  
+                {%- if rowThreeTitle != blank -%}
+                  <div class="row-three-title row-title">
+                    <p>{{ rowThreeTitle }}</p>
+                  </div>
+                {%- endif -%}
+  
+                {%- if rowFourTitle != blank -%}
+                  <div class="row-three-title row-title">
+                    <p>{{ rowFourTitle }}</p>
+                  </div>
+                {%- endif -%}
+  
+                {%- if rowFiveTitle != blank -%}
+                  <div class="row-five-title row-title">
+                    <p>{{ rowFiveTitle }}</p>
+                  </div>
+                {%- endif -%}
+  
+                {%- if rowSixTitle != blank -%}
+                  <div class="row-six-title row-title">
+                    <p>{{ rowSixTitle }}</p>
+                  </div>
+                {%- endif -%}
+  
+              </div>
+            {%- endif -%}
+            {%- if block.type == 'column-content' -%}
+              {% liquid
+                assign CombareColumnBGColor = block.settings.compare_highlight_column_color
+  
+                comment
+                endcomment
+                assign rowOneTableLogo = block.settings.table_column_one_img
+                assign rowOneTableLogoMobile = block.settings.table_column_one_img_mobile
+                assign rowOneTableText = block.settings.table_column_title_one
+  
+                comment
+                endcomment
+                assign rowTwoTableText = block.settings.table_column_title_two
+  
+                comment
+                endcomment
+                assign rowThreeTableText = block.settings.table_column_title_three
+  
+                comment
+                endcomment
+                assign rowFourTableText = block.settings.table_column_title_four
+  
+                comment
+                endcomment
+                assign rowFiveTableText = block.settings.table_column_title_five
+  
+                comment
+                endcomment
+                assign rowSixTableText = block.settings.table_column_title_six
+  
+                comment
+                endcomment
+                assign rowSevenTableText = block.settings.table_column_title_seven
+              %}
+  
+              {% if sectionBlockSize > enableSliderCount and forloop.index > enableSliderFromColumn and isSwiperDivRendered == false %}
+                <div class="swiper table-swiper-mob">
+                  <div class="swiper-wrapper table-swiper-mob__inner">
+                    {% assign isSwiperDivRendered = true %}
+                  {% endif %}
+                  <div class="table-column-content {% if block.settings.table_column_highlight %} primary-col{% endif %}{% if sectionBlockSize > enableSliderCount and forloop.index > enableSliderFromColumn %} swiper-slide{% endif %}" {% if block.settings.table_column_highlight %}style="background-color: {{ CombareColumnBGColor }};"{% endif %}>
+                    {% comment %} First top table Row content {% endcomment %}
+                    {% render 'hoox-snippet-table-cell' 
+                     , imageCell: rowOneTableLogo,
+                     imageCellMobile: rowOneTableLogoMobile,
+                     tableText: rowOneTableText,
+                     tableTickTrue: block.settings.table_column_tick_one_true,
+                     tableTickNo: block.settings.table_column_tick_one_false -%}
+  
+                    {% comment %} Second top table Row content {% endcomment %}
+                    {% render 'hoox-snippet-table-cell' 
+                     , tableText: rowTwoTableText,
+                     tableTickTrue: block.settings.table_column_tick_two_true,
+                     tableTickNo: block.settings.table_column_tick_two_false -%}
+  
+                    {% comment %} Third top table Row content {% endcomment %}
+                    {% render 'hoox-snippet-table-cell' 
+                     , tableText: rowThreeTableText,
+                     tableTickTrue: block.settings.table_column_tick_three_true,
+                     tableTickNo: block.settings.table_column_tick_three_false -%}
+  
+                    {% comment %} Four top table Row content {% endcomment %}
+                    {% render 'hoox-snippet-table-cell' 
+                     , tableText: rowFourTableText,
+                     tableTickTrue: block.settings.table_column_tick_four_true,
+                     tableTickNo: block.settings.table_column_tick_four_false -%}
+  
+                    {% comment %} Five top table Row content {% endcomment %}
+                    {% render 'hoox-snippet-table-cell' 
+                     , tableText: rowFiveTableText,
+                     tableTickTrue: block.settings.table_column_tick_five_true,
+                     tableTickNo: block.settings.table_column_tick_five_false -%}
+  
+                    {% comment %} Six top table Row content {% endcomment %}
+                    {% render 'hoox-snippet-table-cell' 
+                     , tableText: rowSixTableText,
+                     tableTickTrue: block.settings.table_column_tick_six_true,
+                     tableTickNo: block.settings.table_column_tick_six_false -%}
+  
+                    {% comment %} Seven top table Row content 
+                    {% render 'hoox-snippet-table-cell' 
+                     , tableText: rowSevenTableText,
+                     tableTickTrue: block.settings.table_column_tick_seven_true,
+                     tableTickNo: block.settings.table_column_tick_seven_false -%}{% endcomment %}
+  
+                  </div>
+                  {% if sectionBlockSize > enableSliderCount and forloop.index > enableSliderFromColumn and sectionBlockSize == forloop.index %}
+                  </div>
+                  {%- comment -%}CLOSE SWIPER{%- endcomment -%}
+                  <div class="swiper-navigation b-comparison-table__navigation">
+                    <div class="swiper-button-prev-table">
+                      <svg
+                        width="14"
+                        height="26"
+                        viewBox="0 0 14 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.5 25.0615L1.5 13.0615L13.5 1.06152" stroke="#333132" />
+                      </svg>
+                    </div>
+                    <div class="swiper-pagination-table b-comparison-table__pagination"></div>
+                    <div class="swiper-button-next-table">
+                      <svg
+                        width="14"
+                        height="26"
+                        viewBox="0 0 14 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.5 1.06152L12.5 13.0615L0.5 25.0615" stroke="#333132" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                {%- comment -%}CLOSE SWIPER WRAPPER{%- endcomment -%}
+              {% endif %}
+            {% endif %}
+          {%- endfor -%}
+        </div>
+      </div>
+  
+      {% if ComparisonSectionLastImage %}
+        <figure class="compare-section-last__image">
+          {% render 'snippet-image', image: ComparisonSectionLastImage  %}
+        </figure>
+      {% endif %}
+    </div>
+<a alt="take the clear self-assessment" href="/pages/clear-assessment" class="btn btn-primary assessmentbtn">take the clear self-assessment</a>
+
+  </div>
+</div>
+<script src="{{ 'hoox-comparison-table.js' | asset_url }}" defer="defer"></script>
+{% schema %}
+  {
+    "name": "Hoox Comparison Table",
+    "settings": [
+      {
+        "type": "text",
+        "id": "compare_headline",
+        "label": "Enter section Headline"
+      },
+      {
+        "type": "image_picker",
+        "id": "compare_section_first_image",
+        "label": "Section First Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "compare_section_last_image",
+        "label": "Section Last Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "column-title",
+        "name": "First Column",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "first_column_title_one",
+            "label": "Enter row one title"
+          },
+          {
+            "type": "text",
+            "id": "first_column_title_two",
+            "label": "Enter row two title"
+          },
+          {
+            "type": "text",
+            "id": "first_column_title_three",
+            "label": "Enter row three Title"
+          },
+          {
+            "type": "text",
+            "id": "first_column_title_four",
+            "label": "Enter row four title"
+          }, {
+            "type": "text",
+            "id": "first_column_title_five",
+            "label": "Enter row five title"
+          }, {
+            "type": "text",
+            "id": "first_column_title_six",
+            "label": "Enter row six title"
+          }
+        ]
+      }, {
+        "type": "column-content",
+        "name": "Table Column",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Highlight column",
+            "info": "Select to be highlight column"
+          },
+          {
+            "type": "color",
+            "id": "compare_highlight_column_color",
+            "label": "Choose backgound color"
+          },
+          {
+            "type": "checkbox",
+            "id": "table_column_highlight",
+            "label": "Mark column as highlighted",
+            "default": false
+          },
+          {
+            "type": "header",
+            "content": "First row content",
+            "info": "Enter row content"
+          }, {
+            "type": "text",
+            "id": "table_column_title_one",
+            "label": "Enter first row one text"
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_one_true",
+            "label": "Chose if statment is correct",
+            "default": false
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_one_false",
+            "label": "Chose if statment is false",
+            "default": false
+          }, {
+            "type": "image_picker",
+            "id": "table_column_one_img",
+            "label": "Upload image"
+          },{
+            "type": "image_picker",
+            "id": "table_column_one_img_mobile",
+            "label": "Upload Mobile image"
+          }, {
+            "type": "header",
+            "content": "Second row content",
+            "info": "Enter row content"
+          }, {
+            "type": "text",
+            "id": "table_column_title_two",
+            "label": "Enter second row two text"
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_two_true",
+            "label": "Chose if statment is correct",
+            "default": false
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_two_false",
+            "label": "Chose if statment is false",
+            "default": false
+          }, {
+            "type": "header",
+            "content": "Third row content",
+            "info": "Enter row content"
+          }, {
+            "type": "text",
+            "id": "table_column_title_three",
+            "label": "Enter third row  text"
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_three_true",
+            "label": "Chose if statment is correct",
+            "default": false
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_three_false",
+            "label": "Chose if statment is false",
+            "default": false
+          }, {
+            "type": "header",
+            "content": "Fourth row content",
+            "info": "Enter row content"
+          }, {
+            "type": "text",
+            "id": "table_column_title_four",
+            "label": "Enter fourth row text"
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_four_true",
+            "label": "Chose if statment is correct",
+            "default": false
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_four_false",
+            "label": "Chose if statment is false",
+            "default": false
+          }, {
+            "type": "header",
+            "content": "Fifth row content",
+            "info": "Enter row content"
+          }, {
+            "type": "text",
+            "id": "table_column_title_five",
+            "label": "Enter fifth row  text"
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_five_true",
+            "label": "Chose if statment is correct",
+            "default": false
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_five_false",
+            "label": "Chose if statment is false",
+            "default": false
+          }, {
+            "type": "header",
+            "content": "Sixth row content",
+            "info": "Enter row content"
+          }, {
+            "type": "text",
+            "id": "table_column_title_six",
+            "label": "Enter sixth row  text"
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_six_true",
+            "label": "Chose if statment is correct",
+            "default": false
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_six_false",
+            "label": "Chose if statment is false",
+            "default": false
+          }, {
+            "type": "header",
+            "content": "Seventh row content",
+            "info": "Enter row content"
+          }, {
+            "type": "text",
+            "id": "table_column_title_seven",
+            "label": "Enter seventh row  text"
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_seven_true",
+            "label": "Chose if statment is correct",
+            "default": false
+          }, {
+            "type": "checkbox",
+            "id": "table_column_tick_seven_false",
+            "label": "Chose if statment is false",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hoox Comparison Table",
+        "category": "Product"
+      }
+    ]
+  }
+{% endschema %}

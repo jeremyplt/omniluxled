@@ -1,69 +1,51 @@
-{% if end_date != blank %} 
+{% if end_date != blank %}
 
- <div class="timer"> 
+<div class="timer">
+  <!--    {% if title != blank %}<h6 class="timer__title">{{ title }}</h6>{% endif %}  -->
 
-<!--    {% if title != blank %}<h6 class="timer__title">{{ title }}</h6>{% endif %}  -->
+  <div class="ds-flex">
+    <span class="timer-block__unit"
+      >Hurry! Buy now and save up to $200&nbsp;</span
+    >
+  </div>
+  <div class="ds-flex">
+    <strong><span class="timer-block__num js-timer-days">00</span></strong>
 
-   
-    <div class="ds-flex">
-       <span class="timer-block__unit">Hurry! Buy now and save up to $200&nbsp;</span> 
-    </div>
-    <div class="ds-flex">
-       <strong><span class="timer-block__num js-timer-days">00</span></strong>
+    <strong><span class="timer-block__unit">&nbsp;days,&nbsp;</span></strong>
 
-       <strong><span class="timer-block__unit">&nbsp;days,&nbsp;</span></strong>
+    <strong><span class="timer-block__num js-timer-hours">00</span></strong>
 
-     
+    <strong><span class="timer-block__unit">&nbsp;hrs and&nbsp;</span></strong>
 
-      
+    <strong><span class="timer-block__num js-timer-minutes">00</span></strong>
 
-       <strong><span class="timer-block__num js-timer-hours">00</span></strong>
+    <strong><span class="timer-block__unit">&nbsp;min</span></strong>
+  </div>
 
-       <strong><span class="timer-block__unit">&nbsp;hrs and&nbsp;</span></strong>
-
-    
-
-     
-
-       <strong><span class="timer-block__num js-timer-minutes">00</span></strong> 
-
-       <strong><span class="timer-block__unit">&nbsp;min</span></strong>
-    </div>
-     
-
-     
-
-<!--        <span class="timer-block__num js-timer-seconds">00</span> 
+  <!--        <span class="timer-block__num js-timer-seconds">00</span> 
 
        <span class="timer-block__unit">Seconds</span>  -->
+</div>
 
-     
-
-   
-
- </div> 
-
- <style> 
-/*     @media only screen and (min-width: 960px) {
+<style>
+  /*     @media only screen and (min-width: 960px) {
       .timer {background-color: #E5E1E6;}
     } */
-   .ds-flex {
-     display: flex;
-     justify-content: center;
-   }
-   .timer { 
-     margin-top: -20px;
-     padding: 10px;  
-     justify-content: center;
-   } 
+  .ds-flex {
+    display: flex;
+    justify-content: center;
+  }
+  .timer {
+    margin-top: -20px;
+    padding: 10px;
+    justify-content: center;
+  }
 
-   .timer--expired { 
+  .timer--expired {
+    display: none;
+  }
 
-     display: none; 
-
-   } 
-
-/*    .timer__title { 
+  /*    .timer__title { 
 
      @extend .paragraph; 
 
@@ -71,76 +53,62 @@
 
    }  */
 
-   .timer-display { 
+  .timer-display {
+    display: -webkit-box;
 
-     display: -webkit-box; 
+    display: -ms-flexbox;
 
-     display: -ms-flexbox; 
+    display: flex;
 
-     display: flex; 
+    -ms-flex-wrap: wrap;
 
-     -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
 
-         flex-wrap: wrap; 
+    -webkit-box-pack: justify;
 
-     -webkit-box-pack: justify; 
+    -ms-flex-pack: justify;
 
-         -ms-flex-pack: justify; 
+    justify-content: space-between;
 
-             justify-content: space-between; 
+    margin-top: 5px;
+  }
 
-     margin-top: 5px; 
+  .timer-block {
+    display: flex;
+  }
 
-   } 
+  .timer-block__num,
+  .timer-block__unit {
+    display: block;
 
-   .timer-block { 
+    text-align: center;
+  }
+</style>
 
-     display: flex;
+<script type="text/javascript">
+  var second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
 
-     
+  // var countDown = new Date('{{- end_date -}}').getTime(),
+  //   x = setInterval(function () {
+  //     var now = new Date().getTime(),
+  //       distance = countDown - now;
 
-   } 
+  //     (document.querySelector('.js-timer-days').innerText = Math.floor(
+  //       distance / day
+  //     )),
+  //       (document.querySelector('.js-timer-hours').innerText = Math.floor(
+  //         (distance % day) / hour
+  //       )),
+  //       (document.querySelector('.js-timer-minutes').innerText = Math.floor(
+  //         (distance % hour) / minute
+  //       )),
+  //       (document.querySelector('.js-timer-seconds').innerText = Math.floor(
+  //         (distance % minute) / second
+  //       ));
+  //   }, second);
+</script>
 
-   .timer-block__num, 
-
-   .timer-block__unit { 
-
-     display: block; 
-
-     text-align: center; 
-
-   } 
-
- </style> 
-
- <script type="text/javascript"> 
-
-   var second = 1000, 
-
-       minute = second * 60, 
-
-       hour = minute * 60, 
-
-       day = hour * 24; 
-
-   var countDown = new Date('{{- end_date -}}').getTime(), 
-
-       x = setInterval(function() { 
-
-       var now = new Date().getTime(), 
-
-           distance = countDown - now; 
-
-     document.querySelector('.js-timer-days').innerText = Math.floor(distance / (day)), 
-
-       document.querySelector('.js-timer-hours').innerText = Math.floor((distance % (day)) / (hour)), 
-
-     document.querySelector('.js-timer-minutes').innerText = Math.floor((distance % (hour)) / (minute)), 
-
-     document.querySelector('.js-timer-seconds').innerText = Math.floor((distance % (minute)) / second); 
-
-     }, second) 
-
- </script> 
-
- {% endif %} 
+{% endif %}

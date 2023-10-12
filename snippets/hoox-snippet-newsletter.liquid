@@ -1,0 +1,44 @@
+<div class="hoox-shop__newsletter">
+  <p class="hoox-shop__newsletter-text">{{ shopProductNewsletterText }}</p>
+  <h3 class="hoox-shop__newsletter-heading"><span class="hoox-shop__newsletter-heading-default">{{ shopProductNewsletterHeading }}</span> <span class="hoox-shop__newsletter-heading-success">{{ shopProductNewsletterHeadingSuccess }}</span></h3>
+  <form class='hoox-newsletter__form'>
+    <div class='hoox-newsletter__form-group js-newsletter-form'>
+      <div class='hoox-newsletter__input'>
+        <input class='hoox-newsletter__input-email js-newsletter-email' type='email'
+          placeholder='{{ newsletterEmailPlaceholder }}' required>
+      </div>
+      <div class='hoox-newsletter__form-group-btn'>
+        <button type='submit' class='hoox-newsletter__submit js-newsletter-button' id='Subscribe'>
+          <span class='hoox-newsletter__submit-text'>
+            {{ shopProductNewsletterButtonText }}
+          </span>
+        </button>
+      </div>
+    </div>
+    <p class='hoox-newsletter__msg-error'>
+      {{ newsletterErrorMessage }}
+    </p>
+    <p class='hoox-newsletter__msg-success'>
+      <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <mask id="mask0_2103_5456" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="41" height="41">
+        <circle cx="20.5" cy="20.5" r="20" transform="rotate(-90 20.5 20.5)" fill="#C4C4C4"/>
+        </mask>
+        <g mask="url(#mask0_2103_5456)">
+        <rect x="0.624512" y="40.4722" width="39.9767" height="39.9437" transform="rotate(-90 0.624512 40.4722)" fill="#99552B"/>
+        <path d="M12.5 21.4127L17.6429 25.8572L28.5 15" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        </svg>
+      {{ newsletterSuccessMessage }}
+    </p>
+  </form>
+
+  {% if shopProductNewsletterDisclaimer %}
+  <span class="hoox-newsletter__disclaimer">
+    {{ shopProductNewsletterDisclaimer }}
+  </span>
+{% endif %}
+
+</div>
+
+
+

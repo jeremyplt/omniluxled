@@ -1,0 +1,34 @@
+{{ 'hoox-sticky-bar.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign button_title = section.settings.button_title
+  assign button_url = section.settings.button_url
+%}
+
+<div class="hoox-sticky-bar-wrapper">
+  <a href="{{ button_url }}" class='hoox-btn hoox-sticky-btn'>{{ button_title }}</a>
+</div>
+
+<script src='{{ 'hoox-sticky-bar.js' | asset_url }}' defer='defer'></script>
+
+{% schema %}
+  {
+    "name": "Hoox Sticky Bar",
+    "settings": [
+      {
+        "type": "text",
+        "id": "button_title",
+        "label": "Title"
+      }, {
+        "type": "url",
+        "id": "button_url",
+        "label": "Url"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hoox Sticky Bar"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,1308 @@
+{
+  "sections": {
+    "d70430d9-8de9-4f06-8108-95d6601a15ab": {
+      "type": "circle-video-menu",
+      "blocks": {
+        "e38ac31d-5bd6-47c0-9bc0-dd866e282641": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-07-12_at_5.38.00_PM.jpg",
+            "label": "Lizeth’s Story",
+            "video": "shopify:\/\/files\/videos\/lizethstory.mp4"
+          }
+        },
+        "e6acb30c-fb23-47bd-9aca-c1da92e3dcfc": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_5.09.51_PM.jpg",
+            "label": "Deborah's Story",
+            "video": "shopify:\/\/files\/videos\/test2.mov"
+          }
+        },
+        "97612f92-d4dc-4b9a-8da8-18305aa85257": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_8.29.07_AM.png",
+            "label": "Anna's Story",
+            "video": "shopify:\/\/files\/videos\/Video 3 - IG Scroller.mp4"
+          }
+        },
+        "392cd7d4-bfcd-45f2-a584-98c96d8332d9": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_8.28.15_AM.png",
+            "label": "Tanya's Story",
+            "video": "shopify:\/\/files\/videos\/Video 2 - IG Scroller.mp4"
+          }
+        },
+        "cd5a9719-eda6-4ad9-9b9d-c3c66cf96667": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_12.48.02_PM.png",
+            "label": "Lina's Story",
+            "video": "shopify:\/\/files\/videos\/Testimonial 6.mp4"
+          }
+        },
+        "80e3c423-00bf-498e-8e0d-1145a60fef24": {
+          "type": "circle-link",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_12.51.49_PM.png",
+            "label": "Deanna's Story",
+            "video": "shopify:\/\/files\/videos\/Testimonial 7.mp4"
+          }
+        },
+        "46b73a84-50cf-4aab-8f9e-de39a54a1613": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_12.56.02_PM.png",
+            "label": "Sarah's Story",
+            "video": "shopify:\/\/files\/videos\/Omnilux Contour LED Mask Review.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "e38ac31d-5bd6-47c0-9bc0-dd866e282641",
+        "e6acb30c-fb23-47bd-9aca-c1da92e3dcfc",
+        "97612f92-d4dc-4b9a-8da8-18305aa85257",
+        "392cd7d4-bfcd-45f2-a584-98c96d8332d9",
+        "cd5a9719-eda6-4ad9-9b9d-c3c66cf96667",
+        "80e3c423-00bf-498e-8e0d-1145a60fef24",
+        "46b73a84-50cf-4aab-8f9e-de39a54a1613"
+      ],
+      "settings": {
+        "border_color": "#000000",
+        "div_id": "contourpdp",
+        "ignore": true
+      }
+    },
+    "d84aa67d-fef0-442d-8364-790f28934d4d": {
+      "type": "circle-video-menu",
+      "blocks": {
+        "6ce22c15-9550-44cf-b290-22e0d69efb10": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-07_at_2.21.22_PM.jpg",
+            "label": "Ariana's Story",
+            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Ariana's Story.mp4"
+          }
+        },
+        "f5ead3a0-d024-4492-80ff-131f79ca714d": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-19_at_9.40.29_PM.jpg",
+            "label": "Jess's Story",
+            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Jess' Story.mp4"
+          }
+        },
+        "90ccee30-cb0b-4eff-b493-24753f4bc1fd": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-07_at_2.26.19_PM.jpg",
+            "label": "Sophie's Story",
+            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Sophie's Story.mp4"
+          }
+        },
+        "f6c1532d-2a8e-4c7d-901d-cf816d9d28f9": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/alana.jpg",
+            "label": "Alana's Story",
+            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Alana's Story.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "6ce22c15-9550-44cf-b290-22e0d69efb10",
+        "f5ead3a0-d024-4492-80ff-131f79ca714d",
+        "90ccee30-cb0b-4eff-b493-24753f4bc1fd",
+        "f6c1532d-2a8e-4c7d-901d-cf816d9d28f9"
+      ],
+      "settings": {
+        "border_color": "#000000",
+        "div_id": "clearpdp",
+        "ignore": true
+      }
+    },
+    "main": {
+      "type": "template-product",
+      "blocks": {
+        "7d299b6a-39dd-4255-925e-25df43602ac4": {
+          "type": "vendor",
+          "settings": {
+            "show_vendor": true
+          }
+        },
+        "91e63a47-3793-4c06-8bc0-6262e9601d1d": {
+          "type": "name",
+          "settings": {
+          }
+        },
+        "34759ff9-557c-4b32-b07e-3887a3ebc44c": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "116091eb-d594-4e03-9c58-063d82ddd3c5": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "disabled": true,
+          "settings": {
+            "use_metafields": true,
+            "sku_tagtype": "handle",
+            "is_featured_product": false,
+            "featured_product_handle": ""
+          }
+        },
+        "3b316236-d91e-4dd0-953a-173c1f40bfcf": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "8e1316df-f2b1-417b-9d0e-96f8b25e8b7c": {
+          "type": "description",
+          "settings": {
+            "description": "{{ product.metafields['custom']['small_description'] }}"
+          }
+        },
+        "9f1de049-9d28-4e94-8dc3-d64735f73336": {
+          "type": "subtitle",
+          "disabled": true,
+          "settings": {
+            "subtitle": "<div id=\"mobile-warranty\">{{ product.metafields['custom']['warranty'] }}<\/div>"
+          }
+        },
+        "b253ffff-d04d-43a0-9d68-fabdd77b595a": {
+          "type": "product_form",
+          "settings": {
+          }
+        },
+        "3ec0cedf-fb32-4e6f-b392-8ad9d16f7103": {
+          "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/onpage_offers\/001ec440-29ea-4cbf-9265-4963fa825261",
+          "settings": {
+          }
+        },
+        "8a51062c-4d9c-422e-b490-fae013f03593": {
+          "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/onpage_offers\/001ec440-29ea-4cbf-9265-4963fa825261",
+          "settings": {
+          }
+        },
+        "847ff075-3bf5-4b88-bff7-4982bbafd833": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "{{ product.metafields['custom']['warranty'] }}"
+          }
+        },
+        "product-tabs": {
+          "type": "product-tabs",
+          "settings": {
+            "enable_product_tabs": true,
+            "product_tabs_fluid_layout": true,
+            "product_tabs_layout": "accordion",
+            "enable_descripion_tab": false,
+            "enable_custom_tab_1": "{{product.metafields.custom.enable_tab_1}}",
+            "tab_1_title": "{{product.metafields.custom.tab_title_1}}",
+            "tab_1_content": "{{product.metafields.custom.tab_description_1}}",
+            "enable_custom_tab_2": "{{product.metafields.custom.enable_tab_2}}",
+            "tab_2_title": "{{product.metafields.custom.tab_title_2}}",
+            "tab_2_content": "{{product.metafields.custom.tab_description_2}}",
+            "video_id": "{{ product.metafields['custom']['tab_description_2_video'] }}",
+            "mobile_video_id": "{{ product.metafields['custom']['tab_description_2_video'] }}",
+            "enable_custom_faq": "{{product.metafields.custom.enable_custom_faq}}",
+            "faq_title": "{{product.metafields.custom.faq_title}}",
+            "btn_txt": "{{product.metafields.custom.faq_btn_txt}}",
+            "btn_link": "{{ product.metafields['custom']['faq_btn_link'] }}",
+            "enable_custom_tab_4": "{{product.metafields.custom.enable_tab_4}}",
+            "tab_4_title": "{{product.metafields.custom.tab_title_4}}",
+            "tab_4_content": "{{product.metafields.custom.tab_description_4}}",
+            "enable_custom_tab_5": "{{product.metafields.custom.enable_tab_5}}",
+            "tab_5_title": "{{product.metafields.custom.tab_title_5}}",
+            "tab_5_content": "{{product.metafields.custom.tab_description_5}}"
+          }
+        },
+        "3fc244f3-9eea-4a61-874a-b551b0227aff": {
+          "type": "faqs",
+          "settings": {
+            "faqs_title_sub": "{{product.metafields.custom.faq_question_1}}",
+            "faqs_content_sub": "{{product.metafields.custom.faq_answer_1}}"
+          }
+        },
+        "5ff57fbd-bd1b-4246-8fda-fbffa899311f": {
+          "type": "faqs",
+          "settings": {
+            "faqs_title_sub": "{{product.metafields.custom.faq_question_2}}",
+            "faqs_content_sub": "{{product.metafields.custom.faq_answer_2}}"
+          }
+        },
+        "b28e74b9-4684-423e-8193-201bae66e281": {
+          "type": "faqs",
+          "settings": {
+            "faqs_title_sub": "{{product.metafields.custom.faq_question_3}}",
+            "faqs_content_sub": "{{product.metafields.custom.faq_answer_3}}"
+          }
+        }
+      },
+      "block_order": [
+        "7d299b6a-39dd-4255-925e-25df43602ac4",
+        "91e63a47-3793-4c06-8bc0-6262e9601d1d",
+        "34759ff9-557c-4b32-b07e-3887a3ebc44c",
+        "116091eb-d594-4e03-9c58-063d82ddd3c5",
+        "3b316236-d91e-4dd0-953a-173c1f40bfcf",
+        "8e1316df-f2b1-417b-9d0e-96f8b25e8b7c",
+        "9f1de049-9d28-4e94-8dc3-d64735f73336",
+        "b253ffff-d04d-43a0-9d68-fabdd77b595a",
+        "3ec0cedf-fb32-4e6f-b392-8ad9d16f7103",
+        "8a51062c-4d9c-422e-b490-fae013f03593",
+        "847ff075-3bf5-4b88-bff7-4982bbafd833",
+        "product-tabs",
+        "3fc244f3-9eea-4a61-874a-b551b0227aff",
+        "5ff57fbd-bd1b-4246-8fda-fbffa899311f",
+        "b28e74b9-4684-423e-8193-201bae66e281"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "product_grid": false,
+        "product_tabs_mobile": true,
+        "fluid_layout": false,
+        "enable_background_tone": false,
+        "show_vendor": true,
+        "enable_dynamic_checkout": true,
+        "product_tabs_placement": "beside_slider"
+      }
+    },
+    "8b7008db-ace8-41cc-9cda-be64cf66dd7e": {
+      "type": "product-features-grid",
+      "blocks": {
+        "template--16048145858722__8b7008db-ace8-41cc-9cda-be64cf66dd7e-1671717142a65cdfa2-0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "{{product.metafields.custom.featured_grid_image_1}}",
+            "title": ""
+          }
+        },
+        "2ea07863-59cb-434f-b0e0-5243034b2bfd": {
+          "type": "content",
+          "settings": {
+            "icon_img": "{{product.metafields.custom.featured_grid_image_2}}",
+            "title": ""
+          }
+        },
+        "32a15f57-7990-4200-add5-813348704f90": {
+          "type": "content",
+          "settings": {
+            "icon_img": "{{product.metafields.custom.featured_grid_image_3}}",
+            "title": ""
+          }
+        },
+        "b815a6a1-f475-4553-b0af-7d2cd000d838": {
+          "type": "content",
+          "settings": {
+            "icon_img": "{{product.metafields.custom.featured_grid_image_5}}",
+            "title": ""
+          }
+        },
+        "3d8eb8c0-1f36-48c2-9999-7331340a13a8": {
+          "type": "content",
+          "settings": {
+            "icon_img": "{{product.metafields.custom.featured_grid_image_6}}",
+            "title": ""
+          }
+        },
+        "108970ab-0902-4fa6-9b52-c0ceda95aa2a": {
+          "type": "content",
+          "settings": {
+            "icon_img": "{{product.metafields.custom.featured_grid_image_4}}",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16048145858722__8b7008db-ace8-41cc-9cda-be64cf66dd7e-1671717142a65cdfa2-0",
+        "2ea07863-59cb-434f-b0e0-5243034b2bfd",
+        "32a15f57-7990-4200-add5-813348704f90",
+        "b815a6a1-f475-4553-b0af-7d2cd000d838",
+        "3d8eb8c0-1f36-48c2-9999-7331340a13a8",
+        "108970ab-0902-4fa6-9b52-c0ceda95aa2a"
+      ],
+      "settings": {
+        "display_for_product": "{{product.metafields.custom.featured_grid_display_1}}",
+        "fluid_layout": false,
+        "icon_layout": true,
+        "grid_size": "{{ product.metafields['custom']['featured_grid_size'] }}",
+        "heading_txt": "",
+        "ingredients_txt": "",
+        "ingredients_desc": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#000000",
+        "pt": 56,
+        "pb": 47,
+        "pts": 50,
+        "pbs": 40,
+        "border-top": false,
+        "border-bottom": false
+      }
+    },
+    "7b2b9667-4273-4675-9fde-6a3aec94d801": {
+      "type": "before-after-scroller",
+      "blocks": {
+        "f6a0c3c4-ae37-4254-a29d-2ffb434f8994": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_1000003047_copy_1d055af3-5189-4df9-b9fc-b5a22244e5a7.jpg",
+            "review_country": "shopify:\/\/shop_images\/usa.svg",
+            "review_percentage": "95%",
+            "percentage_text": "<p><strong>Firmer and Smoother<\/strong> facial skin<\/p>",
+            "review_title": "Firmer & Plumper Skin",
+            "review_description": "<ul><li>Witnessed a considerable improvement in skin firmness and fullness.<\/li><li>Noticed skin appearing plumper and more vibrant after just 4 weeks.<\/li><\/ul>",
+            "review_author": "Cynthia",
+            "review_verified_text": "Verified buyer",
+            "footer_text": "<p><strong>23 out of 25 participants<\/strong> reported their skin felt firmer after 3 treatments per week for 4 weeks<\/p>"
+          }
+        },
+        "290dd027-7a41-4ffe-ad02-5c84e59de005": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_1000003047_e73a18ba-99e0-4c52-b514-2442578d3b8b.jpg",
+            "review_country": "shopify:\/\/shop_images\/usa.svg",
+            "review_percentage": "96%",
+            "percentage_text": "<p><strong>Smoother<\/strong> facial wrinkle and fine lines<\/p>",
+            "review_title": "Reduced Fine Lines",
+            "review_description": "<ul><li>Experienced brighter, more vibrant skin after just 4 weeks.<\/li><li>Felt complexion improved, achieving a more youthful, radiant glow.<\/li><\/ul>",
+            "review_author": "Caitlin",
+            "review_verified_text": "Verified buyer",
+            "footer_text": "<p><strong>24 out of 25 participants<\/strong> reported that their skin felt softer and smoother after 3 treatments per week for 4 weeks<\/p>"
+          }
+        },
+        "cb5608c2-b1a2-44d9-a405-e8723930350e": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_1000003047_copy_2_d6de62b5-0101-4a0f-aab0-ebc607dc06d8.jpg",
+            "review_country": "shopify:\/\/shop_images\/usa.svg",
+            "review_percentage": "98%",
+            "percentage_text": "<p><strong>Brighter and plumper<\/strong> facial skin<\/p>",
+            "review_title": "Reduced Redness",
+            "review_description": "<ul><li>Calms redness and promotes a healthy, glowing complexion.<\/li><li>Experienced the soothing, anti-inflammatory benefits of Omnilux light therapy.<\/li><\/ul>",
+            "review_author": "Emma",
+            "review_verified_text": "Verified buyer",
+            "footer_text": "<p><strong>25 out of 25 participants<\/strong> reported that their skin felt plumper, brighter, and more hydrated after 3 treatments per week for 4 weeks<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "f6a0c3c4-ae37-4254-a29d-2ffb434f8994",
+        "290dd027-7a41-4ffe-ad02-5c84e59de005",
+        "cb5608c2-b1a2-44d9-a405-e8723930350e"
+      ],
+      "settings": {
+        "section_id": "#beforeafter",
+        "section_title": "Real users, real results"
+      }
+    },
+    "1012647f-8fc2-4238-8ef1-51aef396d8d1": {
+      "type": "before-after-scroller-contour",
+      "blocks": {
+        "cb3770a8-91d8-45ce-8248-2b62a8864c6e": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_1000003047_copy_2_d6de62b5-0101-4a0f-aab0-ebc607dc06d8.jpg",
+            "review_country": "shopify:\/\/shop_images\/usa.svg",
+            "review_percentage": "98%",
+            "percentage_text": "<p><strong>Brighter and plumper<\/strong> facial skin<\/p>",
+            "review_title": "In clinical studies, users experienced:",
+            "review_description": "<ul><li>Calms redness and promotes a healthy, glowing complexion.<\/li><li>Experienced the soothing, anti-inflammatory benefits of Omnilux light therapy.<\/li><\/ul>",
+            "review_author": "Emma",
+            "author_quote": "",
+            "review_verified_text": "Verified buyer",
+            "footer_text": "<p><strong>25 out of 25 participants<\/strong> reported that their skin felt plumper, brighter, and more hydrated after 3 treatments per week for 4 weeks<\/p>"
+          }
+        },
+        "2bcaf647-14b0-4037-8ae3-cd56658f49b4": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_1000003047_copy_1d055af3-5189-4df9-b9fc-b5a22244e5a7.jpg",
+            "review_country": "shopify:\/\/shop_images\/usa.svg",
+            "review_percentage": "95%",
+            "percentage_text": "<p><strong>Firmer and Smoother<\/strong> facial skin<\/p>",
+            "review_title": "In clinical studies, users experienced:",
+            "review_description": "<ul><li>Witnessed a considerable improvement in skin firmness and fullness.<\/li><li>Noticed skin appearing plumper and more vibrant after just 4 weeks.<\/li><\/ul>",
+            "review_author": "Cynthia",
+            "author_quote": "",
+            "review_verified_text": "Verified buyer",
+            "footer_text": "<p><strong>23 out of 25 participants<\/strong> reported their skin felt firmer after 3 treatments per week for 4 weeks.<\/p>"
+          }
+        },
+        "7979fdba-e6ce-4ff0-91c2-f0c569c9fffd": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_1000003047_e73a18ba-99e0-4c52-b514-2442578d3b8b.jpg",
+            "review_country": "shopify:\/\/shop_images\/usa.svg",
+            "review_percentage": "96%",
+            "percentage_text": "<p><strong>Smoother<\/strong> facial wrinkle and fine lines<\/p>",
+            "review_title": "In clinical studies, users experienced:",
+            "review_description": "<ul><li>Experienced brighter, more vibrant skin after just 4 weeks.<\/li><li>Felt complexion improved, achieving a more youthful, radiant glow.<\/li><\/ul>",
+            "review_author": "Caitlin",
+            "author_quote": "",
+            "review_verified_text": "Verified buyer",
+            "footer_text": "<p><strong>24 out of 25 participants<\/strong> reported that their skin felt softer and smoother after 3 treatments per week for 4 weeks<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "cb3770a8-91d8-45ce-8248-2b62a8864c6e",
+        "2bcaf647-14b0-4037-8ae3-cd56658f49b4",
+        "7979fdba-e6ce-4ff0-91c2-f0c569c9fffd"
+      ],
+      "settings": {
+        "section_id": "#beforeafter",
+        "section_title": "Real users, real results"
+      }
+    },
+    "4f5f33ca-10a4-41a3-b40c-038b76049541": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"desktopreviewstitle\"><div class=\"container is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<div class=\"starreviews\"><div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.StarRatingSnippet }} <span class=\"reviewstxt\">Reviews<\/span>\n<\/div><\/div><\/div>\n<p>We've helped 100,000+ customers achieve their skin goals.<\/p>\n<\/div>\n\n<div class=\"clearpdp\">\n<div class=\"desktopreviewstitle\"><div class=\"container is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<div class=\"starreviews\"><div data-oke-star-rating data-oke-reviews-product-id=\"shopify-6760463892642\">{{ product.metafields.okendo.StarRatingSnippet }} <span class=\"reviewstxt\">Reviews<\/span>\n<\/div><\/div><\/div>\n<p>We've helped 100,000+ customers achieve their skin goals.<\/p>\n<\/div><\/div>"
+      }
+    },
+    "1598637a-3252-49e4-bfcc-d63e53d9c6b6": {
+      "type": "circle-video-menu-desktop",
+      "blocks": {
+        "10e6e883-2fc2-43bf-a56f-3ce24c0149cf": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Video_Testimonial.png",
+            "label": "Lizeth’s Story",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/lizethstory.mp4"
+          }
+        },
+        "c422a032-1e24-42cd-adec-7c9a126fafc4": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Video_Testimonial_copy.png",
+            "label": "Deborah's Story",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/test2.mov"
+          }
+        },
+        "19dec470-df8b-4c9f-9194-2029fc26965f": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Video_Testimonial_copy_2.png",
+            "label": "Anna's Story",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/Video 3 - IG Scroller.mp4"
+          }
+        },
+        "93b0c54c-0a98-4ab9-964a-07d92c83d255": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Video_Testimonial_copy_4.png",
+            "label": "Tanya's Story",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/Video 2 - IG Scroller.mp4"
+          }
+        },
+        "e828c705-b186-4d23-a4ac-48e83bd77a68": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Video_Testimonial_copy_3.png",
+            "label": "Lina's Story",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/Testimonial 6.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "10e6e883-2fc2-43bf-a56f-3ce24c0149cf",
+        "c422a032-1e24-42cd-adec-7c9a126fafc4",
+        "19dec470-df8b-4c9f-9194-2029fc26965f",
+        "93b0c54c-0a98-4ab9-964a-07d92c83d255",
+        "e828c705-b186-4d23-a4ac-48e83bd77a68"
+      ],
+      "settings": {
+        "border_color": "#000000",
+        "div_id": "",
+        "ignore": true
+      }
+    },
+    "1598637a-3252-49e4-bfcc-d63e53d9c6b61": {
+      "type": "circle-video-menu-desktop",
+      "blocks": {
+        "5e3b736c-3b1c-4c18-b1d0-61ead0e0b5f0": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ariana.png",
+            "label": "Ariana's Story",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Ariana's Story.mp4"
+          }
+        },
+        "c7297638-eac3-4d36-9152-471ba21228db": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jess.png",
+            "label": "Jess's Story",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Jess' Story.mp4"
+          }
+        },
+        "c258c722-53d6-454c-9fda-07f5b7e0f916": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Video_Testimonial_0ade517f-a55c-4c60-b8ab-a3a81fe10ba2.png",
+            "label": "Sophie's Story",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Sophie's Story.mp4"
+          }
+        },
+        "1861f051-aea6-4057-b328-f041be4f2c58": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Video_Testimonial_copy_b6bc44ea-a3d5-4fa7-84bd-6e0883900c6f.png",
+            "label": "Alana's Story",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Alana's Story.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "5e3b736c-3b1c-4c18-b1d0-61ead0e0b5f0",
+        "c7297638-eac3-4d36-9152-471ba21228db",
+        "c258c722-53d6-454c-9fda-07f5b7e0f916",
+        "1861f051-aea6-4057-b328-f041be4f2c58"
+      ],
+      "settings": {
+        "border_color": "#000000",
+        "div_id": "clearpdp",
+        "ignore": true
+      }
+    },
+    "5fc33cbe-b23b-43d7-b393-0425cd94b49e": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"seereviewsbtn\">\n<div class=\"seeallreviews\"><div class=\"container is-flex is-justify-center\"><span id=\"scrollToReviews\">SEE MORE REVIEWS AND RESULTS<\/a><\/div><\/div><\/div>"
+      }
+    },
+    "8d4dfa60-174c-4b28-9812-ab31ef599696": {
+      "type": "global-reviews-slider",
+      "blocks": {
+        "b4cbdc09-0aa5-488f-9877-fb7f9789d4bc": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": "https:\/\/www.youtube.com\/embed\/EmKJfqoLXgk"
+          }
+        },
+        "0fb9a067-2046-4361-9075-78ba613a0a94": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": "https:\/\/www.youtube.com\/embed\/BcT9M0Ye6Is"
+          }
+        },
+        "76e7d130-868f-4603-9228-3ce3e820fb17": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": "https:\/\/www.youtube.com\/embed\/fdYkRP4jUwo"
+          }
+        }
+      },
+      "block_order": [
+        "b4cbdc09-0aa5-488f-9877-fb7f9789d4bc",
+        "0fb9a067-2046-4361-9075-78ba613a0a94",
+        "76e7d130-868f-4603-9228-3ce3e820fb17"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "heading_style": "heading_style_1",
+        "pt": 80,
+        "pb": 40,
+        "pts": 40,
+        "pbs": 40,
+        "border-top": false,
+        "border-bottom": false,
+        "heading_txt": "Watch Reviews",
+        "txt": "",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "",
+        "btn_variant": "dark",
+        "btn_size": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000",
+        "autoplay_enable": false,
+        "slider_enable": true,
+        "nav_arrows": true,
+        "nav_dots": false
+      }
+    },
+    "9521727a-fc34-433d-b725-458ff43ba5f3": {
+      "type": "product-banner-text",
+      "custom_css": [
+        "section > div > div > div.col-12.col-md-6.col-lg-5.mt-4.ms-auto.mt-md-0.pt-lg-0.pt-1.order-md-1 > div > div.m-lg-n3.m-n2.my-n2.d-flex.flex-wrap.pt-lg-0 > div:nth-child(2) {display: none;}",
+        ".btn-primary {width: 100%;}"
+      ],
+      "settings": {
+        "display_for_this_product": "{{product.metafields.custom.image_text_enable}}",
+        "fluid_layout": false,
+        "gradient_tone": true,
+        "heading_txt": "{{product.metafields.custom.image_text_heading}}",
+        "img_text1": "{{ product.metafields['custom']['image_text_paragraph'] }}",
+        "max_width": 415,
+        "image": "{{product.metafields.custom.image_text_image}}",
+        "alignment": "text-left",
+        "image_alignment": "right",
+        "pt": 0,
+        "pb": 95,
+        "pts": 0,
+        "pbs": 60,
+        "border-top": false,
+        "border-bottom": false,
+        "play_icon": false,
+        "play_btn": true,
+        "btn_txt_watch": "",
+        "video_watch_id": "{{ product.metafields.custom.image_text_watch_video_id }}",
+        "video_watch_mobile_id": "{{ product.metafields.custom.custom.image_text_watch_video_id }}",
+        "btn_type_watch": "outline",
+        "btn_variant_watch": "primary",
+        "btn_size_watch": "",
+        "btn_txt": "{{product.metafields.custom.image_text_watch_review}}",
+        "video_review_id": "{{ product.metafields['custom']['image_text_review_video_id'] }}",
+        "video_review_mobile_id": "",
+        "btn_type": "outline",
+        "btn_variant": "primary",
+        "btn_size": "",
+        "link_txt": "{{ product.metafields['custom']['Image_text_btntext'] }}",
+        "link_url": "{{ product.metafields['custom']['Image_text_btnlink'] }}",
+        "btn_type_l": "",
+        "btn_variant_l": "primary",
+        "btn_size_l": ""
+      }
+    },
+    "9954540e-30e3-44b7-ab1d-975166604760": {
+      "type": "product-comparison",
+      "blocks": {
+        "template--16158637228194__9954540e-30e3-44b7-ab1d-975166604760-168370753910924a9b-0": {
+          "type": "feature-item-left",
+          "settings": {
+            "feature": "Saves you time"
+          }
+        },
+        "a114f303-d8a1-4b77-9630-72558e9b89bd": {
+          "type": "feature-item-left",
+          "settings": {
+            "feature": "Comfort and privacy of your own home"
+          }
+        },
+        "7852a5b1-2bcc-47d2-a39f-58241a277c63": {
+          "type": "feature-item-left",
+          "settings": {
+            "feature": "Unlimited treatments"
+          }
+        },
+        "fddf3499-4625-478e-a969-b13a590660bb": {
+          "type": "feature-item-left",
+          "settings": {
+            "feature": "Only 10 minutes daily"
+          }
+        },
+        "c8e03c98-39f4-4d2b-b70b-09274ff97f10": {
+          "type": "feature-item-left",
+          "settings": {
+            "feature": "No ongoing payments"
+          }
+        },
+        "template--16158637228194__9954540e-30e3-44b7-ab1d-975166604760-168370753910924a9b-1": {
+          "type": "feature-item-right",
+          "settings": {
+            "feature": "Time consuming commute to clinic"
+          }
+        },
+        "23aafb7f-4650-4bf4-8863-40babfaf6b18": {
+          "type": "feature-item-right",
+          "settings": {
+            "feature": "When (if) you get an appointment"
+          }
+        },
+        "31721677-1d26-418e-8a60-867a50428cef": {
+          "type": "feature-item-right",
+          "settings": {
+            "feature": "Limited treatments"
+          }
+        },
+        "a9b9c97b-f347-4b13-b4f8-6852c00c9768": {
+          "type": "feature-item-right",
+          "settings": {
+            "feature": "Requires regular clinic visits"
+          }
+        },
+        "2e4830fd-2714-4224-b53e-df03409593a8": {
+          "type": "feature-item-right",
+          "settings": {
+            "feature": "Ongoing payments required"
+          }
+        }
+      },
+      "block_order": [
+        "template--16158637228194__9954540e-30e3-44b7-ab1d-975166604760-168370753910924a9b-0",
+        "a114f303-d8a1-4b77-9630-72558e9b89bd",
+        "7852a5b1-2bcc-47d2-a39f-58241a277c63",
+        "fddf3499-4625-478e-a969-b13a590660bb",
+        "c8e03c98-39f4-4d2b-b70b-09274ff97f10",
+        "template--16158637228194__9954540e-30e3-44b7-ab1d-975166604760-168370753910924a9b-1",
+        "23aafb7f-4650-4bf4-8863-40babfaf6b18",
+        "31721677-1d26-418e-8a60-867a50428cef",
+        "a9b9c97b-f347-4b13-b4f8-6852c00c9768",
+        "2e4830fd-2714-4224-b53e-df03409593a8"
+      ],
+      "settings": {
+        "title": "The beauty of clinical results from home - minus the ‘clinical’ costs",
+        "subtitle": "A daily 10 minute session is like going to the beauty clinic five times a week. Minus the on-going costs, the time commitment, the overpromises, the upselling.",
+        "image_left": "shopify:\/\/shop_images\/Omnilux_Contour_Face.png",
+        "price_left": "$395",
+        "name_left": "Omnilux Contour Face",
+        "highlight_left": "One-time cost Investment",
+        "description_left": "Daily  treatments give you clinical results that are equivalent to regular clinical sessions - for a fraction of the usual cost. Your money is made back after you’ve skipped three visits to the clinic.",
+        "icon_left": "shopify:\/\/shop_images\/Yes.svg",
+        "image_right": "shopify:\/\/shop_images\/In-Clinic_Dermatologist.png",
+        "price_right": "$300 -$900",
+        "name_right": "In-Clinic\/ Dermatologist",
+        "highlight_right": "Per 6 session treatment cost",
+        "description_right": "Professional treatments are effective, but multiple, regular sessions are requires to see long term results - these are expensive and time consuming.",
+        "icon_right": "shopify:\/\/shop_images\/No.svg"
+      }
+    },
+    "ee32d731-64d8-43e4-a200-3aad66c37be5": {
+      "type": "product-results-slider",
+      "blocks": {
+        "035acd3d-cf76-4c29-bd3c-4baed3173be8": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "{{product.metafields.custom.result_image_1}}",
+            "brfore_aftertext": "{{product.metafields['custom']['result_before_after_1']}}"
+          }
+        },
+        "f4e0a706-cbc3-46df-8d2b-1f834f63ffe3": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "{{product.metafields.custom.result_image_3}}",
+            "brfore_aftertext": "{{product.metafields['custom']['result_before_after_3']}}"
+          }
+        },
+        "cad14ba1-70be-4518-8417-2fccad26a1af": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "{{product.metafields.custom.result_image_5}}",
+            "brfore_aftertext": "{{product.metafields['custom']['result_before_after_5']}}"
+          }
+        },
+        "f20bee76-cc99-4899-95e7-06b4a0888089": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "{{product.metafields.custom.result_image_4}}",
+            "brfore_aftertext": "{{product.metafields['custom']['result_before_after_4']}}"
+          }
+        },
+        "7bf96b75-8153-4d62-90b0-8f9e011a7b93": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "{{product.metafields.custom.result_image_2}}",
+            "brfore_aftertext": "{{product.metafields['custom']['result_before_after_2']}}"
+          }
+        },
+        "47b08c3d-5422-467e-a428-b9641db74d14": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "{{product.metafields.custom.result_image_6}}",
+            "brfore_aftertext": "{{product.metafields['custom']['result_before_after_6']}}"
+          }
+        },
+        "e0220851-db31-4de2-911f-c185123f1a25": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "{{product.metafields.custom.result_image_7}}",
+            "brfore_aftertext": "{{product.metafields['custom']['result_before_after_7']}}"
+          }
+        },
+        "acc38b90-e2e1-4897-b77b-54c8cbe0a5eb": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "{{product.metafields.custom.result_image_8}}",
+            "brfore_aftertext": "{{product.metafields['custom']['result_before_after_3']}}"
+          }
+        }
+      },
+      "block_order": [
+        "035acd3d-cf76-4c29-bd3c-4baed3173be8",
+        "f4e0a706-cbc3-46df-8d2b-1f834f63ffe3",
+        "cad14ba1-70be-4518-8417-2fccad26a1af",
+        "f20bee76-cc99-4899-95e7-06b4a0888089",
+        "7bf96b75-8153-4d62-90b0-8f9e011a7b93",
+        "47b08c3d-5422-467e-a428-b9641db74d14",
+        "e0220851-db31-4de2-911f-c185123f1a25",
+        "acc38b90-e2e1-4897-b77b-54c8cbe0a5eb"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_for_this_product": "{{ product.metafields['custom']['results_enabled'] }}",
+        "fluid_layout": false,
+        "heading_style": "heading_style_2",
+        "pt": 80,
+        "pb": 40,
+        "pts": 40,
+        "pbs": 40,
+        "border-top": true,
+        "border-bottom": false,
+        "heading_txt": "{{ product.metafields['custom']['results_heading'] }}",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000",
+        "autoplay_enable": false,
+        "loop_enable": false,
+        "slider_enable": true,
+        "nav_arrows": true,
+        "nav_dots": false
+      }
+    },
+    "c578fea6-30d9-45c3-a052-ad86f35eb32a": {
+      "type": "treatmentbars-image",
+      "blocks": {
+        "9f767c07-bd63-4df7-b5c0-f7a8f34e7d25": {
+          "type": "treatment-bar",
+          "settings": {
+            "title": "Skin felt firmer",
+            "percentage": "98"
+          }
+        },
+        "73526de1-867e-4ce0-bd1e-38bdc6597686": {
+          "type": "treatment-bar",
+          "settings": {
+            "title": "Fine lines appeared less visible",
+            "percentage": "96"
+          }
+        },
+        "6440ac7b-d573-4efe-8883-8186c0085937": {
+          "type": "treatment-bar",
+          "settings": {
+            "title": "Skin was brighter and plumper",
+            "percentage": "95"
+          }
+        }
+      },
+      "block_order": [
+        "9f767c07-bd63-4df7-b5c0-f7a8f34e7d25",
+        "73526de1-867e-4ce0-bd1e-38bdc6597686",
+        "6440ac7b-d573-4efe-8883-8186c0085937"
+      ],
+      "disabled": true,
+      "settings": {
+        "fluid_layout": false,
+        "gradient_tone": false,
+        "heading_txt": "In clinical studies, Omnilux Contour users agreed:",
+        "img_text1": "<p>After 3 treatments per week for 4 weeks<\/p>",
+        "img_text2": "",
+        "max_width": 700,
+        "image": "shopify:\/\/shop_images\/smilebkdesktop-1660850033672.jpg",
+        "alignment": "text-left",
+        "image_alignment": "right",
+        "pt": 80,
+        "pb": 40,
+        "pts": 55,
+        "pbs": 10,
+        "border-top": true,
+        "border-bottom": true
+      }
+    },
+    "d98aede5-e4b5-4863-b5ad-7c8b265e3e58": {
+      "type": "product-image-with-text",
+      "blocks": {
+        "9597e586-edcd-4e1d-b338-239347f76a05": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "{{ product.metafields['custom']['iwt_heading_1'] }}",
+            "max_width": 530,
+            "txt": "{{ product.metafields['custom']['iwt_text_1'] }}",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "{{ product.metafields['custom']['iwt_read_more_text_1'] }}",
+            "btn_txt": "",
+            "btn_link": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "{{ product.metafields['custom']['iwt_watch_video_text_1'] }}",
+            "watch_video_id": "{{ product.metafields['custom']['iwt_video_id'] }}",
+            "watch_mobile_video_id": "",
+            "btn_type_watch": "outline",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "{{ product.metafields['custom']['iwt_link_text_1'] }}",
+            "link_url": "{{ product.metafields['custom']['iwt_link_url_1'] }}",
+            "image": "{{ product.metafields['custom']['iwt_image_2'] }}",
+            "alignment": "text-left",
+            "image_alignment": "left"
+          }
+        },
+        "222519c8-764a-4f0f-9fca-5f31ebdf2611": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "{{ product.metafields['custom']['iwt_heading'] }}",
+            "max_width": 530,
+            "txt": "{{ product.metafields['custom']['iwt_text'] }}",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "{{ product.metafields['custom']['iwt_read_more_text'] }}",
+            "btn_txt": "",
+            "btn_link": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "watch_video_id": "",
+            "watch_mobile_video_id": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "{{ product.metafields['custom']['iwt_image'] }}",
+            "alignment": "text-left",
+            "image_alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "9597e586-edcd-4e1d-b338-239347f76a05",
+        "222519c8-764a-4f0f-9fca-5f31ebdf2611"
+      ],
+      "settings": {
+        "display_for_this_product": "{{ product.metafields['custom']['iwt_enabled'] }}",
+        "fluid_layout": true,
+        "enable_background_tone": false,
+        "css_class": "",
+        "border_bottom": true,
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#000000"
+      }
+    },
+    "97a2b9bb-60a0-4ea3-9483-40b6b6ca80f1": {
+      "type": "product-image-with-table",
+      "blocks": {
+        "9855c66d-4fe9-4172-8d5e-51dd980b069e": {
+          "type": "content",
+          "settings": {
+            "title": "{{ product.metafields['custom']['table_heading_1'] }}",
+            "details_table": "{{ product.metafields['custom']['table_description_1'] }}"
+          }
+        },
+        "a9ecddce-5041-4fe1-ae7f-9868bc2a1531": {
+          "type": "content",
+          "settings": {
+            "title": "{{ product.metafields['custom']['table_heading_2'] }}",
+            "details_table": "{{ product.metafields['custom']['table_description_2'] }}"
+          }
+        },
+        "8d0e8649-0c80-425c-9eea-ba6cb7251f28": {
+          "type": "content",
+          "settings": {
+            "title": "{{ product.metafields['custom']['table_heading_3'] }}",
+            "details_table": "{{ product.metafields['custom']['table_description_3'] }}"
+          }
+        },
+        "8df9d14a-bcd5-4d3d-a368-5275aa440049": {
+          "type": "content",
+          "settings": {
+            "title": "{{ product.metafields['custom']['table_heading_5'] }}",
+            "details_table": "{{ product.metafields['custom']['table_description_5'] }}"
+          }
+        },
+        "b523751c-123f-4468-85c3-ec5a0a891306": {
+          "type": "content",
+          "settings": {
+            "title": "{{ product.metafields['custom']['table_heading_6'] }}",
+            "details_table": "{{ product.metafields['custom']['table_description_6'] }}"
+          }
+        },
+        "14f6e5cf-c71e-4aa0-820c-70378b4c19df": {
+          "type": "content",
+          "settings": {
+            "title": "{{ product.metafields['custom']['table_heading_7'] }}",
+            "details_table": "{{ product.metafields['custom']['table_description_7'] }}"
+          }
+        },
+        "41c32f0d-e415-4065-8c5d-a1e89dc61a46": {
+          "type": "content",
+          "settings": {
+            "title": "{{ product.metafields['custom']['table_heading_8'] }}",
+            "details_table": "{{ product.metafields['custom']['table_description_8'] }}"
+          }
+        }
+      },
+      "block_order": [
+        "9855c66d-4fe9-4172-8d5e-51dd980b069e",
+        "a9ecddce-5041-4fe1-ae7f-9868bc2a1531",
+        "8d0e8649-0c80-425c-9eea-ba6cb7251f28",
+        "8df9d14a-bcd5-4d3d-a368-5275aa440049",
+        "b523751c-123f-4468-85c3-ec5a0a891306",
+        "14f6e5cf-c71e-4aa0-820c-70378b4c19df",
+        "41c32f0d-e415-4065-8c5d-a1e89dc61a46"
+      ],
+      "settings": {
+        "display_for_this_product": "{{ product.metafields['custom']['table_image_enabled'] }}",
+        "fluid_layout": true,
+        "enable_background_tone": true,
+        "border-top": false,
+        "border-bottom": true,
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000",
+        "fullwidth_content": true,
+        "heading_txt": "{{ product.metafields['custom']['table_image_heading'] }}",
+        "max_width": 530,
+        "txt": "",
+        "step_heading": "",
+        "steps_captions": "",
+        "image": "{{ product.metafields['custom']['table_image'] }}",
+        "modal_image": "{{ product.metafields['custom']['table_image_3d'] }}",
+        "alignment": "text-left",
+        "image_alignment": "right"
+      }
+    },
+    "dbd05fbc-dda9-418a-80a7-141ddac090f5": {
+      "type": "product-image-buy-now",
+      "settings": {
+        "display_for_this_product": "{{ product.metafields['custom']['image_prod_enable'] }}",
+        "fluid_layout": false,
+        "heading_txt": "{{ product.metafields['custom']['image_prod_heading'] }}",
+        "img_text1": "{{ product.metafields['custom']['image_prod_para1'] }}",
+        "img_text2": "{{ product.metafields['custom']['image_prod_para2'] }}",
+        "max_width": 700,
+        "image": "{{ product.metafields['custom']['image_prod_image'] }}\"",
+        "buynow_product": "{{ product.metafields['custom']['image_prod_product'] }}",
+        "alignment": "text-left",
+        "image_alignment": "right",
+        "pt": 80,
+        "pb": 0,
+        "pts": 40,
+        "pbs": 0,
+        "border-top": false,
+        "border-bottom": false
+      }
+    },
+    "6f9dbd95-0f1e-423e-8185-0f80ef755574": {
+      "type": "product-features-grid",
+      "blocks": {
+        "template--16049829019810__6f9dbd95-0f1e-423e-8185-0f80ef755574-16718232555ebd91ce-0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "{{ product.metafields['custom']['featured_grid_image2_1'] }}",
+            "title": ""
+          }
+        },
+        "953799af-f96c-4b67-86de-af83f58f19b3": {
+          "type": "content",
+          "settings": {
+            "icon_img": "{{ product.metafields['custom']['featured_grid_image2_2'] }}",
+            "title": ""
+          }
+        },
+        "47061ba2-6572-4df6-84df-e490cae43290": {
+          "type": "content",
+          "settings": {
+            "icon_img": "{{ product.metafields['custom']['featured_grid_image2_3'] }}",
+            "title": ""
+          }
+        },
+        "756ece34-2344-43c4-8eb5-d580afba61ba": {
+          "type": "content",
+          "settings": {
+            "icon_img": "{{ product.metafields['custom']['featured_grid_image2_4'] }}",
+            "title": ""
+          }
+        },
+        "a16384a3-c8e6-4278-90ce-1fb7ccee3bc7": {
+          "type": "content",
+          "settings": {
+            "icon_img": "{{ product.metafields['custom']['featured_grid_image2_5'] }}",
+            "title": ""
+          }
+        },
+        "05546c56-3c4c-4ef7-98f7-748698d5ca5d": {
+          "type": "content",
+          "settings": {
+            "icon_img": "{{ product.metafields['custom']['featured_grid_image2_6'] }}",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16049829019810__6f9dbd95-0f1e-423e-8185-0f80ef755574-16718232555ebd91ce-0",
+        "953799af-f96c-4b67-86de-af83f58f19b3",
+        "47061ba2-6572-4df6-84df-e490cae43290",
+        "756ece34-2344-43c4-8eb5-d580afba61ba",
+        "a16384a3-c8e6-4278-90ce-1fb7ccee3bc7",
+        "05546c56-3c4c-4ef7-98f7-748698d5ca5d"
+      ],
+      "settings": {
+        "display_for_product": "{{ product.metafields['custom']['featured_grid_display_2'] }}",
+        "fluid_layout": false,
+        "icon_layout": true,
+        "grid_size": "{{ product.metafields['custom']['featured_grid_size_1'] }}",
+        "heading_txt": "{{ product.metafields['custom']['featured_grid_heading2'] }}",
+        "ingredients_txt": "{{ product.metafields['custom']['featured_grid_ing_text2'] }}",
+        "ingredients_desc": "{{ product.metafields['custom']['featured_grid_ing_desc2'] }}",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#000000",
+        "pt": 57,
+        "pb": 47,
+        "pts": 40,
+        "pbs": 40,
+        "border-top": false,
+        "border-bottom": false
+      }
+    },
+    "27a0c0a9-9daf-4c71-981d-3e756aa3b3bb": {
+      "type": "template-faq-block",
+      "blocks": {
+        "add65b84-8656-47b5-bcb0-5c2d1ba96bdf": {
+          "type": "question",
+          "settings": {
+            "title": "{{product.metafields.custom.faq_question_1}}",
+            "answer": "{{product.metafields.custom.faq_answer_1}}"
+          }
+        },
+        "c96b84a3-94ee-4911-bbe1-c97bdfc2e593": {
+          "type": "question",
+          "settings": {
+            "title": "{{product.metafields.custom.faq_question_2}}",
+            "answer": "{{product.metafields.custom.faq_answer_2}}"
+          }
+        },
+        "188907b6-d047-4abd-b718-5fc20a4f839e": {
+          "type": "question",
+          "settings": {
+            "title": "{{product.metafields.custom.faq_question_3}}",
+            "answer": "{{product.metafields.custom.faq_answer_3}}"
+          }
+        },
+        "d8e66ade-e9f3-4ba8-8f3a-380af6ad2269": {
+          "type": "question",
+          "settings": {
+            "title": "{{product.metafields.custom.faq_question_4}}",
+            "answer": "{{product.metafields.custom.faq_answer_4}}"
+          }
+        },
+        "0e432c37-1d0e-4633-b884-bcacc84ae419": {
+          "type": "question",
+          "settings": {
+            "title": "{{product.metafields.custom.faq_question_5}}",
+            "answer": "{{product.metafields.custom.faq_answer_5}}"
+          }
+        }
+      },
+      "block_order": [
+        "add65b84-8656-47b5-bcb0-5c2d1ba96bdf",
+        "c96b84a3-94ee-4911-bbe1-c97bdfc2e593",
+        "188907b6-d047-4abd-b718-5fc20a4f839e",
+        "d8e66ade-e9f3-4ba8-8f3a-380af6ad2269",
+        "0e432c37-1d0e-4633-b884-bcacc84ae419"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "Frequently Asked Questions"
+      }
+    },
+    "167152762813570154": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "3b0cd3cc-5517-4d50-b829-9db880165ae6": {
+      "type": "glabal-featured-product-list",
+      "settings": {
+        "fluid_layout": false,
+        "nav_dots": false,
+        "nav_arrows": false,
+        "nav_arrows_outside": false,
+        "heading_alignment": "me-lg-auto ms-lg-0 mx-auto",
+        "heading_txt": "You might also like",
+        "lead_txt": "",
+        "home_featured_collection": "all",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#000000",
+        "btn_text": "",
+        "btn_url": "",
+        "pt": 80,
+        "pb": 46,
+        "pts": 59,
+        "pbs": 44,
+        "border-top": true,
+        "border-bottom": false,
+        "slide_per_": false
+      }
+    },
+    "1676318184d0f06530": {
+      "type": "apps",
+      "blocks": {
+        "db62bf7d-43d4-4e5f-9fbc-bad80cc7e15f": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "combined_widget"
+          }
+        }
+      },
+      "block_order": [
+        "db62bf7d-43d4-4e5f-9fbc-bad80cc7e15f"
+      ],
+      "custom_css": [
+        ".okeReviews.oke-w {align-items: center; display: flex; justify-content: center;}",
+        ".js-oke-widgetSize.oke-is-large {max-width: 1200px;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "4f65bf04-3141-4ace-b69f-74d2f7c94563": {
+      "type": "info-text",
+      "settings": {
+        "fluid_layout": false,
+        "img_text1": "<p>*Applies to Ground shipping rates only. Excludes Hawaii, Alaska, New Zealand, Bosnia & Herzegovina, Iceland, Latvia, Lithuania, and Northern Ireland<\/p>",
+        "pt": 0,
+        "pb": 5,
+        "pts": 0,
+        "pbs": 15,
+        "border-top": false,
+        "border-bottom": false
+      }
+    }
+  },
+  "order": [
+    "d70430d9-8de9-4f06-8108-95d6601a15ab",
+    "d84aa67d-fef0-442d-8364-790f28934d4d",
+    "main",
+    "8b7008db-ace8-41cc-9cda-be64cf66dd7e",
+    "7b2b9667-4273-4675-9fde-6a3aec94d801",
+    "1012647f-8fc2-4238-8ef1-51aef396d8d1",
+    "4f5f33ca-10a4-41a3-b40c-038b76049541",
+    "1598637a-3252-49e4-bfcc-d63e53d9c6b6",
+    "1598637a-3252-49e4-bfcc-d63e53d9c6b61",
+    "5fc33cbe-b23b-43d7-b393-0425cd94b49e",
+    "8d4dfa60-174c-4b28-9812-ab31ef599696",
+    "9521727a-fc34-433d-b725-458ff43ba5f3",
+    "9954540e-30e3-44b7-ab1d-975166604760",
+    "ee32d731-64d8-43e4-a200-3aad66c37be5",
+    "c578fea6-30d9-45c3-a052-ad86f35eb32a",
+    "d98aede5-e4b5-4863-b5ad-7c8b265e3e58",
+    "97a2b9bb-60a0-4ea3-9483-40b6b6ca80f1",
+    "dbd05fbc-dda9-418a-80a7-141ddac090f5",
+    "6f9dbd95-0f1e-423e-8185-0f80ef755574",
+    "27a0c0a9-9daf-4c71-981d-3e756aa3b3bb",
+    "167152762813570154",
+    "3b0cd3cc-5517-4d50-b829-9db880165ae6",
+    "1676318184d0f06530",
+    "4f65bf04-3141-4ace-b69f-74d2f7c94563"
+  ]
+}

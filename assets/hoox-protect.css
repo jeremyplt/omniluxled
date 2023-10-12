@@ -1,0 +1,100 @@
+.hoox-protect {
+    padding-top: 48px;
+    background-color: var(--hoox-color-black);
+}
+
+.hoox-protect__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
+}
+
+.hoox-protect__image {
+    max-height: 294px;
+}
+
+.hoox-protect__image img {
+    max-height: 294px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.hoox-protect__title {
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.hoox-hero__btn {
+    margin-bottom: 8px;
+}
+
+.hoox-hero__btn a {
+    background: var(--hoox-color-white);
+    color: var(--hoox-color-black);
+}
+
+.hoox-protect__shipping {
+    text-align: center;
+}
+
+.hoox-protect a:hover {
+    color: var(--hoox-color-black);
+}
+
+@media (min-width: 768px) {
+    .hoox-protect {
+        padding-top: unset;
+        min-height: 480px;
+    }
+    
+    .hoox-protect__wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 32px;
+        min-height: 480px;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    
+    .hoox-protect__image {
+        max-height: 480px;
+        max-width: 485px;
+        padding-right: 20px;
+    }
+    
+    .hoox-protect__image img {
+        max-height: 480px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .hoox-protect__content-wrapper {
+        max-width: 401px;
+    }
+    
+    .hoox-protect__title {
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+    
+    .hoox-hero__btn {
+        margin-bottom: 8px;
+    }
+    
+    .hoox-hero__btn a {
+        background: var(--hoox-color-white);
+        color: var(--hoox-color-black);
+    }
+    
+    .hoox-protect__shipping {
+        text-align: center;
+    }
+
+    .hoox-protect .hoox-btn {
+        width: 368px;
+        margin: 0 auto;
+    }
+}

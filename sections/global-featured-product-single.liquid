@@ -1,0 +1,206 @@
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
+  {% assign collection_grid_type = section.settings.collection_grid_type %}
+  <section class="section-content border-top border-bottom pt-0 pb-0 featuredproductsingle" data-section-id="{{ section.id }}" data-grid-type="{{ collection_grid_type }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
+
+                  <div class="row">
+                      {% unless section.settings.home_featured_product == blank %}
+                      <div class="col-12 col-lg-6">
+                        {% render 'card-product-featured-single', product: section.settings.home_featured_product %}
+                      </div>
+                    {% endunless %}
+                      <div class="col-12 col-lg-6">
+                    <div class="inside-block text-left text-p-end ps-5  pb-lg-5 pt-4 mt-1 mt-lg-0 mb-lg-0 mb-1 pb-8 pe-20 ps-20" style="max-width:675px" bis_skin_checked="1"><div class="formatted-list pe-lg-3 ps-0 col-sm-10 col-12" bis_skin_checked="1">
+                            {% if section.settings.heading_txt != blank %}
+                                <h3 class="h2 section-title d-lg-block px-0"><a href="{{ all_products[section.settings.home_featured_product].url}}">{{ section.settings.heading_txt | escape }}</a></h3>
+                            {% endif %}
+                            {% render 'card-product-featured-single-noimage', product: section.settings.home_featured_product %}
+                          </div>
+                      </div></div>
+                  </div>
+
+      </div>
+  </section>
+  {% schema %}
+{
+  "name": "Featured Product Single",
+  "tag": "section",
+  "class": "index-featured-collectiion",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "fluid_layout",
+      "label": "Full Width Layout?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_dots",
+      "label": "Dots Navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_arrows",
+      "label": "Arrows Navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "nav_arrows_outside",
+      "label": "Navigation Arrow Outside",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Featured Collection"
+    },
+    {
+      "type": "textarea",
+      "id": "lead_txt",
+      "label": "Lead Text"
+    },
+    {
+          "type": "textarea",
+          "id": "steps_captions",
+          "label": "Check List",
+          "info": "Each entry must be on a new line."
+        },
+    {
+          "type": "textarea",
+          "id": "small_txt",
+          "label": "Small text under CTA",
+          "info": "Each line must be on a new line."
+        },
+    {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
+      "type": "product",
+      "id": "home_featured_product",
+      "label": "Select Product"
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "section_txt_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "btn_text2",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_url2",
+      "label": "Button URL"
+    },
+    {
+      "type": "select",
+      "id": "btn_type",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
+        }
+      ],
+      "default": "outline"
+    },
+    {
+      "type": "select",
+      "id": "btn_variant",
+      "label": "Button Variant",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "btn_size",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    },
+    {
+          "type": "image_picker",
+          "id": "icon_img",
+          "label": "Icon Image 1",
+          "info": "For Better Viewing Use Example dimentions: 300x300px ( Aspect Ratio: 1:1 )"
+        },
+      {
+          "type": "image_picker",
+          "id": "icon_img2",
+          "label": "Icon Image 2",
+          "info": "For Better Viewing Use Example dimentions: 300x300px ( Aspect Ratio: 1:1 )"
+        },
+      {
+          "type": "image_picker",
+          "id": "icon_img3",
+          "label": "Icon Image 3",
+          "info": "For Better Viewing Use Example dimentions: 300x300px ( Aspect Ratio: 1:1 )"
+        }
+  ],
+  "presets": [
+    {
+      "name": "Featured Product Single",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

@@ -224,6 +224,7 @@
             "heading_txt": "Medical-grade light therapy rejuvenates your skin naturally",
             "max_width": 530,
             "txt": "<p>Based on the world’s leading Omnilux Medical light therapy technology, the Contour LED collection uses optimized wavelengths of red and near-infrared light to deliver dermatologist-level skin rejuvenating results.<\/p>",
+            "txt_liquid": "",
             "step_heading": "",
             "steps_captions": "Stimulates collagen production for firmer, more youthful-looking skin\nImproves redness, inflammation and pigmentation\nRefines skin texture and tone for an effortless glow",
             "steps_captions_2": "",
@@ -254,6 +255,7 @@
             "heading_txt": "98% agreed their skin looked better",
             "max_width": 440,
             "txt": "<p>In clinical studies, Omnilux Contour users agreed: <\/p><p><strong><br\/>98%<\/strong> said skin felt firmer<\/p><p><strong>96%<\/strong> said fine lines appeared less visible<\/p><p><strong>95%<\/strong> said skin was brighter and plumper<\/p><p><em>*After 3 treatmtets per week for 4 weeks.<\/em><\/p>",
+            "txt_liquid": "",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
@@ -413,9 +415,76 @@
         "video_alignment": "justify-content-start"
       }
     },
+    "bac41891-2933-4177-ad03-8fd4b315f626": {
+      "type": "before-after-scroller",
+      "blocks": {
+        "d6cce3ac-5a45-4535-b4a4-14333f8a5949": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_1000003047_copy_2_d6de62b5-0101-4a0f-aab0-ebc607dc06d8.jpg",
+            "review_country": "shopify:\/\/shop_images\/usa.svg",
+            "review_percentage": "98%",
+            "percentage_text": "<p><strong>Brighter and plumper<\/strong> facial skin<\/p>",
+            "review_title": "Reduced Redness",
+            "review_description": "<ul><li>Calms redness and promotes a healthy, glowing complexion.<\/li><li>Experienced the soothing, anti-inflammatory benefits of Omnilux light therapy.<\/li><\/ul>",
+            "review_author": "Emma",
+            "review_verified_text": "Verified buyer",
+            "footer_text": "<p><strong>25 out of 25 participants<\/strong> reported that their skin felt plumper, brighter, and more hydrated after 3 treatments per week for 4 weeks<\/p>"
+          }
+        },
+        "8c713ab8-e8fb-492a-8c37-aaaff394503e": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_1000003047_copy_1d055af3-5189-4df9-b9fc-b5a22244e5a7.jpg",
+            "review_country": "shopify:\/\/shop_images\/usa.svg",
+            "review_percentage": "95%",
+            "percentage_text": "<p><strong>Firmer and Smoother<\/strong> facial skin<\/p>",
+            "review_title": "Firmer & Plumper Skin",
+            "review_description": "<ul><li>Witnessed a considerable improvement in skin firmness and fullness.<\/li><li>Noticed skin appearing plumper and more vibrant after just 4 weeks.<\/li><\/ul>",
+            "review_author": "Cynthia",
+            "review_verified_text": "Verified buyer",
+            "footer_text": "<p><strong>23 out of 25 participants<\/strong> reported their skin felt firmer after 3 treatments per week for 4 weeks<\/p>"
+          }
+        },
+        "ce38a911-ed4e-4868-a6ac-57fc20d9f625": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_1000003047_e73a18ba-99e0-4c52-b514-2442578d3b8b.jpg",
+            "review_country": "shopify:\/\/shop_images\/usa.svg",
+            "review_percentage": "96%",
+            "percentage_text": "<p><strong>Smoother<\/strong> facial wrinkle and fine lines<\/p>",
+            "review_title": "Reduced Fine Lines",
+            "review_description": "<ul><li>Experienced brighter, more vibrant skin after just 4 weeks.<\/li><li>Felt complexion improved, achieving a more youthful, radiant glow.<\/li><\/ul>",
+            "review_author": "Caitlin",
+            "review_verified_text": "Verified buyer",
+            "footer_text": "<p><strong>24 out of 25 participants<\/strong> reported that their skin felt softer and smoother after 3 treatments per week for 4 weeks<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d6cce3ac-5a45-4535-b4a4-14333f8a5949",
+        "8c713ab8-e8fb-492a-8c37-aaaff394503e",
+        "ce38a911-ed4e-4868-a6ac-57fc20d9f625"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "section_id": "#beforeafter",
+        "section_title": "Real users, real results"
+      }
+    },
     "e89b7930-b5f6-4d73-a927-927009449f9c": {
       "type": "global-results-slider",
       "blocks": {
+        "624533e0-d5d6-4df7-a3cc-63b617a3dd81": {
+          "type": "logowidthtext",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2023-08-15T121104.660.png",
+            "brfore_aftertext": true,
+            "contour_text": false
+          }
+        },
         "694d3e56-31bd-4d87-8549-9534bf050238": {
           "type": "logowidthtext",
           "settings": {
@@ -490,6 +559,7 @@
         }
       },
       "block_order": [
+        "624533e0-d5d6-4df7-a3cc-63b617a3dd81",
         "694d3e56-31bd-4d87-8549-9534bf050238",
         "e7d594e3-c4b5-4b64-93aa-dd8c55ea6206",
         "bc4d258a-10f7-4c03-b2cd-ba66bd6ab2e7",
@@ -657,6 +727,7 @@
             "heading_txt": "Proven to naturally reduce fine lines &amp; wrinkles",
             "max_width": 530,
             "txt": "<p>Omnilux stimulates the body’s own natural healing process, creating new collagen and elastin while also reducing the appearance of pigmentation, redness, and sun damage for rejuvenated, plumper skin.<\/p>",
+            "txt_liquid": "",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
@@ -687,6 +758,7 @@
             "heading_txt": "Pro-level skincare that's budget-friendly (and unlimited)",
             "max_width": 530,
             "txt": "<p>Like most professional skin treatments, LED light therapy requires regular sessions to maintain results.<br\/><br\/>For the price of 2 or 3 in-clinic light treatments, you can have your own professional-quality Omnilux device and treat your skin in only 10 minutes, wherever and whenever you like.<\/p>",
+            "txt_liquid": "",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
@@ -825,6 +897,7 @@
     "f371fe0d-7eee-4fed-abc8-0a544ef9495a",
     "09d4042c-e101-486c-bf68-e1c8e4003d5c",
     "17acf862-4edc-467f-a138-fd22f137370c",
+    "bac41891-2933-4177-ad03-8fd4b315f626",
     "e89b7930-b5f6-4d73-a927-927009449f9c",
     "5c299e1a-d5dc-4622-8303-530866fd25b5",
     "305a9c02-a67c-4448-b931-6947cdb1d7dd",

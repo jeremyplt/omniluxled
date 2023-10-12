@@ -146,7 +146,8 @@
               {% endfor %}
               {% if block.settings.btn_txt != blank %}
                 <div class="mt-3">
-                  <a target="_blank" {% if block.settings.btn_link %} href="{{ block.settings.btn_link }}" {% endif %} class="text-decoration-underline">{{ block.settings.btn_txt }}</a>
+                  <a id="faq_fulllist-new" href="#section-faq" class="text-decoration-underline">Click here to see more FAQs</a>
+                  <a id="faq-fulllist-original" target="_blank" {% if block.settings.btn_link %} href="{{ block.settings.btn_link }}" {% endif %} class="text-decoration-underline">{{ block.settings.btn_txt }}</a>
                 </div>
               {% endif %}
             </div>
@@ -164,6 +165,20 @@
           </a>
           <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content">
             <div class="rte pt-3 formatted-list">{{ block.settings.tab_4_content }}</div>
+          </div>
+        </div>
+      {% endif %}
+   {% if block.settings.enable_custom_tab_5 == "true"%}
+        <div class="accordion__container py-3">
+          <a class="accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open {{ block.settings.tab_5_title }}" rel="nofollow" aria-label="Open {{ block.settings.tab_5_title }}" role="button" aria-expanded="false" aria-controls="accordion_customTab5">
+            <span>{{ block.settings.tab_5_title }}</span>
+            <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+              <span class="ox-plus trn"></span>
+              <span class="ox-minus position-absolute trn"></span>
+            </span>
+          </a>
+          <div class="accordion__block toggle-content" id="accordion_customTab5" data-type="content">
+            <div class="rte pt-3 formatted-list">{{ block.settings.tab_5_content }}</div>
           </div>
         </div>
       {% endif %}

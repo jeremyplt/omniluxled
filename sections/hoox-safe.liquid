@@ -1,0 +1,157 @@
+{{ 'hoox-safe.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+    assign hooxSafeBtnUrl = section.settings.hoox_safe_btn_url
+    assign hooxSafeBtnText = section.settings.hoox_safe_btn_text
+    assign hooxSafeGuaranteText = section.settings.hoox_safe_guarante_text
+%}
+
+<section class="hoox-safe bg-green">
+  <div class="l">
+    <div class="hoox-safe__wrapper">
+  {% if section.blocks.size > 0 %}
+    <div class="hoox-safe__items">
+      {% for block in section.blocks %}
+
+        {% liquid
+            assign hooxSafeImage = block.settings.hoox_safe_image
+            assign hooxSafeHeadline = block.settings.hoox_safe_headline
+            assign hooxSafeText = block.settings.hoox_safe_text
+            assign hooxSafeBenefitImage1 = block.settings.hoox_safe_benefit_image1
+            assign hooxSafeBenefitImage2 = block.settings.hoox_safe_benefit_image2
+            assign hooxSafeBenefitImage3 = block.settings.hoox_safe_benefit_image3
+        %}
+
+        <div class="hoox-safe__item">
+          {% if hooxSafeImage %}
+            <figure class="hoox-safe__image">
+              {% render 'snippet-image', image: hooxSafeImage %}
+
+              {% if hooxSafeBenefitImage1 != blank %}
+            <div class='hoox-safe__benefit-images-inner'>
+              {% render 'snippet-image', image: hooxSafeBenefitImage1 %}
+
+              {% if hooxSafeBenefitImage2 %}
+                {% render 'snippet-image', image: hooxSafeBenefitImage2 %}
+              {% endif %}
+
+              {% if hooxSafeBenefitImage3 %}
+                {% render 'snippet-image', image: hooxSafeBenefitImage3 %}
+              {% endif %}
+            </div>
+          {% endif %}
+            </figure>
+          {% endif %}
+
+          {% if hooxSafeHeadline != 'blank' %}
+            <p class="hoox-safe__headline">
+              {{ hooxSafeHeadline }}
+            </p>
+          {% endif %}
+
+          {% if hooxSafeText != 'blank' %}
+            <p class="hoox-safe__text hoox-text-primary">
+              {{ hooxSafeText }}
+            </p>
+          {% endif %}
+
+          {% if hooxSafeBenefitImage1 != blank %}
+            <div class='hoox-safe__benefit-images'>
+              {% render 'snippet-image', image: hooxSafeBenefitImage1 %}
+
+              {% if hooxSafeBenefitImage2 %}
+                {% render 'snippet-image', image: hooxSafeBenefitImage2 %}
+              {% endif %}
+
+              {% if hooxSafeBenefitImage3 %}
+                {% render 'snippet-image', image: hooxSafeBenefitImage3 %}
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if hooxSafeBtnUrl %}
+  <div class="hoox-safe__btn-wrapper">
+    <a
+      href="{{ hooxSafeBtnUrl }}"
+      title="{{ hooxSafeBtnText }}"
+      class="hoox-btn">
+      {{ hooxSafeBtnText }}
+    </a>
+  {% endif %}
+
+  {% if hooxSafeGuaranteText != 'blank' %}
+  <p class="hoox-safe-guarante__text hoox-text-small text-align-center"> 
+  {{ hooxSafeGuaranteText }}</p>
+  </p>
+  {% endif %}
+</div>
+</div>
+</div>
+</section>
+
+{% comment %} Js file {% endcomment %}
+
+{% schema %}
+  {
+    "name": "Hoox Safe",
+    "settings": [
+      {
+        "type": "url",
+        "id": "hoox_safe_btn_url",
+        "label": "Section Button URL"
+      }, {
+        "type": "text",
+        "id": "hoox_safe_btn_text",
+        "label": "Section Button Text"
+      }, {
+        "type": "text",
+        "id": "hoox_safe_guarante_text",
+        "label": "Section Guarante Text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "props",
+        "name": "Safe Props",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "hoox_safe_image",
+            "label": "Section Image"
+          }, {
+            "type": "text",
+            "id": "hoox_safe_headline",
+            "label": "Section Headline"
+          }, {
+            "type": "text",
+            "id": "hoox_safe_text",
+            "label": "Section Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "hoox_safe_benefit_image1",
+            "label": "Benefit Image 1"
+          },
+          {
+            "type": "image_picker",
+            "id": "hoox_safe_benefit_image2",
+            "label": "Benefit Image 2"
+          },
+          {
+            "type": "image_picker",
+            "id": "hoox_safe_benefit_image3",
+            "label": "Benefit Image 3"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hoox Safe"
+      }
+    ]
+  }
+{% endschema %}

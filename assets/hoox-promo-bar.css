@@ -1,0 +1,24 @@
+.hoox-promo-bar {
+    background-color: #99552B;
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hoox-promo-bar__text {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+}
+
+#slide1 {
+    display: none !important;
+}
+
+@media (min-width: 1024px) {
+    .hoox-promo-bar {
+        padding: 10px 0;
+    }
+}

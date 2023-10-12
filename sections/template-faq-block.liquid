@@ -1,30 +1,51 @@
 {% if section.settings.enable %}
-    <section data-section-id="{{ section.id }}"  class="pb-11 section-faq" id="{{ section.settings.heading | handleize }}">
+    <section data-section-id="{{ section.id }}" class="pt-8 section-faq" id="section-faq">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="block-heading">
-                        <h4 class="fw-medium lh-base letter-spacing mb-0">{{ section.settings.heading }}</h4>
-                    </div>
-                    <div data-faq-section>
+                  <div class="block-heading">
+                      <div class="title mb-0 text-center">{{ section.settings.heading }}</div>
+                  </div>
+                  <div class="row justify-content-center mt-10">
+                    <div class="col-12 col-lg-7 col-md-7 mb-5">
+                      <div class="col-12 col-lg-10 col-md-10" data-faq-section>
                         <custom-accordion {{ block.shopify_attributes }} data-accordionType="single">
                             {% for block in section.blocks %}
                                 {% if block.settings.title != blank and block.settings.answer != blank %}
                                     <div>
-                                        <div class="accordion__container border-bottom border-gray-100 py-5">
+                                        <div class="accordion__container border-top border-dark py-3">
                                             <a class="accordion__toggle d-flex align-items-center pe-2 justify-content-between" href="javascript:void(0);" title="Open {{ block.settings.title | strip_html }}" rel="nofollow" aria-label="Open {{ block.settings.title | strip_html }}" role="button" aria-expanded="false" aria-controls="faq-{{ section.settings.heading | handleize }}-{{ forloop.index }}">
-                                                <h6 class="font-size-lg lh-base fw-normal font-family-base letter-spacing mb-0">{{ block.settings.title }}</h6>
-                                                <span class="icon-arrow-down d-block"></span>
+                                                <div class="font-size-lg lh-base fw-medium font-family-base letter-spacing mb-0">{{ block.settings.title }}</div>
+                                                <span class="d-flex justify-content-center align-items-center font-size-xs">
+                                                  <span class="ox-plus trn"></span>
+                                                  <span class="ox-minus position-absolute trn"></span>
+                                                </span>
                                             </a>
                                             <div class="accordion__block toggle-content" id="faq-{{ section.settings.heading | handleize }}-{{ forloop.index }}" data-type="content">
-                                                <div class="fw-light letter-spacing rpt-5 pt-4">{{ block.settings.answer }}</div>
+                                                <div class="ps-2 fw-light fst-italic letter-spacing rpt-5 pt-4">{{ block.settings.answer }}</div>
                                             </div>
                                         </div>
                                     </div>
                                 {% endif %}
                             {% endfor %}
                         </custom-accordion>
+                      </div>
+                      <div class="mt-3 text-start">
+                        <a target="_blank" href="https://omniluxled.com/pages/help-center-products" class="fw-bold text-decoration-underline">Click here to see more FAQs</a>
+                      </div>
                     </div>
+                    <div class="col-12 col-lg-5 col-md-5 mb-5">
+                      <div class="service col-12 col-lg-10 col-md-10">
+                        <h3 class="title mb-3">Have Any Questions?</h3>
+                        <div class="font-style">Chat with our customer support team.</div>
+                        <div class="font-style mb-3">Monday-Sunday 9am to 9pm (PST).</div>
+                        <div class="d-flex mb-3"><a id="gorgias-chat-start" class="d-flex startchat">Start Chat<img class="ms-2" src="{{ 'rocketchat.svg' | asset_url }}"/></a></div> 
+                        <div class="font-style mb-3">You can also contact us via email or phone:</div>
+                        <div class="d-flex font-style align-items-center"><img src="{{ 'envelope.svg' | asset_url }}"/><a class="ms-4" href="mailto:info@omniluxled.com">info@omniluxled.com</a></div>
+                        <div class="d-flex align-items-start font-style mt-3"><img src="{{ 'phone.svg' | asset_url }}"/><span class="ms-4">US/Canada: +1 707.309.7024<br/>International Toll-Free: +1 866.306.2022</span></div>
+                      </div>
+                    </div>                  
+                  </div>
                 </div>
             </div>  
         </div>
@@ -54,12 +75,12 @@
       "name": "FAQ",
       "settings": [
         {
-          "type": "richtext",
+          "type": "liquid",
           "id": "title",
           "label": "Question"
         },
         {
-          "type": "richtext",
+          "type": "liquid",
           "id": "answer",
           "label": "Answer"
         }

@@ -1,6 +1,6 @@
 {%- if section.settings.display_for_this_product == 'true' -%}
 {{ 'global-results-slider.css' | asset_url | stylesheet_tag }}
-<section class="section-content overflow-hidden position-relative global-results-slider {% unless section.settings.autoplay_enable %}global-results-slider-noplay{% endunless %}" data-section-id="{{ section.id }}" style="background: {{ section.settings.section_bg_color }}; color:{{ section.settings.section_text_color }}">
+<section id="section-before-after" class="section-content overflow-hidden position-relative global-results-slider {% unless section.settings.autoplay_enable %}global-results-slider-noplay{% endunless %}" data-section-id="{{ section.id }}" style="background: {{ section.settings.section_bg_color }}; color:{{ section.settings.section_text_color }}">
     {% if section.settings.heading_style == 'heading_style_1' %}
     {% if section.settings.heading_txt != blank %}
     <div class="container mb-4 mb-lg-3 pb-1 pt-1 pt-lg-0">

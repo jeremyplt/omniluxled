@@ -1,0 +1,14 @@
+<div class="column-row-content">
+    {%- if imageCell -%}
+        <figure>
+                {% render 'snippet-image', image: imageCell, imageMobile: imageCellMobile  -%}
+       </figure>
+       {% elsif tableText != blank -%}
+           <p>{{ tableText }}</p>
+        {% elsif tableTickTrue %}
+           {% render 'hoox-snippet-icon-yes' %}
+        {% elsif tableTickNo %}
+            {% render 'hoox-snippet-icon-no' %}
+        {%- endif -%}
+</div>    
+    

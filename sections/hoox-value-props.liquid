@@ -1,0 +1,73 @@
+{{ 'hoox-value-props.css' | asset_url | stylesheet_tag }}
+
+<section class="hoox-value-props">
+  <div class="l">
+  {% if section.blocks.size > 0 %}
+    <div class="hoox-value-props__items">
+      {% for block in section.blocks %}
+        {% liquid
+          assign hooxValuePropsNumber = block.settings.hoox_value_props_number
+          assign hooxValuePropsTitle = block.settings.hoox_value_props_title
+          assign hooxValuePropsText = block.settings.hoox_value_props_text
+        %}
+
+        <div class="hoox-value-props__item">
+          {% if hooxValuePropsNumber != 'blank' %}
+            <p class="hoox-value-props__number">
+              {{ hooxValuePropsNumber }}
+            </p>
+          {% endif %}
+
+          {% if hooxValuePropsTitle != 'blank' %}
+            <h2 class="hoox-value-props__title">
+              {{ hooxValuePropsTitle }}
+            </h2>
+          {% endif %}
+
+          {% if hooxValuePropsText != 'blank' %}
+            <p class="hoox-value-props__text hoox-text-small text-align-center">
+              {{ hooxValuePropsText }}
+            </p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+</section>
+
+{% comment %} Js File {% endcomment %}
+
+{% schema %}
+{
+  "name": "Hoox Value Props",
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "Value Props",
+      "settings": [
+        {
+          "type": "text",
+          "id": "hoox_value_props_number",
+          "label": "Props Number"
+        },
+        {
+          "type": "text",
+          "id": "hoox_value_props_title",
+          "label": "Props Title"
+        },
+        {
+          "type": "text",
+          "id": "hoox_value_props_text",
+          "label": "Props Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hoox Value Props"
+    }
+  ]
+}
+{% endschema %}

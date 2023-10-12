@@ -88,7 +88,7 @@
         "nav_dots": false,
         "nav_dots_right": true,
         "height": "tallheight",
-        "top_padding_zero": true
+        "top_padding_zero": false
       }
     },
     "8f8db248-c389-4867-aa55-f99789a04ceb": {

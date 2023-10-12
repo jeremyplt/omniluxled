@@ -1,0 +1,91 @@
+{{ 'hoox-how-to.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign hooxHowToTitle = section.settings.hoox_how_to_title
+  assign hooxHowToSubtitle = section.settings.hoox_how_to_subtitle
+%}
+
+<section class="hoox-to">
+  <div class="l">
+  {% if hooxHowToTitle != 'blank' %}
+    <h2 class="hoox-how-to__title hoox-title text-align-center">
+      {{ hooxHowToTitle }}
+    </h2>
+  {% endif %}
+
+  {% if hooxHowToSubtitle != 'blank' %}
+    <p class="hoox-how-to__subtitle hoox-text-primary text-align-center">
+      {{ hooxHowToSubtitle }}
+    </p>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="hoox-how-to__items">
+      {% for block in section.blocks %}
+        {% liquid
+          assign hooxHowToImage = block.settings.hoox_how_to_image
+          assign hooxHowToText = block.settings.hoox_how_to_text
+        %}
+
+        <div class="hoox-how-to__item">
+          {% if hooxHowToImage %}
+            <figure class="hoox-how-to__image">
+              {% render 'snippet-image', image: hooxHowToImage %}
+            </figure>
+          {% endif %}
+
+          {% if hooxHowToText != blank %}
+            <p class="hoox-how-to__text hoox-text-primary">
+              <span class='hoox-how-to__index'>{{forloop.index}}.</span>
+              {{ hooxHowToText }}
+            </p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+</section>
+
+{% comment %} Js file {% endcomment %}
+
+{% schema %}
+{
+  "name": "Hoox How To",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hoox_how_to_title",
+      "label": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "hoox_how_to_subtitle",
+      "label": "Section Subtitle"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "How To Props",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "hoox_how_to_image",
+          "label": "Props Image"
+        },
+        {
+          "type": "text",
+          "id": "hoox_how_to_text",
+          "label": "Props Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hoox How To"
+    }
+  ]
+}
+{% endschema %}

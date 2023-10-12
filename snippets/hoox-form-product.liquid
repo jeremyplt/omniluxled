@@ -1,0 +1,415 @@
+<product-form class="product-form{% unless product.has_only_default_variant %} disable-swatches{% endunless %}">
+  {% comment %}theme-check-disable UnusedAssign{% endcomment %}
+  {%- liquid
+    assign purchaseLimit = null
+    if product.tags contains 'purchase-limit-'
+      assign productTags = product.tags | join: ','
+      assign purchaseLimitTag = productTags | split: 'purchase-limit-' | split: ','
+    endif
+  -%}
+  {% comment %}theme-check-enable UnusedAssign{% endcomment %}
+  {% assign min = 65 %}
+  {% assign max = 80 %}
+  {% assign diff = max | minus: min %}
+  {% assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min %}
+  {%- assign product_form_id = 'product-form-' | append: product.id | append: randomNumber -%}
+  {% form 'product',
+    product,
+    data-productid: product.id,
+    id: product_form_id,
+    class: 'mt-4',
+    data-product-form: '',
+    data-product-id: product.id,
+    data-type: 'add-to-cart-form',
+    data-format: format
+  %}
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    {% unless format == 'product-page-buynow' %}
+      <div class="row">
+        {% unless product.has_only_default_variant %}
+          <div class="col-12 d-flex justify-content-between flex-column {% if product.has_only_default_variant %}mt-4 mb-n3{% endif %}">
+            {%- if settings.enable_swatches -%}
+              {%- if template.suffix == 'gift' -%}
+                <variant-selects
+                  class="no-js-hidden"
+                  data-section="{{ section.id }}"
+                  data-url="{{ product.url | within: collection }}"
+                  data-type="variant-select"
+                >
+                  {%- for option in product.options_with_values -%}
+                    <div
+                      class="product-form__input product-form__input--dropdown mb-4"
+                      data-optionindex="{{ forloop.index }}"
+                    >
+                      <!--
+                        <label class="fw-medium text-uppercase font-size-sm mb-2" for="Option-{{ section.id }}-{{ forloop.index0 }}" title="{{ option.selected_value }}">
+                          {{ option.name }}: <span class="selected-option">{{ option.selected_value }}</span>
+                        </label>
+                      -->
+                      <div class="select">
+                        <select
+                          id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                          class="form-select variant_selector"
+                          name="options[{{ option.name | escape }}]"
+                          form="product-form-{{ product.id }}"
+                        >
+                          {%- for value in option.values -%}
+                            <option
+                              value="{{ value | escape }}"
+                              {% if option.selected_value == value %}
+                                selected="selected"
+                              {% endif %}
+                            >
+                              {{ value }}
+                            </option>
+                          {%- endfor -%}
+                        </select>
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                </variant-selects>
+              {%- else -%}
+                <variant-radios
+                  class="no-js-hidden"
+                  data-section="{{ section.id }}"
+                  data-url="{{ product.url | within: collection }}"
+                  data-type="variant-radios"
+                >
+                  {%- for option in product.options_with_values -%}
+                    <fieldset
+                      class="js product-form__input mb-0 {% if option.name == 'Color' or option.name == 'color' %}color-swatch{% endif %}"
+                      data-optionindex="{{ forloop.index }}"
+                    >
+                      <legend class="form__label fw-medium text-uppercase font-size-sm mb-2">
+                        {{ option.name }}: <span class="selected-option">{{ option.selected_value }}</span>
+                      </legend>
+                      <ul class="list-unstyled d-flex m-n1 flex-wrap py-0">
+                        {%- for value in option.values -%}
+                          {%- capture swatchID -%}swatch-{{ product.id }}{% if format %}-{{ format }}{% endif %}-{{ option.name | handleize }}-{{ value | handleize }}{%- endcapture -%}
+                          <li class="p-1">
+                            <div class="swatch {% if option.name == 'Color' or option.name == 'color' %}color-swatch{% endif %}">
+                              <input
+                                type="radio"
+                                class="form-control"
+                                id="{{ swatchID }}"
+                                name="{{ option.name }}"
+                                value="{{ value | escape }}"
+                                {% if option.selected_value == value %}
+                                  checked
+                                {% endif %}
+                                data-handle="{{ value | handle }}"
+                              >
+                              <label
+                                class="form-label swatch-label {{ value }}"
+                                for="{{ swatchID }}"
+                                title="{{ value }}"
+                              >
+                                {% unless option.name == 'Color' or option.name == 'color' %}
+                                  {{ value }}
+                                {% endunless %}
+                              </label>
+                            </div>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    </fieldset>
+                  {%- endfor -%}
+                </variant-radios>
+              {%- endif -%}
+            {%- else -%}
+              <variant-selects
+                class="no-js-hidden"
+                data-section="{{ section.id }}"
+                data-url="{{ product.url | within: collection }}"
+                data-type="variant-select"
+              >
+                {%- for option in product.options_with_values -%}
+                  <div
+                    class="product-form__input product-form__input--dropdown mb-4"
+                    data-optionindex="{{ forloop.index }}"
+                  >
+                    <label
+                      class="fw-medium text-uppercase font-size-sm mb-2"
+                      for="Option-{{ section.id }}-{{ forloop.index0 }}"
+                      title="{{ option.selected_value }}"
+                    >
+                      {{ option.name }}: <span class="selected-option">{{ option.selected_value }}</span>
+                    </label>
+                    <div class="select">
+                      <select
+                        id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                        class="form-select variant_selector"
+                        name="options[{{ option.name | escape }}]"
+                        form="product-form-{{ product.id }}"
+                      >
+                        {%- for value in option.values -%}
+                          <option
+                            value="{{ value | escape }}"
+                            {% if option.selected_value == value %}
+                              selected="selected"
+                            {% endif %}
+                          >
+                            {{ value }}
+                          </option>
+                        {%- endfor -%}
+                      </select>
+                    </div>
+                  </div>
+                {%- endfor -%}
+              </variant-selects>
+            {%- endif -%}
+          </div>
+        {% endunless %}
+      </div>
+    {%- endunless -%}
+    {% comment %} DEFAULT HIDDEN OPTIONS SELECT {% endcomment %}
+    {% comment %} DO NOT REMOVE THIS {% endcomment %}
+    <noscript>
+      <div class="row {% if product.has_only_default_variant %}d-none{% endif %}">
+        <div class="col">
+          <select name="id" data-productid="{{ product.id }}">
+            {% for variant in product.variants %}
+              <option
+                data-sku="{{ variant.sku }}"
+                data-product-id="{{ product.id }}"
+                data-variant-id="{{ variant.id }}"
+                value="{{ variant.id }}"
+                {% if variant.available == false %}
+                  disabled
+                {% endif %}
+              >
+                {{ variant.title }}
+                {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %} -
+                {{ variant.price | money_with_currency }}
+              </option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+    </noscript>
+
+    <div class='hoox-shop__atc-wrapper'>
+      <div class="pe-0">
+        {% unless product.id == 7991999987874 -%}
+          <div class="quantity-wrapper mb-0 h-100" data-qty-container>
+            <div class="input-group h-100">
+              <div class="input-group-prepend">
+                <span
+                  class="input-group-text cursor-pointer"
+                  rel="nofollow"
+                  aria-label="{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}"
+                  title="{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}"
+                  data-for="decrease"
+                  data-qty-btn
+                >
+                  <span class="btn-decrease"><span class="ox-minus"></span></span>
+                  <span class="visually-hidden">
+                    {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
+                  </span>
+                </span>
+              </div>
+              <input
+                type="number"
+                name="quantity"
+                aria-label="{{ 'products.product.quantity.input_label' | t: product: product.title | escape }}"
+                value="1"
+                step="1"
+                min="1"
+                inputmode="numeric"
+                data-qty-input
+                class="quantity form-control text-center"
+              >
+              <div class="input-group-append">
+                <span
+                  class="input-group-text cursor-pointer"
+                  rel="nofollow"
+                  aria-label="{{ 'products.product.quantity.increase' | t: product: product.title | escape }}"
+                  title="{{ 'products.product.quantity.increase' | t: product: product.title | escape }}"
+                  data-for="increase"
+                  data-qty-btn
+                >
+                  <span class="btn-increase"><span class="ox-plus"></span></span>
+                  <span class="visually-hidden">
+                    {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        {% endunless %}
+      </div>
+      <div class="d-flex hoox-shop__atc-button">
+        {% assign prefixes = 'us,uk,ca,au,eu,nz' | split: ',' %}
+        {% unless product.id == 7991999987874 -%}
+          <button
+            class="addtocartbtn data-submit-btn btn btn-primary flex-grow-1 px-2 product-add-cart  hoox-js-atc-button {% if product.tags contains 'providers' %}disabled{% endif %}"
+            type="submit"
+            name="add"
+            aria-label="{{ 'products.product.add_to_cart' | t | escape }} - {{ current_variant.price}}"
+            {% unless current_variant.available %}
+              disabled
+            {% endunless %}
+            {% for prefix in prefixes %}
+              {% assign key_preorder = prefix | append: '_preorder' %}
+              {% assign data_preorder = product.metafields.custom[key_preorder] %}
+              {% assign key_product_page_messaging = prefix | append: '_product_page_messaging' %}
+              {% assign data_product_page_messaging = product.metafields.custom[key_product_page_messaging] %}
+
+              {% assign key_coming_soon = prefix | append: '_add_coming_soon_tag' %}
+              {% assign data_coming_soon = product.metafields.custom[key_coming_soon] %}
+
+              data-{{ key_preorder }}="{{ data_preorder }}"
+              data-{{ key_product_page_messaging }}="{{ data_product_page_messaging }}"
+              data-{{ key_coming_soon }}="{{ data_coming_soon }}"
+            {% endfor %}
+          >
+            {% comment %} <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
+            <span class="add-text">
+              {%- if current_variant.available -%}
+                {% if flag == true %}
+                  GO TO PURCHASE ORDER
+                {% else %}
+                  {{ 'products.product.add_to_cart' | t }}
+                  {%- if current_variant.compare_at_price > current_variant.price -%}
+                    <span class="text-gray-600">$</span
+                    ><span class="text-gray-600 money hoox-js-price-compare" data-comparePrice>
+                      {{- current_variant.compare_at_price | currency_without_money -}}
+                    </span>
+                  {%- endif -%}
+                  - $<span class="hoox-js-price actual-price money">
+                    {{- current_variant.price | currency_without_money -}}
+                  </span>
+                {% endif %}
+              {%- else -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- endif -%}
+            </span>
+            <span class="spinner"></span>
+          </button>
+        {%- endunless %}
+
+        {% comment %}
+           Dynamic Checkout Button
+          {% if section.settings.enable_dynamic_checkout %}
+              <div class="mt-2">{{ form | payment_button }}</div>
+          {% endif %}
+        {% endcomment %}
+      </div>
+      {% comment %} <div class="col-12 d-flex wishlist-button-bar-wrap">
+        <!-- Swym button on product pages -->
+        <div class="swym-wishlist-button-bar"></div>
+        <!-- Swym button on product pages -->
+      </div> {% endcomment %}
+    </div>
+
+    <script class="variantsJSON-{{ product.id }}" data-variantJSON type="application/json">
+      {{ product.variants | json }}
+    </script>
+  {% endform %}
+</product-form>
+<div id="delm-app"></div>
+
+<product-form>
+  {% form 'product',
+    product,
+    data-productid: product.id,
+    id: product_form_id,
+    class: 'mt-4',
+    data-product-form: '',
+    data-product-id: product.id,
+    data-type: 'add-to-cart-form',
+    data-format: format
+  %}
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+    <div class="product-sticky-btn d-none w-100" data-stickyBtn>
+      <div class="d-flex mx-auto">
+        <div class="col-auto" style="min-width: 134px;max-width: 134px;padding-right: 10px;">
+          <div class="quantity-wrapper mb-0 h-100" data-qty-container>
+            <div class="input-group h-100">
+              <div class="input-group-prepend">
+                <span
+                  class="input-group-text cursor-pointer"
+                  rel="nofollow"
+                  aria-label="{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}"
+                  title="{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}"
+                  data-for="decrease"
+                  data-qty-btn
+                >
+                  <span class="btn-decrease"><span class="ox-minus"></span></span>
+                  <span class="visually-hidden">
+                    {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
+                  </span>
+                </span>
+              </div>
+              <input
+                type="number"
+                name="quantity"
+                aria-label="{{ 'products.product.quantity.input_label' | t: product: product.title | escape }}"
+                value="1"
+                step="1"
+                min="1"
+                inputmode="numeric"
+                data-qty-input
+                class="quantity form-control text-center"
+              >
+              <div class="input-group-append">
+                <span
+                  class="input-group-text cursor-pointer"
+                  rel="nofollow"
+                  aria-label="{{ 'products.product.quantity.increase' | t: product: product.title | escape }}"
+                  title="{{ 'products.product.quantity.increase' | t: product: product.title | escape }}"
+                  data-for="increase"
+                  data-qty-btn
+                >
+                  <span class="btn-increase"><span class="ox-plus"></span></span>
+                  <span class="visually-hidden">
+                    {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% assign prefixes = 'us,uk,ca,au,eu,nz' | split: ',' %}
+        <button
+          class="addtocartbtn data-submit-btn btn btn-primary flex-grow-1 px-2 product-add-cart {% if product.tags contains 'providers' %}disabled{% endif %}"
+          type="submit"
+          name="add"
+          aria-label="{{ 'products.product.add_to_cart' | t | escape }}"
+          {% unless current_variant.available %}
+            disabled
+          {% endunless %}
+          {% for prefix in prefixes %}
+            {% assign key_preorder = prefix | append: '_preorder' %}
+            {% assign data_preorder = product.metafields.custom[key_preorder] %}
+            {% assign key_product_page_messaging = prefix | append: '_product_page_messaging' %}
+            {% assign data_product_page_messaging = product.metafields.custom[key_product_page_messaging] %}
+
+            {% assign key_coming_soon = prefix | append: '_add_coming_soon_tag' %}
+            {% assign data_coming_soon = product.metafields.custom[key_coming_soon] %}
+
+            data-{{ key_preorder }}="{{ data_preorder }}"
+            data-{{ key_product_page_messaging }}="{{ data_product_page_messaging }}"
+            data-{{ key_coming_soon }}="{{ data_coming_soon }}"
+          {% endfor %}
+        >
+          {% comment %} <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
+          <span class="add-text">
+            {%- if current_variant.available -%}
+              {% if flag == true %}
+                GO TO PURCHASE ORDER
+              {% else %}
+                {{ 'products.product.add_to_cart' | t }}
+              {% endif %}
+            {%- else -%}
+              {{ 'products.product.sold_out' | t }}
+            {%- endif -%}
+          </span>
+          <span class="spinner"></span>
+        </button>
+      </div>
+    </div>
+    <div data-product-preorder-message class="my-2"></div>
+  {% endform %}
+</product-form>

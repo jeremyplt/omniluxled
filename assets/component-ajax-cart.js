@@ -20,6 +20,7 @@ class AjaxCart extends HTMLElement {
     if (window.globalVariables.template != "cart") {
       this.addAccessibilityAttributes(this.openeBy);      
     } else {
+      window.location.href = window.location.origin
       this.style.visibility = "visible";
     }
 
@@ -186,7 +187,7 @@ class AjaxCart extends HTMLElement {
     } else {
       let priceString = priceElement.innerHTML.replace(/\s+/g, '').replace(',', '').replace(change, '')
       priceString = priceString.slice(1, priceString.length);
-      price = parseInt(priceString)  
+      price = parseInt(priceString)
     }
 
     price = price * (1 + this.taxPercent / 100);
@@ -235,12 +236,41 @@ class AjaxCart extends HTMLElement {
     if (cartJSONEle != undefined && cartJSONEle != null) {
       window.globalVariables.cart = JSON.parse(cartJSONEle.textContent);
     }
-
+    
     let cartElement = cartHTML.querySelector("ajax-cart form");
     this.querySelector("form").innerHTML = cartElement.innerHTML;
 
-    let total_price = window.globalVariables.cart.total_price;
+    let total_price = 0;
+    let cartItems = this.querySelectorAll("[data-cart-item]");
+    cartItems.forEach((element) => {      
+      let productId = element.getAttribute("data-product-id")
 
+      window.globalVariables.cart.items.forEach((item) => {
+        if (item.product_id == productId) {
+          let variantJSONEle = document.querySelector(".variantsJSON-" + productId);
+          if (variantJSONEle != undefined && variantJSONEle != null) {
+            let variantJSON = JSON.parse(variantJSONEle.textContent);
+            let itemTotalPrice = variantJSON[0].price * item.quantity;
+            total_price += itemTotalPrice;
+
+            if(this.taxPercent > 0) {
+              itemTotalPrice = itemTotalPrice * (1 + this.taxPercent / 100);
+            }
+  
+            let formatMoney = Shopify.formatMoney(
+              itemTotalPrice,
+              window.globalVariables.money_format
+            );
+  
+            if(this.taxPercent > 0)
+              element.getElementsByClassName("price")[0].innerHTML = formatMoney + " Incl. tax"
+            else
+              element.getElementsByClassName("price")[0].innerHTML = formatMoney
+          }          
+        }
+      });
+    });
+   
     if(this.taxPercent > 0) {
       let preTaxElement = document.getElementById("preTax");
       preTaxElement.classList.add("d-flex");  
@@ -261,31 +291,6 @@ class AjaxCart extends HTMLElement {
       total_price,
       window.globalVariables.money_format
     );
-
-    let cartItems = this.querySelectorAll("[data-cart-item]");
-    cartItems.forEach((element) => {      
-      let productId = element.getAttribute("data-product-id")
-
-      window.globalVariables.cart.items.forEach((item) => {
-        if (item.product_id == productId) {
-          let itemTotalPrice = item.price * item.quantity;
-
-          if(this.taxPercent > 0) {
-            itemTotalPrice = itemTotalPrice * (1 + this.taxPercent / 100);
-          }
-
-          let formatMoney = Shopify.formatMoney(
-            itemTotalPrice,
-            window.globalVariables.money_format
-          );
-
-          if(this.taxPercent > 0)
-            element.getElementsByClassName("price")[0].innerHTML = formatMoney + " Incl. tax"
-          else
-            element.getElementsByClassName("price")[0].innerHTML = formatMoney
-        }
-      });
-    });
 
     if(this.taxPercent > 0) {
       let navProductItems = document.querySelectorAll("[data-nav-menu-product-id]");

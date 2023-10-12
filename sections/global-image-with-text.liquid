@@ -46,6 +46,9 @@
                         {% if block.settings.txt != blank %}
                             <div class="{% if block.settings.btn_txt != blank or block.settings.btn_txt_watch != blank or block.settings.triggerbtn_txt != blank or   block.settings.steps_captions != blank or block.settings.step_heading != blank or block.settings.steps_captions_2 != blank %}img-block-wrap pb-2 mb-1{% else %}mb-n3 pb-0{% endif %}">{{ block.settings.txt }}</div>
                         {% endif %}
+             {% if block.settings.txt_liquid != blank %}
+                            <div class="{% if block.settings.btn_txt != blank or block.settings.btn_txt_watch != blank or block.settings.triggerbtn_txt != blank or   block.settings.steps_captions != blank or block.settings.step_heading != blank or block.settings.steps_captions_2 != blank %}img-block-wrap pb-2 mb-1{% else %}mb-n3 pb-0{% endif %}">{{ block.settings.txt_liquid }}</div>
+                        {% endif %}
                         {% if block.settings.step_heading != blank %}
                             <p class="mb-2 mb-md-3 ">{{ block.settings.step_heading }}</p>
                         {% endif %}
@@ -202,6 +205,11 @@
           "type": "richtext",
           "id": "txt",
           "label": "Text"
+        },
+         {
+          "type": "liquid",
+          "id": "txt_liquid",
+          "label": "Text (Liquid)"
         },
         {
           "type": "text",

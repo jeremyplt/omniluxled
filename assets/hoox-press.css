@@ -1,0 +1,135 @@
+.hoox-press {
+    background: var(--hoox-color-blue);
+    padding: 48px 0;
+    overflow: hidden;
+}
+
+.hoox-press__title {
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.hoox-press__items {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hoox-press__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.hoox-press__items .c-image {
+    max-height: 54px;
+    object-fit: contain;
+    max-width: fit-content;
+}
+
+@keyframes loop-marquee {
+    0% {
+        transform: translate3d(-100%, 0, 0); /* Start with the same state as the end */
+        visibility: visible;
+    }
+
+    100% {
+        transform: translate3d(-200%, 0, 0); /* Move it further for looping */
+    }
+}
+
+@media (min-width: 768px) {
+    .hoox-press {
+        padding: 48px 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .hoox-press__content {
+        position: relative;
+        height: 40px;
+        padding: 0;
+        overflow: visible;
+    }
+
+    .loop-trust-animation {
+        width: 100%;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        z-index: 1;
+        height: 40px;
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: unset;
+        gap: 3rem;
+    }
+
+    .hoox-press__wrapper {
+        height: 100%;
+        line-height: 1;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        animation: loop-marquee 40s linear infinite; /* Adjusted duration */
+        transform: translate3d(0, 0, 0); /* Added this to reset initial position */
+    }
+}
+
+@media (min-width: 1024px) {
+    .hoox-press__title {
+        margin-bottom: 0;
+    }
+
+    .hoox-press {
+        padding: 80px 0;
+    }
+
+    .hoox-press__wrapper {
+        display: none;
+    }
+
+    .hoox-press__content-wrapper {
+        flex-direction: row;
+        gap: 42px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hoox-press__wrapper:first-of-type {
+        display: block;
+    }
+
+    .hoox-press__content {
+        width: fit-content;
+    }
+
+    .hoox-press .hoox-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .hoox-press__items {
+        gap: 36px;
+    }
+
+    .hoox-press__content::before,
+    .hoox-press__content::after {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hoox-press__items {
+        gap: 39px;
+    }
+}

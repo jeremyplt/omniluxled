@@ -189,6 +189,9 @@
     {
         display: inline;
     }
+  .header-slider .container-fluid.aos-init {
+    padding: 0px 20px 20px 20px !important;
+}
 }
 @media (max-width:490px) and (min-width:390px)
 {

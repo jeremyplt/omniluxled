@@ -1,0 +1,102 @@
+{{ 'hoox-studies.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign hooxStudiesTitle = section.settings.hoox_studies_title
+  assign hooxStudiesSubtitle = section.settings.hoox_studies_subtitle
+  assign hooxStudiesImage = section.settings.hoox_studies_image
+%}
+
+<section class="hoox-studies">
+  <div class="l">
+    <div class="hoox-studies__wrapper">
+      <figure class="hoox-studies__image">
+        {% render 'snippet-image', image: hooxStudiesImage %}
+      </figure>
+      <div class="hoox-studies__main">
+        <h2 class="hoox-studies__title hoox-title">
+          {{ hooxStudiesTitle }}
+        </h2>
+        <p class="hoox-studies__subtitle hoox-text-primary">
+          {{ hooxStudiesSubtitle }}
+        </p>
+      
+  {% if section.blocks.size > 0 %}
+    <div class="hoox-studies__items">
+      {% for block in section.blocks %}
+        {% liquid
+          assign hooxProgressBarTitle = block.settings.hoox_progress_bar_title
+          assign hooxProgressBarRange = block.settings.hoox_progress_bar_range
+        %}
+
+        <div class="hoox-studies__item">
+          <div class="hoox-studies__range">
+            {% if hooxProgressBarTitle != 'blank' %}
+              <div class="hoox-studies__range-box">
+                <div class="hoox-studies__background" style="width:{{ hooxProgressBarRange }}%;"><h3 class="hoox-studies__range-title">{{ hooxProgressBarTitle }}</h3></div>
+              </div>
+
+              <p class="hoox-studies__percentage">{{ hooxProgressBarRange }}%</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+</div>
+</div>
+</section>
+
+{% comment %} Js file {% endcomment %}
+
+{% schema %}
+{
+  "name": "Hoox Studies",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hoox_studies_title",
+      "label": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "hoox_studies_subtitle",
+      "label": "Section Subtitle"
+    },
+    {
+      "type": "image_picker",
+      "id": "hoox_studies_image",
+      "label": "Section Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "Studies Progress Bar",
+      "settings": [
+        {
+          "type": "text",
+          "id": "hoox_progress_bar_title",
+          "label": "Studies Progress Bar Title"
+        },
+        {
+          "type": "range",
+          "id": "hoox_progress_bar_range",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 0,
+          "label": "Studies Progress Bar Percentage"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hoox Studies"
+    }
+  ]
+}
+{% endschema %}
+

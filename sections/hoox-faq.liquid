@@ -1,0 +1,64 @@
+{{ 'hoox-faq.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign hooxFaqTitle = section.settings.hoox_faq_title
+%}
+
+<section class="hoox-faq">
+  <div class="l">
+    {% if hooxFaqTitle != 'blank' %}
+      <h2 class="hoox-faq__title">
+        {{ hooxFaqTitle }}
+      </h2>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="hoox-faq__items hoox-js-accordions">
+        {% for block in section.blocks %}
+          {% liquid
+            assign hooxFaqQuestion = block.settings.hoox_faq_question
+            assign hooxFaqAnswer = block.settings.hoox_faq_answer
+          %}
+          {% render 'hoox-accordion', hooxFaqQuestion: hooxFaqQuestion, hooxFaqAnswer: hooxFaqAnswer %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script src="{{ 'hoox-faq.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+  {
+    "name": "Hoox Faq",
+    "settings": [
+      {
+        "type": "text",
+        "id": "hoox_faq_title",
+        "label": "Section Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "faq",
+        "name": "Faq Questions",
+        "settings": [
+          {
+            "type": "text",
+            "id": "hoox_faq_question",
+            "label": "Faq Question"
+          }, {
+            "type": "textarea",
+            "id": "hoox_faq_answer",
+            "label": "Faq Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hoox Faq"
+      }
+    ]
+  }
+{% endschema %}

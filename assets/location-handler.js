@@ -8,29 +8,22 @@ class LocationHandler {
   }
 
   async locationHandler() {
-    fetch(`https://ipapi.co/json/`)
-      .then((response) => response.json())
-      .then((data) => {
-        const continent = data?.continent_code.toLowerCase();
-        const country = data?.country_tld.replace('.', '');
+    const country = localStorage.getItem('country') || 'United States';
 
-        let prefix = '';
-        if (['us', 'uk', 'ca', 'au', 'nz'].includes(country)) {
-          prefix = country;
-        } else if (continent === 'eu') {
-          prefix = continent;
-        }
+    const prefixMap = {
+      'United States': 'us',
+      'United Kingdon': 'uk',
+      'Canada': 'ca',
+      'Australia': 'au',
+      'New Zealand': 'nz',
+    }
 
-        if (prefix) {
-          this.pdp(prefix);
-          this.cart(prefix);
-        } else {
-          console.log('We are not shipping to your location.');
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    const prefix = prefixMap[country] || 'eu'
+
+    console.log(prefix)
+
+    this.pdp(prefix)
+    this.cart(prefix)
   }
 
   cart(prefix) {

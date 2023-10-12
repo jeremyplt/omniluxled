@@ -102,6 +102,14 @@
     "account_disable": "Account disabled.",
     "account_invited": "Account Invited.",
     "account_declined": "Account declined.",
+    "shop_newsletter_checkbox": true,
+    "shop_product_newsletter_text": "Sign up for exclusive skincare offers.",
+    "shop_product_newsletter_heading": "Want TO SAVE 10% TODAY?",
+    "shop_product_newsletter_success_heading": "You’re in!",
+    "email_placeholder": "Enter your email",
+    "shop_product_newsletter_disclaimer": "*Applies to first-time customers*",
+    "newsletter_success_msg": "<span>Use Code: <strong>WELCOME10<\/strong> for <strong>10% OFF<\/strong><\/span>",
+    "newsletter_error_msg": "You have entered an invalid email address. Please try again.",
     "checkout_logo_image": "shopify:\/\/shop_images\/OmniLux_Logo.png",
     "checkout_accent_color": "#000000",
     "checkout_button_color": "#000000",
@@ -202,6 +210,9 @@
       },
       "footer": {
         "type": "footer",
+        "custom_css": [
+
+        ],
         "settings": {
           "fluid_footer": false,
           "footer_top_bg_color": "rgba(0,0,0,0)",
@@ -1065,6 +1076,12 @@
         "type": "search-layer",
         "settings": {
         }
+      },
+      "hoox-promo-bar": {
+        "type": "hoox-promo-bar",
+        "settings": {
+          "promo_text": "SAVE 10% + GET FREE SHIPPING TODAY"
+        }
       }
     },
     "content_for_index": [
@@ -1115,5 +1132,12 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "body .accessibility-trigger.aioa-small-icon button {width: 60px !important; height: 60px !important; margin: 7px 10px;}",
+      "body .accessibility-trigger.aioa-small-icon button img {width: 50px !important; height: 50px !important;}",
+      "@media screen and (max-width: 992px) {body .accessibility-trigger.aioa-small-icon button {width: 50px !important; height: 50px !important; }}"
+    ]
   }
 }

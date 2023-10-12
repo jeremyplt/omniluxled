@@ -15,7 +15,7 @@
         {%- if settings.enable_search -%}
         <search-modal class="header__search d-block position-static">
             <div class="searchform">
-              <div class="search-modal modal__content bg-white" role="dialog" aria-modal="true" aria-label="{{ 'general.search.placeholder' | t }}">
+              <div class="search-modal modal__content bg-white" aria-label="{{ 'general.search.placeholder' | t }}">
                 
                   <div class="search-modal__content" tabindex="-1">
                     <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
@@ -148,7 +148,7 @@
                                                                                 {% elsif product.compare_at_price > product.price %}
                                                                                   <s class="fs-smal price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
                                                             {% endif %}
-                                                            <span class="price product-price" data-currentPrice>
+                                                            <span class="price product-price" data-currentPrice data-variant-price="{% if current_variant %}{{current_variant.price}}{% else %}{{current_product.price}}{% endif %}">
                                                             {% if current_variant %}
                                                             {{ current_variant.price | money }}
                                                             {% elsif current_product.price_varies %}

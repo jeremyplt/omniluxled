@@ -1,0 +1,115 @@
+{{ 'hoox-treatment.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign section_title = section.settings.section_title
+  assign section_subtitle = section.settings.section_subtitle
+  assign section_corner_text= section.settings.section_corner_text
+  assign section_bg_image = section.settings.bg_image
+  assign section_bg_image_mobile = section.settings.bg_image_mobile
+  assign bullet_svg = section.settings.bullet_svg
+  assign bullet_svg_mobile = section.settings.bullet_svg_mobile
+
+%}
+
+{% if section.blocks.size > 0 %}
+  <section class="hoox-treatment">
+    <div class="l">
+      {% if section_bg_image != blank %}
+        <figure class="hoox-treatment__media">
+          {% render 'hoox-snippet-image', image: section_bg_image imageMobile: section_bg_image_mobile %}
+        </figure>
+      {% endif %}
+      <header class="hoox-treatment__header">
+        {% if section_title != blank %}
+          <h2 class="hoox-treatment__title hoox-title-primary">{{ section_title }}</h2>
+        {% endif %}
+        {% if section_subtitle != blank %}
+          <p class="hoox-treatment__subtitle hoox-text-primary">{{ section_subtitle }}</p>
+        {% endif %}
+      </header>
+
+      <div class="hoox-treatment__wrapper">
+
+        <div class="hoox-treatment__svg-desktop">
+          {{ bullet_svg }}
+        </div>
+        <div class="hoox-treatment__svg-mobile">
+          {{ bullet_svg_mobile }}
+        </div>
+        <div class="hoox-treatment__bullets">
+          {% for block in section.blocks %}
+            {% liquid
+              assign bullet_text = block.settings.bullet_text
+            %}
+            <div class="hoox-treatment__bullet hoox-treatment__bullet-{{forloop.index}}">
+              <div class="hoox-treatment__bullet-text">
+                {{ bullet_text }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% if section_corner_text != blank %}
+        <p class="hoox-treatment__corner-text hoox-text-primary">{{ section_corner_text }}</p>
+      {% endif %}
+    </div>
+  </section>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Hoox Treatment",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "section_subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "section_corner_text",
+        "label": "Corner text"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background image"
+      }, {
+        "type": "image_picker",
+        "id": "bg_image_mobile",
+        "label": "Background image mobile"
+      }, {
+        "type": "textarea",
+        "id": "bullet_svg",
+        "label": "SVG arrows desktop"
+      }, {
+        "type": "textarea",
+        "id": "bullet_svg_mobile",
+        "label": "SVG arrows mobile"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "description",
+        "name": "Product description",
+        "settings": [
+          {
+            "type": "text",
+            "id": "bullet_text",
+            "label": "Product description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hoox Professional-Grade Treatment"
+      }
+    ]
+  }
+{% endschema %}

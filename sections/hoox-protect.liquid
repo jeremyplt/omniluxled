@@ -1,0 +1,93 @@
+{{ 'hoox-protect.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign hooxProtectImage = section.settings.hoox_protect_image
+  assign hooxProtectImageMobile = section.settings.hoox_protect_image_mobile
+  assign hooxProtectTitle = section.settings.hoox_protect_title
+  assign hooxProtectBtnUrl = section.settings.hoox_protect_btn_url
+  assign hooxProtectBtnText = section.settings.hoox_protect_btn_text
+  assign hooxProtectShipping = section.settings.hoox_protect_shipping
+%}
+
+<section class="hoox-protect">
+  <div class="hoox-protect__wrapper">
+    {% if hooxProtectImage %}
+      <figure class="hoox-protect__image">
+        {% render 'snippet-image' 
+         , image: hooxProtectImage,
+         imageMobile: hooxProtectImageMobile,
+         class: 'hoox-image' %}
+      </figure>
+    {% endif %}
+
+    <div class="l">
+      <div class="hoox-protect__content-wrapper">
+        {% if hooxProtectTitle != 'blank' %}
+          <h2 class="hoox-protect__title hoox-title text-white">
+            {{ hooxProtectTitle }}
+          </h2>
+        {% endif %}
+
+        {%- if hooxProtectBtnUrl -%}
+          <div class="hoox-hero__btn">
+            <a
+              href="{{ hooxProtectBtnUrl }}"
+              title="{{ hooxProtectBtnText }}"
+              class="hoox-btn">
+              {{- hooxProtectBtnText -}}
+            </a>
+          </div>
+        {%- endif -%}
+
+        {% if hooxProtectShipping != 'blank' %}
+          <p class="hoox-protect__shipping hoox-text-small text-white">
+            {{ hooxProtectShipping }}
+          </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %} Js file {% endcomment %}
+
+{% schema %}
+  {
+    "name": "Hoox Protect",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "hoox_protect_image",
+        "label": "Section Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "hoox_protect_image_mobile",
+        "label": "Section Image Mobile"
+      },
+      {
+        "type": "text",
+        "id": "hoox_protect_title",
+        "label": "Section Title"
+      },
+      {
+        "type": "url",
+        "id": "hoox_protect_btn_url",
+        "label": "Section Button Url"
+      }, {
+        "type": "text",
+        "id": "hoox_protect_btn_text",
+        "label": "Section Button Text"
+      }, {
+        "type": "text",
+        "id": "hoox_protect_shipping",
+        "label": "Section Shipping Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hoox Protect"
+      }
+    ]
+  }
+{% endschema %}

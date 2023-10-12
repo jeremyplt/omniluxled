@@ -1,0 +1,486 @@
+<link
+  rel="stylesheet"
+  href="{{ 'lead-board-experts-slider.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'">
+{{ 'hoox-shop.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign shopProduct = all_products[section.settings.shop_product]
+  assign current_variant = shopProduct.selected_or_first_available_variant
+  assign shopProductReviewIcon = section.settings.shop_product_review_icon
+  assign shopProductReviewText = section.settings.shop_product_review_text
+  assign shopProductTitle = shopProduct.title
+  assign shopProductDescription = section.settings.shop_product_description
+  if shopProductDescription != blank
+    assign shopProductDescription = section.settings.shop_product_description
+  else
+    assign shopProductDescription = shopProduct.description
+  endif
+  assign shopVideoTriggerText = section.settings.shop_product_video_trigger_text
+  assign shopProductVideoPoster = section.settings.shop_product_video_poster
+
+  assign shopProductNewsletterText = settings.shop_product_newsletter_text
+  assign shopProductNewsletterHeading = settings.shop_product_newsletter_heading
+  assign shopProductNewsletterButtonText = settings.shop_product_newsletter_button_text
+  assign shopProductNewsletterSuccess = settings.shop_product_newsletter_success
+  assign shopProductNewsletterHeadingSuccess = settings.shop_product_newsletter_success_heading
+  assign shopProductNewsletterDisclaimer = settings.shop_product_newsletter_disclaimer
+
+  assign shopProductUpsellTitle = section.settings.shop_product_upsell_title
+  assign shopUpsellProduct = all_products[section.settings.shop_product_upsell]
+  assign upsell_current_variant = shopUpsellProduct.selected_or_first_available_variant
+  assign shopUpsellProductImage = section.settings.shop_product_upsell_image
+  if shopUpsellProductImage != blank
+    assign shopUpsellProductImage = section.settings.form_success_message
+  else
+    assign shopUpsellProductImage = shopUpsellProduct.featured_image
+  endif
+  assign shopUpsellProductTitle = shopUpsellProduct.title
+  assign shopUpsellProductStars = section.settings.shop_product_upsell_stars
+
+  assign newsletterEmailPlaceholder = settings.email_placeholder
+  assign newsletterSuccessMessage = settings.newsletter_success_msg
+  assign newsletterErrorMessage = settings.newsletter_error_msg
+
+  assign newsletterCheckbox = settings.shop_newsletter_checkbox
+  assign shop_gallery_bagde = section.settings.shop_gallery_bagde
+
+  assign videoURL = section.settings.shop_product_video_src
+  
+%}
+
+{% if section.settings.shop_product != blank %}
+  <section class="hoox-shop" id="hoox-shop">
+    <div class="l">
+      <div class="hoox-shop__container">
+        <div class="hoox-shop__gallery">
+          {% if shop_gallery_bagde != blank %}
+            <div class="hoox-shop__gallery-bagde">
+              <p class="hoox-shop__badge-text">
+                {{ shop_gallery_bagde }}
+              </p>
+            </div>
+          {% endif %}
+          {%- comment -%} MAIN IMAGE {%- endcomment -%}
+          <div class="hoox-shop__gallery-main swiper-container">
+            <div class="swiper-wrapper">
+              {% for image in shopProduct.images %}
+                <div class="swiper-slide">
+                  <figure class="hoox-shop__gallery-main-image">
+                    {% render 'snippet-image', image: image %}
+                  </figure>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          {%- comment -%} THUMBS {%- endcomment -%}
+          <div class="hoox-shop__gallery-thumbs swiper-thumbs">
+            <div class="swiper-wrapper">
+              {% for image in shopProduct.images %}
+                <div class="swiper-slide">
+                  <figure class="hoox-shop__gallery-thumb">
+                    {% render 'snippet-image', image: image %}
+                  </figure>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="hoox-shop__video-holder">
+            <button class="hoox-shop__video-trigger js-video-modal-trigger">
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.575 16.6499L16.25 12.3999L9.575 8.1499V16.6499ZM12 22.3999C10.6333 22.3999 9.34167 22.1374 8.125 21.6124C6.90833 21.0874 5.84583 20.3707 4.9375 19.4624C4.02917 18.5541 3.3125 17.4916 2.7875 16.2749C2.2625 15.0582 2 13.7666 2 12.3999C2 11.0166 2.2625 9.71657 2.7875 8.4999C3.3125 7.28324 4.02917 6.2249 4.9375 5.3249C5.84583 4.4249 6.90833 3.7124 8.125 3.1874C9.34167 2.6624 10.6333 2.3999 12 2.3999C13.3833 2.3999 14.6833 2.6624 15.9 3.1874C17.1167 3.7124 18.175 4.4249 19.075 5.3249C19.975 6.2249 20.6875 7.28324 21.2125 8.4999C21.7375 9.71657 22 11.0166 22 12.3999C22 13.7666 21.7375 15.0582 21.2125 16.2749C20.6875 17.4916 19.975 18.5541 19.075 19.4624C18.175 20.3707 17.1167 21.0874 15.9 21.6124C14.6833 22.1374 13.3833 22.3999 12 22.3999ZM12 20.8999C14.3667 20.8999 16.375 20.0707 18.025 18.4124C19.675 16.7541 20.5 14.7499 20.5 12.3999C20.5 10.0332 19.675 8.0249 18.025 6.3749C16.375 4.7249 14.3667 3.8999 12 3.8999C9.65 3.8999 7.64583 4.7249 5.9875 6.3749C4.32917 8.0249 3.5 10.0332 3.5 12.3999C3.5 14.7499 4.32917 16.7541 5.9875 18.4124C7.64583 20.0707 9.65 20.8999 12 20.8999Z" fill="black" />
+              </svg>
+              <span class='hoox-shop__video-trigger-text'>{{ shopVideoTriggerText }}</span>
+            </button>
+            <aside class="hoox-shop__video-modal">
+              <div class="hoox-shop__video-wrapper js-video-modal-outside"></div>
+              <div class="hoox-shop__video-body">
+                <div class="hoox-shop__video-iframe">
+                  {% if videoURL contains 'youtube.com' %}
+                  {% assign video_id = videoURL | split: 'watch?v=' | last %}
+                  {% assign shopProductVideoSrcYoutube = "https://www.youtube.com/embed/" | append: video_id %}
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="{{ shopProductVideoSrcYoutube }}?autoplay=0"
+                    frameborder="0"
+                    data-original-link="{{ shopProductVideoSrcYoutube }}"
+                    allowfullscreen></iframe>
+                {% elsif videoURL contains 'vimeo.com' %}
+                  {% assign video_id = videoURL | split: '/' | last %}
+                  {% assign shopProductVideoSrcVimeo = "https://player.vimeo.com/video/" | append: video_id %}
+                  <iframe
+                    src="{{ shopProductVideoSrcVimeo }}"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    data-original-link="{{ shopProductVideoSrcYoutube }}"
+                    allowfullscreen></iframe>
+                {% endif %}
+                </div>
+
+                <button class="hoox-shop__video-close js-video-modal-trigger js-video-modal-close">
+                  {% render 'hoox-icon-close' %}
+                </button>
+             
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <div class="hoox-shop__informations">
+          <div class="hoox-shop__review">
+            <div class="hoox-shop__review-icon">
+              {{ shopProductReviewIcon }}
+            </div>
+
+            <p class="hoox-shop__review-text">
+              {{ shopProductReviewText }}
+            </p>
+          </div>
+
+          <h2 class="hoox-shop__title hoox-title">
+            {{ shopProductTitle }}
+          </h2>
+
+          <div class="hoox-shop__description hoox-text-primary">
+            {{ shopProductDescription }}
+          </div>
+
+          <ul class="hoox-shop__bullets">
+            {% for block in section.blocks %}
+              {% if block.type == 'bullets' %}
+                {% assign bulletText = block.settings.bullet_text %}
+                <li class="hoox-shop__bullet">
+                  {% render 'hoox-icon-checkmark' %}
+                  {{ bulletText }}
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+
+          <div class="hoox-js-shop-logic hoox-shop__shop-logic">
+            {% render 'hoox-form-product' 
+             , product: shopProduct,
+             current_variant: current_variant,
+             format: 'product-page' %}
+
+            {% render 'hoox-afterpay-text' %}
+          </div>
+
+          <div class="cc_prod_price_selector"></div>
+
+          {%- form 'product', 
+ shopProduct, 
+ data-productid: shopProduct.id, 
+ id: 'product-form-installment', 
+ class: 'installment caption-large ' 
+ -%}
+            <input
+              type="hidden"
+              name="id"
+              data-productid="{{ shopProduct.id }}"
+              value="{{ shopProduct.selected_or_first_available_variant.id }}">
+          {%- endform -%}
+
+          <div class="hoox-shop__images">
+            {% for block in section.blocks %}
+              {% if block.type == 'images' %}
+                {% assign benefitImage = block.settings.benefit_image %}
+
+                <figure class="hoox-shop__image">
+                  {% render 'snippet-image', image: benefitImage %}
+                </figure>
+              {% endif %}
+            {% endfor %}
+          </div>
+          {% if newsletterCheckbox %}
+            {% render 'hoox-snippet-newsletter' 
+             , shopProductNewsletterText: shopProductNewsletterText,
+             shopProductNewsletterHeading: shopProductNewsletterHeading,
+             shopProductNewsletterButtonText: shopProductNewsletterButtonText,
+             newsletterEmailPlaceholder: newsletterEmailPlaceholder,
+             newsletterSuccessMessage: newsletterSuccessMessage,
+             newsletterErrorMessage: newsletterErrorMessage,
+             shopProductNewsletterHeadingSuccess: shopProductNewsletterHeadingSuccess,
+             shopProductNewsletterDisclaimer: shopProductNewsletterDisclaimer %}
+          {% endif %}
+          {% comment %}UPSELL{% endcomment %}
+          {% if section.settings.shop_product_upsell != blank %}
+            <h3 class="hoox-shop__upsell-heading">
+              {{ shopProductUpsellTitle }}
+            </h3>
+
+            <div class="hoox-js-shop-logic">
+              <div class="hoox-shop__upsell">
+                <figure class="hoox-shop__upsell-image">
+                  {% render 'snippet-image', image: shopUpsellProductImage %}
+                </figure>
+
+                <div class='hoox-upsell__content'>
+                  <div class="hoox-shop__upsell-stars">
+                    {{ shopUpsellProductStars }}
+                  </div>
+
+                  <h3 class="hoox-shop__upsell-title">
+                    {{ shopUpsellProductTitle }}
+                  </h3>
+
+                  {% render 'hoox-form-product' 
+                   , product: shopUpsellProduct,
+                   current_variant: shopUpsellProduct.selected_or_first_available_variant,
+                   format: 'product-page' %}
+
+                  {% render 'hoox-afterpay-text' %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+          <div class="hoox-shop__questions hoox-js-accordions">
+            {% for block in section.blocks %}
+              {% if block.type == 'questions' %}
+                {% assign questionTitle = block.settings.question_title %}
+                {% assign questionAnswer = block.settings.question_answer %}
+
+                {% render 'hoox-accordion', hooxFaqQuestion: questionTitle, hooxFaqAnswer: questionAnswer index: forloop.index %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hoox-shop__afterpay-modal">
+      {% render 'afterpay-modal' %}
+    </aside>
+
+  </section>
+{% endif %}
+
+<script>
+  var SHOP_EL_SHOP = document.querySelector('.hoox-shop');
+  var shopLogicHolders = SHOP_EL_SHOP.querySelectorAll('.hoox-js-shop-logic');
+
+  shopLogicHolders.forEach(function(element) {
+    var SHOP_EL_ATC_BUTTON = element.querySelector('.hoox-js-atc-button');
+    var SHOP_EL_ATC_BUTTON_PRICE = SHOP_EL_ATC_BUTTON.querySelector('.hoox-js-price');
+    var SHOP_EL_PRICE_COMPARE = SHOP_EL_ATC_BUTTON.querySelector('.hoox-js-price-compare');
+    var SHOP_EL_BUTTON_DECREASE = element.querySelector('.input-group-prepend');
+    var SHOP_EL_BUTTON_INCREASE = element.querySelector('.input-group-append');
+    var SHOP_EL_QUANTITY_INPUT = element.querySelector('input.quantity');
+    var SHOP_AFTERPAY_ELEMENT = element.querySelector('.hoox-shop__afterpay');
+    var SHOP_AFTERPAY_PRICE = SHOP_AFTERPAY_ELEMENT.querySelector('.js-after-pay-price');
+
+    var currentQuantity = parseInt(SHOP_EL_QUANTITY_INPUT.value);
+    var initialPrice = (+ SHOP_EL_ATC_BUTTON_PRICE.textContent / 100).toFixed(2) * currentQuantity;
+    var currentPrice = (+ SHOP_EL_ATC_BUTTON_PRICE.textContent / 100).toFixed(2) * currentQuantity;
+
+    if (SHOP_EL_PRICE_COMPARE) {
+      var initialPriceCompared = (+ SHOP_EL_PRICE_COMPARE.textContent / 100).toFixed(2) * currentQuantity;
+      var currentPriceCompared = (+ SHOP_EL_PRICE_COMPARE.textContent / 100).toFixed(2) * currentQuantity;
+    }
+
+    SHOP_EL_ATC_BUTTON_PRICE.innerHTML = `${
+      (+ SHOP_EL_ATC_BUTTON_PRICE.textContent / 100).toFixed(2)
+    }`;
+    if (SHOP_EL_PRICE_COMPARE) {
+      SHOP_EL_PRICE_COMPARE.innerHTML = `${
+        (+ SHOP_EL_PRICE_COMPARE.textContent / 100).toFixed(2)
+      }`;
+    }
+
+// AFTERPAY
+    SHOP_AFTERPAY_PRICE.textContent = (initialPrice / 4).toFixed(2);
+
+    SHOP_EL_BUTTON_INCREASE.addEventListener('click', function() {
+      updatePrice('increase');
+    });
+
+    SHOP_EL_BUTTON_DECREASE.addEventListener('click', function() {
+      updatePrice('decrease');
+    });
+
+    SHOP_EL_QUANTITY_INPUT.addEventListener('change', function() {
+      currentQuantity = parseInt(SHOP_EL_QUANTITY_INPUT.value);
+      currentPrice = initialPrice * currentQuantity;
+      SHOP_EL_ATC_BUTTON_PRICE.innerHTML = `${
+        currentPrice.toFixed(2)
+      }`;
+
+      if (SHOP_EL_PRICE_COMPARE) {
+        currentPriceCompared = initialPriceCompared * currentQuantity;
+        SHOP_EL_PRICE_COMPARE.innerHTML = `${
+          currentPriceCompared.toFixed(2)
+        }`;
+      }
+    });
+
+    SHOP_EL_ATC_BUTTON.addEventListener('click', function() {
+      setTimeout(function() {
+        SHOP_EL_ATC_BUTTON_PRICE.innerHTML = initialPrice.toFixed(2);
+        currentQuantity = 1;
+        currentPrice = (+ SHOP_EL_ATC_BUTTON_PRICE.textContent).toFixed(2) * currentQuantity;
+
+        if (SHOP_EL_PRICE_COMPARE) {
+          SHOP_EL_PRICE_COMPARE.innerHTML = initialPriceCompared.toFixed(2);
+          currentPriceCompared = (+ SHOP_EL_PRICE_COMPARE.textContent).toFixed(2) * currentQuantity;
+        }
+
+        SHOP_AFTERPAY_PRICE.textContent = (initialPrice / 4).toFixed(2);
+      }, 2000);
+    });
+
+// Button price handler function
+    function updatePrice(method) {
+      if (method == 'increase') {
+        currentQuantity++;
+        currentPrice = initialPrice * currentQuantity;
+
+        if (SHOP_EL_PRICE_COMPARE) {
+          currentPriceCompared = initialPriceCompared * currentQuantity;
+        }
+
+        SHOP_AFTERPAY_PRICE.textContent = (currentPrice / 4).toFixed(2);
+      }
+
+      if (method == 'decrease' && currentQuantity > 1) {
+        currentQuantity--;
+        currentPrice = initialPrice * currentQuantity;
+
+        if (SHOP_EL_PRICE_COMPARE) {
+          currentPriceCompared = initialPriceCompared * currentQuantity;
+        }
+
+        SHOP_AFTERPAY_PRICE.textContent = (currentPrice / 4).toFixed(2);
+      }
+
+      SHOP_EL_ATC_BUTTON_PRICE.innerHTML = `${
+        currentPrice.toFixed(2)
+      }`;
+      if (SHOP_EL_PRICE_COMPARE) {
+        SHOP_EL_PRICE_COMPARE.innerHTML = `${
+          currentPriceCompared.toFixed(2)
+        }`;
+      }
+    }
+  });
+</script>
+
+<script src="{{ 'hoox-shop.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+  {
+    "name": "Hoox Shop Section",
+    "settings": [
+      {
+        "type": "product",
+        "id": "shop_product",
+        "label": "Choose Product"
+      },
+      {
+        "type": "header",
+        "content": "Product review video settings"
+      },
+      {
+        "type": "text",
+        "id": "shop_product_video_trigger_text",
+        "label": "Video trigger text"
+      },
+      {
+        "type": "url",
+        "id": "shop_product_video_src",
+        "label": "Video url"
+      }, {
+        "type": "header",
+        "content": "Product informations"
+      }, {
+        "type": "textarea",
+        "id": "shop_product_review_icon",
+        "label": "Review Stars SVG Code"
+      }, {
+        "type": "text",
+        "id": "shop_product_review_text",
+        "label": "Review text"
+      }, {
+        "type": "textarea",
+        "id": "shop_product_description",
+        "label": "Product description",
+        "info": "If this field is empty, the description will be pulled from selected product"
+      }, {
+        "type": "header",
+        "content": "Upsell settings"
+      }, {
+        "type": "product",
+        "id": "shop_product_upsell",
+        "label": "Choose Upsell Product"
+      }, {
+        "type": "text",
+        "id": "shop_product_upsell_title",
+        "label": "Upsell title"
+      }, {
+        "type": "image_picker",
+        "id": "shop_product_upsell_image",
+        "label": "Choose Upsell Image",
+        "info": "If image isn't uploaded default product image will be displayed"
+      }, {
+        "type": "textarea",
+        "id": "shop_product_upsell_stars",
+        "label": "Upsell stars svg"
+      }, {
+        "type": "text",
+        "id": "shop_gallery_bagde",
+        "label": "Bagde text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "bullets",
+        "name": "Bullets",
+        "settings": [
+          {
+            "type": "text",
+            "id": "bullet_text",
+            "label": "Bullet"
+          }
+        ]
+      }, {
+        "type": "images",
+        "name": "Benefit images",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "benefit_image",
+            "label": "Benefit image"
+          }
+        ]
+      }, {
+        "type": "questions",
+        "name": "Question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question_title",
+            "label": "Question title"
+          }, {
+            "type": "textarea",
+            "id": "question_answer",
+            "label": "Question answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hoox Shop Section"
+      }
+    ]
+  }
+{% endschema %}

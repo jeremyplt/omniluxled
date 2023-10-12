@@ -228,7 +228,3 @@ ul.mega-menu__list.page-width.mega-menu__list--condensed {
 .custom_mega-menu_link {
     display: block;
 }
-
-.custom_mega-menu_link > span {
-  pointer-events: none;
-}

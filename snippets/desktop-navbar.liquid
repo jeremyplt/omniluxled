@@ -55,7 +55,7 @@
                 -%}
                 {% if menuType == 'megamenu_with_product' %}
                     <li class="a nav-item nav-item-anim dropdown {% if menuType == 'megamenu_with_product' %}megamenu{% endif %} {% if link.active %}active{% endif %}" >
-                        <a data-href="{{ link.url }}" {% if menuType == 'megamenu_with_product' %}is="drop-down"{%- endif -%} class="nav-link d-flex align-items-center justify-content-between text-uppercase {{ link.handle }}" tabindex="0" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="menu" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                        <a data-href="{{ link.url }}" {% if menuType == 'megamenu_with_product' %}is="drop-down"{%- endif -%} class="nav-link d-flex align-items-center justify-content-between text-uppercase {{ link.handle }}" tabindex="0" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="menu" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}" {% if link.handle == "shop" %}href="/collections/all"{% endif %}>
                             <span>{{ link.title }}</span> <i class="icon-arrow-down ms-1 font-size-xs"></i>
                         </a>
                         <ul class="dropdown-menu megamenu megamenu_with_product py-0" style="background-color: {{ megaMenuBlock.megamenu_bg_color }}; color: {{ megaMenuBlock.megamenu_txt_color }}; ">
@@ -134,7 +134,7 @@
                                                                             {% elsif product.compare_at_price > product.price %}
                                                                                 <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
                                                                             {% endif %}
-                                                                            <span class="price" data-currentPrice>
+                                                                            <span class="price" data-currentPrice data-variant-price="{% if current_variant %}{{current_variant.price}}{% else %}{{current_product.price}}{% endif %}">
                                                                             {% if current_variant %}
                                                                             {{ current_variant.price | money }}
                                                                             {% elsif current_product.price_varies %}
@@ -240,7 +240,7 @@
                                                     <div class="card megamenu_product custom_megamenu_product border-0 h-100">
                                                         <div class="h-100 align-items-center">
                                                             <div class="col-12">
-                                                                <div class="card-img" style="max-height: 294px">
+                                                                <div class="card-img" style="max-height: 274px">
                                                                     <a class="square-card d-block w-100 position-relative" href="{{ megaMenuBlock.story_link }}">
                                                                     <img class="w-100 object-cover position-absolute start-0 top-0"
                                                                         src="{{ megaMenuBlock.story_image | image_url: width: 16 }}" 

@@ -1,0 +1,134 @@
+.hoox-studies {
+    padding: 48px 0;
+    border-top: 1px solid var(--hoox-color-black);
+    border-bottom: 1px solid var(--hoox-color-black);
+}
+
+.hoox-studies__title {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.hoox-studies__subtitle {
+    text-align: center;
+}
+
+.hoox-studies__range {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hoox-studies__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+}
+
+.hoox-studies__items {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.hoox-studies__range-box {
+    min-width: 262px;
+    padding: 23.5px 16px;
+    position: relative;
+    border: 1px solid var(--hoox-color-black);
+}
+
+.hoox-studies__range-title {
+    font-size: 14px;
+}
+
+.hoox-studies__percentage {
+    font-size: 32px;
+    line-height: 41px;
+    font-weight: 500;
+}
+
+.hoox-studies__background {
+    width: 98%;
+    position: absolute;
+    background: #E5E1E6;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+
+.hoox-studies__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hoox-studies__subtitle {
+    margin-bottom: 33px;
+}
+
+@media (min-width: 1204px) {
+
+    .hoox-studies {
+        padding: 80px 0;
+    }
+
+    .hoox-studies__title {
+        margin-bottom: 11px;
+        font-size: 40px;
+    }
+
+    .hoox-studies__subtitle {
+        margin-bottom: 34px;
+    }
+
+    .hoox-studies__percentage {
+        font-size: 40px;
+    }
+
+    .hoox-studies__wrapper {
+        flex-direction: row-reverse;
+        gap: 65px;
+    }
+
+    .hoox-studies__main {
+        flex: 1;
+        align-items: flex-start;
+    }
+
+    .hoox-studies__image {
+        flex: 1;
+    }
+
+    .hoox-studies__title {
+        text-align: left;
+    }
+
+    .hoox-studies__subtitle {
+        text-align: left;
+    }
+
+    .hoox-studies__range-box {
+        min-width: 479px;
+        padding: 25px 16px;
+    }
+
+    .hoox-studies__range-title {
+        font-size: 16px;
+    }
+
+    .hoox-studies__background {
+        padding-left: 32px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .hoox-studies__items {
+        align-self: center;
+    }
+}

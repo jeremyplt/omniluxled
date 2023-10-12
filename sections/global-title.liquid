@@ -7,16 +7,47 @@
         {% if section.settings.btn_txt != blank %}
             <{% if section.settings.btn_link != blank %}a{% else %}span{% endif %} {% if section.settings.btn_link != blank %} href="{{ section.settings.btn_link }}" {% endif %}class="btn w-sm-auto w-100 d-lg-inline-flex d-none btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">{{ section.settings.btn_txt }}</{% if section.settings.btn_link != blank %}a{% else %}span{% endif %}>
         {% endif %}
-      </div>
+</div>
+  
+  {% if section.settings.btn_txt2 != blank %}
+    <div class="text-center heading_txt pt-1 d-flex align-items-center justify-content-lg-between justify-content-center" style="z-index: 2;">
+
+            <{% if section.settings.btn_link2 != blank %}a{% else %}span{% endif %} {% if section.settings.btn_link2 != blank %} href="{{ section.settings.btn_link2 }}" {% endif %}class="btn w-sm-auto w-100 d-lg-inline-flex d-none btn{% if section.settings.btn_type2 == 'outline' %}-{% endif %}{{ section.settings.btn_type2 }}-{{ section.settings.btn_variant2 }} {{ section.settings.btn_size2 }}" title="{{ section.settings.btn_txt2 }}">{{ section.settings.btn_txt2 }}</{% if section.settings.btn_link2 != blank %}a{% else %}span{% endif %}>
+    </div>    
+    {% endif %}
+        
+                {% if section.settings.btn_txt3 != blank %}
+                  <div class="text-center heading_txt pt-1 d-flex align-items-center justify-content-lg-between justify-content-center" style="z-index: 2;">
+
+            <{% if section.settings.btn_link3 != blank %}a{% else %}span{% endif %} {% if section.settings.btn_link3 != blank %} href="{{ section.settings.btn_link3 }}" {% endif %}class="btn w-sm-auto w-100 d-lg-inline-flex d-none btn{% if section.settings.btn_type3 == 'outline' %}-{% endif %}{{ section.settings.btn_type3 }}-{{ section.settings.btn_variant3 }} {{ section.settings.btn_size3 }}" title="{{ section.settings.btn_txt }}">{{ section.settings.btn_txt3 }}</{% if section.settings.btn_link3 != blank %}a{% else %}span{% endif %}>
+                  </div>
+                    {% endif %}
     </div>
-    
+  {% if section.settings.btn_txt != blank %}
     <div class="{% if section.settings.fluid_layout %}container-fluid px-0{% else %}container{% endif %} d-lg-none pb-1">
         <div class="text-center mb-4 pt-4 mt-1 heading_txt pb-xl-0 pb-2">
-            {% if section.settings.btn_txt != blank %}
                 <a {% if section.settings.btn_link %} href="{{ section.settings.btn_link }}" {% endif %}class="btn w-sm-auto w-100 btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" title="{{ section.settings.btn_txt }}">{{ section.settings.btn_txt }}</a>
-            {% endif %}
         </div>
     </div>
+ {% endif %}
+          {% if section.settings.btn_txt2 != blank %}
+     <div class="{% if section.settings.fluid_layout %}container-fluid px-0{% else %}container{% endif %} d-lg-none pb-1">
+        <div class="text-center mb-4 pt-4 mt-1 heading_txt pb-xl-0 pb-2">
+  
+                <a {% if section.settings.btn_link2 %} href="{{ section.settings.btn_link2 }}" {% endif %}class="btn w-sm-auto w-100 btn{% if section.settings.btn_type2 == 'outline' %}-{% endif %}{{ section.settings.btn_type2 }}-{{ section.settings.btn_variant2 }} {{ section.settings.btn_size2 }}" title="{{ section.settings.btn_txt2 }}">{{ section.settings.btn_txt2 }}</a>
+            
+        </div>
+    </div>
+            {% endif %}
+            
+            {% if section.settings.btn_txt3 != blank %}
+       <div class="{% if section.settings.fluid_layout %}container-fluid px-0{% else %}container{% endif %} d-lg-none pb-1">
+        <div class="text-center mb-4 pt-4 mt-1 heading_txt pb-xl-0 pb-2">
+
+                <a {% if section.settings.btn_link3 %} href="{{ section.settings.btn_link3 }}" {% endif %}class="btn w-sm-auto w-100 btn{% if section.settings.btn_type3 == 'outline' %}-{% endif %}{{ section.settings.btn_type3 }}-{{ section.settings.btn_variant3 }} {{ section.settings.btn_size3 }}" title="{{ section.settings.btn_txt3 }}">{{ section.settings.btn_txt3 }}</a>
+        </div>
+    </div>
+   {% endif %}
 </section>  
   
 {% schema %}
@@ -100,6 +131,154 @@
     {
       "type": "select",
       "id": "btn_size",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    },
+     {
+      "type": "header",
+      "content": "Button 2"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt2",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link2",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "btn_type2",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "btn_variant2",
+      "label": "Button Variant",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "dark"
+    },
+    {
+      "type": "select",
+      "id": "btn_size2",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn-sm",
+          "label": "Small"
+        },
+        {
+          "value": "btn-lg",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    },
+     {
+      "type": "header",
+      "content": "Button 3"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt3",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link3",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "btn_type3",
+      "label": "Button Type",
+      "options": [
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "",
+          "label": "Solid"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "btn_variant3",
+      "label": "Button Variant",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "default": "dark"
+    },
+    {
+      "type": "select",
+      "id": "btn_size3",
       "label": "Button Size",
       "options": [
         {

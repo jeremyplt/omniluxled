@@ -1,0 +1,262 @@
+<link rel="stylesheet" href="{{ 'template-accrodian-block.css' | asset_url }}" media="print" onload="this.media='all'">
+
+
+<section data-section-id="{{ section.id }}" class="how-its-works-accrdian overflow-hidden">
+    <div class="">
+        <div class="row">
+
+                        <section class="skin-images pb-10">
+                            <div class="container">
+                                <slider-element class="swiper-container carousel d-block position-relative arrow-outside">
+                                    <div class="swiper swiper-slider featured-collection-slider card-carousel" data-slider='{
+                                            "loop": false,
+                                            "shortSwipes": false,
+                                            "slidesPerView": "1",
+                                            "observer": true,
+                                            "observeParents": true,
+                                            "spaceBetween": 0,
+                                            "freeMode": true,
+                                            "grabCursor": true,
+                                            "navigation": {
+                                                "nextEl": ".slider-arrow-second"
+                                            },
+                                            "breakpoints": {
+                                            "640": {
+                                                "slidesPerView": 1,
+                                                "spaceBetween": 0
+                                            },
+                                            "768": {
+                                                "slidesPerView": 3,
+                                                "spaceBetween": 30
+                                            },
+                                            "992": {
+                                                "slidesPerView": 4,
+                                                "spaceBetween": 30
+                                            }
+                                            }
+                                        }'>
+                                        <div class="swiper-wrapper ">
+                                            {%- for block in section.blocks -%}
+                                                {%- if block.type == 'clear_image_card' -%}
+                                                    <div class="swiper-slide">
+                                                            <div class="card border-0 " style="width:312px;">
+                                                                <div class="hiw-card-img">
+                                                                    {%- if block.settings.clear_skin_image != blank -%}
+                                                                    <img src=" {{ block.settings.clear_skin_image | image_url: width: 360, format: 'pjpg' }} " alt="" class="card-img-top" height="360" width="360" loading="lazy">
+                                                                    {% if forloop.last == true %}<p></p>{% else %} <span class="ox-arrow-up position-absolute top-50 right-0 slider-arrow-second fw-lighter"></span> {% endif %}
+                                                                    {%- else -%}
+                                                                    <img src=" {{ settings.no_image | image_url: width: 360, format: 'pjpg' }} " alt="" class="card-img-top" height="360" width="360" loading="lazy">
+                                                                    {%- endif -%}
+                                                                </div>
+
+                                                                <div class="card-body px-0">
+                                                                    {%- if block.settings.skin_text != blank -%}
+                                                                    <p class="font-size-md mb-0 ">{{ block.settings.skin_text }}</p>
+                                                                    {%- endif -%}
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                {%- endif -%}
+                                            {%- endfor -%}
+                                        </div>
+                                    </div>
+                                </slider-element>
+                            </div>
+                        </section>
+                     
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "AcneLP Clear Slider",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image With Text"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_txt",
+      "label": "Heading Text",
+      "default": "Awesome Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "img_text1",
+      "label": "Paragraph 1",
+      "default": "Awesome Sub Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "img_text2",
+      "label": "Paragraph 2"
+    },
+    {
+      "type": "textarea",
+      "id": "img_text3",
+      "label": "Paragraph 3"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select Image",
+      "info": "For Better Viewing Use Example dimentions: 775*735 ( Aspect Ratio: 1.05 )"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-end",
+          "label": "Right"
+        }
+      ],
+      "default": "text-left"
+    },
+    {
+      "type": "select",
+      "id": "image_alignment",
+      "label": "Image Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Clear Image Accordion"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "clear_image",
+      "label": "Select Image"
+    },
+    {
+      "type": "textarea",
+      "id": "clear_heading_txt1",
+      "label": "Paragraph 1"
+    },
+    {
+      "type": "textarea",
+      "id": "clear_heading_txt2",
+      "label": "Paragraph 2"
+    },
+    {
+      "type": "textarea",
+      "id": "clear_heading_txt3",
+      "label": "Paragraph 3"
+    },
+    {
+      "type": "textarea",
+      "id": "clear_heading_txt4",
+      "label": "Paragraph 4"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "textarea",
+      "id": "teatementpara",
+      "label": "Result Paragraph"
+    },
+    {
+      "type": "image_picker",
+      "id": "clear_image1",
+      "label": "Before Omnilux Contour Image ",
+      "info": "For Better Viewing Use Example Dimensions: 951x860 ( Aspect Ratio: 1.11:1 )"
+    },
+    {
+      "type": "html",
+      "id": "Clear_image_text1",
+      "label": "Before Omnilux Contour Paragraph html"
+    },
+    {
+      "type": "image_picker",
+      "id": "clear_image2",
+      "label": "After Omnilux Contour Image ",
+      "info": "For Better Viewing Use Example Dimensions: 951x860 ( Aspect Ratio: 1.11:1 )"
+    },
+    {
+      "type": "html",
+      "id": "Clear_image_text2",
+      "label": "After Omnilux Contour Paragraph html"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "skin_image_card",
+      "name": "Skin Image Card",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "skin_image",
+          "label": "Skin Image"
+        },
+        {
+          "type": "textarea",
+          "id": "skin_text",
+          "label": "Skin Image Bottom Text"
+        }
+      ]
+    },
+    {
+      "type": "clear_image_card",
+      "name": "Clear Skin Image Card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "clear_skin_image",
+          "label": "Skin Image"
+        },
+        {
+          "type": "textarea",
+          "id": "skin_text",
+          "label": "Skin Image Bottom Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "AcneLP Clear Slider"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+
+

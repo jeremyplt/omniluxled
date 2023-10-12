@@ -1,0 +1,157 @@
+{{ 'hoox-reviews.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign section_title = section.settings.section_title
+%}
+
+<section class="hoox-reviews" id="hoox-reviews">
+  <div class="l">
+    {% if section_title != blank %}
+      <header class="hoox-reviews__header">
+        <h2 class="hoox-reviews__title hoox-title text-align-center">{{ section_title }}</h2>
+      </header>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+    <div class="hoox-reviews__wrapper">
+      <div class="hoox-reviews__slider-reviews swiper">
+        <div class="hoox-reviews__items swiper-wrapper">
+          {% for block in section.blocks %}
+            {% liquid
+              assign review_image = block.settings.review_image
+              assign review_stars = block.settings.review_stars
+              assign review_title = block.settings.review_title
+              assign review_description = block.settings.review_description
+              assign review_icon = block.settings.review_icon
+              assign review_author = block.settings.review_author
+              assign review_verified_text = block.settings.review_verified_text
+            %}
+
+            <div class="swiper-slide">
+              <article class="hoox-reviews__item">
+                {% if review_image != blank %}
+                  <figure class="hoox-reviews__item-media">
+                    {% render 'hoox-snippet-image', image: review_image %}
+                  </figure>
+                {% endif %}
+                  {% if review_stars != blank %}
+                  <figure class="hoox-reviews__item-stars">
+                    {% render 'hoox-snippet-image', image: review_stars %}
+                  </figure>
+                  {% endif %}
+
+                  {% if review_title != blank %}
+                    <h3 class="hoox-reviews__item-title">{{ review_title }}</h3>
+                  {% endif %}
+
+                  {% if review_description != blank %}
+                    <p class="hoox-reviews__item-description hoox-text-primary">{{ review_description }}</p>
+                  {% endif %}
+
+                  <footer class="hoox-reviews__item-footer">
+                    {% if review_icon %}
+                      <figure class="hoox-reviews__item-icon">
+                        {% render 'snippet-image', image: review_icon %}
+                      </figure>
+                    {% endif %}
+
+                    <div class="hoox-reviews__item-author-wrapper">
+                      {% if review_author != blank %}
+                        <h4 class="hoox-reviews__item-author">{{ review_author }}</h4>
+                      {% endif %}
+
+                      {% if review_verified_text != blank %}
+                        <p class="hoox-reviews__item-verified">
+                          {{ review_verified_text }}
+                          {% render 'hoox-icon-verified' %}
+                        </p>
+                      {% endif %}
+                    </div>
+                  </footer>
+              </article>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="hoox-reviews__arrows">
+        <div class="slider-reviews-prev hoox-swiper-arrow hoox-swiper-arrow-prev">
+          {% render 'hoox-snippet-arrow-previous' %}
+        </div>
+        <div class="hoox-reviews__dots"></div>
+        <div class="slider-reviews-next hoox-swiper-arrow hoox-swiper-arrow-next">
+          {% render 'hoox-snippet-arrow-next' %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<script src="{{ 'hoox-slider-reviews.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Hoox Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section id"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "review_image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "review_stars",
+          "label": "Stars Icon"
+        },
+        {
+          "type": "text",
+          "id": "review_title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "review_description",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "review_icon",
+          "label": "Author image"
+        },
+        {
+          "type": "text",
+          "id": "review_author",
+          "label": "Author"
+        },
+        {
+          "type": "text",
+          "id": "review_verified_text",
+          "label": "Verified text",
+          "default": "Verified buyer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hoox Reviews"
+    }
+  ]
+}
+{% endschema %}

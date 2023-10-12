@@ -1,0 +1,101 @@
+{{ 'hoox-results.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign section_title = section.settings.section_title
+%}
+
+{% if section.blocks.size > 0 %}
+  <section class="hoox-results">
+    <div class="l">
+    {% if section_title != blank %}
+      <header class="hoox-results__header">
+        <h2 class="hoox-results__title hoox-title text-align-center">{{ section_title }}</h2>
+      </header>
+    {% endif %}
+
+    <div class="hoox-results__items hoox-swiper-center swiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          {% liquid
+            assign before_image = block.settings.before_image
+            assign after_image = block.settings.after_image
+            assign before_image_text = block.settings.before_image_text
+            assign after_image_text = block.settings.after_image_text
+          %}
+          <div class="swiper-slide">
+            <div class="hoox-results__content">
+            {% if before_image != blank %}
+              <figure class="hoox-results__item-media">
+                {% render 'hoox-snippet-image', image: before_image %}
+                  <figcaption class="hoox-text-primary hoox-results__item-before hoox-results__item-text"> {{ before_image_text }} </figcaption>
+              </figure>
+            {% endif %}
+            {% if after_image != blank %}
+              <figure class="hoox-results__item-media">
+                {% render 'hoox-snippet-image', image: after_image %}
+                  <figcaption class="hoox-text-primary hoox-results__item-after hoox-results__item-text"> {{ after_image_text }} </figcaption>
+              </figure>
+            {% endif %}
+          </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="hoox-results__navigation">
+        <div class="slider-centered-prev">
+          {% render 'hoox-snippet-arrow-previous' %}
+        </div>
+        <div class="hoox-swiper-center__pagination"></div>
+        <div class="slider-centered-next">
+          {% render 'hoox-snippet-arrow-next' %}
+        </div>
+      </div>
+    </div>
+  </div> 
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Hoox Visible results",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "results",
+      "name": "results",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "before_image",
+          "label": "Before image"
+        },
+        {
+          "type": "text",
+          "id": "before_image_text",
+          "label": "Before image Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "after_image",
+          "label": "After image"
+        },
+        {
+          "type": "text",
+          "id": "after_image_text",
+          "label": "After image Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hoox Visible results"
+    }
+  ]
+}
+{% endschema %}

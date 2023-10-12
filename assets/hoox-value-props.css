@@ -1,0 +1,68 @@
+.hoox-value-props {
+    border-top: 1px solid var(--hoox-color-black);
+}
+.hoox-value-props__items {
+    display: flex;
+    flex-direction: column;
+}
+
+.hoox-value-props .l {
+    padding: 0;
+}
+
+.hoox-value-props__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--hoox-color-black);
+    padding: 42px 0;
+}
+
+.hoox-value-props__number {
+    font-size: 48px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.hoox-value-props__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 767px) {
+    .hoox-value-props {
+        border-top: 1px solid var(--hoox-color-black);
+        border-bottom: 1px solid var(--hoox-color-black);
+    }
+
+    .hoox-value-props__items {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .hoox-value-props__item {
+        min-width: 300px;
+        border-right: 1px solid var(--hoox-color-black);
+        border-bottom: unset;
+    }
+
+    .hoox-value-props__item:last-child {
+        border-right: unset;
+    }
+
+    .hoox-value-props__text {
+        max-width: 210px;
+    }
+
+    .hoox-value-props__number {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .hoox-value-props__item {
+        box-sizing: border-box;
+        min-width: 185px;
+        text-align: center;
+        justify-content: center;
+    }
+}

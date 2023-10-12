@@ -1266,5 +1266,67 @@
         "default": "devteam@praella.com"
       }
     ]
+  },
+  {
+    "name": "HOOX Promo Newsletter",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "popup_newsletter_checkbox",
+        "label": "Enable Newsletter Popup"
+      },
+      {
+        "type": "checkbox",
+        "id": "shop_newsletter_checkbox",
+        "label": "Enable Shop Newsletter Widget"
+      },
+      {
+        "type": "header",
+        "content": "Newsletter settings"
+      },
+      {
+        "type": "text",
+        "id": "shop_product_newsletter_text",
+        "label": "Newsletter copy"
+      },
+      {
+        "type": "text",
+        "id": "shop_product_newsletter_heading",
+        "label": "Newsletter heading"
+      },
+      {
+        "type": "text",
+        "id": "shop_product_newsletter_success_heading",
+        "label": "Newsletter success title"
+      },
+      {
+        "type": "text",
+        "id": "email_placeholder",
+        "label": "Newsletter email placeholder"
+      },
+      {
+        "type": "text",
+        "id": "shop_product_newsletter_disclaimer",
+        "label": "Newsletter Disclaimer Text"
+      },
+      {
+        "type": "text",
+        "id": "shop_product_newsletter_button_text",
+        "label": "Newsletter subscribe button text",
+        "default": "SUBSCRIBE"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_success_msg",
+        "label": "Newsletter success message",
+        "default": "SUCCESS MESSAGE"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_error_msg",
+        "label": "Newsletter error message",
+        "default": "ERROR MESSAGE"
+      }
+    ]
   }
 ]

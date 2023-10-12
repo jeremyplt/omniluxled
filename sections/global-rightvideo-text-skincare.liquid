@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ 'global-video-with-text.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'global-video-with-text.css' | asset_url | stylesheet_tag }}</noscript>
 
-<section class="video-with-text text-with-right-video skincare {% if section.settings.border_bottom %}border-bottom{% endif %}" data-section-id="{{ section.id }}">
+<section id="{{ section.settings.sectionid }}" class="video-with-text text-with-right-video skincare {% if section.settings.border_bottom %}border-bottom{% endif %}" data-section-id="{{ section.id }}">
     <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
 
               {% if section.settings.title != blank %}
@@ -16,11 +16,11 @@
                     {% if section.settings.mobile_video_id != blank %}data-mobileVideo="{{ section.settings.mobile_video_id }}"{% endif %} data-video-id="{{ section.settings.video_id }}">
                     <div class="cta-btn">
                         <span class="d-inline-flex" role="button" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
-                            <span class="btn btn-outline-white d-flex align-items-center d-lg-inline-flex"> {{ section.settings.video_btn_text }} <i class="ox-play ms-2" style="font-size:11px;"></i></span>
+                            <span class="btn btn-white d-flex align-items-center d-lg-inline-flex"> {{ section.settings.video_btn_text }} <i class="ox-play ms-2" style="font-size:11px;"></i></span>
 
                         </span>
                         <span class="d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
-                            <span class="btn btn btn-outline-white">Watch video <i class="ox-play ms-2"></i></span>
+                            <span class="btn btn btn-white">Watch video <i class="ox-play ms-2"></i></span>
                         </span>
                     </div>
                     <div class="content-section">
@@ -158,6 +158,11 @@
       "id": "loop",
       "label": "Loop Video",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "sectionid",
+      "label": "Section ID"
     },
     {
       "type": "select",

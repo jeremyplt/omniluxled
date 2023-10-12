@@ -1,0 +1,63 @@
+.hoox-to {
+    padding: 48px 0;
+}
+.hoox-how-to__title {
+    margin-bottom: 5px;
+}
+.hoox-how-to__subtitle {
+    margin-bottom: 35px !important;
+    max-width: 271px;
+    margin: 0 auto;
+}
+.hoox-how-to__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 33px;
+}
+.hoox-how-to__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: center;
+}
+.hoox-how-to__text {
+    max-width: 326px;
+    text-align: center;
+}
+.hoox-how-to__index {
+    font-weight: 600;
+}
+.hoox-how-to__image, .hoox-how-to__image img {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .hoox-to {
+        padding: 80px 0;
+    }
+    .hoox-how-to__subtitle {
+        max-width: unset;
+        margin-bottom: 56px !important;
+    }
+    .hoox-how-to__title {
+        margin-bottom: 5px;
+    }
+    .hoox-how-to__items {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .hoox-how-to__item {
+        max-width: 282px;
+        align-items: flex-start;
+    }
+    .hoox-how-to__text {
+        max-width: unset;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .hoox-how-to__image, .hoox-how-to__image img {
+        width: auto;
+    }
+}

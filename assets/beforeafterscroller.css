@@ -1,0 +1,205 @@
+.template-product.omnilux-contour-face #hoox-reviews,.template-product.omnilux-contour-face #beforeafter,#hoox-reviews,#beforeafter{display:none;}
+
+.template-page.anti-acne2 #hoox-reviews{display:block;}
+
+
+/***to copy into abtest***
+.template-product.omnilux-contour-face .desktopreviewstitle{padding-top:50px!important;}
+
+#shopify-section-template--16184566874274__ee32d731-64d8-43e4-a200-3aad66c37be5{display:none;}***/
+
+
+
+.hoox-reviews {
+    padding: 48px 0;
+    border-top: 0;
+    border-bottom: 1px solid #000;
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 32.54%), linear-gradient(111deg, #F6D3BF 8.55%, #FBF5E2 96.45%);
+}
+
+.contour .hoox-reviews{border-top: 1px solid #000;}
+
+.hoox-reviews__title {
+    max-width: 303px;
+    margin-bottom: 40px;
+    margin-inline: auto;
+}
+
+.hoox-reviews__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.hoox-reviews__item-media {
+    margin-bottom: 18px;
+}
+
+.hoox-reviews__item-stars {
+    position:relative;top:-2px;display:inline-block;
+}
+
+.hoox-reviews__item-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.contour .hoox-reviews__item-title{font-size:22px;}
+
+.hoox-reviews__item-description {
+    font-weight: 300;
+}
+
+.hoox-reviews__item-footer {
+display:block;border-top:1px solid #000; padding:40px 25px 0;
+}
+
+.contour .hoox-reviews__item-footer{border-top:0; padding:5px 0;font-style:italic;}
+
+.hoox-reviews__item-footer p{margin:0 0 30px 0;}
+
+.hoox-reviews__item__author-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.hoox-reviews__item-author {
+    font-size: 16px;display:inline-block;
+    font-weight: 600;padding-left:5px;
+}
+
+  .dash{margin:0 5px;font-weight:900;}
+
+.hoox-reviews__item-verified {
+  display:inline-block;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.hoox-reviews__item-verified svg{position:relative;top:-2px;width:18px!important;height:18px!important;}
+
+.hoox-reviews__item-icon {
+    max-width: 48px;
+}
+
+.hoox-reviews__arrows {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    gap: 40px;
+    justify-content: center;
+}
+
+.hoox-reviews__dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.reviewbullets{margin-bottom:15px;min-height:110px;}
+.template-product.omnilux-contour-face .reviewbullets{min-height:132px}
+.reviewbullets ul{margin:0;padding:0;}
+.reviewbullets ul,.reviewbullets ul li{list-style-type:none;}
+.reviewbullets ul li{padding-left: 25px;background-image: url("https://cdn.shopify.com/s/files/1/0482/6736/2466/files/material-symbols_check-small.svg");background-repeat: no-repeat;background-position: left 1px;background-size: 20px auto;margin-bottom: 10px;}
+.template-product.omnilux-contour-face .contour .reviewbullets{min-height:1px;margin-bottom:0;}
+
+.percentagehelped{display:flex;flex:1;width:100%;gap:10px;margin-bottom:40px;}
+.percentagehelped h2{color: #07272D;font-size: 32px;font-weight: 800;line-height: normal;margin:0;}
+.percentagebar{position:relative;border:1px solid #000;width:100%;padding:0 13px;height:38px;flex:1;display:flex;align-items:center;}
+.percentagebar p{z-index:99;position:relative;margin:0;font-size:15px;line-height:1;}
+
+.percentagebar .percentagebarbg{ content: "";display: block;height: 100%;background-color: #e3eef0; position: absolute;left: 0;}
+
+.authorquote p{color: #000;font-size: 30px;font-style: italic;font-weight: 600;letter-spacing: -1.783px;}
+
+.contour .percentagehelped{border-bottom:1px solid #000;padding-bottom:25px;margin-bottom:45px;}
+.contour .percentagebar{max-width:400px;}
+.contour .hoox-reviews__item-footer{margin-top:25px;}
+
+.contour .buyerinfo p, .contour .buyerinfo figure{margin-bottom:5px;}
+.contour .buyerinfo{margin-bottom:40px;}
+
+@media (min-width: 1024px) {
+.contour .hoox-reviews__item{flex-direction:row;gap:55px;}
+.contour .hoox-reviews__item-media,.contour .rightside{max-width:calc(55% - 35px);display:inline-block;}
+  .contour .hoox-reviews__item-media{max-width:calc(45% - 35px);}
+  .contour .hoox-reviews__item{padding:0!important;border:0!important;    align-items: center;
+    flex-wrap: wrap;}
+.contour .hoox-reviews__wrapper{border-top:0!important;}
+  
+    .hoox-reviews {
+        padding: 80px 0 0;
+        border-bottom: unset;
+    }
+
+    .hoox-reviews__title {
+        max-width: 450px;
+        margin-bottom: 48px;
+        font-size: 40px;
+    }
+
+   /* .hoox-reviews__arrows {
+        gap: 24px;
+        margin-top: 45px;
+    }*/
+  .hoox-reviews__arrows{display:none;}
+.contour .hoox-reviews__arrows{display:flex;padding-bottom:85px;}
+    .hoox-reviews__item {
+        padding: 40px 32px 0;
+        background: transparent;
+        border: unset;
+    }
+  .swiper-slide-active .hoox-reviews__item,.hoox-reviews .swiper-slide-duplicate-active .hoox-reviews__item{padding:40px 31px;}
+  .contour .hoox-reviews__item{min-height:1px;align-content:center;}
+
+    .hoox-reviews .l {
+        max-width: 100%;
+        margin-inline: auto;
+        padding: 0;
+    }
+
+    .hoox-reviews__slider-reviews,.hoox-reviews__slider-reviewscontourreviews {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hoox-reviews__wrapper {
+        border-top: 1px solid #000;
+        border-bottom: 0;
+    }
+
+    .hoox-reviews .swiper-slide-active .hoox-reviews__item,.hoox-reviews .swiper-slide-duplicate-active {
+        border-right: 1px solid #000;
+        border-left: 1px solid #000;
+    }
+
+    .hoox-reviews__item-media {
+        margin-bottom: 24px;
+    }
+}
+
+@media(max-width: 1024px){
+    .hoox-reviews__item {
+        max-width: 221px;margin:0 auto;
+    }
+  .hoox-reviews__item-footer{padding:20px 10px;}
+    .dash{margin:0;}
+  .reviewbullets{min-height:140px;}
+  .hoox-reviews__title{max-width:100%;text-align:center;}
+  .hoox-reviews__arrows{margin-top:15px;}
+  .percentagehelped{flex:0;}
+    .hoox-reviews__title {
+        max-width: 553px;
+    }
+  .authorquote p{font-size: 22px;font-weight: 600;letter-spacing: -0.78px;}
+}
+
+@media(max-width: 600px){
+  .hoox-reviews__item{max-width:88%;}
+  .reviewbullets{min-height:100%;}
+  h2.hoox-reviews__title{font-size:27px!important;}
+}

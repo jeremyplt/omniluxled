@@ -1,0 +1,149 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+<div class="card card-product card-product-style-1 text-start rounded-0 border-0" data-product-grid>
+  <span class="badges">
+    {%- liquid
+      assign onSale = false
+      assign soldOut = false
+
+      if current_variant and current_variant.compare_at_price > current_variant.price or product.compare_at_price > product.price
+        assign onSale = true
+      endif 
+      if current_variant and current_variant.available == false or product.available == false
+        assign soldOut = true
+      endif 
+
+      assign productBadges = settings.custom_badges | newline_to_br | split: '<br />'
+    -%}
+  
+    {%- for badge in productBadges -%}
+      {%- assign badgeData = badge | strip | split: ':' -%}
+      {%- assign badgeLabel = badgeData[1] | strip -%}
+      {%- if product.tags contains badgeData[0] -%}
+        <span class="badge badge-right badge-secondary" >
+          {{ badgeLabel }}
+        </span>
+      {%- endif -%}
+    {%- endfor -%}
+
+    {% if onSale %}
+      <span class="badge badge-right badge-saddle-brown" >
+        {{ 'products.product.on_sale' | t | escape }}
+      </span>
+    {% endif %}
+
+    {% if soldOut %}
+      <span class="badge badge-right badge-gainsboro text-black">
+        {{ 'products.product.sold_out' | t | escape }}
+      </span>
+    {% endif %}
+  </span>
+  <div class="card-body px-0 pb-0 pt-0">
+    <div class="row no-gutter">
+        <div class="col-12 d-flex justify-content-between review-box-wrap flex-column flex-lg-row">
+            <div class="review-box d-flex justify-content-lg-start" style="padding-top: 2px;">
+              <a href="{{ all_products[section.settings.home_featured_product].url}}" class="pb-3">{% render 'okendo-reviews-product-rating-summary', product: product %} </a>             
+            </div>
+        </div>
+       <div class="col-12 pb-3 rightcolprice">
+         <a href="{{ all_products[section.settings.home_featured_product].url}}">
+              {% if current_variant and current_variant.compare_at_price > current_variant.price %}
+                <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
+              {% elsif product.compare_at_price > product.price %}
+                <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
+              {% endif %}
+              <span class="price m-0 p-0 money" data-currentPrice>
+                {% if current_variant %}
+                  {{ current_variant.price | money }}
+                {% elsif product.price_varies %}
+                  {% assign minPrice = product.price_min | money %}
+                  {% assign maxPrice = product.price_max | money %}
+                  {{ 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape }}
+                {% else %}
+                  {{ product.price | money }}
+                {% endif %}
+              </span>
+        {% unless product.tags contains "no_free_shipping" %}
+                              <span class="free-shipping text-uppercase fw-bold font-size-md ls-0" style="line-height: 1.7857142857;">+ free shipping*</span>
+                            {% endunless %}
+         </a>
+            </div>
+       {% if section.settings.lead_txt != blank %}
+          <div class="col-12">
+           <p>{{ section.settings.lead_txt | escape }}</p>
+                         {% if section.settings.steps_captions != blank %}
+                         {% assign caption = section.settings.steps_captions | newline_to_br | strip_newlines | split: '<br />' %}
+                            <ul class="list-unstyled checkmarks">
+                                {% for cap in caption %}
+                                    <li class="mb-2 mb-md-3 position-relative ps-4">{{ cap }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+          </div>
+         {% endif %}
+        <div class="col-12 mt-2 pt-1 price-with-btn-col">
+          <div class="position-relative d-flex price-with-btn">
+           
+            <div style="width:100%;">
+<!--
+ <div class="card-footer bg-transparent border-0 p-0">
+   render 'form-product-grid-3', product: product, current_variant: current_variant 
+  </div>-->
+<a alt="TRANSFORM MY SKIN" href="https://omniluxled.com/products/omnilux-clear" class="btn btn-primary" >TRANSFORM MY SKIN</a>
+
+ {%- if section.settings.small_txt != blank -%}            
+<span style="display:block;margin-top:1rem;">{{ section.settings.small_txt }}</span>
+             {%- endif -%}
+
+<div class="mt-2 awards-wrap featuredproduct-awards position-relative {{ section.settings.css_class }}"  data-section-id="{{ section.id }}">
+
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+            <div class="row justify-content-start">
+ {% if section.settings.icon_img != blank %}
+              <div class="col-lg col-md-4 col-6" {{ section.shopify_attributes }} data-block-id="{{ block.id }}">
+                  <div class="awards mx-auto d-flex flex-column mb-5 pb-1 pb-lg-0">
+                      <div class="position-relative square-card text-center">
+                        <img src="{{ section.settings.icon_img | image_url: height: 300 }}" alt="Award" title="{{ section.settings.title }}"
+                        width="150"
+                        height="150" loading="lazy" class="w-100 h-100 object-contain position-absolute top-0 start-0"/>
+                      </div>
+                  </div>
+              </div>
+{% endif %}
+               {% if section.settings.icon_img2 != blank %}
+               <div class="col-lg col-md-4 col-6" {{ section.shopify_attributes }} data-block-id="{{ section.id }}">
+                  <div class="awards mx-auto d-flex flex-column mb-5 pb-1 pb-lg-0">
+                      <div class="position-relative square-card text-center">
+                        <img src="{{ section.settings.icon_img2 | image_url: height: 300 }}" alt="Award" title="{{ section.settings.title }}"
+                        width="150"
+                        height="150" loading="lazy" class="w-100 h-100 object-contain position-absolute top-0 start-0"/>
+                      </div>
+                  </div>
+              </div>
+              {% endif %}
+               {% if section.settings.icon_img3 != blank %}
+               <div class="col-lg col-md-4 col-6" {{ section.shopify_attributes }} data-block-id="{{ section.id }}">
+                  <div class="awards mx-auto d-flex flex-column mb-5 pb-1 pb-lg-0">
+                      <div class="position-relative square-card text-center">
+                        <img src="{{ section.settings.icon_img3 | image_url: height: 300 }}" alt="Award" title="{{ section.settings.title }}"
+                        width="150"
+                        height="150" loading="lazy" class="w-100 h-100 object-contain position-absolute top-0 start-0"/>
+                      </div>
+                  </div>
+              </div>
+              {% endif %}
+            </div>
+    </div>
+</div>
+
+
+              
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    {%- if settings.show_vendor -%}
+        <p>{{ product.vendor }}</p>
+    {%- endif -%}
+  </div>
+</div>

@@ -1,16 +1,37 @@
-{%- comment %}<locksmith:3b5f>{% endcomment -%}
+{%- comment %}<locksmith:208a>{% endcomment -%}
   {%- include 'locksmith' -%}
-{%- comment %}</locksmith:3b5f>{% endcomment -%}
+{%- comment %}</locksmith:208a>{% endcomment -%}
 
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
-  <head>   {{ locksmith_initializations }}
-{% render 'site-speed' %}
-  <script src="https://www.googleoptimize.com/optimize.js?id=OPT-KT8DKGH"></script>
+  <head>
+{{ locksmith_initializations }}
+<!-- Begin BlackCrow Script Tag: DO NOT MODIFY! -->
+     <script type="text/javascript" async src="https://shopify-init.blackcrow.ai/js/core/getomnilux.js?shopify_app_version=1.0.206&shop=getomnilux.myshopify.com"></script>
+<!-- End BlackCrow Script Tag -->   {% render 'site-speed' %}
 
 <!-- begin Convert Experiences code-->
 <script type="text/javascript" src="//cdn-4.convertexperiments.com/js/1004940-1004874.js"></script>
 <!-- end Convert Experiences code -->
+
+<script>
+(function(w,d,t,r,u)
+{
+var f,n,i;
+w[u]=w[u]||[],f=function()
+{
+var o={ti:"137030122", enableAutoSpaTracking: true};
+o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")
+},
+n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function()
+{
+var s=this.readyState;
+s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)
+},
+i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
+})
+(window,document,"script","//bat.bing.com/bat.js","uetq");
+</script>
 
 {% comment %} {% render 'pagefly-head' %} {% endcomment %}
     <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content=""> <link rel="canonical" href="{{ canonical_url }}">
@@ -23,10 +44,10 @@
     <link rel="preconnect" href="https://monorail-edge.shopifysvc.com" crossorigin>
     <title>{{ page_title }}</title>
 
-      {%- comment %}<locksmith:674a>{% endcomment -%}
+      {%- comment %}<locksmith:2a70>{% endcomment -%}
         {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape | default: shop.description | default: shop.name }}">{% endif -%}
         {%- comment %}original: <meta name="description" content="{{ page_description | escape | default: shop.description | default: shop.name }}">{%- endcomment %}
-      {%- comment %}</locksmith:674a>{% endcomment -%}
+      {%- comment %}</locksmith:2a70>{% endcomment -%}
 
     {% comment %}theme-check-disable LiquidTag{% endcomment %}
     {%- render 'meta-tags' -%}
@@ -67,6 +88,7 @@
   <!-- Extend -- End Extend code -->
 
      {{ 'custom.css' | asset_url | stylesheet_tag }}
+     {{ 'lead-board-experts-slider.css' | asset_url | stylesheet_tag }}
   
   {% render 'qikify-apps' %}
 
@@ -95,7 +117,7 @@
     {% include 'dp-config' %}
 </head>
 
-  <body class="template-{{ template.name }} {{ page.handle }} {{ collection.handle }} {{ product.handle }} {% if product.tags contains 'men_product' %}product-men{% endif %} ab-test-cartdrawer"
+  <body class="template-{{ template.name }} {{ page.handle }} {{ collection.handle }} {{ product.handle }} {% if product.tags contains 'men_product' %}product-men{% endif %} ab-test-cartdrawer ab-faq"
     data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}">
     <img src="https://trkn.us/pixel/conv/ppt=22138;g=sitewide;gid=51408;ord={{ 'now' | date: '%s' }}" height="0" width="0" border="0" style="display:none"/>
 
@@ -424,9 +446,7 @@
 <!-- END KLAVIYO Back in Stock Snippet -->
   {{ 'custompdp.js' | asset_url | script_tag }}
 
-    <!-- ACCESSIBILITYSPARK START -->
-    {% render 'accessibility-spark-widget' %}
-    <!-- ACCESSIBILITYSPARK END -->
+    
 
   <script>
     function waitForElement(querySelector, timeout) {

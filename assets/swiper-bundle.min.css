@@ -670,3 +670,9 @@ opacity: 0 !important;
 .swiper-container-fade .swiper-slide.swiper-slide-active{
 opacity: 1 !important;
 }
+
+@media(max-width:600px){
+  .nav-dots-right .swiper-pagination{
+    right: 0;
+    width: 100%;}
+}

@@ -58,7 +58,7 @@
                                    (max-width: 2560px) 2560px, (max-width: 3800px) 3800px, {{ section.settings.image.width }}px" >
                       {% endif %}
                         {% if section.settings.enable_overlay %}
-                            <div class="overlay" style="background-color: {{ section.settings.overlay_bg_color }}!important; opacity: {{ section.settings.overlay_opacity }}!important; mix-blend-mode: multiply;"></div>
+                            <div class="overlay" style="background-color: {{ section.settings.overlay_bg_color }}; opacity: {{ section.settings.overlay_opacity }}; mix-blend-mode: multiply;"></div>
                         {% endif %}
                     </div>
                 {%- else -%}

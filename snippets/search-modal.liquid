@@ -1,7 +1,7 @@
 {%- comment -%}Desktop Search Modal{%- endcomment -%}
 <search-modal class="header__search" style="display: none;">
   <div class="searchform">
-    <div class="search-modal modal__content bg-white" role="dialog" aria-modal="true" aria-label="{{ 'general.search.placeholder' | t }}" style="padding: 17.5px; 0">
+    <div class="search-modal modal__content bg-white" role="dialog" aria-hidden="true" aria-modal="true" aria-label="{{ 'general.search.placeholder' | t }}" style="padding: 17.5px; 0">
       <div class="container">
         <div class="search-modal__content" tabindex="-1">
           <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">

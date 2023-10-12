@@ -1,0 +1,397 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "2cb12f0d-e933-4333-b50d-2dff62cf6fcd": {
+      "type": "global-header-slider",
+      "blocks": {
+        "76a7a38c-9d9a-449e-8772-ccd3c36b9a06": {
+          "type": "video-slide",
+          "settings": {
+            "muted": true,
+            "controls": false,
+            "loop": true,
+            "logo_image__": "",
+            "trustedbytxt": "Trusted by 100K+ Customers",
+            "title": "Meet your Mini",
+            "subtitle": "<p>Ultra-targeted LED treatments tackle blemishes, wrinkles, inflammation, and more.<\/p>",
+            "heading__size": false,
+            "heading__lg": 60,
+            "heading__md": 55,
+            "heading__sm": 50,
+            "play_icon": false,
+            "play_btn": false,
+            "btn_txt_watch": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "btn_txt": "Explore the line",
+            "btn_link": "https:\/\/omniluxled.com\/collections\/skin-care",
+            "btn_type": "",
+            "btn_variant": "white",
+            "btn_size": "",
+            "poster_type": "video",
+            "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1ef1fe8e2cb144e9bfe2388bd16b1810.mp4",
+            "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1ef1fe8e2cb144e9bfe2388bd16b1810.mp4",
+            "video_type": "local",
+            "placement": "grid",
+            "video_id": "",
+            "mobile_video_id": "",
+            "section_bg_color": "#ffffff",
+            "section_text_color": "#ffffff",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.5,
+            "alignment": "text-center text-md-start",
+            "video_alignment": "justify-content-md-start justify-content-center"
+          }
+        }
+      },
+      "block_order": [
+        "76a7a38c-9d9a-449e-8772-ccd3c36b9a06"
+      ],
+      "settings": {
+        "enabled": true,
+        "nav_arrows": false,
+        "nav_dots": false,
+        "nav_dots_right": false,
+        "height": "tallheight",
+        "top_padding_zero": true
+      }
+    },
+    "0815808e-a8b7-4e1d-b348-913b81d5e8b1": {
+      "type": "global-features-grid",
+      "blocks": {
+        "template--16169064104098__0815808e-a8b7-4e1d-b348-913b81d5e8b1-1684637742a4279aaf-0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/doctorformulated.png?v=1685650055",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "ca9aead8-b99c-4eff-b10b-6c356684e55c": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Safe_for_all_skin_types_svg.png?v=1685650062",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "c793978a-43fc-4e38-9e66-66871147b723": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/no_parabens_sulfates.png?v=1686158991",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "382f22bf-d4b3-496c-b20d-0f71a60d0b47": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/crueltyfree.png?v=1685650117",
+            "title": "",
+            "txt": ""
+          }
+        },
+        "f5431301-e30f-41c2-b600-bd724527bc5c": {
+          "type": "content",
+          "settings": {
+            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/vegan.png?v=1685650100",
+            "title": "",
+            "txt": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16169064104098__0815808e-a8b7-4e1d-b348-913b81d5e8b1-1684637742a4279aaf-0",
+        "ca9aead8-b99c-4eff-b10b-6c356684e55c",
+        "c793978a-43fc-4e38-9e66-66871147b723",
+        "382f22bf-d4b3-496c-b20d-0f71a60d0b47",
+        "f5431301-e30f-41c2-b600-bd724527bc5c"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "gradient_tone": true,
+        "icon_layout": false,
+        "grid_size": "2",
+        "heading_txt": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_txt_color": "#000000",
+        "pt": 30,
+        "pb": 50,
+        "pts": 0,
+        "pbs": 40,
+        "border-top": false,
+        "border-bottom": false,
+        "css_class": ""
+      }
+    },
+    "23f2fda8-e8a7-4b2d-b176-998ae5de965a": {
+      "type": "global-imagevideo-withtext",
+      "blocks": {
+        "73592ee6-8522-41c9-8589-40155aef5e59": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Doctor-formulated for results you can’t resist",
+            "max_width": 530,
+            "poster_type": "",
+            "bg_video": "",
+            "mobile_bg_video": "",
+            "poster_image": "shopify:\/\/shop_images\/Untitled_design_114.png",
+            "enable_overlay": true,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 0.5,
+            "fluid_video_layout": true,
+            "video_type": "local",
+            "placement": "grid",
+            "video_id": "",
+            "mobile_video_id": "",
+            "video_btn_text": "Watch video",
+            "section_bg_color": "#ffffff",
+            "section_text_color": "#000000",
+            "alignment": "text-center",
+            "video_alignment": "justify-content-center",
+            "txt": "An unmatched glow is 3 steps away. Renew, hydrate, and firm your skin with our professional-grade skincare line that includes the Enzyme Powder Cleanser, Hyaluronic Acid Serum, and Peptide Concentrate.",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "",
+            "btn_txt": "",
+            "btn_link": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "watch_video_id": "",
+            "watch_mobile_video_id": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "73592ee6-8522-41c9-8589-40155aef5e59"
+      ],
+      "settings": {
+        "display_for_this_product": "",
+        "fluid_layout": false,
+        "enable_background_tone": false,
+        "border_bottom": false,
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#000000"
+      }
+    },
+    "e38be45f-cef3-48f1-88e5-0e9ae227927c": {
+      "type": "global-rightvideo-text-skincare",
+      "settings": {
+        "fluid_layout": true,
+        "border_bottom": false,
+        "muted": false,
+        "controls": true,
+        "loop": false,
+        "sectionid": "",
+        "video_style": "col-lg-6",
+        "video_style_large": "col-xl-5",
+        "content_position": "align-items-center",
+        "title": "Mini devices. Major results.",
+        "subtitle": "",
+        "txt": "",
+        "htmltxt": "<p>Good things come in small packages. Skip the clinic and target your skin’s unique problem areas with our Mini LED devices.  <\/p>\n<p>We’ve paired our award-winning LED technology with skincare-infused hydrocolloid patches to help:<\/p>\n<ul class=\"twocolumns\">\n<li>Diminish fine lines + wrinkles<\/li>\n<li>Brighten complexion<\/li>\n<li>Reduce breakouts<\/li>\n<li>Calm redness + inflammation<\/li>\n<li>Lighten the look of age spots<\/li>\n<li>Restore fatigued skin<\/li>\n<\/ul>",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "outline",
+        "btn_variant": "primary",
+        "btn_size": "",
+        "poster_type": "",
+        "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "poster_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Untitled_design_114.png?v=1694717706",
+        "btn_txt_watch": "SHOP THE COLLECTION",
+        "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "watch_mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "btn_type_watch": "outline",
+        "btn_variant_watch": "primary",
+        "btn_size_watch": "",
+        "enable_overlay": true,
+        "overlay_bg_color": "#000000",
+        "overlay_opacity": 0.1,
+        "fluid_video_layout": true,
+        "video_type": "local",
+        "placement": "popup",
+        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "video_btn_text": "SEE THEM IN ACTION",
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#000000",
+        "alignment": "text-start",
+        "video_alignment": "justify-content-center"
+      }
+    },
+    "98ce97d7-15c6-46d0-b111-c869d2a20b0b": {
+      "type": "global-info-block",
+      "blocks": {
+        "template--16169064104098__98ce97d7-15c6-46d0-b111-c869d2a20b0b-1684638177820ba2bb-0": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_3.png",
+            "title": "<p>Eye Brightener <strong>FOR DARK CIRCLES & WRINKLES<\/strong><\/p>",
+            "txt_info": "<p>Brighten dark circles, diminish under-eye bags, and smooth crow's feet.<\/p><p><em>Includes hydrocolloid patches infused with <\/em><em><strong>amino acid-rich peptides<\/strong><\/em><em> and <\/em><em><strong>niacinamide<\/strong><\/em><em>.<\/em><\/p>",
+            "btn_txt": "SHOP NOW",
+            "btn_url": "shopify:\/\/products\/enzyme-powder-cleanser"
+          }
+        },
+        "59a2a5b7-b6f5-4566-8ff2-3c5e06fec563": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_2.png",
+            "title": "<p>Blemish Eraser <strong>FOR ACNE & BREAKOUTS<\/strong><\/p>",
+            "txt_info": "<p>Fight acne, clear congested skin, and calm redness & inflammation associated with breakouts<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>salicylic acid<\/strong><\/em><em> and <\/em><em><strong>green tea<\/strong><\/em><em>.<\/em><\/p>",
+            "btn_txt": "SHOP NOW",
+            "btn_url": "https:\/\/omniluxled.com\/products\/hyaluronic-acid-serum"
+          }
+        },
+        "0771fb05-3ea9-446b-b6e9-deb71688b602": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_3.png",
+            "title": "<p>Skin Corrector <strong>FOR FINE LINES & PIGMENTATION<\/strong><\/p>",
+            "txt_info": "<p>Reduce fine lines & inflammation while improving the appearance of age spots.<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>vitamin C<\/strong><\/em><em> and<\/em><em><strong> azelaic acid<\/strong><\/em><em>.<\/em><\/p>",
+            "btn_txt": "SHOP NOW",
+            "btn_url": "https:\/\/omniluxled.com\/products\/peptide-concentrate"
+          }
+        }
+      },
+      "block_order": [
+        "template--16169064104098__98ce97d7-15c6-46d0-b111-c869d2a20b0b-1684638177820ba2bb-0",
+        "59a2a5b7-b6f5-4566-8ff2-3c5e06fec563",
+        "0771fb05-3ea9-446b-b6e9-deb71688b602"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "anchorid": "exploreline",
+        "heading_txt": "Your pocket-sized LED heroes",
+        "lead_txt": "Explore 3 mini but mighty LED light therapy treatments that deliver clearer, brighter, and younger-looking skin.",
+        "section_bg_color": "",
+        "section_txt_color": "#000000",
+        "btn_type": "outline",
+        "btn_variant": "primary",
+        "btn_size": ""
+      }
+    },
+    "473576ad-4bef-4b6a-af7e-fbea447f4426": {
+      "type": "global-image-with-text",
+      "blocks": {
+        "29f90a7a-02a7-428e-997c-3300aaebbeef": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Get on our wavelength",
+            "max_width": 530,
+            "txt": "<p>Our non-invasive Mini LED treatments mirror the clinically-proven red, near-infrared, and blue light technology found in our leading Contour and Clear masks. <br\/><br\/>Power up your Mini with skincare-infused hydrocolloid patches tailored for your specific skin concerns. Benefits include: <\/p>",
+            "txt_liquid": "",
+            "step_heading": "",
+            "steps_captions": "Maximizes LED results\nKeeps your Mini right where you want it\nSoothing and safe for all skin types\nCan be used with or without LED",
+            "steps_captions_2": "",
+            "btn_txt": "SHOP THE LINE",
+            "btn_link": "https:\/\/omniluxled.com\/collections\/skin-care",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "watch_video_id": "",
+            "watch_mobile_video_id": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Minis_Photos_for_Website.png",
+            "alignment": "text-left",
+            "image_alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "29f90a7a-02a7-428e-997c-3300aaebbeef"
+      ],
+      "custom_css": [
+        ".container-fluid {padding-top: 5.5rem !important; padding-bottom: 4.5rem !important;}",
+        "@media (max-width: 600px) {.container-fluid {padding-top: 4.5rem !important; padding-bottom: 0rem !important; }}"
+      ],
+      "settings": {
+        "fluid_layout": true,
+        "enable_background_tone": false,
+        "border_bottom": false,
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#000000"
+      }
+    },
+    "14b5f872-142c-436c-aa91-9be1f604a443": {
+      "type": "global-video-with-text",
+      "settings": {
+        "fluid_layout": false,
+        "disable_min_height": true,
+        "muted": false,
+        "controls": true,
+        "loop": false,
+        "title": "Powerfully petite LED skincare",
+        "subtitle": "Your new anti-aging and acne-fighting Mini companions are trusted, tested and dermatologist-endorsed.",
+        "subtitle2": "",
+        "btn_txt_watch": "Watch the video",
+        "btn_type_watch": "outline",
+        "btn_variant_watch": "primary",
+        "btn_size_watch": "",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "",
+        "btn_variant": "primary",
+        "btn_size": "",
+        "poster_type": "",
+        "bg_video": "",
+        "mobile_bg_video": "",
+        "poster_image": "shopify:\/\/shop_images\/Untitled_design_-_2023-10-11T152007.153.png",
+        "image_mobile": "shopify:\/\/shop_images\/Untitled_design_-_2023-10-11T152057.502.png",
+        "disable_overlay": true,
+        "overlay_bg_color": "#000000",
+        "overlay_opacity": 0.4,
+        "fluid_video_layout": true,
+        "video_type": "local",
+        "placement": "popup",
+        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/fef82764e3a946918d9a98993d598af7.mp4",
+        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/fef82764e3a946918d9a98993d598af7.mp4",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#ffffff",
+        "alignment": "text-center",
+        "video_alignment": "justify-content-center",
+        "pt": 80,
+        "pb": 80,
+        "pts": 60,
+        "pbs": 60,
+        "border-top": true,
+        "border-bottom": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2cb12f0d-e933-4333-b50d-2dff62cf6fcd",
+    "0815808e-a8b7-4e1d-b348-913b81d5e8b1",
+    "23f2fda8-e8a7-4b2d-b176-998ae5de965a",
+    "e38be45f-cef3-48f1-88e5-0e9ae227927c",
+    "98ce97d7-15c6-46d0-b111-c869d2a20b0b",
+    "473576ad-4bef-4b6a-af7e-fbea447f4426",
+    "14b5f872-142c-436c-aa91-9be1f604a443"
+  ]
+}

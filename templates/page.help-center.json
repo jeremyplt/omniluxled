@@ -47,14 +47,14 @@
           "type": "logowidthtext",
           "settings": {
             "title": "What forms of payment do you accept?",
-            "answer": "<p>We accept debit cards and all major credit cards. You may also complete purchases using interest free installment plans through Pay Pal, Shop Pay, Afterpay, and Klarna.<\/p>"
+            "answer": "<p>We accept debit cards and all major credit cards. You may also complete purchases using interest free installment plans through Pay Pal, Shop Pay, Afterpay, and Klarna.<br\/><br\/>*Installment plans are not available in all regions.<\/p>"
           }
         },
         "88d2e11f-a4ca-4c43-aab9-dcecd0e023f0": {
           "type": "logowidthtext",
           "settings": {
             "title": "Do you offer installment payments?",
-            "answer": "<p>We do! We offer interest-free installment payments through Shop Pay, Afterpay and Klarna. PLEASE NOTE: Shop Pay and Klarna are only available for US customers.<\/p>"
+            "answer": "<p>We do! We offer interest-free installment payments through Shop Pay, Afterpay and Klarna. <br\/><br\/>*Installment plans are not available in all regions.<\/p>"
           }
         },
         "d387a7ba-2dd2-4509-9bf6-220b05957f3e": {

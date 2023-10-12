@@ -42,7 +42,7 @@ assign sidebar_enabled = section.settings.enable_sidebar
               {%- endif -%}
               {% if section.settings.enable_overlay %}
               <div class="overlay"
-                style="mix-blend-mode: multiply;background-color: {{ section.settings.overlay_bg_color }}!important; opacity: {{ section.settings.overlay_opacity }}!important;">
+                style="mix-blend-mode: multiply;background-color: {{ section.settings.overlay_bg_color }}; opacity: {{ section.settings.overlay_opacity }};">
               </div>
               {% endif %}
             </div>
