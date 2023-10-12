@@ -1725,3 +1725,7 @@ html
     margin: 0;
   }
 }
+
+.upsell-test-variant {
+  display: none !important;
+}
