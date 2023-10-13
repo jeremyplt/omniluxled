@@ -120,6 +120,22 @@ class AjaxCart extends HTMLElement {
     );
   }
 
+  renderUpsells() {
+    // Do not include "shopify-section" in the selector, it will break the render
+    // Use "?sections={section-id}" to render several sections
+
+    // Fetch a Shopify section. shopify-section only if static section rendered with section tag
+    fetch(window.Shopify.routes.root + "?section_id=cart-drawer")
+    .then(response => response.text())
+    .then(responseText => {
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+        const source = html.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
+        const destination = document.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
+        destination.innerHTML = source.innerHTML;
+    })
+    .catch(error => console.error(error));
+}
+
   /**
    * Open Cart drawer and add focus to drawer container
    *
@@ -147,7 +163,7 @@ class AjaxCart extends HTMLElement {
     let closeBtn = this.querySelector(".close-ajax--cart");
     Utility.trapFocus(this, closeBtn);
 
-    console.log("cart open ", document.querySelectorAll(".cart-items"))
+    this.renderUpsells()
 
     if (document.querySelectorAll(".cart-items").length > 0) this.activateExperimentUpsell();
 
