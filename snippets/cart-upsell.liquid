@@ -27,7 +27,7 @@
                           {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: upsellProduct, subject_parent: upsellCollection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_ad9d_forloop__index == nil %}{% assign locksmith_ad9d_forloop__index = 1 %}{% assign locksmith_ad9d_forloop__index0 = 0 %}{% else %}{% assign locksmith_ad9d_forloop__index = locksmith_ad9d_forloop__index | plus: 1 %}{% assign locksmith_ad9d_forloop__index0 = locksmith_ad9d_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_ad9d_forloop__index == 1 %}{% assign locksmith_ad9d_forloop__first = true %}{% else %}{% assign locksmith_ad9d_forloop__first = false %}{% endif %}{% if locksmith_ad9d_forloop__index == locksmith_ad9d_forloop__size %}{% assign locksmith_ad9d_forloop__last = true %}{% else %}{% assign locksmith_ad9d_forloop__last = false %}{% endif %}{% assign locksmith_ad9d_forloop__rindex = locksmith_ad9d_forloop__size | minus: locksmith_ad9d_forloop__index | minus: 1 %}{% assign locksmith_ad9d_forloop__rindex0 = locksmith_ad9d_forloop__size | minus: locksmith_ad9d_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
                         {%- comment %}</locksmith:364b>{% endcomment -%}                        
                         {%- assign product_form_id = 'product-form-' | append: upsellProduct.id | append: locksmith_ad9d_forloop__index -%}
-                        <div class="swiper-slide h-auto form-element" data-upsell-product-id="{{upsellProduct.id}}" style="width: 100px;">
+                        <div class="swiper-slide h-auto form-element upsell-test-control" data-upsell-product-id="{{upsellProduct.id}}" style="width: 100px;">
                             <product-form class="product-form d-block h-100">
                                 {%- assign upsell_variant = upsellProduct.selected_or_first_available_variant -%}
                                 {%- assign product_form_id = 'product-form-' | append: upsellProduct.id | append: locksmith_ad9d_forloop__index -%}
@@ -124,23 +124,7 @@
                             </product-form>
                         </div>
                     {% endfor %}
-                </div>
-                <div class="review-arrow-group">
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </slider-element>
-        <slider-element class="swiper-container carousel d-block position-relative upsell-test-variant">
-            <div class="swiper overflow-visible swiper-slider" data-slider='{
-                    "observer": true,
-                    "observeParents": true,
-                    "threshold": 2,
-                    "loop": false,
-                    "slidesPerView": "auto",
-                    "spaceBetween": 30,
-                    "grabCursor": true
-                }'>
-                <div class="swiper-wrapper">
+
                     {%- comment %}<locksmith:2ded>{% endcomment -%}
                     {%- assign locksmith_ad9d_forloop__size = 0 %}{% for upsellProduct in cart.items.first.product.metafields.custom.cart_upsells.value limit: total_items %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: upsellProduct, subject_parent: upsellCollection, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_ad9d_forloop__size = locksmith_ad9d_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_ad9d_forloop__index = nil -%}
                     {%- comment %}</locksmith:2ded>{% endcomment -%}
@@ -148,10 +132,10 @@
                         {% comment %} {% assign upsellProduct = all_products[upsellProduct] %} {% endcomment %}
                         {% comment %} {{ upsellProduct | json }}                       {% endcomment %}
                         {%- comment %}<locksmith:364b>{% endcomment -%}
-                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: upsellProduct, subject_parent: upsellCollection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_ad9d_forloop__index == nil %}{% assign locksmith_ad9d_forloop__index = 1 %}{% assign locksmith_ad9d_forloop__index0 = 0 %}{% else %}{% assign locksmith_ad9d_forloop__index = locksmith_ad9d_forloop__index | plus: 1 %}{% assign locksmith_ad9d_forloop__index0 = locksmith_ad9d_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_ad9d_forloop__index == 1 %}{% assign locksmith_ad9d_forloop__first = true %}{% else %}{% assign locksmith_ad9d_forloop__first = false %}{% endif %}{% if locksmith_ad9d_forloop__index == locksmith_ad9d_forloop__size %}{% assign locksmith_ad9d_forloop__last = true %}{% else %}{% assign locksmith_ad9d_forloop__last = false %}{% endif %}{% assign locksmith_ad9d_forloop__rindex = locksmith_ad9d_forloop__size | minus: locksmith_ad9d_forloop__index | minus: 1 %}{% assign locksmith_ad9d_forloop__rindex0 = locksmith_ad9d_forloop__size | minus: locksmith_ad9d_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: upsellProduct, subject_parent: upsellCollection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_ad9d_forloop__index == nil %}{% assign locksmith_ad9d_forloop__index = 1 %}{% assign locksmith_ad9d_forloop__index0 = 0 %}{% else %}{% assign locksmith_ad9d_forloop__index = locksmith_ad9d_forloop__index | plus: 1 %}{% assign locksmith_ad9d_forloop__index0 = locksmith_ad9d_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_ad9d_forloop__index == 1 %}{% assign locksmith_ad9d_forloop__first = true %}{% else %}{% assign locksmith_ad9d_forloop__first = false %}{% endif %}{% if locksmith_ad9d_forloop__index == locksmith_ad9d_forloop__size %}{% assign locksmith_ad9d_forloop__last = true %}{% else %}{% assign locksmith_ad9d_forloop__last = false %}{% endif %}{% assign locksmith_ad9d_forloop__rindex = locksmith_ad9d_forloop__size | minus: locksmith_ad9d_forloop__index | minus: 1 %}{% assign locksmith_ad9d_forloop__rindex0 = locksmith_ad9d_forloop__size | minus: locksmith_ad9d_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
                         {%- comment %}</locksmith:364b>{% endcomment -%}                        
                         {%- assign product_form_id = 'product-form-' | append: upsellProduct.id | append: locksmith_ad9d_forloop__index -%}
-                        <div class="swiper-slide h-auto form-element" data-upsell-product-id="{{upsellProduct.id}}" style="width: 100px;">
+                        <div class="swiper-slide h-auto form-element upsell-test-variant" data-upsell-product-id="{{upsellProduct.id}}" style="width: 100px;">
                             <product-form class="product-form d-block h-100">
                                 {%- assign upsell_variant = upsellProduct.selected_or_first_available_variant -%}
                                 {%- assign product_form_id = 'product-form-' | append: upsellProduct.id | append: locksmith_ad9d_forloop__index -%}
