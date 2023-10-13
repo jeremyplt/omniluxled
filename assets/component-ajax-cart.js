@@ -129,14 +129,11 @@ class AjaxCart extends HTMLElement {
     .then(response => response.text())
     .then(responseText => {
         const html = new DOMParser().parseFromString(responseText, 'text/html');
-        const source = html.querySelector('.swiper-container.upsell-test-variant')
-        const destination = document.querySelector('.swiper-container.upsell-test-variant')
+        const source = html.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
+        const destination = document.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
         destination.innerHTML = source.innerHTML;
     })
-    .finally(() => {
-        // Readd eventlistener on all upsell buttons (especially for prevent default)
-        window.formOverride();
-    })
+    .catch(error => console.error(error));
 }
 
   /**
