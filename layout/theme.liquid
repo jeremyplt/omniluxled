@@ -150,7 +150,7 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
     </main>
 
     {% if template.name != 'cart' and settings.enable_cart_drawer %}
-      {%- render 'cart-drawer' -%}
+      {%- section 'cart-drawer' -%}
     {% endif %}
 
     {% comment %} {% if settings.enable_quickshop %}
