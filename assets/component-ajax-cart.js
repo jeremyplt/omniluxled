@@ -147,11 +147,23 @@ class AjaxCart extends HTMLElement {
     let closeBtn = this.querySelector(".close-ajax--cart");
     Utility.trapFocus(this, closeBtn);
 
+    console.log("cart open ", document.querySelectorAll(".cart-items"))
+
+    if (document.querySelectorAll(".cart-items").length > 0) this.activateExperimentUpsell();
+
     if (event) {
       event.preventDefault();
       let openBy = event.currentTarget;
       openBy.setAttribute("aria-expanded", true);
     }
+  }
+
+  activateExperimentUpsell() {
+    if (window.runExperiment100432544) return;
+    window.runExperiment100432544 = 1;
+    window._conv_q = window._conv_q || [];
+    window._conv_q.push(["executeExperiment", "100432544"]);
+    console.log("Cart upsell experience activated");
   }
 
   /**
