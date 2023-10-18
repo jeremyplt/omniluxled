@@ -380,7 +380,7 @@ class AjaxCart extends HTMLElement {
       let upsellTitleEle = document.querySelector(".cart-upsell-title");
   
       if (deviceOnlyShow) {
-        upsellTitleEle.innerHTML = "Supercharge your results 👇️";
+        // upsellTitleEle.innerHTML = "Supercharge your results 👇️";
   
         const devices = [
           5764128866466, 7210762666146, 7919965569186, 7924737736866,
@@ -410,7 +410,7 @@ class AjaxCart extends HTMLElement {
           }
         });
       } else {
-        upsellTitleEle.innerHTML = "You might also like";
+        // upsellTitleEle.innerHTML = "You might also like";
   
         upsellElements.forEach((element) => {
           let exist = false;
