@@ -31,7 +31,7 @@
                         {%- assign product_form_id = 'product-form-' | append: upsellProduct.id | append: locksmith_ad9d_forloop__index -%}
                         <div class="swiper-slide h-auto form-element" data-upsell-product-id="{{upsellProduct.id}}" style="width: 100px;">
                             <product-form class="product-form d-block h-100">
-                                {% if upsell_variant.title == "Omnilux Hydrogel Facial Mask" %}
+                                {% if upsellProduct.title == "Omnilux Hydrogel Facial Mask" %}
                                     {%- assign upsell_variant = upsellProduct.variants[1] -%}
                                 {% else %}
                                     {%- assign upsell_variant = upsellProduct.selected_or_first_available_variant -%}
