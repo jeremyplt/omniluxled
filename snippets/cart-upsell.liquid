@@ -25,10 +25,14 @@
                         {%- assign product_form_id = 'product-form-' | append: upsellProduct.id | append: forloop.index -%}
                         <div class="swiper-slide h-auto form-element" data-upsell-product-id="{{upsellProduct.id}}" style="width: 100px;">
                             <product-form class="product-form d-block h-100">
-                                {%- assign upsell_variant = upsellProduct.selected_or_first_available_variant -%}
+                                {% if upsellProduct.title == "Omnilux Hydrogel Facial Mask" %}
+                                    {%- assign upsell_variant = upsellProduct.variants[1] -%}
+                                {% else %}
+                                    {%- assign upsell_variant = upsellProduct.selected_or_first_available_variant -%}
+                                {% endif %}
                                 {%- assign product_form_id = 'product-form-' | append: upsellProduct.id | append: forloop.index -%}
                                 {% form 'product', upsellProduct, id: product_form_id, class: "cart-upsell-form h-100", data-product-form: "", data-product-id: upsellProduct.id, data-type: 'add-to-cart-form' %}
-                                    <input type="hidden" name="id" value="{{ upsellProduct.selected_or_first_available_variant.id }}">
+                                    <input type="hidden" name="id" value="{{ upsell_variant.id }}">
                                     <div class="d-flex flex-column h-100">
                                         <div class="cart-img">
                                             <div class="w-100 h-100 position-relative square-card">
