@@ -131,7 +131,12 @@ class AjaxCart extends HTMLElement {
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const source = html.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
         const destination = document.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
+
+        const titleSource = html.querySelector('.cart-upsell-title.upsell-test-variant')
+        const titleDestination = document.querySelector('.cart-upsell-title.upsell-test-variant')
+
         destination.innerHTML = source.innerHTML;
+        titleDestination.innerHTML = titleSource.innerHTML;
     })
     .catch(error => console.error(error));
 }
