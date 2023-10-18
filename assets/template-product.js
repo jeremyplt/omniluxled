@@ -1,3 +1,26 @@
+$(document).ready(function () {
+  $('.cbb-frequently-bought-products').after($('<div class="cbb-frequently-bought-recommendations-wrap"></div>'))
+  $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-selector-list'))  
+  $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-form'))    
+  $('.cbb-frequently-bought-total-price-text').text("Total:")
+
+  $("#gorgias-chat-start").click(function(){   
+    if($('#gorgias-chat-container #chat-window').css('display') == 'none'){      
+      $("#gorgias-chat-container #chat-button").contents().find('button[data-testid="gorgias-chat-messenger-button"]').click();  
+    }
+    
+    if($('#gorgias-chat-container #chat-button').css('visibility') == 'hidden'){      
+      $('#gorgias-chat-container #chat-button').attr('style', 'right: 20px;bottom: 20px;visibility: visible !important;width: 72px;height: 66px;');
+    }  
+  }) 
+  
+  $("#gorgias-chat-container #chat-button").contents().find('button[data-testid="gorgias-chat-messenger-button"]').click(function(){    
+    if($('#gorgias-chat-container #chat-button').css('visibility') == 'visible'){      
+      $('#gorgias-chat-container #chat-button').attr('style', 'visibility: hidden !important');
+    }  
+  })    
+});
+
 const selectors = {
     productContainer: document.querySelector('.product-details-wrapper'),
     productMedia: document.querySelector('[data-productMedia]')
@@ -58,21 +81,3 @@ class model3d {
 }
 
 typeof model3d !== 'undefined' && new model3d();
-
-$(document).ready(function () {
-    $("#gorgias-chat-start").click(function(){   
-    if($('#gorgias-chat-container #chat-window').css('display') == 'none'){      
-      $("#gorgias-chat-container #chat-button").contents().find('button[data-testid="gorgias-chat-messenger-button"]').click();  
-    }
-    
-    if($('#gorgias-chat-container #chat-button').css('visibility') == 'hidden'){      
-      $('#gorgias-chat-container #chat-button').attr('style', 'right: 20px;bottom: 20px;visibility: visible !important;width: 72px;height: 66px;');
-    }  
-  }) 
-  
-  $("#gorgias-chat-container #chat-button").contents().find('button[data-testid="gorgias-chat-messenger-button"]').click(function(){    
-    if($('#gorgias-chat-container #chat-button').css('visibility') == 'visible'){      
-      $('#gorgias-chat-container #chat-button').attr('style', 'visibility: hidden !important');
-    }  
-  })  
-});

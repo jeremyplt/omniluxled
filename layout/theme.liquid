@@ -1,13 +1,17 @@
-{%- comment %}<locksmith:208a>{% endcomment -%}
+{%- comment %}<locksmith:3120>{% endcomment -%}
   {%- include 'locksmith' -%}
-{%- comment %}</locksmith:208a>{% endcomment -%}
+{%- comment %}</locksmith:3120>{% endcomment -%}
 
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
-{{ locksmith_initializations }}
+
+    {{ locksmith_initializations }}
+    {{!-- Upfluence Tracking Script --}}
+<script src="https://tracking.upfluence.co/js/v1/init-249fbd7f-ec24-4799-a7fa-22d273cda0c0.js"></script>
+
 <!-- Begin BlackCrow Script Tag: DO NOT MODIFY! -->
-     <script type="text/javascript" async src="https://shopify-init.blackcrow.ai/js/core/getomnilux.js?shopify_app_version=1.0.206&shop=getomnilux.myshopify.com"></script>
+     <script type="text/javascript" async src="https://shopify-init.blackcrow.ai/js/core/getomnilux.js?shopify_app_version=1.0.208&shop=getomnilux.myshopify.com"></script>
 <!-- End BlackCrow Script Tag -->   {% render 'site-speed' %}
 
 <!-- begin Convert Experiences code-->
@@ -44,10 +48,10 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
     <link rel="preconnect" href="https://monorail-edge.shopifysvc.com" crossorigin>
     <title>{{ page_title }}</title>
 
-      {%- comment %}<locksmith:2a70>{% endcomment -%}
+      {%- comment %}<locksmith:1809>{% endcomment -%}
         {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape | default: shop.description | default: shop.name }}">{% endif -%}
         {%- comment %}original: <meta name="description" content="{{ page_description | escape | default: shop.description | default: shop.name }}">{%- endcomment %}
-      {%- comment %}</locksmith:2a70>{% endcomment -%}
+      {%- comment %}</locksmith:1809>{% endcomment -%}
 
     {% comment %}theme-check-disable LiquidTag{% endcomment %}
     {%- render 'meta-tags' -%}
@@ -477,15 +481,19 @@ function moveFormElement() {
   const form = document.querySelector(".cbb-frequently-bought-form");
 
   if (window.innerWidth < 649) {
-    container.insertAdjacentElement('beforeend', form);
+    container.insertAdjacentElement('afterend', form);
   }
 }
 
 waitForElement(".cbb-frequently-bought-form", 5000)
   .then(() => {
-    moveFormElement();
-    window.addEventListener('resize', moveFormElement);
-    console.log("done", window.innerWidth)
+    //moveFormElement();
+    //window.addEventListener('resize', moveFormElement);
+    document.querySelector(".cbb-frequently-bought-add-button").addEventListener("click", function(e) {
+      setTimeout(function() {
+        document.querySelector('ajax-cart').getCartData("open_drawer");
+      }, 1000)
+    });
   })
   .catch((e) => {
     console.log("error message")

@@ -2,25 +2,21 @@
  * FAQ on PDP - Above the fold
  */
 let fold =
-  document.getElementById('hoox-reviews')?.parentElement?.offsetTop || 500;
+  document.getElementsByClassName('cbb-frequently-bought-container')?.offsetTop || 500;
 
 window.addEventListener('scroll', function (e) {
   if (this.scrollY > fold - window.innerHeight) {
-    if (window.runExperiment != 'before-after') {
-      window.runExperiment = 'before-after';
+    if (window.runExperiment != 'fbt') {
+      window.runExperiment = 'fbt';
 
       window._conv_q = window._conv_q || [];
-      window._conv_q.push(['executeExperiment', '100430641']);
-      _conv_q.push(['executeExperiment', '100430641']);
+      window._conv_q.push(['executeExperiment', '100433096']);
+      _conv_q.push(['executeExperiment', '100433096']);
 
-      console.log('Activated FAQs A/B Experiment');
-
-      window._conv_q.push(['triggerConversion', '100418583']);
-      _conv_q.push(['triggerConversion', '100418583']);
+      window._conv_q.push(['triggerConversion', '100420805']);
+      _conv_q.push(['triggerConversion', '100420805']);
       
-      console.log("before-after run correctly")
+      console.log("FBT run correctly")
     }
-
-    console.log(window.runExperiment);
   } 
 });

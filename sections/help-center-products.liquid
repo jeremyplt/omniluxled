@@ -526,7 +526,7 @@
                            <div class="tab-pane tabcontent {% if tab == 'omnilux-minis' %} open {% endif %}" id="custom-tab-7" role="tabpanel">
                             <div class="rte pt-lg-7 px-lg-6">
                               <custom-accordion  data-accordionType="single">
-                                <div class="accordion__container py-3 border-top border-bottom">
+                                <div class="accordion__container py-3 border-top">
                                     <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab7">
                                       <span>{{ section.settings.tabTitle1 }}</span>
                                       <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
@@ -569,6 +569,49 @@
                                       </div>
                                     </div>
                                 </div>
+                                   <div class="accordion__container py-3 border-top border-bottom">
+                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
+                                      <span>{{ section.settings.tabTitle2 }}</span>
+                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                        <span class="ox-plus trn"></span>
+                                        <span class="ox-minus position-absolute trn"></span>
+                                      </span>
+                                    </a>
+                                    <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content" style="height: 0px;">
+                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                        <div class="text-center">
+                                          <h4 class="mb-3 mb-lg-7">{{ section.settings.tabsubTitle2 }}</h4>
+                                        </div>
+                                         {%- for block in section.blocks -%}
+                                          {%- if block.type == 'minis_user_guides' -%}
+
+                                          {% for i in (1..6) %}
+                                            {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                            {% assign quentionsid =  'question' | append: forloop.index %}
+                                            {% assign answerid =  'answer' | append: forloop.index %}
+                                            {% if block.settings[enableFaq] %}
+                                            {% if block.settings[quentionsid] != blank %}
+                                                    <div class="accordion__container py-3 border-top" style="line-height: 1.1875;">
+                                                        <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                          <span>{{ block.settings[quentionsid] }}</span>
+                                                          <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                            <span class="ox-plus trn"></span>
+                                                            <span class="ox-minus position-absolute trn"></span>
+                                                          </span>
+                                                        </a>
+                                                        <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                          <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                                        </div>
+                                                    </div>
+                                              {% endif %}
+                                                  {% endif %}
+                                                {% endfor %}
+
+                                            {% endif %}
+                                        {% endfor %}
+                                      </div>
+                                    </div>
+                              </div> 
                               </custom-accordion>
                           </div>
                           </div>

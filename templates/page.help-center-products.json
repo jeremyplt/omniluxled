@@ -1093,6 +1093,30 @@
             "question10": "",
             "answer10": ""
           }
+        },
+        "556ecaf6-503e-445d-98cf-a4556c912e71": {
+          "type": "minis_user_guides",
+          "settings": {
+            "title": "",
+            "enableFaq1": true,
+            "question1": "English",
+            "answer1": "<ul><li><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/2023-Blemish_Eraser_User_Guide_1.pdf?v=1697243401\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/2023-Blemish_Eraser_User_Guide_1.pdf?v=1697243401\">Blemish Eraser User Guide<\/a><\/li><li><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/2023-Eye_Brightner_User_Guide__1.pdf?v=1697243401\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/2023-Eye_Brightner_User_Guide__1.pdf?v=1697243401\">Eye Brightener User Guide<\/a><\/li><li><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/2023-Skin_Corrector_User_Guide__1.pdf?v=1697243401\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/2023-Skin_Corrector_User_Guide__1.pdf?v=1697243401\">Skin Corrector User Guide<\/a><\/li><li><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Mini_Contraindications_English.pdf?v=1697589903\" target=\"_blank\" title=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Mini_Contraindications_English.pdf?v=1697589903\">Contraindications<\/a><\/li><\/ul>",
+            "enableFaq2": false,
+            "question2": "",
+            "answer2": "",
+            "enableFaq3": false,
+            "question3": "",
+            "answer3": "",
+            "enableFaq4": false,
+            "question4": "",
+            "answer4": "",
+            "enableFaq5": false,
+            "question5": "",
+            "answer5": "",
+            "enableFaq6": false,
+            "question6": "",
+            "answer6": ""
+          }
         }
       },
       "block_order": [
@@ -1128,7 +1152,8 @@
         "7b9b509a-a19f-4315-82ea-8f5f33fe3270",
         "f4a2fdb6-99da-4724-872c-d5ad386e7ded",
         "90fcd3a3-1bbd-45b9-948e-b06416d88e95",
-        "bf6707b0-e754-4613-ba61-c381b448681f"
+        "bf6707b0-e754-4613-ba61-c381b448681f",
+        "556ecaf6-503e-445d-98cf-a4556c912e71"
       ],
       "settings": {
         "enable_accordion_btn": true,
@@ -1148,7 +1173,7 @@
         "pro_btn7": "",
         "tabTitle1": "FAQ",
         "tabsubTitle1": "",
-        "tabTitle2": "User Guides \/Contraindications",
+        "tabTitle2": "User Guides \/ Contraindications",
         "tabsubTitle2": "Choose Your Language",
         "tabTitle3": "Assessment",
         "tabsubTitle3": "Assessment"
