@@ -1526,71 +1526,7 @@ li.dropdown a.reviews-results{display:block!important;}
     padding-bottom: 35px !important;
   }
 
-  .video-with-text.text-with-right-video.skincare {
-    border-top: 1.5px solid #000;
-    padding-top: 60px;
-  }
-  #exploreline h3.h2.section-title {
-    font-size: 27px;
-    line-height: 36px;
-  }
-  .template-page.skin-care .global-results-slider.shopledkit,
-  .shopledkit.py-lg-10 {
-    border-top: 1.5px solid #000 !important;
-    padding-bottom: 0px !important;
-    padding-top: 50px !important;
-    background: url(https://cdn.shopify.com/s/files/1/0482/6736/2466/files/shopledkitbg.jpg?v=1685156126)
-      no-repeat center !important;
-  }
-  .template-product .info-block-wrapper.liquid {
-    border-top: 1.5px solid #000 !important;
-  }
-  .testimonial .container,
-  .testimonial .poster-image,
-  .testimonial .custom-video-container {
-    min-height: 500px;
-  }
-  .hidemobile {
-    display: none;
-  }
-  .hidedesktop {
-    display: block;
-  }
-  .formatted-list h3 {
-    text-align: center;
-  }
-  .p60 {
-    padding-top: 60px !important;
-  }
-}
-
-#shopify-section-template--16184566874274__c578fea6-30d9-45c3-a052-ad86f35eb32a,
-#shopify-section-template--16184566120610__b001f34c-2df8-4b58-af50-b86bb7012553 {
-  display: none;
-}
-
-html .swiper-button-prev:hover::after,
-html .swiper-button-next:hover::after {
-  border-color: black !important;
-}
-#shopify-section-template--16184566120610__6ec0e2ef-40e2-4265-a008-778c56929061 {
-  display: block;
-}
-
-/* Cart Drawer */
-
-.item__compare-at-price {
-  opacity: 0.8;
-  text-decoration: line-through;
-}
-
-.item__price--sale {
-  font-weight: bold;
-}
-
-/* App - Frequently Bought Together */
-
-.ab-fbt .cbb-frequently-bought-container {  
+  .v.ab-fbt .cbb-frequently-bought-container {  
   display: block !important;
 }
 
@@ -1710,6 +1646,76 @@ html .cbb-frequently-bought-recommendations-wrap {
   }  
   .cbb-frequently-bought-selector-list {
     padding: 0 10px !important;
+ec0e2ef-40e2-4265-a008-778c56929061 {
+  display: block;
+}
+
+/* Cart Drawer */
+
+.item__compare-at-price {
+  opacity: 0.8;
+  text-decoration: line-through;
+}
+
+.item__price--sale {
+  font-weight: bold;
+}
+
+/* App - Frequently Bought Together */
+
+html .cbb-frequently-bought-container {
+  padding: 1.5rem !important;
+  background-color: #f9f9f9 !important;
+  border: solid 1px black !important;
+}
+
+html .cbb-frequently-bought-total-price-text,
+html .cbb-frequently-bought-total-price-regular-price span {
+  font-weight: bold !important;
+}
+
+html .cbb-frequently-bought-total-price-regular-price span,
+html .cbb-frequently-bought-total-price-sale-price .money {
+  font-size: 20px !important;
+}
+
+html .cbb-frequently-bought-selector-link {
+  text-decoration: underline !important;
+}
+
+html .cbb-frequently-bought-selector-label-regular-price .money {
+  font-weight: bold !important;
+}
+
+html .cbb-frequently-bought-plus-icon {
+  font-weight: 700 !important;
+}
+
+html .cbb-frequently-bought-add-button {
+  background-color: transparent !important;
+  border: solid 1px black !important;
+  color: black !important;
+  transition: all 0.2s ease-in-out;
+}
+
+html .cbb-frequently-bought-add-button:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+html .cbb-frequently-bought-selector-label-name span {
+  font-weight: normal !important;
+}
+
+html
+  .cbb-frequently-bought-selector-label-name
+  .cbb-frequently-bought-this-item-label {
+  font-weight: bold !important;
+}
+
+@media (max-width: 549px) {
+  html .cbb-frequently-bought-title {
+    text-align: center !important;
   }
 }
 
