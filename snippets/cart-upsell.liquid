@@ -25,7 +25,13 @@
                         {%- assign product_form_id = 'product-form-' | append: upsellProduct.id | append: forloop.index -%}
                         <div class="swiper-slide h-auto form-element" data-upsell-product-id="{{upsellProduct.id}}" style="width: 100px;">
                             <product-form class="product-form d-block h-100">
-                                {% if upsellProduct.title == "Omnilux Hydrogel Facial Mask" %}
+                                {% assign contains_pack = false %}
+                                {% for item in cart.items %}
+                                    {% if item.product.title == "Omnilux Hydrogel Facial Mask" %}
+                                        {% assign contains_pack = true %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% if upsellProduct.title == "Omnilux Hydrogel Facial Mask" and contains_pack %}
                                     {%- assign upsell_variant = upsellProduct.variants[1] -%}
                                 {% else %}
                                     {%- assign upsell_variant = upsellProduct.selected_or_first_available_variant -%}
