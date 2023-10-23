@@ -12,8 +12,8 @@
     top: 0;
 }
 .template-index #shopify-section-header,
-.anti-aging #shopify-section-header,
-.anti-acne #shopify-section-header,
+.anti-aging-old #shopify-section-header,
+.anti-acne-old #shopify-section-header,
 .men #shopify-section-header
 {
     position: fixed !important;

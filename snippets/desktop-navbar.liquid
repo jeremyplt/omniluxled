@@ -109,7 +109,7 @@
                                                     {% if block.type == 'sub_menu' or block.type == 'sub_menu_second' %}
                                                         <div data-menu-title="{{block.settings.menu_title}}" class="sub_menu {% if block.settings.menu_title == 'Devices' %}active{% endif %}">
                                                             <div class="row">
-                                                                {% for i in (1..6) %}
+                                                                {% for i in (1..9) %}
                                                                     {% capture product %}sub_menu_product_{{ i }}{% endcapture %}
                                                                     {% assign current_product = block.settings[product] %}
                                                                     {% assign current_variant = current_product.selected_or_first_available_variant %}             

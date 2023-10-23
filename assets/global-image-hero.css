@@ -105,7 +105,7 @@
   height: 169vh;
   background-image: url('https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient-HM-min.jpg?v=1678788486');
 }
-.anti-aging .image-hero .gradient-fair-tone {
+.anti-aging-old .image-hero .gradient-fair-tone {
   height: 138vh;
   background-image: url('https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient-HM-min.jpg?v=1678788486');
 }
@@ -147,7 +147,10 @@
 .template-index .image-hero.withreviews .container-fluid {
   padding-top:80px!important;
 }
+.anti-acne .image-hero .media-wrap{object-position: 80% 0!important;}
+
 }
+
   
 
 @media (max-width: 600px) {
@@ -158,6 +161,7 @@
 font-size: 50px;
     line-height:60px;
   }
+  .anti-acne .image-hero .media-wrap{object-position: top center!important;}
 }
 
 /**

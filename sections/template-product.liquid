@@ -281,11 +281,11 @@
    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, subject_parent: product, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
  {%- comment %}</locksmith:3eff>{% endcomment -%}
  {% if collection.title contains 'All Devices' %}
- 	<div class="trustedbypdp">|&nbsp;&nbsp;Trusted by 100K+ Customers</div>
+ 	<div class="trustedbypdp">|&nbsp;&nbsp;Trusted by 125K+ Customers</div>
   {% endif %}
  {% endfor %}
                         <div class="price-wrapper mt-2 d-flex align-items-center flex-wrap">
-                            {%- if current_variant.compare_at_price > current_variant.price -%}<s class="text-gray-600 me-2 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>{%- endif -%}
+                            <s class="text-gray-600 me-2 money" data-comparePrice {%- if current_variant.compare_at_price > current_variant.price -%}style="display:block"{%- endif -%}>{{ current_variant.compare_at_price | money }}</s>
                             <span class="fw-bold actual-price money me-2" data-currentPrice>{{ current_variant.price | money }}</span>
                             {% unless product.tags contains "no_free_shipping" %}
                               <span class="free-shipping text-uppercase fw-bold font-size-md ls-0" style="line-height: 1.7857142857;">+ free shipping*</span>

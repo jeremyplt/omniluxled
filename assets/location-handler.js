@@ -33,7 +33,7 @@ class LocationHandler {
     if (prefix == 'us') {
       payIconTag.setAttribute(
         'src',
-        'https://cdn.shopify.com/s/files/1/0482/6736/2466/t/190/assets/6220a9b0912013c51947f9b8.png'
+        'https://cdn.shopify.com/s/files/1/0482/6736/2466/files/ShopPay_-_Color.svg?v=1697732176'
       );
     } else {
       payIconTag.setAttribute(

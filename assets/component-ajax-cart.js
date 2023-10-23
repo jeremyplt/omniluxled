@@ -277,28 +277,34 @@ class AjaxCart extends HTMLElement {
     let cartItems = this.querySelectorAll("[data-cart-item]");
     cartItems.forEach((element) => {      
       let productId = element.getAttribute("data-product-id")
+      let variantId = element.getAttribute("data-variant-id")
 
       window.globalVariables.cart.items.forEach((item) => {
-        if (item.product_id == productId) {
-          let variantJSONEle = document.querySelector(".variantsJSON-" + productId);
+        if (item.product_id == productId && item.variant_id == variantId) {
+          let variantJSONEle = document.querySelector(".variantsJSON-" + productId);          
           if (variantJSONEle != undefined && variantJSONEle != null) {
             let variantJSON = JSON.parse(variantJSONEle.textContent);
-            let itemTotalPrice = variantJSON[0].price * item.quantity;
-            total_price += itemTotalPrice;
 
-            if(this.taxPercent > 0) {
-              itemTotalPrice = itemTotalPrice * (1 + this.taxPercent / 100);
-            }
-  
-            let formatMoney = Shopify.formatMoney(
-              itemTotalPrice,
-              window.globalVariables.money_format
-            );
-  
-            if(this.taxPercent > 0)
-              element.getElementsByClassName("price")[0].innerHTML = formatMoney + " Incl. tax"
-            else
-              element.getElementsByClassName("price")[0].innerHTML = formatMoney
+            variantJSON.forEach((variant) => {
+              if(variant.id == variantId) {
+                let itemTotalPrice = variant.price * item.quantity;
+                total_price += itemTotalPrice;
+    
+                if(this.taxPercent > 0) {
+                  itemTotalPrice = itemTotalPrice * (1 + this.taxPercent / 100);
+                }
+      
+                let formatMoney = Shopify.formatMoney(
+                  itemTotalPrice,
+                  window.globalVariables.money_format
+                );
+      
+                if(this.taxPercent > 0)
+                  element.getElementsByClassName("price")[0].innerHTML = formatMoney + " Incl. tax"
+                else
+                  element.getElementsByClassName("price")[0].innerHTML = formatMoney   
+              }  
+            })
           }          
         }
       });

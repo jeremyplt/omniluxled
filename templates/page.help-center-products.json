@@ -911,7 +911,6 @@
         },
         "2670bcfe-e061-46ce-96d8-a342e21ed17c": {
           "type": "minis_faq",
-          "disabled": true,
           "settings": {
             "title": "",
             "enableFaq1": true,
@@ -948,7 +947,6 @@
         },
         "7b9b509a-a19f-4315-82ea-8f5f33fe3270": {
           "type": "minis_faq",
-          "disabled": true,
           "settings": {
             "title": "",
             "enableFaq1": true,
@@ -985,7 +983,6 @@
         },
         "f4a2fdb6-99da-4724-872c-d5ad386e7ded": {
           "type": "minis_faq",
-          "disabled": true,
           "settings": {
             "title": "",
             "enableFaq1": true,
@@ -1022,7 +1019,6 @@
         },
         "90fcd3a3-1bbd-45b9-948e-b06416d88e95": {
           "type": "minis_faq",
-          "disabled": true,
           "settings": {
             "title": "",
             "enableFaq1": true,
@@ -1059,7 +1055,6 @@
         },
         "bf6707b0-e754-4613-ba61-c381b448681f": {
           "type": "minis_faq",
-          "disabled": true,
           "settings": {
             "title": "",
             "enableFaq1": true,
@@ -1170,7 +1165,7 @@
         "pro_btn4": "Clear",
         "pro_btn5": "MEN",
         "pro_btn6": "TOPICAL SKIN CARE",
-        "pro_btn7": "",
+        "pro_btn7": "MINI",
         "tabTitle1": "FAQ",
         "tabsubTitle1": "",
         "tabTitle2": "User Guides \/ Contraindications",

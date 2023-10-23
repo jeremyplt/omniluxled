@@ -575,6 +575,7 @@ customElements.define("site-overlay", siteOverlay);
           tabs.forEach(tab => tab.classList.remove("active"));
           tab.classList.add("active");
           const tabId = tab.id;
+          console.log("tabId =", tabId)
           // Find the first image that have an alt tag containing "tabId"
           const image = Array.from(document.images).find(img => img.alt.includes(tabId));
           console.log("image", image)

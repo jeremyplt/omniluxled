@@ -10,7 +10,7 @@
             "controls": false,
             "loop": true,
             "logo_image__": "",
-            "trustedbytxt": "Trusted by 100K+ Customers",
+            "trustedbytxt": "Trusted by 125K+ Customers",
             "title": "Tough on acne.<br>Gentle on \n<em class=\"fw-light\">your skin.<\/em>",
             "subtitle": "<p>Proven to significantly reduce or eliminate acne<\/p>",
             "heading__size": false,
@@ -144,7 +144,6 @@
     },
     "main": {
       "type": "global-features-grid",
-      "disabled": true,
       "blocks": {
         "bdfa8f76-8f87-4aff-a0af-3a2ba0d05c70": {
           "type": "content",
@@ -194,6 +193,7 @@
         "c7b71fcb-7d15-4426-969b-40fde5018694",
         "2d1b2fad-0914-49b7-8ebf-f9efde748cb9"
       ],
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "gradient_tone": true,

@@ -124,7 +124,7 @@
                                 {% if menuType == 'megamenu_with_product' %}
                                     <div class="col">
                                         <div class="row h-100 mb-8">
-                                            {% for i in (1..6) %}
+                                            {% for i in (1..9) %}
                                                 {% capture product %}product_{{ i }}{% endcapture %}
                                                 {% assign current_product = megaMenuBlock[product] %}
                                                 {% assign current_variant = current_product.selected_or_first_available_variant %}
@@ -526,6 +526,51 @@
           "type": "text",
           "id": "sub_title_12",
           "label": "Sub title 12"
+        },
+        {
+          "type": "product",
+          "id": "product_7",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_13",
+          "label": "Sub title 13"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_14",
+          "label": "Sub title 14"
+        },
+        {
+          "type": "product",
+          "id": "product_8",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_15",
+          "label": "Sub title 15"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_16",
+          "label": "Sub title 16"
+        },
+        {
+          "type": "product",
+          "id": "product_9",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_17",
+          "label": "Sub title 17"
+        },
+        {
+          "type": "text",
+          "id": "sub_title_18",
+          "label": "Sub title 18"
         }
       ]
     },
