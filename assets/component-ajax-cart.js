@@ -433,9 +433,9 @@ class AjaxCart extends HTMLElement {
       "text/html"
     );
     let cartIcon = headerHTML.getElementById("cart-icon-desktop");
-    if (drawerSelectors.cartIconDesktop)
+    if (drawerSelectors.cartIconDesktop && cartIcon)
       drawerSelectors.cartIconDesktop.innerHTML = cartIcon.innerHTML;
-    if (drawerSelectors.cartIconMobile)
+    if (drawerSelectors.cartIconMobile && cartIcon)
       drawerSelectors.cartIconMobile.innerHTML = cartIcon.innerHTML;
     if (window.globalVariables.cart.item_count > 0) {
       if (headerHTML.querySelector("#cart-icon-desktop .cart-count")) {

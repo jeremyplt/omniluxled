@@ -339,3 +339,17 @@ class VariantSelects extends HTMLElement {
     }
   }
   customElements.define('variant-radios', VariantRadios);
+
+  document.addEventListener("DOMContentLoaded", function() {
+    console.log("test")
+    const upsellForms = document.querySelectorAll(".cart-upsell-form");
+
+    console.log("upsellForms", upsellForms)
+  
+    upsellForms.forEach(function(form) {
+        const productHandle = form.getAttribute("data-product-handle");
+        form.addEventListener("submit", function(event) {
+            console.log("product form eventlistener");
+        })
+    })
+  });

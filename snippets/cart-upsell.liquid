@@ -159,7 +159,7 @@
                             <product-form class="product-form d-block h-100">
                                 {%- assign upsell_variant = upsellProduct.selected_or_first_available_variant -%}
                                 {%- assign product_form_id = 'product-form-' | append: upsellProduct.id | append: locksmith_ad9d_forloop__index -%}
-                                {% form 'product', upsellProduct, id: product_form_id, class: "cart-upsell-form h-100", data-product-form: "", data-product-id: upsellProduct.id, data-type: 'add-to-cart-form' %}
+                                {% form 'product', upsellProduct, id: product_form_id, class: "cart-upsell-form h-100", data-product-form: "", data-product-id: upsellProduct.id, data-product-handle: upsellProduct.handle, data-type: 'add-to-cart-form' %}
                                     <input type="hidden" name="id" value="{{ upsellProduct.selected_or_first_available_variant.id }}">
                                     <div class="d-flex flex-column h-100">
                                         <div class="cart-img">
