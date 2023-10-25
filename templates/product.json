@@ -388,6 +388,7 @@
         "290dd027-7a41-4ffe-ad02-5c84e59de005",
         "cb5608c2-b1a2-44d9-a405-e8723930350e"
       ],
+      "disabled": true,
       "settings": {
         "class_names": "",
         "section_id": "#beforeafter",
