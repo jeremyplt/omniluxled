@@ -121,17 +121,31 @@ class AjaxCart extends HTMLElement {
   }
 
   addEventListenerUpsells() {
-    console.log("test")
-    const upsellForms = document.querySelectorAll(".cart-upsell-form");
-
-    console.log("upsellForms", upsellForms)
+    const upsells = document.querySelectorAll(".cart-upsell");
   
-    upsellForms.forEach(function(form) {
-        const productHandle = form.getAttribute("data-product-handle");
-        form.addEventListener("submit", function(event) {
-            console.log("In the event lsitener");
-            console.log("productHandle", productHandle);
+    upsells.forEach(function(upsell) {
+      const form = upsell.querySelector(".cart-upsell-form");
+      const productsToRemove = upsell.getAttribute("data-products-remove").split(",");
+
+      // remove the last element of the array if it's empty
+      if (productsToRemove[productsToRemove.length - 1] === "") {
+        productsToRemove.pop();
+      }
+
+      form.addEventListener("submit", function(event) {
+        productsToRemove.forEach(function(variantId) {
+          fetch('/cart/change.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              id: variantId,
+              quantity: 0
+            })
+          })
         })
+      })
     })
   
   }
