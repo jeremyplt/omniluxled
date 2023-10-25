@@ -130,6 +130,7 @@ class AjaxCart extends HTMLElement {
         const productHandle = form.getAttribute("data-product-handle");
         form.addEventListener("submit", function(event) {
             console.log("In the event lsitener");
+            console.log("productHandle", productHandle);
         })
     })
   
