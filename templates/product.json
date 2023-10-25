@@ -450,6 +450,7 @@
         "7979fdba-e6ce-4ff0-91c2-f0c569c9fffd"
       ],
       "settings": {
+        "class_names": "before-after-scroller-contour",
         "section_id": "#beforeafter",
         "section_title": "Real users, real results"
       }
