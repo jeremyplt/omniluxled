@@ -310,6 +310,7 @@
         },
         "2c244655-c78f-4a88-b389-9ba80a3a7be4": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "heading_txt": "<p>“If you’re dealing with all-over face breakouts… then you might want to add this FDA-cleared LED mask to your routine.”<\/p>",
             "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/cosmopolitan.svg?v=1673240917",
