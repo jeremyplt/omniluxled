@@ -167,6 +167,11 @@ class AjaxCart extends HTMLElement {
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const source = html.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
         const destination = document.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
+
+        const sourceTitle = html.querySelector('.cart-upsell-title.upsell-test-variant')
+        const destinationTitle = document.querySelector('.cart-upsell-title.upsell-test-variant')
+
+        destinationTitle.innerHTML = sourceTitle.innerHTML;
         destination.innerHTML = source.innerHTML;
 
         this.addEventListenerUpsells()
@@ -418,7 +423,7 @@ class AjaxCart extends HTMLElement {
       let upsellTitleEle = document.querySelector(".cart-upsell-title");
   
       if (deviceOnlyShow) {
-        upsellTitleEle.innerHTML = "Supercharge your results 👇️";
+        // upsellTitleEle.innerHTML = "Supercharge your results 👇️";
   
         const devices = [
           5764128866466, 7210762666146, 7919965569186, 7924737736866,
