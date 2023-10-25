@@ -120,6 +120,21 @@ class AjaxCart extends HTMLElement {
     );
   }
 
+  addEventListenerUpsells() {
+    console.log("test")
+    const upsellForms = document.querySelectorAll(".cart-upsell-form");
+
+    console.log("upsellForms", upsellForms)
+  
+    upsellForms.forEach(function(form) {
+        const productHandle = form.getAttribute("data-product-handle");
+        form.addEventListener("submit", function(event) {
+            console.log("In the event lsitener");
+        })
+    })
+  
+  }
+
   renderUpsells() {
     // Do not include "shopify-section" in the selector, it will break the render
     // Use "?sections={section-id}" to render several sections
@@ -132,6 +147,8 @@ class AjaxCart extends HTMLElement {
         const source = html.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
         const destination = document.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
         destination.innerHTML = source.innerHTML;
+
+        this.addEventListenerUpsells()
     })
     .catch(error => console.error(error));
 }
