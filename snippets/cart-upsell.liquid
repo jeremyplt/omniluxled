@@ -124,7 +124,15 @@
                                                     name="add"
                                                     aria-label="{{ 'products.product.upsell_add' | t | escape }}"
                                                     {% unless upsell_variant.available %}disabled{% endunless %}>
-                                                    <span class="add-text">{%- if upsellProduct.available -%}+ {{ 'templates.cart.upsell_add_btn' | t }}{%- else-%}{{ 'templates.cart.upsell_add_btn' | t }}{%- endif -%}</span>
+                                                    <span class="add-text">
+                                                        {%- if upsellProduct.metafields.custom.cart_upsell_button_label != blank -%}
+                                                            Upgrade
+                                                        {%- elsif upsellProduct.available -%}
+                                                            + {{ 'templates.cart.upsell_add_btn' | t }}
+                                                        {%- else-%}
+                                                            {{ 'templates.cart.upsell_add_btn' | t }}
+                                                        {%- endif -%}
+                                                    </span>
                                                     <span class="spinner start-0"></span>
                                                 </button>
                                             </div>
