@@ -117,6 +117,10 @@
   display: block;
 }
 
+.template-page.minis .section-faq {
+  display: block;
+}
+
 @media(min-width:999px){
 .overlay{opacity:1!important;background: linear-gradient(88deg, rgba(0, 0, 0, 0.70) 10.13%, rgba(0, 0, 0, 0.00) 56.88%), lightgray -2.534px -61.736px / 110.957% 183.346% no-repeat!important;}
 }
@@ -428,17 +432,25 @@
   .circle-video-menu,
 .template-page.anti-acne .circle-video-menu-wrap.circle-video-desktop,
 .template-page.anti-acne .desktopreviewstitle,
+.template-page.minis .desktopreviewstitle,
 .template-page.anti-acne .seeallreviews,
-.template-page.anti-acne
+.template-page.anti-acne,
   .circle-video-menu-wrap.circle-video-desktop
   .circle-video-menu {
   display: block !important;
 }
 
+.template-page.minis .circle-video-menu-wrap.circle-video-desktop {
+  display: flex !important;
+  justify-content: center !important;
+}
 
 .template-product.omnilux-contour-face
   .circle-video-menu-wrap.circle-video-desktop.clearpdp,
 .template-product.omnilux-contour-face .clearpdp .desktopreviewstitle,
+.template-product.omnilux-men .clearpdp .desktopreviewstitle,
+.template-product.omnilux-contour-neck-decollete .clearpdp .desktopreviewstitle,
+.template-product.omnilux-contour-glove .clearpdp .desktopreviewstitle,
 .template-product.omnilux-contour-face .clearpdp .seeallreviews,
 .template-product.omnilux-contour-face .clearpdp
   .circle-video-menu-wrap.circle-video-desktop

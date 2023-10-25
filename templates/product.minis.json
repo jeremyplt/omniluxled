@@ -395,6 +395,7 @@
         "290dd027-7a41-4ffe-ad02-5c84e59de005",
         "cb5608c2-b1a2-44d9-a405-e8723930350e"
       ],
+      "disabled": true,
       "settings": {
         "section_id": "#beforeafter",
         "section_title": "Real users, real results"
@@ -937,8 +938,8 @@
             "btn_type_watch": "outline",
             "btn_variant_watch": "primary",
             "btn_size_watch": "",
-            "link_txt": "{{ product.metafields['custom']['iwt_link_text_1'] }}",
-            "link_url": "{{ product.metafields['custom']['iwt_link_url_1'] }}",
+            "link_txt": "",
+            "link_url": "",
             "image": "{{ product.metafields['custom']['iwt_image_2'] }}",
             "alignment": "text-left",
             "image_alignment": "left"

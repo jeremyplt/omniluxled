@@ -30,13 +30,15 @@
             "btn_variant_watch": "primary",
             "btn_size_watch": "",
             "btn_txt": "Explore the line",
-            "btn_link": "https:\/\/omniluxled.com\/collections\/skin-care",
+            "btn_link": "shopify:\/\/collections\/minis",
             "btn_type": "",
             "btn_variant": "white",
             "btn_size": "",
-            "poster_type": "video",
+            "poster_type": "",
             "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1ef1fe8e2cb144e9bfe2388bd16b1810.mp4",
             "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1ef1fe8e2cb144e9bfe2388bd16b1810.mp4",
+            "image": "shopify:\/\/shop_images\/Untitled_design_115.png",
+            "image_mobile": "shopify:\/\/shop_images\/Untitled_design_43_copy_2.png",
             "video_type": "local",
             "placement": "grid",
             "video_id": "",
@@ -45,7 +47,7 @@
             "section_text_color": "#ffffff",
             "enable_overlay": true,
             "overlay_bg_color": "#000000",
-            "overlay_opacity": 0.5,
+            "overlay_opacity": 0.1,
             "alignment": "text-center text-md-start",
             "video_alignment": "justify-content-md-start justify-content-center"
           }
@@ -61,6 +63,69 @@
         "nav_dots_right": false,
         "height": "tallheight",
         "top_padding_zero": true
+      }
+    },
+    "fc04cf60-e924-4cb9-a7f3-6aa42663946e": {
+      "type": "global-awards",
+      "blocks": {
+        "template--16302789066914__fc04cf60-e924-4cb9-a7f3-6aa42663946e-content-1": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Best_Light_Mask.png"
+          }
+        },
+        "65b896d5-cac2-4e91-bde4-bab7ec28a679": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/WHSA.0025_2023_badges_winner_69879564-e1dd-413f-a4ba-f536e6b6e9ba.png"
+          }
+        },
+        "97112b3e-e018-43f2-83ea-59820900a1ec": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/MCSK.0011_2022_winner_badges_winner_1.png"
+          }
+        },
+        "7b44cf54-ab21-4d9b-b4be-ab7cfa3b34b8": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/NB_AwardSeal2022.png"
+          }
+        },
+        "ae30ed86-7a7a-4974-9e74-3b9072643bdd": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Get_the_Gloss_Wellness_Awards_2023_Silver_87676f77-3c04-4263-86ba-048d0002fa33.png"
+          }
+        },
+        "c254e429-bf59-4bab-817a-fa1c4f7f19ae": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/wh-skincareawards_1_f90f75ef-1aa6-4482-8f3c-0da5c1b4fd74.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16302789066914__fc04cf60-e924-4cb9-a7f3-6aa42663946e-content-1",
+        "65b896d5-cac2-4e91-bde4-bab7ec28a679",
+        "97112b3e-e018-43f2-83ea-59820900a1ec",
+        "7b44cf54-ab21-4d9b-b4be-ab7cfa3b34b8",
+        "ae30ed86-7a7a-4974-9e74-3b9072643bdd",
+        "c254e429-bf59-4bab-817a-fa1c4f7f19ae"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "gradient_tone": false,
+        "heading_txt": "<h3 class=\"h4 section-title mb-3 fw-light\"> Multi-Award-Winning LED Technology<\/h3>",
+        "section_bg_color": "",
+        "section_txt_color": "#000000",
+        "pt": 36,
+        "pb": 40,
+        "pts": 26,
+        "pbs": 24,
+        "border-top": false,
+        "border-bottom": true,
+        "css_class": ""
       }
     },
     "0815808e-a8b7-4e1d-b348-913b81d5e8b1": {
@@ -114,6 +179,7 @@
         "382f22bf-d4b3-496c-b20d-0f71a60d0b47",
         "f5431301-e30f-41c2-b600-bd724527bc5c"
       ],
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "gradient_tone": true,
@@ -207,18 +273,18 @@
         "subtitle": "",
         "txt": "",
         "htmltxt": "<p>Good things come in small packages. Skip the clinic and target your skin’s unique problem areas with our Mini LED devices.  <\/p>\n<p>We’ve paired our award-winning LED technology with skincare-infused hydrocolloid patches to help:<\/p>\n<ul class=\"twocolumns\">\n<li>Diminish fine lines + wrinkles<\/li>\n<li>Brighten complexion<\/li>\n<li>Reduce breakouts<\/li>\n<li>Calm redness + inflammation<\/li>\n<li>Lighten the look of age spots<\/li>\n<li>Restore fatigued skin<\/li>\n<\/ul>",
-        "btn_txt": "",
-        "btn_link": "",
+        "btn_txt": "SHOP THE COLLECTION",
+        "btn_link": "shopify:\/\/collections\/minis",
         "btn_type": "outline",
         "btn_variant": "primary",
         "btn_size": "",
         "poster_type": "",
-        "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
-        "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
-        "poster_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Untitled_design_114.png?v=1694717706",
-        "btn_txt_watch": "SHOP THE COLLECTION",
-        "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
-        "watch_mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/379c4e711f0c44e4b8025f93b794071c.mov",
+        "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/379c4e711f0c44e4b8025f93b794071c.mov",
+        "poster_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Untitled-1_1.png?v=1698186432",
+        "btn_txt_watch": "",
+        "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/379c4e711f0c44e4b8025f93b794071c.mov",
+        "watch_mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/379c4e711f0c44e4b8025f93b794071c.mov",
         "btn_type_watch": "outline",
         "btn_variant_watch": "primary",
         "btn_size_watch": "",
@@ -228,8 +294,8 @@
         "fluid_video_layout": true,
         "video_type": "local",
         "placement": "popup",
-        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
-        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/379c4e711f0c44e4b8025f93b794071c.mov",
+        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/379c4e711f0c44e4b8025f93b794071c.mov",
         "video_btn_text": "SEE THEM IN ACTION",
         "section_bg_color": "#ffffff",
         "section_text_color": "#000000",
@@ -338,6 +404,178 @@
         "section_text_color": "#000000"
       }
     },
+    "dbeb5f98-6cbf-4f80-b64a-9ec408025ced": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"desktopreviewstitle\"><div class=\"container is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<div class=\"starreviews\"><div data-oke-star-rating data-oke-reviews-product-id=\"shopify-6760463892642\">{{ product.metafields.okendo.StarRatingSnippet }} <span class=\"reviewstxt\">Reviews<\/span>\n<\/div><\/div><\/div>\n<p>We've helped 125,000+ customers achieve their skin goals.<\/p>\n<\/div>"
+      }
+    },
+    "06c6cabf-468b-4fc1-9e28-e9b55dcc1fac": {
+      "type": "circle-video-menu-desktop",
+      "blocks": {
+        "d10155fa-b055-4fdf-8702-b20748847626": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2023-10-24T143746.507.png",
+            "label": "Blemish Eraser",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/Untitled design (9).mp4"
+          }
+        },
+        "121861ef-c991-4e70-bd1e-b106dd71c5e6": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2023-10-24T155221.495.png",
+            "label": "Eye Brightener",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/Copy of Untitled Design (3).mp4"
+          }
+        },
+        "b87dcb56-139a-4706-a184-37d2041350ea": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2023-10-24T161805.287.png",
+            "label": "Skin Corrector",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/Copy of Copy of Untitled Design.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "d10155fa-b055-4fdf-8702-b20748847626",
+        "121861ef-c991-4e70-bd1e-b106dd71c5e6",
+        "b87dcb56-139a-4706-a184-37d2041350ea"
+      ],
+      "settings": {
+        "border_color": "#000000",
+        "div_id": "",
+        "ignore": true
+      }
+    },
+    "74e15f17-ff52-4fad-964d-9789fcc59c61": {
+      "type": "template-faq-block",
+      "blocks": {
+        "adacb1e8-3991-49e1-9481-8007329f6771": {
+          "type": "question",
+          "settings": {
+            "title": "What is the Omnilux Mini line?",
+            "answer": "Based on the world’s leading Omnilux Medical light therapy technology, our Mini line is an FDA cleared, flexible, portable, and affordable range of LED devices. The Mini devices use red, near infrared, and blue LEDs (depending on the product) to reduce fine lines and wrinkles, improve overall skin tone, firmness, acne, and skin health."
+          }
+        },
+        "8b0b5ac6-fd86-4e43-b445-d1a7178e2c96": {
+          "type": "question",
+          "settings": {
+            "title": "How does it work?",
+            "answer": "The Mini devices use clinically proven wavelengths of light (red, near-infrared, and blue) and optimized light energy output to work at a cellular level to stimulate new collagen and reduce fine lines and wrinkles, sun damage, and acne.<p>\n<p>\nThe red wavelength (633nm) reduces inflammation, pigmentation, and redness and helps prompt cellular repair and circulation for a more vibrant complexion. The red wavelength can be found in the Skin Corrector, Eye Brightener, and Blemish Eraser devices.\n<p>\nThe near-infrared wavelength (830nm) targets deeper fibroblast cells, stimulating new collagen and elastin production, resulting in plumper, firmer, more youthful looking skin. The red wavelength can be found in the Skin Corrector and Eye Brightener devices.\n<p>\nThe blue wavelength (415nm) eliminates bacteria on the surface of the skin to neutralize acne flare ups. The blue wavelength can be found in the Blemish Eraser device."
+          }
+        },
+        "f87245ae-e774-4e5a-a64f-e7ae9dbd9eec": {
+          "type": "question",
+          "settings": {
+            "title": "How do the Mini devices differ from each other?",
+            "answer": "The Omnilux Mini Skin Corrector and Eye Brightener use red and near-infrared light to reduce fine line, wrinkles, and improve overall skin tone. They are shaped differently for different parts of your face.<p>\n<p>\nThe Eye Brightener is shaped like a crescent to fit under and around the eye area, the Skin corrector is round to target areas like your cheek or your forehead.\n<p>\nThe Blemish Eraser device uses red and blue light to treat acne breakouts. Although all Mini devices have red light, the light is used in combination with other wavelengths (near-infrared and blue) to target two completely different skin concerns.\n<p>\nEach Mini's corresponding Hydrocolloid Patches contain skincare ingredients specific to the device's treatment application (ie, salicylic acid for blemishes and amino acid-rich peptides for reducing fine lines and wrinkles)."
+          }
+        },
+        "4a0b0829-e932-42c2-bd24-fcde21db1fc1": {
+          "type": "question",
+          "settings": {
+            "title": "How many LEDs to the Mini devices have?",
+            "answer": "The Mini devices all contain 12 individual LEDs, encased in 6 dual chip bulbs."
+          }
+        }
+      },
+      "block_order": [
+        "adacb1e8-3991-49e1-9481-8007329f6771",
+        "8b0b5ac6-fd86-4e43-b445-d1a7178e2c96",
+        "f87245ae-e774-4e5a-a64f-e7ae9dbd9eec",
+        "4a0b0829-e932-42c2-bd24-fcde21db1fc1"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "Frequently Asked Questions"
+      }
+    },
+    "5fc67e16-bf18-4ae0-92c0-b86a2dfb99e1": {
+      "type": "hoox-comparison-table",
+      "blocks": {
+        "7865f353-d6e0-4420-838f-0273b1b5b5ae": {
+          "type": "column-title",
+          "settings": {
+            "first_column_title_one": "Medical-grade LEDs",
+            "first_column_title_two": "Backed by 40+ peer reviewed clinical studies",
+            "first_column_title_three": "FDA-cleared, CE-certified",
+            "first_column_title_four": "Supported by 20+ years of brand research",
+            "first_column_title_five": "Medical-grade silicone",
+            "first_column_title_six": "2 year warranty"
+          }
+        },
+        "e6796ede-068a-4daf-8eb0-9084a1337293": {
+          "type": "column-content",
+          "settings": {
+            "compare_highlight_column_color": "#b67d5b",
+            "table_column_highlight": true,
+            "table_column_title_one": "",
+            "table_column_tick_one_true": false,
+            "table_column_tick_one_false": false,
+            "table_column_one_img": "shopify:\/\/shop_images\/WHITE_Mini.png",
+            "table_column_title_two": "",
+            "table_column_tick_two_true": true,
+            "table_column_tick_two_false": false,
+            "table_column_title_three": "",
+            "table_column_tick_three_true": true,
+            "table_column_tick_three_false": false,
+            "table_column_title_four": "",
+            "table_column_tick_four_true": true,
+            "table_column_tick_four_false": false,
+            "table_column_title_five": "",
+            "table_column_tick_five_true": true,
+            "table_column_tick_five_false": false,
+            "table_column_title_six": "",
+            "table_column_tick_six_true": true,
+            "table_column_tick_six_false": false,
+            "table_column_title_seven": "",
+            "table_column_tick_seven_true": true,
+            "table_column_tick_seven_false": false
+          }
+        },
+        "a88ca268-d950-4dfd-ae6e-ae38924a76e5": {
+          "type": "column-content",
+          "settings": {
+            "compare_highlight_column_color": "",
+            "table_column_highlight": false,
+            "table_column_title_one": "Other LED Brands",
+            "table_column_tick_one_true": false,
+            "table_column_tick_one_false": true,
+            "table_column_title_two": "",
+            "table_column_tick_two_true": false,
+            "table_column_tick_two_false": true,
+            "table_column_title_three": "",
+            "table_column_tick_three_true": false,
+            "table_column_tick_three_false": true,
+            "table_column_title_four": "",
+            "table_column_tick_four_true": false,
+            "table_column_tick_four_false": true,
+            "table_column_title_five": "",
+            "table_column_tick_five_true": false,
+            "table_column_tick_five_false": true,
+            "table_column_title_six": "",
+            "table_column_tick_six_true": false,
+            "table_column_tick_six_false": true,
+            "table_column_title_seven": "",
+            "table_column_tick_seven_true": false,
+            "table_column_tick_seven_false": true
+          }
+        }
+      },
+      "block_order": [
+        "7865f353-d6e0-4420-838f-0273b1b5b5ae",
+        "e6796ede-068a-4daf-8eb0-9084a1337293",
+        "a88ca268-d950-4dfd-ae6e-ae38924a76e5"
+      ],
+      "settings": {
+        "compare_headline": "The dermatologist's choice"
+      }
+    },
     "14b5f872-142c-436c-aa91-9be1f604a443": {
       "type": "global-video-with-text",
       "settings": {
@@ -369,8 +607,8 @@
         "fluid_video_layout": true,
         "video_type": "local",
         "placement": "popup",
-        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/fef82764e3a946918d9a98993d598af7.mp4",
-        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/fef82764e3a946918d9a98993d598af7.mp4",
+        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/379c4e711f0c44e4b8025f93b794071c.mov",
+        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/379c4e711f0c44e4b8025f93b794071c.mov",
         "section_bg_color": "rgba(0,0,0,0)",
         "section_text_color": "#ffffff",
         "alignment": "text-center",
@@ -387,11 +625,16 @@
   "order": [
     "main",
     "2cb12f0d-e933-4333-b50d-2dff62cf6fcd",
+    "fc04cf60-e924-4cb9-a7f3-6aa42663946e",
     "0815808e-a8b7-4e1d-b348-913b81d5e8b1",
     "23f2fda8-e8a7-4b2d-b176-998ae5de965a",
     "e38be45f-cef3-48f1-88e5-0e9ae227927c",
     "98ce97d7-15c6-46d0-b111-c869d2a20b0b",
     "473576ad-4bef-4b6a-af7e-fbea447f4426",
+    "dbeb5f98-6cbf-4f80-b64a-9ec408025ced",
+    "06c6cabf-468b-4fc1-9e28-e9b55dcc1fac",
+    "74e15f17-ff52-4fad-964d-9789fcc59c61",
+    "5fc67e16-bf18-4ae0-92c0-b86a2dfb99e1",
     "14b5f872-142c-436c-aa91-9be1f604a443"
   ]
 }

@@ -157,11 +157,11 @@
                      tableTickTrue: block.settings.table_column_tick_six_true,
                      tableTickNo: block.settings.table_column_tick_six_false -%}
   
-                    {% comment %} Seven top table Row content 
+                    {% comment %} Seven top table Row content {% endcomment %}                    
                     {% render 'hoox-snippet-table-cell' 
                      , tableText: rowSevenTableText,
                      tableTickTrue: block.settings.table_column_tick_seven_true,
-                     tableTickNo: block.settings.table_column_tick_seven_false -%}{% endcomment %}
+                     tableTickNo: block.settings.table_column_tick_seven_false -%}
   
                   </div>
                   {% if sectionBlockSize > enableSliderCount and forloop.index > enableSliderFromColumn and sectionBlockSize == forloop.index %}
