@@ -448,7 +448,7 @@ class AjaxCart extends HTMLElement {
           }
         });
       } else {
-        upsellTitleEle.innerHTML = "You might also like";
+        // upsellTitleEle.innerHTML = "You might also like";
   
         upsellElements.forEach((element) => {
           let exist = false;
