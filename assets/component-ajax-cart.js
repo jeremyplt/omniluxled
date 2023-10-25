@@ -123,7 +123,7 @@ class AjaxCart extends HTMLElement {
   addEventListenerUpsells() {
     const upsells = document.querySelectorAll(".cart-upsell");
   
-    upsells.forEach(function(upsell) {
+    upsells.forEach((upsell) => {
       const form = upsell.querySelector(".cart-upsell-form");
       const productsToRemove = upsell.getAttribute("data-products-remove").split(",");
 
@@ -132,18 +132,24 @@ class AjaxCart extends HTMLElement {
         productsToRemove.pop();
       }
 
-      form.addEventListener("submit", function(event) {
-        productsToRemove.forEach(function(variantId) {
-          fetch('/cart/change.js', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              id: variantId,
-              quantity: 0
+      form.addEventListener("submit", (event) => {
+        productsToRemove.forEach((variantId) => {
+          setTimeout(() => {
+            fetch('/cart/change.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                id: variantId,
+                quantity: 0
+              })
+            }).then((response) => {
+              if (response.ok) {
+                this.getCartData();
+              }
             })
-          })
+          }, 500)
         })
       })
     })
