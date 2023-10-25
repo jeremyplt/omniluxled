@@ -79,6 +79,17 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
     <link rel="preload" as="script" href="{{ 'global.js' | asset_url }}"> {% endcomment %}
     {%- render 'styles-tags' -%}
 
+    {% if product.handle == "omnilux-contour-face" %}
+      <style>
+        html .before-after-scroller-contour {
+          display: block !important;
+        }
+
+        html #section-before-after {
+          display: none !important;
+        }
+      </style>
+    {% endif %}
 
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
