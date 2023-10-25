@@ -4,7 +4,7 @@
   assign section_title = section.settings.section_title
 %}
 
-<section class="hoox-reviews contour" id="hoox-reviews">
+<section class="hoox-reviews contour {{ section.settings.class_names }}" id="hoox-reviews">
 
     {% if section_title != blank %}
       <header class="hoox-reviews__header">
@@ -109,6 +109,11 @@
 {
   "name": "Before/After Scroller2",
   "settings": [
+    {
+      "type": "text",
+      "id": "class_names",
+      "label": "Class names"
+    },
     {
       "type": "text",
       "id": "section_id",
