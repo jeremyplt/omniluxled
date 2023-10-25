@@ -389,6 +389,7 @@
         "cb5608c2-b1a2-44d9-a405-e8723930350e"
       ],
       "settings": {
+        "class_names": "",
         "section_id": "#beforeafter",
         "section_title": "Real users, real results"
       }
@@ -835,6 +836,7 @@
         "e0220851-db31-4de2-911f-c185123f1a25",
         "acc38b90-e2e1-4897-b77b-54c8cbe0a5eb"
       ],
+      "disabled": true,
       "settings": {
         "display_for_this_product": "{{ product.metafields['custom']['results_enabled'] }}",
         "fluid_layout": false,
