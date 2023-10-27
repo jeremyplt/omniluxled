@@ -200,6 +200,9 @@
                     </h6>
                     <div class="row align-items-center mx-n2" id="cart-sample-products-container">
                     {% for product in settings.sample-products %}
+                        {%- comment %}<locksmith:d6ff>{% endcomment -%}
+                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: settings, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                        {%- comment %}</locksmith:d6ff>{% endcomment -%}
                         <div class="col-6 px-2">
                         <div class="d-flex align-items-center">
                             <div class="sample-img">
