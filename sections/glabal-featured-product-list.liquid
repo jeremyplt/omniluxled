@@ -51,9 +51,6 @@
                               }'>
                                   <div class="swiper-wrapper">
                                         {% for product in collections[section.settings.home_featured_collection].products limit: 8 %}
-                                          {%- comment %}<locksmith:b2b7>{% endcomment -%}
-                                            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collections[section.settings.home_featured_collection], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                                          {%- comment %}</locksmith:b2b7>{% endcomment -%}
                                           {% liquid 
                                             assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
                                             assign checkWholesaleProducts = false
