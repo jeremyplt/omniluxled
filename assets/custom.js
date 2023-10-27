@@ -43,9 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.trustedbypdp').css({display:'block'});
         }
     })
-
-    // const mediaJSON = JSON.parse(okeMetaField.innerHTML);
-    // console.log("mediaJSON =", mediaJSON);
 });
 
 
