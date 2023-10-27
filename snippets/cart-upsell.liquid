@@ -147,18 +147,12 @@
                     "grabCursor": true
                 }'>
                 <div class="swiper-wrapper">
-                    {%- comment %}<locksmith:6c78>{% endcomment -%}
-                      {%- assign locksmith_c7d9_forloop__size = 0 %}{% for upsellProduct in upsellCollection.products limit: total_items %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: upsellProduct, subject_parent: upsellCollection, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_c7d9_forloop__size = locksmith_c7d9_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_c7d9_forloop__index = nil -%}
-                    {%- comment %}</locksmith:6c78>{% endcomment -%}
-                    {% for upsellProduct in upsellCollection.products limit: total_items %}                        
-                        {%- comment %}<locksmith:c9fc>{% endcomment -%}
-                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: upsellProduct, subject_parent: upsellCollection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_c7d9_forloop__index == nil %}{% assign locksmith_c7d9_forloop__index = 1 %}{% assign locksmith_c7d9_forloop__index0 = 0 %}{% else %}{% assign locksmith_c7d9_forloop__index = locksmith_c7d9_forloop__index | plus: 1 %}{% assign locksmith_c7d9_forloop__index0 = locksmith_c7d9_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_c7d9_forloop__index == 1 %}{% assign locksmith_c7d9_forloop__first = true %}{% else %}{% assign locksmith_c7d9_forloop__first = false %}{% endif %}{% if locksmith_c7d9_forloop__index == locksmith_c7d9_forloop__size %}{% assign locksmith_c7d9_forloop__last = true %}{% else %}{% assign locksmith_c7d9_forloop__last = false %}{% endif %}{% assign locksmith_c7d9_forloop__rindex = locksmith_c7d9_forloop__size | minus: locksmith_c7d9_forloop__index | minus: 1 %}{% assign locksmith_c7d9_forloop__rindex0 = locksmith_c7d9_forloop__size | minus: locksmith_c7d9_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-                        {%- comment %}</locksmith:c9fc>{% endcomment -%}                        
-                        {%- assign product_form_id = 'product-form-' | append: upsellProduct.id | append: locksmith_c7d9_forloop__index -%}
+                    {% for upsellProduct in upsellCollection.products limit: total_items %}                                               
+                        {%- assign product_form_id = 'product-form-' | append: upsellProduct.id-%}
                         <div class="swiper-slide h-auto form-element" data-upsell-product-id="{{upsellProduct.id}}" style="width: 100px;">
                             <product-form class="product-form d-block h-100">
                                 {%- assign upsell_variant = upsellProduct.selected_or_first_available_variant -%}
-                                {%- assign product_form_id = 'product-form-' | append: upsellProduct.id | append: locksmith_c7d9_forloop__index -%}
+                                {%- assign product_form_id = 'product-form-' | append: upsellProduct.id -%}
                                 {% form 'product', upsellProduct, id: product_form_id, class: "cart-upsell-form h-100", data-product-form: "", data-product-id: upsellProduct.id, data-type: 'add-to-cart-form' %}
                                     <input type="hidden" name="id" value="{{ upsellProduct.selected_or_first_available_variant.id }}">
                                     <div class="d-flex flex-column h-100">
