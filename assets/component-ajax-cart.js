@@ -120,6 +120,42 @@ class AjaxCart extends HTMLElement {
     );
   }
 
+  addEventListenerUpsells() {
+    const upsells = document.querySelectorAll(".cart-upsell");
+  
+    upsells.forEach((upsell) => {
+      const form = upsell.querySelector(".cart-upsell-form");
+      const productsToRemove = upsell.getAttribute("data-products-remove").split(",");
+
+      // remove the last element of the array if it's empty
+      if (productsToRemove[productsToRemove.length - 1] === "") {
+        productsToRemove.pop();
+      }
+
+      form.addEventListener("submit", (event) => {
+        productsToRemove.forEach((variantId) => {
+          setTimeout(() => {
+            fetch('/cart/change.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                id: variantId,
+                quantity: 0
+              })
+            }).then((response) => {
+              if (response.ok) {
+                this.getCartData();
+              }
+            })
+          }, 500)
+        })
+      })
+    })
+  
+  }
+
   renderUpsells() {
     // Do not include "shopify-section" in the selector, it will break the render
     // Use "?sections={section-id}" to render several sections
@@ -132,17 +168,21 @@ class AjaxCart extends HTMLElement {
         const source = html.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
         const destination = document.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
 
-        const titleSource = html.querySelector('.cart-upsell-title.upsell-test-variant')
-        const titleDestination = document.querySelector('.cart-upsell-title.upsell-test-variant')
+        const sourceTitle = html.querySelector('.cart-upsell-title.upsell-test-variant')
+        const destinationTitle = document.querySelector('.cart-upsell-title.upsell-test-variant')
 
+        destinationTitle.innerHTML = sourceTitle.innerHTML;
         destination.innerHTML = source.innerHTML;
-        titleDestination.innerHTML = titleSource.innerHTML;
+
+        console.log("source.children.length", source.children.length)
 
         if (source.children.length == 0) {
           document.querySelector(".cart-upsell-section").style.display = "none";
         } else {
           document.querySelector(".cart-upsell-section").style.display = "block";
         }
+
+        this.addEventListenerUpsells()
     })
     .catch(error => console.error(error));
 }
@@ -283,34 +323,28 @@ class AjaxCart extends HTMLElement {
     let cartItems = this.querySelectorAll("[data-cart-item]");
     cartItems.forEach((element) => {      
       let productId = element.getAttribute("data-product-id")
-      let variantId = element.getAttribute("data-variant-id")
 
       window.globalVariables.cart.items.forEach((item) => {
-        if (item.product_id == productId && item.variant_id == variantId) {
-          let variantJSONEle = document.querySelector(".variantsJSON-" + productId);          
+        if (item.product_id == productId) {
+          let variantJSONEle = document.querySelector(".variantsJSON-" + productId);
           if (variantJSONEle != undefined && variantJSONEle != null) {
             let variantJSON = JSON.parse(variantJSONEle.textContent);
+            let itemTotalPrice = variantJSON[0].price * item.quantity;
+            total_price += itemTotalPrice;
 
-            variantJSON.forEach((variant) => {
-              if(variant.id == variantId) {
-                let itemTotalPrice = variant.price * item.quantity;
-                total_price += itemTotalPrice;
-    
-                if(this.taxPercent > 0) {
-                  itemTotalPrice = itemTotalPrice * (1 + this.taxPercent / 100);
-                }
-      
-                let formatMoney = Shopify.formatMoney(
-                  itemTotalPrice,
-                  window.globalVariables.money_format
-                );
-      
-                if(this.taxPercent > 0)
-                  element.getElementsByClassName("price")[0].innerHTML = formatMoney + " Incl. tax"
-                else
-                  element.getElementsByClassName("price")[0].innerHTML = formatMoney   
-              }  
-            })
+            if(this.taxPercent > 0) {
+              itemTotalPrice = itemTotalPrice * (1 + this.taxPercent / 100);
+            }
+  
+            let formatMoney = Shopify.formatMoney(
+              itemTotalPrice,
+              window.globalVariables.money_format
+            );
+  
+            if(this.taxPercent > 0)
+              element.getElementsByClassName("price")[0].innerHTML = formatMoney + " Incl. tax"
+            else
+              element.getElementsByClassName("price")[0].innerHTML = formatMoney
           }          
         }
       });
@@ -450,9 +484,9 @@ class AjaxCart extends HTMLElement {
       "text/html"
     );
     let cartIcon = headerHTML.getElementById("cart-icon-desktop");
-    if (drawerSelectors.cartIconDesktop)
+    if (drawerSelectors.cartIconDesktop && cartIcon)
       drawerSelectors.cartIconDesktop.innerHTML = cartIcon.innerHTML;
-    if (drawerSelectors.cartIconMobile)
+    if (drawerSelectors.cartIconMobile && cartIcon)
       drawerSelectors.cartIconMobile.innerHTML = cartIcon.innerHTML;
     if (window.globalVariables.cart.item_count > 0) {
       if (headerHTML.querySelector("#cart-icon-desktop .cart-count")) {
