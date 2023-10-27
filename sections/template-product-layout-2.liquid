@@ -156,9 +156,6 @@
                     {%- when '@app' -%}
            {% render block %}
 {% for collection in product.collections %}
- {%- comment %}<locksmith:542f>{% endcomment -%}
-   {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, subject_parent: product, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
- {%- comment %}</locksmith:542f>{% endcomment -%}
  {% if collection.title contains 'All Devices' %}
  	<div class="trustedbypdp">|&nbsp;&nbsp;Trusted by 125K+ Customers</div>
   {% endif %}

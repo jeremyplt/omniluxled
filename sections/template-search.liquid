@@ -76,9 +76,6 @@
 
                               {% assign productExcludeTag = settings.product_exclude_tag_text %}
                               {% for item in search.results %}
-                                {%- comment %}<locksmith:a256>{% endcomment -%}
-                                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: item, subject_parent: search, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                                {%- comment %}</locksmith:a256>{% endcomment -%}
                                 {% liquid 
                                   assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
                                   assign checkWholesaleProducts = false

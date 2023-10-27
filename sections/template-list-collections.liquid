@@ -15,9 +15,6 @@
   </div>
   {%- paginate collections by 12 -%}
     {% for collection in collections %}
-      {%- comment %}<locksmith:ef12>{% endcomment -%}
-        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-      {%- comment %}</locksmith:ef12>{% endcomment -%}
       {% if collection.products.count > 0 %}
 
         <div class="row no-gutters my-5">
@@ -61,9 +58,6 @@
                   }'>
                       <div class="swiper-wrapper">
                           {% for product in collection.products limit: itemLimit %}
-                            {%- comment %}<locksmith:6c21>{% endcomment -%}
-                              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                            {%- comment %}</locksmith:6c21>{% endcomment -%}
                             {% liquid 
                               assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
                               assign checkWholesaleProducts = false

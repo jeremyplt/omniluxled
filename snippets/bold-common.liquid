@@ -104,17 +104,11 @@ It may be overwritten and any customizations would be lost.
     {%- unless bold_apps_installed contains 'Customer Pricing' or bold_apps_installed contains 'Product Bundles' or bold_apps_installed contains 'Product Discount' or bold_apps_installed contains 'Quantity Breaks' or bold_apps_installed contains 'Custom Order' or bold_apps_installed contains 'Order Manager' or bold_apps_installed contains 'The Motivator'-%}
         {%- comment -%} collection page {%- endcomment -%}
         {%- for product in collection.products -%}
-            {%- comment %}<locksmith:a216>{% endcomment -%}
-              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-            {%- comment %}</locksmith:a216>{% endcomment -%}
             window.BOLD.common.Shopify.saveProduct({{ product.handle | json }}, {{ product.id | json }});
             {%- for variant in product.variants -%}{%- assign csp_metafield_namespace = variant.id | prepend: "csp" -%}window.BOLD.common.Shopify.saveVariant({{ variant.id | json }}, { product_id: {{ product.id | json }}, product_handle: {{ product.handle | json }}, price: {{ variant.price | json }}, group_id: '{{variant.metafields.bold_rp.rp_group_id}}', csp_metafield: {{ product.metafields[csp_metafield_namespace] | json }}});{%- endfor -%}
         {%- endfor -%}
         {%- comment -%} search page {%- endcomment -%}
         {%- for product in search.results -%}
-            {%- comment %}<locksmith:b22f>{% endcomment -%}
-              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: search, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-            {%- comment %}</locksmith:b22f>{% endcomment -%}
             window.BOLD.common.Shopify.saveProduct({{ product.handle | json }}, {{ product.id | json }});
             {%- for variant in product.variants -%}{%- assign csp_metafield_namespace = variant.id | prepend: "csp" -%}window.BOLD.common.Shopify.saveVariant({{ variant.id | json }}, { product_id: {{ product.id | json }}, product_handle: {{ product.handle | json }}, price: {{ variant.price | json }}, group_id: '{{variant.metafields.bold_rp.rp_group_id}}', csp_metafield: {{ product.metafields[csp_metafield_namespace] | json }}});{%- endfor -%}
         {%- endfor -%}
