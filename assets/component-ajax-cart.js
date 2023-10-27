@@ -174,6 +174,14 @@ class AjaxCart extends HTMLElement {
         destinationTitle.innerHTML = sourceTitle.innerHTML;
         destination.innerHTML = source.innerHTML;
 
+        console.log("source.children.length", source.children.length)
+
+        if (source.children.length == 0) {
+          document.querySelector(".cart-upsell-section").style.display = "none";
+        } else {
+          document.querySelector(".cart-upsell-section").style.display = "block";
+        }
+
         this.addEventListenerUpsells()
     })
     .catch(error => console.error(error));
@@ -587,6 +595,9 @@ class AjaxCart extends HTMLElement {
     if (itemIndex != null) {
       this.updateItemQty(itemIndex, 0);
     }
+    setTimeout(() => {
+      this.renderUpsells()
+    }, 500)
   }
 
   /**
