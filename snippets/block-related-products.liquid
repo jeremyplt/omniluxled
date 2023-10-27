@@ -7,19 +7,6 @@
     if collection == null or collection.handle == 'frontpage' or collection.handle == 'all'
         assign found_a_collection = false
         for c in product.collections
-            comment
-              <locksmith:6677> Code added automatically by the Locksmith app. Do not modify or remove.
-            endcomment
-            capture var
-              render 'locksmith-variables', scope: 'subject', subject: c, subject_parent: product, variable: 'transparent'
-            endcapture
-            if var == "true"
-            else
-              continue
-            endif
-            comment
-              </locksmith:6677> End Locksmith code block.
-            endcomment
             if found_a_collection == false and c.handle != 'frontpage' and c.handle != 'all' and c.all_products_count > 1
                 assign found_a_collection = true
                 assign collection = c
@@ -95,17 +82,11 @@
       
 
                                 {% comment %}theme-check-disable LiquidTag{% endcomment %}
-                                {%- comment %}<locksmith:bd8d>{% endcomment -%}
-                                  {%- assign locksmith_edb4_forloop__size = 0 %}{% for subProduct in productsArray limit: total_items %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: subProduct, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_edb4_forloop__size = locksmith_edb4_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_edb4_forloop__index = nil -%}
-                                {%- comment %}</locksmith:bd8d>{% endcomment -%}
                                 {% for subProduct in productsArray limit: total_items %}
-                                    {%- comment %}<locksmith:2b7d>{% endcomment -%}
-                                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: subProduct, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_edb4_forloop__index == nil %}{% assign locksmith_edb4_forloop__index = 1 %}{% assign locksmith_edb4_forloop__index0 = 0 %}{% else %}{% assign locksmith_edb4_forloop__index = locksmith_edb4_forloop__index | plus: 1 %}{% assign locksmith_edb4_forloop__index0 = locksmith_edb4_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_edb4_forloop__index == 1 %}{% assign locksmith_edb4_forloop__first = true %}{% else %}{% assign locksmith_edb4_forloop__first = false %}{% endif %}{% if locksmith_edb4_forloop__index == locksmith_edb4_forloop__size %}{% assign locksmith_edb4_forloop__last = true %}{% else %}{% assign locksmith_edb4_forloop__last = false %}{% endif %}{% assign locksmith_edb4_forloop__rindex = locksmith_edb4_forloop__size | minus: locksmith_edb4_forloop__index | minus: 1 %}{% assign locksmith_edb4_forloop__rindex0 = locksmith_edb4_forloop__size | minus: locksmith_edb4_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-                                    {%- comment %}</locksmith:2b7d>{% endcomment -%}
                                     {% if subProduct.handle == current_product.handle %}
                                         {% assign current_product_found = true %}
                                     {% else %}
-                                        {% unless current_product_found == false and locksmith_edb4_forloop__last and subProduct.tags %}
+                                        {% unless current_product_found == false and subProduct.tags %}
                                             {% liquid 
                                                 assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
                                                 assign checkWholesaleProducts = false

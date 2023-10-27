@@ -62,9 +62,6 @@
                           
 
                             {% for product in collection.products %}
-                              {%- comment %}<locksmith:f51d>{% endcomment -%}
-                                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                              {%- comment %}</locksmith:f51d>{% endcomment -%}
                               {% liquid 
                                 assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
                                 assign checkWholesaleProducts = false

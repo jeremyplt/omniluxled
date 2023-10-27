@@ -1,10 +1,6 @@
-{%- comment %}<locksmith:3b5f>{% endcomment -%}
-  {%- include 'locksmith' -%}
-{%- comment %}</locksmith:3b5f>{% endcomment -%}
-
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
-  <head>   {{ locksmith_initializations }}
+  <head>
 {% render 'site-speed' %}
   <script src="https://www.googleoptimize.com/optimize.js?id=OPT-KT8DKGH"></script>
 
@@ -22,11 +18,6 @@
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <link rel="preconnect" href="https://monorail-edge.shopifysvc.com" crossorigin>
     <title>{{ page_title }}</title>
-
-      {%- comment %}<locksmith:674a>{% endcomment -%}
-        {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape | default: shop.description | default: shop.name }}">{% endif -%}
-        {%- comment %}original: <meta name="description" content="{{ page_description | escape | default: shop.description | default: shop.name }}">{%- endcomment %}
-      {%- comment %}</locksmith:674a>{% endcomment -%}
 
     {% comment %}theme-check-disable LiquidTag{% endcomment %}
     {%- render 'meta-tags' -%}

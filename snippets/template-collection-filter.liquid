@@ -33,9 +33,6 @@
                     <div class="filter__block toggle-content" id="filter_toggle_{{ menuHandle }}" data-type="content">
                       <ul class="filter__list pt-3 list-unstyled m-0" role="list">
                         {%- for coll in subCollectionMenu.links -%}
-                          {%- comment %}<locksmith:5bfe>{% endcomment -%}
-                            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: coll, subject_parent: subCollectionMenu, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                          {%- comment %}</locksmith:5bfe>{% endcomment -%}
                           {%- assign collHandle = coll.title | handleize -%}
                           <li class="my-2 filter__item">
                               <div class="form-check"> 

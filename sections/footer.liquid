@@ -76,15 +76,10 @@
                             {% endif %}
                             {% if linklists[footer_linklist_2].links.size > 0 %}
                                 <ul class="list-unstyled footer-navigation">
-                                {%- comment %}<locksmith:9c57>{% endcomment -%}
-                                  {%- assign locksmith_159e_forloop__size = 0 %}{% for link in linklists[footer_linklist_2].links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[footer_linklist_2], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_159e_forloop__size = locksmith_159e_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_159e_forloop__index = nil -%}
-                                {%- comment %}</locksmith:9c57>{% endcomment -%}
                                 {% for link in linklists[footer_linklist_2].links %}
-                                    {%- comment %}<locksmith:ad5f>{% endcomment -%}
-                                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[footer_linklist_2], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_159e_forloop__index == nil %}{% assign locksmith_159e_forloop__index = 1 %}{% assign locksmith_159e_forloop__index0 = 0 %}{% else %}{% assign locksmith_159e_forloop__index = locksmith_159e_forloop__index | plus: 1 %}{% assign locksmith_159e_forloop__index0 = locksmith_159e_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_159e_forloop__index == 1 %}{% assign locksmith_159e_forloop__first = true %}{% else %}{% assign locksmith_159e_forloop__first = false %}{% endif %}{% if locksmith_159e_forloop__index == locksmith_159e_forloop__size %}{% assign locksmith_159e_forloop__last = true %}{% else %}{% assign locksmith_159e_forloop__last = false %}{% endif %}{% assign locksmith_159e_forloop__rindex = locksmith_159e_forloop__size | minus: locksmith_159e_forloop__index | minus: 1 %}{% assign locksmith_159e_forloop__rindex0 = locksmith_159e_forloop__size | minus: locksmith_159e_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-                                    {%- comment %}</locksmith:ad5f>{% endcomment -%}
+
                                     <li class="py-1 text-capitalize">
-                                    <a class="position-relative {% if locksmith_159e_forloop__first %}fw-semibold{% endif %}" href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                    <a class="position-relative" href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
                                         <span>{{ link.title }}</span>
                                     </a>
                                     </li>
@@ -99,15 +94,9 @@
                             {% endif %}
                             {% if linklists[footer_linklist_3].links.size > 0 %}
                                 <ul class="list-unstyled footer-navigation ms-n1 ms-lg-0">
-                                    {%- comment %}<locksmith:dfbb>{% endcomment -%}
-                                      {%- assign locksmith_d151_forloop__size = 0 %}{% for link in linklists[footer_linklist_3].links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[footer_linklist_3], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_d151_forloop__size = locksmith_d151_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_d151_forloop__index = nil -%}
-                                    {%- comment %}</locksmith:dfbb>{% endcomment -%}
                                     {% for link in linklists[footer_linklist_3].links %}
-                                        {%- comment %}<locksmith:9e5a>{% endcomment -%}
-                                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[footer_linklist_3], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_d151_forloop__index == nil %}{% assign locksmith_d151_forloop__index = 1 %}{% assign locksmith_d151_forloop__index0 = 0 %}{% else %}{% assign locksmith_d151_forloop__index = locksmith_d151_forloop__index | plus: 1 %}{% assign locksmith_d151_forloop__index0 = locksmith_d151_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_d151_forloop__index == 1 %}{% assign locksmith_d151_forloop__first = true %}{% else %}{% assign locksmith_d151_forloop__first = false %}{% endif %}{% if locksmith_d151_forloop__index == locksmith_d151_forloop__size %}{% assign locksmith_d151_forloop__last = true %}{% else %}{% assign locksmith_d151_forloop__last = false %}{% endif %}{% assign locksmith_d151_forloop__rindex = locksmith_d151_forloop__size | minus: locksmith_d151_forloop__index | minus: 1 %}{% assign locksmith_d151_forloop__rindex0 = locksmith_d151_forloop__size | minus: locksmith_d151_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-                                        {%- comment %}</locksmith:9e5a>{% endcomment -%}
                                         <li class="py-1 text-capitalize">
-                                            <a class="position-relative {% if locksmith_d151_forloop__first %}fw-semibold{% endif %}" href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                            <a class="position-relative" href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
                                                 <span>{{ link.title }}</span>
                                             </a>
                                         </li>
@@ -122,15 +111,9 @@
                             {% endif %}
                             {% if linklists[footer_linklist_4].links.size > 0 %}
                                 <ul class="list-unstyled footer-navigation">
-                                    {%- comment %}<locksmith:5c0e>{% endcomment -%}
-                                      {%- assign locksmith_ab70_forloop__size = 0 %}{% for link in linklists[footer_linklist_4].links %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[footer_linklist_4], variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_ab70_forloop__size = locksmith_ab70_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_ab70_forloop__index = nil -%}
-                                    {%- comment %}</locksmith:5c0e>{% endcomment -%}
                                     {% for link in linklists[footer_linklist_4].links %}
-                                        {%- comment %}<locksmith:65e2>{% endcomment -%}
-                                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[footer_linklist_4], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_ab70_forloop__index == nil %}{% assign locksmith_ab70_forloop__index = 1 %}{% assign locksmith_ab70_forloop__index0 = 0 %}{% else %}{% assign locksmith_ab70_forloop__index = locksmith_ab70_forloop__index | plus: 1 %}{% assign locksmith_ab70_forloop__index0 = locksmith_ab70_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_ab70_forloop__index == 1 %}{% assign locksmith_ab70_forloop__first = true %}{% else %}{% assign locksmith_ab70_forloop__first = false %}{% endif %}{% if locksmith_ab70_forloop__index == locksmith_ab70_forloop__size %}{% assign locksmith_ab70_forloop__last = true %}{% else %}{% assign locksmith_ab70_forloop__last = false %}{% endif %}{% assign locksmith_ab70_forloop__rindex = locksmith_ab70_forloop__size | minus: locksmith_ab70_forloop__index | minus: 1 %}{% assign locksmith_ab70_forloop__rindex0 = locksmith_ab70_forloop__size | minus: locksmith_ab70_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-                                        {%- comment %}</locksmith:65e2>{% endcomment -%}
                                         <li class="py-1 text-capitalize">
-                                            <a class="position-relative {% if locksmith_ab70_forloop__first %}fw-semibold{% endif %}" href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
+                                            <a class="position-relative" href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
                                                 <span>{{ link.title }}</span>
                                             </a>
                                         </li>
@@ -191,9 +174,6 @@
                             <ul class="list-unstyled w-100 bottom_footer_link d-flex flex-wrap mb-n2 justify-content-between justify-content-center">
                                     <li class="col-lg-auto col-12 order-lg-first order-last mt-lg-0 mt-2"><span class="font-size-md" style="line-height: 1.571428571428571;">©{{ 'now' | date: "%Y" }} GlobalMed Technologies</span></li>
                                 {% for link in linklists[bottom_footer_linklist].links %}
-                                    {%- comment %}<locksmith:89bb>{% endcomment -%}
-                                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[bottom_footer_linklist], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                                    {%- comment %}</locksmith:89bb>{% endcomment -%}
                                     <li class="px-2 mb-2 mx-lg-0 mx-auto">
                                         <a class="position-relative font-size-md" href="{{ link.url }}" class="font-size-sm text-uppercase" style="line-height: 1.571428571428571;color: {{ section.settings.footer_bottom_txt_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
                                             <span>{{ link.title }}</span>
