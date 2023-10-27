@@ -397,6 +397,7 @@
       ],
       "disabled": true,
       "settings": {
+        "class_names": "",
         "section_id": "#beforeafter",
         "section_title": "Real users, real results"
       }
@@ -455,7 +456,9 @@
         "2bcaf647-14b0-4037-8ae3-cd56658f49b4",
         "7979fdba-e6ce-4ff0-91c2-f0c569c9fffd"
       ],
+      "disabled": true,
       "settings": {
+        "class_names": "",
         "section_id": "#beforeafter",
         "section_title": "Real users, real results"
       }

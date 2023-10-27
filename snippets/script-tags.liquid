@@ -29,7 +29,7 @@
 {%- endif -%}
 
 {%- comment -%} Product Page JS {%- endcomment -%}
-{%- if template.name == 'product' -%}
+{%- if template.name == 'product' or template.name == 'page' -%}
   <script src="{{ 'template-product.js' | asset_url }}" defer></script>
 {%- endif -%}
 

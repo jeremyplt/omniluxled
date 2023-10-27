@@ -888,6 +888,7 @@
         "73526de1-867e-4ce0-bd1e-38bdc6597686",
         "6440ac7b-d573-4efe-8883-8186c0085937"
       ],
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "gradient_tone": false,
@@ -1219,7 +1220,8 @@
       ],
       "settings": {
         "enable": true,
-        "heading": "Frequently Asked Questions"
+        "heading": "Frequently Asked Questions",
+        "tab": "minis"
       }
     },
     "167152762813570154": {

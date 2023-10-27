@@ -5,7 +5,9 @@ $(document).ready(function () {
   $('.cbb-frequently-bought-total-price-text').text("Total:")
 
   $("#gorgias-chat-start").click(function(){   
-    if($('#gorgias-chat-container #chat-window').css('display') == 'none'){      
+    const chatWindow = $('#gorgias-chat-container #chat-window').css('display')
+    if(chatWindow == undefined || chatWindow == 'none'){      
+      console.log("start chat show")
       $("#gorgias-chat-container #chat-button").contents().find('button[data-testid="gorgias-chat-messenger-button"]').click();  
     }
     
@@ -23,9 +25,9 @@ $(document).ready(function () {
 
 const selectors = {
     productContainer: document.querySelector('.product-details-wrapper'),
-    productMedia: document.querySelector('[data-productMedia]')
+    productMedia: document.querySelector('[data-productMedia]'),    
   };
-
+  
   const mediaJSON = JSON.parse(selectors.productMedia.innerHTML);
   window.productMedia = mediaJSON;
   class TemplateProductJS {

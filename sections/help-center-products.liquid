@@ -12,6 +12,16 @@
   | replace: '\u0026', '&'
 -%}
 {%- assign tab = pageUrl | split:'?' | last | replace: 't=', '' -%}
+{%- if tab == 'blemish-eraser' or 
+tab == 'hydrocolloid-refill-patch-2' or 
+tab == 'eye-brightener' or 
+tab == 'hydrocolloid-refill-patch' or 
+tab == 'skin-corrector' or 
+tab == 'hydrocolloid-refill-patch-3'
+-%}
+  {%- assign tab = 'minis' -%}
+{%- endif -%}
+
 {% comment %} {% if tab != 'omnilux-contour-face' and tab != 'omnilux-contour-neck-decollete' and tab != 'omnilux-contour-glove' and tab != 'omnilux-clear' and tab != 'omnilux-men' %} 
   {%- assign tab = 'skincare' -%}
 {% endif %} {% endcomment %}
@@ -64,12 +74,12 @@
                           <li id="custom-tab-btn-5" class="tablink px-md-3 px-2 {% if tab == 'omnilux-men' %} open {% endif %}" role="tab" data-tablink="#{{ section.settings.pro_btn5 | handle }}">
                             <a class=" trn font-size-md fw-bold d-inline-flex justify-content-center" data-toggle="tab" href="#custom-tab-5" data-tabcontent="#custom-tab-5" aria-expanded="false">{{ section.settings.pro_btn5 }}</a>
                           </li>
-                           <li id="custom-tab-btn-7" class="tablink px-md-3 px-2 {% if tab == 'omnilux-minis' %} open {% endif %}" role="tab" data-tablink="#{{ section.settings.pro_btn7 | handle }}">
-                            <a class=" trn font-size-md fw-bold d-inline-flex justify-content-center" data-toggle="tab" href="#custom-tab-7" data-tabcontent="#custom-tab-7" aria-expanded="false">{{ section.settings.pro_btn7 }}</a>
-                          </li>
-                           <li id="custom-tab-btn-6" class="tablink px-md-3 px-2 {% if tab != 'omnilux-contour-face' and tab != 'omnilux-contour-neck-decollete' and tab != 'omnilux-contour-glove' and tab != 'omnilux-clear' and tab != 'omnilux-men' %} open {% endif %}"
+                           <li id="custom-tab-btn-6" class="tablink px-md-3 px-2 {% if tab != 'omnilux-contour-face' and tab != 'omnilux-contour-neck-decollete' and tab != 'omnilux-contour-glove' and tab != 'omnilux-clear' and tab != 'omnilux-men' and tab != 'minis' %} open {% endif %}"
                             role="tab" data-tablink="#{{ section.settings.pro_btn6 | handle }}">
                             <a class=" trn font-size-md fw-bold d-inline-flex justify-content-center" data-toggle="tab" href="#custom-tab-6" data-tabcontent="#custom-tab-6" aria-expanded="false">{{ section.settings.pro_btn6 }}</a>
+                          </li>
+                          <li id="custom-tab-btn-7" class="tablink px-md-3 px-2 {% if tab == 'minis' or tab == 'omnilux-minis' %} open {% endif %}" role="tab" data-tablink="#{{ section.settings.pro_btn7 | handle }}">
+                            <a class=" trn font-size-md fw-bold d-inline-flex justify-content-center" data-toggle="tab" href="#custom-tab-7" data-tabcontent="#custom-tab-7" aria-expanded="false">{{ section.settings.pro_btn7 }}</a>
                           </li>
                         </ul>
 
@@ -522,101 +532,8 @@
                               </div>
                               </custom-accordion>
                           </div>
-                          </div>
-                           <div class="tab-pane tabcontent {% if tab == 'omnilux-minis' %} open {% endif %}" id="custom-tab-7" role="tabpanel">
-                            <div class="rte pt-lg-7 px-lg-6">
-                              <custom-accordion  data-accordionType="single">
-                                <div class="accordion__container py-3 border-top">
-                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab7">
-                                      <span>{{ section.settings.tabTitle1 }}</span>
-                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
-                                        <span class="ox-plus trn"></span>
-                                        <span class="ox-minus position-absolute trn"></span>
-                                      </span>
-                                    </a>
-                                    <div class="accordion__block toggle-content" id="accordion_customTab7" data-type="content" style="height: 0px;">
-                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
-                                         {%- for block in section.blocks -%}
-                                          {%- if block.type == 'minis_faq' -%}
-                                          {%- liquid
-                                          capture current
-                                              cycle 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-                                          endcapture
-                                        -%}
-                                      {% for i in (1..10) %}
-                                        {% assign enableFaq =  'enableFaq' | append: forloop.index %}
-                                        {% assign quentionsid =  'question' | append: forloop.index %}
-                                        {% assign answerid =  'answer' | append: forloop.index %}
-                                        {% if block.settings[enableFaq] %}
-                                          {% if block.settings[quentionsid] != blank %}
-                                            <div class="accordion__container py-3 border-top" style="line-height: 1.1875;">
-                                              <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Mini?" rel="nofollow" aria-label="Open What is Omnilux Mini?" role="button" aria-expanded="false" aria-controls="faqs7">
-                                                <span>{{ block.settings[quentionsid] }}</span>
-                                                <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
-                                                  <span class="ox-plus trn"></span>
-                                                  <span class="ox-minus position-absolute trn"></span>
-                                                </span>
-                                              </a>
-                                              <div class="accordion__block toggle-content" id="faqs7" data-type="content" style="height: 0px;">
-                                                <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
-                                              </div>
-                                            </div>
-                                            {% endif %}
-                                          {% endif %}
-                                        {% endfor %}
-                                            {% endif %}
-                                        {% endfor %}
-                                      </div>
-                                    </div>
-                                </div>
-                                   <div class="accordion__container py-3 border-top border-bottom">
-                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
-                                      <span>{{ section.settings.tabTitle2 }}</span>
-                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
-                                        <span class="ox-plus trn"></span>
-                                        <span class="ox-minus position-absolute trn"></span>
-                                      </span>
-                                    </a>
-                                    <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content" style="height: 0px;">
-                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
-                                        <div class="text-center">
-                                          <h4 class="mb-3 mb-lg-7">{{ section.settings.tabsubTitle2 }}</h4>
-                                        </div>
-                                         {%- for block in section.blocks -%}
-                                          {%- if block.type == 'minis_user_guides' -%}
-
-                                          {% for i in (1..6) %}
-                                            {% assign enableFaq =  'enableFaq' | append: forloop.index %}
-                                            {% assign quentionsid =  'question' | append: forloop.index %}
-                                            {% assign answerid =  'answer' | append: forloop.index %}
-                                            {% if block.settings[enableFaq] %}
-                                            {% if block.settings[quentionsid] != blank %}
-                                                    <div class="accordion__container py-3 border-top" style="line-height: 1.1875;">
-                                                        <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
-                                                          <span>{{ block.settings[quentionsid] }}</span>
-                                                          <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
-                                                            <span class="ox-plus trn"></span>
-                                                            <span class="ox-minus position-absolute trn"></span>
-                                                          </span>
-                                                        </a>
-                                                        <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
-                                                          <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
-                                                        </div>
-                                                    </div>
-                                              {% endif %}
-                                                  {% endif %}
-                                                {% endfor %}
-
-                                            {% endif %}
-                                        {% endfor %}
-                                      </div>
-                                    </div>
-                              </div> 
-                              </custom-accordion>
-                          </div>
-                          </div>
-                         
-                          <div class="tab-pane tabcontent {% if tab != 'omnilux-contour-face' and tab != 'omnilux-contour-neck-decollete' and tab != 'omnilux-contour-glove' and tab != 'omnilux-clear' and tab != 'omnilux-men' %} open {% endif %}" id="custom-tab-6" role="tabpanel">
+                          </div>                         
+                          <div class="tab-pane tabcontent {% if tab != 'omnilux-contour-face' and tab != 'omnilux-contour-neck-decollete' and tab != 'omnilux-contour-glove' and tab != 'omnilux-clear' and tab != 'omnilux-men' and tab != 'minis' %} open {% endif %}" id="custom-tab-6" role="tabpanel">
                             <div class="rte pt-lg-7 px-lg-6">
                               <custom-accordion  data-accordionType="single">
 
@@ -708,6 +625,98 @@
                                       </div>
                                     </div>
                               </div> {% endcomment %}
+                              </custom-accordion>
+                          </div>
+                          </div>
+                                                     <div class="tab-pane tabcontent {% if tab == 'minis' or tab == 'omnilux-minis' %} open {% endif %}" id="custom-tab-7" role="tabpanel">
+                            <div class="rte pt-lg-7 px-lg-6">
+                              <custom-accordion  data-accordionType="single">
+                                <div class="accordion__container py-3 border-top">
+                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab7">
+                                      <span>{{ section.settings.tabTitle1 }}</span>
+                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                        <span class="ox-plus trn"></span>
+                                        <span class="ox-minus position-absolute trn"></span>
+                                      </span>
+                                    </a>
+                                    <div class="accordion__block toggle-content" id="accordion_customTab7" data-type="content" style="height: 0px;">
+                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                         {%- for block in section.blocks -%}
+                                          {%- if block.type == 'minis_faq' -%}
+                                          {%- liquid
+                                          capture current
+                                              cycle 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                                          endcapture
+                                        -%}
+                                      {% for i in (1..10) %}
+                                        {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                        {% assign quentionsid =  'question' | append: forloop.index %}
+                                        {% assign answerid =  'answer' | append: forloop.index %}
+                                        {% if block.settings[enableFaq] %}
+                                          {% if block.settings[quentionsid] != blank %}
+                                            <div class="accordion__container py-3 border-top" style="line-height: 1.1875;">
+                                              <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Mini?" rel="nofollow" aria-label="Open What is Omnilux Mini?" role="button" aria-expanded="false" aria-controls="faqs7">
+                                                <span>{{ block.settings[quentionsid] }}</span>
+                                                <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                  <span class="ox-plus trn"></span>
+                                                  <span class="ox-minus position-absolute trn"></span>
+                                                </span>
+                                              </a>
+                                              <div class="accordion__block toggle-content" id="faqs7" data-type="content" style="height: 0px;">
+                                                <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                              </div>
+                                            </div>
+                                            {% endif %}
+                                          {% endif %}
+                                        {% endfor %}
+                                            {% endif %}
+                                        {% endfor %}
+                                      </div>
+                                    </div>
+                                </div>
+                                   <div class="accordion__container py-3 border-top border-bottom">
+                                    <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
+                                      <span>{{ section.settings.tabTitle2 }}</span>
+                                      <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                        <span class="ox-plus trn"></span>
+                                        <span class="ox-minus position-absolute trn"></span>
+                                      </span>
+                                    </a>
+                                    <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content" style="height: 0px;">
+                                      <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                        <div class="text-center">
+                                          <h4 class="mb-3 mb-lg-7">{{ section.settings.tabsubTitle2 }}</h4>
+                                        </div>
+                                         {%- for block in section.blocks -%}
+                                          {%- if block.type == 'minis_user_guides' -%}
+
+                                          {% for i in (1..6) %}
+                                            {% assign enableFaq =  'enableFaq' | append: forloop.index %}
+                                            {% assign quentionsid =  'question' | append: forloop.index %}
+                                            {% assign answerid =  'answer' | append: forloop.index %}
+                                            {% if block.settings[enableFaq] %}
+                                            {% if block.settings[quentionsid] != blank %}
+                                                    <div class="accordion__container py-3 border-top" style="line-height: 1.1875;">
+                                                        <a class="text-decoration-none accordion__toggle d-flex mb-0" href="javascript:void(0);" title="Open What is Omnilux Contour?" rel="nofollow" aria-label="Open What is Omnilux Contour?" role="button" aria-expanded="false" aria-controls="faqs8">
+                                                          <span>{{ block.settings[quentionsid] }}</span>
+                                                          <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                                            <span class="ox-plus trn"></span>
+                                                            <span class="ox-minus position-absolute trn"></span>
+                                                          </span>
+                                                        </a>
+                                                        <div class="accordion__block toggle-content" id="faqs8" data-type="content" style="height: 0px;">
+                                                          <div class="rte pt-3 formatted-list ps-3">{{ block.settings[answerid] }}</div>
+                                                        </div>
+                                                    </div>
+                                              {% endif %}
+                                                  {% endif %}
+                                                {% endfor %}
+
+                                            {% endif %}
+                                        {% endfor %}
+                                      </div>
+                                    </div>
+                              </div> 
                               </custom-accordion>
                           </div>
                           </div>

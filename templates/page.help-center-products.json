@@ -924,15 +924,15 @@
             "answer3": "<p>On a full charge, each Mini device will give about 3 treatments.<\/p>",
             "enableFaq4": true,
             "question4": "What is the recommended treatment regimen for Omnilux Mini?",
-            "answer4": "<p><strong>Skin Corrector:<\/strong> We recommend using the Skin Corrector device for 3-5 treatments per week for 4-6 weeks followed by maintenance as desired.<\/p><p><strong>Eye Brightener: <\/strong>We recommend using the Eye Brightener device for 3-5 treatments per week for 4-6 weeks followed by maintenance as desired.<\/p><p><strong>Blemish Eraser:<\/strong> We recommend using the Blemish Eraser device for 4 treatments per week until the blemish subsides, or for a maximum of 6 weeks if you a treating recurring acne. After the initial 6 weeks, you should only use Blemish Eraser device at the earliest signs of breakout.<\/p><p><strong>PLEASE NOTE: <\/strong>You should not use the Blemish Eraser device on the same area of the face for more than 6 weeks consecutively. After 6 weeks we recommend giving that area of your skin a break.<\/p>",
+            "answer4": "<p><strong>Skin Corrector:<\/strong> We recommend using the Skin Corrector device for 3-5 treatments per week for 4-6 weeks followed by maintenance as desired.<\/p><p><strong>Eye Brightener: <\/strong>We recommend using the Eye Brightener device for 3-5 treatments per week for 4-6 weeks followed by maintenance as desired.<\/p><p><strong>Blemish Eraser:<\/strong> We recommend using the Blemish Eraser device for 4 treatments per week until the blemish subsides, or for a maximum of 6 weeks if you are treating recurring acne. After the initial 6 weeks, you should only use Blemish Eraser device at the earliest signs of breakout.<\/p><p><strong>PLEASE NOTE: <\/strong>You should not use the Blemish Eraser device on the same area of the face for more than 6 weeks consecutively. After 6 weeks we recommend giving that area of your skin a break.<\/p>",
             "enableFaq5": true,
             "question5": "How do the Omnilux Mini devices differ from each other?",
-            "answer5": "<p>The Omnilux Mini Skin Corrector and Eye Brightener use red and near-infrared light to reduce fine line, wrinkles, and improve overall skin tone. They are shaped differently for different parts of your face. The Eye Brightener is shaped like a crescent to fit under and around the eye area, the Skin corrector is round to target areas like your cheek or your forehead. The Blemish Eraser device uses red and blue light to treat acne breakouts. Although all Mini devices have red light, the light is used in combination with other wavelengths (near-infrared and blue) to target two completely different skin concerns.<\/p>",
+            "answer5": "<p>The Omnilux Mini Skin Corrector and Eye Brightener use red and near-infrared light to reduce fine line, wrinkles, and improve overall skin tone. They are shaped differently for different parts of your face. <\/p><p>The Eye Brightener is shaped like a crescent to fit under and around the eye area, the Skin corrector is round to target areas like your cheek or your forehead. <\/p><p>The Blemish Eraser device uses red and blue light to treat acne breakouts. Although all Mini devices have red light, the light is used in combination with other wavelengths (near-infrared and blue) to target two completely different skin concerns.<\/p><p>Each Mini's corresponding Hydrocolloid Patches contain skincare ingredients specific to the device's treatment application (ie, salicylic acid for blemishes and amino acid-rich peptides for reducing fine lines and wrinkles).<\/p>",
             "enableFaq6": true,
             "question6": "Can I use my Mini device every day?",
-            "answer6": "<p>Please follow the instructions in the user guide for your specific device.<\/p>",
+            "answer6": "<p>Please follow the instructions of use in the user guide for your specific device.<\/p>",
             "enableFaq7": true,
-            "question7": "Does LED light therapy really work",
+            "question7": "Does LED light therapy really work?",
             "answer7": "<p>Yes. Omnilux’s technology has been clinically proven to produce medical grade results for nearly 20 years. Omnilux devices have been specifically profiled in over 40 independent peer-reviewed published clinical studies of these studies, with applications ranging from skin rejuvenation, acne, pigmentation, and other common skin conditions.<\/p><p>Please note: Not all LED devices are created equal! Some brands lack the clinical studies or FDA clearance that demonstrate proven effectiveness.<\/p>",
             "enableFaq8": true,
             "question8": "How long does it take LED light therapy to work?",
@@ -942,7 +942,7 @@
             "answer9": "<p>The Mini devices all contain 12 individual LEDs, encased in 6 dual chip bulbs.<\/p>",
             "enableFaq10": true,
             "question10": "What are the wavelengths of light used in the Mini line?",
-            "answer10": "<p>The Skin Corrector device uses 633nm red light and 830nm near infrared light.<\/p><p>The Eye Brightener device uses 633nm red light and 830nm near infrared light.<\/p><p>The Blemish Eraser device uses 633nm red light and 415nm blue light.<\/p>"
+            "answer10": "<p>The Skin Corrector device uses 633nm red light and 830nm near- infrared light.<\/p><p>The Eye Brightener device uses 633nm red light and 830nm near-infrared light.<\/p><p>The Blemish Eraser device uses 633nm red light and 415nm blue light.<\/p>"
           }
         },
         "7b9b509a-a19f-4315-82ea-8f5f33fe3270": {
@@ -959,10 +959,10 @@
             "question3": "Can I use Eye Brightener, Skin Corrector, and Blemish Eraser at the same time?",
             "answer3": "<p>The devices may be used at the same time to treat different areas of the face. For example, you may use the Eye Brightener to treat around the eyes and the Blemish Eraser to treat a breakout on the forehead. However, we do not recommend treating the same exact area with two devices immediately after one another.<\/p>",
             "enableFaq4": true,
-            "question4": "Is the Omnilux Mini line safe to use?",
+            "question4": "Are the Omnilux Mini devices safe to use?",
             "answer4": "<p>With over 40 peer reviewed clinical studies and nearly 20 years of experience, Omnilux technology has proven to be very safe for all skin types, with no adverse side effects, no pain, and no downtime. The Omnilux Mini devices generate no heat or UV light.<\/p>",
             "enableFaq5": true,
-            "question5": "Is the Mini line safe for all ages?",
+            "question5": "Are the Mini devices safe for all ages?",
             "answer5": "<p>We recommend the Eye Brightener and Skin Corrector devices for people age 21 and older.<\/p><p>We recommend the Blemish Eraser for people ages 14 and older.<\/p>",
             "enableFaq6": true,
             "question6": "Are the Mini devices safe for my eyes?",
@@ -975,10 +975,10 @@
             "answer8": "<p>The Skin Corrector device will not clear acne breakouts and should not be used to treat inflammatory acne vulgaris. Red and near-infrared light will reduce the redness and inflammation associated with acne, but it will not help clear acne. For those with acne concerns, we recommend the Omnilux Blemish Eraser device or the Omnilux Clear full-face mask.<\/p>",
             "enableFaq9": true,
             "question9": "Will LED light therapy increase pigmentation or exacerbate melasma?",
-            "answer9": "<p>Red and near-infrared LED technology have been shown to help decrease pigmentation. If you are unsure about your melasma, we recommend consulting your dermatologist.<\/p>",
+            "answer9": "<p>Red and near-infrared LED technology have been shown to help decrease pigmentation. If you are unsure about your melasma, we recommend consulting your dermatologist.<\/p><p>*Please note that people with a predisposition to pigmentation or photosensitivity and people with darker skin tones (types IV, V and VI on the Fitzpatrick Scale) may experience transient pigmentation with blue light therapy. This is often short lived and resolves on its own in most cases with discontinued use. If there are any concerns, we recommend consulting your dermatologist or professional skincare provider.<\/p>",
             "enableFaq10": true,
             "question10": "Will Red light therapy help with psoriasis, rosacea or eczema?",
-            "answer10": "<p>Although Omnilux technology has not been studied in a controlled clinical study for the treatment of psoriasis, rosacea, or eczema, many of our users of our LED facemask technology have reported significant improvement in their psoriasis, rosacea, or eczema conditions.<\/p>"
+            "answer10": "<p>Although Omnilux technology has not been studied in a controlled clinical study for the treatment of psoriasis, rosacea, or eczema, many users of our LED technology have reported significant improvement in their psoriasis, rosacea, or eczema conditions.<\/p>"
           }
         },
         "f4a2fdb6-99da-4724-872c-d5ad386e7ded": {
@@ -990,7 +990,7 @@
             "answer1": "<p>Omnilux Mini is compatible with most skin care routines. You should always apply your skin care products after treatments. For our full list of contraindications please visit the help center and review the contraindications listed under the Mini section.<\/p>",
             "enableFaq2": true,
             "question2": "Should I use any serum\/creams or other skincare products underneath my Mini device?",
-            "answer2": "<p>You should only use the provided skincare hydrocolloid under your Mini device.<\/p>",
+            "answer2": "<p>Since the device is adhered to the skin with our Hydrocolloid Patch, which has active skincare ingredients, we recommend only using the Hydrocolloid Patches under your Mini device.<\/p>",
             "enableFaq3": true,
             "question3": "Is Omnilux Mini safe to use with Retinol or RetinA?",
             "answer3": "<p>For users taking prescriptive levels of Retin A such as Tretinoin we do not recommend the use of light devices. Those using cosmetics\/skincare products containing retinol should read the skincare instructions carefully for warnings and precautions in relation to exposure to light. Retin A should be discontinued for at least 5 days before performing light therapy treatments.<\/p>",
@@ -1003,7 +1003,7 @@
             "enableFaq6": true,
             "question6": "Why do the Blemish Eraser lights look purple?",
             "answer6": "<p>Since the Blemish Eraser device uses dual chip technology, when red and blue light are combined and illuminated together, the eye perceives the output color as purple.<\/p>",
-            "enableFaq7": true,
+            "enableFaq7": false,
             "question7": "Are the Omnilux Mini devices safe to use?",
             "answer7": "<p>Over 40 clinical studies and nearly 20 years of experience have proven that Omnilux light therapy is safe for all skin types*, with no pain and no downtime. Omnilux Mini generates no heat or UV light and is tested to internationally recognized electrical safety standards.<\/p><p>*Please note that people with a predisposition to pigmentation or photosensitivity and people with darker skin tones (types IV, V and VI on the Fitzpatrick Scale) may experience transient pigmentation with blue light therapy. This is often short lived and resolves on its own in most cases with discontinued use. If there are any concerns, we recommend consulting your dermatologist or professional skincare provider.<\/p>",
             "enableFaq8": true,
@@ -1040,17 +1040,17 @@
             "question6": "How do the Mini devices compare to the full-sized LED masks?",
             "answer6": "<p>The mini devices contain the same technology as our masks, but are conveniently smaller for spot treatments, travel, or as an introduction to LED light therapy.<\/p>",
             "enableFaq7": true,
-            "question7": "Are the Hydrocolloid patches cruelty free and vegan?",
-            "answer7": "<p>Yes, all of the hydrocolloid patches are cruelty free and vegan. You can find the full ingredients list on each product page.<\/p>",
+            "question7": "Are the Hydrocolloid Patches cruelty free and vegan?",
+            "answer7": "<p>Yes, all of the Hydrocolloid Patches are cruelty free and vegan. You can find the full ingredients list on each product page.<\/p>",
             "enableFaq8": true,
-            "question8": "Are the Hydrocolloid patches fragrance free and paraben free?",
-            "answer8": "<p>Yes, all of the hydrocolloid patches are fragrance free and paraben free.<\/p>",
+            "question8": "Are the Hydrocolloid Patches fragrance free and paraben free?",
+            "answer8": "<p>Yes, all of the Hydrocolloid Patches are fragrance free and paraben free.<\/p>",
             "enableFaq9": true,
-            "question9": "Are the Hydrocolloid patches required to be used with the Mini devices?",
+            "question9": "Are the Hydrocolloid Patches required to be used with the Mini devices?",
             "answer9": "<p>We do not recommend using Omnilux Mini without the corresponding Hydrocolloids.<\/p>",
             "enableFaq10": true,
-            "question10": "How many uses can you get out of each Hydrocolloid patch?",
-            "answer10": "<p>The Hydrocolloid patches are single-use.<\/p>"
+            "question10": "How many uses can you get out of each Hydrocolloid Patch?",
+            "answer10": "<p>The Hydrocolloid Patches are single-use.<\/p>"
           }
         },
         "bf6707b0-e754-4613-ba61-c381b448681f": {

@@ -1,5 +1,5 @@
 /*hide mini faq*/
-.help-center-products #custom-tab-btn-7{display:none;}
+/* .help-center-products #custom-tab-btn-7{display:none;} */
 
 
 .vendorname{    text-transform: uppercase;
@@ -160,6 +160,7 @@
 
 /*trusted by - PDPs*/
 .trustedbypdp {
+  display: none;
   width: 200px;
   left: 115px;
   position: relative;
@@ -265,6 +266,7 @@
   letter-spacing: 0em;
   margin: 10px 0 20px 0;
 }
+
 .desktopreviewstitle .starreviews {
   z-index: 2;
   display: flex !important;
@@ -460,7 +462,35 @@
   padding-top: 80px;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 999px) {  
+  .desktopreviewstitle {
+    padding: 25px;
+  }
+  .desktopreviewstitle h2.title {
+    font-size: 40px;
+    line-height: 39px;
+  }
+  .desktopreviewstitle p {
+    font-size: 17px;
+  }
+  .desktopreviewstitle .oke-stars-background svg,
+  .desktopreviewstitle .oke-stars-foreground svg {
+    height: 15px;
+  }
+  .desktopreviewstitle .oke-sr-count.oke-sr-count--brackets {
+    top: -6px;
+  }
+  .desktopreviewstitle .starreviews {
+    padding-left: 150px;
+  }
+  .desktopreviewstitle .oke-sr-count, .desktopreviewstitle .reviewstxt {
+    font-size: 15px;
+  }
+  .desktopreviewstitle .oke-a11yText {
+    margin-left: -248px !important;
+    top: -14px !important;
+    font-size: 15px !important;
+  }
   .template-product.omnilux-contour-face
     .circle-video-menu-wrap.circle-video-desktop,
   .template-product.omnilux-contour-face .desktopreviewstitle,

@@ -1,3 +1,23 @@
+function waitForElm(selector) {
+    return new Promise(resolve => {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+
+        const observer = new MutationObserver(mutations => {
+            if (document.querySelector(selector)) {
+                observer.disconnect();
+                resolve(document.querySelector(selector));
+            }
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     var scrollToReviewsSpan = document.getElementById("scrollToReviews");
     
@@ -11,6 +31,21 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     });
+
+    waitForElm('.product-details-wrapper [data-oke-metafield-data]').then((elm) => {
+        const metafield = jQuery.parseJSON(elm.textContent);
+        if(metafield.reviewCount == 0) {            
+            $('.product-details-wrapper [data-oke-star-rating]').css({display:'none'});
+            $('.trustedbypdp').css({display:'none'});
+        } else {
+            console.log("ttt")
+            $('.product-details-wrapper [data-oke-star-rating]').css({display:'block'});
+            $('.trustedbypdp').css({display:'block'});
+        }
+    })
+
+    // const mediaJSON = JSON.parse(okeMetaField.innerHTML);
+    // console.log("mediaJSON =", mediaJSON);
 });
 
 

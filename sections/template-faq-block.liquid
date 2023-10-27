@@ -31,7 +31,11 @@
                         </custom-accordion>
                       </div>
                       <div class="mt-3 text-start">
-                        <a target="_blank" href="https://omniluxled.com/pages/help-center-products" class="fw-bold text-decoration-underline">Click here to see more FAQs</a>
+                        {% assign tab = section.settings.tab %}
+                        {% if product != null %}
+                          {% assign tab = product.handle %}
+                        {% endif %}
+                        <a target="_blank" href="https://omniluxled.com/pages/help-center-products?t={{ tab }}" class="fw-bold text-decoration-underline">Click here to see more FAQs</a>
                       </div>
                     </div>
                     <div class="col-12 col-lg-5 col-md-5 mb-5">
@@ -67,6 +71,12 @@
       "id": "heading",
       "label": "Block Title",
       "default": "FAQ"
+    },
+    {
+      "type": "text",
+      "id": "tab",
+      "label": "Tab ID",
+      "default": "minis"
     }
   ],
   "blocks": [
