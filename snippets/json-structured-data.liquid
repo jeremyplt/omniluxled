@@ -150,13 +150,14 @@
             endfor
           %}
           {% unless checkWholesaleProducts == true %}
-          {% unless product.tags contains productExcludeTag %}
-          {
-            "@type":"ListItem",
-            "position": {{ forloop.index }},
-            "url": "{{ shop.url }}{{ product.url | within: collection }}"
-          }
-        {% endunless %}
+            {% unless product.tags contains productExcludeTag %}
+              {
+                "@type":"ListItem",
+                "position": {{ forloop.index }},
+                "url": "{{ shop.url }}{{ product.url | within: collection }}"
+              }
+            {% endunless %}
+          {% endunless %}
         {% endfor %}
       {% endpaginate %}
     ]
