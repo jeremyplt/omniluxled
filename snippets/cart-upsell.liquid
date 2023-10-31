@@ -147,6 +147,12 @@
                                                                         endif
                                                                     endfor
                                                                 endfor
+
+                                                                for item in cart.items
+                                                                    if item.product.title == upsellProduct.title
+                                                                        assign upgrade_product = true
+                                                                    endif
+                                                                endfor
                                                             %}
                                                             
                                                             {%- if upsellProduct.metafields.custom.cart_upsell_button_label != blank and upgrade_product -%}
