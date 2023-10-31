@@ -29,7 +29,7 @@
                             endfor
                         %}
 
-                        {% unless is_in_cart and upsellProduct.title != "Omnilux Hydrogel Facial Mask" %}
+                        {% unless is_in_cart and upsellProduct.title != "Omnilux Hydrogel Facial Mask" and upsellProduct.title != "Omnilux Hydrogel Décolleté Mask" %}
                             {% liquid 
                                 assign products_to_remove = ""
                                 for product in upsellProduct.metafields.custom.products_to_remove.value
@@ -37,22 +37,25 @@
                                 endfor
                             %}
 
+                            {% assign contains_pack = false %}
+                            {% for item in cart.items %}
+                                {% if item.product.title contains "Mask" %}
+                                    {% assign contains_pack = true %}
+                                {% endif %}
+                            {% endfor %}
+
+                            {% if upsellProduct.title contains "Mask" and contains_pack %}
+                                {%- assign upsell_variant = upsellProduct.variants[1] -%}
+                                {%- assign products_to_remove = upsellProduct.variants[0].id -%}
+                            {% else %}
+                                {%- assign upsell_variant = upsellProduct.selected_or_first_available_variant -%}
+                            {% endif %}
+
                             {% comment %} {% assign upsellProduct = all_products[upsellProduct] %} {% endcomment %}
                             {% comment %} {{ upsellProduct | json }}                       {% endcomment %}                      
                             {%- assign product_form_id = 'product-form-' | append: upsellProduct.id -%}
                             <div class="swiper-slide h-auto form-element cart-upsell" data-upsell-product-id="{{upsellProduct.id}}" style="width: 100px;" data-products-remove="{{ products_to_remove }}">
                                 <product-form class="product-form d-block h-100">
-                                    {% assign contains_pack = false %}
-                                    {% for item in cart.items %}
-                                        {% if item.product.title == "Omnilux Hydrogel Facial Mask" %}
-                                            {% assign contains_pack = true %}
-                                        {% endif %}
-                                    {% endfor %}
-                                    {% if upsellProduct.title == "Omnilux Hydrogel Facial Mask" and contains_pack %}
-                                        {%- assign upsell_variant = upsellProduct.variants[1] -%}
-                                    {% else %}
-                                        {%- assign upsell_variant = upsellProduct.selected_or_first_available_variant -%}
-                                    {% endif %}
                                     {%- assign product_form_id = 'product-form-' | append: upsellProduct.id -%}
                                     {% form 'product', upsellProduct, id: product_form_id, class: "cart-upsell-form h-100", data-product-form: "", data-product-id: upsellProduct.id, data-product-handle: upsellProduct.handle, data-type: 'add-to-cart-form' %}
                                         <input type="hidden" name="id" value="{{ upsell_variant.id }}">
