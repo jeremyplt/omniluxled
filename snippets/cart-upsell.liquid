@@ -139,6 +139,7 @@
                                                         {% unless upsell_variant.available %}disabled{% endunless %}>
                                                         <span class="add-text">
                                                             {% liquid 
+                                                                assign products_to_remove = products_to_remove | split: ","
                                                                 if products_to_remove.length > 0
                                                                     assign upgrade_product = true
                                                                 endif
