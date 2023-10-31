@@ -3,6 +3,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+  
     {{!-- Upfluence Tracking Script --}}
 <script src="https://tracking.upfluence.co/js/v1/init-249fbd7f-ec24-4799-a7fa-22d273cda0c0.js"></script>
 
@@ -95,7 +96,8 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
 
      {{ 'custom.css' | asset_url | stylesheet_tag }}
      {{ 'lead-board-experts-slider.css' | asset_url | stylesheet_tag }}
-  
+    {{ 'hoox-base.css' | asset_url | stylesheet_tag }}
+
   {% render 'qikify-apps' %}
 
   <!-- Start NB Pixel Snippet -->

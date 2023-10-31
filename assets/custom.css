@@ -442,6 +442,11 @@
   display: block !important;
 }
 
+.template-page.minis .circle-video-menu-wrap.circle-video-desktop .circle-video-menu {
+  display: flex !important;
+  width: 100%;
+}
+
 .template-page.minis .circle-video-menu-wrap.circle-video-desktop {
   display: flex !important;
   justify-content: center !important;

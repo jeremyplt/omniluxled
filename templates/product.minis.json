@@ -217,7 +217,10 @@
             "tab_4_content": "{{product.metafields.custom.tab_description_4}}",
             "enable_custom_tab_5": "{{product.metafields.custom.enable_tab_5}}",
             "tab_5_title": "{{product.metafields.custom.tab_title_5}}",
-            "tab_5_content": "{{product.metafields.custom.tab_description_5}}"
+            "tab_5_content": "{{product.metafields.custom.tab_description_5}}",
+            "enable_custom_tab_6": "{{product.metafields.custom.enable_tab_6}}",
+            "tab_6_title": "{{product.metafields.custom.tab_title_6}}",
+            "tab_6_content": "{{product.metafields.custom.tab_description_6}}"
           }
         },
         "3fc244f3-9eea-4a61-874a-b551b0227aff": {
@@ -682,6 +685,52 @@
         "btn_type_l": "",
         "btn_variant_l": "primary",
         "btn_size_l": ""
+      }
+    },
+    "34cd2916-393e-4172-9c4d-74b4cdcd0b4a": {
+      "type": "hoox-how-to-with-button",
+      "blocks": {
+        "a59eaa04-4c6b-4a5f-87ae-727c9a5a6ac1": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "{{product.metafields.custom.hoox_howto_props_1_image}}",
+            "hoox_how_to_text": "{{product.metafields.custom.hoox_howto_props_1_text}}"
+          }
+        },
+        "48654cc5-aef9-4d55-9fca-d3549f053e1a": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "{{product.metafields.custom.hoox_howto_props_2_image}}",
+            "hoox_how_to_text": "{{product.metafields.custom.hoox_howto_props_2_text}}"
+          }
+        },
+        "17c1f375-940a-4b3b-a4c5-0e7ac3302fd9": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "{{product.metafields.custom.hoox_howto_props_3_image}}",
+            "hoox_how_to_text": "{{product.metafields.custom.hoox_howto_props_3_text}}"
+          }
+        },
+        "5e40ca81-9cdb-427f-b807-d37d44b1d0b6": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "{{product.metafields.custom.hoox_howto_props_4_image}}",
+            "hoox_how_to_text": "{{product.metafields.custom.hoox_howto_props_4_text}}"
+          }
+        }
+      },
+      "block_order": [
+        "a59eaa04-4c6b-4a5f-87ae-727c9a5a6ac1",
+        "48654cc5-aef9-4d55-9fca-d3549f053e1a",
+        "17c1f375-940a-4b3b-a4c5-0e7ac3302fd9",
+        "5e40ca81-9cdb-427f-b807-d37d44b1d0b6"
+      ],
+      "settings": {
+        "enable_section": "{{product.metafields.custom.hoox_howto_enable}}",
+        "hoox_how_to_title": "{{product.metafields.custom.hoox_howto_title}}",
+        "hoox_how_to_subtitle": "{{product.metafields.custom.hoox_howto_subtitle}}",
+        "btn_txt_watch": "{{product.metafields.custom.hoox_howto_video_button_text}}",
+        "watch_video_id": "{{product.metafields.custom.hoox_howto_video_id}}"
       }
     },
     "9954540e-30e3-44b7-ab1d-975166604760": {
@@ -1214,7 +1263,8 @@
       ],
       "settings": {
         "enable": true,
-        "heading": "Frequently Asked Questions"
+        "heading": "Frequently Asked Questions",
+        "tab": "minis"
       }
     },
     "167152762813570154": {
@@ -1296,6 +1346,7 @@
     "5fc33cbe-b23b-43d7-b393-0425cd94b49e",
     "8d4dfa60-174c-4b28-9812-ab31ef599696",
     "9521727a-fc34-433d-b725-458ff43ba5f3",
+    "34cd2916-393e-4172-9c4d-74b4cdcd0b4a",
     "9954540e-30e3-44b7-ab1d-975166604760",
     "ee32d731-64d8-43e4-a200-3aad66c37be5",
     "c578fea6-30d9-45c3-a052-ad86f35eb32a",

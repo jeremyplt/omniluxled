@@ -10,6 +10,12 @@
 	overflow: hidden;
 }
 
+.template-product.eye-brightener .images__tabs,
+.template-product.blemish-eraser .images__tabs,
+.template-product.skin-corrector .images__tabs{
+	display: none;
+}
+
 .images__tab {
 	padding: 3px 18px;
 	border-radius: 8px;

@@ -1,0 +1,134 @@
+{{ 'hoox-how-to.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign hooxHowToTitle = section.settings.hoox_how_to_title
+  assign hooxHowToSubtitle = section.settings.hoox_how_to_subtitle
+%}
+{% if section.settings.enable_section == "true"%}
+<section class="hoox-to">
+  <div class="l">
+  {% if hooxHowToTitle != 'blank' %}
+    <h2 class="hoox-how-to__title hoox-title text-align-center">
+      {{ hooxHowToTitle }}
+    </h2>
+  {% endif %}
+
+  {% if hooxHowToSubtitle != 'blank' %}
+    <p class="hoox-how-to__subtitle hoox-text-primary text-align-center">
+      {{ hooxHowToSubtitle }}
+    </p>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="hoox-how-to__items">
+      {% for block in section.blocks %}
+        {% liquid
+          assign hooxHowToImage = block.settings.hoox_how_to_image
+          assign hooxHowToText = block.settings.hoox_how_to_text
+        %}
+
+        <div class="hoox-how-to__item">
+          {% if hooxHowToImage %}
+            <figure class="hoox-how-to__image">
+              {% render 'snippet-image', image: hooxHowToImage %}
+            </figure>
+          {% endif %}
+
+          {% if hooxHowToText != blank %}
+            <p class="hoox-how-to__text hoox-text-primary">
+              <span class='hoox-how-to__index'>{{forloop.index}}.</span>
+              {{ hooxHowToText }}
+            </p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  </div>
+  {% if section.settings.btn_txt_watch != blank %}
+  <div class="pt-1 w-100 w-sm-auto">
+    <div class="custom-video-container d-flex justify-content-center">
+      <span data-trigger-videobtn class="cursor-pointer btn w-100 w-sm-auto btn-outline-primary mt-5" title="{{ block.settings.btn_txt_watch }}">
+          {{ section.settings.btn_txt_watch }}
+          <i class="ox-play ms-2" style="font-size:11px;"></i>
+      </span>                
+      <custom-video class="video-with--text position-relative d-block placement--popup"
+        data-loop="true" data-autoplay="true" data-controls="true" data-muted="false"
+        data-video-type="local"  data-placement="popup"
+        {% if section.settings.watch_mobile_video_id != blank %}data-mobileVideo="{{ section.settings.watch_mobile_video_id }}"{% endif %} 
+        data-video-id="{{ section.settings.watch_video_id }}">
+        <div class="cta-btn d-none">
+          <button class="play__button btn btn-primary" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
+            <span class="icon-play"></span>
+          </button>
+          <button class="bg-transparent border-2 border-white btn btn-primary p-3 pause__button rounded-pill d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
+            <span class="ox-play" style="position: relative;right: -2px;"></span>
+          </button>
+        </div>
+      </custom-video>        
+    </div>
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+{% comment %} Js file {% endcomment %}
+
+{% schema %}
+{
+  "name": "Hoox How To With Button",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "enable_section",
+      "label": "Enable Section?"
+    },
+    {
+      "type": "liquid",
+      "id": "hoox_how_to_title",
+      "label": "Section Title"
+    },
+    {
+      "type": "liquid",
+      "id": "hoox_how_to_subtitle",
+      "label": "Section Subtitle"
+    },
+    {
+      "type": "header",
+      "content": "Watch Video"
+    },
+    {
+      "type": "liquid",
+      "id": "btn_txt_watch",
+      "label": "Watch Button Text"
+    },
+    {
+      "type": "liquid",
+      "id": "watch_video_id",
+      "label": "Video Id"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "How To Props",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "hoox_how_to_image",
+          "label": "Props Image"
+        },
+        {
+          "type": "liquid",
+          "id": "hoox_how_to_text",
+          "label": "Props Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hoox How To With Button"
+    }
+  ]
+}
+{% endschema %}

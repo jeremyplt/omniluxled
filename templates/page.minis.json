@@ -272,7 +272,7 @@
         "title": "Mini devices. Major results.",
         "subtitle": "",
         "txt": "",
-        "htmltxt": "<p>Good things come in small packages. Skip the clinic and target your skin’s unique problem areas with our Mini LED devices.  <\/p>\n<p>We’ve paired our award-winning LED technology with skincare-infused hydrocolloid patches to help:<\/p>\n<ul class=\"twocolumns\">\n<li>Diminish fine lines + wrinkles<\/li>\n<li>Brighten complexion<\/li>\n<li>Reduce breakouts<\/li>\n<li>Calm redness + inflammation<\/li>\n<li>Lighten the look of age spots<\/li>\n<li>Restore fatigued skin<\/li>\n<\/ul>",
+        "htmltxt": "<p>Good things come in small packages. Skip the clinic and target your skin’s unique problem areas with our Mini LED devices.  <\/p>\n<br>\n<p>We’ve paired our award-winning LED technology with skincare-infused hydrocolloid patches to help:<\/p>\n<br>\n<ul class=\"twocolumns\">\n<li>Diminish fine lines + wrinkles<\/li>\n<li>Brighten complexion<\/li>\n<li>Reduce breakouts<\/li>\n<li>Calm redness + inflammation<\/li>\n<li>Lighten the look of age spots<\/li>\n<li>Restore fatigued skin<\/li>\n<\/ul>",
         "btn_txt": "COMING SOON",
         "btn_link": "",
         "btn_type": "outline",
@@ -309,31 +309,31 @@
         "template--16169064104098__98ce97d7-15c6-46d0-b111-c869d2a20b0b-1684638177820ba2bb-0": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2_3.png",
+            "image": "shopify:\/\/shop_images\/11_6303a86f-e45a-4e07-95e5-a178dc4c610c.png",
             "title": "<p>Eye Brightener <strong>FOR DARK CIRCLES & WRINKLES<\/strong><\/p>",
-            "txt_info": "<p>Brighten dark circles, diminish under-eye bags, and smooth crow's feet.<\/p><p><em>Includes hydrocolloid patches infused with <\/em><em><strong>amino acid-rich peptides<\/strong><\/em><em> and <\/em><em><strong>niacinamide<\/strong><\/em><em>.<\/em><\/p>",
+            "txt_info": "<p>Brighten dark circles, diminish under-eye bags, and smooth crow's feet.<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>amino acid-rich peptides<\/strong><\/em><em> and <\/em><em><strong>niacinamide<\/strong><\/em><em>.<\/em><\/p>",
             "btn_txt": "LEARN MORE",
-            "btn_url": "https:\/\/omniluxled.com\/products\/eye-brightener"
+            "btn_url": "shopify:\/\/products\/eye-brightener"
           }
         },
         "59a2a5b7-b6f5-4566-8ff2-3c5e06fec563": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3_2.png",
+            "image": "shopify:\/\/shop_images\/2_b53a1814-20bd-4915-9c80-c2bf5366507c.png",
             "title": "<p>Blemish Eraser <strong>FOR ACNE & BREAKOUTS<\/strong><\/p>",
             "txt_info": "<p>Fight acne, clear congested skin, and calm redness & inflammation associated with breakouts<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>salicylic acid<\/strong><\/em><em> and <\/em><em><strong>green tea<\/strong><\/em><em>.<\/em><\/p>",
             "btn_txt": "LEARN MORE",
-            "btn_url": "https:\/\/omniluxled.com\/products\/blemish-eraser"
+            "btn_url": "shopify:\/\/products\/blemish-eraser"
           }
         },
         "0771fb05-3ea9-446b-b6e9-deb71688b602": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_3.png",
+            "image": "shopify:\/\/shop_images\/20_b955d802-6191-4a1c-b9c6-13b1e2d1f972.png",
             "title": "<p>Skin Corrector <strong>FOR FINE LINES & PIGMENTATION<\/strong><\/p>",
             "txt_info": "<p>Reduce fine lines & inflammation while improving the appearance of age spots.<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>vitamin C<\/strong><\/em><em> and<\/em><em><strong> azelaic acid<\/strong><\/em><em>.<\/em><\/p>",
             "btn_txt": "LEARN MORE",
-            "btn_url": "https:\/\/omniluxled.com\/products\/skin-corrector"
+            "btn_url": "shopify:\/\/products\/skin-corrector"
           }
         }
       },
@@ -383,7 +383,7 @@
             "btn_size_watch": "",
             "link_txt": "",
             "link_url": "",
-            "image": "shopify:\/\/shop_images\/Minis_Photos_for_Website.png",
+            "image": "shopify:\/\/shop_images\/Add_a_heading_38_b50fcb0f-3220-4214-835c-ccaddb2b357c.png",
             "alignment": "text-left",
             "image_alignment": "right"
           }
@@ -466,14 +466,14 @@
           "type": "question",
           "settings": {
             "title": "How does it work?",
-            "answer": "The Mini devices use clinically proven wavelengths of light (red, near-infrared, and blue) and optimized light energy output to work at a cellular level to stimulate new collagen and reduce fine lines and wrinkles, sun damage, and acne.<p>\n<p>\nThe red wavelength (633nm) reduces inflammation, pigmentation, and redness and helps prompt cellular repair and circulation for a more vibrant complexion. The red wavelength can be found in the Skin Corrector, Eye Brightener, and Blemish Eraser devices.\n<p>\nThe near-infrared wavelength (830nm) targets deeper fibroblast cells, stimulating new collagen and elastin production, resulting in plumper, firmer, more youthful looking skin. The red wavelength can be found in the Skin Corrector and Eye Brightener devices.\n<p>\nThe blue wavelength (415nm) eliminates bacteria on the surface of the skin to neutralize acne flare ups. The blue wavelength can be found in the Blemish Eraser device."
+            "answer": "The Mini devices use clinically proven wavelengths of light (red, near-infrared, and blue) and optimized light energy output to work at a cellular level to stimulate new collagen and reduce fine lines and wrinkles, sun damage, and acne.<p>\n<p>\n<br>\nThe red wavelength (633nm) reduces inflammation, pigmentation, and redness and helps prompt cellular repair and circulation for a more vibrant complexion. The red wavelength can be found in the Skin Corrector, Eye Brightener, and Blemish Eraser devices.\n<p>\n<br>\nThe near-infrared wavelength (830nm) targets deeper fibroblast cells, stimulating new collagen and elastin production, resulting in plumper, firmer, more youthful looking skin. The red wavelength can be found in the Skin Corrector and Eye Brightener devices.\n<p>\n<br>\nThe blue wavelength (415nm) eliminates bacteria on the surface of the skin to neutralize acne flare ups. The blue wavelength can be found in the Blemish Eraser device."
           }
         },
         "f87245ae-e774-4e5a-a64f-e7ae9dbd9eec": {
           "type": "question",
           "settings": {
             "title": "How do the Mini devices differ from each other?",
-            "answer": "The Omnilux Mini Skin Corrector and Eye Brightener use red and near-infrared light to reduce fine line, wrinkles, and improve overall skin tone. They are shaped differently for different parts of your face.<p>\n<p>\nThe Eye Brightener is shaped like a crescent to fit under and around the eye area, the Skin corrector is round to target areas like your cheek or your forehead.\n<p>\nThe Blemish Eraser device uses red and blue light to treat acne breakouts. Although all Mini devices have red light, the light is used in combination with other wavelengths (near-infrared and blue) to target two completely different skin concerns.\n<p>\nEach Mini's corresponding Hydrocolloid Patches contain skincare ingredients specific to the device's treatment application (ie, salicylic acid for blemishes and amino acid-rich peptides for reducing fine lines and wrinkles)."
+            "answer": "The Omnilux Mini Skin Corrector and Eye Brightener use red and near-infrared light to reduce fine line, wrinkles, and improve overall skin tone. They are shaped differently for different parts of your face.<p>\n<p>\n<br>\nThe Eye Brightener is shaped like a crescent to fit under and around the eye area, the Skin corrector is round to target areas like your cheek or your forehead.\n<p>\n<br>\nThe Blemish Eraser device uses red and blue light to treat acne breakouts. Although all Mini devices have red light, the light is used in combination with other wavelengths (near-infrared and blue) to target two completely different skin concerns.\n<p>\n<br>\nEach Mini's corresponding Hydrocolloid Patches contain skincare ingredients specific to the device's treatment application (ie, salicylic acid for blemishes and amino acid-rich peptides for reducing fine lines and wrinkles)."
           }
         },
         "4a0b0829-e932-42c2-bd24-fcde21db1fc1": {

@@ -60,7 +60,6 @@
           </div>
         </div>
       {% endif %}
-
       {% if block.settings.enable_custom_tab_1 == "true" %}
         <div class="accordion__container py-3 open">
           <a class="accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open {{ block.settings.tab_1_title }}" rel="nofollow" aria-label="Open {{ block.settings.tab_1_title }}" role="button" aria-expanded="true" aria-controls="accordion_customTab1">
@@ -75,7 +74,20 @@
           </div>
         </div>
       {% endif %}
-
+      {% if block.settings.enable_custom_tab_6 == "true"%}
+        <div class="accordion__container py-3 ttt">
+          <a class="accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open {{ block.settings.tab_6_title }}" rel="nofollow" aria-label="Open {{ block.settings.tab_6_title }}" role="button" aria-expanded="false" aria-controls="accordion_customTab6">
+            <span>{{ block.settings.tab_6_title }}</span>
+            <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+              <span class="ox-plus trn"></span>
+              <span class="ox-minus position-absolute trn"></span>
+            </span>
+          </a>
+          <div class="accordion__block toggle-content" id="accordion_customTab6" data-type="content">
+            <div class="rte pt-3 formatted-list">{{ block.settings.tab_6_content }}</div>
+          </div>
+        </div>
+      {% endif %}
       {% if block.settings.enable_custom_tab_2 == "true" %}
         <div class="accordion__container py-3">
           <a class="accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open {{ block.settings.tab_2_title }}" rel="nofollow" aria-label="Open {{ block.settings.tab_2_title }}" role="button" aria-expanded="false" aria-controls="accordion_customTab2">
@@ -182,6 +194,7 @@
           </div>
         </div>
       {% endif %}
+      
     </div>
   </div>
 </custom-accordion>
