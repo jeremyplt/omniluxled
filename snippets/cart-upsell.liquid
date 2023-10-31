@@ -139,7 +139,7 @@
                                                         {% unless upsell_variant.available %}disabled{% endunless %}>
                                                         <span class="add-text">
                                                             {% liquid 
-                                                                if product_to_remove.length > 0
+                                                                if products_to_remove.length > 0
                                                                     assign upgrade_product = true
                                                                 endif
                                                             %}
