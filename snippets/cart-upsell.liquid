@@ -139,14 +139,9 @@
                                                         {% unless upsell_variant.available %}disabled{% endunless %}>
                                                         <span class="add-text">
                                                             {% liquid 
-                                                                assign upgrade_product = false
-                                                                for product_to_remove in upsellProduct.metafields.custom.products_to_remove.value
-                                                                    for item in cart.items
-                                                                        if item.product.id == product_to_remove.id
-                                                                            assign upgrade_product = true
-                                                                        endif
-                                                                    endfor
-                                                                endfor
+                                                                if product_to_remove.length > 0
+                                                                    assign upgrade_product = true
+                                                                endif
                                                             %}
                                                             
                                                             {%- if upsellProduct.metafields.custom.cart_upsell_button_label != blank and upgrade_product -%}
