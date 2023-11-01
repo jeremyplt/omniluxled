@@ -23,17 +23,18 @@
 {% endfor %}
 <div class="{% if flag == false %}d-none{% endif %}">{% endcomment %}
 
-
   <div>
     {% if eligibleBar > 0 %}
     {% assign freeShippingBar = cartSubTotal | divided_by: settings.free_shipping_value | round: 5 %}
     {% liquid 
         assign has_subscription = false
-        for item in cart.items
-            if item.selling_plan_allocation
-                assign has_subscription = true
-            endif
-        endfor
+        unless localization.country != 'United States'
+            for item in cart.items
+                if item.selling_plan_allocation
+                    assign has_subscription = true
+                endif
+            endfor
+        endunless
     %}
 
     <div class="delivery-shipping d-flex mb-3 pt-3">
