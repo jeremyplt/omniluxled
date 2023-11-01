@@ -63,6 +63,7 @@
       ],
       "settings": {
         "border_color": "#000000",
+        "div_id": "",
         "ignore": true
       }
     },
@@ -110,6 +111,7 @@
       ],
       "settings": {
         "border_color": "#000000",
+        "div_id": "",
         "ignore": true
       }
     },
@@ -160,6 +162,12 @@
           "settings": {
           }
         },
+        "035a0ae4-c0ac-4966-afd0-6c6e9b87afec": {
+          "type": "subscription-info",
+          "settings": {
+            "info": "<ul><li>Auto-shipped every 4, 6, or 8 weeks so you never run out<\/li><li>15% off every subscription order<\/li><li>Free shipping on every subscription order<\/li><li>First access to new product offerings<\/li><li>Flexible subscription plan options<\/li><\/ul>"
+          }
+        },
         "847ff075-3bf5-4b88-bff7-4982bbafd833": {
           "type": "subtitle",
           "settings": {
@@ -190,7 +198,10 @@
             "tab_4_content": "{{product.metafields.custom.tab_description_4}}",
             "enable_custom_tab_5": "{{product.metafields.custom.enable_tab_5}}",
             "tab_5_title": "{{product.metafields.custom.tab_title_5}}",
-            "tab_5_content": "{{product.metafields.custom.tab_description_4}}"
+            "tab_5_content": "{{product.metafields.custom.tab_description_4}}",
+            "enable_custom_tab_6": "",
+            "tab_6_title": "Tab Title 6",
+            "tab_6_content": ""
           }
         },
         "3fc244f3-9eea-4a61-874a-b551b0227aff": {
@@ -224,6 +235,7 @@
         "b253ffff-d04d-43a0-9d68-fabdd77b595a",
         "3ec0cedf-fb32-4e6f-b392-8ad9d16f7103",
         "8a51062c-4d9c-422e-b490-fae013f03593",
+        "035a0ae4-c0ac-4966-afd0-6c6e9b87afec",
         "847ff075-3bf5-4b88-bff7-4982bbafd833",
         "product-tabs",
         "3fc244f3-9eea-4a61-874a-b551b0227aff",
@@ -560,6 +572,7 @@
         "muted": false,
         "controls": true,
         "loop": false,
+        "sectionid": "",
         "video_style": "col-lg-6",
         "video_style_large": "col-xl-5",
         "content_position": "align-items-center",
@@ -986,7 +999,8 @@
       ],
       "settings": {
         "enable": true,
-        "heading": "FAQ"
+        "heading": "FAQ",
+        "tab": "minis"
       }
     },
     "1676318184d0f06530": {
