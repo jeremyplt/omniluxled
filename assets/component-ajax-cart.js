@@ -176,9 +176,9 @@ class AjaxCart extends HTMLElement {
 
 
         if (source.children.length == 0) {
-          document.querySelector(".cart-upsell-section").style.display = "none";
+          document.querySelector(".cart-upsell-title.upsell-test-variant").style.display = "none";
         } else {
-          document.querySelector(".cart-upsell-section").style.display = "block";
+          document.querySelector(".cart-upsell-title.upsell-test-variant").style.display = "block";
         }
 
         this.addEventListenerUpsells()
