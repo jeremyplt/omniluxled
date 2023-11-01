@@ -340,10 +340,10 @@ class AjaxCart extends HTMLElement {
               window.globalVariables.money_format
             );
   
-            if(this.taxPercent > 0)
-              element.getElementsByClassName("price")[0].innerHTML = formatMoney + " Incl. tax"
-            else
-              element.getElementsByClassName("price")[0].innerHTML = formatMoney
+            // if(this.taxPercent > 0)
+            //   element.getElementsByClassName("price")[0].innerHTML = formatMoney + " Incl. tax"
+            // else
+            //   element.getElementsByClassName("price")[0].innerHTML = formatMoney
           }          
         }
       });
