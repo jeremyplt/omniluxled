@@ -1905,3 +1905,9 @@ html .cbb-frequently-bought-recommendations-wrap {
 .before-after-scroller-contour {
   display: none;
 }
+
+
+#__next {
+  margin-bottom: 100px;
+  margin-top: 10px;
+}
