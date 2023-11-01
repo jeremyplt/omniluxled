@@ -174,7 +174,6 @@ class AjaxCart extends HTMLElement {
         destinationTitle.innerHTML = sourceTitle.innerHTML;
         destination.innerHTML = source.innerHTML;
 
-        console.log("source.children.length", source.children.length)
 
         if (source.children.length == 0) {
           document.querySelector(".cart-upsell-section").style.display = "none";
@@ -185,7 +184,7 @@ class AjaxCart extends HTMLElement {
         this.addEventListenerUpsells()
     })
     .catch(error => console.error(error));
-}
+  }
 
   /**
    * Open Cart drawer and add focus to drawer container
