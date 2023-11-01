@@ -303,6 +303,8 @@
                             </div>
                         {% endif %}
                       {% endif %}
+                    {%- when "subscription-info"-%}
+                      {{ block.settings.info }}
                     {%- when 'product-tabs' -%}
                       {%- liquid
                         if block.settings.enable_product_tabs and section.settings.product_tabs_placement == 'beside_slider'
@@ -491,6 +493,21 @@
           "type": "liquid",
           "id": "faqs_content_sub",
           "label": "FAQ's Content"
+        }
+      ]
+    },
+    {
+      "type": "subscription-info",
+      "name": "Subscription Info",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Subscription Info"
+        },
+        {
+          "type": "richtext",
+          "id": "info",
+          "label": "Info"
         }
       ]
     },
