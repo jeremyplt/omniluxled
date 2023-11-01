@@ -1911,3 +1911,16 @@ html .cbb-frequently-bought-recommendations-wrap {
   margin-bottom: 100px;
   margin-top: 10px;
 }
+
+.subscription-info {
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.subscription-info.show {
+  display: block;
+}
+
+.subscription-info ul {
+  padding-left: 1rem;
+}

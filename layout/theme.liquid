@@ -496,6 +496,20 @@ waitForElement(".cbb-frequently-bought-form", 5000)
     console.log("error message")
     console.error(e.message)
   })
+
+  waitForElement(".skio-group-container", 5000).then(() => {
+    const sub = document.querySelector("skio-group-container:last-of-type")
+    console.log("sub", sub)
+    sub.addEventListener("click", function(e) {
+      setTimeout(function() {
+        if (sub.classList.contains("skio-group-container--selected"))
+          document.querySelector(".subscription-info").classList.add('show')
+      }, 1000)
+    });
+  }).catch((e) => {
+    console.log("error message")
+    console.error(e.message)
+  })
   </script>
   </body>
 </html>
