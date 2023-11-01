@@ -272,7 +272,7 @@
         "title": "Mini devices. Major results.",
         "subtitle": "",
         "txt": "",
-        "htmltxt": "<p>Good things come in small packages. Skip the clinic and target your skin’s unique problem areas with our Mini LED devices.  <\/p>\n<br>\n<p>We’ve paired our award-winning LED technology with skincare-infused hydrocolloid patches to help:<\/p>\n<br>\n<ul class=\"twocolumns\">\n<li>Diminish fine lines + wrinkles<\/li>\n<li>Brighten complexion<\/li>\n<li>Reduce breakouts<\/li>\n<li>Calm redness + inflammation<\/li>\n<li>Lighten the look of age spots<\/li>\n<li>Restore fatigued skin<\/li>\n<\/ul>",
+        "htmltxt": "<p>Good things come in small packages. Target your skin’s unique problem areas with our Mini LED devices paired with active rich Hydrocolloid Patches for <strong> a powerhouse combo<\/strong>.  <\/p>\n<br>\n\n<ul class=\"twocolumns\">\n<li>Diminish fine lines + wrinkles<\/li>\n<li>Brighten complexion<\/li>\n<li>Reduce breakouts<\/li>\n<li>Calm redness + inflammation<\/li>\n<li>Lighten the look of age spots<\/li>\n<li>Restore fatigued skin<\/li>\n<\/ul>",
         "btn_txt": "COMING SOON",
         "btn_link": "",
         "btn_type": "outline",
@@ -311,8 +311,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/11_6303a86f-e45a-4e07-95e5-a178dc4c610c.png",
             "title": "<p>Eye Brightener <strong>FOR DARK CIRCLES & WRINKLES<\/strong><\/p>",
-            "txt_info": "<p>Brighten dark circles, diminish under-eye bags, and smooth crow's feet.<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>amino acid-rich peptides<\/strong><\/em><em> and <\/em><em><strong>niacinamide<\/strong><\/em><em>.<\/em><\/p>",
-            "btn_txt": "LEARN MORE",
+            "txt_info": "<p>Brighten dark circles, diminish under-eye bags, and smooth crow's feet.<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>amino acid-rich peptides<\/strong><\/em><em> and <\/em><em><strong>niacinamide <\/strong><\/em><em>to help brighten and firm.<\/em><\/p>",
+            "btn_txt": "BRIGHTEN UNDER EYES",
             "btn_url": "shopify:\/\/products\/eye-brightener"
           }
         },
@@ -321,8 +321,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/2_b53a1814-20bd-4915-9c80-c2bf5366507c.png",
             "title": "<p>Blemish Eraser <strong>FOR ACNE & BREAKOUTS<\/strong><\/p>",
-            "txt_info": "<p>Fight acne, clear congested skin, and calm redness & inflammation associated with breakouts<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>salicylic acid<\/strong><\/em><em> and <\/em><em><strong>green tea<\/strong><\/em><em>.<\/em><\/p>",
-            "btn_txt": "LEARN MORE",
+            "txt_info": "<p>Fight acne, clear congested skin, and calm redness & inflammation associated with breakouts<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>salicylic acid<\/strong><\/em><em> and <\/em><em><strong>green tea <\/strong><\/em><em>to help unclog pores and soothe skin.<\/em><\/p>",
+            "btn_txt": "CLEAR BREAKOUTS",
             "btn_url": "shopify:\/\/products\/blemish-eraser"
           }
         },
@@ -331,8 +331,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/20_b955d802-6191-4a1c-b9c6-13b1e2d1f972.png",
             "title": "<p>Skin Corrector <strong>FOR FINE LINES & PIGMENTATION<\/strong><\/p>",
-            "txt_info": "<p>Reduce fine lines & inflammation while improving the appearance of age spots.<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>vitamin C<\/strong><\/em><em> and<\/em><em><strong> azelaic acid<\/strong><\/em><em>.<\/em><\/p>",
-            "btn_txt": "LEARN MORE",
+            "txt_info": "<p>Reduce fine lines & inflammation while improving the appearance of age spots.<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>vitamin C<\/strong><\/em><em> and<\/em><em><strong> azelaic acid <\/strong><\/em><em>to help brighten tone and lighten dark spots.<\/em><\/p>",
+            "btn_txt": "CORRECT PIGMENTATION",
             "btn_url": "shopify:\/\/products\/skin-corrector"
           }
         }
@@ -363,10 +363,10 @@
             "fullwidth_content": false,
             "heading_txt": "Get on our wavelength",
             "max_width": 530,
-            "txt": "<p>Our non-invasive Mini LED treatments mirror the clinically-proven red, near-infrared, and blue light technology found in our leading Contour and Clear masks. <br\/><br\/>Power up your Mini with skincare-infused hydrocolloid patches tailored for your specific skin concerns. Benefits include: <\/p>",
+            "txt": "<p>Our non-invasive Mini LED treatments mirror the clinically-proven red, near-infrared, and blue light technology found in our leading Contour and Clear masks. <br\/><br\/><strong>Power up your Mini with skincare-infused Hydrocolloid Patches <\/strong>tailored for your specific skin concerns. Benefits include: <\/p>",
             "txt_liquid": "",
             "step_heading": "",
-            "steps_captions": "Maximizes LED results\nKeeps your Mini right where you want it\nSoothing and safe for all skin types\nCan be used with or without LED",
+            "steps_captions": "Maximizes LED results\nKeeps your Mini in place with double-sided adhesive\nSoothing and safe for all skin types\nCan be used with or without LED",
             "steps_captions_2": "",
             "btn_txt": "COMING SOON",
             "btn_link": "",
@@ -462,6 +462,13 @@
             "answer": "Based on the world’s leading Omnilux Medical light therapy technology, our Mini line is an FDA cleared, flexible, portable, and affordable range of LED devices. The Mini devices use red, near infrared, and blue LEDs (depending on the product) to reduce fine lines and wrinkles, improve overall skin tone, firmness, acne, and skin health."
           }
         },
+        "4a0b0829-e932-42c2-bd24-fcde21db1fc1": {
+          "type": "question",
+          "settings": {
+            "title": "What are the Hydrocolloid Patches?",
+            "answer": "The Hydrocolloid Patches are infused with active rich ingredients specific to the device's treatment application (ie, salicylic acid for blemishes and amino acid-rich peptides for reducing fine lines and wrinkles). The Hydrocolloid Patches are sticky on both sides and adhere the Mini device to your skin for a hands-free treatment.​​​​​​​"
+          }
+        },
         "8b0b5ac6-fd86-4e43-b445-d1a7178e2c96": {
           "type": "question",
           "settings": {
@@ -475,20 +482,13 @@
             "title": "How do the Mini devices differ from each other?",
             "answer": "The Omnilux Mini Skin Corrector and Eye Brightener use red and near-infrared light to reduce fine line, wrinkles, and improve overall skin tone. They are shaped differently for different parts of your face.<p>\n<p>\n<br>\nThe Eye Brightener is shaped like a crescent to fit under and around the eye area, the Skin corrector is round to target areas like your cheek or your forehead.\n<p>\n<br>\nThe Blemish Eraser device uses red and blue light to treat acne breakouts. Although all Mini devices have red light, the light is used in combination with other wavelengths (near-infrared and blue) to target two completely different skin concerns.\n<p>\n<br>\nEach Mini's corresponding Hydrocolloid Patches contain skincare ingredients specific to the device's treatment application (ie, salicylic acid for blemishes and amino acid-rich peptides for reducing fine lines and wrinkles)."
           }
-        },
-        "4a0b0829-e932-42c2-bd24-fcde21db1fc1": {
-          "type": "question",
-          "settings": {
-            "title": "How many LEDs to the Mini devices have?",
-            "answer": "The Mini devices all contain 12 individual LEDs, encased in 6 dual chip bulbs."
-          }
         }
       },
       "block_order": [
         "adacb1e8-3991-49e1-9481-8007329f6771",
+        "4a0b0829-e932-42c2-bd24-fcde21db1fc1",
         "8b0b5ac6-fd86-4e43-b445-d1a7178e2c96",
-        "f87245ae-e774-4e5a-a64f-e7ae9dbd9eec",
-        "4a0b0829-e932-42c2-bd24-fcde21db1fc1"
+        "f87245ae-e774-4e5a-a64f-e7ae9dbd9eec"
       ],
       "settings": {
         "enable": true,

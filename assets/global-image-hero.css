@@ -32,6 +32,7 @@
 .image-hero .container-fluid .tallheight .swiper-slide {
   transition: 0.3s;
   overflow: hidden;
+  min-height: 430px !important;
 }
 
 .image-hero .container-fluid {
@@ -125,6 +126,12 @@
 .heading_txt span {
   font-style: italic;
   font-weight: 400;
+}
+
+@media (min-width: 770px) and (max-width: 1309px) {
+  .image-hero-desktop.tallheight .col-xl-4.col-lg-6.col-md-6.col-12.pe-0.ps-0 {
+    width: 50%;
+  } 
 }
 
 @media (min-width: 992px) {

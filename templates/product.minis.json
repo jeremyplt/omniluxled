@@ -218,7 +218,7 @@
             "enable_custom_tab_5": "{{product.metafields.custom.enable_tab_5}}",
             "tab_5_title": "{{product.metafields.custom.tab_title_5}}",
             "tab_5_content": "{{product.metafields.custom.tab_description_5}}",
-            "enable_custom_tab_6": "{{product.metafields.custom.enable_tab_6}}",
+            "enable_custom_tab_6": "{{product.metafields.custom.enable_custom_tab_6}}",
             "tab_6_title": "{{product.metafields.custom.tab_title_6}}",
             "tab_6_content": "{{product.metafields.custom.tab_description_6}}"
           }

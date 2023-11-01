@@ -327,52 +327,6 @@
         "border-bottom": false
       }
     },
-    "3eb70687-8e33-4fdb-aa21-d3484b92c23b": {
-      "type": "hoox-how-to-with-button",
-      "blocks": {
-        "ecacf6c8-93d7-4ffb-8290-4334c6ac12ae": {
-          "type": "usp",
-          "settings": {
-            "hoox_how_to_image": "{{product.metafields.custom.hoox_howto_props_1_image}}",
-            "hoox_how_to_text": "{{product.metafields.custom.hoox_howto_props_1_text}}"
-          }
-        },
-        "02843589-3ac1-4f03-92ec-e812d0d063ea": {
-          "type": "usp",
-          "settings": {
-            "hoox_how_to_image": "{{product.metafields.custom.hoox_howto_props_2_image}}",
-            "hoox_how_to_text": "{{product.metafields.custom.hoox_howto_props_2_text}}"
-          }
-        },
-        "7ba6139d-4eb3-4a64-a1e4-87bdfd40e43e": {
-          "type": "usp",
-          "settings": {
-            "hoox_how_to_image": "{{product.metafields.custom.hoox_howto_props_3_image}}",
-            "hoox_how_to_text": "{{product.metafields.custom.hoox_howto_props_3_text}}"
-          }
-        },
-        "8b69d5d8-397d-48eb-b189-447ff24246b1": {
-          "type": "usp",
-          "settings": {
-            "hoox_how_to_image": "{{product.metafields.custom.hoox_howto_props_4_image}}",
-            "hoox_how_to_text": "{{product.metafields.custom.hoox_howto_props_4_text}}"
-          }
-        }
-      },
-      "block_order": [
-        "ecacf6c8-93d7-4ffb-8290-4334c6ac12ae",
-        "02843589-3ac1-4f03-92ec-e812d0d063ea",
-        "7ba6139d-4eb3-4a64-a1e4-87bdfd40e43e",
-        "8b69d5d8-397d-48eb-b189-447ff24246b1"
-      ],
-      "settings": {
-        "enable_section": "{{product.metafields.custom.hoox_howto_enable}}",
-        "hoox_how_to_title": "{{product.metafields.custom.hoox_howto_title}}",
-        "hoox_how_to_subtitle": "{{product.metafields.custom.hoox_howto_subtitle}}",
-        "btn_txt_watch": "{{product.metafields.custom.iwt_watch_video_text_1}}",
-        "watch_video_id": "{{product.metafields.custom.iwt_video_id}}"
-      }
-    },
     "8d4dfa60-174c-4b28-9812-ab31ef599696": {
       "type": "global-reviews-slider",
       "blocks": {
@@ -659,6 +613,52 @@
         "video_alignment": "justify-content-start"
       }
     },
+    "3664f8df-f79f-42f9-928b-38575eaf0853": {
+      "type": "hoox-how-to-with-button",
+      "blocks": {
+        "dfe57705-b7e2-41a0-88db-62e4d37f2db3": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "{{product.metafields.custom.hoox_howto_props_1_image}}",
+            "hoox_how_to_text": "{{product.metafields.custom.hoox_howto_props_1_text}}"
+          }
+        },
+        "6f57ac7a-637d-4996-bce3-4b712f1c3be0": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "{{product.metafields.custom.hoox_howto_props_2_image}}",
+            "hoox_how_to_text": "{{product.metafields.custom.hoox_howto_props_2_text}}"
+          }
+        },
+        "a24dd758-cae1-4dc2-8508-672639ceeb65": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "{{product.metafields.custom.hoox_howto_props_3_image}}",
+            "hoox_how_to_text": "{{product.metafields.custom.hoox_howto_props_3_text}}"
+          }
+        },
+        "89eed625-9d76-4823-9b32-87e170c8287a": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "{{product.metafields.custom.hoox_howto_props_4_image}}",
+            "hoox_how_to_text": "{{product.metafields.custom.hoox_howto_props_4_text}}"
+          }
+        }
+      },
+      "block_order": [
+        "dfe57705-b7e2-41a0-88db-62e4d37f2db3",
+        "6f57ac7a-637d-4996-bce3-4b712f1c3be0",
+        "a24dd758-cae1-4dc2-8508-672639ceeb65",
+        "89eed625-9d76-4823-9b32-87e170c8287a"
+      ],
+      "settings": {
+        "enable_section": "{{product.metafields.custom.hoox_howto_enable}}",
+        "hoox_how_to_title": "{{product.metafields.custom.hoox_howto_title}}",
+        "hoox_how_to_subtitle": "{{product.metafields.custom.hoox_howto_subtitle}}",
+        "btn_txt_watch": "{{product.metafields.custom.hoox_howto_video_button_text}}",
+        "watch_video_id": "{{product.metafields.custom.hoox_howto_video_id}}"
+      }
+    },
     "d98aede5-e4b5-4863-b5ad-7c8b265e3e58": {
       "type": "product-image-with-text",
       "blocks": {
@@ -694,6 +694,7 @@
       "block_order": [
         "9597e586-edcd-4e1d-b338-239347f76a05"
       ],
+      "disabled": true,
       "settings": {
         "display_for_this_product": "{{ product.metafields['custom']['iwt_enabled'] }}",
         "fluid_layout": true,
@@ -1062,11 +1063,11 @@
     "d84aa67d-fef0-442d-8364-790f28934d4d",
     "main",
     "8b7008db-ace8-41cc-9cda-be64cf66dd7e",
-    "3eb70687-8e33-4fdb-aa21-d3484b92c23b",
     "8d4dfa60-174c-4b28-9812-ab31ef599696",
     "9954540e-30e3-44b7-ab1d-975166604760",
     "ee32d731-64d8-43e4-a200-3aad66c37be5",
     "fa9b8a1b-146c-4f3f-8be9-721ab7ff5c69",
+    "3664f8df-f79f-42f9-928b-38575eaf0853",
     "d98aede5-e4b5-4863-b5ad-7c8b265e3e58",
     "e74cca30-9a8e-4f0e-8e87-cac411799484",
     "97a2b9bb-60a0-4ea3-9483-40b6b6ca80f1",
