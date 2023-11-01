@@ -161,18 +161,16 @@ This is another test
                                                                 </div>
                                                             </div>
                                                             <div class="text-end cart-total-price ps-3 fw-normal">
-
                                                                 {% if item.variant.price < item.variant.compare_at_price %}
                                                                     <span class="item__compare-at-price">
-                                                                    {{ item.variant.compare_at_price | times: item.quantity | money }}
+                                                                        {{ item.variant.compare_at_price | times: item.quantity | money }}
                                                                     </span>
-
-                                                                {% endif %}
+                                                                {% endif %} 
                                                                 <span {% if item.variant.price < item.variant.compare_at_price %}class="item__price--sale"{% endif%}>
                                                                     {% if item.properties['promo_product'] or item.line_price == 0 %}
                                                                         <span class="m-0 p-0">{{ 'templates.cart.free' | t }}</span>
                                                                     {% else %}
-                                                                        <span class="price m-0 p-0"> {{ item.line_price | money }} </span>
+                                                                        <span class="item-price m-0 p-0"> {{ item.line_price | money }} </span>
                                                                     {% endif %}
                                                                 </span>
                                                             </div>
