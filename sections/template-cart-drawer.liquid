@@ -172,7 +172,7 @@ This is another test
                                                                     {% if item.properties['promo_product'] or item.line_price == 0 %}
                                                                         <span class="m-0 p-0">{{ 'templates.cart.free' | t }}</span>
                                                                     {% else %}
-                                                                        <span class="price m-0 p-0"> {{ item.line_price | money }} </span>
+                                                                        <span class="item-price m-0 p-0"> {{ item.line_price | money }} </span>
                                                                     {% endif %}
                                                                 </span>
                                                             </div>
