@@ -73,3 +73,13 @@ menuLinks.forEach(menuLink => {
 
 const inputElement = document.querySelector('.docapp-coupon-input--input');
 inputElement.setAttribute('placeholder', '+ ENTER DISCOUNT CODE');
+
+
+window.addEventListener('skio::update-selling-plan', function(e) { 
+    console.log(e) 
+    if (e.detail.sellingPlan) {
+        document.querySelector(".subscription-info").classList.add("show")
+    } else {
+        document.querySelector(".subscription-info").classList.remove("show")
+    }
+})
