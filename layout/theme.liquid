@@ -497,7 +497,14 @@ waitForElement(".cbb-frequently-bought-form", 5000)
     console.error(e.message)
   })
 
-  
+  window.addEventListener('skio::update-selling-plan', function(e) { 
+    console.log(e) 
+    if (e.detail.sellingPlan) {
+        document.querySelector(".subscription-info").classList.add("show")
+    } else {
+        document.querySelector(".subscription-info").classList.remove("show")
+    }
+})
   </script>
   </body>
 </html>
