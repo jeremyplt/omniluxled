@@ -174,18 +174,17 @@ class AjaxCart extends HTMLElement {
         destinationTitle.innerHTML = sourceTitle.innerHTML;
         destination.innerHTML = source.innerHTML;
 
-        console.log("source.children.length", source.children.length)
 
         if (source.children.length == 0) {
-          document.querySelector(".cart-upsell-section").style.display = "none";
+          document.querySelector(".cart-upsell-title.upsell-test-variant").style.display = "none";
         } else {
-          document.querySelector(".cart-upsell-section").style.display = "block";
+          document.querySelector(".cart-upsell-title.upsell-test-variant").style.display = "block";
         }
 
         this.addEventListenerUpsells()
     })
     .catch(error => console.error(error));
-}
+  }
 
   /**
    * Open Cart drawer and add focus to drawer container
@@ -341,10 +340,10 @@ class AjaxCart extends HTMLElement {
               window.globalVariables.money_format
             );
   
-            if(this.taxPercent > 0)
-              element.getElementsByClassName("price")[0].innerHTML = formatMoney + " Incl. tax"
-            else
-              element.getElementsByClassName("price")[0].innerHTML = formatMoney
+            // if(this.taxPercent > 0)
+            //   element.getElementsByClassName("price")[0].innerHTML = formatMoney + " Incl. tax"
+            // else
+            //   element.getElementsByClassName("price")[0].innerHTML = formatMoney
           }          
         }
       });

@@ -23,13 +23,17 @@
                         {% liquid 
                             assign is_in_cart = false
                             for item in cart.items
-                                if item.product.id == upsellProduct.id
+                                if item.title contains "Mask"
+                                    if item.variant_id == upsellProduct.variants[1].id
+                                        assign is_in_cart = true
+                                    endif
+                                elsif item.product.id == upsellProduct.id
                                     assign is_in_cart = true
                                 endif
                             endfor
                         %}
 
-                        {% unless is_in_cart and upsellProduct.title != "Omnilux Hydrogel Facial Mask" %}
+                        {% unless is_in_cart %}
                             {% liquid 
                                 assign products_to_remove = ""
                                 for product in upsellProduct.metafields.custom.products_to_remove.value
@@ -143,6 +147,12 @@
                                                                             assign upgrade_product = true
                                                                         endif
                                                                     endfor
+                                                                endfor
+
+                                                                for item in cart.items
+                                                                    if item.product.title == upsellProduct.title
+                                                                        assign upgrade_product = true
+                                                                    endif
                                                                 endfor
                                                             %}
                                                             
