@@ -111,7 +111,7 @@
         "heading": "",
         "enable_accordion_btn": true,
         "btn1_text": "GENERAL FAQS",
-        "btn1_link": "",
+        "btn1_link": "shopify:\/\/pages\/help-center",
         "button1_disabled": false,
         "btn2_text": "PRODUCT FAQS & GUIDES",
         "btn2_link": "shopify:\/\/pages\/help-center-products",
