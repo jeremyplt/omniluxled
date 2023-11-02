@@ -1321,6 +1321,7 @@
     },
     "4f65bf04-3141-4ace-b69f-74d2f7c94563": {
       "type": "info-text",
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "img_text1": "<p>*Applies to Ground shipping rates only. Excludes Hawaii, Alaska, New Zealand, Bosnia & Herzegovina, Iceland, Latvia, Lithuania, and Northern Ireland<\/p>",

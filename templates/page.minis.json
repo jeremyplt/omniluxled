@@ -128,6 +128,27 @@
         "css_class": ""
       }
     },
+    "6fc4587d-5859-456f-a7e6-0848f1004c74": {
+      "type": "global-featured-collection",
+      "settings": {
+        "fluid_layout": false,
+        "nav_dots": false,
+        "nav_arrows": false,
+        "nav_arrows_outside": false,
+        "heading_txt": "Your favorites",
+        "lead_txt": "",
+        "home_featured_product": "eye-brightener",
+        "featured_product_1": "blemish-eraser",
+        "featured_product_2": "skin-corrector",
+        "section_bg_color": "#ffffff",
+        "section_txt_color": "#000000",
+        "btn_text": "COMING SOON",
+        "btn_url": "",
+        "btn_type": "",
+        "btn_variant": "primary",
+        "btn_size": ""
+      }
+    },
     "0815808e-a8b7-4e1d-b348-913b81d5e8b1": {
       "type": "global-features-grid",
       "blocks": {
@@ -272,7 +293,7 @@
         "title": "Mini devices. Major results.",
         "subtitle": "",
         "txt": "",
-        "htmltxt": "<p>Good things come in small packages. Target your skin’s unique problem areas with our Mini LED devices paired with active rich Hydrocolloid Patches for <strong> a powerhouse combo<\/strong>.  <\/p>\n<br>\n\n<ul class=\"twocolumns\">\n<li>Diminish fine lines + wrinkles<\/li>\n<li>Brighten complexion<\/li>\n<li>Reduce breakouts<\/li>\n<li>Calm redness + inflammation<\/li>\n<li>Lighten the look of age spots<\/li>\n<li>Restore fatigued skin<\/li>\n<\/ul>",
+        "htmltxt": "<p>Good things come in small packages. Target your skin’s unique problem areas with our Mini LED devices paired with active-rich Hydrocolloid Patches for <strong> a powerhouse combo<\/strong>.  <\/p>\n<br>\n\n<ul class=\"twocolumns\">\n<li>Diminish fine lines + wrinkles<\/li>\n<li>Brighten complexion<\/li>\n<li>Reduce breakouts<\/li>\n<li>Calm redness + inflammation<\/li>\n<li>Lighten the look of age spots<\/li>\n<li>Restore fatigued skin<\/li>\n<\/ul>",
         "btn_txt": "COMING SOON",
         "btn_link": "",
         "btn_type": "outline",
@@ -321,7 +342,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/2_b53a1814-20bd-4915-9c80-c2bf5366507c.png",
             "title": "<p>Blemish Eraser <strong>FOR ACNE & BREAKOUTS<\/strong><\/p>",
-            "txt_info": "<p>Fight acne, clear congested skin, and calm redness & inflammation associated with breakouts<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>salicylic acid<\/strong><\/em><em> and <\/em><em><strong>green tea <\/strong><\/em><em>to help unclog pores and soothe skin.<\/em><\/p>",
+            "txt_info": "<p>Fight acne, clear congested skin, and calm redness & inflammation associated with breakouts.<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>salicylic acid<\/strong><\/em><em> and <\/em><em><strong>green tea <\/strong><\/em><em>to help unclog pores and soothe skin.<\/em><\/p>",
             "btn_txt": "CLEAR BREAKOUTS",
             "btn_url": "shopify:\/\/products\/blemish-eraser"
           }
@@ -352,6 +373,52 @@
         "btn_type": "outline",
         "btn_variant": "primary",
         "btn_size": ""
+      }
+    },
+    "54ab777a-fa8a-4ac7-968b-1fa162f1a4f8": {
+      "type": "hoox-how-to-with-button",
+      "blocks": {
+        "4a259a1e-0f2d-452b-8a1a-9447346c6c89": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_4.png?v=1698705996",
+            "hoox_how_to_text": "Charge the device by using the supplied charging cable."
+          }
+        },
+        "eb61e78f-17df-46d7-99aa-48ea6af34bf6": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_5.png?v=1698705995",
+            "hoox_how_to_text": "Peel back the hydrocolloid patch adhesive side 1 (marked with a device icon) and adhere to the device."
+          }
+        },
+        "48a8a713-dd91-4980-a411-9e5a0d2c0353": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_6.png?v=1698705994",
+            "hoox_how_to_text": "Peel back adhesive side 2 (marked with a face icon) and place the device directly to the skin where desired."
+          }
+        },
+        "a5f4387f-5244-4ede-9948-e3837ac4aec1": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_7.png?v=1698705997",
+            "hoox_how_to_text": "Press and hold the power button to turn on the device. Enjoy the glow!"
+          }
+        }
+      },
+      "block_order": [
+        "4a259a1e-0f2d-452b-8a1a-9447346c6c89",
+        "eb61e78f-17df-46d7-99aa-48ea6af34bf6",
+        "48a8a713-dd91-4980-a411-9e5a0d2c0353",
+        "a5f4387f-5244-4ede-9948-e3837ac4aec1"
+      ],
+      "settings": {
+        "enable_section": "true",
+        "hoox_how_to_title": "How-to use:",
+        "hoox_how_to_subtitle": "Unlock flawless skin with three to five 10-minute treatments per week.",
+        "btn_txt_watch": "Watch how-to video",
+        "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4a4db0f36df34763910ddb7d3c7c901d.mp4"
       }
     },
     "473576ad-4bef-4b6a-af7e-fbea447f4426": {
@@ -631,10 +698,12 @@
     "main",
     "2cb12f0d-e933-4333-b50d-2dff62cf6fcd",
     "fc04cf60-e924-4cb9-a7f3-6aa42663946e",
+    "6fc4587d-5859-456f-a7e6-0848f1004c74",
     "0815808e-a8b7-4e1d-b348-913b81d5e8b1",
     "23f2fda8-e8a7-4b2d-b176-998ae5de965a",
     "e38be45f-cef3-48f1-88e5-0e9ae227927c",
     "98ce97d7-15c6-46d0-b111-c869d2a20b0b",
+    "54ab777a-fa8a-4ac7-968b-1fa162f1a4f8",
     "473576ad-4bef-4b6a-af7e-fbea447f4426",
     "dbeb5f98-6cbf-4f80-b64a-9ec408025ced",
     "06c6cabf-468b-4fc1-9e28-e9b55dcc1fac",
