@@ -73,3 +73,6 @@ menuLinks.forEach(menuLink => {
 
 const inputElement = document.querySelector('.docapp-coupon-input--input');
 inputElement.setAttribute('placeholder', '+ ENTER DISCOUNT CODE');
+
+
+// THIS FILE IS NOT USED ANYMORE
