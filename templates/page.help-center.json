@@ -323,7 +323,10 @@
         "button1_disabled": true,
         "btn2_text": "PRODUCT FAQS & GUIDES",
         "btn2_link": "shopify:\/\/pages\/help-center-products",
-        "button2_disabled": false
+        "button2_disabled": false,
+        "btn3_text": "SUBSCRIPTION FAQS",
+        "btn3_link": "shopify:\/\/pages\/help-center-subscription",
+        "button3_disabled": false
       }
     }
   },
