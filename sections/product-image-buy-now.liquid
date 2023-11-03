@@ -43,7 +43,10 @@
                         %}
                         {{ all_products[section.settings.buynow_product].object }}
                         
-                    </div>  
+                    </div>
+                    <div class="subscription-info">
+                      {{ section.settings.info }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,6 +59,11 @@
   "tag": "section",
   "class": "spaced-section",
   "settings": [
+    {
+      "type": "richtext",
+      "id": "info",
+      "label": "Info"
+    },
     {
       "type": "liquid",
       "id": "display_for_this_product",
