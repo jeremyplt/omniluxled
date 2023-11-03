@@ -130,6 +130,7 @@
     },
     "6fc4587d-5859-456f-a7e6-0848f1004c74": {
       "type": "global-featured-collection",
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "nav_dots": false,
@@ -334,7 +335,7 @@
             "title": "<p>Eye Brightener <strong>FOR DARK CIRCLES & WRINKLES<\/strong><\/p>",
             "txt_info": "<p>Brighten dark circles, diminish under-eye bags, and smooth crow's feet.<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>amino acid-rich peptides<\/strong><\/em><em> and <\/em><em><strong>niacinamide <\/strong><\/em><em>to help brighten and firm.<\/em><\/p>",
             "btn_txt": "BRIGHTEN UNDER EYES",
-            "btn_url": "shopify:\/\/products\/eye-brightener"
+            "btn_url": ""
           }
         },
         "59a2a5b7-b6f5-4566-8ff2-3c5e06fec563": {
@@ -344,7 +345,7 @@
             "title": "<p>Blemish Eraser <strong>FOR ACNE & BREAKOUTS<\/strong><\/p>",
             "txt_info": "<p>Fight acne, clear congested skin, and calm redness & inflammation associated with breakouts.<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>salicylic acid<\/strong><\/em><em> and <\/em><em><strong>green tea <\/strong><\/em><em>to help unclog pores and soothe skin.<\/em><\/p>",
             "btn_txt": "CLEAR BREAKOUTS",
-            "btn_url": "shopify:\/\/products\/blemish-eraser"
+            "btn_url": ""
           }
         },
         "0771fb05-3ea9-446b-b6e9-deb71688b602": {
@@ -354,7 +355,7 @@
             "title": "<p>Skin Corrector <strong>FOR FINE LINES & PIGMENTATION<\/strong><\/p>",
             "txt_info": "<p>Reduce fine lines & inflammation while improving the appearance of age spots.<br\/><br\/><em>Includes hydrocolloid patches infused with <\/em><em><strong>vitamin C<\/strong><\/em><em> and<\/em><em><strong> azelaic acid <\/strong><\/em><em>to help brighten tone and lighten dark spots.<\/em><\/p>",
             "btn_txt": "CORRECT PIGMENTATION",
-            "btn_url": "shopify:\/\/products\/skin-corrector"
+            "btn_url": ""
           }
         }
       },

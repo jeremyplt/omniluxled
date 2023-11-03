@@ -21,11 +21,10 @@ tab == 'hydrocolloid-refill-patch-3'
 -%}
   {%- assign tab = 'minis' -%}
 {%- endif -%}
-
 {% comment %} {% if tab != 'omnilux-contour-face' and tab != 'omnilux-contour-neck-decollete' and tab != 'omnilux-contour-glove' and tab != 'omnilux-clear' and tab != 'omnilux-men' %} 
   {%- assign tab = 'skincare' -%}
 {% endif %} {% endcomment %}
-<section class="pb-lg-10 pb-7 overflow-hidden" data-section-id="{{ section.id }}">
+<section class="pb-lg-10 pb-7 overflow-hidden" data-section-id="{{ section.id }}" data-tab="{{ tab }}">
   <div class="border-bottom">
     <span class="account-fair-tone gradient-fair-tone position-absolute w-100 start-0 top-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
     </span>
