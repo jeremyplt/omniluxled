@@ -12,7 +12,7 @@
     "settings": [
       {
         "type": "header",
-        "content": "SKIO",
+        "content": "SKIO"
       },
       {
         "type": "checkbox",
