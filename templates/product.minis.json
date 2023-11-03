@@ -1132,6 +1132,7 @@
     "dbd05fbc-dda9-418a-80a7-141ddac090f5": {
       "type": "product-image-buy-now",
       "settings": {
+        "info": "<ul><li>Subscribe to recurring Hydrocolloid Patch Refills so you never miss a treatment<\/li><li>15% off every subscription order<\/li><li>Free shipping on every subscription order<\/li><li>First access to new product offerings<\/li><li>Flexible subscription plan options. Auto-delivery every 4, 6, or 8 weeks<\/li><li>Flexible subscription plan options<\/li><li><strong>Initial order includes: 1 [product title] LED device + 14 Hydrocolloid Patches<\/strong><\/li><li><strong>Every recurring subscription order includes 20 Hydrocolloid Refill Patches<\/strong><\/li><\/ul>",
         "display_for_this_product": "{{ product.metafields['custom']['image_prod_enable'] }}",
         "fluid_layout": false,
         "heading_txt": "{{ product.metafields['custom']['image_prod_heading'] }}",
