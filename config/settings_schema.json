@@ -8,6 +8,21 @@
     "theme_support_url": "https:\/\/praella.com"
   },
   {
+    "name": "Apps",
+    "settings": [
+      {
+        "type": "header",
+        "content": "SKIO",
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_skio",
+        "label": "Enable SKIO",
+        "default": false
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {

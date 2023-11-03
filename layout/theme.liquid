@@ -71,8 +71,8 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
     <link rel="preload" as="script" href="{{ 'global.js' | asset_url }}"> {% endcomment %}
     {%- render 'styles-tags' -%}
 
-    {% if product.handle == "omnilux-contour-face" %}
-      <style>
+    <style>
+      {% if product.handle == "omnilux-contour-face" %}
         html .before-after-scroller-contour {
           display: block !important;
         }
@@ -80,8 +80,14 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
         html #section-before-after {
           display: none !important;
         }
-      </style>
-    {% endif %}
+      {% endif %}
+
+      {% unless settings.enable_skio %}
+        html skio-plan-picker {
+          display: none !important;
+        }
+      {% endunless %}
+    </style>
 
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
