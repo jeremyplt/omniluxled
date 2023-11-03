@@ -1,5 +1,6 @@
 {
   "current": {
+    "enable_skio": true,
     "link_hover_color": "#000000",
     "color_border": "#000000",
     "color_primary": "#000000",

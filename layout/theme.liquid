@@ -83,8 +83,8 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
     <link rel="preload" as="script" href="{{ 'global.js' | asset_url }}"> {% endcomment %}
     {%- render 'styles-tags' -%}
 
-    {% if product.handle == "omnilux-contour-face" %}
-      <style>
+    <style>
+      {% if product.handle == "omnilux-contour-face" %}
         html .before-after-scroller-contour {
           display: block !important;
         }
@@ -92,8 +92,14 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
         html #section-before-after {
           display: none !important;
         }
-      </style>
-    {% endif %}
+      {% endif %}
+
+      {% unless settings.enable_skio %}
+        html skio-plan-picker {
+          display: none !important;
+        }
+      {% endunless %}
+    </style>
 
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -508,6 +514,15 @@ waitForElement(".cbb-frequently-bought-form", 5000)
     console.log("error message")
     console.error(e.message)
   })
+
+  window.addEventListener('skio::update-selling-plan', function(e) { 
+    console.log(e) 
+    if (e.detail.sellingPlan) {
+        document.querySelector(".subscription-info").classList.add("show")
+    } else {
+        document.querySelector(".subscription-info").classList.remove("show")
+    }
+})
   </script>
   </body>
 </html>

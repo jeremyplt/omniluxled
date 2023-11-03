@@ -10,12 +10,21 @@
                 {% endif %}
                 {% if section.settings.enable_accordion_btn %}
                     <div class="text-center mb-6 mb-lg-8">
-                        <a href="{{ section.settings.btn1_link }}" class="btn btn-outline-dark {% if section.settings.button1_disabled %}disabled{% endif %}">
-                            {{ section.settings.btn1_text }}
-                        </a>
-                        <a href="{{ section.settings.btn2_link }}" class="mt-4 mt-sm-0 btn btn-outline-dark ms-sm-4{% if section.settings.button2_disabled %}disabled{% endif %}">
-                            {{ section.settings.btn2_text }}
-                        </a>
+                        {% if section.settings.btn1_text != blank %}
+                          <a href="{{ section.settings.btn1_link }}" class="btn btn-outline-dark {% if section.settings.button1_disabled %}disabled{% endif %}">
+                              {{ section.settings.btn1_text }}
+                          </a>
+                        {% endif %}
+                        {% if section.settings.btn2_text != blank %}
+                          <a href="{{ section.settings.btn2_link }}" class="mt-4 mt-sm-0 btn btn-outline-dark ms-sm-4{% if section.settings.button2_disabled %} disabled{% endif %}">
+                              {{ section.settings.btn2_text }}
+                          </a>
+                        {% endif %}
+                        {% if section.settings.btn3_text != blank %}
+                          <a href="{{ section.settings.btn3_link }}" class="mt-4 mt-sm-0 btn btn-outline-dark ms-sm-4{% if section.settings.button3_disabled %} disabled{% endif %}">
+                            {{ section.settings.btn3_text }}
+                          </a>
+                        {% endif %}
                     </div>
                 {% endif %}
                 <custom-accordion {{ block.shopify_attributes }} data-accordionType="single">
@@ -121,6 +130,22 @@ accordions.forEach((accordion) => {
       "type": "checkbox",
       "id": "button2_disabled",
       "label": "Button 2 disabled ?",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "btn3_text",
+      "label": "Button 3 text"
+    },
+    {
+      "type": "url",
+      "id": "btn3_link",
+      "label": "Button 3 link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button3_disabled",
+      "label": "Button 3 disabled ?",
       "default": false
     }
   ],

@@ -26,8 +26,19 @@
   <div>
     {% if eligibleBar > 0 %}
     {% assign freeShippingBar = cartSubTotal | divided_by: settings.free_shipping_value | round: 5 %}
+    {% liquid 
+        assign has_subscription = false
+        unless localization.country != 'United States'
+            for item in cart.items
+                if item.selling_plan_allocation
+                    assign has_subscription = true
+                endif
+            endfor
+        endunless
+    %}
+
     <div class="delivery-shipping d-flex mb-3 pt-3">
-        {%- if cartSubTotal > eligibleBar -%}
+        {%- if cartSubTotal > eligibleBar or has_subscription -%}
             <p class="mb-0 font-size-md fw-normal" style="line-height: 1.214285714285714;">{{ settings.free_shipping_txt }}</p>
         {%- else -%}
             {%- assign leftAmount = eligibleBar | minus: cartSubTotal | money -%}
@@ -36,7 +47,7 @@
         {%- endif -%}
     </div>
     <div class="progress" style="background-color: #00000014;">
-        <div class="progress-bar d-block" style="width:{{ freeShippingBar }}%;" role="progressbar"></div>
+        <div class="progress-bar d-block" style="{% if has_subscription %}width: 100%;{% else %}width:{{ freeShippingBar }}%;{% endif %}" role="progressbar"></div>
     </div>
 {% endif %}
 </div>

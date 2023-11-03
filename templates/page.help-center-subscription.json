@@ -1,0 +1,129 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-page",
+      "settings": {
+      }
+    },
+    "86f1dff3-88ca-43dc-a893-db0ce7e17342": {
+      "type": "global-accrodian",
+      "blocks": {
+        "d5969b47-709a-454d-822b-8d4947b2723f": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How do subscriptions work?",
+            "answer": "<p>If you choose to “Subscribe & Save” (versus making a one-time purchase), your order will be set up to renew on a recurring basis. Please select your desired subscription interval (4, 6 or 8 weeks) to select how often you’d like to receive your product(s). <br\/><br\/>*Please note: When you “Subscribe & Save” on any Omnilux Mini product, you will receive the Hydrocolloid Patch Refills for your specific device(s) on a recurring basis. The device is not a recurring shipment.<br\/><\/p>"
+          }
+        },
+        "bb7b79a4-9c90-4bca-9ff5-07c36612b02e": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How often can I get my Subscribe & Save products shipped to me?",
+            "answer": "<p>The choice is yours! You can adjust your auto-delivery frequency to suit your individual usage. We will ship your product(s) every 4, 6 or 8 weeks unless you change your shipment interval.<\/p>"
+          }
+        },
+        "4d6a0abd-8495-4322-b28f-293974983fc7": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How can I modify my order?",
+            "answer": "<p>If your order has not yet been billed and you’d like to make changes such as updating the shipment interval, adding more product, canceling, skipping, or pausing any future orders, you can do so by logging into your account.<br\/><br\/>Please note, if your order is shipping within 3 days, you may not be able to make changes or cancel that shipment. Please contact us at info@omniluxled.com for more information.<br\/><br\/><\/p>"
+          }
+        },
+        "cd81d8c9-2a15-4313-b177-a4296dc685d2": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "When will my shipment arrive?",
+            "answer": "<p>Your first shipment will process like any normal order placed through our website. It typically takes 2-3 business days for fulfillment. All future subscription orders will ship out 4, 6 or 8 weeks after your first order ships depending on the frequency that you select when checking out.<\/p>"
+          }
+        },
+        "736d8bc1-539f-4d36-831e-2116a3c0c672": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Can I add a one-time product to my order? How?",
+            "answer": "<p>Once you’ve logged into your subscription portal, you’ll be able to see a list of eligible products you can add as a one-time product to your subscription.<\/p>"
+          }
+        },
+        "fdb48311-5ba2-4d00-8adb-46851cbe5d79": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "What products are included in the subscription program?",
+            "answer": "<p>Any of our topical skincare products (including the Hydrogel Masks) and Omnilux Mini devices + Hydrocolloid Patches offer you the ability to subscribe and save. <br\/><br\/>Products that don’t offer a “Subscribe & Save” option are not eligible for subscription. <br\/><br\/>*Please note: When you “Subscribe & Save” on any Omnilux Mini device, you will receive the Hydrocolloid Patch Refills for your specific device(s) on a recurring basis. The device is not a recurring shipment.<br\/><\/p>"
+          }
+        },
+        "604bde68-6048-4abc-8d62-675e724e5cba": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How do I update my subscription details, such as my address or payment information?",
+            "answer": "<p>Navigate to your subscription portal and click “shipping and billing” or hit “more” and “change payment method”.<br\/><\/p>"
+          }
+        },
+        "23858684-f557-4187-858e-31347262985b": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "How do I track my shipments?",
+            "answer": "<p>Once you complete your purchase, you’ll receive an order confirmation email. In the order confirmation, you’ll be giving a link to track your order. <br\/><\/p>"
+          }
+        },
+        "750a2696-37ce-46b5-8277-7e8969a2b449": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Can I choose the delivery date?",
+            "answer": "<p>Your order delivery date is based on the time the order is placed. For example, if your order is placed on the 1st of the month, you’ll receive your shipment within the interval time you selected starting on the 1st of the month. If you wish to modify your shipment date, reach out to us and we will work with you to adjust the date.<br\/><\/p>"
+          }
+        },
+        "b559bbd8-4e03-4086-ae42-847e213fe18d": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Can I gift a subscription to someone else?",
+            "answer": "<p>Yes! We offer our subscribers the ability to gift their subscriptions if they wish to. This feature can be found within the skip function in the subscription portal.<br\/><\/p>"
+          }
+        },
+        "5c4284ce-823a-407e-802a-65869976171c": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Is there a minimum subscription period?",
+            "answer": "<p>No. We want our customers to be confident with their purchases. If you aren’t completely satisfied with your product, you can cancel your subscription at any time.<br\/><\/p>"
+          }
+        },
+        "662c4997-3a64-46dc-95dd-f70de5650e60": {
+          "type": "logowidthtext",
+          "settings": {
+            "title": "Can I pause my subscription if I go on vacation?",
+            "answer": "<p>Yes. You can pause or skip your subscription within your subscription portal.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5969b47-709a-454d-822b-8d4947b2723f",
+        "bb7b79a4-9c90-4bca-9ff5-07c36612b02e",
+        "4d6a0abd-8495-4322-b28f-293974983fc7",
+        "cd81d8c9-2a15-4313-b177-a4296dc685d2",
+        "736d8bc1-539f-4d36-831e-2116a3c0c672",
+        "fdb48311-5ba2-4d00-8adb-46851cbe5d79",
+        "604bde68-6048-4abc-8d62-675e724e5cba",
+        "23858684-f557-4187-858e-31347262985b",
+        "750a2696-37ce-46b5-8277-7e8969a2b449",
+        "b559bbd8-4e03-4086-ae42-847e213fe18d",
+        "5c4284ce-823a-407e-802a-65869976171c",
+        "662c4997-3a64-46dc-95dd-f70de5650e60"
+      ],
+      "settings": {
+        "heading": "",
+        "enable_accordion_btn": true,
+        "btn1_text": "GENERAL FAQS",
+        "btn1_link": "shopify:\/\/pages\/help-center",
+        "button1_disabled": false,
+        "btn2_text": "PRODUCT FAQS & GUIDES",
+        "btn2_link": "shopify:\/\/pages\/help-center-products",
+        "button2_disabled": false,
+        "btn3_text": "SUBSCRIPTION FAQS",
+        "btn3_link": "shopify:\/\/pages\/help-center-subscription",
+        "button3_disabled": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "86f1dff3-88ca-43dc-a893-db0ce7e17342"
+  ]
+}
