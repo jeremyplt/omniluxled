@@ -158,7 +158,10 @@
               "sub_menu_product_2": "omnilux-men",
               "sub_menu_product_3": "omnilux-clear",
               "sub_menu_product_4": "omnilux-contour-neck-decollete",
-              "sub_menu_product_5": "omnilux-contour-glove"
+              "sub_menu_product_5": "omnilux-contour-glove",
+              "sub_menu_product_6": "",
+              "sub_menu_product_7": "",
+              "sub_menu_product_8": ""
             }
           },
           "b4cda1f0-5efa-4d22-88b3-49faf8b1439c": {
@@ -170,7 +173,10 @@
               "sub_menu_product_3": "hyaluronic-acid-serum",
               "sub_menu_product_4": "peptide-concentrate",
               "sub_menu_product_5": "omnilux-hydrogel-face-mask",
-              "sub_menu_product_6": "omnilux-contour-hydrogel-neck-decollete"
+              "sub_menu_product_6": "omnilux-contour-hydrogel-neck-decollete",
+              "sub_menu_product_7": "",
+              "sub_menu_product_8": "",
+              "sub_menu_product_9": ""
             }
           }
         },
@@ -982,7 +988,16 @@
               "sub_title_10": "",
               "product_6": "",
               "sub_title_11": "",
-              "sub_title_12": ""
+              "sub_title_12": "",
+              "product_7": "",
+              "sub_title_13": "",
+              "sub_title_14": "",
+              "product_8": "",
+              "sub_title_15": "",
+              "sub_title_16": "",
+              "product_9": "",
+              "sub_title_17": "",
+              "sub_title_18": ""
             }
           },
           "cd3da660-92fd-494e-bcd6-0defe0f12c3a": {
@@ -1024,7 +1039,16 @@
               "sub_title_10": "Reduces pigmentation & sunspots",
               "product_6": "",
               "sub_title_11": "",
-              "sub_title_12": ""
+              "sub_title_12": "",
+              "product_7": "",
+              "sub_title_13": "",
+              "sub_title_14": "",
+              "product_8": "",
+              "sub_title_15": "",
+              "sub_title_16": "",
+              "product_9": "",
+              "sub_title_17": "",
+              "sub_title_18": ""
             }
           },
           "cc6911fa-6b79-413d-9dd0-c8f538475c04": {
@@ -1052,7 +1076,16 @@
               "sub_title_10": "Boosts Contour Face results",
               "product_6": "omnilux-contour-hydrogel-neck-decollete",
               "sub_title_11": "",
-              "sub_title_12": ""
+              "sub_title_12": "",
+              "product_7": "",
+              "sub_title_13": "",
+              "sub_title_14": "",
+              "product_8": "",
+              "sub_title_15": "",
+              "sub_title_16": "",
+              "product_9": "",
+              "sub_title_17": "",
+              "sub_title_18": ""
             }
           }
         },
@@ -1063,7 +1096,7 @@
           "cc6911fa-6b79-413d-9dd0-c8f538475c04"
         ],
         "settings": {
-          "main_menu_linklist": "mega_menu",
+          "main_menu_linklist": "mega_menu_new",
           "secondary_menu_linklist": "praella-test-secondary",
           "mobile_nav_show_social_links": true,
           "social_icon_instagram": true,
@@ -1081,6 +1114,11 @@
         "type": "hoox-promo-bar",
         "settings": {
           "promo_text": "SAVE 10% + GET FREE SHIPPING TODAY"
+        }
+      },
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
         }
       }
     },
