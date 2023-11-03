@@ -42,21 +42,27 @@ tab == 'hydrocolloid-refill-patch-3'
             <div class="col-12 col-md-10 mx-auto">
                 {% if section.settings.enable_accordion_btn %}
                     <div class="text-center m-lg-n3 m-n2 d-flex justify-content-center flex-wrap pb-lg-7 pb-4">
-                        <div class="p-lg-3 p-2">
-                          <a href="{{ section.settings.btn1_link }}" class="btn btn-outline-dark {% if section.settings.button1_disabled %}disabled{% endif %}">
-                              {{ section.settings.btn1_text }}
-                          </a>
-                        </div>
-                        <div class="p-lg-3 p-2">
-                          <a href="{{ section.settings.btn2_link }}" class="btn btn-outline-dark {% if section.settings.button2_disabled %}disabled{% endif %}">
-                            {{ section.settings.btn2_text }}
-                          </a>
-                        </div>
-                        <div class="p-lg-3 p-2">
-                          <a href="{{ section.settings.btn3_link }}" class="btn btn-outline-dark {% if section.settings.button3_disabled %}disabled{% endif %}">
-                            {{ section.settings.btn3_text }}
-                          </a>
-                        </div>
+                        {% if section.settings.btn1_link != blank and section.settings.btn1_text != blank %}
+                          <div class="p-lg-3 p-2">
+                            <a href="{{ section.settings.btn1_link }}" class="btn btn-outline-dark {% if section.settings.button1_disabled %}disabled{% endif %}">
+                                {{ section.settings.btn1_text }}
+                            </a>
+                          </div>
+                        {% endif %}
+                        {% if section.settings.btn2_link != blank and section.settings.btn2_text != blank %}
+                          <div class="p-lg-3 p-2">
+                            <a href="{{ section.settings.btn2_link }}" class="btn btn-outline-dark {% if section.settings.button2_disabled %}disabled{% endif %}">
+                              {{ section.settings.btn2_text }}
+                            </a>
+                          </div>
+                        {% endif %}
+                        {% if section.settings.btn3_link != blank and section.settings.btn3_text != blank %}
+                          <div class="p-lg-3 p-2">
+                            <a href="{{ section.settings.btn3_link }}" class="btn btn-outline-dark {% if section.settings.button3_disabled %}disabled{% endif %}">
+                              {{ section.settings.btn3_text }}
+                            </a>
+                          </div>
+                        {% endif %}
                     </div>
                 {% endif %}
 
