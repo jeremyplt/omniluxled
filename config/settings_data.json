@@ -160,9 +160,9 @@
               "sub_menu_product_3": "omnilux-clear",
               "sub_menu_product_4": "omnilux-contour-neck-decollete",
               "sub_menu_product_5": "omnilux-contour-glove",
-              "sub_menu_product_6": "",
-              "sub_menu_product_7": "",
-              "sub_menu_product_8": ""
+              "sub_menu_product_6": "blemish-eraser",
+              "sub_menu_product_7": "eye-brightener",
+              "sub_menu_product_8": "skin-corrector"
             }
           },
           "b4cda1f0-5efa-4d22-88b3-49faf8b1439c": {
@@ -175,9 +175,9 @@
               "sub_menu_product_4": "peptide-concentrate",
               "sub_menu_product_5": "omnilux-hydrogel-face-mask",
               "sub_menu_product_6": "omnilux-contour-hydrogel-neck-decollete",
-              "sub_menu_product_7": "",
-              "sub_menu_product_8": "",
-              "sub_menu_product_9": ""
+              "sub_menu_product_7": "hydrocolloid-refill-patch-2",
+              "sub_menu_product_8": "hydrocolloid-refill-patch",
+              "sub_menu_product_9": "hydrocolloid-refill-patch-3"
             }
           }
         },
@@ -1038,13 +1038,13 @@
               "product_5": "omnilux-contour-glove",
               "sub_title_9": "Anti-Aging",
               "sub_title_10": "Reduces pigmentation & sunspots",
-              "product_6": "",
+              "product_6": "blemish-eraser",
               "sub_title_11": "",
               "sub_title_12": "",
-              "product_7": "",
+              "product_7": "eye-brightener",
               "sub_title_13": "",
               "sub_title_14": "",
-              "product_8": "",
+              "product_8": "skin-corrector",
               "sub_title_15": "",
               "sub_title_16": "",
               "product_9": "",
@@ -1078,13 +1078,13 @@
               "product_6": "omnilux-contour-hydrogel-neck-decollete",
               "sub_title_11": "",
               "sub_title_12": "",
-              "product_7": "",
+              "product_7": "hydrocolloid-refill-patch-2",
               "sub_title_13": "",
               "sub_title_14": "",
-              "product_8": "",
+              "product_8": "hydrocolloid-refill-patch",
               "sub_title_15": "",
               "sub_title_16": "",
-              "product_9": "",
+              "product_9": "hydrocolloid-refill-patch-3",
               "sub_title_17": "",
               "sub_title_18": ""
             }
