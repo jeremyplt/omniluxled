@@ -2,7 +2,7 @@
 
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
-  <head>
+  <head>{% render 'skio-head' %}
 
 {{!-- GTM Enhanced Conversion Tracking --}}
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-620800940"></script>
@@ -143,8 +143,8 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
 </head>
 
   <body class="template-{{ template.name }} {{ page.handle }} {{ collection.handle }} {{ product.handle }} {% if product.tags contains 'men_product' %}product-men{% endif %} ab-test-cartdrawer ab-faq"
-
     data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}">
+
     {% if template.name == "login" %}
       <script>
         // Redirect to "/a/account/login"
@@ -191,6 +191,7 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
     {% comment %} {% if settings.enable_quickshop %}
       <quick-shop></quick-shop>
     {% endif %} {% endcomment %}
+
 
     <modal-dialog id="PopupModal-video">
       <div class="modal" role="dialog">

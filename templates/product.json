@@ -460,7 +460,6 @@
     },
     "4f5f33ca-10a4-41a3-b40c-038b76049541": {
       "type": "custom-liquid",
-      "disabled": true,
       "settings": {
         "custom_liquid": "<div class=\"desktopreviewstitle\"><div class=\"container is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<div class=\"starreviews\"><div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.StarRatingSnippet }} <span class=\"reviewstxt\">Reviews<\/span>\n<\/div><\/div><\/div>\n<p>We've helped 125,000+ customers achieve their skin goals.<\/p>\n<\/div>\n\n<div class=\"clearpdp\">\n<div class=\"desktopreviewstitle\"><div class=\"container is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<div class=\"starreviews\"><div data-oke-star-rating data-oke-reviews-product-id=\"shopify-6760463892642\">{{ product.metafields.okendo.StarRatingSnippet }} <span class=\"reviewstxt\">Reviews<\/span>\n<\/div><\/div><\/div>\n<p>We've helped 125,000+ customers achieve their skin goals.<\/p>\n<\/div><\/div>"
       }
@@ -1070,6 +1069,7 @@
     "dbd05fbc-dda9-418a-80a7-141ddac090f5": {
       "type": "product-image-buy-now",
       "settings": {
+        "info": "",
         "display_for_this_product": "{{ product.metafields['custom']['image_prod_enable'] }}",
         "fluid_layout": false,
         "heading_txt": "{{ product.metafields['custom']['image_prod_heading'] }}",

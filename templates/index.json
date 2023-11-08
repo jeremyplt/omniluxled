@@ -3,15 +3,16 @@
     "6ec0e2ef-40e2-4265-a008-778c56929061": {
       "type": "image_hero_2",
       "custom_css": [
-        "@media only screen and (max-width: 767px) {.overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient( to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) ) !important; opacity: 0.9 !important; z-index: 1; }}"
+        ".overlay {opacity: 0.2 !important;}",
+        "@media only screen and (max-width: 767px) {.overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient( to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) ) !important; opacity: 0.5 !important; z-index: 1; }}"
       ],
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/website_35.png",
-        "image_mobile": "shopify:\/\/shop_images\/website_36.png",
-        "title": "Mask on,<br> wrinkles <em class=\"fw-light\">gone. <\/em>",
-        "subtitle": "Noninvasive LED treatments <br>delivering age-defying results.",
+        "image_desktop": "shopify:\/\/shop_images\/Untitled_design_115_471db1ca-9374-4f7f-b1dc-851300332e2f.png",
+        "image_mobile": "shopify:\/\/shop_images\/Untitled_design_43_copy_2_1_59734e6b-9d64-4e3e-b61b-13dda714ea96.png",
+        "title": "NEW!<br> Omnilux Mini",
+        "subtitle": "Full strength LED devices sized <br>down for ultra-targeted treatments.",
         "btn_text": "Shop Now",
-        "btn_link": "shopify:\/\/collections\/all",
+        "btn_link": "shopify:\/\/collections\/minis",
         "content_position": "2",
         "custom_class": ""
       }
@@ -652,15 +653,15 @@
           "type": "image-with-text-block",
           "settings": {
             "fullwidth_content": false,
-            "heading_txt": "Newest addition:<br>\nTopical Skincare",
+            "heading_txt": "Newest addition:<br>\nOmnilux Mini",
             "max_width": 530,
-            "txt": "<p>Discover a power-packed skincare trio clinically proven to fight signs of aging and optimize Omnilux’s signature LED light therapy treatments.<\/p>",
+            "txt": "<p>Discover a mini but mighty LED trio that delivers ultra-targeted treatments to tackle blemishes, wrinkles, inflammation, and more.<\/p>",
             "txt_liquid": "",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
             "btn_txt": "Shop now",
-            "btn_link": "https:\/\/omniluxled.com\/collections\/skin-care",
+            "btn_link": "shopify:\/\/collections\/minis",
             "triggerbtn_txt": "",
             "triggerto": "",
             "btn_type": "",
@@ -674,7 +675,7 @@
             "btn_size_watch": "",
             "link_txt": "",
             "link_url": "",
-            "image": "shopify:\/\/shop_images\/ss-ok.png",
+            "image": "shopify:\/\/shop_images\/Web_Mini_HP_9.png",
             "alignment": "text-left",
             "image_alignment": "left"
           }

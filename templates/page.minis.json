@@ -29,8 +29,8 @@
             "btn_type_watch": "",
             "btn_variant_watch": "primary",
             "btn_size_watch": "",
-            "btn_txt": "COMING NOV 6TH",
-            "btn_link": "",
+            "btn_txt": "SHOP NOW",
+            "btn_link": "shopify:\/\/collections\/minis",
             "btn_type": "",
             "btn_variant": "white",
             "btn_size": "",
@@ -61,7 +61,7 @@
         "nav_arrows": false,
         "nav_dots": false,
         "nav_dots_right": false,
-        "height": "tallheight",
+        "height": "fullheight",
         "top_padding_zero": true
       }
     },
@@ -130,7 +130,6 @@
     },
     "6fc4587d-5859-456f-a7e6-0848f1004c74": {
       "type": "global-featured-collection",
-      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "nav_dots": false,
@@ -143,8 +142,8 @@
         "featured_product_2": "skin-corrector",
         "section_bg_color": "#ffffff",
         "section_txt_color": "#000000",
-        "btn_text": "COMING SOON",
-        "btn_url": "",
+        "btn_text": "GET YOUR MINI",
+        "btn_url": "shopify:\/\/collections\/minis",
         "btn_type": "",
         "btn_variant": "primary",
         "btn_size": ""
@@ -295,8 +294,8 @@
         "subtitle": "",
         "txt": "",
         "htmltxt": "<p>Good things come in small packages. Target your skin’s unique problem areas with our Mini LED devices paired with active-rich Hydrocolloid Patches for <strong> a powerhouse combo<\/strong>.  <\/p>\n<br>\n\n<ul class=\"twocolumns\">\n<li>Diminish fine lines + wrinkles<\/li>\n<li>Brighten complexion<\/li>\n<li>Reduce breakouts<\/li>\n<li>Calm redness + inflammation<\/li>\n<li>Lighten the look of age spots<\/li>\n<li>Restore fatigued skin<\/li>\n<\/ul>",
-        "btn_txt": "COMING SOON",
-        "btn_link": "",
+        "btn_txt": "SHOP MINIS",
+        "btn_link": "shopify:\/\/collections\/minis",
         "btn_type": "outline",
         "btn_variant": "primary",
         "btn_size": "",
@@ -371,7 +370,7 @@
         "lead_txt": "Explore 3 mini but mighty LED light therapy treatments that deliver clearer, brighter, and younger-looking skin.",
         "section_bg_color": "",
         "section_txt_color": "#000000",
-        "btn_type": "outline",
+        "btn_type": "",
         "btn_variant": "primary",
         "btn_size": ""
       }
@@ -436,8 +435,8 @@
             "step_heading": "",
             "steps_captions": "Maximizes LED results\nKeeps your Mini in place with double-sided adhesive\nSoothing and safe for all skin types\nCan be used with or without LED",
             "steps_captions_2": "",
-            "btn_txt": "COMING SOON",
-            "btn_link": "",
+            "btn_txt": "TRANSFORM YOUR SKIN",
+            "btn_link": "shopify:\/\/collections\/minis",
             "triggerbtn_txt": "",
             "triggerto": "",
             "btn_type": "",

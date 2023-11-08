@@ -149,6 +149,9 @@ class VariantSelects extends HTMLElement {
       }
       this.updateURLandID(this.currentVariant);
       this.toggleAddButton('enable');
+
+      let skio = document.querySelector('skio-plan-picker')
+      if (skio) skio.selectedVariant = this.currentVariant
     }
   }
 

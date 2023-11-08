@@ -26,7 +26,10 @@
     transition-delay: 1.4s;
     transform-origin: center;
 }
-.header-slider .container-fluid.aos-animate .inside-block
+
+.template-page.men .header-slider .container-fluid.aos-animate .inside-block,
+.template-page.skin-care .header-slider .container-fluid.aos-animate .inside-block,
+.template-page.minis .header-slider .container-fluid .inside-block
 {
     opacity: 1 !important;
 }
