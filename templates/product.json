@@ -181,6 +181,12 @@
           "settings": {
           }
         },
+        "ca347699-3f52-4af0-801c-1e7f4098829d": {
+          "type": "subscription-info",
+          "settings": {
+            "info": "<ul><li>Auto-shipped every 4, 6, or 8 weeks so you never run out<\/li><li>15% off every subscription order<\/li><li>Free shipping on every subscription order<\/li><li>First access to new product offerings<\/li><li>Flexible subscription plan options<\/li><\/ul>"
+          }
+        },
         "847ff075-3bf5-4b88-bff7-4982bbafd833": {
           "type": "subtitle",
           "settings": {
@@ -249,6 +255,7 @@
         "b253ffff-d04d-43a0-9d68-fabdd77b595a",
         "3ec0cedf-fb32-4e6f-b392-8ad9d16f7103",
         "8a51062c-4d9c-422e-b490-fae013f03593",
+        "ca347699-3f52-4af0-801c-1e7f4098829d",
         "847ff075-3bf5-4b88-bff7-4982bbafd833",
         "product-tabs",
         "3fc244f3-9eea-4a61-874a-b551b0227aff",
