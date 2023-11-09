@@ -1,7 +1,22 @@
 {
   "sections": {
+    "fb5ecb5e-55ca-4dd5-a283-3b9b227357b3": {
+      "type": "image_hero_3_shortheight",
+      "settings": {
+        "image_desktop": "shopify:\/\/shop_images\/Untitled-1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Untitled_design__21__copy.png",
+        "title": "Mask on,wrinkles gone.",
+        "subtitle": "Noninvasive LED treatments delivering age-defying results.",
+        "mobilesubtitle": "For derm level results that last.",
+        "btn_text": "Shop Now",
+        "btn_link": "shopify:\/\/collections",
+        "content_position": "2",
+        "custom_class": ""
+      }
+    },
     "6ec0e2ef-40e2-4265-a008-778c56929061": {
       "type": "image_hero_2",
+      "disabled": true,
       "custom_css": [
         ".overlay {opacity: 0.2 !important;}",
         "@media only screen and (max-width: 767px) {.overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient( to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) ) !important; opacity: 0.5 !important; z-index: 1; }}"
@@ -817,6 +832,7 @@
     }
   },
   "order": [
+    "fb5ecb5e-55ca-4dd5-a283-3b9b227357b3",
     "6ec0e2ef-40e2-4265-a008-778c56929061",
     "bbf8e6a0-e133-4b79-8e2e-6a96fec02c25",
     "a714f8c7-f2eb-4a04-8f60-9b9a35650f8a",
