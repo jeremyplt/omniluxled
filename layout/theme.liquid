@@ -142,7 +142,9 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
     {% include 'dp-config' %}
 </head>
 
-  <body class="template-{{ template.name }} {{ page.handle }} {{ collection.handle }} {{ product.handle }} {% if product.tags contains 'men_product' %}product-men{% endif %} ab-test-cartdrawer ab-faq"
+  <body class="template-{{ template.name }} {{ page.handle }} {{ collection.handle }} {{ product.handle }} 
+    {% if product.tags contains 'men_product' %}product-men{% endif %} ab-test-cartdrawer ab-faq
+    {% if template.name == "index" %}template-page home{% endif %}"
     data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}">
 
     {% if template.name == "login" %}
