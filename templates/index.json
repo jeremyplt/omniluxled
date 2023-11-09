@@ -3,7 +3,7 @@
     "fb5ecb5e-55ca-4dd5-a283-3b9b227357b3": {
       "type": "image_hero_3_shortheight",
       "custom_css": [
-        ".image-hero.withreviews .container-fluid {padding-left: 0 !important; padding-right: 0 !important;}"
+
       ],
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/Untitled-1.jpg",
