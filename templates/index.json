@@ -3,12 +3,12 @@
     "fb5ecb5e-55ca-4dd5-a283-3b9b227357b3": {
       "type": "image_hero_3_shortheight",
       "custom_css": [
-
+        ".col-xl-4.col-lg-6.col-md-6.col-12.pe-0.ps-0 {width: 40%;}"
       ],
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/Untitled-1.jpg",
         "image_mobile": "shopify:\/\/shop_images\/Untitled_design__21__copy.png",
-        "title": "Mask on,wrinkles gone.",
+        "title": "Mask on, wrinkles gone.",
         "subtitle": "Noninvasive LED treatments delivering age-defying results.",
         "mobilesubtitle": "For derm level results that last.",
         "btn_text": "Shop Now",
