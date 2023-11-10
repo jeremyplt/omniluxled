@@ -614,6 +614,11 @@
         font-size: 14px;
     }
 
+    .hoox-shop__giftcode {
+        max-width: 442px;
+        margin-left: auto;
+    }
+
     .hoox-shop__images {
         gap: 26px;
         row-gap: 24px;
