@@ -6,12 +6,12 @@
         ".image-hero.withreviews .container-fluid {padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important;}"
       ],
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/Untitled-1.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/Option_4.png",
         "image_mobile": "shopify:\/\/shop_images\/Untitled_design__21__copy.png",
-        "title": "Mask on, wrinkles gone.",
-        "subtitle": "Noninvasive LED treatments delivering age-defying results.",
-        "mobilesubtitle": "For derm level results that last.",
-        "btn_text": "Shop Now",
+        "title": "Save up to $240",
+        "subtitle": "<strong>BLACK FRIDAY SALE <\/strong><br> $50 off 1 device: GIFT1<br> $120 off 2 devices: GIFT2<br> $240 off 3 devices: GIFT3",
+        "mobilesubtitle": "",
+        "btn_text": "Shop & SAVE",
         "btn_link": "shopify:\/\/collections",
         "content_position": "2",
         "custom_class": ""
