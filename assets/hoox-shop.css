@@ -104,6 +104,12 @@
     border: none;
 }
 
+.hoox-shop__giftcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hoox-shop__giftcode-text {
     font-size: 12px;
     font-style: normal;
