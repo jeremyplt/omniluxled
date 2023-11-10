@@ -63,7 +63,9 @@
 .template-product.omnilux-clear  .circle-video-menu-wrap.circle-video-desktop.clearpdp,
 .clearpdp .desktopreviewstitle, 
 .template-product.omnilux-clear .seeallreviews, 
-.template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-video-menu{display:block!important;}
+.template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-video-menu{
+  display:block!important;
+}
 
 .template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop .circle-menu-items {
     justify-content: center;
@@ -368,6 +370,7 @@
   vertical-align: top;
 }
 
+.template-index .circle-video-menu-wrap.circle-video-desktop .circle-menu-items,
 .anti-acne .circle-video-menu-wrap.circle-video-desktop .circle-menu-items{justify-content:center;}
 
 .circle-video-menu-wrap.circle-video-desktop .circle-menu-items {
@@ -425,8 +428,24 @@
   display: none !important;
 }
 
-.template-product.omnilux-contour-face .circle-video-menu-wrap.circle-video-desktop, .template-product.omnilux-contour-face .desktopreviewstitle, .template-product.omnilux-contour-face .seeallreviews, .template-product.omnilux-contour-face .circle-video-menu-wrap.circle-video-desktop .circle-video-menu, .template-page.anti-acne .circle-video-menu-wrap.circle-video-desktop, .template-index .desktopreviewstitle, .template-index .circle-video-menu-wrap.circle-video-desktop, .template-index .seeallreviews, .template-page.anti-acne .desktopreviewstitle, .template-page.minis .desktopreviewstitle, .template-page.anti-acne .seeallreviews, .template-page.anti-acne, .circle-video-menu-wrap.circle-video-desktop .circle-video-menu {
-  display: block!important;
+.template-product.omnilux-contour-face
+  .circle-video-menu-wrap.circle-video-desktop,
+.template-product.omnilux-contour-face .desktopreviewstitle,
+.template-product.omnilux-contour-face .seeallreviews,
+.template-product.omnilux-contour-face
+  .circle-video-menu-wrap.circle-video-desktop
+  .circle-video-menu,
+.template-page.anti-acne .circle-video-menu-wrap.circle-video-desktop,
+.template-index .desktopreviewstitle,
+.template-index .circle-video-menu-wrap.circle-video-desktop,
+.template-index .seeallreviews,
+.template-page.anti-acne .desktopreviewstitle,
+.template-page.minis .desktopreviewstitle,
+.template-page.anti-acne .seeallreviews,
+.template-page.anti-acne,
+  .circle-video-menu-wrap.circle-video-desktop
+  .circle-video-menu {
+  display: block !important;
 }
 
 .template-page.minis .circle-video-menu-wrap.circle-video-desktop .circle-video-menu {
@@ -452,10 +471,6 @@
 
 .template-page.anti-acne .desktopreviewstitle {
   padding-top: 80px;
-}
-
-.template-index .circle-video-menu-wrap.circle-video-desktop .circle-menu-items, .anti-acne .circle-video-menu-wrap.circle-video-desktop .circle-menu-items {
-  justify-content: center;
 }
 
 @media (max-width: 999px) {  
@@ -572,7 +587,8 @@
     top: -6px;
   }
   .anti-acne .circle-video-menu-wrap.circle-video-desktop .circle-menu-items,
-  .template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-menu-items
+  .template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-menu-items,
+  .template-index .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-menu-items
   {justify-content:flex-start;}
 }
 
