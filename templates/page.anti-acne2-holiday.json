@@ -2,10 +2,13 @@
   "sections": {
     "46303bd3-da3b-4cc4-9804-394607ef3f06": {
       "type": "image_hero_2",
+      "custom_css": [
+
+      ],
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/HERO.png",
         "image_mobile": "shopify:\/\/shop_images\/Untitled-8.png",
-        "title": "Mask on, acne gone.",
+        "title": "The gift of clear skin.",
         "subtitle": "<strong>BLACK FRIDAY SALE!<\/strong><br>$50 off 1 device: GIFT1 <br>$120 off 2 devices: GIFT2<br> $240 off 3 devices: GIFT3",
         "btn_text": "SHOP NOW",
         "btn_link": "shopify:\/\/products\/omnilux-clear",
