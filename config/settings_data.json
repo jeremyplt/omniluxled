@@ -1117,7 +1117,7 @@
 
         ],
         "settings": {
-          "promo_text": "BLACK FRIDAY SALE! $50 OFF 1 DEVICE: <span>GIFT1,<\/span> $120 OFF 2 DEVICES: GIFT2, $240 OFF 3+ DEVICES: GIFT3"
+          "promo_text": "BLACK FRIDAY SALE! $50 OFF 1 DEVICE: <span>GIFT1,<\/span> $120 OFF 2 DEVICES: <span>GIFT2<\/span>, $240 OFF 3+ DEVICES: <span>GIFT3<\/span>"
         }
       },
       "cart-drawer": {
