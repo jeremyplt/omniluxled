@@ -306,6 +306,7 @@
     },
     "8804dfd9-e64d-4fa2-bf07-3fa8ee0dd89a": {
       "type": "global-rightvideo-text-skincare",
+      "disabled": true,
       "settings": {
         "fluid_layout": true,
         "border_bottom": true,
