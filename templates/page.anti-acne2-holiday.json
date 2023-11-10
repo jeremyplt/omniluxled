@@ -99,8 +99,8 @@
         "btn_variant": "primary",
         "btn_size": "",
         "icon_img": "shopify:\/\/shop_images\/medical-grade_5.svg",
-        "icon_img2": "shopify:\/\/shop_images\/Natural_treatment_svg.png",
-        "icon_img3": "shopify:\/\/shop_images\/medical-grade_4.svg"
+        "icon_img2": "shopify:\/\/shop_images\/2_year_warranty.svg",
+        "icon_img3": "shopify:\/\/shop_images\/Icon_FDA_Cleared_png.png"
       }
     },
     "ccd2af3c-3893-452e-8e9d-e82555f637c3": {
@@ -360,7 +360,7 @@
             "fullwidth_content": false,
             "heading_txt": "Loved by Dermatologists",
             "max_width": 570,
-            "txt": "<p>\"Omnilux Clear is an amazing low level light therapy device that I feel works on everything from acne to breakouts. The blue light neutralizes bacteria on the surface of your skin that is responsible for acne. The red light reduces inflammation and redness and is great at reducing excess oil production in the sebaceous glands. When these two wavelengths are used together, you receive a more effective and efficient acne treatment. This is why I love the Omnilux Clear mask.\"<\/p><p><strong>Dr. Glynis Ablon, MD, FAAD<\/strong><br\/>Associate Clinical Professor of Dermatology, UCLA<br\/>The Ablon Skin Institute<\/p>",
+            "txt": "<p>\"Omnilux Clear is an amazing low level light therapy device that I feel works on everything from acne to breakouts. The blue light neutralizes bacteria on the surface of your skin that is responsible for acne. The red light reduces inflammation and redness and is great at reducing excess oil production in the sebaceous glands. When these two wavelengths are used together, you receive a more effective and efficient acne treatment. This is why I love the Omnilux Clear mask.\"<br\/><br\/><strong>Dr. Glynis Ablon, MD, FAAD<\/strong><br\/>Associate Clinical Professor of Dermatology, UCLA<br\/>The Ablon Skin Institute<\/p>",
             "txt_liquid": "",
             "step_heading": "",
             "steps_captions": "",
