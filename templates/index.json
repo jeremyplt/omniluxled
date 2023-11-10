@@ -286,7 +286,7 @@
         "btn_size_watch": "",
         "enable_overlay": true,
         "overlay_bg_color": "#000000",
-        "overlay_opacity": 0.2,
+        "overlay_opacity": 0.1,
         "fluid_video_layout": true,
         "video_type": "local",
         "placement": "popup",
