@@ -103,7 +103,7 @@
     "account_disable": "Account disabled.",
     "account_invited": "Account Invited.",
     "account_declined": "Account declined.",
-    "shop_newsletter_checkbox": true,
+    "shop_newsletter_checkbox": false,
     "shop_product_newsletter_text": "Sign up for exclusive skincare offers.",
     "shop_product_newsletter_heading": "Want TO SAVE 10% TODAY?",
     "shop_product_newsletter_success_heading": "You’re in!",
@@ -1114,7 +1114,7 @@
       "hoox-promo-bar": {
         "type": "hoox-promo-bar",
         "settings": {
-          "promo_text": "SAVE 10% + GET FREE SHIPPING TODAY"
+          "promo_text": "BLACK FRIDAY SALE! $50 OFF 1 DEVICE: GIFT1, $120 OFF 2 DEVICES: GIFT2, $240 OFF 3+ DEVICES: GIFT3"
         }
       },
       "cart-drawer": {
