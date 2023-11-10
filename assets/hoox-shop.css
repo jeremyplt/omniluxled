@@ -707,7 +707,8 @@
     }
 
     .hoox-shop__gallery-bagde{
-        /* display: none; */
+        left: 230px;
+        top: 10px;
     }
 }
 
