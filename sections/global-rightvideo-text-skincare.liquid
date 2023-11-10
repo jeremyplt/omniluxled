@@ -14,6 +14,7 @@
                     data-loop="{{ section.settings.loop }}" data-autoplay="true" data-controls="{{ section.settings.controls }}" data-muted="{{ section.settings.muted }}"
                     data-video-type="{{ section.settings.video_type }}"  data-placement="{{ section.settings.placement }}"
                     {% if section.settings.mobile_video_id != blank %}data-mobileVideo="{{ section.settings.mobile_video_id }}"{% endif %} data-video-id="{{ section.settings.video_id }}">
+                    {% if section.settings.video_id != blank %}
                     <div class="cta-btn">
                         <span class="d-inline-flex" role="button" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
                             <span class="btn btn-white d-flex align-items-center d-lg-inline-flex"> {{ section.settings.video_btn_text }} <i class="ox-play ms-2" style="font-size:11px;"></i></span>
@@ -23,6 +24,7 @@
                             <span class="btn btn btn-white">Watch video <i class="ox-play ms-2"></i></span>
                         </span>
                     </div>
+                    {% endif %}
                     <div class="content-section">
                         <div class="poster-image {{ section.settings.height }}">
                             {%- if section.settings.poster_type == 'video' and section.settings.bg_video != blank -%}
@@ -91,6 +93,8 @@
                                     data-video-type="local"  data-placement="popup"
                                     {% if section.settings.watch_mobile_video_id != blank %}data-mobileVideo="{{ section.settings.watch_mobile_video_id }}"{% endif %} 
                                     data-video-id="{{ section.settings.watch_video_id }}">
+
+
                                     <div class="cta-btn d-none">
                                         <button class="play__button btn btn-primary" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
                                             <span class="icon-play"></span>
