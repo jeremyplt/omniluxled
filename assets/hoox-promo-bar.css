@@ -1,4 +1,5 @@
 .hoox-promo-bar {
+    display: none;
     background-color: #99552B;
     padding: 6px 0;
     display: flex;
