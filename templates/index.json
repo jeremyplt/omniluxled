@@ -296,7 +296,7 @@
         "fluid_layout": false,
         "anchorid": "",
         "heading_txt": "Black Friday Deals",
-        "lead_txt": "Find the right device with clinically-proven results for clearer and healthier skin.",
+        "lead_txt": "From anti-aging to anti-acne, shop gifts big and small for your loved ones this holiday season.",
         "section_bg_color": "",
         "section_txt_color": "#000000",
         "btn_type": "",
@@ -306,7 +306,6 @@
     },
     "8804dfd9-e64d-4fa2-bf07-3fa8ee0dd89a": {
       "type": "global-rightvideo-text-skincare",
-      "disabled": true,
       "settings": {
         "fluid_layout": true,
         "border_bottom": true,
