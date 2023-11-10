@@ -111,12 +111,11 @@
 }
 
 .hoox-shop__giftcode-text {
-    font-size: 12px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     white-space: nowrap;
-    text-align: center;
     color: red;
 }
 
