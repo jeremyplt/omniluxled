@@ -317,6 +317,14 @@
 }
 
 /*GALLERY BADGE*/
+.hoox-shop__gallery-bagde-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+}
 
 .hoox-shop__gallery-bagde {
     width: 96px;
