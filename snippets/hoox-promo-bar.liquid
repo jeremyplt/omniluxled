@@ -4,15 +4,14 @@
     assign promoText = section.settings.promo_text
 %} {% endcomment %}
 
-<section class="hoox-promo-bar">
-
-{% if promoText != 'blank' %}
-<p class="hoox-promo-bar__text">
-    {{ promoText }}
-</p>
+<div class="hoox-promo-bar">
+    {% if promoText != 'blank' %}
+    <p class="hoox-promo-bar__text">
+        {{ promoText }}
+    </p>
 {% endif %}
 
-</section>
+</div>
 
 {% comment %} Js file {% endcomment %}
 
