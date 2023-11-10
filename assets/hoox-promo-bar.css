@@ -6,6 +6,10 @@
     justify-content: center;
 }
 
+.template-page.anti-aging .hoox-promo-bar {
+    display: flex;
+}
+
 .hoox-promo-bar__text {
     text-transform: uppercase;
     text-align: center;
