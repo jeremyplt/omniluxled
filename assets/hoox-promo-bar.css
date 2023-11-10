@@ -9,9 +9,12 @@
 .hoox-promo-bar__text {
     text-transform: uppercase;
     text-align: center;
-    font-weight: 600;
     font-size: 14px;
     color: #fff;
+}
+
+.hoox-promo-bar__text span {
+    font-weight: 600;
 }
 
 #slide1 {
