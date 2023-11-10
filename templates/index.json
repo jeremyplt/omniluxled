@@ -13,8 +13,10 @@
         "subtitle": "<strong>BLACK FRIDAY SALE! <\/strong><br> $50 off 1 device: GIFT1<br> $120 off 2 devices: GIFT2<br> $240 off 3 devices: GIFT3",
         "mobilesubtitle": "<strong>BLACK FRIDAY SALE! <\/strong><br> $50 off 1 device: GIFT1<br> $120 off 2 devices: GIFT2<br> $240 off 3 devices: GIFT3",
         "btn_text": "Shop & SAVE",
+        "button_bg_color": "#ffffff",
+        "button_text_color": "#000000",
         "btn_link": "https:\/\/omniluxled.com\/collections\/all",
-        "disclaimer_text": "*Applies to full-sized LED devices only",
+        "disclaimer_text": "<i>*Codes apply to full-sized LED devices only<\/i>",
         "content_position": "2",
         "custom_class": ""
       }
@@ -251,6 +253,57 @@
         "css_class": "badges"
       }
     },
+    "189b4fb2-6344-4513-adf8-a3743a17ef4f": {
+      "type": "global-info-block",
+      "blocks": {
+        "6f62307c-d56a-4f35-87f7-9e7a2a45a7f1": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HOLIDAY_2023_LPs_9.png",
+            "title": "<p>Up to $240 off devices<\/p>",
+            "txt_info": "<p>Use these codes to save on Contour, Clear and Men:<br\/>$50 off 1 device: GIFT1<br\/>$120 off 2 devices: GIFT2<br\/>$240 off 3 devices: GIFT3<br\/><\/p>",
+            "btn_txt": "SHOP DEVICES",
+            "btn_url": "shopify:\/\/products\/omnilux-contour-face"
+          }
+        },
+        "fa2d6f01-3639-4d18-93d5-67c28f0ad600": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HOLIDAY_2023_LPs_10.png",
+            "title": "<p>15% off all Minis<\/p>",
+            "txt_info": "<p>Sometimes the best gifts come in the smallest packages. Omnilux Mini delivers ultra-targeted LED treatments to tackle blemishes, wrinkles, inflammation, and more.<\/p>",
+            "btn_txt": "SHOP MINIS",
+            "btn_url": "shopify:\/\/products\/omnilux-clear"
+          }
+        },
+        "1ec45f76-5bf3-4def-bd64-7cffe7e2e8b1": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HOLIDAY_2023_LPs_12.png",
+            "title": "<p>15% off all skincare<\/p>",
+            "txt_info": "<p>The perfect complement to your LED routine. Discover power-packed skincare products clinically proven to fight signs of aging, while optimizing our signature LED treatments.<\/p>",
+            "btn_txt": "SHOP SKINCARE",
+            "btn_url": "shopify:\/\/products\/omnilux-men"
+          }
+        }
+      },
+      "block_order": [
+        "6f62307c-d56a-4f35-87f7-9e7a2a45a7f1",
+        "fa2d6f01-3639-4d18-93d5-67c28f0ad600",
+        "1ec45f76-5bf3-4def-bd64-7cffe7e2e8b1"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "anchorid": "",
+        "heading_txt": "Black Friday Deals",
+        "lead_txt": "Find the right device with clinically-proven results for clearer and healthier skin.",
+        "section_bg_color": "",
+        "section_txt_color": "#000000",
+        "btn_type": "",
+        "btn_variant": "primary",
+        "btn_size": ""
+      }
+    },
     "8804dfd9-e64d-4fa2-bf07-3fa8ee0dd89a": {
       "type": "global-rightvideo-text-skincare",
       "settings": {
@@ -284,7 +337,7 @@
         "btn_size_watch": "",
         "enable_overlay": true,
         "overlay_bg_color": "#000000",
-        "overlay_opacity": 0.2,
+        "overlay_opacity": 0.1,
         "fluid_video_layout": true,
         "video_type": "local",
         "placement": "popup",
@@ -778,7 +831,7 @@
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
-            "btn_txt": "save 15% now",
+            "btn_txt": "SAVE 15% ON MINIS",
             "btn_link": "shopify:\/\/collections\/minis",
             "triggerbtn_txt": "",
             "triggerto": "",
@@ -1049,6 +1102,7 @@
     "bbf8e6a0-e133-4b79-8e2e-6a96fec02c25",
     "a714f8c7-f2eb-4a04-8f60-9b9a35650f8a",
     "16270420142c0cafe8",
+    "189b4fb2-6344-4513-adf8-a3743a17ef4f",
     "8804dfd9-e64d-4fa2-bf07-3fa8ee0dd89a",
     "59bdd293-efe7-4fcd-8619-feac003821e6",
     "7caf6918-0887-4d78-b125-88468bd9dd86",

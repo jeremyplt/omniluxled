@@ -190,7 +190,7 @@
         "settings": {
           "promo_text": "BLACK FRIDAY SALE! $50 OFF 1 DEVICE: <span>GIFT 1<\/span>, $120 OFF 2 DEVICES: <span>GIFT2<\/span>, $240 OFF 3 DEVICES: <span>GIFT3<\/span>",
           "topbar_enabled": true,
-          "topbar_text": "Free shipping on orders $100+",
+          "topbar_text": "BLACK FRIDAY SALE! $50 OFF 1 DEVICE: <span><\/span><strong>GIFT 1<\/strong>,$120 OFF 2 DEVICES:<strong> <span>GIFT2<\/span>, <\/strong>$240 OFF 3 DEVICES: <strong><span>GIFT3<\/span><\/strong>",
           "page_url": "shopify:\/\/collections\/all",
           "topbar_text2": "2-Year Device Warranty",
           "page_url2": "shopify:\/\/collections\/all",
