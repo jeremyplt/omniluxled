@@ -261,7 +261,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/HOLIDAY_2023_LPs_9.png",
             "title": "<p>Up to $240 off devices<\/p>",
-            "txt_info": "<p>Use these codes to save on Contour, Clear and Men:<br\/>$50 off 1 device: GIFT1<br\/>$120 off 2 devices: GIFT2<br\/>$240 off 3 devices: GIFT3<br\/><\/p>",
+            "txt_info": "<p>Save on full-sized Contour, Clear and Men devices:<br\/>$50 off 1 device: GIFT1<br\/>$120 off 2 devices: GIFT2<br\/>$240 off 3 devices: GIFT3<br\/><\/p>",
             "btn_txt": "SHOP DEVICES",
             "btn_url": "shopify:\/\/products\/omnilux-contour-face"
           }
@@ -270,7 +270,7 @@
           "type": "content",
           "settings": {
             "image": "shopify:\/\/shop_images\/HOLIDAY_2023_LPs_10.png",
-            "title": "<p>15% off all Minis<\/p>",
+            "title": "<p>15% off all Mini devices<\/p>",
             "txt_info": "<p>Sometimes the best gifts come in the smallest packages. Omnilux Mini delivers ultra-targeted LED treatments to tackle blemishes, wrinkles, inflammation, and more.<\/p>",
             "btn_txt": "SHOP MINIS",
             "btn_url": "shopify:\/\/products\/omnilux-clear"
