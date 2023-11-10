@@ -1703,7 +1703,7 @@ html .swiper-button-next:hover::after {
 }
 
 html .cbb-frequently-bought-container {  
-  display: none;
+  display: block;
   padding: 1.5rem 8rem;
   border-color: black !important;
   border-bottom-width: 1px;
