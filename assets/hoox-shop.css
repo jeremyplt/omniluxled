@@ -331,10 +331,11 @@
     height: 96px;
     border-radius: 100%;
     background: #B67D5B;
-    position: absolute;
-    z-index: 9;
+    position: relative;
+    right: 10px;
     top: 18px;
-    left: 447px;
+    float: right;
+    z-index: 9;
     display: flex;
     justify-content: center;
     align-items: center;
