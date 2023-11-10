@@ -188,7 +188,7 @@
           "b4cda1f0-5efa-4d22-88b3-49faf8b1439c"
         ],
         "settings": {
-          "promo_text": "<strong>BLACK FRIDAY SALE! $50 OFF 1 DEVICE:<\/strong> GIFT 1, <strong>$120 OFF 2 DEVICES:<\/strong> GIFT2, <strong>$240 OFF 3 DEVICES: <\/strong>GIFT3",
+          "promo_text": "BLACK FRIDAY SALE! $50 OFF 1 DEVICE: <span>GIFT 1<\/span>, $120 OFF 2 DEVICES: <span>GIFT2<\/span>, $240 OFF 3 DEVICES: <span>GIFT3<\/span>",
           "topbar_enabled": true,
           "topbar_text": "Free shipping on orders $100+",
           "page_url": "shopify:\/\/collections\/all",
