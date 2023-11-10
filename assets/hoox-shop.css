@@ -694,11 +694,7 @@
     }
     .hoox-newsletter__msg-error {
         font-size: 12px;
-    }
-    .hoox-shop__gallery-bagde{
-        left: 230px;
-        top: 10px;
-    }
+    }    
 }
 
 @media(max-width: 768px){
@@ -708,11 +704,6 @@
     
     .hoox-shop__upsell .hoox-shop__atc-wrapper .quantity-wrapper {
         max-width: 100%;
-    }
-
-    .hoox-shop__gallery-bagde{
-        left: 230px;
-        top: 10px;
     }
 }
 
