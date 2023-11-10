@@ -3,7 +3,7 @@ $(document).ready(function () {
   $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-selector-list'))  
   $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-form'))    
   $('.cbb-frequently-bought-total-price-text').text("Total:")
-  $('.cbb-frequently-bought-title').text("Total:")
+  $('.cbb-frequently-bought-title').text($( "body" ).data( "data-product-upsell-title" ))
   
   data-product-upsell-title
   $("#gorgias-chat-start").click(function(){   
