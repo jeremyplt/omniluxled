@@ -21,9 +21,9 @@
     font-weight: 600;
 }
 
-/* #slide1 {
+.template-page.anti-aging #slide1 {
     display: none !important;
-} */
+}
 
 @media (min-width: 1024px) {
     .hoox-promo-bar {
