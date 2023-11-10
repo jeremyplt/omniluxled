@@ -104,6 +104,16 @@
     border: none;
 }
 
+.hoox-shop__giftcode-text {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    white-space: nowrap;
+    text-align: center;
+    color: red;
+}
+
 .hoox-shop__images {
     display: flex;
     justify-content: center;
