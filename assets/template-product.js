@@ -3,7 +3,7 @@ $(document).ready(function () {
   $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-selector-list'));
   $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-form'));
   $('.cbb-frequently-bought-total-price-text').text("Total:");
-  console.log("upsell titel:", $('[data-template = "Tom"]').data( "data-product-upsell-title"))
+  console.log("upsell titel:", $('[data-template = "product"]').data( "data-product-upsell-title"))
   $('.cbb-frequently-bought-title').text($( "body" ).data( "data-product-upsell-title"));
   
   data-product-upsell-title
