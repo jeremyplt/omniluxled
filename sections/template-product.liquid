@@ -38,7 +38,7 @@
 
 {% comment %} TODO End {% endcomment %}
 
-<div data-section-id="{{ section.id }}" data-template="product" data-product-upsell-title="{{ product.metafields.custom.upsell_cta }}" class="{% if product.has_only_default_variant %}only-default-variant{% endif %}">
+<div id="product-template" data-section-id="{{ section.id }}" data-template="product" data-product-upsell-title="{{ product.metafields.custom.upsell_cta }}" class="{% if product.has_only_default_variant %}only-default-variant{% endif %}">
   {%- liquid
     assign productExcludeTag = settings.product_exclude_tag_text
     assign fluid_layout = section.settings.fluid_layout
