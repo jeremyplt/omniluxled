@@ -3,10 +3,10 @@ $(document).ready(function () {
   $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-selector-list'));
   $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-form'));
   $('.cbb-frequently-bought-total-price-text').text("Total:");
-  console.log("upsell titel:", $('[data-template = "product"]').data( "data-product-upsell-title"))
+  
+  console.log("upsell titel:", $("div").find('[data-template = "product"]').data( "data-product-upsell-title"))
   $('.cbb-frequently-bought-title').text($( "body" ).data( "data-product-upsell-title"));
   
-  data-product-upsell-title
   $("#gorgias-chat-start").click(function(){   
     const chatWindow = $('#gorgias-chat-container #chat-window').css('display')
     if(chatWindow == undefined || chatWindow == 'none'){      
