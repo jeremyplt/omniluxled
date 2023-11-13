@@ -4,7 +4,7 @@ $(document).ready(function () {
   $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-form'));
   $('.cbb-frequently-bought-total-price-text').text("Total:");
   
-  console.log("upsell titel:", $('#product-template'))
+  console.log("upsell titel:", $('#product-template').html())
   $('.cbb-frequently-bought-title').text($( "body" ).data( "data-product-upsell-title"));
   
   $("#gorgias-chat-start").click(function(){   
