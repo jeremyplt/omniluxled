@@ -20,6 +20,7 @@ function waitForElm(selector) {
 
 $(document).ready(function () {
   waitForElm('.cbb-frequently-bought-container').then((elm) => {    
+    console.log("-----------------------------------------")
     $('.cbb-frequently-bought-products').after($('<div class="cbb-frequently-bought-recommendations-wrap"></div>'));
     $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-selector-list'));
     $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-form'));
