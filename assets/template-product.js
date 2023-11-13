@@ -26,7 +26,7 @@ $(document).ready(function () {
     $('.cbb-frequently-bought-total-price-text').text("Total:");  
     $('.cbb-frequently-bought-title').text($('div[data-template="product"]').data( "product-upsell-title"));  
     console.log("-----------------------------------------", $('.cbb-frequently-bought-container'))    
-    $('.cbb-frequently-bought-container').css({display:'block !important'});
+    $('.cbb-frequently-bought-container').css("display", "block !important");
   })
   
   $("#gorgias-chat-start").click(function(){   
