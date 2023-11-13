@@ -24,8 +24,7 @@ $(document).ready(function () {
     $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-selector-list'));
     $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-form'));
     $('.cbb-frequently-bought-total-price-text').text("Total:");  
-    $('.cbb-frequently-bought-title').text($('div[data-template="product"]').data( "product-upsell-title"));  
-    console.log("-----------------------------------------", $('.cbb-frequently-bought-container'))    
+    $('.cbb-frequently-bought-title').text($('div[data-template="product"]').data( "product-upsell-title"));   
     $('.cbb-frequently-bought-container').css("display", "block");
   })
   
