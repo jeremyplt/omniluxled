@@ -1,14 +1,12 @@
 $(document).ready(function () {
-  waitForElm('.product-details-wrapper [data-oke-metafield-data]').then((elm) => {
-
+  waitForElm('.cbb-frequently-bought-container').then((elm) => {    
+    $('.cbb-frequently-bought-products').after($('<div class="cbb-frequently-bought-recommendations-wrap"></div>'));
+    $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-selector-list'));
+    $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-form'));
+    $('.cbb-frequently-bought-total-price-text').text("Total:");  
+    $('.cbb-frequently-bought-title').text($('div[data-template="product"]').data( "product-upsell-title"));  
+    $('.cbb-frequently-bought-container').css({dislay:'block'});
   })
-
-  $('.cbb-frequently-bought-container').css({dislay:'block'});
-  $('.cbb-frequently-bought-products').after($('<div class="cbb-frequently-bought-recommendations-wrap"></div>'));
-  $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-selector-list'));
-  $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-form'));
-  $('.cbb-frequently-bought-total-price-text').text("Total:");  
-  $('.cbb-frequently-bought-title').text($('div[data-template="product"]').data( "product-upsell-title"));
   
   $("#gorgias-chat-start").click(function(){   
     const chatWindow = $('#gorgias-chat-container #chat-window').css('display')
