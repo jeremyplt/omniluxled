@@ -1,5 +1,9 @@
 $(document).ready(function () {
-  $('.cbb-frequently-bought-container ').css({dislay:'block'});
+  waitForElm('.product-details-wrapper [data-oke-metafield-data]').then((elm) => {
+
+  })
+
+  $('.cbb-frequently-bought-container').css({dislay:'block'});
   $('.cbb-frequently-bought-products').after($('<div class="cbb-frequently-bought-recommendations-wrap"></div>'));
   $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-selector-list'));
   $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-form'));
