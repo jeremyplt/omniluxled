@@ -83,11 +83,11 @@
         "nav_dots": false,
         "nav_arrows": false,
         "nav_arrows_outside": false,
-        "heading_txt": "Omnilux Clear",
-        "lead_txt": "FDA-cleared, dermatologist-recommended blue and red light therapy mask with clinically-proven results for acne. Reduces active acne and blemishes\nCalms redness and inflammation\nClears breakouts faster",
-        "steps_captions": "Reduces active acne and blemishes\nCalms redness and inflammation\nClears breakouts faster",
-        "small_txt": "45-day money back guarantee<br>2 year warranty",
-        "home_featured_product": "omnilux-clear",
+        "heading_txt": "Omnilux Men",
+        "lead_txt": "FDA-cleared, dermatologist-recommended red light therapy device with clinically proven results for men's skin rejuvenation.",
+        "steps_captions": "Reduces fine lines and wrinkles\nImproves the look of under-eye bags and dark circles\nCalms inflammation, redness and irritation\nCorrects age spots, uneven skin tone, and texture",
+        "small_txt": "<font color=\"#c7030\"><strong>BLACK FRIDAY SALE!<br>Save $50: code GIFT1<\/strong><\/font>",
+        "home_featured_product": "omnilux-men",
         "section_bg_color": "#ffffff",
         "section_txt_color": "#000000",
         "btn_text2": "",
@@ -95,9 +95,9 @@
         "btn_type": "outline",
         "btn_variant": "primary",
         "btn_size": "",
-        "icon_img": "shopify:\/\/shop_images\/medical-grade_5.svg",
-        "icon_img2": "shopify:\/\/shop_images\/Natural_treatment_svg.png",
-        "icon_img3": "shopify:\/\/shop_images\/medical-grade_4.svg"
+        "icon_img": "shopify:\/\/shop_images\/30_Day_Guarantee.png",
+        "icon_img2": "shopify:\/\/shop_images\/2_year_warranty.svg",
+        "icon_img3": "shopify:\/\/shop_images\/Icon_FDA_Cleared_png.png"
       }
     },
     "ccd2af3c-3893-452e-8e9d-e82555f637c3": {
