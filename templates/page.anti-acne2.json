@@ -485,16 +485,32 @@
             "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_3.png?v=1698705996",
             "hoox_how_to_text": "dsfsdfsdfsdfsdf"
           }
+        },
+        "d8a91909-57bc-44b4-966e-1e1b9ecdda74": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_3.png?v=1698705996",
+            "hoox_how_to_text": "dfsdfsdfsdf"
+          }
+        },
+        "9869c797-a188-4cc4-b15e-8ffb12e4e317": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_3.png?v=1698705996",
+            "hoox_how_to_text": ""
+          }
         }
       },
       "block_order": [
-        "f4e4b676-c69e-4a6e-b3e7-d0d9302dbbce"
+        "f4e4b676-c69e-4a6e-b3e7-d0d9302dbbce",
+        "d8a91909-57bc-44b4-966e-1e1b9ecdda74",
+        "9869c797-a188-4cc4-b15e-8ffb12e4e317"
       ],
       "settings": {
-        "enable_section": "",
-        "hoox_how_to_title": "",
-        "hoox_how_to_subtitle": "",
-        "btn_txt_watch": "",
+        "enable_section": "true",
+        "hoox_how_to_title": "How to use:",
+        "hoox_how_to_subtitle": "Unlock your best skin with three to five 10-minute treatments per week.",
+        "btn_txt_watch": "Watch how-to video",
         "watch_video_id": ""
       }
     },
