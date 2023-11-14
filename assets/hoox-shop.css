@@ -105,9 +105,13 @@
 }
 
 .hoox-shop__giftcode {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+}
+
+.template-page.anti-aging-holiday .hoox-shop__giftcode {
+    display: flex;
 }
 
 .hoox-shop__giftcode-text {
