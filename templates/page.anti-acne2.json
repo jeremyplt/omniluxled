@@ -476,6 +476,28 @@
         "Clear_image_text2": ""
       }
     },
+    "a268d18f-a513-4c06-b9c0-3b0c5b8124e2": {
+      "type": "hoox-how-to-with-button",
+      "blocks": {
+        "f4e4b676-c69e-4a6e-b3e7-d0d9302dbbce": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_3.png?v=1698705996",
+            "hoox_how_to_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "f4e4b676-c69e-4a6e-b3e7-d0d9302dbbce"
+      ],
+      "settings": {
+        "enable_section": "",
+        "hoox_how_to_title": "",
+        "hoox_how_to_subtitle": "",
+        "btn_txt_watch": "",
+        "watch_video_id": ""
+      }
+    },
     "ad12eab5-d111-48ee-803d-a63ff0223d40": {
       "type": "global-image-with-text",
       "blocks": {
@@ -1016,6 +1038,7 @@
     "7d81bab4-7cd3-45cc-a15e-85816015c1b0",
     "967c77cb-ba82-48fa-9f0e-fe5c36129f30",
     "875cb50b-8a97-4cbc-8ad1-4bdb25824e96",
+    "a268d18f-a513-4c06-b9c0-3b0c5b8124e2",
     "ad12eab5-d111-48ee-803d-a63ff0223d40",
     "ec0f761c-9d46-426c-b34e-7536509c5a1b",
     "07429a64-3eb5-4663-827f-f01a6fb8f5cd",
