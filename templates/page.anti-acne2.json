@@ -3,9 +3,9 @@
     "46303bd3-da3b-4cc4-9804-394607ef3f06": {
       "type": "image_hero_2",
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/Untitled-222_e65c0107-3a4e-4b4d-bade-6fd0644b515c.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/Untitled_design_115_471db1ca-9374-4f7f-b1dc-851300332e2f.png",
         "image_mobile": "shopify:\/\/shop_images\/Untitled-8.png",
-        "title": "Mask on,<br>acne <span>gone.<\/span>",
+        "title": "Mask on,acne gone.",
         "subtitle": "Clinically proven to stop breakouts in their tracks.",
         "btn_text": "SHOP NOW",
         "btn_link": "shopify:\/\/products\/omnilux-clear",
@@ -152,6 +152,7 @@
         "671d2e9b-1e2c-425d-91c2-f59384c5d4ba"
       ],
       "settings": {
+        "class_names": "",
         "section_id": "#",
         "section_title": "Real Stories, Real Impact"
       }
@@ -994,6 +995,7 @@
       ],
       "settings": {
         "border_color": "#000000",
+        "div_id": "",
         "ignore": true
       }
     },
