@@ -1698,12 +1698,9 @@ html .swiper-button-next:hover::after {
 
 /* App - Frequently Bought Together */
 
-/* .ab-fbt .cbb-frequently-bought-container {  
-  display: block !important;
-} */
 
 html .cbb-frequently-bought-container {  
-  display: none;
+  display: block;
   padding: 1.5rem 8rem;
   border-color: black !important;
   border-bottom-width: 1px;
