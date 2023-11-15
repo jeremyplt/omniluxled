@@ -1052,6 +1052,57 @@
       "settings": {
         "custom_liquid": "<div class=\"seereviewsbtn\">\n<div class=\"seeallreviews\"><div class=\"container is-flex is-justify-center\"><a href=\"https:\/\/omniluxled.com\/pages\/reviews-results\">SEE MORE REVIEWS AND RESULTS<\/a><\/div><\/div><\/div>"
       }
+    },
+    "371c6641-8a0f-4861-8107-305c7c42502f": {
+      "type": "global-reviews-slider",
+      "blocks": {
+        "28ea33a3-0845-45dd-9c75-d3ca38ac2b9f": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": ""
+          }
+        },
+        "59d267bc-2eb4-49e4-a0b7-d3047afe5957": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": ""
+          }
+        },
+        "3f7ada38-c6c5-4c59-814e-1625835bc789": {
+          "type": "logowidthtext",
+          "settings": {
+            "watch_video_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "28ea33a3-0845-45dd-9c75-d3ca38ac2b9f",
+        "59d267bc-2eb4-49e4-a0b7-d3047afe5957",
+        "3f7ada38-c6c5-4c59-814e-1625835bc789"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "heading_style": "heading_style_2",
+        "pt": 66,
+        "pb": 75,
+        "pts": 40,
+        "pbs": 60,
+        "border-top": false,
+        "border-bottom": false,
+        "heading_txt": "Real users, real results",
+        "txt": "",
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_type": "",
+        "btn_variant": "dark",
+        "btn_size": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "section_text_color": "#000000",
+        "autoplay_enable": false,
+        "slider_enable": true,
+        "nav_arrows": true,
+        "nav_dots": false
+      }
     }
   },
   "order": [
@@ -1073,6 +1124,7 @@
     "ab62fd12-1370-4dd1-8aca-97e40474aa60",
     "a618eef4-fb94-4608-b62a-a035c206de40",
     "2fc01c3d-fdb9-4eed-9a67-450b2c83d9e3",
-    "db51e2b5-fbe8-4255-be41-9434c6a6c906"
+    "db51e2b5-fbe8-4255-be41-9434c6a6c906",
+    "371c6641-8a0f-4861-8107-305c7c42502f"
   ]
 }
