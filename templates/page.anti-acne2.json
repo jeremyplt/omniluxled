@@ -396,6 +396,7 @@
     },
     "967c77cb-ba82-48fa-9f0e-fe5c36129f30": {
       "type": "global-title",
+      "disabled": true,
       "custom_css": [
         ".h3 {text-shadow: none; color: #000; text-align: center; margin: 0 auto;}"
       ],
@@ -460,6 +461,7 @@
         "841d0d56-cc83-4007-b9af-66fcb4168315",
         "f9e77d32-36ae-4a1a-9f39-598de7b2511f"
       ],
+      "disabled": true,
       "settings": {
         "heading_txt": "Awesome Heading",
         "img_text1": "Awesome Sub Heading",
@@ -497,14 +499,22 @@
           "type": "usp",
           "settings": {
             "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_3.png?v=1698705996",
-            "hoox_how_to_text": ""
+            "hoox_how_to_text": "sfsdfsdf"
+          }
+        },
+        "0ad4bdab-7ce3-44f8-bcaa-baed137ee4f3": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_3.png?v=1698705996s",
+            "hoox_how_to_text": "dfsfsdf"
           }
         }
       },
       "block_order": [
         "f4e4b676-c69e-4a6e-b3e7-d0d9302dbbce",
         "d8a91909-57bc-44b4-966e-1e1b9ecdda74",
-        "9869c797-a188-4cc4-b15e-8ffb12e4e317"
+        "9869c797-a188-4cc4-b15e-8ffb12e4e317",
+        "0ad4bdab-7ce3-44f8-bcaa-baed137ee4f3"
       ],
       "settings": {
         "enable_section": "true",
