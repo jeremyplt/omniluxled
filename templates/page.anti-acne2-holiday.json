@@ -3,7 +3,8 @@
     "46303bd3-da3b-4cc4-9804-394607ef3f06": {
       "type": "image_hero_2",
       "custom_css": [
-        ".overlay {display: none !important;}"
+        ".overlay {display: none !important;}",
+        ".image-hero.withreviews h2.h1 {font-size: 46px !important;}"
       ],
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/HERO.png",
