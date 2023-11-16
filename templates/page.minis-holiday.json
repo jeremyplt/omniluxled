@@ -284,7 +284,7 @@
     "e38be45f-cef3-48f1-88e5-0e9ae227927c": {
       "type": "global-rightvideo-text-skincare",
       "custom_css": [
-        ".btn.btn-white.d-flex.align-items-center.d-lg-inline-flex {border: solid 1px white; background-color: transparent; color: white; padding-left: 15px; padding-right:15px}"
+        ".btn.btn-white.d-flex.align-items-center.d-lg-inline-flex {border: solid 1px white; background-color: transparent; color: white; padding-left: 15px; padding-right: 15px;}"
       ],
       "settings": {
         "fluid_layout": true,
@@ -441,7 +441,7 @@
             "step_heading": "",
             "steps_captions": "Maximizes LED results\nKeeps your Mini in place with double-sided adhesive\nSoothing and safe for all skin types\nCan be used with or without LED",
             "steps_captions_2": "",
-            "btn_txt": "GET 15% OFF MINIS",
+            "btn_txt": "15% OFF MINIS",
             "btn_link": "shopify:\/\/collections\/minis",
             "triggerbtn_txt": "",
             "triggerto": "",
