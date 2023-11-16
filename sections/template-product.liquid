@@ -38,7 +38,7 @@
 
 {% comment %} TODO End {% endcomment %}
 
-<div data-section-id="{{ section.id }}" data-template="product" data-product-upsell-title="{{ product.metafields.custom.upsell_cta }}" class="{% if product.has_only_default_variant %}only-default-variant{% endif %}">
+<div data-section-id="{{ section.id }}" data-template="product" class="{% if product.has_only_default_variant %}only-default-variant{% endif %}">
   {%- liquid
     assign productExcludeTag = settings.product_exclude_tag_text
     assign fluid_layout = section.settings.fluid_layout
@@ -278,7 +278,7 @@
  {% endfor %}
                         <div class="price-wrapper mt-2 d-flex align-items-center flex-wrap">
                             {%- if current_variant.compare_at_price > current_variant.price -%}
-                            <s class="text-gray-600 me-2 money" data-comparePrice {%- if current_variant.compare_at_price > current_variant.price -%}style="display:block"{%- endif -%}>{{ current_variant.compare_at_price | money }}</s>
+                            <s class="text-gray-600 me-2 money" {%- if current_variant.compare_at_price > current_variant.price -%} style="display:block" {%- endif -%} data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
                             {%- endif -%}
                             <span class="fw-bold actual-price money me-2" data-currentPrice>{{ current_variant.price | money }}</span>
                             {% unless product.tags contains "no_free_shipping" %}
