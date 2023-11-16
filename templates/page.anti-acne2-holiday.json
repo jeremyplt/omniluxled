@@ -15,7 +15,7 @@
         "btn_link": "shopify:\/\/products\/omnilux-clear",
         "content_position": "2",
         "custom_class": "",
-        "disclaimer": "*Codes apply to full-sized LED devices only"
+        "disclaimer": ""
       }
     },
     "a1064ed2-44b7-4aff-801b-b9497008532a": {
@@ -707,7 +707,7 @@
       ],
       "settings": {
         "compare_headline": "Why Omnilux",
-        "compare_section_cta": "SHOP & SAVE",
+        "compare_section_cta": "SHOP & SAVE $50",
         "compare_section_cta_link": "\/products\/omnilux-clear"
       }
     },
