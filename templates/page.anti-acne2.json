@@ -525,6 +525,42 @@
         "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9464d3162eb14de7b68d2622ac642ec9.mp4"
       }
     },
+    "80f31e4a-a908-47f0-9ba9-91d0752f6db0": {
+      "type": "hoox-studies",
+      "blocks": {
+        "230eee99-10c0-4a97-a5c7-a7b8af2349f2": {
+          "type": "usp",
+          "settings": {
+            "hoox_progress_bar_title": "Skin felt firmer",
+            "hoox_progress_bar_range": 0
+          }
+        },
+        "cb742410-b11e-4605-a8b9-3058149b74cc": {
+          "type": "usp",
+          "settings": {
+            "hoox_progress_bar_title": "",
+            "hoox_progress_bar_range": 0
+          }
+        },
+        "ea6f24cc-6b59-4687-a626-35267f5e1668": {
+          "type": "usp",
+          "settings": {
+            "hoox_progress_bar_title": "Skin felt firmer",
+            "hoox_progress_bar_range": 98
+          }
+        }
+      },
+      "block_order": [
+        "230eee99-10c0-4a97-a5c7-a7b8af2349f2",
+        "cb742410-b11e-4605-a8b9-3058149b74cc",
+        "ea6f24cc-6b59-4687-a626-35267f5e1668"
+      ],
+      "settings": {
+        "hoox_studies_title": "In clinical studies, Omnilux Contour users agreed:",
+        "hoox_studies_subtitle": "After 3 treatments per week for 4 weeks",
+        "hoox_studies_image": "shopify:\/\/shop_images\/clinical_studies_results.jpg"
+      }
+    },
     "ad12eab5-d111-48ee-803d-a63ff0223d40": {
       "type": "global-image-with-text",
       "blocks": {
@@ -1062,6 +1098,7 @@
     "967c77cb-ba82-48fa-9f0e-fe5c36129f30",
     "875cb50b-8a97-4cbc-8ad1-4bdb25824e96",
     "a268d18f-a513-4c06-b9c0-3b0c5b8124e2",
+    "80f31e4a-a908-47f0-9ba9-91d0752f6db0",
     "ad12eab5-d111-48ee-803d-a63ff0223d40",
     "ec0f761c-9d46-426c-b34e-7536509c5a1b",
     "07429a64-3eb5-4663-827f-f01a6fb8f5cd",
