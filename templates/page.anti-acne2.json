@@ -684,70 +684,12 @@
             "table_column_tick_seven_true": false,
             "table_column_tick_seven_false": false
           }
-        },
-        "010e10bf-864c-4f9c-ab9e-6f46786192cb": {
-          "type": "column-content",
-          "settings": {
-            "compare_highlight_column_color": "",
-            "table_column_highlight": false,
-            "table_column_title_one": "OTC Topicals",
-            "table_column_tick_one_true": false,
-            "table_column_tick_one_false": false,
-            "table_column_title_two": "Some",
-            "table_column_tick_two_true": false,
-            "table_column_tick_two_false": false,
-            "table_column_title_three": "Some",
-            "table_column_tick_three_true": false,
-            "table_column_tick_three_false": false,
-            "table_column_title_four": "",
-            "table_column_tick_four_true": false,
-            "table_column_tick_four_false": true,
-            "table_column_title_five": "",
-            "table_column_tick_five_true": false,
-            "table_column_tick_five_false": true,
-            "table_column_title_six": "",
-            "table_column_tick_six_true": false,
-            "table_column_tick_six_false": true,
-            "table_column_title_seven": "",
-            "table_column_tick_seven_true": false,
-            "table_column_tick_seven_false": false
-          }
-        },
-        "0d52dc97-7e65-4976-ace4-5daeea9f1e43": {
-          "type": "column-content",
-          "settings": {
-            "compare_highlight_column_color": "",
-            "table_column_highlight": false,
-            "table_column_title_one": "Prescription Products",
-            "table_column_tick_one_true": false,
-            "table_column_tick_one_false": false,
-            "table_column_title_two": "",
-            "table_column_tick_two_true": true,
-            "table_column_tick_two_false": false,
-            "table_column_title_three": "",
-            "table_column_tick_three_true": true,
-            "table_column_tick_three_false": false,
-            "table_column_title_four": "",
-            "table_column_tick_four_true": false,
-            "table_column_tick_four_false": true,
-            "table_column_title_five": "",
-            "table_column_tick_five_true": false,
-            "table_column_tick_five_false": true,
-            "table_column_title_six": "",
-            "table_column_tick_six_true": false,
-            "table_column_tick_six_false": true,
-            "table_column_title_seven": "",
-            "table_column_tick_seven_true": false,
-            "table_column_tick_seven_false": false
-          }
         }
       },
       "block_order": [
         "71b7c904-ab36-4b4a-b068-36f0f7b8a9ad",
         "307e3e5c-9116-49da-923d-71a7c96e64b1",
-        "6d2b4072-820f-4f33-b7cc-bd5cd15f6c51",
-        "010e10bf-864c-4f9c-ab9e-6f46786192cb",
-        "0d52dc97-7e65-4976-ace4-5daeea9f1e43"
+        "6d2b4072-820f-4f33-b7cc-bd5cd15f6c51"
       ],
       "settings": {
         "compare_headline": "The dermatologist’s choice",
