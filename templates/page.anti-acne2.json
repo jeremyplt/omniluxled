@@ -3,14 +3,15 @@
     "46303bd3-da3b-4cc4-9804-394607ef3f06": {
       "type": "image_hero_2",
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/Untitled_design_115_471db1ca-9374-4f7f-b1dc-851300332e2f.png",
-        "image_mobile": "shopify:\/\/shop_images\/Untitled-8.png",
+        "image_desktop": "shopify:\/\/shop_images\/mins-holiday-hero-desktop.png",
+        "image_mobile": "shopify:\/\/shop_images\/mins-holiday-hero-mobile.png",
         "title": "Mask on,acne gone.",
         "subtitle": "Clinically proven to stop breakouts in their tracks.",
         "btn_text": "SHOP NOW",
         "btn_link": "shopify:\/\/products\/omnilux-clear",
         "content_position": "2",
-        "custom_class": ""
+        "custom_class": "",
+        "disclaimer": ""
       }
     },
     "a1064ed2-44b7-4aff-801b-b9497008532a": {
@@ -749,7 +750,9 @@
         "0d52dc97-7e65-4976-ace4-5daeea9f1e43"
       ],
       "settings": {
-        "compare_headline": "Why Omnilux"
+        "compare_headline": "Why Omnilux",
+        "compare_section_cta": "SHOP & SAVE",
+        "compare_section_cta_link": "\/pages\/clear-assessment"
       }
     },
     "d1e8d9f9-4e0f-4ef5-af16-8f334ad3b8c9": {
