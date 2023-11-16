@@ -1929,3 +1929,10 @@ html .cbb-frequently-bought-recommendations-wrap {
   padding-left: 1rem;
   list-style: square
 }
+
+.hero-banner__disclaimer {
+  color: #ffffff;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 10px;
+}
