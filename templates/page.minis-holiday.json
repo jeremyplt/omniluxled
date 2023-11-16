@@ -145,7 +145,7 @@
         "featured_product_2": "skin-corrector",
         "section_bg_color": "#ffffff",
         "section_txt_color": "#000000",
-        "btn_text": "SAVE 15% NOW",
+        "btn_text": "15% OFF MINIS",
         "btn_url": "shopify:\/\/collections\/minis",
         "btn_type": "",
         "btn_variant": "primary",
@@ -283,6 +283,9 @@
     },
     "e38be45f-cef3-48f1-88e5-0e9ae227927c": {
       "type": "global-rightvideo-text-skincare",
+      "custom_css": [
+        ".btn.btn-white.d-flex.align-items-center.d-lg-inline-flex {border: solid 1px white; background-color: transparent; color: white;}"
+      ],
       "settings": {
         "fluid_layout": true,
         "border_bottom": false,
@@ -297,7 +300,7 @@
         "subtitle": "",
         "txt": "",
         "htmltxt": "<p>Sometimes the best gifts come in the smallest packages. Target your skin’s unique problem areas with our Mini LED devices paired with active-rich Hydrocolloid Patches for <strong> a powerhouse combo<\/strong>.  <\/p>\n<br>\n\n<ul class=\"twocolumns\">\n<li>Diminish fine lines + wrinkles<\/li>\n<li>Brighten complexion<\/li>\n<li>Reduce breakouts<\/li>\n<li>Calm redness + inflammation<\/li>\n<li>Lighten the look of age spots<\/li>\n<li>Restore fatigued skin<\/li>\n<\/ul>",
-        "btn_txt": "SHOP & SAVE 15%",
+        "btn_txt": "GET 15% OFF NOW",
         "btn_link": "shopify:\/\/collections\/minis",
         "btn_type": "",
         "btn_variant": "primary",
