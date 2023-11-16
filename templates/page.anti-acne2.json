@@ -620,12 +620,12 @@
         "71b7c904-ab36-4b4a-b068-36f0f7b8a9ad": {
           "type": "column-title",
           "settings": {
-            "first_column_title_one": "FDA Clearance",
-            "first_column_title_two": "Brand Specific Clinical Studies",
-            "first_column_title_three": "One Time Purchase",
-            "first_column_title_four": "100% Natural Treatment",
-            "first_column_title_five": "No Harsh Side Effects",
-            "first_column_title_six": ""
+            "first_column_title_one": "Medical-grade LEDs",
+            "first_column_title_two": "Backed by 40+ peer reviewed clinical studies",
+            "first_column_title_three": "FDA-cleared, TGA-approved, CE-certified",
+            "first_column_title_four": "Supported by 20+ years of brand research",
+            "first_column_title_five": "Ultra-contoured fit with adjustable straps",
+            "first_column_title_six": "2 year warranty"
           }
         },
         "307e3e5c-9116-49da-923d-71a7c96e64b1": {
@@ -653,7 +653,7 @@
             "table_column_tick_six_true": true,
             "table_column_tick_six_false": false,
             "table_column_title_seven": "",
-            "table_column_tick_seven_true": false,
+            "table_column_tick_seven_true": true,
             "table_column_tick_seven_false": false
           }
         },
@@ -672,17 +672,17 @@
             "table_column_tick_three_true": false,
             "table_column_tick_three_false": true,
             "table_column_title_four": "",
-            "table_column_tick_four_true": true,
-            "table_column_tick_four_false": false,
+            "table_column_tick_four_true": false,
+            "table_column_tick_four_false": true,
             "table_column_title_five": "",
-            "table_column_tick_five_true": true,
-            "table_column_tick_five_false": false,
+            "table_column_tick_five_true": false,
+            "table_column_tick_five_false": true,
             "table_column_title_six": "",
-            "table_column_tick_six_true": true,
-            "table_column_tick_six_false": false,
+            "table_column_tick_six_true": false,
+            "table_column_tick_six_false": true,
             "table_column_title_seven": "",
             "table_column_tick_seven_true": false,
-            "table_column_tick_seven_false": false
+            "table_column_tick_seven_false": true
           }
         }
       },
