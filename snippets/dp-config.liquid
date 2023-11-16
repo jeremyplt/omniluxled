@@ -258,14 +258,16 @@
             firstPrice = Shopify.formatMoney(price, dpMoneyFormat);
             secondPrice = firstPrice;
             if (!isNaN(taxPercent) && taxPercent > 0) {
-                secondPriceNotFormated =  (price / (1 + taxPercent / 100));
+                secondPriceNotFormated = Math.round(price + price * taxPercent / 100);
+                console.log("secondPriceNotFormated =", secondPriceNotFormated)
                 secondPrice = Shopify.formatMoney(secondPriceNotFormated, dpMoneyFormat);
             }
         } else {
             secondPrice = Shopify.formatMoney(price, dpMoneyFormat);
             firstPrice = secondPrice;
             if (!isNaN(taxPercent) && taxPercent > 0) {
-                firstPriceNotFormated = (price * (1 + taxPercent / 100));
+                firstPriceNotFormated = Math.round(price + price * taxPercent / 100);
+                console.log("firstPriceNotFormated =", firstPriceNotFormated)
                 firstPrice = Shopify.formatMoney(firstPriceNotFormated, dpMoneyFormat);
             }
         }
@@ -274,14 +276,19 @@
         compareAtPriceBlock = '';
         firstPriceBlock = '';
         secondPriceBlock = '';
+        
+        if(productTags.includes("BFD") && !isNaN(taxPercent)) {
+            compareAtPrice = Math.round((price + price * taxPercent / 100) / 0.85);
+        }
+
         if (parseInt(dp_show_compare_at_price) == 1 && parseInt(compareAtPrice) > 0 && parseInt(compareAtPrice) != parseInt(price)) {
-            compareAtPriceBlock = '<span class="dpCompareAtPrice" style="text-decoration: line-through;"><span>' + Shopify.formatMoney(compareAtPrice, dpMoneyFormat) + '</span></span>' + '<br/>';
+            compareAtPriceBlock = '<span class="dpCompareAtPrice" style="margin-right:5px; text-decoration: line-through;"><span>' + Shopify.formatMoney(compareAtPrice, dpMoneyFormat) + '</span></span>' + '<br/>';
         }
         if (parseInt(dpPriceTypeToShow) != 2) {
-            firstPriceBlock = '<span class="firstPrice" style="color:' + dp_tax_incl_color + '"><span class="firstPriceValue">' + firstPrice + '</span> <span class="firstPriceLabel">' + (dp_tax_incl_label != null ? dp_tax_incl_label : '') + '</span></span>';
+            firstPriceBlock = '<span class="firstPrice" style="color:' + dp_tax_incl_color + '"><span class="firstPriceValue">' + firstPrice + '</span> <span class="firstPriceLabel">' + (dp_tax_incl_label != null && taxPercent > 0 ? dp_tax_incl_label : '') + '</span></span>';
         }
         if (parseInt(dpPriceTypeToShow) != 1) {
-            secondPriceBlock = '<span class="secondPrice" style="color:' + dp_tax_excl_color + '"><span class="secondPriceValue">' + secondPrice + '</span> <span class="secondPriceLabel">' + (dp_tax_excl_label != null ? dp_tax_excl_label : '') + '</span></span>';
+            secondPriceBlock = '<span class="secondPrice" style="color:' + dp_tax_excl_color + '"><span class="secondPriceValue">' + secondPrice + '</span> <span class="secondPriceLabel">' + (dp_tax_excl_label != null && taxPercent > 0 ? dp_tax_excl_label : '') + '</span></span>';
         }
         dualPriceBlock = (compareAtPriceBlock + firstPriceBlock + '<br/>' + secondPriceBlock);
         if (parseInt(dp_first_price) == 1) {
