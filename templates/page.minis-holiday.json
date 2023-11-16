@@ -56,6 +56,9 @@
       "block_order": [
         "76a7a38c-9d9a-449e-8772-ccd3c36b9a06"
       ],
+      "custom_css": [
+        "h2.h1 {font-size: 40px;}"
+      ],
       "settings": {
         "enabled": true,
         "nav_arrows": false,
@@ -645,7 +648,8 @@
         ".swiper-navigation {display: none;}"
       ],
       "settings": {
-        "compare_headline": "The dermatologist's choice"
+        "compare_headline": "The dermatologist's choice",
+        "compare_section_cta": "SHOP & SAVE"
       }
     },
     "14b5f872-142c-436c-aa91-9be1f604a443": {
