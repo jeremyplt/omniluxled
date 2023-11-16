@@ -1,0 +1,1131 @@
+{
+    "sections": {
+      "46303bd3-da3b-4cc4-9804-394607ef3f06": {
+        "type": "image_hero_2",
+        "settings": {
+          "image_desktop": "shopify:\/\/shop_images\/Untitled_design_115_471db1ca-9374-4f7f-b1dc-851300332e2f.png",
+          "image_mobile": "shopify:\/\/shop_images\/Untitled-8.png",
+          "title": "Mask on,acne gone.",
+          "subtitle": "Clinically proven to stop breakouts in their tracks.",
+          "btn_text": "SHOP NOW",
+          "btn_link": "shopify:\/\/products\/omnilux-clear",
+          "content_position": "2",
+          "custom_class": ""
+        }
+      },
+      "a1064ed2-44b7-4aff-801b-b9497008532a": {
+        "type": "global-awards",
+        "blocks": {
+          "e77916dc-da94-453a-a528-15c6be534c80": {
+            "type": "content",
+            "settings": {
+              "icon_img": "shopify:\/\/shop_images\/Best_Light_Mask.png"
+            }
+          },
+          "fa1efac7-c2e0-4144-8909-47e2fde76405": {
+            "type": "content",
+            "settings": {
+              "icon_img": "shopify:\/\/shop_images\/WHSA.0025_2023_badges_winner_69879564-e1dd-413f-a4ba-f536e6b6e9ba.png"
+            }
+          },
+          "588f2e67-1456-41d0-b2db-d555bc261031": {
+            "type": "content",
+            "settings": {
+              "icon_img": "shopify:\/\/shop_images\/MCSK.0011_2022_winner_badges_winner_1.png"
+            }
+          },
+          "41e535f3-35f0-466d-9d27-b4a28de83243": {
+            "type": "content",
+            "settings": {
+              "icon_img": "shopify:\/\/shop_images\/NB_AwardSeal2022.png"
+            }
+          },
+          "ec2dc5e5-166c-426a-89e1-50bb3aac45ad": {
+            "type": "content",
+            "settings": {
+              "icon_img": "shopify:\/\/shop_images\/SELFHBA22_Black.png"
+            }
+          },
+          "a1a68aae-7414-430e-a223-4f38918c2840": {
+            "type": "content",
+            "settings": {
+              "icon_img": "shopify:\/\/shop_images\/Untitled_design_95.png"
+            }
+          }
+        },
+        "block_order": [
+          "e77916dc-da94-453a-a528-15c6be534c80",
+          "fa1efac7-c2e0-4144-8909-47e2fde76405",
+          "588f2e67-1456-41d0-b2db-d555bc261031",
+          "41e535f3-35f0-466d-9d27-b4a28de83243",
+          "ec2dc5e5-166c-426a-89e1-50bb3aac45ad",
+          "a1a68aae-7414-430e-a223-4f38918c2840"
+        ],
+        "settings": {
+          "fluid_layout": false,
+          "gradient_tone": false,
+          "heading_txt": "<h3 class=\"h4 section-title mb-3 fw-light\"> The #1 LED Mask for Men<\/h3>",
+          "section_bg_color": "",
+          "section_txt_color": "#000000",
+          "pt": 36,
+          "pb": 40,
+          "pts": 26,
+          "pbs": 24,
+          "border-top": false,
+          "border-bottom": false,
+          "css_class": ""
+        }
+      },
+      "654dfb70-8515-4329-b35a-c595a1c866e6": {
+        "type": "global-featured-product-single",
+        "settings": {
+          "fluid_layout": false,
+          "nav_dots": false,
+          "nav_arrows": false,
+          "nav_arrows_outside": false,
+          "heading_txt": "Omnilux Men",
+          "lead_txt": "FDA-cleared, dermatologist-recommended red light therapy device with clinically proven results for men's skin rejuvenation.",
+          "steps_captions": "Reduces fine lines and wrinkles\nImproves the look of under-eye bags and dark circles\nCalms inflammation, redness and irritation\nCorrects age spots, uneven skin tone, and texture",
+          "small_txt": "<font color=\"#c7030\"><strong>BLACK FRIDAY SALE!<br>Save $50: code GIFT1<\/strong><\/font>",
+          "home_featured_product": "omnilux-men",
+          "section_bg_color": "#ffffff",
+          "section_txt_color": "#000000",
+          "btn_text2": "",
+          "btn_url2": "",
+          "btn_type": "outline",
+          "btn_variant": "primary",
+          "btn_size": "",
+          "icon_img": "shopify:\/\/shop_images\/30_Day_Guarantee.png",
+          "icon_img2": "shopify:\/\/shop_images\/2_year_warranty.svg",
+          "icon_img3": "shopify:\/\/shop_images\/Icon_FDA_Cleared_png.png"
+        }
+      },
+      "ccd2af3c-3893-452e-8e9d-e82555f637c3": {
+        "type": "before-after-scroller",
+        "blocks": {
+          "09e51eaf-1740-42e1-bcb7-f1d459351c4c": {
+            "type": "review",
+            "settings": {
+              "review_image": "shopify:\/\/shop_images\/Frame_1000003047_copy_2.jpg",
+              "review_country": "shopify:\/\/shop_images\/usa.svg",
+              "review_percentage": "96%",
+              "percentage_text": "<p><strong>Satisfaction<\/strong> rate among patients<\/p>",
+              "review_title": "Guaranteed Results",
+              "review_description": "<ul><li>Rapid and significant reduction in acne lesions<\/li><li>100% of participants saw improvements within 4 weeks<\/li><\/ul>",
+              "review_author": "Ellen",
+              "review_verified_text": "Verified Buyer",
+              "footer_text": "<p><strong>8 Weeks<\/strong> for complete acne clearance in all patients<\/p>"
+            }
+          },
+          "75f1863e-b4aa-48be-b10c-718f622ed99e": {
+            "type": "review",
+            "settings": {
+              "review_image": "shopify:\/\/shop_images\/Frame_1000003047_copy.jpg",
+              "review_country": "shopify:\/\/shop_images\/usa.svg",
+              "review_percentage": "81%",
+              "percentage_text": "<p><strong>Reduction<\/strong> in acne lesions<\/p>",
+              "review_title": "Painless and Easy",
+              "review_description": "<ul><li>Completely pain- and side-effect-free treatment<\/li><li>Effective in treating both mild to severe acne<\/li><\/ul>",
+              "review_author": "Jess",
+              "review_verified_text": "Verified Buyer",
+              "footer_text": "<p><strong>100% of participants<\/strong> reported a major reduction in acne within 12 weeks<\/p>"
+            }
+          },
+          "671d2e9b-1e2c-425d-91c2-f59384c5d4ba": {
+            "type": "review",
+            "settings": {
+              "review_image": "shopify:\/\/shop_images\/Frame_1000003047.jpg",
+              "review_country": "shopify:\/\/shop_images\/usa.svg",
+              "review_percentage": "90%",
+              "percentage_text": "<p><strong>Improvement<\/strong> of facial skin<\/p>",
+              "review_title": "Reduced Acne",
+              "review_description": "<ul><li>Significant reduction in acne lesions within 4 weeks<\/li><li>No side effects reported<\/li><\/ul>",
+              "review_author": "Alana",
+              "review_verified_text": "Verified Buyer",
+              "footer_text": "<p><strong>92% of patients<\/strong> achieved a 90% decrease in acne<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "09e51eaf-1740-42e1-bcb7-f1d459351c4c",
+          "75f1863e-b4aa-48be-b10c-718f622ed99e",
+          "671d2e9b-1e2c-425d-91c2-f59384c5d4ba"
+        ],
+        "settings": {
+          "class_names": "",
+          "section_id": "#",
+          "section_title": "Real Stories, Real Impact"
+        }
+      },
+      "839046eb-ba08-422a-bf0e-7cc84c8fcd1c": {
+        "type": "global-results-slider",
+        "blocks": {
+          "3c02413c-74ba-4a82-9659-49fa448ebb3d": {
+            "type": "logowidthtext",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled_design_80.png",
+              "brfore_aftertext": true,
+              "contour_text": false
+            }
+          },
+          "a449d43c-ad15-4e43-96ff-6e9201536fa5": {
+            "type": "logowidthtext",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled_design_81.png",
+              "brfore_aftertext": true,
+              "contour_text": false
+            }
+          },
+          "5f918522-dd8b-48c8-8d62-dfb79bfa215a": {
+            "type": "logowidthtext",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled_design_83.png",
+              "brfore_aftertext": true,
+              "contour_text": false
+            }
+          },
+          "6e0fa4bf-9706-45d5-9b4c-bbc5282bdc3c": {
+            "type": "logowidthtext",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled_design_82.png",
+              "brfore_aftertext": true,
+              "contour_text": false
+            }
+          },
+          "a78dfc5b-b057-4cae-8e1a-4223391bbdf0": {
+            "type": "logowidthtext",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled_design_84.png",
+              "brfore_aftertext": true,
+              "contour_text": false
+            }
+          },
+          "7ca39ffb-9fc4-49ce-8abb-c22a52c912a3": {
+            "type": "logowidthtext",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled_design_86.png",
+              "brfore_aftertext": true,
+              "contour_text": false
+            }
+          },
+          "a8817a74-c624-45d4-9c7d-b4f83aacfcd7": {
+            "type": "logowidthtext",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/BA_WEBSITE_ea8a1dac-cf83-4c73-b824-7dd5be27a389.png",
+              "brfore_aftertext": true,
+              "contour_text": false
+            }
+          },
+          "a899817b-7974-49a1-9e64-733a20b22695": {
+            "type": "logowidthtext",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled_design_85.png",
+              "brfore_aftertext": true,
+              "contour_text": false
+            }
+          },
+          "7bfe6cea-38f3-4378-86f3-bb9fb39b0c41": {
+            "type": "logowidthtext",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled_design_97.png",
+              "brfore_aftertext": true,
+              "contour_text": false
+            }
+          },
+          "5868438a-6772-408e-aee1-ccb1193742d3": {
+            "type": "logowidthtext",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Untitled_design_99.png",
+              "brfore_aftertext": true,
+              "contour_text": false
+            }
+          }
+        },
+        "block_order": [
+          "3c02413c-74ba-4a82-9659-49fa448ebb3d",
+          "a449d43c-ad15-4e43-96ff-6e9201536fa5",
+          "5f918522-dd8b-48c8-8d62-dfb79bfa215a",
+          "6e0fa4bf-9706-45d5-9b4c-bbc5282bdc3c",
+          "a78dfc5b-b057-4cae-8e1a-4223391bbdf0",
+          "7ca39ffb-9fc4-49ce-8abb-c22a52c912a3",
+          "a8817a74-c624-45d4-9c7d-b4f83aacfcd7",
+          "a899817b-7974-49a1-9e64-733a20b22695",
+          "7bfe6cea-38f3-4378-86f3-bb9fb39b0c41",
+          "5868438a-6772-408e-aee1-ccb1193742d3"
+        ],
+        "disabled": true,
+        "settings": {
+          "fluid_layout": false,
+          "heading_style": "heading_style_2",
+          "pt": 66,
+          "pb": 77,
+          "pts": 40,
+          "pbs": 40,
+          "border-top": true,
+          "border-bottom": false,
+          "heading_txt": "Real skin, real results",
+          "txt": "“My skin is NOTICEABLY less red, the inflammation of my breakouts is significantly reduced… and my breakouts clear 3-5 days faster than they do on their own. I know this will be something I rely on for as long as I continue to have acne prone skin.”",
+          "btn_txt": "",
+          "btn_link": "",
+          "btn_type": "",
+          "btn_variant": "dark",
+          "btn_size": "",
+          "section_bg_color": "#ffffff",
+          "section_text_color": "#000000",
+          "autoplay_enable": false,
+          "loop_enable_": false,
+          "slider_enable": true,
+          "nav_arrows": true,
+          "nav_dots": false
+        }
+      },
+      "main": {
+        "type": "global-features-grid",
+        "blocks": {
+          "bdfa8f76-8f87-4aff-a0af-3a2ba0d05c70": {
+            "type": "content",
+            "settings": {
+              "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_5.svg?v=1669721646",
+              "title": "",
+              "txt": ""
+            }
+          },
+          "b99c28ed-7dca-411b-b965-4963e53c0c03": {
+            "type": "content",
+            "settings": {
+              "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_1.svg?v=1669721646",
+              "title": "",
+              "txt": ""
+            }
+          },
+          "f9d1e1fa-da02-4f3e-aa76-f3e7be086230": {
+            "type": "content",
+            "settings": {
+              "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Natural_treatment.svg?v=1673250978",
+              "title": "",
+              "txt": ""
+            }
+          },
+          "c7b71fcb-7d15-4426-969b-40fde5018694": {
+            "type": "content",
+            "settings": {
+              "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Satisfaction_guaranteed_7beecd27-d222-4342-bfb5-0566ed2fe819.svg?v=1673250978",
+              "title": "",
+              "txt": ""
+            }
+          },
+          "2d1b2fad-0914-49b7-8ebf-f9efde748cb9": {
+            "type": "content",
+            "settings": {
+              "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/medical-grade_4.svg?v=1669721646",
+              "title": "",
+              "txt": ""
+            }
+          }
+        },
+        "block_order": [
+          "bdfa8f76-8f87-4aff-a0af-3a2ba0d05c70",
+          "b99c28ed-7dca-411b-b965-4963e53c0c03",
+          "f9d1e1fa-da02-4f3e-aa76-f3e7be086230",
+          "c7b71fcb-7d15-4426-969b-40fde5018694",
+          "2d1b2fad-0914-49b7-8ebf-f9efde748cb9"
+        ],
+        "disabled": true,
+        "settings": {
+          "fluid_layout": false,
+          "gradient_tone": true,
+          "icon_layout": false,
+          "grid_size": "2",
+          "heading_txt": "",
+          "section_bg_color": "rgba(0,0,0,0)",
+          "section_txt_color": "#000000",
+          "pt": 60,
+          "pb": 49,
+          "pts": 40,
+          "pbs": 40,
+          "border-top": false,
+          "border-bottom": false,
+          "css_class": ""
+        }
+      },
+      "7d81bab4-7cd3-45cc-a15e-85816015c1b0": {
+        "type": "global-image-with-text",
+        "blocks": {
+          "266a93de-7aeb-4365-81fb-ea42cdc13f11": {
+            "type": "image-with-text-block",
+            "settings": {
+              "fullwidth_content": false,
+              "heading_txt": "Loved by Dermatologists",
+              "max_width": 570,
+              "txt": "<p>\"I am incredibly excited for the first of its kind men's LED device by Omnilux. Mens skin has been scientifically demonstrated to be different from women's, and an LED mask tailored specifically for men is a game-changer in this industry. I treat a lot of men in my clinic and can now recommend Omnilux's mask for excellent results at home.\"<br\/><br\/><strong>Dr. Jared Jagdeo, MD, <\/strong><br\/>Associate Professor of Dermatology, SUNY Downstate Medical Center<\/p>",
+              "txt_liquid": "",
+              "step_heading": "",
+              "steps_captions": "",
+              "steps_captions_2": "",
+              "btn_txt": "",
+              "btn_link": "",
+              "triggerbtn_txt": "",
+              "triggerto": "",
+              "btn_type": "",
+              "btn_variant": "primary",
+              "btn_size": "",
+              "btn_txt_watch": "",
+              "watch_video_id": "",
+              "watch_mobile_video_id": "",
+              "btn_type_watch": "",
+              "btn_variant_watch": "primary",
+              "btn_size_watch": "",
+              "link_txt": "",
+              "link_url": "",
+              "image": "shopify:\/\/shop_images\/Dr._Jared_Jagdeo_-_Copy.jpg",
+              "alignment": "text-left",
+              "image_alignment": "right"
+            }
+          }
+        },
+        "block_order": [
+          "266a93de-7aeb-4365-81fb-ea42cdc13f11"
+        ],
+        "settings": {
+          "fluid_layout": true,
+          "enable_background_tone": false,
+          "border_bottom": true,
+          "section_bg_color": "rgba(0,0,0,0)",
+          "section_text_color": "#000000"
+        }
+      },
+      "967c77cb-ba82-48fa-9f0e-fe5c36129f30": {
+        "type": "global-title",
+        "disabled": true,
+        "custom_css": [
+          ".h3 {text-shadow: none; color: #000; text-align: center; margin: 0 auto;}"
+        ],
+        "settings": {
+          "fluid_layout": true,
+          "css_class": "",
+          "heading_txt": "How to use:",
+          "btn_txt": "",
+          "btn_link": "",
+          "btn_type": "",
+          "btn_variant": "dark",
+          "btn_size": "",
+          "btn_txt2": "",
+          "btn_link2": "",
+          "btn_type2": "",
+          "btn_variant2": "dark",
+          "btn_size2": "",
+          "btn_txt3": "",
+          "btn_link3": "",
+          "btn_type3": "",
+          "btn_variant3": "dark",
+          "btn_size3": "",
+          "section_bg_color": "#ffffff",
+          "section_text_color": "#000000"
+        }
+      },
+      "875cb50b-8a97-4cbc-8ad1-4bdb25824e96": {
+        "type": "global-accordian-slider",
+        "blocks": {
+          "1d898110-3cd8-4fe4-a106-3f2687232166": {
+            "type": "clear_image_card",
+            "settings": {
+              "clear_skin_image": "shopify:\/\/shop_images\/Image_6_V2.png",
+              "skin_text": "Visible blue & red light is absorbed into the skin and dermis."
+            }
+          },
+          "b20f596c-ed92-43e2-ad1c-c784df11c3da": {
+            "type": "clear_image_card",
+            "settings": {
+              "clear_skin_image": "shopify:\/\/shop_images\/Image_7_V2.png",
+              "skin_text": "Blue light penetrates the superficial levels of the skin, eliminating acne causing bacteria called porphyrins (P.acne)."
+            }
+          },
+          "841d0d56-cc83-4007-b9af-66fcb4168315": {
+            "type": "clear_image_card",
+            "settings": {
+              "clear_skin_image": "shopify:\/\/shop_images\/Image_8_V2.png",
+              "skin_text": "Deeper penetrating red light stimulates an anti-inflammatory response, reducing redness and stimulating a healing response."
+            }
+          },
+          "f9e77d32-36ae-4a1a-9f39-598de7b2511f": {
+            "type": "clear_image_card",
+            "settings": {
+              "clear_skin_image": "shopify:\/\/shop_images\/Image_9_V2.png",
+              "skin_text": "A completely non-invasive and natural\ntreatment - Omnilux Clear uses the skin’s natural responses to treat acne, leaving clear and brilliant skin."
+            }
+          }
+        },
+        "block_order": [
+          "1d898110-3cd8-4fe4-a106-3f2687232166",
+          "b20f596c-ed92-43e2-ad1c-c784df11c3da",
+          "841d0d56-cc83-4007-b9af-66fcb4168315",
+          "f9e77d32-36ae-4a1a-9f39-598de7b2511f"
+        ],
+        "disabled": true,
+        "settings": {
+          "heading_txt": "Awesome Heading",
+          "img_text1": "Awesome Sub Heading",
+          "img_text2": "",
+          "img_text3": "",
+          "alignment": "text-left",
+          "image_alignment": "left",
+          "clear_heading_txt1": "",
+          "clear_heading_txt2": "",
+          "clear_heading_txt3": "",
+          "clear_heading_txt4": "",
+          "teatementpara": "",
+          "Clear_image_text1": "",
+          "Clear_image_text2": ""
+        }
+      },
+      "a268d18f-a513-4c06-b9c0-3b0c5b8124e2": {
+        "type": "hoox-how-to-with-button",
+        "blocks": {
+          "f4e4b676-c69e-4a6e-b3e7-d0d9302dbbce": {
+            "type": "usp",
+            "settings": {
+              "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_3.png?v=1698705996",
+              "hoox_how_to_text": "dsfsdfsdfsdfsdf"
+            }
+          },
+          "d8a91909-57bc-44b4-966e-1e1b9ecdda74": {
+            "type": "usp",
+            "settings": {
+              "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_3.png?v=1698705996",
+              "hoox_how_to_text": "dfsdfsdfsdf"
+            }
+          },
+          "9869c797-a188-4cc4-b15e-8ffb12e4e317": {
+            "type": "usp",
+            "settings": {
+              "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_3.png?v=1698705996",
+              "hoox_how_to_text": "sfsdfsdf"
+            }
+          },
+          "0ad4bdab-7ce3-44f8-bcaa-baed137ee4f3": {
+            "type": "usp",
+            "settings": {
+              "hoox_how_to_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/MINI_HOW_TO_GLOW_UP_PDPS_3.png?v=1698705996s",
+              "hoox_how_to_text": "dfsfsdf"
+            }
+          }
+        },
+        "block_order": [
+          "f4e4b676-c69e-4a6e-b3e7-d0d9302dbbce",
+          "d8a91909-57bc-44b4-966e-1e1b9ecdda74",
+          "9869c797-a188-4cc4-b15e-8ffb12e4e317",
+          "0ad4bdab-7ce3-44f8-bcaa-baed137ee4f3"
+        ],
+        "settings": {
+          "enable_section": "true",
+          "hoox_how_to_title": "How to use:",
+          "hoox_how_to_subtitle": "Unlock your best skin with three to five 10-minute treatments per week.",
+          "btn_txt_watch": "Watch how-to video",
+          "watch_video_id": ""
+        }
+      },
+      "ad12eab5-d111-48ee-803d-a63ff0223d40": {
+        "type": "global-image-with-text",
+        "blocks": {
+          "1aa90c64-c7b0-4673-b61a-741fe3d7e644": {
+            "type": "image-with-text-block",
+            "settings": {
+              "fullwidth_content": false,
+              "heading_txt": "\"This is the best my skin has been, ever.\"",
+              "max_width": 530,
+              "txt": "<p>Omnilux user, Jess, had suffered from cystic acne for years. Before resorting to harsh prescription treatments, Jess invested in the Omnilux Clear mask and experienced life changing results.<br\/><br\/><em>\"I was collectively spending more money on skincare than I did on this one purchase of the Omnilux, which will continue to treat me for free. <\/em><em><strong>My skin texture has improved so so so much<\/strong><\/em><em>. This is the best my skin has been, ever. It has been the greatest gift.\"<\/em><\/p>",
+              "txt_liquid": "",
+              "step_heading": "",
+              "steps_captions": "",
+              "steps_captions_2": "",
+              "btn_txt": "",
+              "btn_link": "",
+              "triggerbtn_txt": "",
+              "triggerto": "",
+              "btn_type": "",
+              "btn_variant": "primary",
+              "btn_size": "",
+              "btn_txt_watch": "WATCH JESS' STORY",
+              "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/85237b5bbecd480ca13bd969a2859765.mp4",
+              "watch_mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/85237b5bbecd480ca13bd969a2859765.mp4",
+              "btn_type_watch": "",
+              "btn_variant_watch": "primary",
+              "btn_size_watch": "",
+              "link_txt": "",
+              "link_url": "",
+              "image": "shopify:\/\/shop_images\/Before_12.png",
+              "alignment": "text-left",
+              "image_alignment": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1aa90c64-c7b0-4673-b61a-741fe3d7e644"
+        ],
+        "settings": {
+          "fluid_layout": true,
+          "enable_background_tone": false,
+          "border_bottom": true,
+          "section_bg_color": "#ffffff",
+          "section_text_color": "#000000"
+        }
+      },
+      "ec0f761c-9d46-426c-b34e-7536509c5a1b": {
+        "type": "template-faq-fullwidth",
+        "blocks": {
+          "62df5db6-9f12-45e1-8ec8-980edaa8cb7b": {
+            "type": "question",
+            "settings": {
+              "title": "What is Omnilux Clear?",
+              "answer": "Based on the world’s leading Omnilux Medical light therapy technology, our Clear mask is an FDA cleared, flexible, portable, and affordable home use device with clinically proven results for acne. The Clear device uses blue and red light emitting diodes (LEDs) to eliminate bacteria on the surface of the skin to neutralize acne flare ups."
+            }
+          },
+          "977bf93f-6d40-48d7-9bd2-d5ca1fcd2f1e": {
+            "type": "question",
+            "settings": {
+              "title": "How does it work?",
+              "answer": "Normal skin bacteria colonize in the skin's pores causing the inflammation and redness of the skin that we associate with acne. The bacteria responsible for this inflammation (P.acnes), produces natural chemicals called porphyrins, which are sensitive to the wavelengths of light used by Omnilux Clear (blue and red)."
+            }
+          },
+          "e9738bb5-a442-4d7e-bdb5-df9cbe051f28": {
+            "type": "question",
+            "settings": {
+              "title": "What is the recommended treatment regimen for Clear?",
+              "answer": "We recommend using the Clear device 4 times per week for 6 weeks. After the initial 6 weeks, you should only use Clear at the earliest signs of breakout. PLEASE NOTE: You should not use the Clear device for more than 6 weeks consecutively. After 6 weeks we recommend giving your skin a break."
+            }
+          },
+          "f0b0ef0a-e38f-493c-9648-7878124ce70b": {
+            "type": "question",
+            "settings": {
+              "title": "How does Omnilux Clear differ from Omnilux Contour Face and Omnilux Men?",
+              "answer": "Omnilux Clear is specifically designed to treat mild to moderate acne vulgaris and combines blue and red light. Omnilux Contour Face and Omnilux Men are specifically designed for anti-aging and skin-damage prevention and combine red and near infra-red light. Although all devices have red light, they target two completely different skin concerns."
+            }
+          }
+        },
+        "block_order": [
+          "62df5db6-9f12-45e1-8ec8-980edaa8cb7b",
+          "977bf93f-6d40-48d7-9bd2-d5ca1fcd2f1e",
+          "e9738bb5-a442-4d7e-bdb5-df9cbe051f28",
+          "f0b0ef0a-e38f-493c-9648-7878124ce70b"
+        ],
+        "settings": {
+          "enable": true,
+          "heading": "Frequently Asked Questions"
+        }
+      },
+      "07429a64-3eb5-4663-827f-f01a6fb8f5cd": {
+        "type": "hoox-comparison-table",
+        "blocks": {
+          "71b7c904-ab36-4b4a-b068-36f0f7b8a9ad": {
+            "type": "column-title",
+            "settings": {
+              "first_column_title_one": "FDA Clearance",
+              "first_column_title_two": "Brand Specific Clinical Studies",
+              "first_column_title_three": "One Time Purchase",
+              "first_column_title_four": "100% Natural Treatment",
+              "first_column_title_five": "No Harsh Side Effects",
+              "first_column_title_six": ""
+            }
+          },
+          "307e3e5c-9116-49da-923d-71a7c96e64b1": {
+            "type": "column-content",
+            "settings": {
+              "compare_highlight_column_color": "#b67d5b",
+              "table_column_highlight": true,
+              "table_column_title_one": "",
+              "table_column_tick_one_true": false,
+              "table_column_tick_one_false": false,
+              "table_column_one_img": "shopify:\/\/shop_images\/OmniluxClear-Logo.png",
+              "table_column_title_two": "",
+              "table_column_tick_two_true": true,
+              "table_column_tick_two_false": false,
+              "table_column_title_three": "",
+              "table_column_tick_three_true": true,
+              "table_column_tick_three_false": false,
+              "table_column_title_four": "",
+              "table_column_tick_four_true": true,
+              "table_column_tick_four_false": false,
+              "table_column_title_five": "",
+              "table_column_tick_five_true": true,
+              "table_column_tick_five_false": false,
+              "table_column_title_six": "",
+              "table_column_tick_six_true": true,
+              "table_column_tick_six_false": false,
+              "table_column_title_seven": "",
+              "table_column_tick_seven_true": false,
+              "table_column_tick_seven_false": false
+            }
+          },
+          "6d2b4072-820f-4f33-b7cc-bd5cd15f6c51": {
+            "type": "column-content",
+            "settings": {
+              "compare_highlight_column_color": "",
+              "table_column_highlight": false,
+              "table_column_title_one": "Other LED Devices",
+              "table_column_tick_one_true": false,
+              "table_column_tick_one_false": false,
+              "table_column_title_two": "",
+              "table_column_tick_two_true": false,
+              "table_column_tick_two_false": true,
+              "table_column_title_three": "",
+              "table_column_tick_three_true": false,
+              "table_column_tick_three_false": true,
+              "table_column_title_four": "",
+              "table_column_tick_four_true": true,
+              "table_column_tick_four_false": false,
+              "table_column_title_five": "",
+              "table_column_tick_five_true": true,
+              "table_column_tick_five_false": false,
+              "table_column_title_six": "",
+              "table_column_tick_six_true": true,
+              "table_column_tick_six_false": false,
+              "table_column_title_seven": "",
+              "table_column_tick_seven_true": false,
+              "table_column_tick_seven_false": false
+            }
+          },
+          "010e10bf-864c-4f9c-ab9e-6f46786192cb": {
+            "type": "column-content",
+            "settings": {
+              "compare_highlight_column_color": "",
+              "table_column_highlight": false,
+              "table_column_title_one": "OTC Topicals",
+              "table_column_tick_one_true": false,
+              "table_column_tick_one_false": false,
+              "table_column_title_two": "Some",
+              "table_column_tick_two_true": false,
+              "table_column_tick_two_false": false,
+              "table_column_title_three": "Some",
+              "table_column_tick_three_true": false,
+              "table_column_tick_three_false": false,
+              "table_column_title_four": "",
+              "table_column_tick_four_true": false,
+              "table_column_tick_four_false": true,
+              "table_column_title_five": "",
+              "table_column_tick_five_true": false,
+              "table_column_tick_five_false": true,
+              "table_column_title_six": "",
+              "table_column_tick_six_true": false,
+              "table_column_tick_six_false": true,
+              "table_column_title_seven": "",
+              "table_column_tick_seven_true": false,
+              "table_column_tick_seven_false": false
+            }
+          },
+          "0d52dc97-7e65-4976-ace4-5daeea9f1e43": {
+            "type": "column-content",
+            "settings": {
+              "compare_highlight_column_color": "",
+              "table_column_highlight": false,
+              "table_column_title_one": "Prescription Products",
+              "table_column_tick_one_true": false,
+              "table_column_tick_one_false": false,
+              "table_column_title_two": "",
+              "table_column_tick_two_true": true,
+              "table_column_tick_two_false": false,
+              "table_column_title_three": "",
+              "table_column_tick_three_true": true,
+              "table_column_tick_three_false": false,
+              "table_column_title_four": "",
+              "table_column_tick_four_true": false,
+              "table_column_tick_four_false": true,
+              "table_column_title_five": "",
+              "table_column_tick_five_true": false,
+              "table_column_tick_five_false": true,
+              "table_column_title_six": "",
+              "table_column_tick_six_true": false,
+              "table_column_tick_six_false": true,
+              "table_column_title_seven": "",
+              "table_column_tick_seven_true": false,
+              "table_column_tick_seven_false": false
+            }
+          }
+        },
+        "block_order": [
+          "71b7c904-ab36-4b4a-b068-36f0f7b8a9ad",
+          "307e3e5c-9116-49da-923d-71a7c96e64b1",
+          "6d2b4072-820f-4f33-b7cc-bd5cd15f6c51",
+          "010e10bf-864c-4f9c-ab9e-6f46786192cb",
+          "0d52dc97-7e65-4976-ace4-5daeea9f1e43"
+        ],
+        "settings": {
+          "compare_headline": "Why Omnilux"
+        }
+      },
+      "d1e8d9f9-4e0f-4ef5-af16-8f334ad3b8c9": {
+        "type": "global-image-with-text",
+        "blocks": {
+          "703b5f98-b80c-4f4e-bded-6e03143c3c1c": {
+            "type": "image-with-text-block",
+            "disabled": true,
+            "settings": {
+              "fullwidth_content": false,
+              "heading_txt": "Why Omnilux",
+              "max_width": 530,
+              "txt": "",
+              "txt_liquid": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/FDA_Clearance__1.png?v=1695257057\" style=\"margin:0.5rem 0 1rem 0;\">",
+              "step_heading": "",
+              "steps_captions": "",
+              "steps_captions_2": "",
+              "btn_txt": "take the clear self-assessment",
+              "btn_link": "shopify:\/\/pages\/clear-assessment",
+              "triggerbtn_txt": "",
+              "triggerto": "",
+              "btn_type": "",
+              "btn_variant": "primary",
+              "btn_size": "",
+              "btn_txt_watch": "",
+              "watch_video_id": "",
+              "watch_mobile_video_id": "",
+              "btn_type_watch": "",
+              "btn_variant_watch": "primary",
+              "btn_size_watch": "",
+              "link_txt": "",
+              "link_url": "",
+              "image": "shopify:\/\/shop_images\/Before_21.png",
+              "alignment": "text-left",
+              "image_alignment": "right"
+            }
+          },
+          "d4b24e54-b7f8-43ab-8885-537da6bd6160": {
+            "type": "image-with-text-block",
+            "settings": {
+              "fullwidth_content": false,
+              "heading_txt": "Show me the clinical data!",
+              "max_width": 420,
+              "txt": "",
+              "txt_liquid": "",
+              "step_heading": "",
+              "steps_captions": "<strong>Journal of Cosmetic Laser Therapy:<\/strong><em> A Study to Determine the Effect of Combination Blue (415 Nm) and Near-Infrared (830 Nm) Light-Emitting Diode (LED) Therapy for Moderate Acne Vulgaris<\/em>\n<strong>Lasers in Surgery and Medicine:<\/strong><em> Blue and Red Light Combination LED Phototherapy for Acne Vulgaris in Patients with Skin Phototype IV<\/em>\n<strong>Journal of Cosmetic and Laser Therapy:<\/strong><em> Light-Emitting Diode 415 nm in the Treatment of Inflammatory Acne<\/em>\n<strong>Journal of Cosmetic and Laser Therapy:<\/strong><em> Combination Blue (415 nm) and Red (633 nm) LED Phototherapy in the Treatment of Mild to Severe Acne Vulgaris<\/em>\n<strong>Journal of Dermatological Treatment:<\/strong><em> An Open Study to Determine the Efficacy of Blue Light in the Treatment of Mild to Moderate Acne<\/em>",
+              "steps_captions_2": "",
+              "btn_txt": "READ CLINICAL STUDIES",
+              "btn_link": "shopify:\/\/pages\/clinical-bibliography",
+              "triggerbtn_txt": "",
+              "triggerto": "",
+              "btn_type": "",
+              "btn_variant": "primary",
+              "btn_size": "",
+              "btn_txt_watch": "",
+              "watch_video_id": "",
+              "watch_mobile_video_id": "",
+              "btn_type_watch": "",
+              "btn_variant_watch": "primary",
+              "btn_size_watch": "",
+              "link_txt": "",
+              "link_url": "",
+              "image": "shopify:\/\/shop_images\/Untitled_design_62.png",
+              "alignment": "text-left",
+              "image_alignment": "left"
+            }
+          }
+        },
+        "block_order": [
+          "703b5f98-b80c-4f4e-bded-6e03143c3c1c",
+          "d4b24e54-b7f8-43ab-8885-537da6bd6160"
+        ],
+        "settings": {
+          "fluid_layout": true,
+          "enable_background_tone": true,
+          "border_bottom": false,
+          "section_bg_color": "rgba(0,0,0,0)",
+          "section_text_color": "#000000"
+        }
+      },
+      "cc65e22a-b26b-40d1-ac1e-c6ff657ff136": {
+        "type": "global-testimonial",
+        "blocks": {
+          "4b0f191d-31ae-4309-a9aa-90e3cec9c9d2": {
+            "type": "logowidthtext",
+            "settings": {
+              "title": "<p>I’ve struggled with acne for years and have tried several aggressive prescription treatments. Nothing was a long-term solution until I found Clear. My results have been incredible with absolutely NO side effects.<\/p>",
+              "quote_author": "Madison",
+              "alignment": "text-center"
+            }
+          },
+          "33e76f9f-6b2e-4982-9e01-1b05ee48c0f3": {
+            "type": "logowidthtext",
+            "settings": {
+              "title": "<p>I suffer from breakouts and inflammation due to hormonal and stress-induced acne. The Clear mask has reduced the overall redness and my breakouts clear up so much faster than they used to. This device has definitely brought my confidence back – just in time for college starting in the fall!<\/p>",
+              "quote_author": "Kylie",
+              "alignment": "text-center"
+            }
+          },
+          "cf8d096d-2200-44c5-bd4d-3a36b3a3bf03": {
+            "type": "logowidthtext",
+            "settings": {
+              "title": "<p>I have seen rapid results with Omnilux Clear – within just the first week my redness was reduced. By the second week, I saw less acne. The third week I experienced a softer and smoother complexion. Overall, my skin looks more even and much clearer than before!<\/p>",
+              "quote_author": "Daniela",
+              "alignment": "text-center"
+            }
+          },
+          "a91e52e8-ddd4-4b72-9ecb-3d00d4ff330f": {
+            "type": "logowidthtext",
+            "settings": {
+              "title": "<p>Love this mask! Using it for hormonal acne breakouts. Really helping to keep acne at bay!<\/p>",
+              "quote_author": "Maria",
+              "alignment": "text-center"
+            }
+          },
+          "4b0e629f-4380-4cc9-8c3c-3011580869fe": {
+            "type": "logowidthtext",
+            "settings": {
+              "title": "<p>So far with using the Omnilux Clear, I’ve noticed a significant decrease in my inflammation on my face. This is a must in my skincare routine.<\/p>",
+              "quote_author": "Nicole",
+              "alignment": "text-center"
+            }
+          },
+          "162e00e6-e12e-4c47-b151-8b5f093f1a6c": {
+            "type": "logowidthtext",
+            "settings": {
+              "title": "<p>This device works. I use it regularly and found it has helped clear up breakouts and reduce the size of new ones. My skin is stubborn and the Omnilux Clear gives it the extra support.<\/p>",
+              "quote_author": "Tracy",
+              "alignment": "text-center"
+            }
+          }
+        },
+        "block_order": [
+          "4b0f191d-31ae-4309-a9aa-90e3cec9c9d2",
+          "33e76f9f-6b2e-4982-9e01-1b05ee48c0f3",
+          "cf8d096d-2200-44c5-bd4d-3a36b3a3bf03",
+          "a91e52e8-ddd4-4b72-9ecb-3d00d4ff330f",
+          "4b0e629f-4380-4cc9-8c3c-3011580869fe",
+          "162e00e6-e12e-4c47-b151-8b5f093f1a6c"
+        ],
+        "disabled": true,
+        "custom_css": [
+          "h3 {color: #000; text-shadow: none;}"
+        ],
+        "settings": {
+          "fluid_layout": false,
+          "border_bottom": false,
+          "heading_txt": "What  they say",
+          "section_bg_color": "rgba(0,0,0,0)",
+          "section_text_color": "#000000",
+          "autoplay_enable": true,
+          "nav_arrows": true,
+          "nav_dots": true
+        }
+      },
+      "ab62fd12-1370-4dd1-8aca-97e40474aa60": {
+        "type": "global-reviews-slider",
+        "blocks": {
+          "1e350c9a-858f-4858-a7de-53efd4f1453b": {
+            "type": "logowidthtext",
+            "settings": {
+              "watch_video_id": "https:\/\/www.youtube.com\/embed\/BcT9M0Ye6Is?\nstart=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+            }
+          },
+          "d53df187-bfb7-4daf-9a5e-290efbe7680d": {
+            "type": "logowidthtext",
+            "settings": {
+              "watch_video_id": "https:\/\/www.youtube.com\/embed\/iZ3gGDVdRH8?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+            }
+          },
+          "3a9b0594-4e75-4e10-8915-9e876ed00e24": {
+            "type": "logowidthtext",
+            "settings": {
+              "watch_video_id": "https:\/\/www.youtube.com\/embed\/-Ph4qs79HBA?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+            }
+          },
+          "caa63c70-9179-4e97-aa06-87f245da5811": {
+            "type": "logowidthtext",
+            "settings": {
+              "watch_video_id": "https:\/\/www.youtube.com\/embed\/fdYkRP4jUwo?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+            }
+          },
+          "5e640109-af35-4c27-af0f-b5ef1af2a2d4": {
+            "type": "logowidthtext",
+            "settings": {
+              "watch_video_id": "https:\/\/www.youtube.com\/embed\/EA4E5y-pEL4?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+            }
+          },
+          "dc406bf3-5d88-457b-be62-46cdb596149c": {
+            "type": "logowidthtext",
+            "settings": {
+              "watch_video_id": "https:\/\/www.youtube.com\/embed\/MVKhth_oRdw?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+            }
+          },
+          "744978f7-82c8-4f71-a276-ef96e137f247": {
+            "type": "logowidthtext",
+            "settings": {
+              "watch_video_id": "https:\/\/www.youtube.com\/embed\/EmKJfqoLXgk?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
+            }
+          }
+        },
+        "block_order": [
+          "1e350c9a-858f-4858-a7de-53efd4f1453b",
+          "d53df187-bfb7-4daf-9a5e-290efbe7680d",
+          "3a9b0594-4e75-4e10-8915-9e876ed00e24",
+          "caa63c70-9179-4e97-aa06-87f245da5811",
+          "5e640109-af35-4c27-af0f-b5ef1af2a2d4",
+          "dc406bf3-5d88-457b-be62-46cdb596149c",
+          "744978f7-82c8-4f71-a276-ef96e137f247"
+        ],
+        "disabled": true,
+        "custom_css": [
+          ".h2 {color: #000; text-shadow: none;}"
+        ],
+        "settings": {
+          "fluid_layout": false,
+          "heading_style": "heading_style_1",
+          "pt": 20,
+          "pb": 58,
+          "pts": 10,
+          "pbs": 70,
+          "border-top": false,
+          "border-bottom": false,
+          "heading_txt": "Watch video reviews",
+          "txt": "",
+          "btn_txt": "",
+          "btn_link": "",
+          "btn_type": "",
+          "btn_variant": "dark",
+          "btn_size": "",
+          "section_bg_color": "rgba(0,0,0,0)",
+          "section_text_color": "#000000",
+          "autoplay_enable": false,
+          "slider_enable": true,
+          "nav_arrows": true,
+          "nav_dots": false
+        }
+      },
+      "a618eef4-fb94-4608-b62a-a035c206de40": {
+        "type": "custom-liquid",
+        "settings": {
+          "custom_liquid": "<div class=\"desktopreviewstitle\"><div class=\"container is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<div class=\"starreviews\"><div data-oke-star-rating data-oke-reviews-product-id=\"shopify-6760463892642\">{{ product.metafields.okendo.StarRatingSnippet }} <span class=\"reviewstxt\">Reviews<\/span>\n<\/div><\/div><\/div>\n<p>We've helped 125,000+ customers achieve their skin goals.<\/p>\n<\/div>"
+        }
+      },
+      "2fc01c3d-fdb9-4eed-9a67-450b2c83d9e3": {
+        "type": "circle-video-menu-desktop",
+        "blocks": {
+          "8a0a74ff-89e2-45b7-9b2c-dca79c541c13": {
+            "type": "circle-link",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ariana.png",
+              "label": "Ariana's Story",
+              "excerpt": "",
+              "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Ariana's Story.mp4"
+            }
+          },
+          "7b095eea-f173-4a24-aa62-972756a33c6b": {
+            "type": "circle-link",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/jess.png",
+              "label": "Jess's Story",
+              "excerpt": "",
+              "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Jess' Story.mp4"
+            }
+          },
+          "9afed3dc-0d5d-4a4f-8395-203271279cc7": {
+            "type": "circle-link",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Video_Testimonial_0ade517f-a55c-4c60-b8ab-a3a81fe10ba2.png",
+              "label": "Sophie's Story",
+              "excerpt": "",
+              "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Sophie's Story.mp4"
+            }
+          },
+          "34cc8186-9c1d-474b-98c5-aa24e046bb7b": {
+            "type": "circle-link",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Video_Testimonial_copy_b6bc44ea-a3d5-4fa7-84bd-6e0883900c6f.png",
+              "label": "Alana's Story",
+              "excerpt": "",
+              "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Alana's Story.mp4"
+            }
+          }
+        },
+        "block_order": [
+          "8a0a74ff-89e2-45b7-9b2c-dca79c541c13",
+          "7b095eea-f173-4a24-aa62-972756a33c6b",
+          "9afed3dc-0d5d-4a4f-8395-203271279cc7",
+          "34cc8186-9c1d-474b-98c5-aa24e046bb7b"
+        ],
+        "settings": {
+          "border_color": "#000000",
+          "div_id": "",
+          "ignore": true
+        }
+      },
+      "db51e2b5-fbe8-4255-be41-9434c6a6c906": {
+        "type": "custom-liquid",
+        "settings": {
+          "custom_liquid": "<div class=\"seereviewsbtn\">\n<div class=\"seeallreviews\"><div class=\"container is-flex is-justify-center\"><a href=\"https:\/\/omniluxled.com\/pages\/reviews-results\">SEE MORE REVIEWS AND RESULTS<\/a><\/div><\/div><\/div>"
+        }
+      },
+      "371c6641-8a0f-4861-8107-305c7c42502f": {
+        "type": "global-reviews-slider",
+        "blocks": {
+          "28ea33a3-0845-45dd-9c75-d3ca38ac2b9f": {
+            "type": "logowidthtext",
+            "settings": {
+              "watch_video_id": ""
+            }
+          },
+          "59d267bc-2eb4-49e4-a0b7-d3047afe5957": {
+            "type": "logowidthtext",
+            "settings": {
+              "watch_video_id": ""
+            }
+          },
+          "3f7ada38-c6c5-4c59-814e-1625835bc789": {
+            "type": "logowidthtext",
+            "settings": {
+              "watch_video_id": ""
+            }
+          }
+        },
+        "block_order": [
+          "28ea33a3-0845-45dd-9c75-d3ca38ac2b9f",
+          "59d267bc-2eb4-49e4-a0b7-d3047afe5957",
+          "3f7ada38-c6c5-4c59-814e-1625835bc789"
+        ],
+        "settings": {
+          "fluid_layout": false,
+          "heading_style": "heading_style_2",
+          "pt": 66,
+          "pb": 75,
+          "pts": 40,
+          "pbs": 60,
+          "border-top": false,
+          "border-bottom": false,
+          "heading_txt": "Real users, real results",
+          "txt": "",
+          "btn_txt": "",
+          "btn_link": "",
+          "btn_type": "",
+          "btn_variant": "dark",
+          "btn_size": "",
+          "section_bg_color": "rgba(0,0,0,0)",
+          "section_text_color": "#000000",
+          "autoplay_enable": false,
+          "slider_enable": true,
+          "nav_arrows": true,
+          "nav_dots": false
+        }
+      }
+    },
+    "order": [
+      "46303bd3-da3b-4cc4-9804-394607ef3f06",
+      "a1064ed2-44b7-4aff-801b-b9497008532a",
+      "654dfb70-8515-4329-b35a-c595a1c866e6",
+      "ccd2af3c-3893-452e-8e9d-e82555f637c3",
+      "839046eb-ba08-422a-bf0e-7cc84c8fcd1c",
+      "main",
+      "7d81bab4-7cd3-45cc-a15e-85816015c1b0",
+      "967c77cb-ba82-48fa-9f0e-fe5c36129f30",
+      "875cb50b-8a97-4cbc-8ad1-4bdb25824e96",
+      "a268d18f-a513-4c06-b9c0-3b0c5b8124e2",
+      "ad12eab5-d111-48ee-803d-a63ff0223d40",
+      "ec0f761c-9d46-426c-b34e-7536509c5a1b",
+      "07429a64-3eb5-4663-827f-f01a6fb8f5cd",
+      "d1e8d9f9-4e0f-4ef5-af16-8f334ad3b8c9",
+      "cc65e22a-b26b-40d1-ac1e-c6ff657ff136",
+      "ab62fd12-1370-4dd1-8aca-97e40474aa60",
+      "a618eef4-fb94-4608-b62a-a035c206de40",
+      "2fc01c3d-fdb9-4eed-9a67-450b2c83d9e3",
+      "db51e2b5-fbe8-4255-be41-9434c6a6c906",
+      "371c6641-8a0f-4861-8107-305c7c42502f"
+    ]
+  }
+  
