@@ -89,6 +89,9 @@
                     </div>
                     <p class="rev-txt-mbl">&nbsp; &nbsp;Trusted by 125k+ Customers</p>
                   </div>
+                  {% if section.settings.disclaimer != blank %}
+                    <div class="hero-banner__disclaimer">{{ section.settings.disclaimer }}</div>
+                  {% endif %}
                 </div>
               </div>
             </div>
@@ -210,6 +213,11 @@
         "type": "text",
         "id": "custom_class",
         "label": "Custom Class"
+      },
+      {
+        "type": "text",
+        "id": "disclaimer",
+        "label": "Disclaimer"
       }
     ],
     "presets": [
