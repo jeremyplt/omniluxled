@@ -17,6 +17,12 @@
     "a1064ed2-44b7-4aff-801b-b9497008532a": {
       "type": "global-awards",
       "blocks": {
+        "a1a68aae-7414-430e-a223-4f38918c2840": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Untitled_design_95.png"
+          }
+        },
         "e77916dc-da94-453a-a528-15c6be534c80": {
           "type": "content",
           "settings": {
@@ -46,21 +52,15 @@
           "settings": {
             "icon_img": "shopify:\/\/shop_images\/SELFHBA22_Black.png"
           }
-        },
-        "a1a68aae-7414-430e-a223-4f38918c2840": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/Untitled_design_95.png"
-          }
         }
       },
       "block_order": [
+        "a1a68aae-7414-430e-a223-4f38918c2840",
         "e77916dc-da94-453a-a528-15c6be534c80",
         "fa1efac7-c2e0-4144-8909-47e2fde76405",
         "588f2e67-1456-41d0-b2db-d555bc261031",
         "41e535f3-35f0-466d-9d27-b4a28de83243",
-        "ec2dc5e5-166c-426a-89e1-50bb3aac45ad",
-        "a1a68aae-7414-430e-a223-4f38918c2840"
+        "ec2dc5e5-166c-426a-89e1-50bb3aac45ad"
       ],
       "settings": {
         "fluid_layout": false,
