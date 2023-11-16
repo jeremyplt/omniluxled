@@ -563,6 +563,7 @@
       "block_order": [
         "1aa90c64-c7b0-4673-b61a-741fe3d7e644"
       ],
+      "disabled": true,
       "settings": {
         "fluid_layout": true,
         "enable_background_tone": false,
