@@ -14,7 +14,8 @@
         "btn_text": "SHOP BLACK FRIDAY",
         "btn_link": "shopify:\/\/products\/omnilux-clear",
         "content_position": "2",
-        "custom_class": ""
+        "custom_class": "",
+        "disclaimer": "*Codes apply to full-sized LED devices only"
       }
     },
     "a1064ed2-44b7-4aff-801b-b9497008532a": {
@@ -705,7 +706,8 @@
         "0d52dc97-7e65-4976-ace4-5daeea9f1e43"
       ],
       "settings": {
-        "compare_headline": "Why Omnilux"
+        "compare_headline": "Why Omnilux",
+        "compare_section_cta": "SHOP & SAVE"
       }
     },
     "d1e8d9f9-4e0f-4ef5-af16-8f334ad3b8c9": {
