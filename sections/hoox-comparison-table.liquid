@@ -204,7 +204,7 @@
         </figure>
       {% endif %}
     </div>
-<a alt="take the clear self-assessment" href="/pages/clear-assessment" class="btn btn-primary assessmentbtn">take the clear self-assessment</a>
+<a alt="take the clear self-assessment" href="/pages/clear-assessment" class="btn btn-primary assessmentbtn">{{ section.settings.compare_section_cta }}</a>
 
   </div>
 </div>
@@ -227,6 +227,12 @@
         "type": "image_picker",
         "id": "compare_section_last_image",
         "label": "Section Last Image"
+      },
+      {
+        "type": "text",
+        "id": "compare_section_cta",
+        "label": "Section CTA",
+        "default": "SHOP & SAVE"
       }
     ],
     "blocks": [
