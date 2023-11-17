@@ -305,7 +305,7 @@ class AjaxCart extends HTMLElement {
     } else {
       cartHTML = response["template-cart"];
     }
-
+    console.log("cartHTML =", cartHTML)
     if (cartHTML == null) return;
     let parser = new DOMParser();
     cartHTML = parser.parseFromString(cartHTML, "text/html");
