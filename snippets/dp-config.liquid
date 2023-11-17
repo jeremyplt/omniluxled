@@ -277,6 +277,8 @@
         
         console.log("location =", localStorage.getItem("location"));
 
+        no_sales_locations = ["CH"];
+
         if(productTags.includes("BFD") && !isNaN(taxPercent)) {
             compareAtPrice = Math.round((price + price * taxPercent / 100) / 0.85);
             jQuery(".compareprice").hide();
