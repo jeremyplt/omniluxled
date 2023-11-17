@@ -301,7 +301,7 @@ class AjaxCart extends HTMLElement {
     // Convert the HTML string into a document object
     let cartHTML = "";
     if (window.globalVariables.template != "cart") {
-      cartHTML = response["template-cart-drawer"];
+      cartHTML = response["template-cart"];
     } else {
       cartHTML = response["template-cart"];
     }
