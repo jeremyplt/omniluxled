@@ -275,8 +275,6 @@
         firstPriceBlock = '';
         secondPriceBlock = '';
         
-        console.log("country_code", jQuery("#country_code").val());
-
         if(productTags.includes("BFD") && !isNaN(taxPercent)) {
             compareAtPrice = Math.round((price + price * taxPercent / 100) / 0.85);
             jQuery(".compareprice").hide();
