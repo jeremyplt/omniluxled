@@ -19,19 +19,6 @@ function waitForElm(selector) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    var scrollToReviewsSpan = document.getElementById("scrollToReviews");
-    
-    scrollToReviewsSpan.addEventListener("click", function() {
-        var reviewsSection = document.querySelector(".js-oke-widgetSize.oke-is-large, .js-oke-widgetSize.oke-is-small");
-        
-        if (reviewsSection) {
-            // Scroll smoothly to the reviews section
-            reviewsSection.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    });
-
     waitForElm('.product-details-wrapper [data-oke-metafield-data]').then((elm) => {
         const metafield = jQuery.parseJSON(elm.textContent);
         if(metafield.reviewCount == 0) {            
@@ -46,6 +33,19 @@ document.addEventListener("DOMContentLoaded", function() {
     waitForElm('.locale-selectors__container').then((elm) => {
         console.log("locale-selectors__container found")
     })    
+
+    var scrollToReviewsSpan = document.getElementById("scrollToReviews");
+    
+    scrollToReviewsSpan.addEventListener("click", function() {
+        var reviewsSection = document.querySelector(".js-oke-widgetSize.oke-is-large, .js-oke-widgetSize.oke-is-small");
+        
+        if (reviewsSection) {
+            // Scroll smoothly to the reviews section
+            reviewsSection.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    });
 });
 
 
