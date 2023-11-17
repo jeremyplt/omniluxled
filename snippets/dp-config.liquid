@@ -275,13 +275,13 @@
         firstPriceBlock = '';
         secondPriceBlock = '';
         
-        no_sales_locations = ["CH"];
-        is_no_sales_location = false;
+        no_sales_country_list = ["CH"];
+        is_no_sales_country = false;
         country_code = localStorage.getItem("location")
         console.log("country_code =", country_code);
 
-        if(no_sales_locations.includes(country_code)) {
-            is_no_sales_location = true;
+        if(no_sales_country_list.includes(country_code)) {
+            is_no_sales_country = true;
         }
 
         if(productTags.includes("BFD") && !isNaN(taxPercent)) {
@@ -289,7 +289,7 @@
             jQuery(".compareprice").hide();
         }
 
-        if (!is_no_sales_location && parseInt(dp_show_compare_at_price) == 1 && parseInt(compareAtPrice) > 0 && parseInt(compareAtPrice) != parseInt(price)) {
+        if (!is_no_sales_country && parseInt(dp_show_compare_at_price) == 1 && parseInt(compareAtPrice) > 0 && parseInt(compareAtPrice) != parseInt(price)) {
             compareAtPriceBlock = '<span class="dpCompareAtPrice" style="margin-right:5px; text-decoration: line-through;"><span>' + Shopify.formatMoney(compareAtPrice, dpMoneyFormat) + '</span></span>' + '<br/>';
         }
         if (parseInt(dpPriceTypeToShow) != 2) {
