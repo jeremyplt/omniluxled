@@ -284,6 +284,7 @@ class AjaxCart extends HTMLElement {
    * @param {string} action Open Drawer as value if need to Open Cart drawer
    */
   _updateCart(response, action) {
+    console.log("_updateCart 1");
     if(window.globalVariables.template == "cart") {
       this.taxPercent = localStorage.getItem("taxPercent")
     } else {
@@ -295,7 +296,7 @@ class AjaxCart extends HTMLElement {
       this.getCartData();
       return
     }
-    
+    console.log("_updateCart 2");
     this.setAttribute("updating", true);
 
     // Convert the HTML string into a document object
