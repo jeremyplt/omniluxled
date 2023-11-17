@@ -32,6 +32,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     waitForElm('.locale-selectors__container').then((elm) => {
         console.log("locale-selectors__container found =", $("#country_code").val())
+
+        $('#country_code').on('change', function() {
+            localStorage.setItem("country_code", this.value);    
+        });
+
         localStorage.setItem("country_code", $("#country_code").val());
     })    
 
