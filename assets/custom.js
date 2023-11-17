@@ -42,6 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.trustedbypdp').css({display:'block'});
         }
     })
+
+    waitForElm('.locale-selectors__container').then((elm) => {
+        console.log("locale-selectors__container found")
+    })    
 });
 
 
