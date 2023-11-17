@@ -333,17 +333,7 @@ class AjaxCart extends HTMLElement {
 
             if(this.taxPercent > 0) {
               itemTotalPrice = itemTotalPrice * (1 + this.taxPercent / 100);
-            }
-  
-            let formatMoney = Shopify.formatMoney(
-              itemTotalPrice,
-              window.globalVariables.money_format
-            );
-  
-            // if(this.taxPercent > 0)
-            //   element.getElementsByClassName("price")[0].innerHTML = formatMoney + " Incl. tax"
-            // else
-            //   element.getElementsByClassName("price")[0].innerHTML = formatMoney
+            }  
           }          
         }
       });
