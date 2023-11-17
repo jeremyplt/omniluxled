@@ -50,73 +50,70 @@
                             endif
                         -%}
 
-                        <div class="cart-items border-bottom"  data-cart-item data-variant-id="{{ item.id }}" data-product-id="{{item.product.id}}">
-                            <div class="row align-items-center cart-item position-relative">
-                                <div class="col-12 col-md-6 cart-product-img">
-                                    <div class="d-flex">
-                                        <div class="cart-img align-self-start">
-                                            <div class="w-100 h-100 position-relative square-card">
-                                                {% if item.image %}
-                                                    <img class="img-fluid item-im position-absolute top-0 start-0 w-100 h-100 object-cover"
-                                                    src="{{ item.image | image_url: width: 150 }}"
-                                                    alt="{{ item.image.alt | default: item.product_title | escape }}"
-                                                    loading="lazy"
-                                                    width="75"
-                                                    height="{{ 75 | divided_by: item.image.aspect_ratio | ceil }}" >
-                                                {% else %}
-                                                <img class="img-fluid item-img position-absolute top-0 start-0 w-100 h-100 object-cover"
-                                                    src="{{ settings.no_image | image_url: width: 150 }}"
-                                                    alt="{{ settings.no_image.alt | default: item.product_title | escape }}"
-                                                    loading="lazy"
-                                                    width="75"
-                                                    height="{{ 75 | divided_by: settings.no_image.aspect_ratio | ceil }}" >
-                                                {% endif %}
-                                            </div>
+                        <div class="cart-items py-4 px-2 px-md-3 border-bottom"  data-cart-item data-variant-id="{{ item.id }}" data-product-id="{{item.product.id}}">
+                            <div class="row align-items-center cart-item">
+                                <div class="col-12 mb-3 mb-md-0 col-md-6 cart-product-img">
+                                    <div class="d-flex align-items-center">
+                                        <div class="cart-img me-3 me-lg-4 {% unless item.image %}bg-gray-300{% endunless %}">
+                                        {% if item.image %}
+                                                <img class="img-fluid item-img"
+                                                src="{{ item.image | image_url: width: 150 }}"
+                                                alt="{{ item.image.alt | default: item.product_title | escape }}"
+                                                loading="lazy"
+                                                width="75"
+                                                height="{{ 75 | divided_by: item.image.aspect_ratio | ceil }}" >
+                                            {% else %}
+                                            <img class="img-fluid item-img"
+                                                src="{{ settings.no_image | image_url: width: 150 }}"
+                                                alt="{{ settings.no_image.alt | default: item.product_title | escape }}"
+                                                loading="lazy"
+                                                width="75"
+                                                height="{{ 75 | divided_by: settings.no_image.aspect_ratio | ceil }}" >
+                                            {% endif %}
                                         </div>
-                                        <div class="cart-item-text d-flex flex-column justify-content-between p-0">
-                                            <div style="line-height: 1.3571428571;" class="fw-normal pe-4">
-                                                {%- if section.settings.show_vendor -%}
-                                                    <p class="font-size-sm mb-0 text-uppercase fw-normal">{{ item.product.vendor }}</p>
+                                        <div class="cart-item-text">
+
+                                            {%- if section.settings.show_vendor -%}
+                                                <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
+                                            {%- endif -%}
+                                            <a href="{{ item.url }}" class="card-title"> {{ item.product.title | escape }} </a>
+                                            <div data-preorder-cartMessage class="font-size-lg fw-normal my-2"></div>
+                                            {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
+                                                {%- if item.product.has_only_default_variant == false -%}
+                                                    <ul class="list-unstyled">
+                                                    {%- for option in item.options_with_values -%}
+                                                        <li>
+                                                            <span class="text-muted small text-capitalize">{{ option.name }}:</span>
+                                                            <span class="text-muted small text-capitalize">{{ option.value }}</span>
+                                                        </li>
+                                                    {%- endfor -%}
+                                                    </ul>
                                                 {%- endif -%}
-                                                <a href="{{ item.url }}" style="line-height: 1.1875;" class="card-title fw-semibold"> {{ item.product.title | escape }} </a>
-                                                <div data-preorder-cartMessage class="font-size-lg fw-normal my-2"></div>
-                                                {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
-                                                    {%- if item.product.has_only_default_variant == false -%}
-                                                        <ul class="list-unstyled font-size-md mb-1">
-                                                        {%- for option in item.options_with_values -%}
+
+                                                {% if item.properties.size != 0 %}
+                                                    <ul class="list-unstyled">
+                                                    {%- for property in item.properties -%}
+                                                        {%- assign property_first_char = property.first | slice: 0 -%}
+                                                        {%- if property.last != blank and property_first_char != '_' -%}
                                                             <li>
-                                                                <span class="text-muted small text-capitalize">{{ option.name }}:</span>
-                                                                <span class="text-muted small text-capitalize">{{ option.value }}</span>
+                                                                <span class="text-muted small text-capitalize">{{ property.first }}:</span>
+                                                                <span class="text-muted small text-capitalize">
+                                                                    {%- if property.last contains '/uploads/' -%}
+                                                                        <a href="{{ property.last }}" target="_blank">
+                                                                            {{ property.last | split: '/' | last }}
+                                                                        </a>
+                                                                    {%- else -%}
+                                                                        {{ property.last }}
+                                                                    {%- endif -%}
+                                                                </span>
                                                             </li>
-                                                        {%- endfor -%}
-                                                        </ul>
-                                                    {%- endif -%}
+                                                        {%- endif -%}
+                                                    {%- endfor -%}
+                                                    </ul>
+                                                {% endif %}
 
-                                                    {% if item.properties.size != 0 %}
-                                                        <ul class="list-unstyled font-size-md mb-1">
-                                                        {%- for property in item.properties -%}
-                                                            {%- assign property_first_char = property.first | slice: 0 -%}
-                                                            {%- if property.last != blank and property_first_char != '_' -%}
-                                                                <li>
-                                                                    <span class="text-muted small text-capitalize">{{ property.first }}:</span>
-                                                                    <span class="text-muted small text-capitalize">
-                                                                        {%- if property.last contains '/uploads/' -%}
-                                                                            <a href="{{ property.last }}" target="_blank">
-                                                                                {{ property.last | split: '/' | last }}
-                                                                            </a>
-                                                                        {%- else -%}
-                                                                            {{ property.last }}
-                                                                        {%- endif -%}
-                                                                    </span>
-                                                                </li>
-                                                            {%- endif -%}
-                                                        {%- endfor -%}
-                                                        </ul>
-                                                    {% endif %}
-
-                                                    <p class="product-option font-size-md mb-1">{{ item.selling_plan_allocation.selling_plan.name }}</p>
-                                                {%- endif -%}
-                                            </div>
+                                                <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                                            {%- endif -%}
                                         </div>
                                     </div>
                                 </div>
