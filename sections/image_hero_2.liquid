@@ -21,13 +21,8 @@
           <picture>
             {%- if mobileImage.width >= 390 -%}<source
                 media="(max-width: 390px)"
-                srcset="{{ mobileImage | image_url: width: 390}}">{%- endif -%}
-              {%- if mobileImage.width >= 430 -%}<source
-                media="(max-width: 430px)"
-                srcset="{{ mobileImage | image_url: width: 430}}">{%- endif -%}
-            {%- if mobileImage.width >= 550 -%}<source
-                media="(max-width: 550px)"
-                srcset="{{ mobileImage | image_url: width: 550 }}">{%- endif -%}
+                srcset="{{ mobileImage | image_url: width: 450}}">{%- endif -%}
+
             {%- if section.settings.image_desktop.width >= 991 -%}<source
                 media="(max-width: 991px)"
                 srcset="{{ section.settings.image_desktop | image_url: width: 991 }}">{%- endif -%}
