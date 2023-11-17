@@ -1017,6 +1017,7 @@
         "59d267bc-2eb4-49e4-a0b7-d3047afe5957",
         "3f7ada38-c6c5-4c59-814e-1625835bc789"
       ],
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "heading_style": "heading_style_2",
