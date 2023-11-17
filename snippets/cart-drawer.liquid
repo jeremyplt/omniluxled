@@ -50,9 +50,9 @@
                             endif
                         -%}
 
-                        <div class="cart-items py-4 px-2 px-md-3 border-bottom"  data-cart-item data-variant-id="{{ item.id }}" data-product-id="{{item.product.id}}">
-                            <div class="row align-items-center cart-item">
-                                <div class="col-12 mb-3 mb-md-0 col-md-6 cart-product-img">
+                        <div class="cart-items border-bottom"  data-cart-item data-variant-id="{{ item.id }}" data-product-id="{{item.product.id}}">
+                            <div class="row align-items-center cart-item position-relative">
+                                <div class="col-12 col-md-6 cart-product-img">
                                     <div class="d-flex align-items-center">
                                         <div class="cart-img me-3 me-lg-4 {% unless item.image %}bg-gray-300{% endunless %}">
                                         {% if item.image %}
