@@ -126,9 +126,9 @@
                                                           {% if current_product.metafields.okendo.StarRatingSnippet %}<div data-oke-star-rating {{ product_data_attribute }} style="display:flex">{{ current_product.metafields.okendo.StarRatingSnippet }}</div>{% endif %}
                                                           
                                                             {% if current_variant and current_variant.compare_at_price > current_variant.price %}
-                                                                                  <s class="fs-smal price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
-                                                                                {% elsif product.compare_at_price > product.price %}
-                                                                                  <s class="fs-smal price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
+                                                                                  <s class="fs-smal small m-0 p-0 text-gray-600 me-1" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
+                                                                                {% comment %} {% elsif product.compare_at_price > product.price %}
+                                                                                  <s class="fs-smal price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s> {% endcomment %}
                                                             {% endif %}
                                                             <span class="price product-price" data-currentPrice data-variant-price="{% if current_variant %}{{current_variant.price}}{% else %}{{current_product.price}}{% endif %}">
                                                             {% if current_variant %}
