@@ -210,7 +210,7 @@
         </div>
         <div class="col-12 mt-2 pt-1 price-with-btn-col">
           <div class="position-relative d-flex price-with-btn">
-            <div class="col-6 btn-card-hide trn fw-normal">
+            <div class="col-6 btn-card-hide trn fw-normal test">
               {% if current_variant and current_variant.compare_at_price > current_variant.price %}
                 <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
               {% elsif product.compare_at_price > product.price %}
