@@ -523,7 +523,7 @@ class AjaxCart extends HTMLElement {
    * @param {string} action Open Drawer as value if need to Open Cart drawer or else let it be empty
    */
   getCartData(action) {
-    
+    console.log("action =", action)
     let cartRoute = `${routes.cart_fetch_url}?sections=template-cart,header`;
     if (window.globalVariables.template != "cart") {
       cartRoute = `${routes.cart_fetch_url}?sections=template-cart-drawer,header`;
