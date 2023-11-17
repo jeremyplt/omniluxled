@@ -8,7 +8,7 @@
       ],
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/Option_4.png",
-        "image_mobile": "shopify:\/\/shop_images\/Untitled_design_43_1.png",
+        "image_mobile": "shopify:\/\/shop_images\/big-Untitled_design_1.png",
         "title": "Save up to $240",
         "subtitle": "<strong>BLACK FRIDAY SALE! <\/strong><br> $50 off 1 device: GIFT1<br> $120 off 2 devices: GIFT2<br> $240 off 3 devices: GIFT3",
         "mobilesubtitle": "<strong>BLACK FRIDAY SALE! <\/strong><br> $50 off 1 device: GIFT1<br> $120 off 2 devices: GIFT2<br> $240 off 3 devices: GIFT3",
@@ -36,7 +36,8 @@
         "btn_text": "Shop Now",
         "btn_link": "shopify:\/\/collections\/minis",
         "content_position": "2",
-        "custom_class": ""
+        "custom_class": "",
+        "disclaimer": ""
       }
     },
     "bbf8e6a0-e133-4b79-8e2e-6a96fec02c25": {
