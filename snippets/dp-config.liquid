@@ -277,10 +277,10 @@
         
         no_sales_locations = ["CH"];
         is_no_sales_location = false;
-        location = localStorage.getItem("location")
-        console.log("location =", location);
+        country_code = localStorage.getItem("location")
+        console.log("country_code =", country_code);
 
-        if(no_sales_locations.includes(location)) {
+        if(no_sales_locations.includes(country_code)) {
             is_no_sales_location = true;
         }
 
