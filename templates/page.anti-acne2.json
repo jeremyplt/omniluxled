@@ -763,6 +763,7 @@
         "703b5f98-b80c-4f4e-bded-6e03143c3c1c",
         "d4b24e54-b7f8-43ab-8885-537da6bd6160"
       ],
+      "disabled": true,
       "settings": {
         "fluid_layout": true,
         "enable_background_tone": true,
