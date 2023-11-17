@@ -21,7 +21,7 @@
           <picture>
             {%- if mobileImage.width >= 390 -%}<source
                 media="(max-width: 430px)"
-                srcset="{{ mobileImage | image_url: width: 390}}">{%- endif -%}
+                srcset="{{ mobileImage | image_url: width: 430}}">{%- endif -%}
 
             {%- if section.settings.image_desktop.width >= 991 -%}<source
                 media="(max-width: 991px)"

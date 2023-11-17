@@ -300,7 +300,6 @@ class AjaxCart extends HTMLElement {
 
     // Convert the HTML string into a document object
     let cartHTML = "";
-    console.log("window.globalVariables.template =", window.globalVariables.template);
     if (window.globalVariables.template != "cart") {
       cartHTML = response["template-cart-drawer"];
     } else {
@@ -524,6 +523,7 @@ class AjaxCart extends HTMLElement {
    * @param {string} action Open Drawer as value if need to Open Cart drawer or else let it be empty
    */
   getCartData(action) {
+    
     let cartRoute = `${routes.cart_fetch_url}?sections=template-cart,header`;
     if (window.globalVariables.template != "cart") {
       cartRoute = `${routes.cart_fetch_url}?sections=template-cart-drawer,header`;
