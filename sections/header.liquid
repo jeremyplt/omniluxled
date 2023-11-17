@@ -2,7 +2,7 @@
 {% assign logo_svg = section.settings.logo_svg %}
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}> 
   <header class="site-header {% if section.settings.show_line_separator %}border-bottom{% endif %}" style="background-color: {{ section.settings.header_bg_color }};">
-    {% render 'hoox-promo-bar' promoText: section.settings.promo_text %}
+    {% comment %} {% render 'hoox-promo-bar' promoText: section.settings.promo_text %} {% endcomment %}
     {% if section.settings.topbar_enabled %}
       
       <a id="slide1" class="d-nne slidex active" href="{{ section.settings.page_url.url }}">
