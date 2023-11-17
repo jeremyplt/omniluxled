@@ -2,6 +2,9 @@
   "sections": {
     "46303bd3-da3b-4cc4-9804-394607ef3f06": {
       "type": "image_hero_2",
+      "custom_css": [
+        "@media only screen and (min-width: 767px) {.review-ctr-mbl {display: none; }}"
+      ],
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/mins-holiday-hero-desktop.png",
         "image_mobile": "shopify:\/\/shop_images\/mins-holiday-hero-mobile.png",
@@ -511,7 +514,7 @@
         "ea6f24cc-6b59-4687-a626-35267f5e1668"
       ],
       "settings": {
-        "hoox_studies_title": "In clinical studies, Omnilux Contour users agreed:",
+        "hoox_studies_title": "In clinical studies, Omnilux users agreed:",
         "hoox_studies_subtitle": "After 3 treatments per week for 4 weeks",
         "hoox_studies_image": "shopify:\/\/shop_images\/Omnilux_7658_copy.jpg"
       }
