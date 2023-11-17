@@ -10,6 +10,7 @@
         "image_mobile": "shopify:\/\/shop_images\/mins-holiday-hero-mobile.png",
         "title": "The gift of better skin.",
         "subtitle": "Save $50 on Omnilux Men: code GIFT1",
+        "subtitle_bottom": "",
         "btn_text": "SHOP & SAVE $50",
         "btn_link": "shopify:\/\/products\/omnilux-men",
         "content_position": "2",
@@ -480,7 +481,7 @@
         "hoox_how_to_title": "How to use:",
         "hoox_how_to_subtitle": "Unlock your best skin with three to five 10-minute treatments per week.",
         "btn_txt_watch": "Watch how-to video",
-        "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9464d3162eb14de7b68d2622ac642ec9.mp4"
+        "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/bbef19157a624f2ea7dfce50ed52d8b7.mp4"
       }
     },
     "80f31e4a-a908-47f0-9ba9-91d0752f6db0": {
