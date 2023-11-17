@@ -54,7 +54,7 @@
                             <div class="row align-items-center cart-item position-relative">
                                 <div class="col-12 col-md-6 cart-product-img">
                                     <div class="d-flex">
-                                        <div class="cart-img me-3 me-lg-4 {% unless item.image %}bg-gray-300{% endunless %}">
+                                        <div class="cart-img align-self-start">
                                         {% if item.image %}
                                                 <img class="img-fluid item-img"
                                                 src="{{ item.image | image_url: width: 150 }}"
