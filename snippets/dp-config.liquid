@@ -259,7 +259,6 @@
             secondPrice = firstPrice;
             if (!isNaN(taxPercent) && taxPercent > 0) {
                 secondPriceNotFormated = Math.round(price + price * taxPercent / 100);
-                console.log("secondPriceNotFormated =", secondPriceNotFormated)
                 secondPrice = Shopify.formatMoney(secondPriceNotFormated, dpMoneyFormat);
             }
         } else {
@@ -267,7 +266,6 @@
             firstPrice = secondPrice;
             if (!isNaN(taxPercent) && taxPercent > 0) {
                 firstPriceNotFormated = Math.round(price + price * taxPercent / 100);
-                console.log("firstPriceNotFormated =", firstPriceNotFormated)
                 firstPrice = Shopify.formatMoney(firstPriceNotFormated, dpMoneyFormat);
             }
         }
