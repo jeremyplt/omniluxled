@@ -79,15 +79,7 @@
 <script src="{{ 'jquery.min.js' | asset_url }}"></script>
 
 {% comment %} {% render 'pre-order' %} {% endcomment %}
-<script>
-    async function load() {
-      let url = '/browsing_context_suggestions.json';
-          obj = await (await fetch(url)).json();
-          countrycode = obj.detected_values.country.handle;
-      console.log("countrycode =", countrycode)
-    }
-    load()
-</script>
+
 {%- comment -%} Location Handler JS {%- endcomment -%}
 <script src="{{ 'location-handler.js' | asset_url }}" defer></script>
 
