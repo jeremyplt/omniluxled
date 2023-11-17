@@ -22,6 +22,9 @@
             {%- if mobileImage.width >= 390 -%}<source
                 media="(max-width: 390px)"
                 srcset="{{ mobileImage | image_url: width: 390}}">{%- endif -%}
+              {%- if mobileImage.width >= 430 -%}<source
+                media="(max-width: 430px)"
+                srcset="{{ mobileImage | image_url: width: 430}}">{%- endif -%}
             {%- if mobileImage.width >= 550 -%}<source
                 media="(max-width: 550px)"
                 srcset="{{ mobileImage | image_url: width: 550 }}">{%- endif -%}
