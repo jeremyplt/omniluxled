@@ -55,21 +55,23 @@
                                 <div class="col-12 col-md-6 cart-product-img">
                                     <div class="d-flex">
                                         <div class="cart-img align-self-start">
-                                        {% if item.image %}
+                                            <div class="w-100 h-100 position-relative square-card">
+                                                {% if item.image %}
+                                                    <img class="img-fluid item-img"
+                                                    src="{{ item.image | image_url: width: 150 }}"
+                                                    alt="{{ item.image.alt | default: item.product_title | escape }}"
+                                                    loading="lazy"
+                                                    width="75"
+                                                    height="{{ 75 | divided_by: item.image.aspect_ratio | ceil }}" >
+                                                {% else %}
                                                 <img class="img-fluid item-img"
-                                                src="{{ item.image | image_url: width: 150 }}"
-                                                alt="{{ item.image.alt | default: item.product_title | escape }}"
-                                                loading="lazy"
-                                                width="75"
-                                                height="{{ 75 | divided_by: item.image.aspect_ratio | ceil }}" >
-                                            {% else %}
-                                            <img class="img-fluid item-img"
-                                                src="{{ settings.no_image | image_url: width: 150 }}"
-                                                alt="{{ settings.no_image.alt | default: item.product_title | escape }}"
-                                                loading="lazy"
-                                                width="75"
-                                                height="{{ 75 | divided_by: settings.no_image.aspect_ratio | ceil }}" >
-                                            {% endif %}
+                                                    src="{{ settings.no_image | image_url: width: 150 }}"
+                                                    alt="{{ settings.no_image.alt | default: item.product_title | escape }}"
+                                                    loading="lazy"
+                                                    width="75"
+                                                    height="{{ 75 | divided_by: settings.no_image.aspect_ratio | ceil }}" >
+                                                {% endif %}
+                                            </div>
                                         </div>
                                         <div class="cart-item-text">
 
