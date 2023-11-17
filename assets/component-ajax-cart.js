@@ -304,7 +304,7 @@ class AjaxCart extends HTMLElement {
     if (window.globalVariables.template != "cart") {
       cartHTML = response["template-cart-drawer"];
     } else {
-      cartHTML = response["template-cart"];
+      cartHTML = response["template-cart-drawer"];
     }
 
     if (cartHTML == null) return;
