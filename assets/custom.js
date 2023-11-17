@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.product-details-wrapper [data-oke-star-rating]').css({display:'none'});
             $('.trustedbypdp').css({display:'none'});
         } else {
-            console.log("ttt")
             $('.product-details-wrapper [data-oke-star-rating]').css({display:'block'});
             $('.trustedbypdp').css({display:'block'});
         }
