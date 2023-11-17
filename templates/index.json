@@ -33,6 +33,7 @@
         "image_mobile": "shopify:\/\/shop_images\/Untitled_design_43_copy_2_1_59734e6b-9d64-4e3e-b61b-13dda714ea96.png",
         "title": "NEW!<br> Omnilux Mini",
         "subtitle": "Full strength LED devices sized <br>down for ultra-targeted treatments.",
+        "subtitle_bottom": "",
         "btn_text": "Shop Now",
         "btn_link": "shopify:\/\/collections\/minis",
         "content_position": "2",
@@ -658,35 +659,45 @@
         "3a3a335b-06ba-4b3f-8a9c-b7004cfbe3fb": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2023-10-24T143746.507.png",
-            "label": "Blemish Eraser",
+            "image": "shopify:\/\/shop_images\/LANDING_PAGE_SOCIAL_PROOF.png",
+            "label": "Sarah's Story",
             "excerpt": "",
-            "video": "shopify:\/\/files\/videos\/Untitled design (9).mp4"
+            "video": "shopify:\/\/files\/videos\/Omnilux Contour LED Mask Review.mp4"
           }
         },
         "24904fc5-10b3-427d-91ff-3e75778d2c43": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2023-10-24T155221.495.png",
-            "label": "Eye Brightener",
+            "image": "shopify:\/\/shop_images\/LANDING_PAGE_SOCIAL_PROOF_1.png",
+            "label": "Ariana's Story",
             "excerpt": "",
-            "video": "shopify:\/\/files\/videos\/Copy of Untitled Design (3).mp4"
+            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Ariana's Story.mp4"
           }
         },
         "4739a565-41ab-4342-b43c-b575d5da3451": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2023-10-24T161805.287.png",
-            "label": "Skin Corrector",
+            "image": "shopify:\/\/shop_images\/LANDING_PAGE_SOCIAL_PROOF_5.png",
+            "label": "Lizeth's Story",
             "excerpt": "",
-            "video": "shopify:\/\/files\/videos\/Copy of Copy of Untitled Design.mp4"
+            "video": "shopify:\/\/files\/videos\/lizethstory.mp4"
+          }
+        },
+        "a7552032-b9f6-4a26-ae56-087a36c64808": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LANDING_PAGE_SOCIAL_PROOF_6.png",
+            "label": "Jess' Story",
+            "excerpt": "",
+            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Jess' Story.mp4"
           }
         }
       },
       "block_order": [
         "3a3a335b-06ba-4b3f-8a9c-b7004cfbe3fb",
         "24904fc5-10b3-427d-91ff-3e75778d2c43",
-        "4739a565-41ab-4342-b43c-b575d5da3451"
+        "4739a565-41ab-4342-b43c-b575d5da3451",
+        "a7552032-b9f6-4a26-ae56-087a36c64808"
       ],
       "settings": {
         "border_color": "#000000",
