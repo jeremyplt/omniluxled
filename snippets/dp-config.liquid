@@ -275,16 +275,21 @@
         firstPriceBlock = '';
         secondPriceBlock = '';
         
-        console.log("location =", localStorage.getItem("location"));
-
         no_sales_locations = ["CH"];
+        is_no_sales_location = false;
+        location = localStorage.getItem("location")
+        console.log("location =", location);
+
+        if(no_sales_locations.includes(location)) {
+            is_no_sales_location = true;
+        }
 
         if(productTags.includes("BFD") && !isNaN(taxPercent)) {
             compareAtPrice = Math.round((price + price * taxPercent / 100) / 0.85);
             jQuery(".compareprice").hide();
         }
 
-        if (parseInt(dp_show_compare_at_price) == 1 && parseInt(compareAtPrice) > 0 && parseInt(compareAtPrice) != parseInt(price)) {
+        if (!is_no_sales_location && parseInt(dp_show_compare_at_price) == 1 && parseInt(compareAtPrice) > 0 && parseInt(compareAtPrice) != parseInt(price)) {
             compareAtPriceBlock = '<span class="dpCompareAtPrice" style="margin-right:5px; text-decoration: line-through;"><span>' + Shopify.formatMoney(compareAtPrice, dpMoneyFormat) + '</span></span>' + '<br/>';
         }
         if (parseInt(dpPriceTypeToShow) != 2) {
