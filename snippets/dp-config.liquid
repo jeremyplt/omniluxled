@@ -275,7 +275,7 @@
         firstPriceBlock = '';
         secondPriceBlock = '';
         
-        console.log("location =", window.globalVariables.location);
+        console.log("location =", localStorage.getItem("location"));
 
         if(productTags.includes("BFD") && !isNaN(taxPercent)) {
             compareAtPrice = Math.round((price + price * taxPercent / 100) / 0.85);
