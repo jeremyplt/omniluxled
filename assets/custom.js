@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     waitForElm('.locale-selectors__container').then((elm) => {
         console.log("locale-selectors__container found =", $("#country_code").val())
+        window.global
     })    
 
     var scrollToReviewsSpan = document.getElementById("scrollToReviews");
