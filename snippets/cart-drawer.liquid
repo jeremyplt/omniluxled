@@ -73,12 +73,12 @@
                                                 {% endif %}
                                             </div>
                                         </div>
-                                        <div class="cart-item-text">
+                                        <div class="cart-item-text d-flex flex-column justify-content-between p-0">
 
                                             {%- if section.settings.show_vendor -%}
-                                                <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
+                                                <p class="font-size-sm mb-0 text-uppercase fw-normal">{{ item.product.vendor }}</p>
                                             {%- endif -%}
-                                            <a href="{{ item.url }}" class="card-title"> {{ item.product.title | escape }} </a>
+                                            <a href="{{ item.url }}" style="line-height: 1.1875;" class="card-title fw-semibold"> {{ item.product.title | escape }} </a>
                                             <div data-preorder-cartMessage class="font-size-lg fw-normal my-2"></div>
                                             {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
                                                 {%- if item.product.has_only_default_variant == false -%}
