@@ -9,7 +9,8 @@ class LocationHandler {
 
   async locationHandler() {
     const country = localStorage.getItem('country') || 'United States';
-
+    console.log("country =", country)
+    
     const prefixMap = {
       'United States': 'us',
       'United Kingdon': 'uk',
