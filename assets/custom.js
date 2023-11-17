@@ -19,17 +19,6 @@ function waitForElm(selector) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    let url = '/browsing_context_suggestions.json',
-          obj = await (await fetch(url)).json(),
-          countrycode = obj.detected_values.country.handle,
-          euCountryCodes = ["AT", "BE", "BG", "HR", "CY",
-                            "CZ", "DK", "EE", "FI", "FR",
-                            "DE", "GR", "HU", "IE", "IT",
-                            "LV", "LT", "LU", "MT", "NL",
-                            "PL", "PT", "RO", "SK", "SI",
-                            "ES", "SE", "NO"];
-      console.log("countrycode =", countrycode);
-      
     waitForElm('.product-details-wrapper [data-oke-metafield-data]').then((elm) => {
         const metafield = jQuery.parseJSON(elm.textContent);
         if(metafield.reviewCount == 0) {            
@@ -42,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     waitForElm('.locale-selectors__container').then((elm) => {
-        console.log("locale-selectors__container found")
+        console.log("locale-selectors__container found =", $("#country_code").val())
     })    
 
     var scrollToReviewsSpan = document.getElementById("scrollToReviews");
