@@ -3,6 +3,7 @@
     "46303bd3-da3b-4cc4-9804-394607ef3f06": {
       "type": "image_hero_2",
       "custom_css": [
+        ".overlay {opacity: 0 !important;}",
         "@media only screen and (min-width: 767px) {.review-ctr-mbl {display: none; }}"
       ],
       "settings": {
