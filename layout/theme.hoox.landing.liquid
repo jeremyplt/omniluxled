@@ -92,6 +92,7 @@
 <script>(() => {const previewKey = 'docapp-discount-test'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(previewKey)) {window.sessionStorage.setItem(previewKey, JSON.stringify({active: true, integrationId: urlParams.get('docapp-discount-inst-test')}));}})();</script>
 
     {{ 'hoox-base.css' | asset_url | stylesheet_tag }}
+    {% include 'dp-config' %}
 </head>
 
   <body class="template-{{ template.name }} {{ page.handle }} {{ collection.handle }} {{ product.handle }} {% if product.tags contains 'men_product' %}product-men{% endif %} ab-test-cartdrawer"
