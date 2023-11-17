@@ -284,19 +284,18 @@ class AjaxCart extends HTMLElement {
    * @param {string} action Open Drawer as value if need to Open Cart drawer
    */
   _updateCart(response, action) {
-    console.log("_updateCart 1");
     if(window.globalVariables.template == "cart") {
       this.taxPercent = localStorage.getItem("taxPercent")
     } else {
       this.taxPercent = window.globalVariables.taxPercent
     }
-    console.log("this.taxPercent =", this.taxPercent);
+    
     if(isNaN(this.taxPercent)) {
       this.taxPercent = 0;
       this.getCartData();
       return
     }
-    console.log("_updateCart 2");
+    
     this.setAttribute("updating", true);
 
     // Convert the HTML string into a document object
@@ -306,7 +305,7 @@ class AjaxCart extends HTMLElement {
     } else {
       cartHTML = response["template-cart"];
     }
-    console.log("cartHTML =", cartHTML)
+
     if (cartHTML == null) return;
     let parser = new DOMParser();
     cartHTML = parser.parseFromString(cartHTML, "text/html");
@@ -528,8 +527,6 @@ class AjaxCart extends HTMLElement {
     if (window.globalVariables.template != "cart") {
       cartRoute = `${routes.cart_fetch_url}?sections=template-cart-drawer,header`;
     }
-    console.log("action =", action)
-    console.log("cartRoute =", cartRoute)
 
     fetch(cartRoute)
       .then((response) => {
