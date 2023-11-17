@@ -290,7 +290,7 @@ class AjaxCart extends HTMLElement {
     } else {
       this.taxPercent = window.globalVariables.taxPercent
     }
-    
+    console.log("this.taxPercent =", this.taxPercent);
     if(isNaN(this.taxPercent)) {
       this.taxPercent = 0;
       this.getCartData();
