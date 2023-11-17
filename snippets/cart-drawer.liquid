@@ -57,14 +57,14 @@
                                         <div class="cart-img align-self-start">
                                             <div class="w-100 h-100 position-relative square-card">
                                                 {% if item.image %}
-                                                    <img class="img-fluid item-img"
+                                                    <img class="img-fluid item-im position-absolute top-0 start-0 w-100 h-100 object-cover"
                                                     src="{{ item.image | image_url: width: 150 }}"
                                                     alt="{{ item.image.alt | default: item.product_title | escape }}"
                                                     loading="lazy"
                                                     width="75"
                                                     height="{{ 75 | divided_by: item.image.aspect_ratio | ceil }}" >
                                                 {% else %}
-                                                <img class="img-fluid item-img"
+                                                <img class="img-fluid item-img position-absolute top-0 start-0 w-100 h-100 object-cover"
                                                     src="{{ settings.no_image | image_url: width: 150 }}"
                                                     alt="{{ settings.no_image.alt | default: item.product_title | escape }}"
                                                     loading="lazy"
