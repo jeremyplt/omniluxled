@@ -152,6 +152,7 @@
         "75f1863e-b4aa-48be-b10c-718f622ed99e",
         "671d2e9b-1e2c-425d-91c2-f59384c5d4ba"
       ],
+      "disabled": true,
       "settings": {
         "class_names": "",
         "section_id": "#",
@@ -161,50 +162,10 @@
     "839046eb-ba08-422a-bf0e-7cc84c8fcd1c": {
       "type": "global-results-slider",
       "blocks": {
-        "3c02413c-74ba-4a82-9659-49fa448ebb3d": {
-          "type": "logowidthtext",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_80.png",
-            "brfore_aftertext": true,
-            "contour_text": false
-          }
-        },
-        "a449d43c-ad15-4e43-96ff-6e9201536fa5": {
-          "type": "logowidthtext",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_81.png",
-            "brfore_aftertext": true,
-            "contour_text": false
-          }
-        },
-        "5f918522-dd8b-48c8-8d62-dfb79bfa215a": {
-          "type": "logowidthtext",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_83.png",
-            "brfore_aftertext": true,
-            "contour_text": false
-          }
-        },
-        "6e0fa4bf-9706-45d5-9b4c-bbc5282bdc3c": {
-          "type": "logowidthtext",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_82.png",
-            "brfore_aftertext": true,
-            "contour_text": false
-          }
-        },
-        "a78dfc5b-b057-4cae-8e1a-4223391bbdf0": {
-          "type": "logowidthtext",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_84.png",
-            "brfore_aftertext": true,
-            "contour_text": false
-          }
-        },
         "7ca39ffb-9fc4-49ce-8abb-c22a52c912a3": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_86.png",
+            "image": "shopify:\/\/shop_images\/menbefore.jpg",
             "brfore_aftertext": true,
             "contour_text": false
           }
@@ -212,7 +173,7 @@
         "a8817a74-c624-45d4-9c7d-b4f83aacfcd7": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify:\/\/shop_images\/BA_WEBSITE_ea8a1dac-cf83-4c73-b824-7dd5be27a389.png",
+            "image": "shopify:\/\/shop_images\/menbefore3.jpg",
             "brfore_aftertext": true,
             "contour_text": false
           }
@@ -220,7 +181,7 @@
         "a899817b-7974-49a1-9e64-733a20b22695": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_85.png",
+            "image": "shopify:\/\/shop_images\/BA_WEBSITE_2.png",
             "brfore_aftertext": true,
             "contour_text": false
           }
@@ -228,7 +189,7 @@
         "7bfe6cea-38f3-4378-86f3-bb9fb39b0c41": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_97.png",
+            "image": "shopify:\/\/shop_images\/1675886564-BA_WEBSITE__1.png",
             "brfore_aftertext": true,
             "contour_text": false
           }
@@ -236,25 +197,19 @@
         "5868438a-6772-408e-aee1-ccb1193742d3": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_99.png",
+            "image": "shopify:\/\/shop_images\/menbefore2.jpg",
             "brfore_aftertext": true,
             "contour_text": false
           }
         }
       },
       "block_order": [
-        "3c02413c-74ba-4a82-9659-49fa448ebb3d",
-        "a449d43c-ad15-4e43-96ff-6e9201536fa5",
-        "5f918522-dd8b-48c8-8d62-dfb79bfa215a",
-        "6e0fa4bf-9706-45d5-9b4c-bbc5282bdc3c",
-        "a78dfc5b-b057-4cae-8e1a-4223391bbdf0",
         "7ca39ffb-9fc4-49ce-8abb-c22a52c912a3",
         "a8817a74-c624-45d4-9c7d-b4f83aacfcd7",
         "a899817b-7974-49a1-9e64-733a20b22695",
         "7bfe6cea-38f3-4378-86f3-bb9fb39b0c41",
         "5868438a-6772-408e-aee1-ccb1193742d3"
       ],
-      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "heading_style": "heading_style_2",
@@ -264,8 +219,8 @@
         "pbs": 40,
         "border-top": true,
         "border-bottom": false,
-        "heading_txt": "Real skin, real results",
-        "txt": "“My skin is NOTICEABLY less red, the inflammation of my breakouts is significantly reduced… and my breakouts clear 3-5 days faster than they do on their own. I know this will be something I rely on for as long as I continue to have acne prone skin.”",
+        "heading_txt": "Real users, real results",
+        "txt": "",
         "btn_txt": "",
         "btn_link": "",
         "btn_type": "",
