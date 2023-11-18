@@ -1,0 +1,12 @@
+{{ 'hoox-promo-bar.css' | asset_url | stylesheet_tag }}
+
+<div class="hoox-promo-bar">
+    {% if promoText != 'blank' %}
+    <p class="hoox-promo-bar__text">
+        {{ promoText }}
+    </p>
+{% endif %}
+
+</div>
+
+{% comment %} Js file {% endcomment %}

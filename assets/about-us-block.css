@@ -31,7 +31,7 @@
 .tabcontent.open{
     transition: height .35s ease-in-out;
 }
-.swiper-slide {
+#advisoryBlock .swiper-slide {
     height: auto !important;
 }
 .triangle.open{

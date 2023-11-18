@@ -17,7 +17,7 @@
             "loop": true,
             "logo_image__": "",
             "trustedbytxt": "Trusted by 125K+ Customers",
-            "title": "Meet your Mini",
+            "title": "Mini gifts delivering major results.",
             "subtitle": "<p>Ultra-targeted LED treatments tackle blemishes, wrinkles, inflammation, and more.<\/p>",
             "heading__size": false,
             "heading__lg": 60,
@@ -29,7 +29,7 @@
             "btn_type_watch": "",
             "btn_variant_watch": "primary",
             "btn_size_watch": "",
-            "btn_txt": "SHOP NOW",
+            "btn_txt": "SHOP & SAVE 15%",
             "btn_link": "shopify:\/\/collections\/minis",
             "btn_type": "",
             "btn_variant": "white",
@@ -55,6 +55,9 @@
       },
       "block_order": [
         "76a7a38c-9d9a-449e-8772-ccd3c36b9a06"
+      ],
+      "custom_css": [
+        "h2.h1 {font-size: 40px;}"
       ],
       "settings": {
         "enabled": true,
@@ -142,7 +145,7 @@
         "featured_product_2": "skin-corrector",
         "section_bg_color": "#ffffff",
         "section_txt_color": "#000000",
-        "btn_text": "GET YOUR MINI",
+        "btn_text": "15% OFF MINIS",
         "btn_url": "shopify:\/\/collections\/minis",
         "btn_type": "",
         "btn_variant": "primary",
@@ -280,6 +283,9 @@
     },
     "e38be45f-cef3-48f1-88e5-0e9ae227927c": {
       "type": "global-rightvideo-text-skincare",
+      "custom_css": [
+        ".btn.btn-white.d-flex.align-items-center.d-lg-inline-flex {border: solid 1px white; background-color: transparent; color: white; padding-left: 15px; padding-right: 15px;}"
+      ],
       "settings": {
         "fluid_layout": true,
         "border_bottom": false,
@@ -290,19 +296,19 @@
         "video_style": "col-lg-6",
         "video_style_large": "col-xl-5",
         "content_position": "align-items-center",
-        "title": "Mini devices. Major results.",
+        "title": "Small gets serious.",
         "subtitle": "",
         "txt": "",
-        "htmltxt": "<p>Good things come in small packages. Target your skin’s unique problem areas with our Mini LED devices paired with active-rich Hydrocolloid Patches for <strong> a powerhouse combo<\/strong>.  <\/p>\n<br>\n\n<ul class=\"twocolumns\">\n<li>Diminish fine lines + wrinkles<\/li>\n<li>Brighten complexion<\/li>\n<li>Reduce breakouts<\/li>\n<li>Calm redness + inflammation<\/li>\n<li>Lighten the look of age spots<\/li>\n<li>Restore fatigued skin<\/li>\n<\/ul>",
-        "btn_txt": "SHOP MINIS",
+        "htmltxt": "<p>Sometimes the best gifts come in the smallest packages. Target your skin’s unique problem areas with our Mini LED devices paired with active-rich Hydrocolloid Patches for <strong> a powerhouse combo<\/strong>.  <\/p>\n<br>\n\n<ul class=\"twocolumns\">\n<li>Diminish fine lines + wrinkles<\/li>\n<li>Brighten complexion<\/li>\n<li>Reduce breakouts<\/li>\n<li>Calm redness + inflammation<\/li>\n<li>Lighten the look of age spots<\/li>\n<li>Restore fatigued skin<\/li>\n<\/ul>",
+        "btn_txt": "GET 15% OFF NOW",
         "btn_link": "shopify:\/\/collections\/minis",
-        "btn_type": "outline",
+        "btn_type": "",
         "btn_variant": "primary",
         "btn_size": "",
         "poster_type": "",
         "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/379c4e711f0c44e4b8025f93b794071c.mov",
         "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/379c4e711f0c44e4b8025f93b794071c.mov",
-        "poster_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Untitled-1_1.png?v=1698186432",
+        "poster_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/HOLIDAY_2023_LPs_16.png?v=1699656060",
         "btn_txt_watch": "",
         "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/379c4e711f0c44e4b8025f93b794071c.mov",
         "watch_mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/379c4e711f0c44e4b8025f93b794071c.mov",
@@ -435,7 +441,7 @@
             "step_heading": "",
             "steps_captions": "Maximizes LED results\nKeeps your Mini in place with double-sided adhesive\nSoothing and safe for all skin types\nCan be used with or without LED",
             "steps_captions_2": "",
-            "btn_txt": "TRANSFORM YOUR SKIN",
+            "btn_txt": "15% OFF MINIS",
             "btn_link": "shopify:\/\/collections\/minis",
             "triggerbtn_txt": "",
             "triggerto": "",
@@ -645,7 +651,8 @@
         ".swiper-navigation {display: none;}"
       ],
       "settings": {
-        "compare_headline": "The dermatologist's choice"
+        "compare_headline": "The dermatologist's choice",
+        "compare_section_cta": "SHOP & SAVE"
       }
     },
     "14b5f872-142c-436c-aa91-9be1f604a443": {

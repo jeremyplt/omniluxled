@@ -68,7 +68,6 @@
     },
     "d84aa67d-fef0-442d-8364-790f28934d4d": {
       "type": "circle-video-menu",
-      "disabled": true,
       "blocks": {
         "6ce22c15-9550-44cf-b290-22e0d69efb10": {
           "type": "circle-link",
@@ -109,6 +108,7 @@
         "90ccee30-cb0b-4eff-b493-24753f4bc1fd",
         "f6c1532d-2a8e-4c7d-901d-cf816d9d28f9"
       ],
+      "disabled": true,
       "settings": {
         "border_color": "#000000",
         "ignore": true

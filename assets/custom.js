@@ -19,6 +19,27 @@ function waitForElm(selector) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    waitForElm('.product-details-wrapper [data-oke-metafield-data]').then((elm) => {
+        const metafield = jQuery.parseJSON(elm.textContent);
+        if(metafield.reviewCount == 0) {            
+            $('.product-details-wrapper [data-oke-star-rating]').css({display:'none'});
+            $('.trustedbypdp').css({display:'none'});
+        } else {
+            $('.product-details-wrapper [data-oke-star-rating]').css({display:'block'});
+            $('.trustedbypdp').css({display:'block'});
+        }
+    })
+
+    waitForElm('.locale-selectors__container').then((elm) => {
+        console.log("locale-selectors__container found =", $("#country_code").val())
+
+        $('#country_code').on('change', function() {
+            localStorage.setItem("country_code", this.value);    
+        });
+
+        localStorage.setItem("country_code", $("#country_code").val());
+    })    
+
     var scrollToReviewsSpan = document.getElementById("scrollToReviews");
     
     scrollToReviewsSpan.addEventListener("click", function() {
@@ -31,18 +52,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     });
-
-    waitForElm('.product-details-wrapper [data-oke-metafield-data]').then((elm) => {
-        const metafield = jQuery.parseJSON(elm.textContent);
-        if(metafield.reviewCount == 0) {            
-            $('.product-details-wrapper [data-oke-star-rating]').css({display:'none'});
-            $('.trustedbypdp').css({display:'none'});
-        } else {
-            console.log("ttt")
-            $('.product-details-wrapper [data-oke-star-rating]').css({display:'block'});
-            $('.trustedbypdp').css({display:'block'});
-        }
-    })
 });
 
 

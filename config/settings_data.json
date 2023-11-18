@@ -103,7 +103,7 @@
     "account_disable": "Account disabled.",
     "account_invited": "Account Invited.",
     "account_declined": "Account declined.",
-    "shop_newsletter_checkbox": true,
+    "shop_newsletter_checkbox": false,
     "shop_product_newsletter_text": "Sign up for exclusive skincare offers.",
     "shop_product_newsletter_heading": "Want TO SAVE 10% TODAY?",
     "shop_product_newsletter_success_heading": "You’re in!",
@@ -188,8 +188,9 @@
           "b4cda1f0-5efa-4d22-88b3-49faf8b1439c"
         ],
         "settings": {
+          "promo_text": "BLACK FRIDAY SALE! $50 OFF 1 DEVICE: <span>GIFT 1<\/span>, $120 OFF 2 DEVICES: <span>GIFT2<\/span>, $240 OFF 3 DEVICES: <span>GIFT3<\/span>",
           "topbar_enabled": true,
-          "topbar_text": "Free shipping on orders $100+",
+          "topbar_text": "<strong>BLACK FRIDAY SALE! $50 OFF 1 DEVICE: <span><\/span><\/strong>GIFT 1<strong>, $120 OFF 2 DEVICES:<\/strong> <span>GIFT2<\/span>, <strong>$240 OFF 3 DEVICES: <\/strong><span>GIFT3<\/span>",
           "page_url": "shopify:\/\/collections\/all",
           "topbar_text2": "2-Year Device Warranty",
           "page_url2": "shopify:\/\/collections\/all",
@@ -201,7 +202,7 @@
           "page_url5": "",
           "topbar_link_title": "",
           "topbar_link": "",
-          "topbar_bg_color": "#000000",
+          "topbar_bg_color": "#a20409",
           "topbar_text_color": "#ffffff",
           "topbar_height": 40,
           "topbar_font_size": "14px",
@@ -1109,12 +1110,6 @@
       "search-layer": {
         "type": "search-layer",
         "settings": {
-        }
-      },
-      "hoox-promo-bar": {
-        "type": "hoox-promo-bar",
-        "settings": {
-          "promo_text": "SAVE 10% + GET FREE SHIPPING TODAY"
         }
       },
       "cart-drawer": {

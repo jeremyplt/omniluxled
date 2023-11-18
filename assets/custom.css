@@ -63,7 +63,9 @@
 .template-product.omnilux-clear  .circle-video-menu-wrap.circle-video-desktop.clearpdp,
 .clearpdp .desktopreviewstitle, 
 .template-product.omnilux-clear .seeallreviews, 
-.template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-video-menu{display:block!important;}
+.template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-video-menu{
+  display:block!important;
+}
 
 .template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop .circle-menu-items {
     justify-content: center;
@@ -368,6 +370,7 @@
   vertical-align: top;
 }
 
+.template-index .circle-video-menu-wrap.circle-video-desktop .circle-menu-items,
 .anti-acne .circle-video-menu-wrap.circle-video-desktop .circle-menu-items{justify-content:center;}
 
 .circle-video-menu-wrap.circle-video-desktop .circle-menu-items {
@@ -433,6 +436,9 @@
   .circle-video-menu-wrap.circle-video-desktop
   .circle-video-menu,
 .template-page.anti-acne .circle-video-menu-wrap.circle-video-desktop,
+.template-index .desktopreviewstitle,
+.template-index .circle-video-menu-wrap.circle-video-desktop,
+.template-index .seeallreviews,
 .template-page.anti-acne .desktopreviewstitle,
 .template-page.minis .desktopreviewstitle,
 .template-page.anti-acne .seeallreviews,
@@ -581,7 +587,8 @@
     top: -6px;
   }
   .anti-acne .circle-video-menu-wrap.circle-video-desktop .circle-menu-items,
-  .template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-menu-items
+  .template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-menu-items,
+  .template-index .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-menu-items
   {justify-content:flex-start;}
 }
 
@@ -1691,12 +1698,9 @@ html .swiper-button-next:hover::after {
 
 /* App - Frequently Bought Together */
 
-.ab-fbt .cbb-frequently-bought-container {  
-  display: block !important;
-}
 
 html .cbb-frequently-bought-container {  
-  display: none;
+  display: block;
   padding: 1.5rem 8rem;
   border-color: black !important;
   border-bottom-width: 1px;
@@ -1924,4 +1928,11 @@ html .cbb-frequently-bought-recommendations-wrap {
 .subscription-info ul {
   padding-left: 1rem;
   list-style: square
+}
+
+.hero-banner__disclaimer {
+  color: #ffffff;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 10px;
 }

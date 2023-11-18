@@ -1,9 +1,33 @@
-$(document).ready(function () {
-  $('.cbb-frequently-bought-products').after($('<div class="cbb-frequently-bought-recommendations-wrap"></div>'))
-  $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-selector-list'))  
-  $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-form'))    
-  $('.cbb-frequently-bought-total-price-text').text("Total:")
+function waitForElm(selector) {
+  return new Promise(resolve => {
+      if (document.querySelector(selector)) {
+          return resolve(document.querySelector(selector));
+      }
 
+      const observer = new MutationObserver(mutations => {
+          if (document.querySelector(selector)) {
+              observer.disconnect();
+              resolve(document.querySelector(selector));
+          }
+      });
+
+      observer.observe(document.body, {
+          childList: true,
+          subtree: true
+      });
+  });
+}
+
+$(document).ready(function () {
+  waitForElm('.cbb-frequently-bought-container').then((elm) => {    
+    $('.cbb-frequently-bought-products').after($('<div class="cbb-frequently-bought-recommendations-wrap"></div>'));
+    $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-selector-list'));
+    $('.cbb-frequently-bought-recommendations-wrap').append($('.cbb-frequently-bought-form'));
+    $('.cbb-frequently-bought-total-price-text').text("Total:");  
+    $('.cbb-frequently-bought-title').text($('div[data-template="product"]').data( "product-upsell-title"));   
+    $('.cbb-frequently-bought-container').css("display", "block");
+  })
+  
   $("#gorgias-chat-start").click(function(){   
     const chatWindow = $('#gorgias-chat-container #chat-window').css('display')
     if(chatWindow == undefined || chatWindow == 'none'){      
