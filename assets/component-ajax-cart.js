@@ -18,15 +18,15 @@ class AjaxCart extends HTMLElement {
     );
 
     if (window.globalVariables.template != "cart") {
-      this.addAccessibilityAttributes(this.openeBy);      
+      this.addAccessibilityAttributes(this.openeBy);
     } else {
-      window.location.href = window.location.origin
+      window.location.href = window.location.origin;
       this.style.visibility = "visible";
     }
 
     this.taxPercent = 0;
     this.getCartData();
-    
+
     if (navigator.platform === "iPhone")
       document.documentElement.style.setProperty(
         "--viewport-height",
@@ -122,10 +122,12 @@ class AjaxCart extends HTMLElement {
 
   addEventListenerUpsells() {
     const upsells = document.querySelectorAll(".cart-upsell");
-  
+
     upsells.forEach((upsell) => {
       const form = upsell.querySelector(".cart-upsell-form");
-      const productsToRemove = upsell.getAttribute("data-products-remove").split(",");
+      const productsToRemove = upsell
+        .getAttribute("data-products-remove")
+        .split(",");
 
       // remove the last element of the array if it's empty
       if (productsToRemove[productsToRemove.length - 1] === "") {
@@ -135,25 +137,24 @@ class AjaxCart extends HTMLElement {
       form.addEventListener("submit", (event) => {
         productsToRemove.forEach((variantId) => {
           setTimeout(() => {
-            fetch('/cart/change.js', {
-              method: 'POST',
+            fetch("/cart/change.js", {
+              method: "POST",
               headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json",
               },
               body: JSON.stringify({
                 id: variantId,
-                quantity: 0
-              })
+                quantity: 0,
+              }),
             }).then((response) => {
               if (response.ok) {
                 this.getCartData();
               }
-            })
-          }, 500)
-        })
-      })
-    })
-  
+            });
+          }, 500);
+        });
+      });
+    });
   }
 
   renderUpsells() {
@@ -162,28 +163,39 @@ class AjaxCart extends HTMLElement {
 
     // Fetch a Shopify section. shopify-section only if static section rendered with section tag
     fetch(window.Shopify.routes.root + "?section_id=cart-drawer")
-    .then(response => response.text())
-    .then(responseText => {
-        const html = new DOMParser().parseFromString(responseText, 'text/html');
-        const source = html.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
-        const destination = document.querySelector('.swiper-container.upsell-test-variant .swiper-wrapper')
+      .then((response) => response.text())
+      .then((responseText) => {
+        const html = new DOMParser().parseFromString(responseText, "text/html");
+        const source = html.querySelector(
+          ".swiper-container.upsell-test-variant .swiper-wrapper"
+        );
+        const destination = document.querySelector(
+          ".swiper-container.upsell-test-variant .swiper-wrapper"
+        );
 
-        const sourceTitle = html.querySelector('.cart-upsell-title.upsell-test-variant')
-        const destinationTitle = document.querySelector('.cart-upsell-title.upsell-test-variant')
+        const sourceTitle = html.querySelector(
+          ".cart-upsell-title.upsell-test-variant"
+        );
+        const destinationTitle = document.querySelector(
+          ".cart-upsell-title.upsell-test-variant"
+        );
 
         destinationTitle.innerHTML = sourceTitle.innerHTML;
         destination.innerHTML = source.innerHTML;
 
-
         if (source.children.length == 0) {
-          document.querySelector(".cart-upsell-title.upsell-test-variant").style.display = "none";
+          document.querySelector(
+            ".cart-upsell-title.upsell-test-variant"
+          ).style.display = "none";
         } else {
-          document.querySelector(".cart-upsell-title.upsell-test-variant").style.display = "block";
+          document.querySelector(
+            ".cart-upsell-title.upsell-test-variant"
+          ).style.display = "block";
         }
 
-        this.addEventListenerUpsells()
-    })
-    .catch(error => console.error(error));
+        this.addEventListenerUpsells();
+      })
+      .catch((error) => console.error(error));
   }
 
   /**
@@ -213,9 +225,10 @@ class AjaxCart extends HTMLElement {
     let closeBtn = this.querySelector(".close-ajax--cart");
     Utility.trapFocus(this, closeBtn);
 
-    this.renderUpsells()
+    this.renderUpsells();
 
-    if (document.querySelectorAll(".cart-items").length > 0) this.activateExperimentUpsell();
+    if (document.querySelectorAll(".cart-items").length > 0)
+      this.activateExperimentUpsell();
 
     if (event) {
       event.preventDefault();
@@ -255,26 +268,28 @@ class AjaxCart extends HTMLElement {
   }
 
   _applyTax(element, change) {
-    let priceElement = element.getElementsByClassName("price")[0]    
-    if(priceElement.classList.contains("dp_catalog"))
-      return
+    let priceElement = element.getElementsByClassName("price")[0];
+    if (priceElement.classList.contains("dp_catalog")) return;
 
-    let price = 0
-    if(priceElement.getAttribute("data-variant-price")) {
-      price = priceElement.getAttribute("data-variant-price")
+    let price = 0;
+    if (priceElement.getAttribute("data-variant-price")) {
+      price = priceElement.getAttribute("data-variant-price");
     } else {
-      let priceString = priceElement.innerHTML.replace(/\s+/g, '').replace(',', '').replace(change, '')
+      let priceString = priceElement.innerHTML
+        .replace(/\s+/g, "")
+        .replace(",", "")
+        .replace(change, "");
       priceString = priceString.slice(1, priceString.length);
-      price = parseInt(priceString)
+      price = parseInt(priceString);
     }
 
     price = price * (1 + this.taxPercent / 100);
     let formatMoney = Shopify.formatMoney(
-      price,        
+      price,
       window.globalVariables.money_format
     );
-    formatMoney += " Incl. tax"
-    priceElement.innerHTML = formatMoney    
+    formatMoney += " Incl. tax";
+    priceElement.innerHTML = formatMoney;
   }
 
   /**
@@ -284,18 +299,18 @@ class AjaxCart extends HTMLElement {
    * @param {string} action Open Drawer as value if need to Open Cart drawer
    */
   _updateCart(response, action) {
-    if(window.globalVariables.template == "cart") {
-      this.taxPercent = localStorage.getItem("taxPercent")
+    if (window.globalVariables.template == "cart") {
+      this.taxPercent = localStorage.getItem("taxPercent");
     } else {
-      this.taxPercent = window.globalVariables.taxPercent
+      this.taxPercent = window.globalVariables.taxPercent;
     }
-    
-    if(isNaN(this.taxPercent)) {
+
+    if (isNaN(this.taxPercent)) {
       this.taxPercent = 0;
       this.getCartData();
-      return
+      return;
     }
-    
+
     this.setAttribute("updating", true);
 
     // Convert the HTML string into a document object
@@ -314,72 +329,76 @@ class AjaxCart extends HTMLElement {
     if (cartJSONEle != undefined && cartJSONEle != null) {
       window.globalVariables.cart = JSON.parse(cartJSONEle.textContent);
     }
-    
+
     let cartElement = cartHTML.querySelector("ajax-cart form");
     this.querySelector("form").innerHTML = cartElement.innerHTML;
 
     let total_price = 0;
     let cartItems = this.querySelectorAll("[data-cart-item]");
-    cartItems.forEach((element) => {      
-      let productId = element.getAttribute("data-product-id")
+    cartItems.forEach((element) => {
+      let productId = element.getAttribute("data-product-id");
 
       window.globalVariables.cart.items.forEach((item) => {
         if (item.product_id == productId) {
-          let variantJSONEle = document.querySelector(".variantsJSON-" + productId);
+          let variantJSONEle = document.querySelector(
+            ".variantsJSON-" + productId
+          );
           if (variantJSONEle != undefined && variantJSONEle != null) {
             let variantJSON = JSON.parse(variantJSONEle.textContent);
             let itemTotalPrice = variantJSON[0].price * item.quantity;
             total_price += itemTotalPrice;
 
-            if(this.taxPercent > 0) {
+            if (this.taxPercent > 0) {
               itemTotalPrice = itemTotalPrice * (1 + this.taxPercent / 100);
-            }  
-          }          
+            }
+          }
         }
       });
     });
-   
-    if(this.taxPercent > 0) {
+
+    if (this.taxPercent > 0) {
       let preTaxElement = document.getElementById("preTax");
-      preTaxElement.classList.add("d-flex");  
-            
+      preTaxElement.classList.add("d-flex");
+
       this.querySelector("[data-preTaxCartTotal]").innerHTML =
-      Shopify.formatMoney(
-        total_price,
-        window.globalVariables.money_format
-      );
+        Shopify.formatMoney(total_price, window.globalVariables.money_format);
     }
 
-    if(this.taxPercent > 0) {
+    if (this.taxPercent > 0) {
       total_price = total_price * (1 + this.taxPercent / 100);
-    } 
-    
-    this.querySelector("[data-carttotal]").innerHTML =
-    Shopify.formatMoney(
+    }
+
+    this.querySelector("[data-carttotal]").innerHTML = Shopify.formatMoney(
       total_price,
       window.globalVariables.money_format
     );
 
-    if(this.taxPercent > 0) {
-      let navProductItems = document.querySelectorAll("[data-nav-menu-product-id]");
+    if (this.taxPercent > 0) {
+      let navProductItems = document.querySelectorAll(
+        "[data-nav-menu-product-id]"
+      );
       navProductItems.forEach((element) => {
-        this._applyTax(element, '')
-      })  
+        this._applyTax(element, "");
+      });
 
-      let mnavProductItems = document.querySelectorAll("[data-mobile-nav-menu-product-id]");
+      let mnavProductItems = document.querySelectorAll(
+        "[data-mobile-nav-menu-product-id]"
+      );
       mnavProductItems.forEach((element) => {
-        this._applyTax(element, '')
-      })  
+        this._applyTax(element, "");
+      });
 
       let productItems = document.querySelectorAll("[data-prod-id]");
       productItems.forEach((element) => {
-        this._applyTax(element, '')
-      })  
+        this._applyTax(element, "");
+      });
 
-      let upsellProductItems = document.querySelectorAll("[data-upsell-product-id]");
+      let upsellProductItems = document.querySelectorAll(
+        "[data-upsell-product-id]"
+      );
       upsellProductItems.forEach((element) => {
-        this._applyTax(element, 'from')
-      })  
+        this._applyTax(element, "from");
+      });
     }
     let elements = this.querySelectorAll(
       "[data-checkoutBtns], [data-cartnote], [data-cartupsell]"
@@ -405,8 +424,10 @@ class AjaxCart extends HTMLElement {
 
     const body = document.querySelector("body");
 
-    if(body.classList.contains("ab-test-cartdrawer")){
-      let upsellElements = document.querySelectorAll("[data-upsell-product-id]");
+    if (body.classList.contains("ab-test-cartdrawer")) {
+      let upsellElements = document.querySelectorAll(
+        "[data-upsell-product-id]"
+      );
 
       let deviceOnlyShow = false;
       window.globalVariables.cart.items.forEach((item) => {
@@ -418,15 +439,15 @@ class AjaxCart extends HTMLElement {
         }
       });
       let upsellTitleEle = document.querySelector(".cart-upsell-title");
-  
+
       if (deviceOnlyShow) {
         // upsellTitleEle.innerHTML = "Supercharge your results 👇️";
-  
+
         const devices = [
           5764128866466, 7210762666146, 7919965569186, 7924737736866,
           7926914154658, 7927138025634,
         ];
-  
+
         upsellElements.forEach((element) => {
           let device = false;
           devices.forEach((item) => {
@@ -434,14 +455,14 @@ class AjaxCart extends HTMLElement {
               device = true;
             }
           });
-  
+
           let exist = false;
           window.globalVariables.cart.items.forEach((item) => {
             if (item.product_id == element.dataset.upsellProductId) {
               exist = true;
             }
           });
-  
+
           if (device == true) {
             if (exist == true) element.classList.add("d-none");
             else element.classList.remove("d-none");
@@ -451,7 +472,7 @@ class AjaxCart extends HTMLElement {
         });
       } else {
         // upsellTitleEle.innerHTML = "You might also like";
-  
+
         upsellElements.forEach((element) => {
           let exist = false;
           window.globalVariables.cart.items.forEach((item) => {
@@ -459,13 +480,13 @@ class AjaxCart extends HTMLElement {
               exist = true;
             }
           });
-  
+
           if (exist == true) element.classList.add("d-none");
           else element.classList.remove("d-none");
         });
       }
     }
-    
+
     this.setAttribute("updating", false);
 
     let headerHTML = new DOMParser().parseFromString(
@@ -585,8 +606,16 @@ class AjaxCart extends HTMLElement {
       this.updateItemQty(itemIndex, 0);
     }
     setTimeout(() => {
-      this.renderUpsells()
-    }, 500)
+      this.renderUpsells();
+    }, 500);
+
+    setTimeout(() => {
+      this.renderUpsells();
+    }, 1500);
+
+    setTimeout(() => {
+      this.renderUpsells();
+    }, 3000);
   }
 
   /**
