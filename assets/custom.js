@@ -19,17 +19,6 @@ function waitForElm(selector) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    waitForElm('.product-details-wrapper [data-oke-metafield-data]').then((elm) => {
-        const metafield = jQuery.parseJSON(elm.textContent);
-        if(metafield.reviewCount == 0) {            
-            $('.product-details-wrapper [data-oke-star-rating]').css({display:'none'});
-            $('.trustedbypdp').css({display:'none'});
-        } else {
-            $('.product-details-wrapper [data-oke-star-rating]').css({display:'block'});
-            $('.trustedbypdp').css({display:'block'});
-        }
-    })
-
     waitForElm('.locale-selectors__container').then((elm) => {
         console.log("locale-selectors__container found =", $("#country_code").val())
 
@@ -52,6 +41,17 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     });
+
+    waitForElm('.product-details-wrapper [data-oke-metafield-data]').then((elm) => {
+        const metafield = jQuery.parseJSON(elm.textContent);
+        if(metafield.reviewCount == 0) {            
+            $('.product-details-wrapper [data-oke-star-rating]').css({display:'none'});
+            $('.trustedbypdp').css({display:'none'});
+        } else {
+            $('.product-details-wrapper [data-oke-star-rating]').css({display:'block'});
+            $('.trustedbypdp').css({display:'block'});
+        }
+    })
 });
 
 
