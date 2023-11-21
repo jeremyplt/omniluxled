@@ -470,6 +470,7 @@
         },
         "5129113d-7507-4843-a29a-7fa7635dca2c": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "hoox_faq_question": "Can I complete Contour treatments with Botox and fillers?",
             "hoox_faq_answer": "Yes, the Contour line helps with bruising that may occur after Botox or fillers. Subjects reported that they felt their Botox treatment lasted longer and results are much more enhanced when combined with Omnilux light therapy. Contour treatments are complementary—they have no direct effect on the Botox or filler treatment."
