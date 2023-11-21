@@ -1,3 +1,7 @@
+{%- if settings.enable_cart_drawer or template.name == 'cart' -%}
+  <script src="{{ 'component-ajax-cart.js' | asset_url }}"></script>
+{%- endif -%}
+
 {% comment %}theme-check-disable ParserBlockingJavaScript{% endcomment %}
 <script src="{{ 'utility.js' | asset_url }}"></script>
 
@@ -12,10 +16,6 @@
 {% comment %} {% if settings.enable_quickshop %}
 <script src="{{ 'component-quickshop.js' | asset_url }}" defer></script>
 {% endif %} {% endcomment %}
-
-{%- if settings.enable_cart_drawer or template.name == 'cart' -%}
-  <script src="{{ 'component-ajax-cart.js' | asset_url }}" defer></script>
-{%- endif -%}
 
 {%- comment -%} Index Page JS {%- endcomment -%}
 {%- if template.name == 'index' -%}
