@@ -588,7 +588,8 @@
   }
   .anti-acne .circle-video-menu-wrap.circle-video-desktop .circle-menu-items,
   .template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-menu-items,
-  .template-index .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-menu-items
+  .template-index .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-menu-items,
+  .template-index .circle-video-menu-wrap.circle-video-desktop .circle-menu-items
   {justify-content:flex-start;}
 }
 
