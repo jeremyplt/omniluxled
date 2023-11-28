@@ -188,9 +188,9 @@
           "b4cda1f0-5efa-4d22-88b3-49faf8b1439c"
         ],
         "settings": {
-          "promo_text": "CYBER MONDAY SALE! $50 OFF 1 DEVICE: <span>GIFT 1<\/span>, $120 OFF 2 DEVICES: <span>GIFT2<\/span>, $240 OFF 3 DEVICES: <span>GIFT3<\/span>",
+          "promo_text": "LAST DAY TO SAVE! $50 OFF 1 DEVICE: <span>GIFT 1<\/span>, $120 OFF 2 DEVICES: <span>GIFT2<\/span>, $240 OFF 3 DEVICES: <span>GIFT3<\/span>",
           "topbar_enabled": true,
-          "topbar_text": "<strong>CYBER MONDAY SALE! $50 OFF 1 DEVICE: <span><\/span><\/strong>GIFT 1<strong>, $120 OFF 2 DEVICES:<\/strong> <span>GIFT2<\/span>, <strong>$240 OFF 3 DEVICES: <\/strong><span>GIFT3<\/span>",
+          "topbar_text": "<strong>LAST DAY TO SAVE! $50 OFF 1 DEVICE: <span><\/span><\/strong>GIFT 1<strong>, $120 OFF 2 DEVICES:<\/strong> <span>GIFT2<\/span>, <strong>$240 OFF 3 DEVICES: <\/strong><span>GIFT3<\/span>",
           "page_url": "shopify:\/\/collections\/all",
           "topbar_text2": "2-Year Device Warranty",
           "page_url2": "shopify:\/\/collections\/all",
