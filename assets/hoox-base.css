@@ -46,6 +46,10 @@ ul {
     display: none !important;
 } */
 
+#shopify-section-hoox-promo-bar {
+    display: none !important;
+}
+
 /* Text colors */
 
 .text-black {
@@ -168,23 +172,3 @@ ul {
     opacity: 1;
     background:var(--bs-body-color);
   }
-
-  /*Popup*/
-
-  .design-layer.vcenter {
-    display: none !important;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-#ju_bbox {
-    display: none !important;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.ju_Con {
-    visibility: hidden !important;
-    display: none !important;
-    pointer-events: none;
-}

@@ -27,7 +27,7 @@ $(document).ready(function () {
     $('.cbb-frequently-bought-title').text($('div[data-template="product"]').data( "product-upsell-title"));   
     $('.cbb-frequently-bought-container').css("display", "block");
   })
-  
+
   $("#gorgias-chat-start").click(function(){   
     const chatWindow = $('#gorgias-chat-container #chat-window').css('display')
     if(chatWindow == undefined || chatWindow == 'none'){      

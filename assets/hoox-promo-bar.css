@@ -1,29 +1,21 @@
 .hoox-promo-bar {
-    display: none;
     background-color: #99552B;
     padding: 6px 0;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.template-page.anti-aging-holiday .hoox-promo-bar {
-    display: flex;
-}
-
 .hoox-promo-bar__text {
     text-transform: uppercase;
-    text-align: center;
+    font-weight: 600;
     font-size: 14px;
     color: #fff;
 }
 
-.hoox-promo-bar__text span {
-    font-weight: 600;
-}
-
-/* .template-page.anti-aging-holiday #slide1 {
+#slide1 {
     display: none !important;
-} */
+}
 
 @media (min-width: 1024px) {
     .hoox-promo-bar {

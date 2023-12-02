@@ -8,7 +8,6 @@
 
 
 
-
 /*new header height*/
 .image-hero.shortbanner .tallheight .swiper-slide {height: calc(80vh - 140px);min-height: 0vw!important;}
 
@@ -587,8 +586,8 @@
     top: -6px;
   }
   .anti-acne .circle-video-menu-wrap.circle-video-desktop .circle-menu-items,
-  .template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-menu-items,
-  .template-index .circle-video-menu-wrap.circle-video-desktop.clearpdp .circle-menu-items
+  .template-product.omnilux-clear .circle-video-menu-wrap.circle-video-desktop .circle-menu-items,
+  .template-index .circle-video-menu-wrap.circle-video-desktop .circle-menu-items
   {justify-content:flex-start;}
 }
 
@@ -1698,9 +1697,12 @@ html .swiper-button-next:hover::after {
 
 /* App - Frequently Bought Together */
 
+/* .ab-fbt .cbb-frequently-bought-container {  
+  display: block !important;
+} */
 
 html .cbb-frequently-bought-container {  
-  display: block;
+  display: none;
   padding: 1.5rem 8rem;
   border-color: black !important;
   border-bottom-width: 1px;
@@ -1928,11 +1930,4 @@ html .cbb-frequently-bought-recommendations-wrap {
 .subscription-info ul {
   padding-left: 1rem;
   list-style: square
-}
-
-.hero-banner__disclaimer {
-  color: #ffffff;
-  font-size: 12px;
-  font-style: italic;
-  margin-top: 10px;
 }

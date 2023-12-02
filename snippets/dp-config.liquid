@@ -254,11 +254,15 @@
             return true;
         }
         taxPercent = parseFloat(dpTaxPercent);        
+        window.globalVariables.taxPercent = taxPercent;
+        localStorage.setItem("taxPercent", taxPercent);
+
         if (parseInt(dp_base_price_type) == 0) {
             firstPrice = Shopify.formatMoney(price, dpMoneyFormat);
             secondPrice = firstPrice;
             if (!isNaN(taxPercent) && taxPercent > 0) {
                 secondPriceNotFormated = Math.round(price + price * taxPercent / 100);
+                console.log("secondPriceNotFormated =", secondPriceNotFormated)
                 secondPrice = Shopify.formatMoney(secondPriceNotFormated, dpMoneyFormat);
             }
         } else {
@@ -266,30 +270,19 @@
             firstPrice = secondPrice;
             if (!isNaN(taxPercent) && taxPercent > 0) {
                 firstPriceNotFormated = Math.round(price + price * taxPercent / 100);
+                console.log("firstPriceNotFormated =", firstPriceNotFormated)
                 firstPrice = Shopify.formatMoney(firstPriceNotFormated, dpMoneyFormat);
             }
         }
-        window.globalVariables.taxPercent = taxPercent;
-        localStorage.setItem("taxPercent", taxPercent);
         compareAtPriceBlock = '';
         firstPriceBlock = '';
         secondPriceBlock = '';
         
-        no_sales_country_list = ["CH", "SE", "RO", "PL", "NO", "LI", "HU", "DK", "CZ", "BG"];
-        is_no_sales_country = false;
-        country_code = localStorage.getItem("country_code")
-        console.log("country_code =", country_code);
-
-        if(no_sales_country_list.includes(country_code)) {
-            is_no_sales_country = true;
-        }
-
         if(productTags.includes("BFD") && !isNaN(taxPercent)) {
             compareAtPrice = Math.round((price + price * taxPercent / 100) / 0.85);
-            jQuery(".compareprice").hide();
         }
 
-        if (!is_no_sales_country && parseInt(dp_show_compare_at_price) == 1 && parseInt(compareAtPrice) > 0 && parseInt(compareAtPrice) != parseInt(price)) {
+        if (parseInt(dp_show_compare_at_price) == 1 && parseInt(compareAtPrice) > 0 && parseInt(compareAtPrice) != parseInt(price)) {
             compareAtPriceBlock = '<span class="dpCompareAtPrice" style="margin-right:5px; text-decoration: line-through;"><span>' + Shopify.formatMoney(compareAtPrice, dpMoneyFormat) + '</span></span>' + '<br/>';
         }
         if (parseInt(dpPriceTypeToShow) != 2) {

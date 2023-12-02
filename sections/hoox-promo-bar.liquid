@@ -1,0 +1,31 @@
+{{ 'hoox-promo-bar.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+    assign promoText = section.settings.promo_text
+%}
+
+<section class="hoox-promo-bar">
+
+{% if promoText != 'blank' %}
+<p class="hoox-promo-bar__text">
+    {{ promoText }}
+</p>
+{% endif %}
+
+</section>
+
+{% comment %} Js file {% endcomment %}
+
+{% schema %}
+    {
+        "name": "Hoox Promo Bar",
+        "settings": [
+            {
+                "type": "text",
+                "id": "promo_text",
+                "label": "Promo Bar Text",
+                "default": "SAVE 10% + GET FREE SHIPPING TODAY"
+            }
+        ]
+    }
+{% endschema %}

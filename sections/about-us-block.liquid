@@ -15,8 +15,16 @@
                     {%- for block in section.blocks -%}
                         <custom-tabs class="bg-white d-block" {{ block.shopify_attributes }}>
                             <div class="">
-                                <div id="productTabs" data-product-tabs>
-                                  <slider-element class="swiper-container  carousel collection-slider-style-3 d-block position-relative ">
+                                <div id="productTabs" data-product-tabs style="position: relative;">
+                                  <div class="swiper-arrows">
+                                    <div class="slider-reviews-prev">
+                                      {% render 'hoox-snippet-arrow-previous' %}
+                                    </div>
+                                    <div class="slider-reviews-next">
+                                      {% render 'hoox-snippet-arrow-next' %}
+                                    </div>
+                                  </div>
+                                  <slider-element class="swiper-container  carousel collection-slider-style-3 d-block position-relative px-1">
                                     <div class="swiper swiper-slider  pb-3" data-slider='{
                                         "loop": false,
                                         "slidesPerView": 1.1,
@@ -27,6 +35,9 @@
                                             "el": ".swiper-pagination"
                                         },
                                         "breakpoints": {
+                                          "300": {
+                                              "slidesPerView": 1
+                                          },
                                           "560": {
                                               "slidesPerView": 2
                                           },
@@ -218,6 +229,8 @@
     </div>
 </section>
 
+<script src="{{ 'about-us-block.js' | asset_url }}" defer="defer"></script>
+                          
 {% schema %}
 {
   "name": "About Us Board",

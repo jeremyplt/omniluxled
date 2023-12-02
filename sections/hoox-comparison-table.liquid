@@ -204,7 +204,8 @@
         </figure>
       {% endif %}
     </div>
-<a alt="take the clear self-assessment" href="{{ section.settings.compare_section_cta_link }}" class="btn btn-primary assessmentbtn">{{ section.settings.compare_section_cta }}</a>
+<a alt="take the clear self-assessment" href="/pages/clear-assessment" class="btn btn-primary assessmentbtn">take the clear self-assessment</a>
+
   </div>
 </div>
 <script src="{{ 'hoox-comparison-table.js' | asset_url }}" defer="defer"></script>
@@ -226,18 +227,6 @@
         "type": "image_picker",
         "id": "compare_section_last_image",
         "label": "Section Last Image"
-      },
-      {
-        "type": "text",
-        "id": "compare_section_cta",
-        "label": "Section CTA",
-        "default": "SHOP & SAVE"
-      },
-      {
-        "type": "text",
-        "id": "compare_section_cta_link",
-        "label": "Section CTA Link",
-        "default": "/pages/clear-assessment"
       }
     ],
     "blocks": [

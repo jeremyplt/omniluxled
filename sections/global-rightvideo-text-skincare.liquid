@@ -14,7 +14,6 @@
                     data-loop="{{ section.settings.loop }}" data-autoplay="true" data-controls="{{ section.settings.controls }}" data-muted="{{ section.settings.muted }}"
                     data-video-type="{{ section.settings.video_type }}"  data-placement="{{ section.settings.placement }}"
                     {% if section.settings.mobile_video_id != blank %}data-mobileVideo="{{ section.settings.mobile_video_id }}"{% endif %} data-video-id="{{ section.settings.video_id }}">
-                    {% if section.settings.video_id != blank %}
                     <div class="cta-btn">
                         <span class="d-inline-flex" role="button" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
                             <span class="btn btn-white d-flex align-items-center d-lg-inline-flex"> {{ section.settings.video_btn_text }} <i class="ox-play ms-2" style="font-size:11px;"></i></span>
@@ -24,7 +23,6 @@
                             <span class="btn btn btn-white">Watch video <i class="ox-play ms-2"></i></span>
                         </span>
                     </div>
-                    {% endif %}
                     <div class="content-section">
                         <div class="poster-image {{ section.settings.height }}">
                             {%- if section.settings.poster_type == 'video' and section.settings.bg_video != blank -%}
@@ -109,7 +107,7 @@
                         </div>
                         {% endif %}
                         {% if section.settings.btn_txt != blank %}
-                            <a {% if section.settings.btn_link %} href="{{ section.settings.btn_link }}" {% endif %}class="mt-3 btn btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}">{{ section.settings.btn_txt }}</a>
+                            <a {% if section.settings.btn_link %} href="{{ section.settings.btn_link }}" {% endif %}class="btn btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}">{{ section.settings.btn_txt }}</a>
                         {% endif %}
                         {% if section.settings.link_txt != blank %}
                             <div class="mt-3 pt-1">

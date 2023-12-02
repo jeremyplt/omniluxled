@@ -104,25 +104,6 @@
     border: none;
 }
 
-.hoox-shop__giftcode {
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.template-page.anti-aging-holiday .hoox-shop__giftcode {
-    display: flex;
-}
-
-.hoox-shop__giftcode-text {
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    white-space: nowrap;
-    color: red;
-}
-
 .hoox-shop__images {
     display: flex;
     justify-content: center;
@@ -336,24 +317,16 @@
 }
 
 /*GALLERY BADGE*/
-.hoox-shop__gallery-bagde-container {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
 
 .hoox-shop__gallery-bagde {
     width: 96px;
     height: 96px;
     border-radius: 100%;
     background: #B67D5B;
-    position: relative;
-    right: 10px;
-    top: 18px;
-    float: right;
+    position: absolute;
     z-index: 9;
+    top: 18px;
+    left: 447px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -617,11 +590,6 @@
         font-size: 14px;
     }
 
-    .hoox-shop__giftcode {
-        max-width: 442px;
-        margin-left: auto;
-    }
-
     .hoox-shop__images {
         gap: 26px;
         row-gap: 24px;
@@ -726,7 +694,7 @@
     }
     .hoox-newsletter__msg-error {
         font-size: 12px;
-    }    
+    }
 }
 
 @media(max-width: 768px){
@@ -736,6 +704,10 @@
     
     .hoox-shop__upsell .hoox-shop__atc-wrapper .quantity-wrapper {
         max-width: 100%;
+    }
+
+    .hoox-shop__gallery-bagde{
+        display: none;
     }
 }
 

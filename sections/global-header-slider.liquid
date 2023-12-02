@@ -219,7 +219,7 @@
                                   {%- endif -%}
                               </custom-video>
                               <div class="position-absolute full-video-caption text-center media-text-wrap">
-                                  <div class="inside-block container px-md-0 px-3 col-12 col-md-11 col-lg-10 pb-xl-13 py-lg-10 mb-xl-2 py-md-5 py-10 {{ block.settings.alignment }} d-flex {{ block.settings.video_alignment }}" style="color:{{ block.settings.section_text_color }};opacity: 0;">
+                                  <div class="inside-block container px-md-0 px-3 col-12 col-md-11 col-lg-10 pb-xl-13 py-lg-10 mb-xl-2 py-md-5 py-10 {{ block.settings.alignment }} d-flex {{ block.settings.video_alignment }}" style="color:{{ block.settings.section_text_color }};">
                                       <div class="px-md-0 pe-0 mx-md-0 mx-auto {% if template.name == 'page' %}col-xl-6 col-md-8 lp-page-m{% else %}col-md-12{% endif %} ">
                                         
                         {% if block.settings.trustedbytxt != blank %}
@@ -238,7 +238,7 @@
                                               <img src="{{ block.settings.logo_image__ }}" class="h-auto position-relative w-auto mb-4" width="214" height="214" alt="{{ shop.name | escape }}" />
                                           {% endif %}
                                           {% if block.settings.title != blank %}
-                                              <h2 class="mb-3 px-4 px-md-0 h1">{{ block.settings.title }}</h2>
+                                              <h2 class="mb-3 h1">{{ block.settings.title }}</h2>
                                           {% endif %}
                                           {% if block.settings.subtitle != blank %}
                                               <div class="col-xl-8 col-md-10 caption_txt fw-normal mb-1 pb-2">{{ block.settings.subtitle }}</div>
@@ -557,7 +557,7 @@
                                                 <img src="{{ block.settings.logo_image__ }}" class="h-auto position-relative w-auto mb-4" width="214" height="214" alt="{{ block.settings.title | default: shop.name | escape }}"/>
                                             {% endif %}
                                             {% if block.settings.title != blank %}
-                                                <h2 class="mb-3 px-md-0 px-4 h1">{{ block.settings.title }}</h2>
+                                                <h2 class="mb-3 h1">{{ block.settings.title }}</h2>
                                             {% endif %}
                                             {% if block.settings.subtitle != blank %}
                                                 <div class="caption_txt mb-1 pb-2">{{ block.settings.subtitle }}</div>

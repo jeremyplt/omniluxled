@@ -2,7 +2,6 @@
 {% assign logo_svg = section.settings.logo_svg %}
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}> 
   <header class="site-header {% if section.settings.show_line_separator %}border-bottom{% endif %}" style="background-color: {{ section.settings.header_bg_color }};">
-    {% comment %} {% render 'hoox-promo-bar' promoText: section.settings.promo_text %} {% endcomment %}
     {% if section.settings.topbar_enabled %}
       
       <a id="slide1" class="d-nne slidex active" href="{{ section.settings.page_url.url }}">
@@ -18,7 +17,7 @@
       </a>
       
      
-      {% comment %} <a id="slide2" class="d-nne slidex" href="{{ section.settings.page_url2.url }}">
+      <a id="slide2" class="d-nne slidex" href="{{ section.settings.page_url2.url }}">
         <div class="topbar d-flex align-items-center" data-top-bar style="background-color: {{ section.settings.topbar_bg_color }}; min-height: {{ section.settings.topbar_height }}px;">
             <div class="container">
                 <div class="d-block mobile-topbar text-uppercase text-center ls-sm" style="line-height: 1.285714285714286; color: {{ section.settings.topbar_text_color }};font-size: {{ section.settings.topbar_font_size }}">
@@ -40,7 +39,7 @@
                 </div>
             </div>
         </div>
-      </a> {% endcomment %}
+      </a>
       
       {% if topbar_text4 %}
       <a id="slide4" class="d-nne slidex" href="{{ section.settings.page_url4.url }}">
@@ -118,7 +117,7 @@
               <div class="col-3">
                 <ul class="align-items-center d-flex justify-content-end list-unstyled mb-0 ms-auto navbar-icon-links">
                   <li class="nav-item d-flex ps-3">
-                    <a href="#" class="nav-link header__icon--cart lh-1 position-relative" focusable="false" id="cart-icon-mobile" rel="nofollow" name="cart" title="cart" rel="nofollow" aria-label="Cart">
+                    <a href="{{ routes.cart_url }}" class="nav-link header__icon--cart lh-1 position-relative" focusable="false" id="cart-icon-mobile" rel="nofollow" name="cart" title="cart" rel="nofollow" aria-label="Cart">
                       <i class="ox-bag icon-size-26 align-middle" style="font-size: 18px;"></i>
                       <span class="visually-hidden">{{ 'templates.cart.title' | t }}</span>
                         {%- if cart != empty -%}
@@ -268,12 +267,6 @@
 {
   "name": "t:sections.header.name",
   "settings": [
-    {
-      "type": "text",
-      "id": "promo_text",
-      "label": "Promo Bar Text",
-      "default": "SAVE 10% + GET FREE SHIPPING TODAY"
-    },
     {
       "type": "header",
       "content": "t:sections.header.settings.header_topbar.label"

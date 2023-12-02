@@ -2,21 +2,15 @@
   "sections": {
     "46303bd3-da3b-4cc4-9804-394607ef3f06": {
       "type": "image_hero_2",
-      "custom_css": [
-        ".overlay {display: none !important;}",
-        ".image-hero.withreviews h2.h1 {font-size: 46px !important;}"
-      ],
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/HERO.png",
-        "image_mobile": "shopify:\/\/shop_images\/Mobile_hero_7.png",
-        "title": "The gift of clear skin.",
-        "subtitle": "BLACK FRIDAY SALE!",
-        "subtitle_bottom": "Get $50 off Omnilux Clear",
-        "btn_text": "CODE: GIFT1",
+        "image_mobile": "shopify:\/\/shop_images\/Mobile_hero_4.png",
+        "title": "Save up to $240",
+        "subtitle": "$50 off  1 device: GIFT1 <br> $120 off 2 devices: GIFT2<br> $240 off 3 devices: GIFT3",
+        "btn_text": "SHOP black friday",
         "btn_link": "shopify:\/\/products\/omnilux-clear",
         "content_position": "2",
-        "custom_class": "",
-        "disclaimer": ""
+        "custom_class": ""
       }
     },
     "a1064ed2-44b7-4aff-801b-b9497008532a": {
@@ -92,18 +86,18 @@
         "heading_txt": "Omnilux Clear",
         "lead_txt": "FDA-cleared, dermatologist-recommended blue and red light therapy mask with clinically-proven results for acne. Reduces active acne and blemishes\nCalms redness and inflammation\nClears breakouts faster",
         "steps_captions": "Reduces active acne and blemishes\nCalms redness and inflammation\nClears breakouts faster",
-        "small_txt": "<font color=\"#c7030\"><strong>BLACK FRIDAY SALE!<br>Get $50 off: code  GIFT1<\/strong><\/font>",
+        "small_txt": "<strong>$50 off 1 device: GIFT1<br> $120 off 2 devices: GIFT2<br> $240 off 3 devices: GIFT3<\/strong>",
         "home_featured_product": "omnilux-clear",
         "section_bg_color": "#ffffff",
         "section_txt_color": "#000000",
-        "btn_text2": "",
+        "btn_text2": "SHOP & SAVE NOW",
         "btn_url2": "shopify:\/\/products\/omnilux-clear",
         "btn_type": "outline",
         "btn_variant": "primary",
         "btn_size": "",
-        "icon_img": "shopify:\/\/shop_images\/45_Day_Guarantee.png",
+        "icon_img": "shopify:\/\/shop_images\/medical-grade_5.svg",
         "icon_img2": "shopify:\/\/shop_images\/2_year_warranty.svg",
-        "icon_img3": "shopify:\/\/shop_images\/Icon_FDA_Cleared_png.png"
+        "icon_img3": "shopify:\/\/shop_images\/medical-grade_4.svg"
       }
     },
     "ccd2af3c-3893-452e-8e9d-e82555f637c3": {
@@ -707,9 +701,7 @@
         "0d52dc97-7e65-4976-ace4-5daeea9f1e43"
       ],
       "settings": {
-        "compare_headline": "Why Omnilux",
-        "compare_section_cta": "SHOP & SAVE $50",
-        "compare_section_cta_link": "\/products\/omnilux-clear"
+        "compare_headline": "Why Omnilux"
       }
     },
     "d1e8d9f9-4e0f-4ef5-af16-8f334ad3b8c9": {

@@ -164,9 +164,10 @@
   .image-hero-desktop .caption_txt > * {
     display: inline;
   }
-  .heading_txt {
-font-size: 50px;
-    line-height:60px;
+  .image-hero-swiper .heading_txt {
+    font-size: 40px !important;
+    line-height: 45px !important;
+    letter-spacing: -.04em !important;
   }
   .anti-acne .image-hero .media-wrap{object-position: top center!important;}
 }

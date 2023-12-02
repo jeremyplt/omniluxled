@@ -16,13 +16,15 @@
       <div
         class="">
         <div
-          class="swiper-slide d-flex {% if section.settings.content_position != "1" %} align-items-end {% endif %}"
+          class="swiper-slide d-flex image-hero-swiper"
           data-slide-type="image">
           <picture>
             {%- if mobileImage.width >= 390 -%}<source
-                media="(max-width: 430px)"
+                media="(max-width: 390px)"
                 srcset="{{ mobileImage | image_url: width: 390}}">{%- endif -%}
-
+            {%- if mobileImage.width >= 550 -%}<source
+                media="(max-width: 550px)"
+                srcset="{{ mobileImage | image_url: width: 550 }}">{%- endif -%}
             {%- if section.settings.image_desktop.width >= 991 -%}<source
                 media="(max-width: 991px)"
                 srcset="{{ section.settings.image_desktop | image_url: width: 991 }}">{%- endif -%}
@@ -58,9 +60,9 @@
             <div
               class="container px-0 text-center text-md-start">
               <div
-                class="row mx-auto col-md-11 col-lg-10 col-12 px-0 py-xl-14 py-lg-10 mb-xl-2 py-md-5 py-10 justify-content-start">
+                class="row mx-auto col-md-11 col-lg-10 col-12 px-0 py-xl-14 py-lg-10 mb-xl-2 py-md-5 py-3 justify-content-start">
                 <div
-                  class="col-xl-6 col-lg-8 col-md-6 col-12 pe-0 ps-0 ">
+                  class="col-xl-4 col-lg-6 col-md-6 col-12 pe-0 ps-0 ">
                   <div class="review-ctr">
                     <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
                     <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
@@ -70,10 +72,10 @@
                     <p class="rev-txt">&nbsp; &nbsp;Trusted by 125K+ Customers</p>
                   </div>
                   <h2
-                    class="h1 px-8 px-md-0 heading_txt mb-3">{{ section.settings.title }}</h2>
+                    class="h1 px-4 px-md-0 heading_txt mb-3">{{ section.settings.title }}</h2>
                   <p
-                    class="subtitle-container px-4 px-md-0 caption_txt fw-normal mb-1 pb-2"
-                    style="color: #ffffff;"><span>{{ section.settings.subtitle }}</span><span>{{ section.settings.subtitle_bottom }}</span></p>
+                    class="px-4 px-md-0 caption_txt fw-normal mb-1 pb-2"
+                    style="color: #ffffff;">{{ section.settings.subtitle }}</p>
                   <a
                     href="{{ section.settings.btn_link }}"
                     class="btn btn-white mt-3 px-10">{{ section.settings.btn_text }}</a>
@@ -87,9 +89,6 @@
                     </div>
                     <p class="rev-txt-mbl">&nbsp; &nbsp;Trusted by 125k+ Customers</p>
                   </div>
-                  {% if section.settings.disclaimer != blank %}
-                    <div class="hero-banner__disclaimer">{{ section.settings.disclaimer }}</div>
-                  {% endif %}
                 </div>
               </div>
             </div>
@@ -137,14 +136,6 @@
     display: block;
     margin-top: 10px;
   }
-  .subtitle-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .subtitle-container span{
-    margin-top: 5px;
-  }
-
   @media only screen and (max-width: 767px) {
     .review-ctr {
       display: none;
@@ -153,13 +144,20 @@
       margin: auto;
       text-align: center;
     }
-    .swiper-slide {
-      align-items: flex-start !important;
+    .image-hero-swiper {
+      -webkit-box-align: start!important;
+      -ms-flex-align: start!important;
+      align-items: flex-start!important;
     }
   }
   @media only screen and (min-width: 767px) {
     .review-ctr-mbl {
       display: none;
+    }
+    .image-hero-swiper {
+      -webkit-box-align: end!important;
+      -ms-flex-align: end!important;
+      align-items: flex-end!important;
     }
   }
   
@@ -198,11 +196,6 @@
         "label": "Sub Title"
       }, {
         "type": "text",
-        "id": "subtitle_bottom",
-        "label": "Sub Title Bottom"
-      },  
-      {
-        "type": "text",
         "id": "btn_text",
         "label": "Button Text"
       }, {
@@ -227,11 +220,6 @@
         "type": "text",
         "id": "custom_class",
         "label": "Custom Class"
-      },
-      {
-        "type": "text",
-        "id": "disclaimer",
-        "label": "Disclaimer"
       }
     ],
     "presets": [

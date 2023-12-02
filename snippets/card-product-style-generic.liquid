@@ -238,12 +238,12 @@
         </div>
         <div class="col-12 mt-2 pt-1 price-with-btn-col">
           <div class="position-relative d-flex price-with-btn">
-            <div class="col-6 btn-card-hide trn fw-normal test1">             
+            <div class="col-6 btn-card-hide trn fw-normal">             
               {% if current_variant and current_variant.compare_at_price > current_variant.price %}
-                <s class="small m-0 p-0 text-gray-600 me-1 compareprice" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
+                <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
               {% comment %} {% elsif product.compare_at_price > product.price %}
                 <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s> {% endcomment %}
-              {% endif %}              
+              {% endif %}
               <span class="price m-0 p-0 money" data-currentPrice data-variant-price="{% if current_variant %}{{current_variant.price}}{% else %}{{product.price}}{% endif %}">
                 {% if current_variant %}
                   {{ current_variant.price | money }}

@@ -53,6 +53,21 @@
     height: 114px;
     margin:0 auto;
 }
+.swiper-arrows {
+    display: none;
+    align-items: center;
+    position: absolute;
+    z-index: 9999;
+    top: 100px;
+    width: 100vw;
+    justify-content: space-between;
+    left: -35px;
+}
+@media (max-width:1024px){
+    .swiper-arrows {
+        display: flex;
+    }
+}
 @media (min-width:576px){
     .borad-block-img{
         padding-top:43%;

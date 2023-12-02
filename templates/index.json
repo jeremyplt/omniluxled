@@ -1,44 +1,20 @@
 {
   "sections": {
-    "fb5ecb5e-55ca-4dd5-a283-3b9b227357b3": {
-      "type": "image_hero_3_shortheight",
-      "custom_css": [
-        ".image-hero.withreviews .container-fluid {padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important;}",
-        ".overlay {opacity: 0.2 !important;}"
-      ],
-      "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/Option_4.png",
-        "image_mobile": "shopify:\/\/shop_images\/Mobile_hero_10.png",
-        "title": "Save up to $240",
-        "subtitle": "<strong>BLACK FRIDAY SALE! <\/strong><br> $50 off 1 device: GIFT1<br> $120 off 2 devices: GIFT2<br> $240 off 3 devices: GIFT3",
-        "mobilesubtitle": "<strong>BLACK FRIDAY SALE! <\/strong><br> $50 off 1 device: GIFT1<br> $120 off 2 devices: GIFT2<br> $240 off 3 devices: GIFT3",
-        "btn_text": "Shop & SAVE",
-        "button_bg_color": "#ffffff",
-        "button_text_color": "#000000",
-        "btn_link": "https:\/\/omniluxled.com\/collections\/all",
-        "disclaimer_text": "<i>*Codes apply to full-sized LED devices only<\/i>",
-        "content_position": "2",
-        "custom_class": ""
-      }
-    },
     "6ec0e2ef-40e2-4265-a008-778c56929061": {
       "type": "image_hero_2",
-      "disabled": true,
       "custom_css": [
         ".overlay {opacity: 0.2 !important;}",
         "@media only screen and (max-width: 767px) {.overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient( to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) ) !important; opacity: 0.5 !important; z-index: 1; }}"
       ],
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/Untitled_design_115_471db1ca-9374-4f7f-b1dc-851300332e2f.png",
-        "image_mobile": "shopify:\/\/shop_images\/Untitled_design_43_copy_2_1_59734e6b-9d64-4e3e-b61b-13dda714ea96.png",
-        "title": "NEW!<br> Omnilux Mini",
-        "subtitle": "Full strength LED devices sized <br>down for ultra-targeted treatments.",
-        "subtitle_bottom": "",
-        "btn_text": "Shop Now",
-        "btn_link": "shopify:\/\/collections\/minis",
+        "image_desktop": "shopify:\/\/shop_images\/HERO_4.png",
+        "image_mobile": "shopify:\/\/shop_images\/Untitled_design_-_2023-11-29T125753.556.png",
+        "title": "Let's face it: <br> you deserve it.",
+        "subtitle": "Tackle wrinkles, acne, redness & more <br>with unlimited LED treatments right from home.",
+        "btn_text": "TRANSFORM MY SKIN",
+        "btn_link": "https:\/\/omniluxled.com\/collections\/all",
         "content_position": "2",
-        "custom_class": "",
-        "disclaimer": ""
+        "custom_class": ""
       }
     },
     "bbf8e6a0-e133-4b79-8e2e-6a96fec02c25": {
@@ -243,7 +219,7 @@
         "gradient_tone": true,
         "icon_layout": false,
         "grid_size": "2",
-        "heading_txt": "",
+        "heading_txt": "Omnilux redefines skincare with <em>medical-grade LED light therapy<\/em> proven to enhance your natural skin.",
         "section_bg_color": "rgba(0,0,0,0)",
         "section_txt_color": "#000000",
         "pt": 58,
@@ -253,57 +229,6 @@
         "border-top": false,
         "border-bottom": true,
         "css_class": "badges"
-      }
-    },
-    "189b4fb2-6344-4513-adf8-a3743a17ef4f": {
-      "type": "global-info-block",
-      "blocks": {
-        "6f62307c-d56a-4f35-87f7-9e7a2a45a7f1": {
-          "type": "content",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/HOLIDAY_2023_LPs_20.png",
-            "title": "<p>Up to $240 off devices<\/p>",
-            "txt_info": "<p>Save on full-sized Contour, Clear and Men devices:<br\/>$50 off 1 device: GIFT1<br\/>$120 off 2 devices: GIFT2<br\/>$240 off 3 devices: GIFT3<br\/><\/p>",
-            "btn_txt": "SHOP DEVICES",
-            "btn_url": "shopify:\/\/collections\/all-devices"
-          }
-        },
-        "fa2d6f01-3639-4d18-93d5-67c28f0ad600": {
-          "type": "content",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/HOLIDAY_2023_LPs_19.png",
-            "title": "<p>15% off all Mini devices<\/p>",
-            "txt_info": "<p>Sometimes the best gifts come in the smallest packages. Omnilux Mini delivers ultra-targeted LED treatments to tackle blemishes, wrinkles, inflammation, and more.<\/p>",
-            "btn_txt": "SHOP MINIS",
-            "btn_url": "shopify:\/\/collections\/minis"
-          }
-        },
-        "1ec45f76-5bf3-4def-bd64-7cffe7e2e8b1": {
-          "type": "content",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/HOLIDAY_2023_LPs_21.png",
-            "title": "<p>15% off all skincare<\/p>",
-            "txt_info": "<p>The perfect complement to your LED routine. Discover power-packed skincare products clinically proven to fight signs of aging, while optimizing our signature LED treatments.<\/p>",
-            "btn_txt": "SHOP SKINCARE",
-            "btn_url": "https:\/\/omniluxled.com\/collections\/skin-care"
-          }
-        }
-      },
-      "block_order": [
-        "6f62307c-d56a-4f35-87f7-9e7a2a45a7f1",
-        "fa2d6f01-3639-4d18-93d5-67c28f0ad600",
-        "1ec45f76-5bf3-4def-bd64-7cffe7e2e8b1"
-      ],
-      "settings": {
-        "fluid_layout": false,
-        "anchorid": "",
-        "heading_txt": "Shop Black Friday Deals",
-        "lead_txt": "From anti-aging to anti-acne, we've got gifts big and small for your loved ones this holiday season.",
-        "section_bg_color": "",
-        "section_txt_color": "#000000",
-        "btn_type": "",
-        "btn_variant": "primary",
-        "btn_size": ""
       }
     },
     "8804dfd9-e64d-4fa2-bf07-3fa8ee0dd89a": {
@@ -319,11 +244,11 @@
         "video_style": "col-lg-6",
         "video_style_large": "col-xl-5",
         "content_position": "align-items-center",
-        "title": "Glowing gifts for <br> everyone on your list",
+        "title": "<b>Behind the Treatment: <\/b>\n<p>LED Facial with Celeb Esthetician, Kristyn Smith",
         "subtitle": "",
-        "txt": "From anti-aging to anti-acne, shop gifts big and small for your loved ones this holiday season. Yourself included.",
+        "txt": "With an expansive client base, Kristyn successfully manages all types of skin conditions. She most commonly recommends Omnilux devices for her clients with acne, signs of aging, and inflammatory conditions, such as eczema and rosacea.<p>\n<p>\n“I started using Omnilux in 2020 when the Contour mask first came out - I loved the combination of cutting-edge technology with convenience when it came to travel and general usage.”",
         "htmltxt": "",
-        "btn_txt": "SHOP BLACK FRIDAY DEALS",
+        "btn_txt": "",
         "btn_link": "",
         "btn_type": "",
         "btn_variant": "primary",
@@ -331,7 +256,7 @@
         "poster_type": "",
         "bg_video": "",
         "mobile_bg_video": "",
-        "poster_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/HOLIDAY_2023_LPs_7.png?v=1699642866",
+        "poster_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/vlcsnap-2023-10-06-13h56m28s446re.png?v=1696625851",
         "btn_txt_watch": "",
         "watch_video_id": "",
         "watch_mobile_video_id": "",
@@ -340,118 +265,17 @@
         "btn_size_watch": "",
         "enable_overlay": true,
         "overlay_bg_color": "#000000",
-        "overlay_opacity": 0.1,
+        "overlay_opacity": 0.2,
         "fluid_video_layout": true,
         "video_type": "local",
         "placement": "popup",
-        "video_id": "",
-        "mobile_video_id": "",
-        "video_btn_text": "",
+        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/904978991d4646e093c28d39d1da1ea4.mp4",
+        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/904978991d4646e093c28d39d1da1ea4.mp4",
+        "video_btn_text": "Watch video",
         "section_bg_color": "#ffffff",
         "section_text_color": "#000000",
         "alignment": "text-start",
         "video_alignment": "justify-content-start"
-      }
-    },
-    "483972b6-05da-4d1a-964a-d5598ce78682": {
-      "type": "global-awards",
-      "blocks": {
-        "template--16029767729314__483972b6-05da-4d1a-964a-d5598ce78682-166974779644c81bd5-0": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/STYLE_Beauty_Awards_2023_Winner_002.png"
-          }
-        },
-        "6cd1848c-f7bf-4d4b-b49a-87fafc1bf5a1": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/NB_AwardSeal_2023.png"
-          }
-        },
-        "d07b85e1-d45c-4b0d-92b4-9bb639c58aa3": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/Get_the_Gloss_Wellness_Awards_2023_Silverre.png"
-          }
-        },
-        "9291ac24-4153-4ca4-a61b-5341833d9b05": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/WHSA.0025_2023_badges_winner.png"
-          }
-        },
-        "f7a2d2db-e18f-449d-8232-33628e44af72": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/Winner.png"
-          }
-        },
-        "c386a58c-88b3-4795-bf9f-df18ab77ba9e": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/Untitled_design_-_2023-03-22T093913.615.png"
-          }
-        },
-        "2c456bce-fb04-49a4-9f6c-129376a355db": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/TS_Skincare_winner_N_D.png"
-          }
-        },
-        "f5903697-c569-4c64-af15-7ea0e970746b": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/MCSK.0011_2022_winner_badges_winner_1.png"
-          }
-        },
-        "b6d222dd-da7e-4dd4-a6fe-c434828074e6": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/wh-skincareawards_1.png"
-          }
-        },
-        "0bfd51a6-46c3-4eb7-9fd4-90acfefc95d0": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/NB_AwardSeal2022.png"
-          }
-        },
-        "4cc6a7ae-c58d-4385-b414-0a362c07e8b7": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/Untitled_design_39.png"
-          }
-        }
-      },
-      "block_order": [
-        "template--16029767729314__483972b6-05da-4d1a-964a-d5598ce78682-166974779644c81bd5-0",
-        "6cd1848c-f7bf-4d4b-b49a-87fafc1bf5a1",
-        "d07b85e1-d45c-4b0d-92b4-9bb639c58aa3",
-        "9291ac24-4153-4ca4-a61b-5341833d9b05",
-        "f7a2d2db-e18f-449d-8232-33628e44af72",
-        "c386a58c-88b3-4795-bf9f-df18ab77ba9e",
-        "2c456bce-fb04-49a4-9f6c-129376a355db",
-        "f5903697-c569-4c64-af15-7ea0e970746b",
-        "b6d222dd-da7e-4dd4-a6fe-c434828074e6",
-        "0bfd51a6-46c3-4eb7-9fd4-90acfefc95d0",
-        "4cc6a7ae-c58d-4385-b414-0a362c07e8b7"
-      ],
-      "custom_css": [
-        "@media (max-width: 768px) {.col-6 {width: 33%; }}"
-      ],
-      "settings": {
-        "fluid_layout": false,
-        "gradient_tone": true,
-        "heading_txt": "",
-        "section_bg_color": "",
-        "section_txt_color": "#000000",
-        "pt": 80,
-        "pb": 48,
-        "pts": 56,
-        "pbs": 24,
-        "border-top": false,
-        "border-bottom": true,
-        "css_class": ""
       }
     },
     "59bdd293-efe7-4fcd-8619-feac003821e6": {
@@ -468,7 +292,7 @@
         "featured_product_2": "omnilux-clear",
         "section_bg_color": "rgba(0,0,0,0)",
         "section_txt_color": "#000000",
-        "btn_text": "SAVE UP TO $240",
+        "btn_text": "SHOP ALL",
         "btn_url": "shopify:\/\/collections\/all",
         "btn_type": "",
         "btn_variant": "primary",
@@ -610,6 +434,107 @@
         "btn_size": ""
       }
     },
+    "483972b6-05da-4d1a-964a-d5598ce78682": {
+      "type": "global-awards",
+      "blocks": {
+        "template--16029767729314__483972b6-05da-4d1a-964a-d5598ce78682-166974779644c81bd5-0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/STYLE_Beauty_Awards_2023_Winner_002.png"
+          }
+        },
+        "6cd1848c-f7bf-4d4b-b49a-87fafc1bf5a1": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/NB_AwardSeal_2023.png"
+          }
+        },
+        "d07b85e1-d45c-4b0d-92b4-9bb639c58aa3": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Get_the_Gloss_Wellness_Awards_2023_Silverre.png"
+          }
+        },
+        "9291ac24-4153-4ca4-a61b-5341833d9b05": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/WHSA.0025_2023_badges_winner.png"
+          }
+        },
+        "f7a2d2db-e18f-449d-8232-33628e44af72": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Winner.png"
+          }
+        },
+        "c386a58c-88b3-4795-bf9f-df18ab77ba9e": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Untitled_design_-_2023-03-22T093913.615.png"
+          }
+        },
+        "2c456bce-fb04-49a4-9f6c-129376a355db": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/TS_Skincare_winner_N_D.png"
+          }
+        },
+        "f5903697-c569-4c64-af15-7ea0e970746b": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/MCSK.0011_2022_winner_badges_winner_1.png"
+          }
+        },
+        "b6d222dd-da7e-4dd4-a6fe-c434828074e6": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/wh-skincareawards_1.png"
+          }
+        },
+        "0bfd51a6-46c3-4eb7-9fd4-90acfefc95d0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/NB_AwardSeal2022.png"
+          }
+        },
+        "4cc6a7ae-c58d-4385-b414-0a362c07e8b7": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Untitled_design_39.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16029767729314__483972b6-05da-4d1a-964a-d5598ce78682-166974779644c81bd5-0",
+        "6cd1848c-f7bf-4d4b-b49a-87fafc1bf5a1",
+        "d07b85e1-d45c-4b0d-92b4-9bb639c58aa3",
+        "9291ac24-4153-4ca4-a61b-5341833d9b05",
+        "f7a2d2db-e18f-449d-8232-33628e44af72",
+        "c386a58c-88b3-4795-bf9f-df18ab77ba9e",
+        "2c456bce-fb04-49a4-9f6c-129376a355db",
+        "f5903697-c569-4c64-af15-7ea0e970746b",
+        "b6d222dd-da7e-4dd4-a6fe-c434828074e6",
+        "0bfd51a6-46c3-4eb7-9fd4-90acfefc95d0",
+        "4cc6a7ae-c58d-4385-b414-0a362c07e8b7"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.col-6 {width: 33%; }}"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "gradient_tone": true,
+        "heading_txt": "Awards and recognitions",
+        "section_bg_color": "",
+        "section_txt_color": "#000000",
+        "pt": 80,
+        "pb": 48,
+        "pts": 56,
+        "pbs": 24,
+        "border-top": false,
+        "border-bottom": true,
+        "css_class": ""
+      }
+    },
     "77fd4976-1b8b-4bdf-82b9-0edcf38a733b": {
       "type": "global-text-with-right-video",
       "settings": {
@@ -622,7 +547,7 @@
         "video_style_large": "col-xl-5",
         "content_position": "align-items-center",
         "title": "<h3 class=\"mb-3 pb-1 pe-xl-3\">Medical-grade light therapy proven to enhance your natural skin<\/h3>",
-        "subtitle": "<p>Omnilux is recognized as the world leader in medical-grade LED light therapy devices and is the brand most trusted and used by dermatologists. Omnilux now offers home-use devices based on its proven, professional-grade technology. \n<\/p>\n<br>\nWe use the most clinically-effective LEDs available in all of our products. Every Omnilux device uses optimized doses of red, near-infrared, or blue light to supercharge the body’s own natural cellular healing response to deliver the results you really want.",
+        "subtitle": "<p>Omnilux is recognized as the world leader in medical-grade LED light therapy devices and is the brand most trusted and used by dermatologists. Omnilux now offers home-use devices based on its proven, professional-grade technology. \n<\/p>\nWe use the most clinically-effective LEDs available in all of our products. Every Omnilux device uses optimized doses of red, near-infrared, or blue light to supercharge the body’s own natural cellular healing response to deliver the results you really want.",
         "btn_txt": "See how it works",
         "btn_link": "shopify:\/\/pages\/how-it-works",
         "btn_type": "",
@@ -683,7 +608,7 @@
             "video": "shopify:\/\/files\/videos\/lizethstory.mp4"
           }
         },
-        "a7552032-b9f6-4a26-ae56-087a36c64808": {
+        "70578d00-be1c-45ca-b4e3-5610c7a56de4": {
           "type": "circle-link",
           "settings": {
             "image": "shopify:\/\/shop_images\/LANDING_PAGE_SOCIAL_PROOF_6.png",
@@ -697,7 +622,7 @@
         "3a3a335b-06ba-4b3f-8a9c-b7004cfbe3fb",
         "24904fc5-10b3-427d-91ff-3e75778d2c43",
         "4739a565-41ab-4342-b43c-b575d5da3451",
-        "a7552032-b9f6-4a26-ae56-087a36c64808"
+        "70578d00-be1c-45ca-b4e3-5610c7a56de4"
       ],
       "settings": {
         "border_color": "#000000",
@@ -765,28 +690,28 @@
             "enable_custom_tab_1": true,
             "tab_1_image": "shopify:\/\/shop_images\/board-block.jpg",
             "tab_1_name": "Dr. Jared Jagdeo <br>MD, MS",
-            "tab_1_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nASSOCIATE PROFESSOR OF DERMATOLOGY, SUNY DOWNSTATE MEDICAL CENTER <br>DIRECTOR OF THE CENTER FOR PHOTOMEDICINE, SUNY DOWNSTATE MEDICAL CENTER                                                                            <\/p>\n<br>",
-            "tab_1_content": "<p>Dr. Jagdeo is a board-certified dermatologist and leader in the field of lasers and light-based medicine. A doctoral graduate of Brown University, Dr. Jagdeo established the Laser, Aesthetics and Body Institute in 2018 to bring state-of-the-art laser technology and cosmetic services to dermatology patients at SUNY Downstate. His ongoing clinical research involves aesthetics, lasers and light therapy.<br\/><br\/>Dr. Jagdeo has co-authored 90 peer-reviewed journal articles, edited several books and co-authored book chapters. He’s won numerous awards and honors, including the NIH-UC Davis CTSC K12 Mentored Career Development Award, NIH-UC Davis Innovation Grant, designation as an American Society for Dermatologic Surgery Future Leader, the Laser Florence Young Dermatologist Abstract Competition 1st Place Winner and the Dr. Horace Furumoto Innovations Young Investigator Award from the American Society for Laser Medicine & Surgery.<\/p>",
+            "tab_1_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nASSOCIATE PROFESSOR OF DERMATOLOGY, SUNY DOWNSTATE MEDICAL CENTER <br>DIRECTOR OF THE CENTER FOR PHOTOMEDICINE, SUNY DOWNSTATE MEDICAL CENTER                                                                            <\/p>",
+            "tab_1_content": "<p>Dr. Jagdeo is a board-certified dermatologist and leader in the field of lasers and light-based medicine. A doctoral graduate of Brown University, Dr. Jagdeo established the Laser, Aesthetics and Body Institute in 2018 to bring state-of-the-art laser technology and cosmetic services to dermatology patients at SUNY Downstate. His ongoing clinical research involves aesthetics, lasers and light therapy.<br\/><br\/> Dr. Jagdeo has co-authored 90 peer-reviewed journal articles, edited several books and co-authored book chapters. He’s won numerous awards and honors, including the NIH-UC Davis CTSC K12 Mentored Career Development Award, NIH-UC Davis Innovation Grant, designation as an American Society for Dermatologic Surgery Future Leader, the Laser Florence Young Dermatologist Abstract Competition 1st Place Winner and the Dr. Horace Furumoto Innovations Young Investigator Award from the American Society for Laser Medicine & Surgery.<\/p>",
             "enable_custom_tab_2": true,
             "tab_2_image": "shopify:\/\/shop_images\/Mask_Group_8_e1dd7b75-3cf3-448b-8396-466be4f6ae81.jpg",
             "tab_2_name": "Dr. Glynis Ablon <br>MD, FAAD",
-            "tab_2_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nASSOCIATE CLINICAL PROFESSOR, UCLA <br>DIRECTOR, ABLON SKIN INSTITUTE &amp; RESEARCH CENTER                                                                            <\/p>\n<br>",
-            "tab_2_content": "<p>Dr. Ablon, a native Californian, is a board-certified dermatologist who completed her training at Baylor College of Medicine in Houston, Texas. She has focused her attention on cosmetic surgery since the beginning of her training, performing a fellowship in oculoplastic surgery at the Sinsky Eye Institute in Santa Monica, CA. Dr. Ablon is certified to perform laser surgery (including facial resurfacing), liposuction, blepharoplasty, sclerotherapy and collagen ®.<br\/><br\/>Since receiving the Award in Dermatology from George Washington University Medical School, Dr. Ablon continues to publish research and has presented some of her work in Paris, France. Dr. Ablon, an Associate Clinical Professor at UCLA, serves as an on-camera medical consultant for E! Entertainment, The Doctors, ABC, NBC and CBS. A Fellow of the American Academy of Dermatology, American Academy of Liposuction Surgery, and the American Society for Laser Medicine and Surgery to name a few, Dr. Ablon is current on all the newest trends in cosmetic surgery.<\/p>",
+            "tab_2_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nASSOCIATE CLINICAL PROFESSOR, UCLA <br>DIRECTOR, ABLON SKIN INSTITUTE &amp; RESEARCH CENTER                                                                            <\/p>",
+            "tab_2_content": "<p>Dr. Ablon, a native Californian, is a board-certified dermatologist who completed her training at Baylor College of Medicine in Houston, Texas. She has focused her attention on cosmetic surgery since the beginning of her training, performing a fellowship in oculoplastic surgery at the Sinsky Eye Institute in Santa Monica, CA. Dr. Ablon is certified to perform laser surgery (including facial resurfacing), liposuction, blepharoplasty, and sclerotherapy.<br\/><br\/>Since receiving the Award in Dermatology from George Washington University Medical School, Dr. Ablon continues to publish research and has presented some of her work in Paris, France. Dr. Ablon, an Associate Clinical Professor at UCLA, serves as an on-camera medical consultant for E! Entertainment, The Doctors, ABC, NBC and CBS. A Fellow of the American Academy of Dermatology, American Academy of Liposuction Surgery, and the American Society for Laser Medicine and Surgery to name a few, Dr. Ablon is current on all the newest trends in cosmetic surgery.<\/p>",
             "enable_custom_tab_3": true,
             "tab_3_image": "shopify:\/\/shop_images\/board-member.jpg",
             "tab_3_name": "Dr. Hany Abi Ghosn <br>MD",
-            "tab_3_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nFounder &amp; CEO, Dr. Hany Abi Ghosn<br>\nAesthetic Medicine &amp; Longevity                                                                           <\/p>\n<br>",
+            "tab_3_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nFounder &amp; CEO, Dr. Hany Abi Ghosn<br>\nAesthetic Medicine &amp; Longevity                                                                           <\/p>",
             "tab_3_content": "<p>Dr. Hany is a world expert in Medical Aesthetics, speaker at international conferences and Key Opinion Leader for numerous International Labs: CosmoSoft France, Cutera USA, Be Ceuticals Switzerland, SRS Belgium, Biotech UK. He was the winner of the prestigious title: Best Medical Practice Award Europe 2018, granted by the European Medical Association (EMA) & the Oxford Royal Academy in England.<br\/><br\/>Dr. Hany specializes in aesthetics, with recent focuses in non-surgical procedures including light therapy, ThreadLift, face sculpting and profile balancing.<\/p>",
             "enable_custom_tab_4": true,
             "tab_4_image": "shopify:\/\/shop_images\/board-member2_b4464c20-19ec-4e99-bbc0-161cf93fef98.jpg",
             "tab_4_name": "Dr. Klaus Fritz <br>MD",
-            "tab_4_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nPresident, German Academy of Dermatology\nFormer President and Board Member, European Society of Laser Dermatology (ESLD)\nSecretary General, European Society for Cosmetic and Aesthetic Dermatology (ESCAD)                                                                         <\/p>\n<br>",
-            "tab_4_content": "<p>Dr. Fritz received his medical degree from Frankfurt Johann Wolfgang Goethe Universität Frankfurt and his specialization at the university clinic Bonn. Having previously worked in private practice in southwestern Germany, Dr. Fritz is now a visiting research fellow to the Ludwigs Maximilian University in Munich, and an associate professor at the Carol Davila University for Medicine and Pharmacy in Bukarest. Dr. Fritz specializes in dermatology, allergy, cosmetic dermatology and lasers.<br\/><br\/>Dr. Fritz has served as the head of Periderm Institute for Clinical Studies and is a member of the Editorial and Scientific Board of several journals. He also serves as a member of several Scientific Advisory Boards and is a consultant to various companies in laser, cosmetic and pharmaceutical industries. He has founded and co-organizes the annual dermatolgy congress DERM in Germany, Derma Alpin in Austria and the 5 CC Congress in Barcelona.<\/p>",
+            "tab_4_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nPresident, German Academy of Dermatology\nFormer President and Board Member, European Society of Laser Dermatology (ESLD)\nSecretary General, European Society for Cosmetic and Aesthetic Dermatology (ESCAD)                                                                         <\/p>",
+            "tab_4_content": "<p>Dr. Fritz received his medical degree from Frankfurt Johann Wolfgang Goethe Universität Frankfurt and his specialization at the university clinic Bonn. Having previously worked in private practice in southwestern Germany, Dr. Fritz is now a visiting research fellow to the Ludwigs Maximilian University in Munich, and an associate professor at the Carol Davila University for Medicine and Pharmacy in Bukarest. Dr. Fritz specializes in dermatology, allergy, cosmetic dermatology and lasers.<br\/><br\/>Dr. Fritz has served as the head of Periderm Institute for Clinical Studies and is a member of the Editorial and Scientific Board of several journals. He also serves as a member of several Scientific Advisory Boards and is a consultant to various companies in laser, cosmetic and pharmaceutical industries. He has founded and co-organizes the annual dermatology congress DERM in Germany, Derma Alpin in Austria and the 5 CC Congress in Barcelona.<\/p>",
             "enable_custom_tab_5": true,
             "tab_5_image": "shopify:\/\/shop_images\/board-member3.jpg",
             "tab_5_name": "Dr. Daniel Siegel <br>MD, MS",
-            "tab_5_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nClinical Professor of Dermatology, SUNY Downstate Health Sciences University\n\nFormer President, American Academy of Dermatology (AAD)                                                                           <\/p>\n<br>",
-            "tab_5_content": "<p>A former President and honorary member of the American Academy of Dermatology (AAD), Dr. Siegel is a graduate of Albany Medical College in New York, completing his residency in dermatology at Parkland Memorial Hospital in Dallas, Texas, followed by a fellowship in Mohs Micrographic Surgery and Dermatologic Surgery at Baylor College of Medicine in Houston, Texas.<br\/><br\/>Dr. Siegel serves or has served on boards of the American College of Mohs Surgery (ACMS), the American Dermatological Association, the Women’s Dermatologic Society, the Noah Worcester Dermatological society, the International League of Dermatological Societies, IDEOM and the New York Dermatological Society among others.<\/p><p>Dr. Siegel has published over 200 articles and book chapters in major medical journals and textbooks. Dr. Siegel has received many prestigious awards for his work in dermatology, including the 2013 American Skin Association Public Policy & Medical Education Award and the 2012 Clinical Educator Award from the 2012 Winter Clinical Dermatology Conference. For several years in a row, Dr. Siegel has been listed as one of Castle Connolly’s New York Metro Area “Top Doctors.” In recognition of his years of service to the profession, he was awarded honorary membership in the American Academy of Dermatology.<\/p>"
+            "tab_5_title": "<p class=\"fw-bold font-size-md text-uppercase\">\nClinical Professor of Dermatology, SUNY Downstate Health Sciences University\n\nFormer President, American Academy of Dermatology (AAD)                                                                           <\/p>",
+            "tab_5_content": "<p>A former President and honorary member of the American Academy of Dermatology (AAD), Dr. Siegel is a graduate of Albany Medical College in New York, completing his residency in dermatology at Parkland Memorial Hospital in Dallas, Texas, followed by a fellowship in Mohs Micrographic Surgery and Dermatologic Surgery at Baylor College of Medicine in Houston, Texas.<br\/><br\/>Dr. Siegel serves or has served on boards of the American College of Mohs Surgery (ACMS), the American Dermatological Association, the Women’s Dermatologic Society, the Noah Worcester Dermatological society, the International League of Dermatological Societies, IDEOM and the New York Dermatological Society among others.<br\/><br\/>Dr. Siegel has published over 200 articles and book chapters in major medical journals and textbooks. Dr. Siegel has received many prestigious awards for his work in dermatology, including the 2013 American Skin Association Public Policy & Medical Education Award and the 2012 Clinical Educator Award from the 2012 Winter Clinical Dermatology Conference. For several years in a row, Dr. Siegel has been listed as one of Castle Connolly’s New York Metro Area “Top Doctors.” In recognition of his years of service to the profession, he was awarded honorary membership in the American Academy of Dermatology.<\/p>"
           }
         }
       },
@@ -794,7 +719,7 @@
         "template--16344947064994__e310779c-8e4c-437a-8b8e-043c2538bcd4-product-tabs-1"
       ],
       "settings": {
-        "heading_txt": "Our Scientific Advisory Board",
+        "heading_txt": "Scientific advisory board",
         "heading_paragraph": "Omnilux has assembled a world-class scientific advisory board of renowned experts in the fields of dermatology and LED phototherapy."
       }
     },
@@ -844,7 +769,7 @@
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
-            "btn_txt": "SAVE 15% ON MINIS",
+            "btn_txt": "Shop now",
             "btn_link": "shopify:\/\/collections\/minis",
             "triggerbtn_txt": "",
             "triggerto": "",
@@ -859,7 +784,7 @@
             "btn_size_watch": "",
             "link_txt": "",
             "link_url": "",
-            "image": "shopify:\/\/shop_images\/HOLIDAY_LPS_4000X4000_6c129919-accb-48ab-a2b2-95d34950eaf3.png",
+            "image": "shopify:\/\/shop_images\/Web_Mini_HP_9.png",
             "alignment": "text-left",
             "image_alignment": "left"
           }
@@ -1110,17 +1035,15 @@
     }
   },
   "order": [
-    "fb5ecb5e-55ca-4dd5-a283-3b9b227357b3",
     "6ec0e2ef-40e2-4265-a008-778c56929061",
     "bbf8e6a0-e133-4b79-8e2e-6a96fec02c25",
     "a714f8c7-f2eb-4a04-8f60-9b9a35650f8a",
     "16270420142c0cafe8",
-    "189b4fb2-6344-4513-adf8-a3743a17ef4f",
     "8804dfd9-e64d-4fa2-bf07-3fa8ee0dd89a",
-    "483972b6-05da-4d1a-964a-d5598ce78682",
     "59bdd293-efe7-4fcd-8619-feac003821e6",
     "7caf6918-0887-4d78-b125-88468bd9dd86",
     "c552e92a-f090-4e52-8c25-337f36136add",
+    "483972b6-05da-4d1a-964a-d5598ce78682",
     "77fd4976-1b8b-4bdf-82b9-0edcf38a733b",
     "dcb3cafc-7296-46cc-8c09-ce11f9bfb43c",
     "ee29c9a6-cc9d-454d-a792-422630926ee6",

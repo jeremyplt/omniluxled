@@ -119,6 +119,7 @@
     -%}
 
     <site-overlay class="d-block {% if checkWholesale == true %}overlay--body{% endif %}" id="site-overlay"></site-overlay>
+    {% section 'hoox-promo-bar' %}
     {% section 'header' %}
     {% section 'mobile-nav-drawer' %}
     {%- comment -%}{% section 'search-layer' %}{%- endcomment -%}
@@ -128,7 +129,7 @@
     </main>
 
     {% if template.name != 'cart' and settings.enable_cart_drawer %}
-      {%- section 'cart-drawer' -%}
+      {%- render 'cart-drawer' -%}
     {% endif %}
 
     {% comment %} {% if settings.enable_quickshop %}
