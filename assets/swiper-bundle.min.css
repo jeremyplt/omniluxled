@@ -236,6 +236,7 @@
     left: 0;
     right: 0;
     bottom: -2px;
+    gap: 5px;
   }
   .swiper-pagination.swiper-pagination-hidden {
     opacity: 0;

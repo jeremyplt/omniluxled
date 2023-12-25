@@ -2,6 +2,9 @@
 {% assign logo_svg = section.settings.logo_svg %}
 {% assign main_nav_links = linklists[section.settings.menu].links %}
 {% assign half_links = main_nav_links.size | plus: 2 | divided_by: 2 | floor %}
+
+
+
 <div class="row align-items-center w-100 mx-0 font-size-md fw-normal">
   <div class="col px-0">
         {%- if request.page_type == 'index' -%}
@@ -102,6 +105,7 @@
                                                                     <div class="{% if block.type == 'sub_menu_second' %}mega-menu-item-call-second{% else %}mega-menu-item-call{% endif %}">                                                                                       
                                                                         <div class="card-body mega_menu_container col-12 p-0" data-nav-menu-product-id="{{ current_product.id }}">
                                                                             <div>
+                                                                                
                                                                                 <a class="" href="{{ current_product.url | within: collection }}">
                                                                                     <img class="img-fluid" src="{{current_product.featured_image | image_url: width: 850 }}"/>    
                                                                                 </a>
@@ -334,3 +338,21 @@
 </div>
 
 <script src="{{'custom.js' |  asset_url}}"></script>
+
+<style>
+  .badge-2 {
+    display: inline-block;
+    padding: 9px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+    vertical-align: baseline;
+    position: absolute;
+    z-index: 1;
+  }
+</style>

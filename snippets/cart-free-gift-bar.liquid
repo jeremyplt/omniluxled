@@ -1,0 +1,28 @@
+{%- liquid
+    assign cartSubTotal = cart.total_price
+    assign eligibleBar = 0
+    assign leftAmount = 0
+    assign freeShippingBar = 100
+
+    if settings.gwp_qualifier_amount_tier1
+        assign eligibleBar = settings.gwp_qualifier_amount_tier1 | times: 100
+    endif
+-%}
+
+<div>
+    {% if eligibleBar > 0 %}
+    {% assign freeShippingBar = cartSubTotal | divided_by: settings.gwp_qualifier_amount_tier1 | round: 5 %}
+    <div class="delivery-shipping d-flex mb-3 pt-3">
+        {%- if cartSubTotal > eligibleBar -%}
+            <p class="mb-0 font-size-md fw-normal" style="line-height: 1.214285714285714;">{{ settings.free_gift_txt }}</p>
+        {%- else -%}
+            {%- assign leftAmount = eligibleBar | minus: cartSubTotal | money -%}
+            {%- assign leftAmountMsg = settings.free_gift_left | replace: '${addMoreForFreeShip}', leftAmount -%}
+            <p class="mb-0 font-size-md fw-normal" style="line-height: 1.214285714285714;">{{ leftAmountMsg }}</p>
+        {%- endif -%}
+    </div>
+    <div class="progress" style="background-color: #00000014;">
+        <div class="progress-bar d-block" style="width:{{ freeShippingBar }}%;" role="progressbar"></div>
+    </div>
+{% endif %}
+</div>

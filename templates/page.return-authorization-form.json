@@ -1,8 +1,9 @@
 {
   "sections": {
     "main": {
-      "type": "return-auth-form-block",
+      "type": "return-form",
       "settings": {
+        "form_html": "<div class=\"globo-formbuilder\" data-id=\"MTQ1MDc=\"><\/div>"
       }
     }
   },

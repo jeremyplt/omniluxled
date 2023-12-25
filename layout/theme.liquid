@@ -18,7 +18,7 @@
 <script src="https://tracking.upfluence.co/js/v1/init-249fbd7f-ec24-4799-a7fa-22d273cda0c0.js"></script>
 
 <!-- Begin BlackCrow Script Tag: DO NOT MODIFY! -->
-     <script type="text/javascript" async src="https://shopify-init.blackcrow.ai/js/core/getomnilux.js?shopify_app_version=1.0.224&shop=getomnilux.myshopify.com"></script>
+     <script type="text/javascript" async src="https://shopify-init.blackcrow.ai/js/core/getomnilux.js?shopify_app_version=1.0.242&shop=getomnilux.myshopify.com"></script>
 <!-- End BlackCrow Script Tag -->   {% render 'site-speed' %}
 
 <!-- begin Convert Experiences code-->
@@ -434,22 +434,28 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
     <!-- **END** Hextom USB Integration // Main Include - DO NOT MODIFY -->
 
 <!-- BEGIN KLAVIYO Back in Stock Snippet -->
- <script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
-<script>
+{% if template == 'product' or template.name == 'list-collections' %}
+  <script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+  <script>
     var klaviyo = klaviyo || [];
     klaviyo.init({
       account: "VjyT7K",
-      platform: "shopify"
+      list: 'Yftn8z',
+      platform: "shopify",
+      collection_urls: ["/products", "/collections"]
     });
-    klaviyo.enable("backinstock",{ 
+    klaviyo.enable("backinstock",{
     trigger: {
-    product_page_text: "Notify Me When Available",
-    product_page_class: "btn",
-    product_page_text_align: "center",
-    product_page_margin: "0px",
-    alternate_anchor: "AddToCart",
-    replace_anchor: true
-    }, 
+      product_page_text: "Notify me once in stock",
+      product_page_class: "btn",
+      product_page_width: "100%",
+      product_page_margin: "1em 0 0 0",
+      replace_anchor: true,
+      collection_page_class: 'btn',
+      collection_page_text_align: 'center',
+      collection_page_width: '100%',
+      collection_page_text: 'Notify Me When Available'
+    },
     modal: {
      headline: "{product_name}",
      body_content: "Register to receive a notification when this item comes back in stock.",
@@ -457,20 +463,32 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
      button_label: "Notify me when available",
      subscription_success_label: "You're in! We'll let you know when it's back.",
      footer_content: '',
-     additional_styles: "@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue');",
-     drop_background_color: "#000",
+     additional_styles: "select#variants {display: none} .btn {height: 4em; border-radius: 4em; font-weight: 600; font-size: 1em} .modal-title {text-transform: uppercase; letter-spacing: 0.1em;}",
+   font_family: '"Montserrat",sans-serif;',
+     drop_background_color: "#2d396d",
      background_color: "#fff",
-     text_color: "#222",
+     text_color: "#000",
      button_text_color: "#fff",
-     button_background_color: "#439fdb",
-     close_button_color: "#ccc",
-     error_background_color: "#fcd6d7",
-     error_text_color: "#C72E2F",
-     success_background_color: "#d3efcd",
-     success_text_color: "#1B9500"
+     button_background_color: "#000",
+     close_button_color: "#000",
+     error_background_color: "#fff",
+     error_text_color: "#F388AF",
+     success_background_color: "#fff",
+     success_text_color: "#000",
+     newsletter_subscribe_label: "Sign up for Omnilux newsletter"
     }
   });
-</script>
+  </script>
+  <script>
+  function myFunction() {
+    if ( document.getElementById("klaviyo-bis-iframe") ) {
+      var iframe = document.getElementById("klaviyo-bis-iframe");
+      var elmnt = iframe.contentWindow.document.getElementsByTagName("select")[0];
+      elmnt.style.display = "none";
+    }
+  }
+  </script>
+  {% endif %}
 <!-- END KLAVIYO Back in Stock Snippet -->
   {{ 'custompdp.js' | asset_url | script_tag }}
 

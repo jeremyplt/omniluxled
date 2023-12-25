@@ -1162,6 +1162,21 @@
     ]
   },
   {
+    "name": "Free Gift Tag",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_gift_tag",
+        "label": "Enable Gift Tag"
+      },
+      {
+        "type": "text",
+        "id": "gift_tag_text",
+        "label": "Gift Tag Text"
+      }
+    ]
+  },
+  {
     "name": "Cart",
     "settings": [
       {
@@ -1233,6 +1248,174 @@
         "id": "free_shipping_left",
         "label": "Free Shipping Away Text",
         "default": "You are ${addMoreForFreeShip} away from Free Shipping!",
+        "info": "Use ${addMoreForFreeShip} in place of left value in text."
+      }
+    ]
+  },
+  {
+    "name": "Gift With Purchase Collection",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General Details"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_gwpc_enabled",
+        "label": "Enable?",
+        "default": false
+      },
+      {
+        "type": "collection",
+        "id": "gwp_collection1",
+        "label": "Select Collection"
+      },
+      {
+        "type": "collection",
+        "id": "gwp_collection2",
+        "label": "Select Collection"
+      },
+      {
+        "type": "collection",
+        "id": "gwp_collection3",
+        "label": "Select Collection"
+      },
+      {
+        "type": "product",
+        "id": "gwp_gift",
+        "label": "Select Gift Product"
+      }
+    ]
+  },
+  {
+    "name": "Gift With Purchase Product",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General Details"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_gwpp_enabled",
+        "label": "Enable?",
+        "default": false
+      },
+      {
+        "type": "product",
+        "id": "gwpp_product",
+        "label": "Select Product"
+      },
+      {
+        "type": "product",
+        "id": "gwpp_gift",
+        "label": "Select Gift Product"
+      }
+    ]
+  },
+  {
+    "name": "Gift With Purchase Single Tier",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General Details"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_gwp_tier1_enabled",
+        "label": "Enable Threshold Based",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "gwp_qualifier_amount_tier1",
+        "label": "Set Min. Cart Amount",
+        "info": "E.g. 50.00. It will work if you have enabled Threshold Based option."
+      },
+      {
+        "type": "checkbox",
+        "id": "is_gwp_tier1_enabled_qtybased",
+        "label": "Enable Product Quantity Based",
+        "default": true
+      },
+      {
+        "type": "textarea",
+        "id": "gwp_tier1_products_qty",
+        "label": "Add Product Handles With Quantity",
+        "info": "Add handles with its quantity. i.e omnilux-contour-face:3. Also please add multiple products with comma seperated"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_gwp_tier1_enabled_global_qtybased",
+        "label": "Enable Global Product Quantity Based",
+        "default": true
+      },
+      {
+        "type": "textarea",
+        "id": "gwp_tier1_global_products",
+        "label": "Add Product Handles",
+        "info": "Add handles of product that need to work with below mentioned quantity. i.e omnilux-contour-face:3. Also please add multiple products with comma seperated"
+      },
+      {
+        "type": "text",
+        "id": "gwp_tier1_global_products_qty",
+        "label": "Add Product Quantity"
+      },
+      {
+        "type": "textarea",
+        "id": "gwp_tier1_products",
+        "label": "Add Gift Product Handles",
+        "info": "Add handles with comma seperated"
+      },
+      {
+        "type": "text",
+        "id": "gwp_tier1_text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "gwp_tier1_subtext",
+        "label": "Subtext"
+      },
+      {
+        "type": "text",
+        "id": "gwp_tier1_btntext",
+        "label": "Button Text",
+        "default": "Grab Tier1 Gift"
+      },
+      {
+        "type": "color",
+        "id": "gwp_tier1_btn_color",
+        "label": "Button Color",
+        "default": "#5cb8b2"
+      },
+      {
+        "type": "color",
+        "id": "gwp_tier1_btn_textcolor",
+        "label": "Button Text Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "gwp_tier1_popuptext",
+        "label": "Popup Heading"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_freegift_bar",
+        "label": "Enable Free Gift Bar"
+      },
+      {
+        "type": "textarea",
+        "id": "free_gift_txt",
+        "label": "Free Gift Text",
+        "default": "congratulation you are eligible for free Shipping.",
+        "info": "When Customer is Eligible for Free Gift."
+      },
+      {
+        "type": "textarea",
+        "id": "free_gift_left",
+        "label": "Free Gift Away Text",
+        "default": "You are ${addMoreForFreeShip} away from Free Gift!",
         "info": "Use ${addMoreForFreeShip} in place of left value in text."
       }
     ]

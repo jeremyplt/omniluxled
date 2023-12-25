@@ -395,11 +395,10 @@
     klaviyo.enable("backinstock",{
     trigger: {
     product_page_text: "Notify Me When Available",
-    product_page_class: "btn",
-    product_page_text_align: "center",
-    product_page_margin: "0px",
-    alternate_anchor: "AddToCart",
-    replace_anchor: true
+      product_page_class: "addtocartbtn",
+      product_page_text_align: "center",
+      product_page_margin: "0px",
+      replace_anchor: false
     },
     modal: {
      headline: "{product_name}",
@@ -413,7 +412,7 @@
      background_color: "#fff",
      text_color: "#222",
      button_text_color: "#fff",
-     button_background_color: "#439fdb",
+     button_background_color: "#000",
      close_button_color: "#ccc",
      error_background_color: "#fcd6d7",
      error_text_color: "#C72E2F",

@@ -13198,3 +13198,35 @@ body
   top: 120px;
   position: relative;
 }
+
+/* custom free gift badge css */
+
+.free-gift-badge-sec {
+  right: 0;
+  left: unset !important;
+  text-transform: unset !important;
+  padding: 10px !important;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+}
+.free-gift-badge-sec-mega-menu {
+  padding-right: 25px !important;
+}
+.free-gift-badge-sec-product-page {
+  padding-right: 15px !important;
+}
+.free-gift-badge {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  line-height: 1.3;
+  justify-content: center;
+  font-weight: 400;
+  padding: 5px;
+  width: 55px;
+  white-space: normal;
+}
+
+/* custom free gift badge css END */

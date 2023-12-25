@@ -16,7 +16,7 @@
             "controls": false,
             "loop": true,
             "logo_image__": "",
-            "trustedbytxt": "Trusted by 125K+ Customers",
+            "trustedbytxt": "Trusted by 150K+ Customers",
             "title": "Meet your Mini",
             "subtitle": "<p>Ultra-targeted LED treatments tackle blemishes, wrinkles, inflammation, and more.<\/p>",
             "heading__size": false,
@@ -474,7 +474,7 @@
     "dbeb5f98-6cbf-4f80-b64a-9ec408025ced": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"desktopreviewstitle\"><div class=\"container is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<\/div>\n<p>We've helped 125,000+ customers achieve their skin goals.<\/p>\n<\/div>"
+        "custom_liquid": "<div class=\"desktopreviewstitle\"><div class=\"container is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<\/div>\n<p>We've helped 150,000+ customers achieve their skin goals.<\/p>\n<\/div>"
       }
     },
     "06c6cabf-468b-4fc1-9e28-e9b55dcc1fac": {

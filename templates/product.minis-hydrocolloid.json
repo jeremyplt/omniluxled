@@ -146,16 +146,15 @@
             "description": "{{ product.metafields['custom']['small_description'] }}"
           }
         },
-        "9f1de049-9d28-4e94-8dc3-d64735f73336": {
-          "type": "subtitle",
-          "disabled": true,
-          "settings": {
-            "subtitle": "<div id=\"mobile-warranty\">{{ product.metafields['custom']['warranty'] }}<\/div>"
-          }
-        },
         "b253ffff-d04d-43a0-9d68-fabdd77b595a": {
           "type": "product_form",
           "settings": {
+          }
+        },
+        "9f1de049-9d28-4e94-8dc3-d64735f73336": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "<div id=\"mobile-warranty\">{{ product.metafields['custom']['warranty'] }}<\/div>"
           }
         },
         "3ec0cedf-fb32-4e6f-b392-8ad9d16f7103": {
@@ -176,6 +175,7 @@
         },
         "847ff075-3bf5-4b88-bff7-4982bbafd833": {
           "type": "subtitle",
+          "disabled": true,
           "settings": {
             "subtitle": "{{ product.metafields['custom']['warranty'] }}"
           }
@@ -238,8 +238,8 @@
         "abf6513d-4e65-4bdd-a827-43bf401b3f13",
         "3b316236-d91e-4dd0-953a-173c1f40bfcf",
         "8e1316df-f2b1-417b-9d0e-96f8b25e8b7c",
-        "9f1de049-9d28-4e94-8dc3-d64735f73336",
         "b253ffff-d04d-43a0-9d68-fabdd77b595a",
+        "9f1de049-9d28-4e94-8dc3-d64735f73336",
         "3ec0cedf-fb32-4e6f-b392-8ad9d16f7103",
         "8a51062c-4d9c-422e-b490-fae013f03593",
         "df3f7ff0-dd52-46fe-81e3-e8d4f21328bf",

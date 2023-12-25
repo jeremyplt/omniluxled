@@ -1,0 +1,33 @@
+{{ 'return-form.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'jquery.min.js' | asset_url }}"></script>
+{{ 'return-form.js' | asset_url | script_tag }}
+
+<div data-section-id="{{ section.id }}">
+  <section class="section-content py-0 hero-blog-image overflow-hidden">
+    {{ section.settings.form_html }}
+  </section>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Form",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Content"
+      }, {
+        "type": "liquid",
+        "id": "form_html",
+        "label": "Form HTML",
+        "default": "<div></div>"
+      }
+    ],
+    "blocks": [],
+    "presets": [
+      {
+        "name": "Form"
+      }
+    ]
+  }
+{% endschema %}

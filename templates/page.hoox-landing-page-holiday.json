@@ -64,7 +64,7 @@
       ],
       "settings": {
         "section_star_image": "shopify:\/\/shop_images\/Frame_48097853.svg",
-        "section_star_text": "125k+ Glowing Customers",
+        "section_star_text": "150K+ Glowing Customers",
         "section_star_anchor_id": "#hoow-reviws",
         "section_title": "#1 LED Since 2003",
         "section_description": "Introducing Omnilux Contour Face—a dermatologist-recommended red light therapy device with clinically proven results for anti-aging and skin rejuvenation.",
@@ -696,7 +696,7 @@
       ],
       "settings": {
         "section_id": "#",
-        "section_title": "Join 125k+ others loving the skin they’re in"
+        "section_title": "Join 150K+ others loving the skin they’re in"
       }
     },
     "f6c1c44d-ee90-4757-a340-28a609f1b66a": {
@@ -748,7 +748,7 @@
           "settings": {
             "compare_highlight_column_color": "",
             "table_column_highlight": false,
-            "table_column_title_one": "Other LED Brands",
+            "table_column_title_one": "Other LED\u2028Brands",
             "table_column_tick_one_true": false,
             "table_column_tick_one_false": false,
             "table_column_title_two": "",

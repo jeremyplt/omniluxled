@@ -16,7 +16,7 @@
         </div>
       </a>
       
-     
+      {% if topbar_text2 %}
       <a id="slide2" class="d-nne slidex" href="{{ section.settings.page_url2.url }}">
         <div class="topbar d-flex align-items-center" data-top-bar style="background-color: {{ section.settings.topbar_bg_color }}; min-height: {{ section.settings.topbar_height }}px;">
             <div class="container">
@@ -28,7 +28,9 @@
             </div>
         </div>
       </a>
-      
+      {% endif %}
+
+      {% if topbar_text3 %}
       <a id="slide3" class="d-nne slidex" href="{{ section.settings.page_url3.url }}">
         <div class="topbar d-flex align-items-center" data-top-bar style="background-color: {{ section.settings.topbar_bg_color }}; min-height: {{ section.settings.topbar_height }}px;">
             <div class="container">
@@ -40,6 +42,7 @@
             </div>
         </div>
       </a>
+      {% endif %}
       
       {% if topbar_text4 %}
       <a id="slide4" class="d-nne slidex" href="{{ section.settings.page_url4.url }}">
@@ -160,7 +163,7 @@
 
       // Add 'active' class to the next slide
       var nextSlide = document.getElementById('slide' + nextSlideId);
-      nextSlide.classList.add('active');
+      if (nextSlide) nextSlide.classList.add('active');
 
       // Call the function again to continue the loop
       alternateSlides();
