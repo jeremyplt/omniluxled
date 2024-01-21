@@ -72,9 +72,9 @@
            <p>{{ section.settings.lead_txt | escape }}</p>
                          {% if section.settings.steps_captions != blank %}
                          {% assign caption = section.settings.steps_captions | newline_to_br | strip_newlines | split: '<br />' %}
-                            <ul class="list-unstyled checkmarks">
+                            <ul class="list-unstyled checkmarks mt-2">
                                 {% for cap in caption %}
-                                    <li class="mb-2 mb-md-3 position-relative ps-4">{{ cap }}</li>
+                                    <li class="mb-2 mb-md-2 position-relative ps-4">{{ cap }}</li>
                                 {% endfor %}
                             </ul>
                         {% endif %}

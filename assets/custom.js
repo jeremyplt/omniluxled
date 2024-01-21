@@ -20,17 +20,18 @@ function waitForElm(selector) {
 
 document.addEventListener("DOMContentLoaded", function() {
     var scrollToReviewsSpan = document.getElementById("scrollToReviews");
-    
-    scrollToReviewsSpan.addEventListener("click", function() {
-        var reviewsSection = document.querySelector(".js-oke-widgetSize.oke-is-large, .js-oke-widgetSize.oke-is-small");
-        
-        if (reviewsSection) {
-            // Scroll smoothly to the reviews section
-            reviewsSection.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    });
+    if (scrollToReviewsSpan) {
+        scrollToReviewsSpan.addEventListener("click", function() {
+            var reviewsSection = document.querySelector(".js-oke-widgetSize.oke-is-large, .js-oke-widgetSize.oke-is-small");
+            
+            if (reviewsSection) {
+                // Scroll smoothly to the reviews section
+                reviewsSection.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
+    }
 
     waitForElm('.product-details-wrapper [data-oke-metafield-data]').then((elm) => {
         const metafield = jQuery.parseJSON(elm.textContent);

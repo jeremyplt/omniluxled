@@ -84,7 +84,7 @@
         "nav_arrows": false,
         "nav_arrows_outside": false,
         "heading_txt": "Omnilux Clear",
-        "lead_txt": "FDA-cleared, dermatologist-recommended blue and red light therapy mask with clinically-proven results for acne. Reduces active acne and blemishes\nCalms redness and inflammation\nClears breakouts faster",
+        "lead_txt": "FDA-cleared, dermatologist-recommended blue and red light therapy mask with clinically-proven results for acne.",
         "steps_captions": "Reduces active acne and blemishes\nCalms redness and inflammation\nClears breakouts faster",
         "small_txt": "45-day money back guarantee<br>2 year warranty",
         "home_featured_product": "omnilux-clear",
@@ -152,6 +152,7 @@
         "671d2e9b-1e2c-425d-91c2-f59384c5d4ba"
       ],
       "settings": {
+        "class_names": "",
         "section_id": "#",
         "section_title": "Real Stories, Real Impact"
       }
@@ -994,6 +995,7 @@
       ],
       "settings": {
         "border_color": "#000000",
+        "div_id": "",
         "ignore": true
       }
     },

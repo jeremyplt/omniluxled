@@ -19,12 +19,12 @@
           class="swiper-slide d-flex {% if section.settings.content_position != "1" %} align-items-end {% endif %}"
           data-slide-type="image">
           <picture>
-            {%- if mobileImage.width <= 415 -%}<source
-                media="(max-width: 415px)"
-                srcset="{{ mobileImage | image_url: width: 415}}">{%- endif -%}
-                 {%- if mobileImage.width >= 416 -%}<source
-                media="(max-width: 416px)"
-                srcset="{{ mobileImage | image_url: width: 416}}">{%- endif -%}
+            {%- if mobileImage.width <= 450 -%}<source
+                media="(max-width: 430px)"
+                srcset="{{ mobileImage | image_url: width: 991}}">{%- endif -%}
+                 {%- if mobileImage.width >= 450 -%}<source
+                media="(max-width: 430px)"
+                srcset="{{ mobileImage | image_url: width: 991}}">{%- endif -%}
                 
             {%- if mobileImage.width >= 550 -%}<source
                 media="(max-width: 550px)"

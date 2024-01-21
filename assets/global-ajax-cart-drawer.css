@@ -211,7 +211,7 @@
 {
     border-radius: 0 !important;
 }
-.cart__warnings
+.cart-drawer .cart__warnings
 {
     position: absolute;
     top: 45%;

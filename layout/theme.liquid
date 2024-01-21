@@ -18,7 +18,7 @@
 <script src="https://tracking.upfluence.co/js/v1/init-249fbd7f-ec24-4799-a7fa-22d273cda0c0.js"></script>
 
 <!-- Begin BlackCrow Script Tag: DO NOT MODIFY! -->
-     <script type="text/javascript" async src="https://shopify-init.blackcrow.ai/js/core/getomnilux.js?shopify_app_version=1.0.242&shop=getomnilux.myshopify.com"></script>
+     <script type="text/javascript" async src="https://shopify-init.blackcrow.ai/js/core/getomnilux.js?shopify_app_version=1.0.243&shop=getomnilux.myshopify.com"></script>
 <!-- End BlackCrow Script Tag -->   {% render 'site-speed' %}
 
 <!-- begin Convert Experiences code-->
@@ -46,7 +46,8 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
 </script>
 
 {% comment %} {% render 'pagefly-head' %} {% endcomment %}
-    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content=""> <link rel="canonical" href="{{ canonical_url }}">
+    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"><meta name="theme-color" content=""> <link rel="canonical" href="{{ canonical_url }}">
     {%- comment -%}Favicon Icon{%- endcomment -%}
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -135,10 +136,6 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
   </script>
 <!-- End NB Pixel Snippet -->
 
-
-<script>(() => {const installerKey = 'docapp-discount-auto-install'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(installerKey)) {window.sessionStorage.setItem(installerKey, JSON.stringify({integrationId: urlParams.get('docapp-integration-id'), divClass: urlParams.get('docapp-install-class'), check: urlParams.get('docapp-check')}));}})();</script>
-
-<script>(() => {const previewKey = 'docapp-discount-test'; const urlParams = new URLSearchParams(window.location.search); if (urlParams.get(previewKey)) {window.sessionStorage.setItem(previewKey, JSON.stringify({active: true, integrationId: urlParams.get('docapp-discount-inst-test')}));}})();</script>
     {% include 'dp-config' %}
 </head>
 
@@ -184,7 +181,7 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
       {{ content_for_layout }}
     </main>
 
-    {% if template.name != 'cart' and settings.enable_cart_drawer %}
+    {% if settings.enable_cart_drawer %}
       {%- section 'cart-drawer' -%}
     {% endif %}
 

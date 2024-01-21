@@ -29,10 +29,12 @@ class SearchModal extends HTMLElement {
     }
 
     this.typingTimer;
-    this.searchQuery.addEventListener('input', this.queryInput.bind(this));
-    this.searchQuery.addEventListener('keydown', () => {
-      clearTimeout(this.typingTimer);
-    });
+    if(this.searchQuery) {
+      this.searchQuery.addEventListener('input', this.queryInput.bind(this));
+      this.searchQuery.addEventListener('keydown', () => {
+        clearTimeout(this.typingTimer);
+      });
+    }
   }
 
   /**

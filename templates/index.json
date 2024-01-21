@@ -1,17 +1,38 @@
 {
   "sections": {
-    "6ec0e2ef-40e2-4265-a008-778c56929061": {
-      "type": "image_hero_2",
+    "fb5ecb5e-55ca-4dd5-a283-3b9b227357b3": {
+      "type": "image_hero_3_shortheight",
       "custom_css": [
-        ".overlay {opacity: 0.175 !important;}"
+        ".image-hero.withreviews .container-fluid {padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important;}",
+        ".overlay {opacity: 0.2 !important;}",
+        "h2 {color: #fff !important;}"
       ],
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/HERO_4.png",
-        "image_mobile": "shopify:\/\/shop_images\/Untitled_design_-_2023-11-29T125753.556.png",
-        "title": "Let’s face it: <br>you deserve it.",
-        "subtitle": "Tackle wrinkles, acne, redness and more with medical-grade LED light therapy from home.",
-        "btn_text": "TRANSFORM MY SKIN",
-        "btn_link": "shopify:\/\/collections\/all",
+        "image_desktop": "shopify:\/\/shop_images\/large-Hero_swap_c54ab7ec-1130-4aa2-a72f-82891e49e6c3.png",
+        "image_mobile": "shopify:\/\/shop_images\/rawbig_c1f9f02a-9a15-4668-8ddf-8f4716c92aac.jpg",
+        "title": "Glow <em>better<\/em><br>in 2024",
+        "subtitle": "Must-have skincare tools to boost collagen<br>production & soothe skin in just 10 mins.",
+        "mobilesubtitle": "Must-have skincare tools to boost collagen<br>production & soothe skin in just 10 mins.",
+        "btn_text": "Transform your skin",
+        "btn_link": "https:\/\/omniluxled.com\/collections\/all",
+        "content_position": "2",
+        "custom_class": ""
+      }
+    },
+    "6ec0e2ef-40e2-4265-a008-778c56929061": {
+      "type": "image_hero_2",
+      "disabled": true,
+      "custom_css": [
+        ".overlay {opacity: 0.2 !important;}",
+        "@media only screen and (max-width: 767px) {.overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient( to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) ) !important; opacity: 0.5 !important; z-index: 1; }}"
+      ],
+      "settings": {
+        "image_desktop": "shopify:\/\/shop_images\/Untitled_design_115_471db1ca-9374-4f7f-b1dc-851300332e2f.png",
+        "image_mobile": "shopify:\/\/shop_images\/Untitled_design_43_copy_2_1_59734e6b-9d64-4e3e-b61b-13dda714ea96.png",
+        "title": "NEW!<br> Omnilux Mini",
+        "subtitle": "Full strength LED devices sized <br>down for ultra-targeted treatments.",
+        "btn_text": "Shop Now",
+        "btn_link": "shopify:\/\/collections\/minis",
         "content_position": "2",
         "custom_class": ""
       }
@@ -63,7 +84,7 @@
         "gradient_tone": true,
         "icon_layout": false,
         "grid_size": "4",
-        "heading_txt": "Omnilux redefines skincare with <em>medical-grade LED light therapy<\/em> trusted by the top university medical centers.",
+        "heading_txt": "",
         "section_bg_color": "#ffffff",
         "section_txt_color": "#000000",
         "pt": 80,
@@ -131,6 +152,12 @@
           "settings": {
             "icon_img": "shopify:\/\/shop_images\/BSL_-_Commended_2023-01resized.png"
           }
+        },
+        "content_Nq9FGL": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Get_The_Gloss_Beauty_Awards_2023_Bronze_Badge_1.png"
+          }
         }
       },
       "block_order": [
@@ -142,7 +169,8 @@
         "f5903697-c569-4c64-af15-7ea0e970746b",
         "04c3d875-1879-4037-8b26-4c620295586a",
         "0bfd51a6-46c3-4eb7-9fd4-90acfefc95d0",
-        "4cc6a7ae-c58d-4385-b414-0a362c07e8b7"
+        "4cc6a7ae-c58d-4385-b414-0a362c07e8b7",
+        "content_Nq9FGL"
       ],
       "custom_css": [
 
@@ -150,7 +178,7 @@
       "settings": {
         "fluid_layout": false,
         "gradient_tone": true,
-        "heading_txt": "Omnilux redefines skincare with <em>medical-grade LED light therapy proven to enhance your natural skin.<em><\/em><\/em>",
+        "heading_txt": "",
         "section_bg_color": "",
         "section_txt_color": "#000000",
         "pt": 80,
@@ -218,7 +246,7 @@
         "gradient_tone": true,
         "icon_layout": false,
         "grid_size": "2",
-        "heading_txt": "Omnilux redefines skincare with <em>medical-grade LED light therapy<\/em> proven to enhance your natural skin.",
+        "heading_txt": "",
         "section_bg_color": "rgba(0,0,0,0)",
         "section_txt_color": "#000000",
         "pt": 58,
@@ -382,6 +410,114 @@
         "heading": "Featured In"
       }
     },
+    "483972b6-05da-4d1a-964a-d5598ce78682": {
+      "type": "global-awards",
+      "blocks": {
+        "template--16029767729314__483972b6-05da-4d1a-964a-d5598ce78682-166974779644c81bd5-0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/STYLE_Beauty_Awards_2023_Winner_002.png"
+          }
+        },
+        "6cd1848c-f7bf-4d4b-b49a-87fafc1bf5a1": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/NB_AwardSeal_2023.png"
+          }
+        },
+        "d07b85e1-d45c-4b0d-92b4-9bb639c58aa3": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Get_the_Gloss_Wellness_Awards_2023_Silverre.png"
+          }
+        },
+        "9291ac24-4153-4ca4-a61b-5341833d9b05": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/WHSA.0025_2023_badges_winner.png"
+          }
+        },
+        "f7a2d2db-e18f-449d-8232-33628e44af72": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Winner.png"
+          }
+        },
+        "c386a58c-88b3-4795-bf9f-df18ab77ba9e": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Untitled_design_-_2023-03-22T093913.615.png"
+          }
+        },
+        "content_BLYtaf": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Get_The_Gloss_Beauty_Awards_2023_Bronze_Badge_1.png"
+          }
+        },
+        "4cc6a7ae-c58d-4385-b414-0a362c07e8b7": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/Get_The_Gloss_Beauty_Awards_2023_Gold_Badge_1.png"
+          }
+        },
+        "2c456bce-fb04-49a4-9f6c-129376a355db": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/TS_Skincare_winner_N_D.png"
+          }
+        },
+        "f5903697-c569-4c64-af15-7ea0e970746b": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/MCSK.0011_2022_winner_badges_winner_1.png"
+          }
+        },
+        "b6d222dd-da7e-4dd4-a6fe-c434828074e6": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/wh-skincareawards_1.png"
+          }
+        },
+        "0bfd51a6-46c3-4eb7-9fd4-90acfefc95d0": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/NB_AwardSeal2022.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--16029767729314__483972b6-05da-4d1a-964a-d5598ce78682-166974779644c81bd5-0",
+        "6cd1848c-f7bf-4d4b-b49a-87fafc1bf5a1",
+        "d07b85e1-d45c-4b0d-92b4-9bb639c58aa3",
+        "9291ac24-4153-4ca4-a61b-5341833d9b05",
+        "f7a2d2db-e18f-449d-8232-33628e44af72",
+        "c386a58c-88b3-4795-bf9f-df18ab77ba9e",
+        "content_BLYtaf",
+        "4cc6a7ae-c58d-4385-b414-0a362c07e8b7",
+        "2c456bce-fb04-49a4-9f6c-129376a355db",
+        "f5903697-c569-4c64-af15-7ea0e970746b",
+        "b6d222dd-da7e-4dd4-a6fe-c434828074e6",
+        "0bfd51a6-46c3-4eb7-9fd4-90acfefc95d0"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.col-6 {width: 33%; }}"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "gradient_tone": true,
+        "heading_txt": "Awards and recognitions",
+        "section_bg_color": "",
+        "section_txt_color": "#000000",
+        "pt": 80,
+        "pb": 48,
+        "pts": 56,
+        "pbs": 24,
+        "border-top": false,
+        "border-bottom": true,
+        "css_class": ""
+      }
+    },
     "c552e92a-f090-4e52-8c25-337f36136add": {
       "type": "global-info-block",
       "blocks": {
@@ -433,107 +569,6 @@
         "btn_size": ""
       }
     },
-    "483972b6-05da-4d1a-964a-d5598ce78682": {
-      "type": "global-awards",
-      "blocks": {
-        "template--16029767729314__483972b6-05da-4d1a-964a-d5598ce78682-166974779644c81bd5-0": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/STYLE_Beauty_Awards_2023_Winner_002.png"
-          }
-        },
-        "6cd1848c-f7bf-4d4b-b49a-87fafc1bf5a1": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/NB_AwardSeal_2023.png"
-          }
-        },
-        "d07b85e1-d45c-4b0d-92b4-9bb639c58aa3": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/Get_the_Gloss_Wellness_Awards_2023_Silverre.png"
-          }
-        },
-        "9291ac24-4153-4ca4-a61b-5341833d9b05": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/WHSA.0025_2023_badges_winner.png"
-          }
-        },
-        "f7a2d2db-e18f-449d-8232-33628e44af72": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/Winner.png"
-          }
-        },
-        "c386a58c-88b3-4795-bf9f-df18ab77ba9e": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/Untitled_design_-_2023-03-22T093913.615.png"
-          }
-        },
-        "2c456bce-fb04-49a4-9f6c-129376a355db": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/TS_Skincare_winner_N_D.png"
-          }
-        },
-        "f5903697-c569-4c64-af15-7ea0e970746b": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/MCSK.0011_2022_winner_badges_winner_1.png"
-          }
-        },
-        "b6d222dd-da7e-4dd4-a6fe-c434828074e6": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/wh-skincareawards_1.png"
-          }
-        },
-        "0bfd51a6-46c3-4eb7-9fd4-90acfefc95d0": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/NB_AwardSeal2022.png"
-          }
-        },
-        "4cc6a7ae-c58d-4385-b414-0a362c07e8b7": {
-          "type": "content",
-          "settings": {
-            "icon_img": "shopify:\/\/shop_images\/Untitled_design_39.png"
-          }
-        }
-      },
-      "block_order": [
-        "template--16029767729314__483972b6-05da-4d1a-964a-d5598ce78682-166974779644c81bd5-0",
-        "6cd1848c-f7bf-4d4b-b49a-87fafc1bf5a1",
-        "d07b85e1-d45c-4b0d-92b4-9bb639c58aa3",
-        "9291ac24-4153-4ca4-a61b-5341833d9b05",
-        "f7a2d2db-e18f-449d-8232-33628e44af72",
-        "c386a58c-88b3-4795-bf9f-df18ab77ba9e",
-        "2c456bce-fb04-49a4-9f6c-129376a355db",
-        "f5903697-c569-4c64-af15-7ea0e970746b",
-        "b6d222dd-da7e-4dd4-a6fe-c434828074e6",
-        "0bfd51a6-46c3-4eb7-9fd4-90acfefc95d0",
-        "4cc6a7ae-c58d-4385-b414-0a362c07e8b7"
-      ],
-      "custom_css": [
-        "@media (max-width: 768px) {.col-6 {width: 33%; }}"
-      ],
-      "settings": {
-        "fluid_layout": false,
-        "gradient_tone": true,
-        "heading_txt": "Awards and recognitions",
-        "section_bg_color": "",
-        "section_txt_color": "#000000",
-        "pt": 80,
-        "pb": 48,
-        "pts": 56,
-        "pbs": 24,
-        "border-top": false,
-        "border-bottom": true,
-        "css_class": ""
-      }
-    },
     "77fd4976-1b8b-4bdf-82b9-0edcf38a733b": {
       "type": "global-text-with-right-video",
       "settings": {
@@ -546,7 +581,7 @@
         "video_style_large": "col-xl-5",
         "content_position": "align-items-center",
         "title": "<h3 class=\"mb-3 pb-1 pe-xl-3\">Medical-grade light therapy proven to enhance your natural skin<\/h3>",
-        "subtitle": "<p>Omnilux is recognized as the world leader in medical-grade LED light therapy devices and is the brand most trusted and used by dermatologists. Omnilux now offers home-use devices based on its proven, professional-grade technology. \n<\/p>\nWe use the most clinically-effective LEDs available in all of our products. Every Omnilux device uses optimized doses of red, near-infrared, or blue light to supercharge the body’s own natural cellular healing response to deliver the results you really want.",
+        "subtitle": "<p>Omnilux is recognized as the world leader in medical-grade LED light therapy devices and is the brand most trusted and used by dermatologists. Omnilux now offers home-use devices based on its proven, professional-grade technology. \n<\/p>\n<br>\nWe use the most clinically-effective LEDs available in all of our products. Every Omnilux device uses optimized doses of red, near-infrared, or blue light to supercharge the body’s own natural cellular healing response to deliver the results you really want.",
         "btn_txt": "See how it works",
         "btn_link": "shopify:\/\/pages\/how-it-works",
         "btn_type": "",
@@ -1034,6 +1069,7 @@
     }
   },
   "order": [
+    "fb5ecb5e-55ca-4dd5-a283-3b9b227357b3",
     "6ec0e2ef-40e2-4265-a008-778c56929061",
     "bbf8e6a0-e133-4b79-8e2e-6a96fec02c25",
     "a714f8c7-f2eb-4a04-8f60-9b9a35650f8a",
@@ -1041,8 +1077,8 @@
     "8804dfd9-e64d-4fa2-bf07-3fa8ee0dd89a",
     "59bdd293-efe7-4fcd-8619-feac003821e6",
     "7caf6918-0887-4d78-b125-88468bd9dd86",
-    "c552e92a-f090-4e52-8c25-337f36136add",
     "483972b6-05da-4d1a-964a-d5598ce78682",
+    "c552e92a-f090-4e52-8c25-337f36136add",
     "77fd4976-1b8b-4bdf-82b9-0edcf38a733b",
     "dcb3cafc-7296-46cc-8c09-ce11f9bfb43c",
     "ee29c9a6-cc9d-454d-a792-422630926ee6",

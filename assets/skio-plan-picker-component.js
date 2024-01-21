@@ -516,8 +516,8 @@ export class SkioPlanPickerComponent extends LitElement {
                       <circle class="skio-radio" cx="12" cy="12" r="7" fill="currentColor"></circle>
                     </svg>
                   </div>
-                  <div class="skio-group-title">
-                  ${ group.name == 'Subscription' ? '15% discount' : group.name }
+                  <div class="skio-group-title group-name-${ group.name }">
+                  ${ group.name == 'Subscription' ? 'Subscribe & Save' : group.name }
                     ${ this.discount(group.selected_selling_plan).percent !== '0%' ? html`
                       <span class="skio-save">Save <span skio-discount>${ this.discountFormat == 'percent' ? this.discount(group.selected_selling_plan).percent : this.discount(group.selected_selling_plan).amount }</span></span>
                     ` : html`` }

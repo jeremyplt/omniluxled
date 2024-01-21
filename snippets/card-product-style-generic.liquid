@@ -1,16 +1,5 @@
 {% assign current_variant = product.selected_or_first_available_variant %}
 
-{% assign freeGiftProducts = 'Omnilux Men,Omnilux Contour Face,Omnilux Clear,Omnilux Contour Neck & Décolleté,Omnilux Contour Glove' | split: ',' %}
-{% assign freeGiftTagFlag = false %}
-
-{% if settings.enable_gift_tag == true %}
-  {% if settings.is_gwpc_enabled == true %}
-    {% if freeGiftProducts contains product.title %}
-      {% assign freeGiftTagFlag = true %}
-    {% endif %}
-  {% endif %}
-{% endif %}
-
 <div
   class="card card-product card-product-style-1 text-start rounded-0 border-0"
   data-product-grid
@@ -29,7 +18,6 @@
 
       assign productBadges = settings.custom_badges | newline_to_br | split: '<br />'
     -%}
-
     {%- for badge in productBadges -%}
       {%- assign badgeData = badge | strip | split: ':' -%}
       {%- assign badgeLabel = badgeData[1] | strip -%}
@@ -39,23 +27,28 @@
         </span>
       {%- endif -%}
     {%- endfor -%}
-
-    {% if onSale %}
+    {%- if onSale -%}
       <span class="badge badge-right badge-saddle-brown">
         {{ 'products.product.on_sale' | t | escape }}
       </span>
-    {% endif %}
+    {%- endif -%}
 
-    {% if soldOut %}
+    {%- if soldOut -%}
       <span class="badge badge-right badge-gainsboro text-black">
         {{ 'products.product.sold_out' | t | escape }}
       </span>
-    {% endif %}
+    {%- endif -%}
   </span>
-  {% if freeGiftTagFlag == true %}
+  {% assign eligible_product = false %}
+  {% for gift_collection in product.collections %}
+    {% if gift_collection.handle == settings.gwp_collection and settings.gwp_enabled == true %}
+      {% assign eligible_product = true %}
+    {% endif %}
+  {% endfor %}
+  {% if eligible_product %}
     <span class="badges free-gift-badge-sec">
       <span class="badge free-gift-badge text-white bg-black">
-        {{ settings.gift_tag_text }}
+        {{ settings.gwp_label }}
       </span>
     </span>
   {% endif %}

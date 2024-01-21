@@ -12,8 +12,8 @@
 .image-hero.shortbanner .tallheight .swiper-slide {height: calc(80vh - 140px);min-height: 0vw!important;}
 
 .image-hero.withreviews.shortbanner h2.h1{text-shadow:0px 4px 4px rgba(0,0,0,.25)!important;}
-.template-page.home .badges{background:#FEEFDF!important;padding-top:20px!important;border:0;}
-.template-page.home .badges .gradient-fair-tone{display:none;}
+.template-page.home .badges,.template-index .badges{background:#FEEFDF!important;padding-bottom:0px!important;padding-top:40px!important;border:0;}
+.template-page.home .badges .gradient-fair-tone,.template-index .badges .gradient-fair-tone{display:none;}
 .template-page.home .badges .mb-lg-5{margin-bottom:20px!important;}
 
 .image-hero.shortbanner.withreviews .container-fluid{padding:0 0 0!important;}
@@ -45,11 +45,16 @@
 .template-page.home .review-ctr-mbl p{font-size: 13px; line-height: 15px;}
 .image-hero.shortbanner .btn-white.px-10{margin-top:10px!important;}
 .template-page.home .review-ctr-mbl{margin-top:5px!important;}
-.template-page.home .badges .col-4:nth-child(5){display: none;}
-.template-page.home .badges .col-4{width:25%;padding:0 9px!important;}
 .template-page.home .video-with-text.text-with-right-video.skincare{border-top:0!important;background:#fff!important;}
 .template-page.home .shortbanner .btn-white{background:#000;color:#fff;border:0;}
 .template-page.home .badges{padding:10px 0 5px!important;}
+
+
+.template-page.home .badges .col-4:nth-child(5),.template-index .badges .col-4:nth-child(5){display: none!important;}
+.template-index .badges{padding:10px 0 5px!important;}
+.template-index .badges .mb-3{margin-bottom:0!important;}
+.template-page.home .badges .col-4,.template-index .badges .col-4{width:25%;padding:0 9px!important;}
+  
 .image-hero.shortbanner .tallheight .swiper-slide{height: calc(75vh - 140px);}
 }
 

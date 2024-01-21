@@ -13229,4 +13229,43 @@ body
   white-space: normal;
 }
 
+ajax-cart.empty-cart square-placement,
+ajax-cart.empty-cart .cart-upsell-section {
+  display: none;
+}
+
+.navbar-mobile  .card-body .mega_menu_image_container,
+.mega-menu-item-call .card-body {
+  position: relative;
+}
+.navbar-mobile  .card-body .mega_menu_image_container .free-gift-badge-sec,
+.mega-menu-item-call .card-body .free-gift-badge-sec {
+  right: unset;
+  left: 0 !important;
+  top: 0;
+  padding: 0 !important;
+}
+.navbar-mobile  .card-body .mega_menu_image_container .free-gift-badge-sec {
+  left: 15px !important;
+}
+.navbar-mobile  .card-body .mega_menu_image_container .free-gift-badge-sec .free-gift-badge,
+.mega-menu-item-call .card-body .free-gift-badge-sec .free-gift-badge {
+  border-radius: 0;
+  padding: 0;
+  width: auto;
+  aspect-ratio: unset;
+  padding: 8px 15px;
+}
+.template-index .card-product .badges.free-gift-badge-sec {
+  background: transparent !important;
+  padding-top: 10px!important;
+}
+.template-index .card-product .badges:empty {
+  display: none;
+}
 /* custom free gift badge css END */
+
+.return-authorization-form .globo-form-control .globo-list-control.option-4-column {
+width: auto;
+}
+

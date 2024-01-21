@@ -49,6 +49,9 @@
     {
         font-size:18px;
     }
+   #result-slider .swiper-slide{  width: 526px;
+    margin-right: 30px;}
+  
 }
 @media (min-width:1400px){
     .contour-text:after, .contour-text::before,

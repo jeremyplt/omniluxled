@@ -26,15 +26,16 @@ window.addEventListener('scroll', function (e) {
 document.addEventListener('DOMContentLoaded', function() {
   console.log("DOMContentLoaded")
   var swiperElement = document.querySelector('.product-carousel');
-
-  // Parse the JSON configuration from the data attribute
-  var swiperConfig = JSON.parse(swiperElement.getAttribute('data-slider'));
-  
-  // Initialize Swiper using the configuration from the data attribute
-  var mySwiper = new Swiper(swiperElement, swiperConfig);
-  
-  // If you need to access 'mySwiper' elsewhere, consider using a broader scope
-  window.mySwiper = mySwiper;
+  if (swiperElement) {
+    // Parse the JSON configuration from the data attribute
+    var swiperConfig = JSON.parse(swiperElement.getAttribute('data-slider'));
+    
+    // Initialize Swiper using the configuration from the data attribute
+    var mySwiper = new Swiper(swiperElement, swiperConfig);
+    
+    // If you need to access 'mySwiper' elsewhere, consider using a broader scope
+    window.mySwiper = mySwiper;
+  }
 });
 
 window.addEventListener('load', function() {

@@ -10,6 +10,7 @@
   assign sectionBtnUrl = section.settings.section_btn_url
   assign sectionShippingText = section.settings.section_shipping_text
   assign sectionMainImage = section.settings.section_main_image
+  assign sectionMainImageMobile = section.settings.section_main_image_mobile
 %}
 
 <section class="hoox-hero">
@@ -93,12 +94,18 @@
 </div>
 <div class="hoox-hero__media">
   {%- if sectionMainImage -%}
-    <figure class="hoox-hero__main-image">
+    <figure class="hoox-hero__main-image desktop">
       {% render 'snippet-image', image: sectionMainImage, loadingLazy: 'false' %}
     </figure>
   {%- endif -%}
+   {%- if sectionMainImageMobile -%}
+    <figure class="hoox-hero__main-image mobile">
+      {% render 'snippet-image', image: sectionMainImageMobile, loadingLazy: 'false' %}
+    </figure>
+  {%- endif -%}
 </div>
-<div class="hoox-hero__items-mob">
+</div>
+  <div class="hoox-hero__items-mob">
   {% for block in section.blocks %}
     {% if block.type == 'usp' %}
       {% liquid
@@ -111,7 +118,6 @@
       </div>
     {% endif %}
   {% endfor %}
-</div>
 </div>
 </section>
 
@@ -165,6 +171,11 @@
       "type": "image_picker",
       "id": "section_main_image",
       "label": "Section Main Image"
+    },
+        {
+      "type": "image_picker",
+      "id": "section_main_image_mobile",
+      "label": "Section Main Image Mobile"
     }
   ],
   "blocks": [

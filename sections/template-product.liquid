@@ -63,17 +63,6 @@
     endcapture
   -%}
 
-  {% assign freeGiftProducts = 'Omnilux Men,Omnilux Contour Face,Omnilux Clear,Omnilux Contour Neck & Décolleté,Omnilux Contour Glove' | split: ',' %}
-  {% assign freeGiftTagFlag = false %}
-  
-  {% if settings.enable_gift_tag == true %}
-    {% if settings.is_gwpc_enabled == true %}
-      {% if freeGiftProducts contains product.title %}
-        {% assign freeGiftTagFlag = true %}
-      {% endif %}
-    {% endif %}
-  {% endif %}
-
   <section class="section-content border-top pt-lg-6 pt-4 pb-0 {% if section.settings.enable_background_tone %}position-relative background-tone{% endif %}" data-product-container>
     {% if section.settings.enable_background_tone %}
       <span class="top-20 back-ground-fair-tone position-absolute w-100 start-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
@@ -84,10 +73,16 @@
       <div class="row">
         <div class="col-lg-7">
           <div data-type="slider" class="product-images-wrapper pr-lg-4 text-center {% if section.settings.product_grid %}product-images--slider{% endif %}">
-            {% if freeGiftTagFlag == true %}
+            {% assign eligible_product = false %}
+            {% for gift_collection in product.collections %}
+              {% if gift_collection.handle == settings.gwp_collection and settings.gwp_enabled == true %}
+                {% assign eligible_product = true %}
+              {% endif %}
+            {% endfor %}
+            {% if eligible_product %}
               <span class="badges free-gift-badge-sec free-gift-badge-sec-product-page">
                 <span class="badge free-gift-badge text-white bg-black">
-                  {{ settings.gift_tag_text }}
+                  {{ settings.gwp_label }}
                 </span>
               </span>
             {% endif %}

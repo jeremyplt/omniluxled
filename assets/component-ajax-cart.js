@@ -128,8 +128,6 @@ class AjaxCart extends HTMLElement {
     this.querySelectorAll('[data-gwp-multi-tier]').forEach((button) =>
       button.addEventListener('click', this.openPopup.bind(this))
     )
-
-    console.log('binddd')
   }
 
   addEventListenerUpsells() {
@@ -269,7 +267,7 @@ class AjaxCart extends HTMLElement {
 
   closePopup(event) {
     event.target.closest('.modal').classList.remove('open')
-    console.log('hereee', event.target.closest('.modal'))
+    //console.log('hereee', event.target.closest('.modal'))
     if (!event.currentTarget.hasAttribute('data-drawer-popup')) {
       siteOverlay.prototype.hideOverlay()
     }
@@ -286,72 +284,33 @@ class AjaxCart extends HTMLElement {
     this.setAttribute('updating', true)
 
     // Convert the HTML string into a document object
-    let cartHTML = ''
+    let cartHTML = '';
     if (window.globalVariables.template != 'cart') {
-      cartHTML = response['template-cart-drawer']
+      cartHTML = response['template-cart-drawer'];
     } else {
-      cartHTML = response['template-cart']
+      cartHTML = response['template-cart'];
     }
 
-    if (cartHTML == null) return
-    let parser = new DOMParser()
-    cartHTML = parser.parseFromString(cartHTML, 'text/html')
+    if (cartHTML == null) return;
+    let parser = new DOMParser();
+    cartHTML = parser.parseFromString(cartHTML, 'text/html');
 
-    let cartJSONEle = cartHTML.querySelector('[data-cartScriptJSON]')
+    let cartJSONEle = cartHTML.querySelector('[data-cartScriptJSON]');
     if (cartJSONEle != undefined && cartJSONEle != null) {
-      window.globalVariables.cart = JSON.parse(cartJSONEle.textContent)
+      window.globalVariables.cart = JSON.parse(cartJSONEle.textContent);
     }
 
-    let cartElement = cartHTML.querySelector('ajax-cart form')
-    this.querySelector('form').innerHTML = cartElement.innerHTML
+    let cartElement = cartHTML.querySelector('ajax-cart form');
+    this.querySelector('form').innerHTML = cartElement.innerHTML;
     this.querySelector('[data-carttotal]').innerHTML =
       Shopify.formatMoney(
         window.globalVariables.cart.total_price,
         window.globalVariables.money_format
-      )
-
-    let removeGWPCElement = cartHTML.querySelector('[data-gwpc-remove]')
-    if (typeof removeGWPCElement != 'undefined' && removeGWPCElement != null) {
-      var getGWPCIds = removeGWPCElement.getAttribute('data-gwpc-remove')
-      this.removeSampleProducts(getGWPCIds)
-    }
-
-    let addGwpcElement = cartHTML.querySelector('[data-gwpc-add]')
-    if (typeof addGwpcElement != 'undefined' && addGwpcElement != null) {
-      var getGWPId = addGwpcElement.getAttribute('data-gwpc-add')
-      this.addGWPProduct(getGWPId, 'gwpc')
-    }
-
-    let addGwppElement = cartHTML.querySelector('[data-gwpp-add]')
-    if (typeof addGwppElement != 'undefined' && addGwppElement != null) {
-      var getGWPPId = addGwppElement.getAttribute('data-gwpp-add')
-      this.addGWPProduct(getGWPPId, 'gwpp')
-    }
-
-    let removeGWPElement = document.querySelector('[data-gwpp-remove]')
-    if (typeof removeGWPElement != 'undefined' && removeGWPElement != null) {
-      var getGWPPIds = removeGWPElement.getAttribute('data-gwpp-remove')
-      this.removeSampleProducts(getGWPPIds)
-    }
-
-    let addTier1Element = cartHTML.querySelector('[data-tier1-add]')
-    if (typeof addTier1Element != 'undefined' && addTier1Element != null) {
-      var getTier1Id = addTier1Element.getAttribute('data-tier1-add')
-      this.addGWPProduct(getTier1Id, 'tier1')
-    }
-
-    let removeTier1Element = document.querySelector('[data-gwp-remove]')
-    if (
-      typeof removeTier1Element != 'undefined' &&
-      removeTier1Element != null
-    ) {
-      var getTier1Ids = removeTier1Element.getAttribute('data-gwp-remove')
-      this.removeSampleProducts(getTier1Ids)
-    }
+      );
 
     let elements = this.querySelectorAll(
       '[data-checkoutBtns], [data-cartnote], [data-cartupsell]'
-    )
+    );
     if (window.globalVariables.cart.item_count <= 0) {
       elements.forEach((div) => {
         div.classList.add('d-none')
@@ -372,25 +331,18 @@ class AjaxCart extends HTMLElement {
     }
     this.setAttribute('updating', false)
 
-    let headerHTML = new DOMParser().parseFromString(
-      response['header'],
-      'text/html'
-    )
-    let cartIcon = headerHTML.getElementById('cart-icon-desktop')
-    if (drawerSelectors.cartIconDesktop)
-      drawerSelectors.cartIconDesktop.innerHTML = cartIcon.innerHTML
-    if (drawerSelectors.cartIconMobile)
-      drawerSelectors.cartIconMobile.innerHTML = cartIcon.innerHTML
+    let cartCount = cartHTML.querySelector('[data-drawer-cart-count]').innerHTML;
+    if (drawerSelectors.cartIconDesktop.querySelector('.cart-count'))
+      drawerSelectors.cartIconDesktop.querySelector('.cart-count').innerHTML = cartCount;
+    if (drawerSelectors.cartIconMobile.querySelector('.cart-count'))
+      drawerSelectors.cartIconMobile.querySelector('.cart-count').innerHTML = cartCount;
     if (window.globalVariables.cart.item_count > 0) {
-      if (headerHTML.querySelector('#cart-icon-desktop .cart-count')) {
-        if (drawerSelectors.cartDrawerCount)
-          drawerSelectors.cartDrawerCount.innerHTML = headerHTML.querySelector(
-            '#cart-icon-desktop .cart-count'
-          ).innerHTML
-      }
+      if (drawerSelectors.cartDrawerCount.querySelector('.cart-count'))
+        drawerSelectors.cartDrawerCount.querySelector('.cart-count').innerHTML = cartCount;
     }
+    drawerSelectors.cartDrawerCount.innerHTML = cartCount;
 
-    this.qtyInputs = this.querySelectorAll('input[data-qty-input]')
+    this.qtyInputs = this.querySelectorAll('input[data-qty-input]');
     this.qtyInputs.forEach((qtyInput) => {
       qtyInput.addEventListener('keyup', this.manageQtyInput.bind(this))
     })
@@ -456,7 +408,7 @@ class AjaxCart extends HTMLElement {
   addMultiGWPProduct(event) {
     event.preventDefault()
     event.stopPropagation()
-    console.log('callllll')
+    //console.log('callllll')
     let currentTarget = event.currentTarget
     let upsellProductVariantId =
       currentTarget.getAttribute('add-gwp-product') || null
@@ -527,11 +479,12 @@ class AjaxCart extends HTMLElement {
    * @param {string} action Open Drawer as value if need to Open Cart drawer or else let it be empty
    */
   getCartData(action) {
-    let cartRoute = `${routes.cart_fetch_url}?sections=template-cart,header`
+    let cartRoute = `${routes.cart_fetch_url}?sections=template-cart`
     if (window.globalVariables.template != 'cart') {
-      cartRoute = `${routes.cart_fetch_url}?sections=template-cart-drawer,header`
+      cartRoute = `${routes.cart_fetch_url}?sections=template-cart-drawer`
     }
-
+    //console.log('getCartData action: '+action);
+    this.checkGiftWithPurchase();
     fetch(cartRoute)
       .then((response) => {
         return response.json()
@@ -545,6 +498,137 @@ class AjaxCart extends HTMLElement {
       .finally(() => {
         // Cart HTML fetch done
       })
+  }
+
+  checkGiftWithPurchase() {
+    //CHECK GIFT WITH PURCHASE ELIGIBLE WHEN THERE'S A CHANGE IN CART
+    if (!window.theme.giftWithPurchase.enabled) return;
+    var isGiftInCart = false;
+    var isEligigleGift = false;
+    //GET CURRENT CART CONTENT
+    fetch("/cart.json")
+      .then((response) => {
+        if (response.status === 200) {
+          response.json().then(updatedCart => {
+            if (updatedCart.items) {
+              updatedCart.items.forEach((item,index) => {
+                var handle = item.handle;
+                var freeGift = item.properties['free_gift'];
+                if (freeGift == true) {
+                  if ( item.quantity > 1 ) {
+                    //if there're more than 1 free gift, set it as 1
+                    this.updateItemQty(item.key, 1);
+                  }
+                  isGiftInCart = true; //this item is free gift
+                  return;
+                }
+                if (window.theme.giftWithPurchase.eligigleProducts.indexOf('|'+handle+'|') !== -1) {
+                  isEligigleGift = true; //this item is eligible to receive gift
+                  return 0;
+                }
+              })
+              //console.log('isGiftInCart: ' + isGiftInCart);
+              //console.log('isEligigleGift: ' + isEligigleGift);
+              if(isEligigleGift && !isGiftInCart) {
+                //Call add gift to cart
+                if (window.theme.giftWithPurchase.giftProductID) {
+                  this.addFreeProduct(window.theme.giftWithPurchase.giftProductID);
+                }
+              }
+              if(!isEligigleGift && isGiftInCart) {
+                //Call remove gift to cart
+                if (window.theme.giftWithPurchase.giftProductID) {
+                  this.removeFreeProduct(window.theme.giftWithPurchase.giftProductID);
+                }
+              }
+            } 
+            if (updatedCart.item_count == 0) {
+              //Reset Gift was removed when cart is empty
+              sessionStorage.removeItem('gwpRemoved');
+              document.querySelectorAll('ajax-cart').forEach((ajaxCart) => {
+                ajaxCart.classList.add('empty-cart');
+              })
+            } else {
+              document.querySelectorAll('ajax-cart').forEach((ajaxCart) => {
+                ajaxCart.classList.remove('empty-cart');
+              })
+            }
+          })
+        }
+        else {
+          throw new Error(`refreshCart function failed to get request, Shopify returned ${response.status} ${response.statusText}`);
+        }
+      })
+      .catch((e) => {
+        console.error(e)
+      })
+      .finally(() => {
+        // Cart HTML fetch done
+      })
+  }
+
+  addFreeProduct(productVariantId) {
+    //ADD FREE PRODUCT TO CART WITH VARIANT ID
+      if (sessionStorage.getItem('gwpRemoved') || getFromSessionStorage(gwpLocalCheck)) {
+        //console.log('preventing duplicate call')
+        return;
+      }
+      // else add the thing
+      setInSessionStorage(gwpLocalCheck, 'true')
+      var VID = productVariantId;
+      var addData = {
+          'id':VID,
+          'quantity':1,
+          'properties': {
+              'free_gift': true
+          }
+        };
+        fetch('/cart/add.js', {
+          body: JSON.stringify(addData),
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With':'xmlhttprequest'
+          },
+          method: 'POST'
+        }).then(function(response) {
+          return response.json();
+        }).then(function(json) {
+          removeFromSessionStorage(gwpLocalCheck);
+          document.querySelector('ajax-cart').getCartData(); //CALL UPDATE CART 
+        }).catch(function(err) {
+          console.error(err)
+          removeFromSessionStorage(gwpLocalCheck);
+        });
+  }
+
+  removeFreeProduct(productVariantId) {
+    //REMOVE FREE PRODUCT TO CART WITH VARIANT ID
+      var VID = productVariantId;
+      var removeData = {
+          'id':VID,
+          'quantity':0,
+          'properties': {
+              'free_gift': true
+          }
+        };
+        fetch('/cart/change.js', {
+          body: JSON.stringify(removeData),
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With':'xmlhttprequest'
+          },
+          method: 'POST'
+        }).then(function(response) {
+          return response.json();
+        }).then(function(json) {
+          removeFromSessionStorage(gwpLocalCheck);
+          document.querySelector('ajax-cart').getCartData(); //CALL UPDATE CART 
+        }).catch(function(err) {
+          console.error(err);
+          removeFromSessionStorage(gwpLocalCheck);
+        });
   }
 
   /**
@@ -593,6 +677,9 @@ class AjaxCart extends HTMLElement {
     event.preventDefault()
     let currentTarget = event.currentTarget
     let itemIndex = currentTarget.dataset.index || null
+    if ( currentTarget.classList.contains('free-gift-with-purchase') ) {
+      window.sessionStorage.setItem("gwpRemoved", 'true');
+    }
     if (itemIndex != null) {
       this.updateItemQty(itemIndex, 0)
     }
@@ -745,3 +832,29 @@ class AjaxCart extends HTMLElement {
   }
 }
 customElements.define('ajax-cart', AjaxCart)
+
+const gwpLocalCheck = 'gwpAttemptAdd'
+function getFromSessionStorage(key) {
+  try {
+    return sessionStorage.getItem(key)
+  } catch (err) {
+    console.error('Could not get item from storage with key', key, err)
+  }
+}
+
+function setInSessionStorage(key, value) {
+  try {
+    sessionStorage.setItem(key.toString(),value.toString())
+  } catch (err) {
+    console.error('Could not set item in storage with key, value', key, value, err)
+  }
+}
+
+function removeFromSessionStorage(key) {
+  try {
+    sessionStorage.removeItem(key)
+  } catch (err) {
+    console.error('Could not remove item from storage with key', key, err)
+
+  }
+}

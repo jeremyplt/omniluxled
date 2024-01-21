@@ -105,7 +105,19 @@
                                                                     <div class="{% if block.type == 'sub_menu_second' %}mega-menu-item-call-second{% else %}mega-menu-item-call{% endif %}">                                                                                       
                                                                         <div class="card-body mega_menu_container col-12 p-0" data-nav-menu-product-id="{{ current_product.id }}">
                                                                             <div>
-                                                                                
+                                                                                {% assign eligible_product = false %}
+                                                                                {% for gift_collection in current_product.collections %}
+                                                                                  {% if gift_collection.handle == settings.gwp_collection and settings.gwp_enabled == true %}
+                                                                                    {% assign eligible_product = true %}
+                                                                                  {% endif %}
+                                                                                {% endfor %}
+                                                                                {% if eligible_product %}
+                                                                                  <span class="badges free-gift-badge-sec">
+                                                                                    <span class="badge free-gift-badge text-white bg-black">
+                                                                                      {{ settings.gwp_label }}
+                                                                                    </span>
+                                                                                  </span>
+                                                                                {% endif %}
                                                                                 <a class="" href="{{ current_product.url | within: collection }}">
                                                                                     <img class="img-fluid" src="{{current_product.featured_image | image_url: width: 850 }}"/>    
                                                                                 </a>

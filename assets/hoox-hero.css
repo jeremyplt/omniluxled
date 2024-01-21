@@ -25,12 +25,14 @@
 .hoox-hero__media figure {
     height: 100%;
 }
+.hoox-hero__main-image.mobile{display:none;}
+.hoox-hero__main-image.desktop{display:block;}
 
 .hoox-hero__media img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: left;
+    object-position: right;
 }
 
 .hoox-hero-star__image {
@@ -96,6 +98,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 24px;
+  margin:0 auto 25px;
 }
 
 .hoox-hero__item {
@@ -214,4 +217,11 @@
         flex-direction: column;
         align-items: center;
     }
+}
+
+@media(max-width:600px){
+  .hoox-hero__wrapper{flex-direction:column-reverse;}
+  .hoox-hero__media img{object-position:bottom;}
+  .hoox-hero__main-image.mobile{display:block;}
+.hoox-hero__main-image.desktop{display:none;}
 }
