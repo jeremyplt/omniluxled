@@ -1952,7 +1952,12 @@ html .cbb-frequently-bought-recommendations-wrap {
   padding: 10px 10px;
   border: solid 1px #5CB8B2;
   background-color: #E6EFEE;
-  color: #004851
+  color: #004851;
+  display: none;
+}
+
+.test-cart-upsell-checkbox .item-main-upsell {
+  display: block;
 }
 
 .item-main-upsell input {
