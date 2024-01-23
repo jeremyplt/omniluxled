@@ -947,12 +947,13 @@ async function handleCheckboxChange(sellingPlanCheckbox, sellingPlanOptions) {
     sellingPlanOptions.style.display = "none";
     await removeSellingPlan(variantId, sellingPlanOptions.value);
   }
-  setTimeout(() => {
-    hideOverlay();
-  }, 1000);
 
   // Refresh cart code
   document.querySelector("ajax-cart").getCartData();
+
+  setTimeout(() => {
+    hideOverlay();
+  }, 1000);
 }
 
 async function handleOptionsChange(sellingPlanCheckbox, sellingPlanOptions) {
@@ -960,13 +961,14 @@ async function handleOptionsChange(sellingPlanCheckbox, sellingPlanOptions) {
   if (sellingPlanCheckbox.checked) {
     showOverlay();
     await addOrUpdateSellingPlan(variantId, sellingPlanOptions.value);
+
+    // refresh Cart Code
+    document.querySelector("ajax-cart").getCartData();
+
     setTimeout(() => {
       hideOverlay();
     }, 1000);
   }
-
-  // refresh Cart Code
-  document.querySelector("ajax-cart").getCartData();
 }
 
 async function addOrUpdateSellingPlan(variant, plan) {
@@ -983,14 +985,13 @@ async function addOrUpdateSellingPlan(variant, plan) {
     quantity = 1;
   }
 
-  if (lineItemWithPlan) await removeLineItem(lineItemWithPlan.key);
   const result = await addLineItemPlan(variant, plan, quantity);
-
+  if (lineItemWithPlan) await removeLineItem(lineItemWithPlan.key);
   if (lineItemWithoutPlan) await removeLineItem(lineItemWithoutPlan.key);
 
-  document.querySelectorAll(`[data-item-id="${variant}"]`).forEach((item) => {
-    if (!item.querySelector(".rc90-item-main-upsell")) item.remove();
-  });
+  // document.querySelectorAll(`[data-item-id="${variant}"]`).forEach((item) => {
+  //   if (!item.querySelector(".rc90-item-main-upsell")) item.remove();
+  // });
 
   return result;
 }
