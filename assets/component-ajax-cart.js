@@ -241,6 +241,9 @@ class AjaxCart extends HTMLElement {
       let openBy = event.currentTarget;
       openBy.setAttribute("aria-expanded", true);
     }
+
+    // dispatch custom event cart-drawer:open
+    document.dispatchEvent(new Event("cart-drawer:open"));
   }
 
   /**
@@ -906,14 +909,8 @@ function initAll() {
   document.querySelectorAll(".cart-item").forEach((item) => {
     const variantId = item.dataset.itemId;
 
-    console.log("variantId", variantId);
-    console.log("item", item);
-
     const sellingPlanCheckbox = item.querySelector(`.upsell__checkbox`);
     const sellingPlanOptions = item.querySelector(`.upsell__options`);
-
-    console.log("sellingPlanCheckbox", sellingPlanCheckbox);
-    console.log("sellingPlanOptions", sellingPlanOptions);
 
     if (
       sellingPlanCheckbox &&
@@ -1081,11 +1078,4 @@ function showOverlay() {
 
 function hideOverlay() {
   document.getElementById("cart-overlay").style.display = "none";
-}
-
-function activateExperiment() {
-  window.runExperiment = 1;
-  window._conv_q = window._conv_q || [];
-  window._conv_q.push(["executeExperiment", "100425511"]);
-  console.log("experience activated");
 }
