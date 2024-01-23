@@ -727,8 +727,15 @@ export class SkioPlanPickerComponent extends LitElement {
       this.updateExternalPrice();
 
       //update external selling_plan input value
-      let sellingPlanInput = document.querySelector('input[name="selling_plan"]')
-      this.selectedSellingPlan != null ? sellingPlanInput.value = this.selectedSellingPlan.id : sellingPlanInput.value = ''
+      let sellingPlanInputs = document.querySelectorAll('input[name="selling_plan"]')
+      for (let input of sellingPlanInputs) {
+        if (this.selectedSellingPlan != null) {
+          input.value = this.selectedSellingPlan.id
+        }
+        else {
+          input.value = ''
+        }
+      }
 
     }
 
