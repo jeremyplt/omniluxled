@@ -1,3 +1,7 @@
+/*collection page abtest*/
+.card-product .badges,#collectionabhide,.newcollectiondescription{display:none}
+
+
 /*hide mini faq*/
 /* .help-center-products #custom-tab-btn-7{display:none;} */
 
@@ -1947,7 +1951,7 @@ html .cbb-frequently-bought-recommendations-wrap {
 
 .item-main-upsell {
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   width: 100%;
   padding: 10px 10px;
   border: solid 1px #5CB8B2;
@@ -1959,6 +1963,17 @@ html .cbb-frequently-bought-recommendations-wrap {
 .test-cart-upsell-checkbox .item-main-upsell {
   display: block;
 }
+
+@media (max-width: 749px) {
+  .test-cart-upsell-checkbox body.ab-test-cartdrawer .cart-drawer .cart-body .cart-items>.cart-item .cart-product-img .cart-img {
+    width: 100px !important;
+  }
+
+  .test-cart-upsell-checkbox .cart-product-img {
+    padding: 0 !important;
+  }
+}
+
 
 .item-main-upsell input {
   appearance: auto;

@@ -3,15 +3,6 @@
     "main": {
       "type": "template-product-layout-2",
       "blocks": {
-        "84295844-2a16-4973-a77f-86f37b4f8898": {
-          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
-          "settings": {
-            "use_metafields": true,
-            "sku_tagtype": "sku",
-            "is_featured_product": false,
-            "featured_product_handle": ""
-          }
-        },
         "dbbd2e0d-3d94-4448-b166-f2d746801314": {
           "type": "name",
           "settings": {
@@ -57,7 +48,10 @@
             "btn_link": "",
             "enable_custom_tab_4": true,
             "tab_4_title": "Contraindications",
-            "tab_4_content": "<p>DO NOT use the Omnilux Contour™ LED system to treat any other conditions apart from those listed in the indications for use. The Omnilux Contour™ LED system has not been tested for any other conditions than those listed and the risk is unknown.<br\/><br\/>DO NOT use the Omnilux Contour™ LED system if you are pregnant, planning on becoming pregnant or breastfeeding. The Omnilux Contour™ LED system has NOT been tested on pregnant or breast-feeding women and therefore the risk to the fetus, neonate or pregnant women is unknown.<br\/><br\/><a href=\"#\" title=\"Click here for full list.\">Click here for full list.<\/a><\/p>"
+            "tab_4_content": "<p>DO NOT use the Omnilux Contour™ LED system to treat any other conditions apart from those listed in the indications for use. The Omnilux Contour™ LED system has not been tested for any other conditions than those listed and the risk is unknown.<br\/><br\/>DO NOT use the Omnilux Contour™ LED system if you are pregnant, planning on becoming pregnant or breastfeeding. The Omnilux Contour™ LED system has NOT been tested on pregnant or breast-feeding women and therefore the risk to the fetus, neonate or pregnant women is unknown.<br\/><br\/><a href=\"#\" title=\"Click here for full list.\">Click here for full list.<\/a><\/p>",
+            "enable_custom_tab_5": "",
+            "tab_5_title": "Tab Title 5",
+            "tab_5_content": ""
           }
         },
         "66b0df01-36e0-43a9-be92-84aa1699a008": {
@@ -76,7 +70,6 @@
         }
       },
       "block_order": [
-        "84295844-2a16-4973-a77f-86f37b4f8898",
         "dbbd2e0d-3d94-4448-b166-f2d746801314",
         "3b316236-d91e-4dd0-953a-173c1f40bfcf",
         "fcbf423b-3c83-4097-901c-ca70b8b80e5c",
@@ -146,6 +139,8 @@
       ],
       "settings": {
         "fluid_layout": false,
+        "gradient_tone": true,
+        "icon_layout": false,
         "grid_size": "2",
         "heading_txt": "",
         "section_bg_color": "rgba(0,0,0,0)",
@@ -155,7 +150,8 @@
         "pts": 60,
         "pbs": 20,
         "border-top": false,
-        "border-bottom": false
+        "border-bottom": false,
+        "css_class": ""
       }
     },
     "e543139a-7624-4c99-b377-8c2ed49caed5": {
@@ -242,6 +238,7 @@
         "section_bg_color": "rgba(0,0,0,0)",
         "section_text_color": "#000000",
         "autoplay_enable": false,
+        "loop_enable_": true,
         "slider_enable": true,
         "nav_arrows": false,
         "nav_dots": false
@@ -300,6 +297,7 @@
             "heading_txt": "Level up with 1072nm",
             "max_width": 530,
             "txt": "<p>The optimized 1072nm near-infrared wavelength is a longer beam of light - it targets your deepest skin layer and produces the most effective LED treatment for men.<\/p>",
+            "txt_liquid": "",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "<ul><li>Perfectly activates cellular structures in thicker skin<\/li><li>Reduces fine lines, wrinkles, redness, irritation, dark circles, &<br\/>under-eye bags<\/li><li>Promotes a smoother, more even-toned complexion<\/li><\/ul>",
@@ -311,6 +309,8 @@
             "btn_variant": "primary",
             "btn_size": "",
             "btn_txt_watch": "",
+            "watch_video_id": "",
+            "watch_mobile_video_id": "",
             "btn_type_watch": "",
             "btn_variant_watch": "primary",
             "btn_size_watch": "",
@@ -328,6 +328,7 @@
             "heading_txt": "How to use",
             "max_width": 530,
             "txt": "<p>We recommend three to five 10-minute treatments per week for four to six weeks, followed by maintenance as desired.<\/p>",
+            "txt_liquid": "",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "<ul><li>Prepare your skin by washing your face<\/li><li>Charge controller & connect it to the device<\/li><li>Secure device using the velcro straps<\/li><li>Start the 10-minute treatment<\/li><li>Remove mask & apply moisturizer to skin<\/li><\/ul>",
@@ -339,6 +340,8 @@
             "btn_variant": "primary",
             "btn_size": "",
             "btn_txt_watch": "Watch how-to video",
+            "watch_video_id": "",
+            "watch_mobile_video_id": "",
             "btn_type_watch": "outline",
             "btn_variant_watch": "primary",
             "btn_size_watch": "",
@@ -452,23 +455,6 @@
     },
     "167162186202b4b8a9": {
       "type": "apps",
-      "blocks": {
-        "e28a93cd-515e-41ab-9af5-7e95e8dac998": {
-          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
-          "settings": {
-            "animation": true,
-            "tags_exclude": "",
-            "tags_include": "",
-            "search": "",
-            "linkify": true,
-            "use_metafields": true,
-            "sku_tagtype": "sku"
-          }
-        }
-      },
-      "block_order": [
-        "e28a93cd-515e-41ab-9af5-7e95e8dac998"
-      ],
       "settings": {
         "include_margins": true
       }
@@ -499,6 +485,7 @@
     },
     "fae525e8-4af2-43f8-95c2-3b91e87ae05b": {
       "type": "info-text",
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "img_text1": "<p>*Applies to Ground shipping rates only. Excludes Hawaii, Alaska, New Zealand, Bosnia & Herzegovina, Iceland, Latvia, Lithuania, and Northern Ireland<\/p>",

@@ -1,3 +1,6 @@
+{% if template contains 'product' %}
+  {% assign current_product = product %}
+{% endif %}
 <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
   <noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
   {% assign collection_grid_type = section.settings.collection_grid_type %}
@@ -50,8 +53,11 @@
                                  }
                               }'>
                                   <div class="swiper-wrapper">
-                                        {% for product in collections[section.settings.home_featured_collection].products limit: 8 %}
+                                        {% for product in collections[section.settings.home_featured_collection].products limit: 9 %}
                                           {% liquid 
+                                            if product == current_product 
+                                              continue 
+                                            endif
                                             assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
                                             assign checkWholesaleProducts = false
                                             for tag in hideWholesalersProducts

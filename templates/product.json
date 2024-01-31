@@ -133,7 +133,7 @@
           }
         },
         "34759ff9-557c-4b32-b07e-3887a3ebc44c": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
@@ -1258,7 +1258,7 @@
       "type": "apps",
       "blocks": {
         "db62bf7d-43d4-4e5f-9fbc-bad80cc7e15f": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}",
             "widget_type": "combined_widget"
@@ -1278,6 +1278,7 @@
     },
     "4f65bf04-3141-4ace-b69f-74d2f7c94563": {
       "type": "info-text",
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "img_text1": "<p>*Applies to Ground shipping rates only. Excludes Hawaii, Alaska, New Zealand, Bosnia & Herzegovina, Iceland, Latvia, Lithuania, and Northern Ireland<\/p>",

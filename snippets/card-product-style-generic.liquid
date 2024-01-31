@@ -5,6 +5,8 @@
   data-product-grid
   data-prod-id="{{product.id}}">
   <span class="badges">
+  {% assign benefitpills = product.metafields.custom.benefitpills %}
+<div class="badgepills">{{ benefitpills }}</div>
     {%- liquid
       assign onSale = false
       assign soldOut = false
@@ -271,6 +273,7 @@
         </div>
       </div>
       <div class="col-12 mt-2 pt-1 price-with-btn-col">
+        <div class="newcollectiondescription">{{ product.metafields.custom.small_description }}</div>
         <div class="position-relative d-flex price-with-btn">
           <div class="col-6 btn-card-hide trn fw-normal">
             {% if current_variant and current_variant.compare_at_price > current_variant.price %}

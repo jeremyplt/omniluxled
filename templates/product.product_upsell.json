@@ -63,6 +63,7 @@
       ],
       "settings": {
         "border_color": "#000000",
+        "div_id": "",
         "ignore": true
       }
     },
@@ -110,6 +111,7 @@
       ],
       "settings": {
         "border_color": "#000000",
+        "div_id": "",
         "ignore": true
       }
     },
@@ -119,15 +121,6 @@
         "91e63a47-3793-4c06-8bc0-6262e9601d1d": {
           "type": "name",
           "settings": {
-          }
-        },
-        "730ebe3f-3415-4bf9-a496-b339e015f0bc": {
-          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
-          "settings": {
-            "use_metafields": false,
-            "sku_tagtype": "sku",
-            "is_featured_product": false,
-            "featured_product_handle": ""
           }
         },
         "3b316236-d91e-4dd0-953a-173c1f40bfcf": {
@@ -173,7 +166,13 @@
             "btn_link": "{{ product.metafields['custom']['faq_btn_link'] }}",
             "enable_custom_tab_4": "{{product.metafields.custom.enable_tab_4}}",
             "tab_4_title": "{{product.metafields.custom.tab_title_4}}",
-            "tab_4_content": "{{product.metafields.custom.tab_description_4}}"
+            "tab_4_content": "{{product.metafields.custom.tab_description_4}}",
+            "enable_custom_tab_5": "",
+            "tab_5_title": "Tab Title 5",
+            "tab_5_content": "",
+            "enable_custom_tab_6": "",
+            "tab_6_title": "Tab Title 6",
+            "tab_6_content": ""
           }
         },
         "3fc244f3-9eea-4a61-874a-b551b0227aff": {
@@ -200,7 +199,6 @@
       },
       "block_order": [
         "91e63a47-3793-4c06-8bc0-6262e9601d1d",
-        "730ebe3f-3415-4bf9-a496-b339e015f0bc",
         "3b316236-d91e-4dd0-953a-173c1f40bfcf",
         "8e1316df-f2b1-417b-9d0e-96f8b25e8b7c",
         "b253ffff-d04d-43a0-9d68-fabdd77b595a",
@@ -211,7 +209,10 @@
         "b28e74b9-4684-423e-8193-201bae66e281"
       ],
       "settings": {
+        "product_grid": false,
+        "product_tabs_mobile": false,
         "fluid_layout": false,
+        "enable_background_tone": false,
         "show_vendor": true,
         "enable_dynamic_checkout": false,
         "product_tabs_placement": "beside_slider"
@@ -474,6 +475,8 @@
       "settings": {
         "display_for_this_product": "{{ product.metafields['custom']['vwt_enabled'] }}",
         "fluid_layout": true,
+        "css_class": "",
+        "enable_background_tone": false,
         "disable_min_height": true,
         "muted": true,
         "controls": false,
@@ -493,6 +496,7 @@
         "bg_video": "{{ product.metafields['custom']['vwt_poster_video_url'] }}",
         "mobile_bg_video": "{{ product.metafields['custom']['vwt_poster_mobilevideo_url'] }}",
         "poster_image": "{{ product.metafields['custom']['vwt_poster_image'] }}",
+        "image_mobile": "",
         "disable_overlay": true,
         "overlay_bg_color": "#07272d",
         "overlay_opacity": 0.2,
@@ -581,6 +585,7 @@
         "display_for_this_product": "{{ product.metafields['custom']['iwt_enabled'] }}",
         "fluid_layout": true,
         "enable_background_tone": false,
+        "css_class": "",
         "border_bottom": true,
         "section_bg_color": "#ffffff",
         "section_text_color": "#000000"
@@ -679,6 +684,7 @@
     "dbd05fbc-dda9-418a-80a7-141ddac090f5": {
       "type": "product-image-buy-now",
       "settings": {
+        "info": "",
         "display_for_this_product": "{{ product.metafields['custom']['image_prod_enable'] }}",
         "fluid_layout": false,
         "heading_txt": "{{ product.metafields['custom']['image_prod_heading'] }}",
@@ -772,6 +778,7 @@
     "eb389eae-606a-437d-9986-2e6235168f36": {
       "type": "product-image-buy-now",
       "settings": {
+        "info": "",
         "display_for_this_product": "{{ product.metafields['custom']['image_prod_enable_1'] }}",
         "fluid_layout": false,
         "heading_txt": "{{ product.metafields['custom']['image_prod_heading_1'] }}",
@@ -822,29 +829,13 @@
     },
     "1676318184d0f06530": {
       "type": "apps",
-      "blocks": {
-        "5c2559f7-82e3-4426-af57-8ee77e8fa842": {
-          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
-          "settings": {
-            "animation": true,
-            "tags_exclude": "",
-            "tags_include": "",
-            "search": "",
-            "linkify": true,
-            "use_metafields": true,
-            "sku_tagtype": "sku"
-          }
-        }
-      },
-      "block_order": [
-        "5c2559f7-82e3-4426-af57-8ee77e8fa842"
-      ],
       "settings": {
         "include_margins": true
       }
     },
     "4f65bf04-3141-4ace-b69f-74d2f7c94563": {
       "type": "info-text",
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "img_text1": "<p>*Applies to Ground shipping rates only. Excludes Hawaii, Alaska, New Zealand, Bosnia & Herzegovina, Iceland, Latvia, Lithuania, and Northern Ireland<\/p>",
