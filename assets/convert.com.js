@@ -46,11 +46,11 @@ window.addEventListener("load", function () {
 document.addEventListener("cart-drawer:open", () => {
   if (
     document.querySelectorAll(".item-main-upsell").length > 0 &&
-    !window.runExperiment100452818
+    !window.runExperiment100454510
   ) {
-    window.runExperiment100452818 = 1;
+    window.runExperiment100454510 = 1;
     window._conv_q = window._conv_q || [];
-    window._conv_q.push(["executeExperiment", "100452818"]);
+    window._conv_q.push(["executeExperiment", "100454510"]);
     console.log(
       "Convert - Subscription Selection Cart Drawer - Experience Activated!"
     );
