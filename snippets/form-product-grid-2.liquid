@@ -58,7 +58,7 @@
           {% assign prefixes = "us,uk,ca,au,eu,nz" | split: "," %}
 
           {% if localization.country == "France" and upsellProduct.metafields.unavailable.france == true %}
-            Not Available In France
+            <span class="not-available">Not Available In France</span>
           {% else %}
             <button class="data-submit-btn btn btn-card ls-sm position-lg-absolute start-0 bottom-0 p-0 trn border-bottom ms-auto ms-lg-0"
                 type="submit"
