@@ -117,7 +117,7 @@
                                                       <div class="col-12 mega_menu_image_container">
                                                         {% assign eligible_product = false %}
                                                         {% for gift_collection in current_product.collections %}
-                                                          {% if gift_collection.handle == settings.gwp_collection and settings.gwp_enabled == true %}
+                                                          {% if gift_collection.handle == settings.gwp_collection %}
                                                             {% assign eligible_product = true %}
                                                           {% endif %}
                                                         {% endfor %}

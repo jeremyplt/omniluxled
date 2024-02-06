@@ -60,8 +60,8 @@
                                                   <div class="py-4  ">
                                                     <div class="">
                                                       <div class="borad-block-img">
-                                                        <img src=" {{ block.settings.tab_1_image | image_url: width: 360, format: 'pjpg' }} " alt="" class="card-img-top" loading="lazy" width="360" height="360">
-                                                      </div>
+                                                        {{ block.settings.tab_1_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
+                                                        </div>
                                                     </div>
                                                     <div class="text-center pt-3 mx-4">
                                                       <h5 class="board-member-name">
@@ -79,8 +79,8 @@
                                                 <a class="nav-link" data-toggle="tab" href="#custom-tab-2" data-tabcontent="#custom-tab-2" aria-expanded="false">
                                                   <div class="py-4  ">
                                                     <div class="borad-block-img">
-                                                      <img src=" {{ block.settings.tab_2_image | image_url: width: 360, format: 'pjpg' }} " width="360" height="360" alt="" class="card-img-top" loading="lazy">
-                                                    </div>
+                                              {{ block.settings.tab_2_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
+                                                  </div>
                                                     <div class="text-center pt-3 mx-4">
                                                       <h5 class="board-member-name">
                                                         {{ block.settings.tab_2_name }}
@@ -97,7 +97,7 @@
                                                 <a class="nav-link" data-toggle="tab" href="#custom-tab-3" data-tabcontent="#custom-tab-3" aria-expanded="false">
                                                   <div class="py-4  ">
                                                     <div class="borad-block-img">
-                                                      <img src=" {{ block.settings.tab_3_image | image_url: width: 360, format: 'pjpg' }} " width="360" height="360" alt="" class="card-img-top" loading="lazy">
+                                                      {{ block.settings.tab_3_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
                                                     </div>
                                                     <div class="text-center pt-3 mx-4">
                                                       <h5 class="board-member-name">
@@ -115,7 +115,7 @@
                                                 <a class="nav-link" data-toggle="tab" href="#custom-tab-4" data-tabcontent="#custom-tab-4" aria-expanded="false">
                                                   <div class="py-4  ">
                                                     <div class="borad-block-img">
-                                                      <img src=" {{ block.settings.tab_4_image | image_url: width: 360, format: 'pjpg' }} " width="360" height="360" alt="" class="card-img-top" loading="lazy">
+                                              {{ block.settings.tab_4_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
                                                     </div>
                                                     <div class="text-center pt-3 mx-4">
                                                       <h5 class="board-member-name">
@@ -133,8 +133,8 @@
                                                 <a class="nav-link" data-toggle="tab" href="#custom-tab-5" data-tabcontent="#custom-tab-5" aria-expanded="false">
                                                   <div class="py-4  ">
                                                     <div class="borad-block-img">
-                                                      <img src=" {{ block.settings.tab_5_image | image_url: width: 360, format: 'pjpg' }} " alt="" class="card-img-top" width="360" height="360" loading="lazy">
-                                                    </div>
+                                              {{ block.settings.tab_5_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
+                                                  </div>
                                                     <div class="text-center pt-3 mx-4">
                                                       <h5 class="board-member-name">
                                                         {{ block.settings.tab_5_name }}

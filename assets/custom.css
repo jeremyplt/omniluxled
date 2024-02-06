@@ -1,3 +1,35 @@
+/*hoox page changes*/
+.hooxupsellwrapper{background:#ebf4f4;padding: 16px;margin-bottom:32px;}
+.hoox-shop__upsell{padding:0!important;margin:0 0 21px 0!important;}
+.hooxupsellwrapper .product-form{display: block;width: 99%;margin: 0 auto;}
+p.hoox-shop__upsell-description{font-style:italic;}
+.hoox-shop__atc-wrapper .quantity-wrapper{max-width:141px!important;background:#fff;}
+.hooxupsellwrapper .hoox-shop__atc-button button{background:#004851;border-color:#004851;}
+.hoox-shop__afterpay-text{font-weight:400!important;}
+.hoox-shop__upsell-heading{font-size:24px!important;margin-top:40px!important;}
+
+.hoox-how-to__items{row-gap:0!important;}
+.hoox-reviews__arrows{margin:25px auto 0!important;}
+
+@media(max-width:600px){
+  .hoox-hero__description,.hoox-shop__informations .hoox-shop__images,.hoox-shop__images img,.hoox-ugc-videos__title,.hoox-reviews__title,.b-comparison-table__headline{max-width:100%!important;}
+  .hoox-hero__items-mob{max-width:90%!important;}
+  .hoox-hero__item{max-width:22%!important;}
+.hoox-studies__title.hoox-title,.b-comparison-table__headline,.hoox-title,.hoox-faq__title{font-size:28px!important;}
+  .hoox-treatment__title{font-size:25px!important;}
+  .hoox-studies__items{width:100%;}
+  .hoox-studies__range-box{flex:1;}
+.hoox-shop__informations  .hoox-shop__image{width:calc(20% - 8px);}
+
+  .hoox-shop__atc-wrapper .quantity-wrapper{max-width:90px!important;}
+  .hoox-shop__upsell{flex-direction:row!important;}
+  .hoox-shop__upsell-image{max-width:140px!important;height:auto!important;}
+  .hoox-shop__upsell-title{margin-bottom:6px!important;}
+  p.hoox-shop__upsell-description{font-size:15px;}
+.hooxupsellwrapper .hoox-shop__upsell-stars{margin-top:-4px!important;}
+  
+}
+
 /*collection page abtest*/
 .card-product .badges,#collectionabhide,.newcollectiondescription{display:none}
 

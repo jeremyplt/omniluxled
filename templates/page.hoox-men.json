@@ -25,19 +25,19 @@
         "8d4c1d26-ac76-4be7-8bc1-f25fbbd086fc": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "10 minute, at home, spa level treatment"
+            "bullet_text": "10 minute at-home treatment"
+          }
+        },
+        "47044bff-3006-4ecc-ba56-d28f6c52df80": {
+          "type": "usp",
+          "settings": {
+            "section_badge_image": "shopify:\/\/shop_images\/grooming_mens_awards_720111c1-6234-465a-9afa-924029c1847a.png"
           }
         },
         "e7a9beb7-c5cd-4468-87d8-7b8b9860e9c1": {
           "type": "usp",
           "settings": {
             "section_badge_image": "shopify:\/\/shop_images\/Get_the_Gloss_Wellness_Awards_2023_Silver_44afd4a0-997d-460c-9823-ed4249f3b6b8.png"
-          }
-        },
-        "47044bff-3006-4ecc-ba56-d28f6c52df80": {
-          "type": "usp",
-          "settings": {
-            "section_badge_image": "shopify:\/\/shop_images\/wh-skincareawards_1_f90f75ef-1aa6-4482-8f3c-0da5c1b4fd74.png"
           }
         },
         "8744403a-afcb-477f-ac9c-a2deec7a0d08": {
@@ -57,8 +57,8 @@
         "024c5d8e-16af-4c49-b96c-575e58cf2c9f",
         "d3f5b179-09a1-4d77-b432-7eecb9bfa32f",
         "8d4c1d26-ac76-4be7-8bc1-f25fbbd086fc",
-        "e7a9beb7-c5cd-4468-87d8-7b8b9860e9c1",
         "47044bff-3006-4ecc-ba56-d28f6c52df80",
+        "e7a9beb7-c5cd-4468-87d8-7b8b9860e9c1",
         "8744403a-afcb-477f-ac9c-a2deec7a0d08",
         "8b28fde4-7d0a-4be7-85b2-40677dbd8cdf"
       ],
@@ -66,8 +66,8 @@
         "section_star_image": "shopify:\/\/shop_images\/Frame_48097853.svg",
         "section_star_text": "150K+ Glowing Customers",
         "section_star_anchor_id": "#hoow-reviws",
-        "section_title": "Glow better in 2024",
-        "section_description": "Must-have skincare tools to boost collagen production & soothe skin in just 10 mins.",
+        "section_title": "One tool. Powerful results.",
+        "section_description": "For men who want to simplify their routine, yet enjoy all the benefits of high-performance skincare.",
         "section_btn_text": "Transform My Skin",
         "section_btn_url": "#hoox-shop",
         "section_shipping_text": "FREE Shipping | 30-Day Money-Back Guarantee",
@@ -78,16 +78,44 @@
     "832457c1-0171-4350-ad70-04b074b499f1": {
       "type": "hoox-press",
       "blocks": {
+        "logos_Ymt4Ti": {
+          "type": "logos",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bastion-Health-At-Home-Testing-Assessment-Treatment-Telehealth-Online-Men_s-Fertility-Reproductive-Health-Urologist-Sperm-Count-Infertility-Testing-Urologist-Prostate-Enlargement-Canc.png"
+          }
+        },
+        "logos_Fprxn7": {
+          "type": "logos",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gq-logo-png-transparent.png"
+          }
+        },
+        "logos_rMErfm": {
+          "type": "logos",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/195-1959210_as-seen-in-conde-nast-traveler-logo.png"
+          }
+        },
         "031dad42-602a-46b6-86f2-89b81bf02ed9": {
           "type": "logos",
           "settings": {
             "image": "shopify:\/\/shop_images\/Logo_-_VOGUE_-_black_-_vector.svg"
           }
         },
+        "logos_Wm4gHQ": {
+          "type": "logos",
+          "settings": {
+          }
+        },
         "5de516ad-3c94-4794-a35b-7cb6d1480eb0": {
           "type": "logos",
           "settings": {
             "image": "shopify:\/\/shop_images\/Departures.svg"
+          }
+        },
+        "logos_HL8VgY": {
+          "type": "logos",
+          "settings": {
           }
         },
         "7f31f7c3-7b1f-4690-ae6e-06d658e6ad80": {
@@ -107,14 +135,25 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Logo_-_Allure_-_black_-_vector.svg"
           }
+        },
+        "logos_fEBaEk": {
+          "type": "logos",
+          "settings": {
+          }
         }
       },
       "block_order": [
+        "logos_Ymt4Ti",
+        "logos_Fprxn7",
+        "logos_rMErfm",
         "031dad42-602a-46b6-86f2-89b81bf02ed9",
+        "logos_Wm4gHQ",
         "5de516ad-3c94-4794-a35b-7cb6d1480eb0",
+        "logos_HL8VgY",
         "7f31f7c3-7b1f-4690-ae6e-06d658e6ad80",
         "03307331-1ca9-428f-83b2-ca0a822ebd26",
-        "17fe4586-ea01-447c-8760-8f2a92d17537"
+        "17fe4586-ea01-447c-8760-8f2a92d17537",
+        "logos_fEBaEk"
       ],
       "settings": {
         "title": "trusted by:"
@@ -126,9 +165,9 @@
         "29fbcc08-6999-4b76-b331-b53eec6d4743": {
           "type": "props",
           "settings": {
-            "hoox_safe_image": "shopify:\/\/shop_images\/safe_and_effective.jpg",
+            "hoox_safe_image": "shopify:\/\/shop_images\/Hoox_Landing_Pages.png",
             "hoox_safe_headline": "Safe & effective",
-            "hoox_safe_text": "Reduces fine lines and wrinkles and improves the appearance of pigmentation and redness.",
+            "hoox_safe_text": "Optimal LED treatment for men's thicker skin, engineered with 1072nm near-infrared light for deeper skin penetration.",
             "hoox_safe_benefit_image1": "shopify:\/\/shop_images\/Icon_FDA_Cleared_png.png",
             "hoox_safe_benefit_image2": "shopify:\/\/shop_images\/Icon_TGA_Approved_png.png",
             "hoox_safe_benefit_image3": "shopify:\/\/shop_images\/Icon_CE_Certified_png.png"
@@ -137,7 +176,7 @@
         "723c9410-809c-48d9-b566-eadb3c58e607": {
           "type": "props",
           "settings": {
-            "hoox_safe_image": "shopify:\/\/shop_images\/premium_quality.jpg",
+            "hoox_safe_image": "shopify:\/\/shop_images\/Hoox_Landing_Pages_1.png",
             "hoox_safe_headline": "Premium quality",
             "hoox_safe_text": "Medical-grade and dermatologist-approved, it’s the most powerful LED device on the market."
           }
@@ -145,20 +184,28 @@
         "66e98a01-195d-4a1b-8414-cf995d11033a": {
           "type": "props",
           "settings": {
-            "hoox_safe_image": "shopify:\/\/shop_images\/science_backed.jpg",
+            "hoox_safe_image": "shopify:\/\/shop_images\/Hoox_Landing_Pages_2.png",
             "hoox_safe_headline": "Science-backed",
             "hoox_safe_text": "Developed with 20 years of research and backed by 40+ peer-reviewed clinical papers."
+          }
+        },
+        "props_KDNgXh": {
+          "type": "props",
+          "settings": {
+            "hoox_safe_headline": "",
+            "hoox_safe_text": ""
           }
         }
       },
       "block_order": [
         "29fbcc08-6999-4b76-b331-b53eec6d4743",
         "723c9410-809c-48d9-b566-eadb3c58e607",
-        "66e98a01-195d-4a1b-8414-cf995d11033a"
+        "66e98a01-195d-4a1b-8414-cf995d11033a",
+        "props_KDNgXh"
       ],
       "settings": {
         "hoox_safe_btn_url": "#hoox-shop",
-        "hoox_safe_btn_text": "Start Glowing Today",
+        "hoox_safe_btn_text": "GET HEALTHIER SKIN NOW",
         "hoox_safe_guarante_text": "FREE Shipping | 30-Day Money-Back Guarantee"
       }
     },
@@ -168,28 +215,28 @@
         "113949a6-f643-4968-91b9-1c7422018255": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/charge_the_controller.jpg",
+            "hoox_how_to_image": "shopify:\/\/shop_images\/Hoox_Landing_Pages_7.png",
             "hoox_how_to_text": "Charge the controller and connect it to your mask."
           }
         },
         "0ff39d1f-a4b0-43c9-8cbb-dcd284089997": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/secure_the_mask.jpg",
+            "hoox_how_to_image": "shopify:\/\/shop_images\/Hoox_Landing_Pages_8.png",
             "hoox_how_to_text": "Secure the mask on your head using the adjustable velcro straps."
           }
         },
         "a9d976ec-6405-473d-adb8-bb5f24e18114": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/start_the_10min_treatment.jpg",
+            "hoox_how_to_image": "shopify:\/\/shop_images\/Hoox_Landing_Pages_9.png",
             "hoox_how_to_text": "Start the 10-minute treatment."
           }
         },
         "42fb2c7a-c3a1-4e11-b32d-90e5d20babee": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/remove_the_mask_and_enjoy.jpg",
+            "hoox_how_to_image": "shopify:\/\/shop_images\/Hoox_Landing_Pages_10.png",
             "hoox_how_to_text": "Remove the mask and enjoy the glow."
           }
         }
@@ -201,8 +248,8 @@
         "42fb2c7a-c3a1-4e11-b32d-90e5d20babee"
       ],
       "settings": {
-        "hoox_how_to_title": "How to glow up:",
-        "hoox_how_to_subtitle": "Unlock flawless skin with three to five 10-minute treatments per week."
+        "hoox_how_to_title": "How to use:",
+        "hoox_how_to_subtitle": "Unlock healthier looking skin with three to five 10-minute treatments per week."
       }
     },
     "dd98148d-76e8-4e14-8398-6b17b61034dd": {
@@ -281,8 +328,8 @@
         "d67dbb8b-2e3f-461a-a5f1-c72bb41bcb4c": {
           "type": "usp",
           "settings": {
-            "hoox_progress_bar_title": "Skin felt firmer",
-            "hoox_progress_bar_range": 98
+            "hoox_progress_bar_title": "Reduction in UV spots (sun damage)",
+            "hoox_progress_bar_range": 95
           }
         },
         "4f28a892-23c9-4a37-ac6a-09861ae4928e": {
@@ -295,7 +342,7 @@
         "538de84f-7b07-4119-8456-4e0160d23fd8": {
           "type": "usp",
           "settings": {
-            "hoox_progress_bar_title": "Skin was brighter and plumper",
+            "hoox_progress_bar_title": "Skin tone was more even",
             "hoox_progress_bar_range": 95
           }
         }
@@ -306,9 +353,9 @@
         "538de84f-7b07-4119-8456-4e0160d23fd8"
       ],
       "settings": {
-        "hoox_studies_title": "In clinical studies, Omnilux Contour users agreed:",
-        "hoox_studies_subtitle": "After 3 treatments per week for 4 weeks",
-        "hoox_studies_image": "shopify:\/\/shop_images\/clinical_studies_results.jpg"
+        "hoox_studies_title": "In clinical studies, Omnilux Men users agreed:",
+        "hoox_studies_subtitle": "After 3-5 treatments per week for 6 weeks",
+        "hoox_studies_image": "shopify:\/\/shop_images\/Before_33.png"
       }
     },
     "c7458cec-8732-46b2-97a9-601f8b3f28bf": {
@@ -405,7 +452,7 @@
         "12521de5-7ce7-4965-9088-c57079be85ac"
       ],
       "settings": {
-        "shop_product": "omnilux-contour-face",
+        "shop_product": "omnilux-men",
         "shop_product_video_trigger_text": "Watch Review",
         "shop_product_video_src": "https:\/\/www.youtube.com\/watch?v=BcT9M0Ye6Is",
         "shop_product_review_icon": "<svg width=\"96\" height=\"17\" viewbox=\"0 0 96 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M8 0.899902L10.3511 5.66383L15.6085 6.42777L11.8042 10.136L12.7023 15.372L8 12.8999L3.29772 15.372L4.19577 10.136L0.391548 6.42777L5.64886 5.66383L8 0.899902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M28 0.899902L30.3511 5.66383L35.6085 6.42777L31.8042 10.136L32.7023 15.372L28 12.8999L23.2977 15.372L24.1958 10.136L20.3915 6.42777L25.6489 5.66383L28 0.899902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M48 0.899902L50.3511 5.66383L55.6085 6.42777L51.8042 10.136L52.7023 15.372L48 12.8999L43.2977 15.372L44.1958 10.136L40.3915 6.42777L45.6489 5.66383L48 0.899902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M68 0.899902L70.3511 5.66383L75.6085 6.42777L71.8042 10.136L72.7023 15.372L68 12.8999L63.2977 15.372L64.1958 10.136L60.3915 6.42777L65.6489 5.66383L68 0.899902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M88 0.899902L90.3511 5.66383L95.6085 6.42777L91.8042 10.136L92.7023 15.372L88 12.8999L83.2977 15.372L84.1958 10.136L80.3915 6.42777L85.6489 5.66383L88 0.899902Z\" fill=\"#99552B\"><\/path>\n<\/svg>",

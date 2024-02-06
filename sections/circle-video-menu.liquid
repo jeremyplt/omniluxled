@@ -4,7 +4,7 @@
       {% for block in section.blocks %}
         <a class="circle-video-menu-item">
           <span class="circle-video-menu-item-image">
-            <img loading="lazy" class="circle-menu-item-img" src="{{ block.settings.image | img_url: 'master' }}">
+{{ block.settings.image | image_url: width: 120 | image_tag: class: 'circle-menu-item-img' }}
             {% render 'icon-play' %}
           </span>
           <span class="circle-menu-item-label">{{ block.settings.label }}</span>

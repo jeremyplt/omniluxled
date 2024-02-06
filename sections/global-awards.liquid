@@ -22,14 +22,10 @@
                   <div class="awards mx-auto d-flex flex-column mb-5 pb-1 pb-lg-0">
                       <div class="position-relative square-card text-center">
                         {% if block.settings.icon_img != blank %}
-                        <img src="{{ block.settings.icon_img | image_url: height: 300 }}" alt="Award" title="{{ block.settings.title }}"
-                        width="150"
-                        height="150" loading="lazy" class="w-100 h-100 object-contain position-absolute top-0 start-0"/>
+  {{ block.settings.icon_img | image_url: width: 300 | image_tag: class: 'w-100 h-100 object-contain position-absolute top-0 start-0' }}
                         {% else %}
-                        <img src="{{ settings.no_image | image_url: height: 300 }}" alt="Award" title="{{ block.settings.title }}"
-                          width="150"
-                          height="150" loading="lazy" class="w-100 h-100 object-contain position-absolute top-0 start-0"/>
-                        {% endif %}
+  {{ settings.no_image | image_url: width: 300 | image_tag: class: 'w-100 h-100 object-contain position-absolute top-0 start-0' }}
+   {% endif %}
                       </div>
                   </div>
               </div>

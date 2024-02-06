@@ -28,6 +28,7 @@
   assign shopProductNewsletterDisclaimer = settings.shop_product_newsletter_disclaimer
 
   assign shopProductUpsellTitle = section.settings.shop_product_upsell_title
+  assign shopProductUpsellDescription = section.settings.shop_product_upsell_description
   assign shopUpsellProduct = all_products[section.settings.shop_product_upsell]
   assign upsell_current_variant = shopUpsellProduct.selected_or_first_available_variant
   assign shopUpsellProductImage = section.settings.shop_product_upsell_image
@@ -37,6 +38,7 @@
     assign shopUpsellProductImage = shopUpsellProduct.featured_image
   endif
   assign shopUpsellProductTitle = shopUpsellProduct.title
+    assign shopUpsellProductDescription = shopUpsellProduct.description
   assign shopUpsellProductStars = section.settings.shop_product_upsell_stars
 
   assign newsletterEmailPlaceholder = settings.email_placeholder
@@ -219,6 +221,7 @@
             </h3>
 
             <div class="hoox-js-shop-logic">
+            <div class="hooxupsellwrapper">
               <div class="hoox-shop__upsell">
                 <figure class="hoox-shop__upsell-image">
                   {% render 'snippet-image', image: shopUpsellProductImage %}
@@ -232,15 +235,18 @@
                   <h3 class="hoox-shop__upsell-title">
                     {{ shopUpsellProductTitle }}
                   </h3>
-
+<p class="hoox-shop__upsell-description">
+                    {{ shopProductUpsellDescription }}
+                  </p>
+            </div>
+              </div>
                   {% render 'hoox-form-product' 
                    , product: shopUpsellProduct,
                    current_variant: shopUpsellProduct.selected_or_first_available_variant,
                    format: 'product-page' %}
 
                   {% render 'hoox-afterpay-text' %}
-                </div>
-              </div>
+                 </div>
             </div>
           {% endif %}
 
@@ -425,7 +431,12 @@
         "type": "text",
         "id": "shop_product_upsell_title",
         "label": "Upsell title"
-      }, {
+      },{
+        "type": "text",
+        "id": "shop_product_upsell_description",
+        "label": "Upsell short description"
+      },
+      {
         "type": "image_picker",
         "id": "shop_product_upsell_image",
         "label": "Choose Upsell Image",

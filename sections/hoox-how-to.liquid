@@ -20,13 +20,14 @@
   {% endif %}
 
   {% if section.blocks.size > 0 %}
-    <div class="hoox-how-to__items">
+    <div class="hoox-how-to__items swiper">
+      <div class="hoox-how-to__items-wrapper swiper-wrapper">
       {% for block in section.blocks %}
         {% liquid
           assign hooxHowToImage = block.settings.hoox_how_to_image
           assign hooxHowToText = block.settings.hoox_how_to_text
         %}
-
+ <div class="swiper-slide">
         <div class="hoox-how-to__item">
           {% if hooxHowToImage %}
             <figure class="hoox-how-to__image">
@@ -41,12 +42,21 @@
             </p>
           {% endif %}
         </div>
+   </div>
       {% endfor %}
-    </div>
+    </div>  <div class="hoox-reviews__arrows">
+        <div class="slider-reviews-prev hoox-swiper-arrow hoox-swiper-arrow-prev">
+          {% render 'arrow-previous' %}
+        </div>
+        <div class="hoox-reviews__dots"></div>
+        <div class="slider-reviews-next hoox-swiper-arrow hoox-swiper-arrow-next">
+          {% render 'arrow-next' %}
+        </div>
+      </div></div>
   {% endif %}
 </div>
 </section>
-
+<script src="{{ 'glowup-slider.js' | asset_url }}" defer="defer"></script>
 {% comment %} Js file {% endcomment %}
 
 {% schema %}
