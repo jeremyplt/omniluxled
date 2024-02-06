@@ -59,9 +59,9 @@
                 type="button" add-gwp-product="{{ current_variant.id }}" data-gwp-type="tier1"
                 aria-label="{{ 'products.product.add_to_cart' | t | escape }}"
                 {% unless current_variant.available %}disabled{% endunless %}
-                {% if localization.country == "France" and upsellProduct.metafields.unavailable.france == true %}disabled="disabled"{% endif %}>
+                {% if localization.country == "France" and product.metafields.unavailable.france == true %}disabled="disabled"{% endif %}>
                 <span class="add-text">
-                  {% if localization.country == "France" and upsellProduct.metafields.unavailable.france == true %}
+                  {% if localization.country == "France" and product.metafields.unavailable.france == true %}
                     Not Available In France
                   {% else %}
                     {%- if current_variant.available -%}<i class="fst-normal me-1">+</i>{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}
