@@ -551,6 +551,16 @@ waitForElement(".cbb-frequently-bought-form", 5000)
       })
     }
 })
+{% if localization.country == "France" and product.metafields.unavailable.france == true %}
+  document.addEventListener("DOMContentLoaded", () => {
+    waitForElement(".cbb-frequently-bought-add-button", 5000).then(() => {
+      document.querySelector(".cbb-frequently-bought-add-button").setAttribute("disabled", "disabled") 
+      document.querySelector(".cbb-frequently-bought-add-button span").innerHTML = "Not Available In France"
+    }).catch((e) => {
+      console.error(e.message)
+    })
+  })
+{% endif %}
   </script>
  <script defer src="https://static.myshlf.us/Affiliates/sms_aff_clicktrack.js"></script> </body>
 </html>

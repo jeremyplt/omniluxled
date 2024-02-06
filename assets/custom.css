@@ -2090,3 +2090,12 @@ html .cbb-frequently-bought-recommendations-wrap {
 .test-cart-upsell-checkbox .cart-item .product-option {
   display: none;
 }
+
+.not-available {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.cbb-frequently-bought-add-button[disabled="disabled"], .addtocartbtn[disabled="disabled"] {
+  opacity: 0.7;
+}

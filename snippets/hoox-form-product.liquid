@@ -262,27 +262,32 @@
               data-{{ key_product_page_messaging }}="{{ data_product_page_messaging }}"
               data-{{ key_coming_soon }}="{{ data_coming_soon }}"
             {% endfor %}
+            {% if localization.country == "France" and product.metafields.unavailable.france == true %} disabled="disabled"{% endif %}
           >
             {% comment %} <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
             <span class="add-text">
-              {%- if current_variant.available -%}
-                {% if flag == true %}
-                  GO TO PURCHASE ORDER
-                {% else %}
-                  {{ 'products.product.add_to_cart' | t }}
-                  {%- if current_variant.compare_at_price > current_variant.price -%}
-                    <span class="text-gray-600">$</span
-                    ><span class="text-gray-600 money hoox-js-price-compare" data-comparePrice>
-                      {{- current_variant.compare_at_price | currency_without_money -}}
+              {% if localization.country == "France" and product.metafields.unavailable.france == true %}
+                Not Available In France
+              {% else %}
+                {%- if current_variant.available -%}
+                  {% if flag == true %}
+                    GO TO PURCHASE ORDER
+                  {% else %}
+                    {{ 'products.product.add_to_cart' | t }}
+                    {%- if current_variant.compare_at_price > current_variant.price -%}
+                      <span class="text-gray-600">$</span
+                      ><span class="text-gray-600 money hoox-js-price-compare" data-comparePrice>
+                        {{- current_variant.compare_at_price | currency_without_money -}}
+                      </span>
+                    {%- endif -%}
+                    - $<span class="hoox-js-price actual-price money">
+                      {{- current_variant.price | currency_without_money -}}
                     </span>
-                  {%- endif -%}
-                  - $<span class="hoox-js-price actual-price money">
-                    {{- current_variant.price | currency_without_money -}}
-                  </span>
-                {% endif %}
-              {%- else -%}
-                {{ 'products.product.sold_out' | t }}
-              {%- endif -%}
+                  {% endif %}
+                {%- else -%}
+                  {{ 'products.product.sold_out' | t }}
+                {%- endif -%}
+              {% endif %}
             </span>
             <span class="spinner"></span>
           </button>
@@ -393,18 +398,24 @@
             data-{{ key_product_page_messaging }}="{{ data_product_page_messaging }}"
             data-{{ key_coming_soon }}="{{ data_coming_soon }}"
           {% endfor %}
+        {% if localization.country == "France" and product.metafields.unavailable.france == true %} disabled="disabled"{% endif %}
+
         >
           {% comment %} <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
           <span class="add-text">
-            {%- if current_variant.available -%}
-              {% if flag == true %}
-                GO TO PURCHASE ORDER
-              {% else %}
-                {{ 'products.product.add_to_cart' | t }}
-              {% endif %}
-            {%- else -%}
-              {{ 'products.product.sold_out' | t }}
-            {%- endif -%}
+            {% if localization.country == "France" and product.metafields.unavailable.france == true %}
+              Not Available In France
+            {% else %}
+              {%- if current_variant.available -%}
+                {% if flag == true %}
+                  GO TO PURCHASE ORDER
+                {% else %}
+                  {{ 'products.product.add_to_cart' | t }}
+                {% endif %}
+              {%- else -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- endif -%}
+            {% endif %}
           </span>
           <span class="spinner"></span>
         </button>

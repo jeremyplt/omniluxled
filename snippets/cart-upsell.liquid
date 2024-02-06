@@ -140,7 +140,8 @@
                                                         type="submit"
                                                         name="add"
                                                         aria-label="{{ 'products.product.upsell_add' | t | escape }}"
-                                                        {% unless upsell_variant.available %}disabled{% endunless %}>
+                                                        {% unless upsell_variant.available %}disabled{% endunless %}
+                                                        {% if localization.country == "France" and upsellProduct.metafields.unavailable.france == true %}disabled="disabled"{% endif %}>
                                                         <span class="add-text">
                                                             {% liquid 
                                                                 assign upgrade_product = false
@@ -158,8 +159,9 @@
                                                                     endif
                                                                 endfor
                                                             %}
-                                                            
-                                                            {%- if upsellProduct.metafields.custom.cart_upsell_button_label != blank and upgrade_product -%}
+                                                            {% if localization.country == "France" and upsellProduct.metafields.unavailable.france == true %}
+                                                                Not Available In France
+                                                            {%- elsif upsellProduct.metafields.custom.cart_upsell_button_label != blank and upgrade_product -%}
                                                                 {{ upsellProduct.metafields.custom.cart_upsell_button_label }}
                                                             {%- elsif upsellProduct.available -%}
                                                                 + {{ 'templates.cart.upsell_add_btn' | t }}
@@ -282,8 +284,15 @@
                                                     type="submit"
                                                     name="add"
                                                     aria-label="{{ 'products.product.upsell_add' | t | escape }}"
-                                                    {% unless upsell_variant.available %}disabled{% endunless %}>
-                                                    <span class="add-text">{%- if upsellProduct.available -%}+ {{ 'templates.cart.upsell_add_btn' | t }}{%- else-%}{{ 'templates.cart.upsell_add_btn' | t }}{%- endif -%}</span>
+                                                    {% unless upsell_variant.available %}disabled{% endunless %}
+                                                    {% if localization.country == "France" and upsellProduct.metafields.unavailable.france == true %}disabled="disabled"{% endif %}>
+                                                    <span class="add-text">
+                                                        {% if localization.country == "France" and upsellProduct.metafields.unavailable.france == true %}
+                                                            Not Available In France
+                                                        {% else %}
+                                                            {%- if upsellProduct.available -%}+ {{ 'templates.cart.upsell_add_btn' | t }}{%- else-%}{{ 'templates.cart.upsell_add_btn' | t }}{%- endif -%}
+                                                        {% endif %}
+                                                    </span>
                                                     <span class="spinner start-0"></span>
                                                 </button>
                                             </div>
