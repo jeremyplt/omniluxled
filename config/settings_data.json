@@ -103,7 +103,7 @@
     "account_disable": "Account disabled.",
     "account_invited": "Account Invited.",
     "account_declined": "Account declined.",
-    "shop_newsletter_checkbox": false,
+    "shop_newsletter_checkbox": true,
     "shop_product_newsletter_text": "Sign up for exclusive skincare offers.",
     "shop_product_newsletter_heading": "Want TO SAVE 10% TODAY?",
     "shop_product_newsletter_success_heading": "You’re in!",
@@ -215,7 +215,7 @@
         ],
         "settings": {
           "topbar_enabled": true,
-          "topbar_text": "<strong>FREE SHIPPING ON ORDERS $100+<\/strong>",
+          "topbar_text": "<strong>FREE SHIPPING ON ORDERS $100+ USD<\/strong>",
           "page_url": "",
           "topbar_text2": "",
           "page_url2": "",

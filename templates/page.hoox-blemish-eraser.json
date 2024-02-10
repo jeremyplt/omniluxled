@@ -13,19 +13,19 @@
         "024c5d8e-16af-4c49-b96c-575e58cf2c9f": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "Reduces fine lines and wrinkles"
+            "bullet_text": "Uses blue light to kill acne-causing bacteria"
           }
         },
         "d3f5b179-09a1-4d77-b432-7eecb9bfa32f": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "Delivers a smoother, more youthful complexion"
+            "bullet_text": "Combined with red light to reduce inflammation and redness"
           }
         },
         "8d4c1d26-ac76-4be7-8bc1-f25fbbd086fc": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "10 minute, at home, spa level treatment"
+            "bullet_text": "Paired with concentrated hydrocolloid patches for a more powerful spot treatment"
           }
         },
         "e7a9beb7-c5cd-4468-87d8-7b8b9860e9c1": {
@@ -64,11 +64,11 @@
       ],
       "settings": {
         "section_star_image": "shopify:\/\/shop_images\/Frame_48097853.svg",
-        "section_star_text": "150K+ Glowing Customers",
+        "section_star_text": "275K+ Glowing Customers",
         "section_star_anchor_id": "#hoow-reviws",
-        "section_title": "Glow better in 2024",
-        "section_description": "Must-have skincare tools to boost collagen production & soothe skin in just 10 mins.",
-        "section_btn_text": "Transform My Skin",
+        "section_title": "Meet  the supercharged pimple patch",
+        "section_description": "Ultra-targeted LED treatment tackles surprise breakouts and zaps away those pimples that just won’t quit.",
+        "section_btn_text": "ERASE MY BLEMISHES",
         "section_btn_url": "#hoox-shop",
         "section_shipping_text": "FREE Shipping | 30-Day Money-Back Guarantee",
         "section_main_image": "shopify:\/\/shop_images\/large-Hero_swap_c54ab7ec-1130-4aa2-a72f-82891e49e6c3.png",
@@ -128,7 +128,7 @@
           "settings": {
             "hoox_safe_image": "shopify:\/\/shop_images\/safe_and_effective.jpg",
             "hoox_safe_headline": "Safe & effective",
-            "hoox_safe_text": "Reduces fine lines and wrinkles and improves the appearance of pigmentation and redness.",
+            "hoox_safe_text": "Engineered using Omnilux's proprietary medical technology, the Blemish Eraser harnesses the power of blue and red light to combat concentrated breakouts.",
             "hoox_safe_benefit_image1": "shopify:\/\/shop_images\/Icon_FDA_Cleared_png.png",
             "hoox_safe_benefit_image2": "shopify:\/\/shop_images\/Icon_TGA_Approved_png.png",
             "hoox_safe_benefit_image3": "shopify:\/\/shop_images\/Icon_CE_Certified_png.png"
@@ -138,16 +138,16 @@
           "type": "props",
           "settings": {
             "hoox_safe_image": "shopify:\/\/shop_images\/premium_quality.jpg",
-            "hoox_safe_headline": "Premium quality",
-            "hoox_safe_text": "Medical-grade and dermatologist-approved, it’s the most powerful LED device on the market."
+            "hoox_safe_headline": "Superior spot treatment",
+            "hoox_safe_text": "Elevate your acne treatment with medical-grade LEDs and hydrocolloid patches infused with salicylic acid. This advanced combination revolutionizes traditional pimple patches for superior results."
           }
         },
         "66e98a01-195d-4a1b-8414-cf995d11033a": {
           "type": "props",
           "settings": {
             "hoox_safe_image": "shopify:\/\/shop_images\/science_backed.jpg",
-            "hoox_safe_headline": "Science-backed",
-            "hoox_safe_text": "Developed with 20 years of research and backed by 40+ peer-reviewed clinical papers."
+            "hoox_safe_headline": "Derm-approved",
+            "hoox_safe_text": "\"When these two wavelengths [blue and red] are used together, you receive a more effective and efficient acne treatment.\" <br> - Dr. Glynis Ablon, MD, FAAD"
           }
         }
       },
@@ -158,7 +158,7 @@
       ],
       "settings": {
         "hoox_safe_btn_url": "#hoox-shop",
-        "hoox_safe_btn_text": "Start Glowing Today",
+        "hoox_safe_btn_text": "ZAP YOUR BREAKOUTS",
         "hoox_safe_guarante_text": "FREE Shipping | 30-Day Money-Back Guarantee"
       }
     },
@@ -201,8 +201,8 @@
         "42fb2c7a-c3a1-4e11-b32d-90e5d20babee"
       ],
       "settings": {
-        "hoox_how_to_title": "How to glow up:",
-        "hoox_how_to_subtitle": "Unlock flawless skin with three to five 10-minute treatments per week."
+        "hoox_how_to_title": "How to use:",
+        "hoox_how_to_subtitle": "Unlock blemish-free skin with four 10-minute treatments per week."
       }
     },
     "dd98148d-76e8-4e14-8398-6b17b61034dd": {
@@ -424,47 +424,48 @@
         "f425b463-f4a4-43ed-ae56-5ed6bfb60519": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "Does LED therapy really work?",
-            "hoox_faq_answer": "Yes. Omnilux’s technology has been clinically proven to produce medical-grade results for nearly 20 years. Omnilux devices have been specifically profiled in over 40 independent, peer-reviewed, published clinical studies, with applications ranging from skin rejuvenation, acne, pigmentation, and other common skin conditions.\n<br>\n<br>\nPlease note: Not all LED masks are created equal! Some brands lack the clinical studies or FDA clearance that demonstrate proven effectiveness."
+            "hoox_faq_question": "How does the Blemish Eraser work?",
+            "hoox_faq_answer": "The Blemish Eraser uses clinically proven wavelengths of blue and red light to naturally treat acne breakouts.\n<br>\nThe blue wavelength (415nm) eliminates bacteria on the surface of the skin to neutralize acne flare ups. \n<br>\nThe red wavelength (633nm) reduces inflammation, pigmentation, and redness and helps prompt cellular repair and circulation for a more vibrant complexion.\n<br> \nThe Hydrocolloid Patches help adhere the device to the skin for a hands-free treatment while giving extra skincare benefits thanks to ingredients like salicylic acid and green tea antioxidants."
           }
         },
         "4ab4d7d5-21be-459b-9e5a-f179e6bb6105": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "How long does it take LED therapy to work?",
-            "hoox_faq_answer": "With consistent use, you should start to see results from your Contour device starting in 4 weeks. Be sure to take before and after pictures to compare your progress. Sometimes it can be hard to notice a difference until you compare your before and after photos."
+            "hoox_faq_question": "What are the Hydrocolloid Patches?",
+            "hoox_faq_answer": "The Blemish Eraser Hydrocolloid Patches are infused with acne-fighting ingredients such as salicylic acid and green tea antioxidants to help clear congested skin and soothe irritation alongside the Mini LED treatment. The Hydrocolloid Patches are sticky on both sides and adhere the Blemish Eraser device to your skin for a hands-free treatment.\n\nPlease note: The Hydrocolloid Patches are single-use (refills are available)."
           }
         },
         "4ab8adba-b4cc-4ca3-bf6c-052e362e235e": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "What is the recommended treatment regimen for Contour Face?",
-            "hoox_faq_answer": "We recommend using the Contour devices 3-5 times per week for 4-6 weeks. After the initial 6 weeks, you should continue routine maintenance treatments as desired based on lifestyle and skincare needs, as everyone’s skin is different. Consistency is key, so find what works best for you!"
+            "hoox_faq_question": "What is the recommended treatment regimen?",
+            "hoox_faq_answer": "We recommend using the Blemish Eraser for 4 treatments per week until the blemish subsides, or for a maximum of 6 weeks if you a treating recurring acne. After the initial 6 weeks, you should only use the Blemish Eraser at the earliest signs of breakout.\n<br>\nPLEASE NOTE: You should not use the Blemish Eraser on the same area of the face for more than 6 weeks consecutively. After 6 weeks we recommend giving that area of your skin a break."
           }
         },
         "da9fb4f8-c61e-4178-9259-d0ca7160cc67": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "Is the Contour safe to use?",
-            "hoox_faq_answer": "With over 40 peer reviewed clinical studies and nearly 20 years of experience, Omnilux technology has proven to be very safe for all skin types, with no adverse side effects and no pain. Omnilux Contour generates no heat or UV light."
+            "hoox_faq_question": "How do I get 15% off?",
+            "hoox_faq_answer": "When you Subscribe & Save, you will receive 15% off your Blemish Eraser device and 15% off the recurring shipments of hydrocolloid patches to ensure you never miss a treatment."
           }
         },
         "d1867c6e-cd32-4b8a-992b-d6f14115fd3c": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "Can I use the Contour with my other skin products?",
-            "hoox_faq_answer": "Omnilux Contour is compatible with most skin care routines. You should always apply your skin care products after treatments. Please review the Contraindications for a list of products and ingredients to avoid using with LED."
+            "hoox_faq_question": "If I subscribe to save 15%, how does it work?",
+            "hoox_faq_answer": "If you choose to “Subscribe & Save” (versus making a one-time purchase), your order will be set up to renew on a recurring basis. Please select your desired subscription interval (4, 6 or 8 weeks) to select how often you’d like to receive your product(s).\n<br>\n*Please note: When you “Subscribe & Save” on any Omnilux Mini product, you will receive the Hydrocolloid Patch Refills for your specific device(s) on a recurring basis. The device is not a recurring shipment."
           }
         },
         "d4caa621-f695-4bbe-a117-9cc0228ff17e": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "Is the Contour safe to use with Retinol or Retin A?",
-            "hoox_faq_answer": "For users taking prescriptive levels of Retin A such as Tretinoin, we do not recommend the use of light devices. Those using cosmetics\/skincare products containing retinol should read the skincare instructions carefully for warnings and precautions in relation to exposure to light. Retin A should be discontinued for at least 5 days before performing light therapy treatments."
+            "hoox_faq_question": "Is there a minimum subscription period?",
+            "hoox_faq_answer": "No. We want our customers to be confident with their purchases. If you aren’t completely satisfied with your product, you can cancel your subscription at any time."
           }
         },
         "5129113d-7507-4843-a29a-7fa7635dca2c": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "hoox_faq_question": "Can I complete Contour treatments with Botox and fillers?",
             "hoox_faq_answer": "Yes, the Contour line helps with bruising that may occur after Botox or fillers. Subjects reported that they felt their Botox treatment lasted longer and results are much more enhanced when combined with Omnilux light therapy. Contour treatments are complementary—they have no direct effect on the Botox or filler treatment."
@@ -472,6 +473,7 @@
         },
         "c439c964-caa9-451f-ab60-7b570665af90": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "hoox_faq_question": "Is the Contour worth the price?",
             "hoox_faq_answer": "The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money."
@@ -596,8 +598,8 @@
         "91bb9692-5ce7-43d3-a09c-071195698071"
       ],
       "settings": {
-        "section_title": "Professional-grade treatment at a fraction of the cost",
-        "section_subtitle": "The same LED technology that dermatologists use, but in the comfort of your home.",
+        "section_title": "Why subscribe?",
+        "section_subtitle": "To enjoy exclusive savings and VIP perks, of course!",
         "section_corner_text": "*Yearly cost in $USD",
         "bg_image": "shopify:\/\/shop_images\/fraction_of_the_cost-desktop_47a5029e-f623-4ac2-9c30-f5587507bcfa.jpg",
         "bg_image_mobile": "shopify:\/\/shop_images\/fraction_of_the_cost-mobile_d242de3e-2e59-476f-a51b-9689cdd0acbd.jpg",
@@ -691,7 +693,7 @@
       ],
       "settings": {
         "section_id": "#",
-        "section_title": "Join 150K+ others loving the skin they’re in"
+        "section_title": "Join 275K+ others loving the skin they’re in"
       }
     },
     "f6c1c44d-ee90-4757-a340-28a609f1b66a": {

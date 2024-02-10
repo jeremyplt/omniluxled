@@ -273,7 +273,6 @@
         </div>
       </div>
       <div class="col-12 mt-2 pt-1 price-with-btn-col">
-        <div class="newcollectiondescription">{{ product.metafields.custom.small_description }}</div>
         <div class="position-relative d-flex price-with-btn">
           <div class="col-6 btn-card-hide trn fw-normal">
             {% if current_variant and current_variant.compare_at_price > current_variant.price %}
@@ -295,6 +294,7 @@
                 {{ product.price | money }}
               {% endif %}
             </span>
+                   
           </div>
           <div class="col-6">
 
@@ -305,6 +305,10 @@
                   , current_variant: current_variant -%}
               </div>
             {%- endif -%}
+          </div>
+          <div class="col-12">        {% if product.metafields.custom.savesubscriptionblurb != blank %}
+ <div class="newcollectiondescription"><img src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/subscribetag.svg?v=1707499103"> {{ product.metafields.custom.savesubscriptionblurb }}</div>
+        {% endif %}
           </div>
         </div>
       </div>

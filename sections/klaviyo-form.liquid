@@ -1,0 +1,169 @@
+<div class="klaviyo-form--root">
+  <div class="klaviyo-form--desktop-image">
+    <img
+      src="{{ section.settings.desktop-image | image_url }}"
+      alt="{{ section.settings.desktop-image.alt | escape }}"
+      class="object-contain w-100"
+      loading="lazy"
+      width="{{ section.settings.desktop-image.width }}"
+      height="{{ section.settings.desktop-image.height }}">
+  </div>
+
+  <div class="klaviyo-form--mobile-image">
+    <img
+      src="{{ section.settings.mobile-image | image_url }}"
+      alt="{{ section.settings.mobile-image.alt | escape }}"
+      class="object-contain w-100"
+      loading="lazy"
+      width="{{ section.settings.mobile-image.width }}"
+      height="{{ section.settings.mobile-image.height }}">
+  </div>
+
+  <div class="klaviyo-form--code">
+    {{ section.settings.form-code }}
+  </div>
+</div>
+
+<style>
+  .klaviyo-form--root {
+    position: relative;
+  }
+  .klaviyo-form--code {
+    position: absolute;
+    width: 50%;
+    top: 52%;
+  }
+  .klaviyo-form--desktop-image {
+    display: block;
+  }
+  .klaviyo-form--mobile-image {
+    display: none;
+  }
+  .klaviyo-form--code .klaviyo-form {
+    background-color: unset !important;
+  }
+  .klaviyo-form--code .klaviyo-form > div {
+    justify-content: flex-start !important;
+  }
+
+  .klaviyo-form--code .klaviyo-form [data-testid="form-component"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .klaviyo-form--code .klaviyo-form [data-testid="form-component"] p {
+    color: #fff !important;
+    text-align: center !important;
+  }
+  .klaviyo-form--code .klaviyo-form [data-testid="form-component"] input {
+    text-transform: uppercase !important;
+    text-align: center !important;
+  }
+  .klaviyo-form--code .klaviyo-form [data-testid="form-component"] input[placeholder="Search countries"] {
+    text-align: left !important;
+  }
+  .klaviyo-form--code .klaviyo-form [data-testid="form-component"] input[type="tel"] {
+    margin-left: -80px !important;
+  }
+  .klaviyo-form--code .klaviyo-form [data-testid="form-component"] button[type="button"]:has(+ input[type="tel"]) {
+    z-index: 2 !important;
+  }
+  .klaviyo-form--code .klaviyo-form [data-testid="form-component"] button[type="button"]:has(+ input[type="tel"]) img {
+    width: 2em !important;
+  }
+  .klaviyo-form--code .klaviyo-form [data-testid="form-component"] button[type="button"]:has(+ input[type="tel"]) img + svg {
+    fill: #000 !important;
+  }
+  .klaviyo-form--code .klaviyo-form [data-testid="form-component"] button[type="button"]:hover {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] p {
+      font-size: 8px !important;
+      line-height: 1.2em !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .klaviyo-form {
+      padding-left: calc( 16px + 10px ) !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .klaviyo-form--desktop-image {
+      display: none;
+    }
+    .klaviyo-form--mobile-image {
+      display: block;
+    }
+    .klaviyo-form--code {
+      width: 100%;
+    }
+    .klaviyo-form--code {
+      top: unset;
+      bottom: 10%;
+    }
+    .klaviyo-form--code .klaviyo-form > div {
+      justify-content: flex-end !important;
+    }
+    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] {
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+    }
+    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] div:has(> input[type="tel"]) {
+      height: 40px !important;
+    }
+    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] button[type="button"],
+    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] input {
+      height: 40px !important;
+    }
+    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] p {
+      font-size: 7px !important;
+      line-height: 1.1em !important;
+    }
+  }
+  @media (max-width: 550px) {
+    .klaviyo-form--code {
+      bottom: 5%;
+    }
+  }
+  @media (max-width: 450px) {
+    .klaviyo-form--code {
+      bottom: 6%;
+    }
+    .v-day-sms .klaviyo-form--code {
+      bottom: 10%;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Klaviyo Form",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "desktop-image",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile-image",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "liquid",
+        "id": "form-code",
+        "label": "Form Code"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Klaviyo Form",
+        "category": "Content"
+      }
+    ]
+  }
+{% endschema %}

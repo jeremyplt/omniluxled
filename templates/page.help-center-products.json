@@ -1112,6 +1112,15 @@
             "question6": "",
             "answer6": ""
           }
+        },
+        "minis_face_assesment_3YTx36": {
+          "type": "minis_face_assesment",
+          "settings": {
+            "title": "",
+            "enableFaq": true,
+            "question": "Assessment",
+            "answer": "<p><a href=\"\/pages\/clear-assessment-blemish-eraser\" title=\"Clear Assessment - Blemish Eraser\">Blemish Eraser Assessment<\/a><\/p>"
+          }
         }
       },
       "block_order": [
@@ -1148,7 +1157,8 @@
         "f4a2fdb6-99da-4724-872c-d5ad386e7ded",
         "90fcd3a3-1bbd-45b9-948e-b06416d88e95",
         "bf6707b0-e754-4613-ba61-c381b448681f",
-        "556ecaf6-503e-445d-98cf-a4556c912e71"
+        "556ecaf6-503e-445d-98cf-a4556c912e71",
+        "minis_face_assesment_3YTx36"
       ],
       "settings": {
         "enable_accordion_btn": true,

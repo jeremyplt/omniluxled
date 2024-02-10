@@ -87,6 +87,7 @@ figure.hoox-treatment__media img{
 .hoox-treatment__bullet-text span{
     font-size: 16px;
     font-weight: 400;
+  min-width: 285px;display:block;
 }
 .hoox-treatment__bullet-svg{
     position: absolute;
@@ -161,3 +162,7 @@ figure.hoox-treatment__media img{
         margin-top: 48px;
     }
   }
+
+@media(max-width:768px){
+  .hoox-treatment__bullet-text span{min-width: 145px;}
+}

@@ -1,3 +1,4 @@
+
 /*hoox page changes*/
 .hooxupsellwrapper{background:#ebf4f4;padding: 16px;margin-bottom:32px;}
 .hoox-shop__upsell{padding:0!important;margin:0 0 21px 0!important;}
@@ -32,6 +33,7 @@ p.hoox-shop__upsell-description{font-style:italic;}
 
 /*collection page abtest*/
 .card-product .badges,#collectionabhide,.newcollectiondescription{display:none}
+.newcollectiondescription img{width:16px;display:inline-block;}
 
 
 /*hide mini faq*/

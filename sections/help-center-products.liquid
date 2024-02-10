@@ -597,6 +597,24 @@ tab == 'hydrocolloid-refill-patch-3'
                                       </div>
                                     </div>
                                 </div>
+              <div class="accordion__container py-3 border-top ">
+                                  <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
+                                    <span>{{ section.settings.tabTitle3 }}</span>
+                                    <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">
+                                      <span class="ox-plus trn"></span>
+                                      <span class="ox-minus position-absolute trn"></span>
+                                    </span>
+                                  </a>
+                                  <div class="accordion__block toggle-content" id="accordion_customTab4" data-type="content" style="height: 0px;">
+                                    <div class="pb-3 pt-4 formatted-list px-xl-4 px-md-3 px-2">
+                                      {%- for block in section.blocks -%}
+                                        {%- if block.type == 'minis_face_assesment' -%}
+                                            <div class="rte pt-3 formatted-list ps-3">{{ block.settings.answer }}</div>
+                                        {% endif %}
+                                      {% endfor %}
+                                    </div>
+                                  </div>
+                                </div>
                                    <div class="accordion__container py-3 border-top border-bottom">
                                     <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
                                       <span>{{ section.settings.tabTitle2 }}</span>

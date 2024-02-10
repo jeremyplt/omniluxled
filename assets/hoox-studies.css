@@ -15,6 +15,7 @@
 
 .hoox-studies__range {
     display: flex;
+  position:relative;
     align-items: center;
     gap: 8px;
 }
@@ -71,6 +72,12 @@
 .hoox-studies__subtitle {
     margin-bottom: 33px;
 }
+.hoox-studies__percentage strong,.men .hoox-studies__percentage span{display:none;}
+.men .hoox-studies__percentage strong{display:block;color:#fff;font-weight:normal;    right: 10px;
+    position: absolute;
+    top: 2px;font-size:30px;}
+.men .hoox-studies__percentage {position:absolute;right:0;top:0;}
+.men .hoox-studies__items{position:relative;}
 
 @media (min-width: 1204px) {
 

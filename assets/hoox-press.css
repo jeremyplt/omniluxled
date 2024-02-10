@@ -32,6 +32,7 @@
     max-width: fit-content;
 }
 
+
 @keyframes loop-marquee {
     0% {
         transform: translate3d(-100%, 0, 0); /* Start with the same state as the end */
@@ -42,6 +43,39 @@
         transform: translate3d(-200%, 0, 0); /* Move it further for looping */
     }
 }
+
+
+  .hoox-press__content {
+        position: relative;
+        height: 40px;
+        padding: 0;
+        overflow: visible;
+    }
+
+    .loop-trust-animation {
+        width: 100%;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        z-index: 1;
+        height: 40px;
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: unset;
+        gap: 3rem;
+    }
+
+    .hoox-press__wrapper {
+        height: 100%;
+        line-height: 1;
+        white-space: nowrap;
+        display: flex!important;
+        align-items: center;
+        animation: loop-marquee 40s linear infinite; /* Adjusted duration */
+        transform: translate3d(0, 0, 0); /* Added this to reset initial position */
+    }
 
 @media (min-width: 768px) {
     .hoox-press {
@@ -97,7 +131,7 @@
     }
 
     .hoox-press__content-wrapper {
-        flex-direction: row;
+        flex-direction: column;
         gap: 42px;
         align-items: center;
         justify-content: center;
