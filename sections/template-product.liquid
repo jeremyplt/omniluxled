@@ -426,7 +426,9 @@
                     </div>
                   {% endif %}
                 {%- when 'pre-order-info' -%}
-                  {% render 'pre-order-info', block: block, product: product %}
+                  {% if product.metafields.custom.us_preorder and localization.country == 'United States' %}
+                    {% render 'pre-order-info', block: block, product: product %}
+                  {% endif %}
               {%- endcase -%}
             {%- endfor -%}
           </div>
