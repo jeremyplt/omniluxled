@@ -160,7 +160,7 @@
             "heading": "Next batch ships {{ product.metafields.pre_order.date_step_2 | metafield_text }}",
             "description": "<p>Due to high demand, our Omnilux Contour Face LED device is sold out. Order now and secure yours from the next shipment.<\/p>",
             "text_step_1": "Sold out",
-            "text_step_2": "Sold out",
+            "text_step_2": "{{ product.metafields.pre_order.progress_step_2.value }}% Reserved",
             "text_step_3": "In Production"
           }
         },
