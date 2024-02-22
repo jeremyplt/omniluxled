@@ -426,7 +426,7 @@
                     </div>
                   {% endif %}
                 {%- when 'pre-order-info' -%}
-                  {% render 'pre-order-info', block: block %}
+                  {% render 'pre-order-info', block: block, product: product %}
               {%- endcase -%}
             {%- endfor -%}
           </div>
