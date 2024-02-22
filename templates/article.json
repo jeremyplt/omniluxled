@@ -30,12 +30,12 @@
             "enable_shop_favorites": true,
             "shop_favorites_title": "shop your favorites",
             "btn_txt": "shop all",
-            "btn_link": "shopify:\/\/collections",
+            "btn_link": "https:\/\/omniluxled.com\/collections\/all",
             "btn_type": "outline",
             "btn_variant": "primary",
             "btn_size": "",
-            "product_1": "omnilux-contour-neck-decollete",
-            "product_2": "omnilux-contour-glove"
+            "product_1": "omnilux-contour-face",
+            "product_2": "omnilux-men"
           }
         }
       },

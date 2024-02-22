@@ -13,19 +13,19 @@
         "024c5d8e-16af-4c49-b96c-575e58cf2c9f": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "Reduces fine lines and wrinkles"
+            "bullet_text": "Uses near-infrared light to boost collagen for younger-looking skin"
           }
         },
         "d3f5b179-09a1-4d77-b432-7eecb9bfa32f": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "Delivers a smoother, more youthful complexion"
+            "bullet_text": "Combined with red light to reduce inflammation and the appearance of dark circles"
           }
         },
         "8d4c1d26-ac76-4be7-8bc1-f25fbbd086fc": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "10 minute, at home, spa level treatment"
+            "bullet_text": "Paired with concentrated hydrocolloid patches for a more powerful undereye treatment"
           }
         },
         "e7a9beb7-c5cd-4468-87d8-7b8b9860e9c1": {
@@ -66,13 +66,13 @@
         "section_star_image": "shopify:\/\/shop_images\/Frame_48097853.svg",
         "section_star_text": "275K+ Glowing Customers",
         "section_star_anchor_id": "#hoow-reviws",
-        "section_title": "Meet <i>the<\/i> supercharged eye mask",
-        "section_description": "Must-have skincare tools to boost collagen production & soothe skin in just 10 mins.",
+        "section_title": "Meet <em>the<\/em> supercharged eye mask",
+        "section_description": "Precision LED therapy diminishes fine lines, depuffs under eye bags, and brightens dark circles for a more rejuvenated complexion.",
         "section_btn_text": "Transform My Skin",
         "section_btn_url": "#hoox-shop",
         "section_shipping_text": "FREE Shipping | 30-Day Money-Back Guarantee",
-        "section_main_image": "shopify:\/\/shop_images\/large-Hero_swap_c54ab7ec-1130-4aa2-a72f-82891e49e6c3.png",
-        "section_main_image_mobile": "shopify:\/\/shop_images\/rawbig_c1f9f02a-9a15-4668-8ddf-8f4716c92aac.jpg"
+        "section_main_image": "shopify:\/\/shop_images\/Hoox_LP_Hero_Image_Desktop_4.png",
+        "section_main_image_mobile": "shopify:\/\/shop_images\/Hoox_Mini_LP_Hero_Mobile.png"
       }
     },
     "832457c1-0171-4350-ad70-04b074b499f1": {
@@ -126,28 +126,28 @@
         "29fbcc08-6999-4b76-b331-b53eec6d4743": {
           "type": "props",
           "settings": {
-            "hoox_safe_image": "shopify:\/\/shop_images\/safe_and_effective.jpg",
+            "hoox_safe_image": "shopify:\/\/shop_images\/Hoox_Mini_LPs_4.png",
             "hoox_safe_headline": "Safe & effective",
-            "hoox_safe_text": "Reduces fine lines and wrinkles and improves the appearance of pigmentation and redness.",
+            "hoox_safe_text": "Engineered using Omnilux's proprietary medical technology, the Eye Brightener harnesses the power of red and near-infrared light to brighten and firm the under eye area.",
             "hoox_safe_benefit_image1": "shopify:\/\/shop_images\/Icon_FDA_Cleared_png.png",
-            "hoox_safe_benefit_image2": "shopify:\/\/shop_images\/Icon_TGA_Approved_png.png",
-            "hoox_safe_benefit_image3": "shopify:\/\/shop_images\/Icon_CE_Certified_png.png"
+            "hoox_safe_benefit_image2": "shopify:\/\/shop_images\/Icon_CE_Certified_png.png",
+            "hoox_safe_benefit_image3": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-20T144715.658.png"
           }
         },
         "723c9410-809c-48d9-b566-eadb3c58e607": {
           "type": "props",
           "settings": {
-            "hoox_safe_image": "shopify:\/\/shop_images\/premium_quality.jpg",
-            "hoox_safe_headline": "Premium quality",
-            "hoox_safe_text": "Medical-grade and dermatologist-approved, it’s the most powerful LED device on the market."
+            "hoox_safe_image": "shopify:\/\/shop_images\/Hoox_Mini_LPs_9.png",
+            "hoox_safe_headline": "Superior anti-aging treatment",
+            "hoox_safe_text": "Upgrade your skincare game with <strong>medical-grade LEDs<\/strong> and hydrocolloid patches infused with <strong>amino acid-rich peptides<\/strong> and <strong>niacinamide<\/strong>. This advanced combination revolutionizes traditional under eye patches for superior results."
           }
         },
         "66e98a01-195d-4a1b-8414-cf995d11033a": {
           "type": "props",
           "settings": {
-            "hoox_safe_image": "shopify:\/\/shop_images\/science_backed.jpg",
-            "hoox_safe_headline": "Science-backed",
-            "hoox_safe_text": "Developed with 20 years of research and backed by 40+ peer-reviewed clinical papers."
+            "hoox_safe_image": "shopify:\/\/shop_images\/Hoox_Mini_LPs.png",
+            "hoox_safe_headline": "Derm-approved",
+            "hoox_safe_text": "\"I’m a huge believer in using LED light therapy on patients who are looking to address various aging concerns. A combo of red and near-infrared light, such as those in the Omnilux devices, is <strong>ideal for treating mature or tired-looking skin<\/strong>.\"  - Dr. Jared Jagdeo, MD, MS"
           }
         }
       },
@@ -168,29 +168,29 @@
         "113949a6-f643-4968-91b9-1c7422018255": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/charge_the_controller.jpg",
-            "hoox_how_to_text": "Charge the controller and connect it to your mask."
+            "hoox_how_to_image": "shopify:\/\/shop_images\/MINI_HOW_TO_GLOW_UP_PDPS_4.png",
+            "hoox_how_to_text": "Charge the device by using the supplied charging cable."
           }
         },
         "0ff39d1f-a4b0-43c9-8cbb-dcd284089997": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/secure_the_mask.jpg",
-            "hoox_how_to_text": "Secure the mask on your head using the adjustable velcro straps."
+            "hoox_how_to_image": "shopify:\/\/shop_images\/MINI_HOW_TO_GLOW_UP_PDPS_5.png",
+            "hoox_how_to_text": "Peel back the amino acid-rich hydrocolloid patch adhesive side 1 (marked with a device icon) and adhere to the device."
           }
         },
         "a9d976ec-6405-473d-adb8-bb5f24e18114": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/start_the_10min_treatment.jpg",
-            "hoox_how_to_text": "Start the 10-minute treatment."
+            "hoox_how_to_image": "shopify:\/\/shop_images\/MINI_HOW_TO_GLOW_UP_PDPS_6.png",
+            "hoox_how_to_text": "Peel back adhesive side 2 (marked with a face icon) and place the device on the treatment area."
           }
         },
         "42fb2c7a-c3a1-4e11-b32d-90e5d20babee": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/remove_the_mask_and_enjoy.jpg",
-            "hoox_how_to_text": "Remove the mask and enjoy the glow."
+            "hoox_how_to_image": "shopify:\/\/shop_images\/MINI_HOW_TO_GLOW_UP_PDPS_7.png",
+            "hoox_how_to_text": "Press and hold the button to activate the rejuvenating power of the Eye Brightener."
           }
         }
       },
@@ -202,7 +202,13 @@
       ],
       "settings": {
         "hoox_how_to_title": "How to glow up:",
-        "hoox_how_to_subtitle": "Unlock flawless skin with three to five 10-minute treatments per week."
+        "hoox_how_to_subtitle": "Unlock younger-looking skin with three to five 10-minute treatments per week."
+      }
+    },
+    "hoox_results_JimrzQ": {
+      "type": "hoox-results",
+      "settings": {
+        "section_title": "Minis in the wild"
       }
     },
     "dd98148d-76e8-4e14-8398-6b17b61034dd": {
@@ -271,6 +277,7 @@
         "58336f75-5dac-41e8-b8dc-ddde511e2ccd",
         "a8cd80f9-92d5-4287-9834-a2f74fe4927f"
       ],
+      "disabled": true,
       "settings": {
         "section_title": "Visible results"
       }
@@ -306,9 +313,9 @@
         "538de84f-7b07-4119-8456-4e0160d23fd8"
       ],
       "settings": {
-        "hoox_studies_title": "In clinical studies, Omnilux Contour users agreed:",
+        "hoox_studies_title": "In clinical studies, Omnilux users agreed:",
         "hoox_studies_subtitle": "After 3 treatments per week for 4 weeks",
-        "hoox_studies_image": "shopify:\/\/shop_images\/clinical_studies_results.jpg"
+        "hoox_studies_image": "shopify:\/\/shop_images\/Men_s_Clinical_Photo_2.png"
       }
     },
     "c7458cec-8732-46b2-97a9-601f8b3f28bf": {
@@ -317,46 +324,46 @@
         "7684ff1e-c517-48c3-95bf-016446575963": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "Reduces fine lines and wrinkles"
+            "bullet_text": "Boosts collagen production to smooth wrinkles"
           }
         },
         "e8a0083c-234c-4db3-b9eb-51e3521fa33f": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "Stimulates collagen production"
+            "bullet_text": "Brightens dark circles and depuffs under eye bags"
           }
         },
         "1b094982-b4f1-4730-b832-a53258c73126": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "Promotes healthier, younger-looking skin"
+            "bullet_text": "Helps reduce signs of fatigue and aging"
           }
         },
         "5d66dd4b-7917-44fb-b551-451be44e2eac": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "Non-invasive, painless, & natural"
-          }
-        },
-        "4f61ed89-42d6-4004-9980-d6441138a966": {
-          "type": "questions",
-          "settings": {
-            "question_title": "Contraindications",
-            "question_answer": "<span>DO NOT<\/span> use the Omnilux Contour™ LED system to treat any other conditions apart from those listed in the indications for use. The Omnilux Contour™ LED system has not been tested for any other conditions than those listed and the risk is unknown.<br><br>\n<span>DO NOT<\/span> use the Omnilux Contour™ LED system if you are pregnant, planning on becoming pregnant or breastfeeding. The Omnilux Contour™ LED system has NOT been tested on pregnant or breast-feeding women and therefore the risk to the fetus, neonate or pregnant women is unknown."
+            "bullet_text": "All natural. No pain, side effects, or downtime"
           }
         },
         "52f641a7-9bdf-4fac-923a-a9bd91daf5f9": {
           "type": "questions",
           "settings": {
-            "question_title": "Includes",
-            "question_answer": "<ul>\n<li>Flexible silicone Face device<\/li>\n<li>Rechargeable battery controller<\/li>\n<li>Power supply & global plug adaptors<\/li>\n<li>USB-C line to USB-A connector<\/li>\n<li>Head straps<\/li>\n<li>Carry bag<\/li>\n<\/ul>"
+            "question_title": "What's Included",
+            "question_answer": "<ul>\n<li>1 Eye Brightener LED device<\/li>\n<li>14 single-use Hydrocolloid Patches infused with amino acid-rich peptides and niacinamide<\/li>\n<li>1 magnetic 2-pin charging cable<\/li>\n<li>1 user guide<\/li>\n<\/ul>"
           }
         },
         "c10deabb-5a87-4d33-afc9-87cf39119da7": {
           "type": "questions",
           "settings": {
             "question_title": "Specifications",
-            "question_answer": "<span>LED TYPE:<\/span> Red and near-infrared<br><br>\n\n<span>WAVELENGTHS:<\/span>  633nm (red) and 830nm (near-infrared)<br><br>\n\n<span>NUMBER OF LEDS:<\/span>132 LEDs (2 per bulb), 66 LED bulbs<br><br>\n<span>TARGETED USE:<\/span> Face<br><br>\n\n<span>CERTIFICATIONS:<\/span> FDA, CE, TGA<br><br>\n\n<span>WARRANTY: 2 years: <\/span>device, <span>1 year: <\/span>controller"
+            "question_answer": "<span>LED TYPE:<\/span> Red and near-infrared<br><br>\n\n<span>WAVELENGTHS:<\/span>  633nm (red) and 830nm (near-infrared)<br><br>\n\n<span>NUMBER OF LEDS:<\/span>12 LEDs (2 per bulb), total of 6 LED bulbs<br><br>\n<span>TARGETED USE:<\/span> Face<br><br>\n\n<span>CERTIFICATIONS:<\/span> FDA, CE<br><br>\n\n<span>WARRANTY:<\/span> 2 years, device only"
+          }
+        },
+        "4f61ed89-42d6-4004-9980-d6441138a966": {
+          "type": "questions",
+          "settings": {
+            "question_title": "Contraindications",
+            "question_answer": "<span>DO NOT<\/span> use the Omnilux Mini LED device to treat any other conditions apart from those listed in the indications for use. The Omnilux Mini LED device has not been tested for any other conditions than those listed and the risk is unknown.<br><br>\n<span>DO NOT<\/span> use the Omnilux Mini LED device if you are pregnant, planning on becoming pregnant or breastfeeding. The Omnilux Mini LED device has NOT been tested on pregnant or breast-feeding women and therefore the risk to the fetus, neonate or pregnant women is unknown."
           }
         },
         "2083bb64-a749-45e2-9bfb-78a4b0f4c207": {
@@ -395,14 +402,17 @@
         "e8a0083c-234c-4db3-b9eb-51e3521fa33f",
         "1b094982-b4f1-4730-b832-a53258c73126",
         "5d66dd4b-7917-44fb-b551-451be44e2eac",
-        "4f61ed89-42d6-4004-9980-d6441138a966",
         "52f641a7-9bdf-4fac-923a-a9bd91daf5f9",
         "c10deabb-5a87-4d33-afc9-87cf39119da7",
+        "4f61ed89-42d6-4004-9980-d6441138a966",
         "2083bb64-a749-45e2-9bfb-78a4b0f4c207",
         "fb7e9780-f27c-422a-9386-aa966dde809f",
         "d41283b9-bdd2-4d95-8524-51fbb640be6b",
         "2f2d4e4b-9377-4d19-ba97-8d1c01d2c16c",
         "12521de5-7ce7-4965-9088-c57079be85ac"
+      ],
+      "custom_css": [
+        ".hoox-shop__newsletter {display: none;}"
       ],
       "settings": {
         "shop_product": "eye-brightener",
@@ -410,12 +420,12 @@
         "shop_product_video_src": "https:\/\/www.youtube.com\/watch?v=BcT9M0Ye6Is",
         "shop_product_review_icon": "<svg width=\"96\" height=\"17\" viewbox=\"0 0 96 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M8 0.899902L10.3511 5.66383L15.6085 6.42777L11.8042 10.136L12.7023 15.372L8 12.8999L3.29772 15.372L4.19577 10.136L0.391548 6.42777L5.64886 5.66383L8 0.899902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M28 0.899902L30.3511 5.66383L35.6085 6.42777L31.8042 10.136L32.7023 15.372L28 12.8999L23.2977 15.372L24.1958 10.136L20.3915 6.42777L25.6489 5.66383L28 0.899902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M48 0.899902L50.3511 5.66383L55.6085 6.42777L51.8042 10.136L52.7023 15.372L48 12.8999L43.2977 15.372L44.1958 10.136L40.3915 6.42777L45.6489 5.66383L48 0.899902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M68 0.899902L70.3511 5.66383L75.6085 6.42777L71.8042 10.136L72.7023 15.372L68 12.8999L63.2977 15.372L64.1958 10.136L60.3915 6.42777L65.6489 5.66383L68 0.899902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M88 0.899902L90.3511 5.66383L95.6085 6.42777L91.8042 10.136L92.7023 15.372L88 12.8999L83.2977 15.372L84.1958 10.136L80.3915 6.42777L85.6489 5.66383L88 0.899902Z\" fill=\"#99552B\"><\/path>\n<\/svg>",
         "shop_product_review_text": "900+ 5-Star Reviews",
-        "shop_product_description": "A portable, dermatologist recommended red light therapy mask with clinically proven results for anti-aging and skin rejuvenation.",
-        "shop_product_upsell": "hyaluronic-acid-serum",
+        "shop_product_description": "Depuff, brighten, and firm the under eye area with this clinically-proven, dermatologist-recommended red light therapy Mini device.",
+        "shop_product_upsell": "",
         "shop_product_upsell_title": "Supercharge Your Results",
         "shop_product_upsell_description": "Pairs perfectly with Contour Face when used during treatment.",
         "shop_product_upsell_stars": "<svg width=\"96\" height=\"17\" viewbox=\"0 0 96 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M8 0.399902L10.3511 5.16383L15.6085 5.92777L11.8042 9.63597L12.7023 14.872L8 12.3999L3.29772 14.872L4.19577 9.63597L0.391548 5.92777L5.64886 5.16383L8 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M28 0.399902L30.3511 5.16383L35.6085 5.92777L31.8042 9.63597L32.7023 14.872L28 12.3999L23.2977 14.872L24.1958 9.63597L20.3915 5.92777L25.6489 5.16383L28 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M48 0.399902L50.3511 5.16383L55.6085 5.92777L51.8042 9.63597L52.7023 14.872L48 12.3999L43.2977 14.872L44.1958 9.63597L40.3915 5.92777L45.6489 5.16383L48 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M68 0.399902L70.3511 5.16383L75.6085 5.92777L71.8042 9.63597L72.7023 14.872L68 12.3999L63.2977 14.872L64.1958 9.63597L60.3915 5.92777L65.6489 5.16383L68 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M88 0.399902L90.3511 5.16383L95.6085 5.92777L91.8042 9.63597L92.7023 14.872L88 12.3999L83.2977 14.872L84.1958 9.63597L80.3915 5.92777L85.6489 5.16383L88 0.399902Z\" fill=\"#99552B\"><\/path>\n<\/svg>",
-        "shop_gallery_bagde": "SIGN UP & SAVE 10%"
+        "shop_gallery_bagde": ""
       }
     },
     "d55c37d3-2303-4327-88c7-dd492dffa149": {
@@ -424,47 +434,48 @@
         "f425b463-f4a4-43ed-ae56-5ed6bfb60519": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "Does LED therapy really work?",
-            "hoox_faq_answer": "Yes. Omnilux’s technology has been clinically proven to produce medical-grade results for nearly 20 years. Omnilux devices have been specifically profiled in over 40 independent, peer-reviewed, published clinical studies, with applications ranging from skin rejuvenation, acne, pigmentation, and other common skin conditions.\n<br>\n<br>\nPlease note: Not all LED masks are created equal! Some brands lack the clinical studies or FDA clearance that demonstrate proven effectiveness."
+            "hoox_faq_question": "How does the Eye Brightener work?",
+            "hoox_faq_answer": "The Eye Brightener uses clinically proven wavelengths of light (red and near-infrared) and optimized light energy output to work at a cellular level to stimulate new collagen and reduce fine lines and wrinkles, dark circles, and under eye bags.\n<br>\nThe red wavelength (633nm) reduces inflammation, pigmentation, and redness and helps prompt cellular repair and circulation for a more vibrant complexion.\n<br>\nThe near-infrared wavelength (830nm) targets deeper fibroblast cells, stimulating new collagen and elastin production, resulting in plumper, firmer, more youthful looking skin.\n<br>\nThe Hydrocolloid Patches help adhere the device to the skin for a hands-free treatment while giving extra benefits thanks to ingredients like niacinamide and amino acid-rich peptides."
           }
         },
         "4ab4d7d5-21be-459b-9e5a-f179e6bb6105": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "How long does it take LED therapy to work?",
-            "hoox_faq_answer": "With consistent use, you should start to see results from your Contour device starting in 4 weeks. Be sure to take before and after pictures to compare your progress. Sometimes it can be hard to notice a difference until you compare your before and after photos."
+            "hoox_faq_question": "What are the Hydrocolloid Patches?",
+            "hoox_faq_answer": "The Eye Brightener Hydrocolloid Patches are infused with skin-loving ingredients such as niacinamide and amino acid-rich peptides to hydrate, brighten, and firm the under eye area alongside the Mini LED treatment. The Hydrocolloid Patches are sticky on both sides and adhere the Eye Brightener device to your skin for a hands-free treatment.\n<br>\nPlease note: The Hydrocolloid Patches are single-use (refills are available)."
           }
         },
         "4ab8adba-b4cc-4ca3-bf6c-052e362e235e": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "What is the recommended treatment regimen for Contour Face?",
-            "hoox_faq_answer": "We recommend using the Contour devices 3-5 times per week for 4-6 weeks. After the initial 6 weeks, you should continue routine maintenance treatments as desired based on lifestyle and skincare needs, as everyone’s skin is different. Consistency is key, so find what works best for you!"
+            "hoox_faq_question": "What is the recommended treatment regimen?",
+            "hoox_faq_answer": "We recommend using the Eye Brightener device for 3-5 treatments per week for 4-6 weeks followed by maintenance as desired."
           }
         },
         "da9fb4f8-c61e-4178-9259-d0ca7160cc67": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "Is the Contour safe to use?",
-            "hoox_faq_answer": "With over 40 peer reviewed clinical studies and nearly 20 years of experience, Omnilux technology has proven to be very safe for all skin types, with no adverse side effects and no pain. Omnilux Contour generates no heat or UV light."
+            "hoox_faq_question": "How do I get 15% off?",
+            "hoox_faq_answer": "When you Subscribe & Save, you will receive 15% off your Eye Brightener device and 15% off the recurring shipments of hydrocolloid patches to ensure you never miss a treatment."
           }
         },
         "d1867c6e-cd32-4b8a-992b-d6f14115fd3c": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "Can I use the Contour with my other skin products?",
-            "hoox_faq_answer": "Omnilux Contour is compatible with most skin care routines. You should always apply your skin care products after treatments. Please review the Contraindications for a list of products and ingredients to avoid using with LED."
+            "hoox_faq_question": "If I subscribe to save 15%, how does it work?",
+            "hoox_faq_answer": "If you choose to “Subscribe & Save” (versus making a one-time purchase), your order will be set up to renew on a recurring basis. Please select your desired subscription interval (4, 6 or 8 weeks) to select how often you’d like to receive your product(s).\n<br>\n*Please note: When you “Subscribe & Save” on any Omnilux Mini product, you will receive the Hydrocolloid Patch Refills for your specific device(s) on a recurring basis. The device is not a recurring shipment."
           }
         },
         "d4caa621-f695-4bbe-a117-9cc0228ff17e": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "Is the Contour safe to use with Retinol or Retin A?",
-            "hoox_faq_answer": "For users taking prescriptive levels of Retin A such as Tretinoin, we do not recommend the use of light devices. Those using cosmetics\/skincare products containing retinol should read the skincare instructions carefully for warnings and precautions in relation to exposure to light. Retin A should be discontinued for at least 5 days before performing light therapy treatments."
+            "hoox_faq_question": "Is there a minimum subscription period?",
+            "hoox_faq_answer": "No. We want our customers to be confident with their purchases. If you aren’t completely satisfied with your product, you can cancel your subscription at any time."
           }
         },
         "5129113d-7507-4843-a29a-7fa7635dca2c": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "hoox_faq_question": "Can I complete Contour treatments with Botox and fillers?",
             "hoox_faq_answer": "Yes, the Contour line helps with bruising that may occur after Botox or fillers. Subjects reported that they felt their Botox treatment lasted longer and results are much more enhanced when combined with Omnilux light therapy. Contour treatments are complementary—they have no direct effect on the Botox or filler treatment."
@@ -472,6 +483,7 @@
         },
         "c439c964-caa9-451f-ab60-7b570665af90": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "hoox_faq_question": "Is the Contour worth the price?",
             "hoox_faq_answer": "The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money."
@@ -543,29 +555,36 @@
         "218fdb2e-b7d3-452a-bfb5-be6421a893af": {
           "type": "video",
           "settings": {
-            "video_link": "https:\/\/www.youtube.com\/watch?v=\/8La4qgpqGY0"
-          }
-        },
-        "a258e6e9-e3cc-4fbf-bd1d-a984c6f7b38d": {
-          "type": "video",
-          "settings": {
-            "video_link": "https:\/\/youtube.com\/watch?v=\/1Qlhsv_1Z4I"
+            "video_link": "https:\/\/youtube.com\/watch?v=Vv9-BQHMIQQ"
           }
         },
         "b25efe71-81a5-4514-933c-4946d43d27d4": {
           "type": "video",
           "settings": {
-            "video_link": "https:\/\/youtube.com\/watch?v=\/Rws2zDzlr9M"
+            "video_link": "https:\/\/youtube.com\/watch?v=\/44I0sdycI_4"
+          }
+        },
+        "a258e6e9-e3cc-4fbf-bd1d-a984c6f7b38d": {
+          "type": "video",
+          "settings": {
+            "video_link": "https:\/\/youtube.com\/watch?v=CLFPd7bgIgM"
+          }
+        },
+        "video_7mQ9FF": {
+          "type": "video",
+          "settings": {
+            "video_link": "https:\/\/youtube.com\/watch?v=PZokhU2CL_g"
           }
         }
       },
       "block_order": [
         "218fdb2e-b7d3-452a-bfb5-be6421a893af",
+        "b25efe71-81a5-4514-933c-4946d43d27d4",
         "a258e6e9-e3cc-4fbf-bd1d-a984c6f7b38d",
-        "b25efe71-81a5-4514-933c-4946d43d27d4"
+        "video_7mQ9FF"
       ],
       "settings": {
-        "section_title": "Real people, real results"
+        "section_title": "See it in action"
       }
     },
     "ff0dea76-01fe-4895-a40f-5e738647651b": {
@@ -574,19 +593,19 @@
         "b449261e-a45d-4160-9075-f152abf13acb": {
           "type": "description",
           "settings": {
-            "bullet_text": "Costs <span>9x<\/span> less than a dermatologist visit"
+            "bullet_text": "15% off your Mini device and <em>all<\/em> recurring shipments of Hydrocolloid Patch refills"
           }
         },
         "90664102-892a-412e-91f3-e5ae13f2ab0c": {
           "type": "description",
           "settings": {
-            "bullet_text": "Dermatologist Visit* <span>$3,600+<\/span>"
+            "bullet_text": "Free shipping on every subscription order"
           }
         },
         "91bb9692-5ce7-43d3-a09c-071195698071": {
           "type": "description",
           "settings": {
-            "bullet_text": "Omnilux Contour Face <span>$395<\/span>"
+            "bullet_text": "VIP access to new product offerings"
           }
         }
       },
@@ -596,9 +615,9 @@
         "91bb9692-5ce7-43d3-a09c-071195698071"
       ],
       "settings": {
-        "section_title": "Professional-grade treatment at a fraction of the cost",
-        "section_subtitle": "The same LED technology that dermatologists use, but in the comfort of your home.",
-        "section_corner_text": "*Yearly cost in $USD",
+        "section_title": "Why subscribe?",
+        "section_subtitle": "To enjoy exclusive savings and VIP perks, of course!",
+        "section_corner_text": "",
         "bg_image": "shopify:\/\/shop_images\/fraction_of_the_cost-desktop_47a5029e-f623-4ac2-9c30-f5587507bcfa.jpg",
         "bg_image_mobile": "shopify:\/\/shop_images\/fraction_of_the_cost-mobile_d242de3e-2e59-476f-a51b-9689cdd0acbd.jpg",
         "bullet_svg": "<svg width=\"185\" height=\"431\" viewbox=\"0 0 185 431\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M1 0.399902C62.1245 69.8871 147.699 253.169 1 430.4\" stroke=\"black\"><\/path>\n<path d=\"M144.333 371.4C144.333 372.873 145.527 374.067 147 374.067C148.473 374.067 149.667 372.873 149.667 371.4C149.667 369.927 148.473 368.733 147 368.733C145.527 368.733 144.333 369.927 144.333 371.4ZM41 371.9L147 371.9L147 370.9L41 370.9L41 371.9Z\" fill=\"black\"><\/path>\n<path d=\"M149.333 63.3999C149.333 64.8727 150.527 66.0666 152 66.0666C153.473 66.0666 154.667 64.8727 154.667 63.3999C154.667 61.9272 153.473 60.7332 152 60.7332C150.527 60.7332 149.333 61.9272 149.333 63.3999ZM43 63.8999L152 63.8999L152 62.8999L43 62.8999L43 63.8999Z\" fill=\"black\"><\/path>\n<path d=\"M179.333 214.4C179.333 215.873 180.527 217.067 182 217.067C183.473 217.067 184.667 215.873 184.667 214.4C184.667 212.927 183.473 211.733 182 211.733C180.527 211.733 179.333 212.927 179.333 214.4ZM82 214.9L182 214.9L182 213.9L82 213.9L82 214.9Z\" fill=\"black\"><\/path>\n<\/svg>",
@@ -611,72 +630,66 @@
         "671d2e9b-1e2c-425d-91c2-f59384c5d4ba": {
           "type": "review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/Omnilux_mariajr_loves_omnilux_contour_face.jpg",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Omnilux Contour FACE",
-            "review_description": "I'm loving this red-light therapy device. It's so easy to use -- a quick 10 minutes and you're done. I'm 53 years old and I have done numerous treatments. This device is worth the cost.",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704_4.svg",
-            "review_author": "Maria J. R.",
+            "review_title": "Love It",
+            "review_description": "After a few weeks of consistent use, I noticed that my under-eye bags and discoloration had greatly improved. My husband who was skeptical even pointed out that he noticed my skin was glowing!",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002763_7a0d07f7-7a0a-4130-9c74-8defbeaeb8f0.png",
+            "review_author": "Liv",
             "review_verified_text": "Verified buyer"
           }
         },
         "75f1863e-b4aa-48be-b10c-718f622ed99e": {
           "type": "review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/Omnilux_elizabeth_says_facemask_is_great.jpg",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Great Face Mask",
-            "review_description": "Love my Omnilux Mask! Only been using for a short time and have been seeing great improvements in my skin brightness. Red light therapy only 10 minutes in the morning and night for great results.",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704_2.svg",
-            "review_author": "Elizabeth V.",
+            "review_title": "Very Clever Product!",
+            "review_description": "Has aided with soften around eye area and am very pleased. Look less tired and more alert. The lines around eyes seem decreased and noticed lotion goes on smoother. Pleased!",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002764_68e4d566-5b51-44d9-957e-9055accfbf2b.png",
+            "review_author": "Charles S.",
             "review_verified_text": "Verified buyer"
           }
         },
         "09e51eaf-1740-42e1-bcb7-f1d459351c4c": {
           "type": "review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/Omnilux_ellen_give_me_that_glow.jpg",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Give Me That Glow!",
-            "review_description": "I love, love, love my Omnilux face mask!! It gives my complexion a glow that I can’t duplicate any other way. I had an issue with it after using for almost a year and it was resolved immediately! The customer service is outstanding!!",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704_3.svg",
-            "review_author": "Ellen",
+            "review_title": "Eye Brightener",
+            "review_description": "Love it and very multitasking as use it on other parts of my face where I have concerns.",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002764_fdcb4299-cfa8-4f4c-b7c2-1fbec15aa0df.png",
+            "review_author": "Kathryn H.",
             "review_verified_text": "Verified buyer"
           }
         },
         "2c6217e1-4375-4c5c-8973-7efbb94ba6d4": {
           "type": "review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/Omnilux_dorothy_wonderful_addition_to_skincare.jpg",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Wonderful Addition To Skincare",
-            "review_description": "I am 63 years old and it is starting to show so I decided to order the Omnilux Contour Face led mask. I have been using it for 2 weeks now and have seen usual red patches gone. Very satisfied and highly recommend this product ♥️🥰",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704_4.svg",
-            "review_author": "Dorothy M.",
+            "review_title": "Effective And Easy To Use",
+            "review_description": "This device is effective, I can notice it works, but also easy to use and practical to have it on trips.",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002764_ef41d7db-aca5-43c9-832c-89975b2c3cf1.png",
+            "review_author": "Marta Ortiz P.",
             "review_verified_text": "Verified buyer"
           }
         },
         "a136d047-2dd8-4976-a57a-be0d54efdaff": {
           "type": "review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/Omnilux_chantra_so_far_so_good.jpg",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "So Far So Good",
-            "review_description": "Been using this mask for the past 5 days straight now and my skin looks more glowy. Fits and stays on well, easy to clean and store, battery lasts a good bit. Can’t wait to see the long term benefits",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704_5.svg",
-            "review_author": "Chantra P.",
+            "review_title": "Great Product",
+            "review_description": "I love the eye brightener. I notice less wrinkles and smoother skin after only a few weeks.",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002764_1_4b9a7918-6d63-40c2-acd3-938ad79c24d4.png",
+            "review_author": "Kelly M.",
             "review_verified_text": "Verified buyer"
           }
         },
         "e7bdd677-36eb-43bf-a540-a73029e2bf43": {
           "type": "review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/image_28.png",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Love It!",
-            "review_description": "I just started using my Omnilux contour face and My skin feels and looks great after every use. I'm hoping my sunspots and wrinkles will fade away.",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704.svg",
-            "review_author": "Sylvie B.",
+            "review_title": "No More Tired Eyes!!!",
+            "review_description": "Love love love!!!!\nGreat little device to target under the eyes!",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002764_5c6ae172-f7b4-4cbe-97f2-392d81402423.png",
+            "review_author": "Melanie H.",
             "review_verified_text": "Verified buyer"
           }
         }
@@ -689,6 +702,11 @@
         "a136d047-2dd8-4976-a57a-be0d54efdaff",
         "e7bdd677-36eb-43bf-a540-a73029e2bf43"
       ],
+      "custom_css": [
+        ".hoox-reviews{min-height:auto;}",
+        ".hoox-reviews__item {min-height: 350px;}",
+        "@media (max-width: 600px) {.hoox-reviews__item {min-height: 260px; }}"
+      ],
       "settings": {
         "section_id": "#",
         "section_title": "Join 275K+ others loving the skin they’re in"
@@ -700,11 +718,11 @@
         "1433940b-1449-41e7-afc5-dc679a408424": {
           "type": "column-title",
           "settings": {
-            "first_column_title_one": "Medical-grade LEDs",
-            "first_column_title_two": "Backed by 40+ peer reviewed clinical studies",
-            "first_column_title_three": "FDA-cleared, TGA-approved, CE-certified",
-            "first_column_title_four": "Supported by 20+ years of brand research",
-            "first_column_title_five": "Ultra-contoured fit with adjustable straps",
+            "first_column_title_one": "Red and near-infrared LEDs to target new collagen production",
+            "first_column_title_two": "Penetrates deep below the skin barrier to repair cells",
+            "first_column_title_three": "Peptide-rich patches + LED combo for superior results",
+            "first_column_title_four": "FDA-cleared + CE-certified",
+            "first_column_title_five": "Supported by 20+ years of brand research",
             "first_column_title_six": "2 year warranty"
           }
         },
@@ -716,7 +734,7 @@
             "table_column_title_one": "",
             "table_column_tick_one_true": false,
             "table_column_tick_one_false": false,
-            "table_column_one_img": "shopify:\/\/shop_images\/Medical-Grade_LED_Light_Therapy_At_Home_By_Omnilux-8_1.svg",
+            "table_column_one_img": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-13T093800.598.png",
             "table_column_one_img_mobile": "shopify:\/\/shop_images\/Omnilux_logo_mob.svg",
             "table_column_title_two": "",
             "table_column_tick_two_true": true,
@@ -743,7 +761,7 @@
           "settings": {
             "compare_highlight_column_color": "",
             "table_column_highlight": false,
-            "table_column_title_one": "Other LED\u2028Brands",
+            "table_column_title_one": "Traditional Eye Patches",
             "table_column_tick_one_true": false,
             "table_column_tick_one_false": false,
             "table_column_title_two": "",
@@ -773,7 +791,7 @@
         "9c7e4deb-9cc1-4981-9366-a01918a9703a"
       ],
       "settings": {
-        "compare_headline": "The dermatologist's choice",
+        "compare_headline": "6 reasons to choose",
         "compare_section_first_image": "shopify:\/\/shop_images\/Group_3_5a79dcd5-7a58-467d-90fa-5e8e001461cc.svg",
         "compare_section_last_image": "shopify:\/\/shop_images\/Group_2.svg"
       }
@@ -788,11 +806,11 @@
     "7cddaa24-622a-4429-a62a-cd918d1f673e": {
       "type": "hoox-protect",
       "settings": {
-        "hoox_protect_image": "shopify:\/\/shop_images\/protect_your_most_recognizable_feature-desktop.jpg",
-        "hoox_protect_image_mobile": "shopify:\/\/shop_images\/Protect_Your_Most_Recognizable_Feature_mob.png",
-        "hoox_protect_title": "Protect Your Most Recognizable Feature",
+        "hoox_protect_image": "shopify:\/\/shop_images\/Hoox_LP_Footer_Image_Mobile_4.png",
+        "hoox_protect_image_mobile": "shopify:\/\/shop_images\/Hoox_LP_Footer_Image_1.png",
+        "hoox_protect_title": "Younger-looking skin is waiting",
         "hoox_protect_btn_url": "#hoox-shop",
-        "hoox_protect_btn_text": "START GLOWING TODAY",
+        "hoox_protect_btn_text": "TRY IT FOR YOURSELF",
         "hoox_protect_shipping": "FREE Shipping | 30-Day Money-Back Guarantee"
       }
     }
@@ -803,6 +821,7 @@
     "832457c1-0171-4350-ad70-04b074b499f1",
     "585eba5a-4f3a-4591-991d-923ed537d55f",
     "26e48694-ed25-458d-b9c5-4b86cbd64b70",
+    "hoox_results_JimrzQ",
     "dd98148d-76e8-4e14-8398-6b17b61034dd",
     "c541efe8-6e88-4742-93c5-578b7e5c0752",
     "c7458cec-8732-46b2-97a9-601f8b3f28bf",

@@ -61,3 +61,9 @@
         width: auto;
     }
 }
+
+@media screen and (min-width: 768px) {
+  .hoox-how-to__items-wrapper .swiper-slide {
+    max-width: 300px;
+  }
+}

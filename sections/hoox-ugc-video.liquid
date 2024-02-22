@@ -22,7 +22,11 @@
           <div class="swiper-slide">
             <div class="hoox-ugc-videos__video">
               {% if videoURL contains 'youtube.com' %}
-                {% assign video_id = videoURL | split: 'watch?v=' | last %}
+                {% if videoURL contains 'watch?v=' %}
+                  {% assign video_id = videoURL | split: 'watch?v=' | last %}
+                {% else %}
+                  {% assign video_id = videoURL | split: '/shorts/' | last %}
+                {%  endif %}
                 {% assign youtube_embed_url = "https://www.youtube.com/embed/" | append: video_id %}
                 <iframe
                   width="100%"

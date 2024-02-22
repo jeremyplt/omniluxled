@@ -188,6 +188,19 @@
       </div>
     </noscript>
 
+    {% assign skioSellingPlanGroups = product.selling_plan_groups | where: 'app_id', 'SKIO' %}
+  {% if skioSellingPlanGroups.size > 0 %}
+    <skio-plan-picker 
+      product='{{ product | json | escape }}'
+      selectedVariant='{{ product.selected_or_first_available_variant | json | escape }}'
+      formId='{{ product_form_id }}'
+      currency='{{ cart.currency.iso_code }}'
+      >
+    </skio-plan-picker>
+    <input type="hidden" aria-hidden="true" name="selling_plan" value="">
+    <script src="{{ 'skio-plan-picker-component.js' | asset_url }}" type="module"></script>
+  {% endif %}
+
     <div class='hoox-shop__atc-wrapper'>
       <div class="pe-0">
         {% unless product.id == 7991999987874 -%}

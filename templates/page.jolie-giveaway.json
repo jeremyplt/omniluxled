@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "klaviyo_form_C4W9hV": {
+      "type": "klaviyo-form",
+      "settings": {
+        "desktop-image": "shopify:\/\/shop_images\/D2C_Email_SMS_Sign_Up_Landing_Page_9.png",
+        "mobile-image": "shopify:\/\/shop_images\/D2C_Email_SMS_Sign_Up_Landing_Page_8.png",
+        "form-code": "<div class=\"klaviyo-form-Ww6Zfv\"><\/div>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "klaviyo_form_C4W9hV"
+  ]
+}

@@ -264,6 +264,15 @@
             "after_image_text": "After"
           }
         },
+        "a8cd80f9-92d5-4287-9834-a2f74fe4927f": {
+          "type": "results",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-13T081912.899.png",
+            "before_image_text": "Before",
+            "after_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-13T081932.046.png",
+            "after_image_text": "After"
+          }
+        },
         "96b38181-d923-4f8e-a04f-1f182cbdb582": {
           "type": "results",
           "settings": {
@@ -299,25 +308,15 @@
             "after_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-06T091804.392.png",
             "after_image_text": "After"
           }
-        },
-        "a8cd80f9-92d5-4287-9834-a2f74fe4927f": {
-          "type": "results",
-          "disabled": true,
-          "settings": {
-            "before_image": "shopify:\/\/shop_images\/Omnilux-Visible-Results5-Before.jpg",
-            "before_image_text": "Before",
-            "after_image": "shopify:\/\/shop_images\/Omnilux-Visible-Results5-After.jpg",
-            "after_image_text": "After"
-          }
         }
       },
       "block_order": [
         "4e334398-0a1e-47da-9d00-d46fb78e2097",
+        "a8cd80f9-92d5-4287-9834-a2f74fe4927f",
         "96b38181-d923-4f8e-a04f-1f182cbdb582",
         "b81b48a7-e0ac-448e-a6c0-04740625c846",
         "023e04a2-75ca-4f5b-9b31-336b54e90233",
-        "58336f75-5dac-41e8-b8dc-ddde511e2ccd",
-        "a8cd80f9-92d5-4287-9834-a2f74fe4927f"
+        "58336f75-5dac-41e8-b8dc-ddde511e2ccd"
       ],
       "settings": {
         "section_title": "Visible results"
@@ -464,7 +463,7 @@
         "shop_product_description": "FDA-cleared, dermatologist-recommended red light therapy device with clinically proven results for men's skin rejuvenation.",
         "shop_product_upsell": "hyaluronic-acid-serum",
         "shop_product_upsell_title": "Supercharge Your Results",
-        "shop_product_upsell_description": "Pairs perfectly with Contour Face when used during treatment.",
+        "shop_product_upsell_description": "Enhances the effects of Omnilux Men when used during treatment.",
         "shop_product_upsell_stars": "<svg width=\"96\" height=\"17\" viewbox=\"0 0 96 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M8 0.399902L10.3511 5.16383L15.6085 5.92777L11.8042 9.63597L12.7023 14.872L8 12.3999L3.29772 14.872L4.19577 9.63597L0.391548 5.92777L5.64886 5.16383L8 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M28 0.399902L30.3511 5.16383L35.6085 5.92777L31.8042 9.63597L32.7023 14.872L28 12.3999L23.2977 14.872L24.1958 9.63597L20.3915 5.92777L25.6489 5.16383L28 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M48 0.399902L50.3511 5.16383L55.6085 5.92777L51.8042 9.63597L52.7023 14.872L48 12.3999L43.2977 14.872L44.1958 9.63597L40.3915 5.92777L45.6489 5.16383L48 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M68 0.399902L70.3511 5.16383L75.6085 5.92777L71.8042 9.63597L72.7023 14.872L68 12.3999L63.2977 14.872L64.1958 9.63597L60.3915 5.92777L65.6489 5.16383L68 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M88 0.399902L90.3511 5.16383L95.6085 5.92777L91.8042 9.63597L92.7023 14.872L88 12.3999L83.2977 14.872L84.1958 9.63597L80.3915 5.92777L85.6489 5.16383L88 0.399902Z\" fill=\"#99552B\"><\/path>\n<\/svg>",
         "shop_gallery_bagde": "SIGN UP & SAVE 10%"
       }
@@ -610,19 +609,19 @@
         "218fdb2e-b7d3-452a-bfb5-be6421a893af": {
           "type": "video",
           "settings": {
-            "video_link": "https:\/\/www.youtube.com\/watch?v=\/8La4qgpqGY0"
+            "video_link": "https:\/\/www.youtube.com\/watch?v=kzAzXrATDNs"
           }
         },
         "a258e6e9-e3cc-4fbf-bd1d-a984c6f7b38d": {
           "type": "video",
           "settings": {
-            "video_link": "https:\/\/youtube.com\/watch?v=\/1Qlhsv_1Z4I"
+            "video_link": "https:\/\/www.youtube.com\/watch?v=b_RImV9qmq0"
           }
         },
         "b25efe71-81a5-4514-933c-4946d43d27d4": {
           "type": "video",
           "settings": {
-            "video_link": "https:\/\/youtube.com\/watch?v=\/Rws2zDzlr9M"
+            "video_link": "https:\/\/youtube.com\/watch?v=2KCg9fCNryI"
           }
         }
       },

@@ -19,14 +19,15 @@
           class="swiper-slide d-flex {% if section.settings.content_position != "1" %} align-items-end {% endif %}"
           data-slide-type="image">
           <picture>
+          {%- comment -%}
             {%- if mobileImage.width <= 415 -%}<source
                 media="(max-width: 415px)"
                 srcset="{{ mobileImage | image_url: width: 415}}">{%- endif -%}
                  {%- if mobileImage.width >= 416 -%}<source
                 media="(max-width: 416px)"
                 srcset="{{ mobileImage | image_url: width: 416}}">{%- endif -%}
-                
-            {%- if mobileImage.width >= 550 -%}<source
+                {%- endcomment -%}
+            {%- if mobileImage.width <= 550 -%}<source
                 media="(max-width: 550px)"
                 srcset="{{ mobileImage | image_url: width: 550 }}">{%- endif -%}
             {%- if mobileImage.width >= 767 -%}<source

@@ -99,13 +99,6 @@ ul {
 }
 
 
-@media(min-width: 768px) {
-    .hoox-title {
-        font-size: 46px;
-        letter-spacing: 0;
-    }
-}
-
 .hoox-btn {
     display: flex;
     align-items: center;
@@ -117,6 +110,14 @@ ul {
     background-color: var(--hoox-color-black);
     height: 48px;
     width: 100%;
+}
+
+@media(min-width: 768px) {
+    .hoox-title {
+        font-size: 46px;
+        letter-spacing: 0;
+    }
+  .hoox-sticky-bar-wrapper.active .hoox-btn{max-width:330px;}
 }
 
 /* Utility classes*/
