@@ -1,36 +1,38 @@
-<div class="pre-order-info">
-    <div class="pre-order-info__inner">
-        <h3 class="pre-order-info__heading">
-            {{ block.settings.heading }}
-        </h3>
-        <div class="pre-order-info__description">
-            {{ block.settings.description }}
+{% if product.metafields.pre_order.date_step_1 != blank and product.metafields.pre_order.date_step_2 and product.metafields.pre_order.date_step_3 %}
+    <div class="pre-order-info">
+        <div class="pre-order-info__inner">
+            <h3 class="pre-order-info__heading">
+                {{ block.settings.heading }}
+            </h3>
+            <div class="pre-order-info__description">
+                {{ block.settings.description }}
+            </div>
+            <ul class="pre-order-info__status">
+                <li class="pre-order-info__step step--1">
+                    <div class="pre-order-info__date">
+                        {% render 'formatted-date', date: product.metafields.pre_order.date_step_1 %}
+                    </div>
+                    <div class="pre-order-info__progress">
+                        <span class="pre-order-info__progress-text">{{ block.settings.text_step_1 }}</span>
+                    </div>
+                </li>
+                <li class="pre-order-info__step step--2">
+                    <div class="pre-order-info__date">
+                        {% render 'formatted-date', date: product.metafields.pre_order.date_step_2 %}
+                    </div>
+                    <div class="pre-order-info__progress" style="--progress-width: {{ product.metafields.pre_order.progress_step_2 }}%">
+                        <span class="pre-order-info__progress-text">{{ block.settings.text_step_2 }}</span>
+                    </div>
+                </li>
+                <li class="pre-order-info__step step--3">
+                    <div class="pre-order-info__date">
+                        {% render 'formatted-date', date: product.metafields.pre_order.date_step_3 %}
+                    </div>
+                    <div class="pre-order-info__progress">
+                        <span class="pre-order-info__progress-text">{{ block.settings.text_step_3 }}</span>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <ul class="pre-order-info__status">
-            <li class="pre-order-info__step step--1">
-                <div class="pre-order-info__date">
-                    {% render 'formatted-date', date: product.metafields.pre_order.date_step_1 %}
-                </div>
-                <div class="pre-order-info__progress">
-                    <span class="pre-order-info__progress-text">{{ block.settings.text_step_1 }}</span>
-                </div>
-            </li>
-            <li class="pre-order-info__step step--2">
-                <div class="pre-order-info__date">
-                    {% render 'formatted-date', date: product.metafields.pre_order.date_step_2 %}
-                </div>
-                <div class="pre-order-info__progress" style="--progress-width: {{ product.metafields.pre_order.progress_step_2 }}%">
-                    <span class="pre-order-info__progress-text">{{ block.settings.text_step_2 }}</span>
-                </div>
-            </li>
-            <li class="pre-order-info__step step--3">
-                <div class="pre-order-info__date">
-                    {% render 'formatted-date', date: product.metafields.pre_order.date_step_3 %}
-                </div>
-                <div class="pre-order-info__progress">
-                    <span class="pre-order-info__progress-text">{{ block.settings.text_step_3 }}</span>
-                </div>
-            </li>
-        </ul>
     </div>
-</div>
+{% endif %}
