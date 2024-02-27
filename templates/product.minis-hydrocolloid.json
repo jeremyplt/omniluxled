@@ -130,7 +130,7 @@
           }
         },
         "abf6513d-4e65-4bdd-a827-43bf401b3f13": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
@@ -149,6 +149,16 @@
         "b253ffff-d04d-43a0-9d68-fabdd77b595a": {
           "type": "product_form",
           "settings": {
+          }
+        },
+        "pre_order_info_qm7XeQ": {
+          "type": "pre-order-info",
+          "settings": {
+            "heading": "Next batch ships {{ product.metafields.pre_order.date_step_2 | metafield_text }}",
+            "description": "<p>Due to high demand, our {{ product.title }}  is sold out. Order now and secure yours from the next shipment.<\/p>",
+            "text_step_1": "Sold out",
+            "text_step_2": "{{ product.metafields.pre_order.progress_step_2.value }}% Reserved",
+            "text_step_3": "In Production"
           }
         },
         "9f1de049-9d28-4e94-8dc3-d64735f73336": {
@@ -239,6 +249,7 @@
         "3b316236-d91e-4dd0-953a-173c1f40bfcf",
         "8e1316df-f2b1-417b-9d0e-96f8b25e8b7c",
         "b253ffff-d04d-43a0-9d68-fabdd77b595a",
+        "pre_order_info_qm7XeQ",
         "9f1de049-9d28-4e94-8dc3-d64735f73336",
         "3ec0cedf-fb32-4e6f-b392-8ad9d16f7103",
         "8a51062c-4d9c-422e-b490-fae013f03593",
@@ -1034,7 +1045,7 @@
       "type": "apps",
       "blocks": {
         "c660fc61-6aee-4551-8260-94cf88d1eaf0": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}",
             "widget_type": "combined_widget"
