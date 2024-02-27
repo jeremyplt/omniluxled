@@ -2105,3 +2105,106 @@ html .cbb-frequently-bought-recommendations-wrap {
 .cbb-frequently-bought-add-button[disabled="disabled"], .addtocartbtn[disabled="disabled"] {
   opacity: 0.7;
 }
+
+/* Product Page | Pre order block */
+
+[data-product-preorder-message] {
+  display: none;
+}
+
+.pre-order-info__inner {
+  padding: 1.4rem 2rem;
+  background-color: rgba(235, 244, 244, 1);
+}
+
+.pre-order-info__heading {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.pre-order-info__status {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.pre-order-info__step {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: .5rem;
+}
+
+.pre-order-info__date {
+  min-width: 120px;
+}
+
+.pre-order-info__progress {
+  flex: 1;
+  padding: .35rem 1rem;
+  border: solid 1px black;
+  font-size: .8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.pre-order-info__progress {
+  background-color: white;
+}
+
+.pre-order-info__step.step--1 .pre-order-info__progress {
+  background-color: black;
+  color: white;
+}
+
+.pre-order-info__step.step--2 .pre-order-info__progress {
+  color: white;
+  position: relative;
+}
+
+.pre-order-info__progress-text {
+  position: relative;
+  z-index: 1;
+}
+
+.pre-order-info__step.step--2 .pre-order-info__progress:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: var(--progress-width);
+  background-color: black;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@media (max-width: 749px) {
+  .pre-order-info__inner {
+    padding: 1rem;
+  }
+
+  .pre-order-info__description, .pre-order-info__date {
+    font-size: .85rem;
+  }
+
+  .pre-order-info__progress-text {
+    font-size: .75rem;
+  }
+  
+  .pre-order-info__step {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pre-order-info__date {
+    width: 100%;
+  }
+
+  .pre-order-info__progress {
+    width: 100%;
+  }
+}
