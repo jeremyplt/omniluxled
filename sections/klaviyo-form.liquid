@@ -163,6 +163,34 @@
       bottom: 0%;
     }
   }
+
+  {% if section.settings.desktop_form_position == 'right' %}
+    body.template-page .klaviyo-form--code .klaviyo-form [data-testid="form-component"] p {
+      color: #000 !important;
+    }
+    body.template-page .klaviyo-form--code .klaviyo-form [data-testid="form-component"] button[type="button"]:hover {
+      background-color: #000 !important;
+      color: #fff !important;
+    }
+    body.template-page .klaviyo-form--code .klaviyo-form [data-testid="form-component"] button[type="button"]:has(+ input[type="tel"]) img + svg {
+      fill: #fff !important;
+    }
+    @media (min-width: 768px) {
+      body.template-page .klaviyo-form--code {
+        top: 48%;
+        right: 0;
+      }
+      body.template-page .klaviyo-form--code .klaviyo-form {
+        padding-right: calc( 16px + 10px ) !important;
+        padding-left: 16px !important;
+      }
+    }
+    @media (max-width: 450px) {
+      body.template-page .klaviyo-form--code {
+        bottom: 0%;
+      }
+    }
+  {% endif %}
 </style>
 
 {% schema %}
@@ -173,6 +201,22 @@
         "type": "image_picker",
         "id": "desktop-image",
         "label": "Desktop Image"
+      },
+      {
+        "type": "select",
+        "id": "desktop_form_position",
+        "label": "Desktop form position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
       },
       {
         "type": "image_picker",
