@@ -207,6 +207,9 @@
     },
     "hoox_results_z9WdRk": {
       "type": "hoox-results",
+      "custom_css": [
+        ".hoox-results__item-text {display: none;}"
+      ],
       "settings": {
         "section_title": "Minis in the wild"
       }

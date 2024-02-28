@@ -167,6 +167,16 @@
           "settings": {
           }
         },
+        "pre_order_info_fTFiaF": {
+          "type": "pre-order-info",
+          "settings": {
+            "heading": "Next batch ships {{ product.metafields.pre_order.date_step_2 | metafield_text }}",
+            "description": "<p>Due to high demand, our {{ product.title }}  is sold out. Order now and secure yours from the next shipment.<\/p>",
+            "text_step_1": "Sold out",
+            "text_step_2": "{{ product.metafields.pre_order.progress_step_2.value }}% Reserved",
+            "text_step_3": "In Production"
+          }
+        },
         "3ec0cedf-fb32-4e6f-b392-8ad9d16f7103": {
           "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/onpage_offers\/001ec440-29ea-4cbf-9265-4963fa825261",
           "settings": {
@@ -249,6 +259,7 @@
         "8e1316df-f2b1-417b-9d0e-96f8b25e8b7c",
         "9f1de049-9d28-4e94-8dc3-d64735f73336",
         "b253ffff-d04d-43a0-9d68-fabdd77b595a",
+        "pre_order_info_fTFiaF",
         "3ec0cedf-fb32-4e6f-b392-8ad9d16f7103",
         "8a51062c-4d9c-422e-b490-fae013f03593",
         "3566c17b-280d-454a-9912-d38389f432be",

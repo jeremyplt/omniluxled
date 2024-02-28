@@ -139,6 +139,16 @@
           "settings": {
           }
         },
+        "pre_order_info_WC9LzB": {
+          "type": "pre-order-info",
+          "settings": {
+            "heading": "Next batch ships {{ product.metafields.pre_order.date_step_2 | metafield_text }}",
+            "description": "<p>Due to high demand, our {{ product.title }}  is sold out. Order now and secure yours from the next shipment.<\/p>",
+            "text_step_1": "Sold out",
+            "text_step_2": "{{ product.metafields.pre_order.progress_step_2.value }}% Reserved",
+            "text_step_3": "In Production"
+          }
+        },
         "847ff075-3bf5-4b88-bff7-4982bbafd833": {
           "type": "subtitle",
           "settings": {
@@ -202,6 +212,7 @@
         "3b316236-d91e-4dd0-953a-173c1f40bfcf",
         "8e1316df-f2b1-417b-9d0e-96f8b25e8b7c",
         "b253ffff-d04d-43a0-9d68-fabdd77b595a",
+        "pre_order_info_WC9LzB",
         "847ff075-3bf5-4b88-bff7-4982bbafd833",
         "product-tabs",
         "3fc244f3-9eea-4a61-874a-b551b0227aff",

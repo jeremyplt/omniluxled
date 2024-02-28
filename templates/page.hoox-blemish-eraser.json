@@ -220,6 +220,9 @@
       "block_order": [
         "results_nNGyhx"
       ],
+      "custom_css": [
+        ".hoox-results__item-text{display:none;}"
+      ],
       "settings": {
         "section_title": "See it in the wild"
       }
