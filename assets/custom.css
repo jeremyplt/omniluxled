@@ -2108,10 +2108,6 @@ html .cbb-frequently-bought-recommendations-wrap {
 
 /* Product Page | Pre order block */
 
-[data-product-preorder-message] {
-  display: none;
-}
-
 .pre-order-info__inner {
   padding: 1.4rem 2rem;
   background-color: rgba(235, 244, 244, 1);

@@ -270,6 +270,21 @@
     </button>
   </div>
 </div>
-<div data-product-preorder-message class="my-2"></div>
+
+  <div data-product-preorder-message class="my-2"></div>
 {% endform %}
 </product-form>
+
+{% liquid
+  assign has_new_preorder = false
+  if product.metafields.pre_order.date_step_1 != blank and product.metafields.pre_order.date_step_2 and product.metafields.pre_order.date_step_3
+    assign has_new_preorder = true
+  endif
+%}
+{% if has_new_preorder %}
+  <style>
+    [data-product-preorder-message] {
+      display: none;
+    }
+  </style>
+{% endif %}
