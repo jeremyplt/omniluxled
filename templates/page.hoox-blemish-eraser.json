@@ -207,8 +207,21 @@
     },
     "hoox_results_4YqYQM": {
       "type": "hoox-results",
+      "blocks": {
+        "results_nNGyhx": {
+          "type": "results",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/Web_Mini_HP_13.png",
+            "before_image_text": "",
+            "after_image_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "results_nNGyhx"
+      ],
       "settings": {
-        "section_title": "Minis in the wild"
+        "section_title": "See it in the wild"
       }
     },
     "dd98148d-76e8-4e14-8398-6b17b61034dd": {
