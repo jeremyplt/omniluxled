@@ -58,6 +58,8 @@
     padding: 0 16px 0 0;
 }
 
+.hoox-accordion__panel p{margin:0 0 1rem 0;}
+
 .hoox-accordion__panel span {
     font-weight: 700;
 }

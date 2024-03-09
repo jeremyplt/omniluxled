@@ -12907,6 +12907,9 @@ body .cc-compliance {
 .cookieconsent-wrapper .cc-compliance.cc-highlight .cc-btn:first-child:not(:hover) {
   color: rgb(0, 0, 0) !important;
 }
+body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
+  background-color: unset !important;
+}
 /*End Cookie Policy*/
 /* acsb-widget */
 html body .acsb-widget .acsb-hero,

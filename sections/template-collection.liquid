@@ -75,7 +75,7 @@
                               {% unless checkWholesaleProducts == true %}
                               {% unless product.tags contains productExcludeTag %}
                                   {% assign loopIndex = loopIndex | plus: 1 %}
-                                  <div data-prod-type="{{ product.type }}" class="col-6 col-lg-4 mb-5 mb-lg-7 d-flex align-items-stretch justify-content-around pb-lg-0 pb-1">
+                                  <div id="product-{{ loopIndex }}" data-prod-type="{{ product.type }}" class="col-6 col-lg-4 mb-5 mb-lg-7 d-flex align-items-stretch justify-content-around pb-lg-0 pb-1">
                                       {% render 'card-product-style-generic', product: product %}
                                   </div>
                                   {% render 'card-collection-promo', loopIndex: loopIndex, totalProducts: totalProducts %}
@@ -83,6 +83,17 @@
                             {% endunless %}
                          
                             {% endfor %}
+                          <script>
+    // Find the product-6 element
+var product6 = document.getElementById('product-6');
+
+// Check if the product-6 element exists
+if (product6) {
+    // Add HTML content after the product-6 element
+    product6.insertAdjacentHTML('beforebegin', '<div id="product-6-2" data-prod-type="LED mask" class="col-6 col-lg-4 mb-5 mb-lg-7 d-flex align-items-stretch justify-content-around pb-lg-0 pb-1"><img src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/afterpay.png?v=1706223903" alt="Aftersell"></div>');
+}
+
+</script>
                         </div>
                         {% if paginate.pages > 1 %}
                             <div class="row" data-pagination data-type="{{ section.settings.pagination_type }}">

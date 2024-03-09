@@ -1,3 +1,62 @@
+/*droplette giveaway*/
+@media(min-width:768px) and (max-width:1600px){
+  body.template-page.omnilux-x-droplette-giveaway-signup .klaviyo-form--code{top:42%!important;}
+}
+
+@media(min-width:768px) and (max-width:1400px){
+  body.template-page.omnilux-x-droplette-giveaway-signup .klaviyo-form--code{top:36%!important;}
+.template-page.omnilux-x-droplette-giveaway-signup .klaviyo-form--desktop-image{min-height:700px;}
+.template-page.omnilux-x-droplette-giveaway-signup .klaviyo-form--desktop-image img{object-fit: cover;
+    height: 100%;
+    width: 100%;
+    min-height: 700px;}
+}
+
+/*new collection page design*/
+.template-collection #MainContent .card-product .badges,#collectionabhide{display:block}
+
+.template-collection #MainContent .card-product.rounded-0{border:1px solid #000!important;}
+.template-collection #MainContent .card-body{padding:0 20px 110px!important;}
+.template-collection #MainContent .card:not(:hover) .btn-card, .template-collection #MainContent .card:hover .btn-card-hide{opacity:1;pointer-events:all;display:block;}
+.template-collection #MainContent .review-box.justify-content-lg-end{justify-content:flex-start!important;margin:10px 0 0 0!important;}
+.template-collection #MainContent .card-body .review-box-wrap{flex-direction:column-reverse!important;}
+.template-collection #MainContent .card-img a.product-link{margin-top:0;}
+.template-collection #MainContent .card-title .product-link{font-size: 18px!important;font-weight: 700!important;margin-top:10px!important;display:block;}
+.template-collection #MainContent .badgepills img{margin:0;}
+.template-collection #MainContent .newcollectiondescription{color:#000000;font-size:16px;text-align:center;padding-bottom:20px;}
+.template-collection .card-product .badges{padding:0!important;}
+
+.template-collection #MainContent .card-body .pt-1.price-with-btn-col{padding-top:0!important;}
+
+.template-collection #MainContent .price-with-btn{position:absolute!important;bottom:0;display: block!important;width:calc(100% - 20px)}
+.template-collection #MainContent .dualPrice .money{position:relative;display:block;font-size: 22px;font-weight: 700;line-height: 22px;margin-bottom:15px;}
+.template-collection #MainContent .data-submit-btn{margin-bottom:15px;padding:15px 0!important;color:#fff;background:#000;position:relative;display:block;width:calc(100% - 20px);font-size: 16px;font-weight: 800;line-height: 17px;}
+.template-collection #MainContent .btn.loading .add-text{color:#fff!important;opacity:1!important;}
+.template-collection #MainContent #collection-product-grid{max-width:1200px;margin:0 auto;}
+.template-collection #MainContent .badgepills img{max-height:35px;width:auto;}
+.template-collection #MainContent .collection-grid-section .row,.template-collection #MainContent .collection-grid-section .col{padding-left:0!important;padding-right:0!important;}
+
+.template-collection #MainContent .card-product .badges{left:auto;right:0;top:0;}
+
+@media(max-width:999px){
+  .template-collection #MainContent .card-body .review-box-wrap{flex-direction: column!important;}
+  .template-collection #MainContent .card-title .product-link{margin-top:0!important; margin-bottom: 10px!important;}
+ .template-collection #MainContent .card-footer .row>*{padding-left:0!important;padding-right:20px!important;}
+  .template-collection #MainContent .data-submit-btn{width:100%!important;}
+  .template-collection #MainContent .card-body{padding:0 20px 115px!important}
+  .template-collection #MainContent .data-submit-btn{margin-bottom:20px!important;}
+}
+
+@media(max-width:600px){
+.template-collection #MainContent .collection-grid-section .grid-box{display:none!important;}
+.template-collection #MainContent .card-body .row.no-gutter .review-box-wrap{flex-direction: column!important;}
+  .template-collection #MainContent .card-title .product-link{margin-bottom:5px!important;}
+}
+
+@media(max-width:400px){
+.template-collection #MainContent . cart-drawer .dualPrice .money{font-size:16px!important;font-weight:normal!important;margin-bottom:0!important;}
+}
+
 
 /*hoox page changes*/
 .hooxupsellwrapper{background:#ebf4f4;padding: 16px;margin-bottom:32px;}
@@ -13,10 +72,13 @@ p.hoox-shop__upsell-description{font-style:italic;}
 .hoox-reviews__arrows{margin:25px auto 0!important;}
 
 @media(max-width:600px){
+  .card-carousel .swiper-slide{padding-right:23px;}
+  .skin-images{padding-right:0px!important;}
+  .hoox-treatment__subtitle{font-size:15px!important;}
   .hoox-hero__description,.hoox-shop__informations .hoox-shop__images,.hoox-shop__images img,.hoox-ugc-videos__title,.hoox-reviews__title,.b-comparison-table__headline{max-width:100%!important;}
   .hoox-hero__items-mob{max-width:90%!important;}
   .hoox-hero__item{max-width:22%!important;}
-.hoox-studies__title.hoox-title,.b-comparison-table__headline,.hoox-title,.hoox-faq__title{font-size:28px!important;}
+.hoox-studies__title.hoox-title,.b-comparison-table__headline,.hoox-title,.hoox-faq__title{font-size:27px!important;}
   .hoox-treatment__title{font-size:25px!important;}
   .hoox-studies__items{width:100%;}
   .hoox-studies__range-box{flex:1;}
@@ -2164,6 +2226,12 @@ html .cbb-frequently-bought-recommendations-wrap {
 .pre-order-info__progress-text {
   position: relative;
   z-index: 1;
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+.pre-order-info__step step--2 .pre-order-info__progress-text {
+  mix-blend-mode: exclusion;  
 }
 
 .pre-order-info__step.step--2 .pre-order-info__progress:before {

@@ -277,7 +277,7 @@
 
 {% liquid
   assign has_new_preorder = false
-  if product.metafields.pre_order.date_step_1 != blank and product.metafields.pre_order.date_step_2 != blank and product.metafields.pre_order.date_step_3 != blank and localization.country == 'United States' 
+  if product.metafields.pre_order.date_step_1 != blank or product.metafields.pre_order.date_step_2 != blank or product.metafields.pre_order.date_step_3 != blank or localization.country == 'United States' 
     assign has_new_preorder = true
   endif
 %}

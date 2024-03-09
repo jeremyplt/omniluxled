@@ -144,6 +144,10 @@
         background: linear-gradient(182deg, rgba(254, 253, 249, 0.80) 2.42%, rgba(254, 253, 249, 0.00) 46.58%), linear-gradient(96deg, #F7DAC6 4.81%, #F9ECD9 55.75%);
     }
 
+.template-page.eye-brightener .hoox-hero__wrapper{height:670px;}
+.template-page.blemish-eraser .hoox-hero__wrapper,.template-page.minis .hoox-hero__wrapper{height:645px;}
+.template-page.skin-corrector .hoox-shop__gallery .hoox-shop__video-holder,.template-page.blemish-eraser .hoox-shop__gallery .hoox-shop__video-holder,.template-page.eye-brightener .hoox-shop__gallery .hoox-shop__video-holder{display:none;}
+
     .hoox-hero__content {
         flex: 1;
         padding-top: 37px;
@@ -224,4 +228,8 @@
   .hoox-hero__media img{object-position:bottom;}
   .hoox-hero__main-image.mobile{display:block;}
 .hoox-hero__main-image.desktop{display:none;}
+
+.hoox-hero__bullets li.hoox-hero__bullet{display:block;padding-left:20px;margin-bottom:10px;}
+  .hoox-hero__bullets li.hoox-hero__bullet:last-child{margin-bottom:0;}
+  .hoox-hero__bullets li.hoox-hero__bullet svg{margin-left:-20px;}
 }

@@ -13,19 +13,19 @@
         "024c5d8e-16af-4c49-b96c-575e58cf2c9f": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "Reduces fine lines and wrinkles"
+            "bullet_text": "Red and near-infrared light boosts collagen and soothes skin"
           }
         },
         "d3f5b179-09a1-4d77-b432-7eecb9bfa32f": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "Delivers a smoother, more youthful complexion"
+            "bullet_text": "Blue light clears away acne and blemishes"
           }
         },
         "8d4c1d26-ac76-4be7-8bc1-f25fbbd086fc": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "10 minute, at home, spa level treatment"
+            "bullet_text": "Paired with concentrated Hydrocolloid Patches for a more powerful spot treatment"
           }
         },
         "e7a9beb7-c5cd-4468-87d8-7b8b9860e9c1": {
@@ -66,13 +66,13 @@
         "section_star_image": "shopify:\/\/shop_images\/Frame_48097853.svg",
         "section_star_text": "275K+ Glowing Customers",
         "section_star_anchor_id": "#hoow-reviws",
-        "section_title": "Glow better in 2024",
-        "section_description": "Must-have skincare tools to boost collagen production & soothe skin in just 10 mins.",
+        "section_title": "Meet your supercharged spot treatments",
+        "section_description": "Precision LED light therapy to tackle blemishes, wrinkles, inflammation, and more.",
         "section_btn_text": "Transform My Skin",
         "section_btn_url": "#hoox-shop",
         "section_shipping_text": "FREE Shipping | 30-Day Money-Back Guarantee",
-        "section_main_image": "shopify:\/\/shop_images\/large-Hero_swap_c54ab7ec-1130-4aa2-a72f-82891e49e6c3.png",
-        "section_main_image_mobile": "shopify:\/\/shop_images\/rawbig_c1f9f02a-9a15-4668-8ddf-8f4716c92aac.jpg"
+        "section_main_image": "shopify:\/\/shop_images\/Web_Mini_HP_24.png",
+        "section_main_image_mobile": "shopify:\/\/shop_images\/Hoox_Mini_LP_Hero_Mobile_1.png"
       }
     },
     "832457c1-0171-4350-ad70-04b074b499f1": {
@@ -120,34 +120,55 @@
         "title": "trusted by:"
       }
     },
+    "global_featured_collection_9a9xNn": {
+      "type": "global-featured-collection",
+      "settings": {
+        "fluid_layout": false,
+        "nav_dots": true,
+        "nav_arrows": true,
+        "nav_arrows_outside": false,
+        "heading_txt": "Your favorites",
+        "lead_txt": "",
+        "home_featured_product": "eye-brightener",
+        "featured_product_1": "blemish-eraser",
+        "featured_product_2": "skin-corrector",
+        "section_bg_color": "#ffffff",
+        "section_txt_color": "#000000",
+        "btn_text": "SHOP ALL MINIS",
+        "btn_url": "shopify:\/\/collections\/minis",
+        "btn_type": "",
+        "btn_variant": "primary",
+        "btn_size": ""
+      }
+    },
     "585eba5a-4f3a-4591-991d-923ed537d55f": {
       "type": "hoox-safe",
       "blocks": {
         "29fbcc08-6999-4b76-b331-b53eec6d4743": {
           "type": "props",
           "settings": {
-            "hoox_safe_image": "shopify:\/\/shop_images\/safe_and_effective.jpg",
+            "hoox_safe_image": "shopify:\/\/shop_images\/Hoox_Mini_LPs_12.png",
             "hoox_safe_headline": "Safe & effective",
-            "hoox_safe_text": "Reduces fine lines and wrinkles and improves the appearance of pigmentation and redness.",
+            "hoox_safe_text": "Engineered using Omnilux's proprietary medical technology, our Mini LED devices harness the power of red, near-infrared and blue light to naturally improve the appearance and health of your skin.",
             "hoox_safe_benefit_image1": "shopify:\/\/shop_images\/Icon_FDA_Cleared_png.png",
-            "hoox_safe_benefit_image2": "shopify:\/\/shop_images\/Icon_TGA_Approved_png.png",
-            "hoox_safe_benefit_image3": "shopify:\/\/shop_images\/Icon_CE_Certified_png.png"
+            "hoox_safe_benefit_image2": "shopify:\/\/shop_images\/Icon_CE_Certified_png.png",
+            "hoox_safe_benefit_image3": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-20T144715.658.png"
           }
         },
         "723c9410-809c-48d9-b566-eadb3c58e607": {
           "type": "props",
           "settings": {
-            "hoox_safe_image": "shopify:\/\/shop_images\/premium_quality.jpg",
-            "hoox_safe_headline": "Premium quality",
-            "hoox_safe_text": "Medical-grade and dermatologist-approved, it’s the most powerful LED device on the market."
+            "hoox_safe_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-13T102606.005.png",
+            "hoox_safe_headline": "Superior spot treatments",
+            "hoox_safe_text": "Upgrade your skincare game with medical-grade LEDs and Hydrocolloid Patches infused with active-rich ingredients. This advanced combination revolutionizes traditional spot treatments for significantly better results."
           }
         },
         "66e98a01-195d-4a1b-8414-cf995d11033a": {
           "type": "props",
           "settings": {
-            "hoox_safe_image": "shopify:\/\/shop_images\/science_backed.jpg",
-            "hoox_safe_headline": "Science-backed",
-            "hoox_safe_text": "Developed with 20 years of research and backed by 40+ peer-reviewed clinical papers."
+            "hoox_safe_image": "shopify:\/\/shop_images\/Hoox_Mini_LPs.png",
+            "hoox_safe_headline": "Derm-approved",
+            "hoox_safe_text": "\"I’m a huge believer in using LED light therapy on patients who are looking to address various skin concerns. The Omnilux Mini devices are total game changers! Now you can easily target specific problem areas, whether it's a single acne spot or fine lines around the eye.\" <br> - Dr. Jared Jagdeo, MD"
           }
         }
       },
@@ -162,35 +183,132 @@
         "hoox_safe_guarante_text": "FREE Shipping | 30-Day Money-Back Guarantee"
       }
     },
+    "global_info_block_pxfwdQ": {
+      "type": "global-info-block",
+      "blocks": {
+        "content_bBfA6a": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Web_Mini_HP_22.png",
+            "title": "<p>\"I want to de-puff, brighten, and firm the under eye area.\"<\/p>",
+            "txt_info": "<p>The Eye Brightener uses red and near-infrared light to diminish fine lines, reduce eye bags, and brighten dark circles for younger-looking skin.<\/p>",
+            "btn_txt": "SHOP EYE BRIGHTENER",
+            "btn_url": "shopify:\/\/products\/eye-brightener"
+          }
+        },
+        "content_m44nqY": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Web_Mini_HP_21.png",
+            "title": "<p>\"I want a supercharged pimple patch to clear breakouts.\"<\/p>",
+            "txt_info": "<p>The Blemish Eraser uses blue and red light to kill acne causing bacteria and calm inflammation associated with breakouts for clearer skin.<\/p>",
+            "btn_txt": "SHOP BLEMISH ERASER",
+            "btn_url": "shopify:\/\/products\/blemish-eraser"
+          }
+        },
+        "content_JBfkqg": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Web_Mini_HP_23.png",
+            "title": "<p>\"I want to reduce the look of age spots and improve skin tone.\"<\/p>",
+            "txt_info": "<p>The Skin Corrector uses red and near-infrared light to boost collagen and reduce the appearance of pigmentation for a more rejuvenated complexion.<\/p>",
+            "btn_txt": "SHOP SKIN CORRECTOR",
+            "btn_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_bBfA6a",
+        "content_m44nqY",
+        "content_JBfkqg"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "anchorid": "",
+        "heading_txt": "What's your skin goal?",
+        "lead_txt": "Use this guide to find the right Mini device for you.",
+        "section_bg_color": "",
+        "section_txt_color": "#000000",
+        "btn_type": "",
+        "btn_variant": "primary",
+        "btn_size": ""
+      }
+    },
+    "global_image_with_text_Fgpwpk": {
+      "type": "global-image-with-text",
+      "blocks": {
+        "image_with_text_block_4dyRfj": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "What's included with your Mini",
+            "max_width": 530,
+            "txt": "<p>Each Mini LED device includes specially-formulated adhesive Hydrocolloid Patches that deliver extra skincare benefits and keeps your Mini right where you want it during your treatment.<br\/><br\/>Key ingredients:<\/p>",
+            "txt_liquid": "",
+            "step_heading": "",
+            "steps_captions": "<strong>Eye Brightener Hydrocolloid <\/strong>: Amino acid-rich peptides to firm and hydrate + niacinamide to brighten dark circles\n<strong>Blemish Eraser Hydrocolloid<\/strong>: Salicylic acid to clear blocked pores + green tea antioxidants to help soothe irritated skin\n<strong>Skin Corrector Hydrocolloid<\/strong>: Vitamin C to brightens skin tone + azelaic acid to reduce the appearance of dark spots",
+            "steps_captions_2": "",
+            "btn_txt": "",
+            "btn_link": "",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "watch_video_id": "",
+            "watch_mobile_video_id": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Hoox_Mini_LPs_2.png",
+            "alignment": "text-left",
+            "image_alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_block_4dyRfj"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "enable_background_tone": false,
+        "border_bottom": false,
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#000000"
+      }
+    },
     "26e48694-ed25-458d-b9c5-4b86cbd64b70": {
       "type": "hoox-how-to",
       "blocks": {
         "113949a6-f643-4968-91b9-1c7422018255": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/charge_the_controller.jpg",
-            "hoox_how_to_text": "Charge the controller and connect it to your mask."
+            "hoox_how_to_image": "shopify:\/\/shop_images\/MINI_HOW_TO_GLOW_UP_PDPS_4.png",
+            "hoox_how_to_text": "Charge the device by using the supplied charging cable."
           }
         },
         "0ff39d1f-a4b0-43c9-8cbb-dcd284089997": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/secure_the_mask.jpg",
-            "hoox_how_to_text": "Secure the mask on your head using the adjustable velcro straps."
+            "hoox_how_to_image": "shopify:\/\/shop_images\/MINI_HOW_TO_GLOW_UP_PDPS_5.png",
+            "hoox_how_to_text": "Peel back the amino acid-rich Hydrocolloid Patch adhesive side 1 (marked with a device icon) and adhere to the device."
           }
         },
         "a9d976ec-6405-473d-adb8-bb5f24e18114": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/start_the_10min_treatment.jpg",
-            "hoox_how_to_text": "Start the 10-minute treatment."
+            "hoox_how_to_image": "shopify:\/\/shop_images\/MINI_HOW_TO_GLOW_UP_PDPS_6.png",
+            "hoox_how_to_text": "Peel back adhesive side 2 (marked with a face icon) and place the device on the treatment area."
           }
         },
         "42fb2c7a-c3a1-4e11-b32d-90e5d20babee": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/remove_the_mask_and_enjoy.jpg",
-            "hoox_how_to_text": "Remove the mask and enjoy the glow."
+            "hoox_how_to_image": "shopify:\/\/shop_images\/MINI_HOW_TO_GLOW_UP_PDPS_7.png",
+            "hoox_how_to_text": "Press and hold the button to activate the skin-enhancing power of your Mini."
           }
         }
       },
@@ -201,8 +319,8 @@
         "42fb2c7a-c3a1-4e11-b32d-90e5d20babee"
       ],
       "settings": {
-        "hoox_how_to_title": "How to glow up:",
-        "hoox_how_to_subtitle": "Unlock flawless skin with three to five 10-minute treatments per week."
+        "hoox_how_to_title": "How to use:",
+        "hoox_how_to_subtitle": "Unlock your best skin with three to five 10-minute treatments per week."
       }
     },
     "hoox_results_VEnHKG": {
@@ -282,6 +400,81 @@
         "section_title": "Visible results"
       }
     },
+    "d55c37d3-2303-4327-88c7-dd492dffa149": {
+      "type": "hoox-faq",
+      "blocks": {
+        "f425b463-f4a4-43ed-ae56-5ed6bfb60519": {
+          "type": "faq",
+          "settings": {
+            "hoox_faq_question": "How do the Mini devices work?",
+            "hoox_faq_answer": "The Mini devices use clinically proven wavelengths of light (red, near-infrared, and blue) and optimized light energy output to work at a cellular level to stimulate new collagen and reduce fine lines and wrinkles, sun damage, and acne.\n\nThe red wavelength (633nm) reduces inflammation, pigmentation, and redness and helps prompt cellular repair and circulation for a more vibrant complexion. The red wavelength can be found in the Skin Corrector, Eye Brightener, and Blemish Eraser devices.\n\n\nThe near-infrared wavelength (830nm) targets deeper fibroblast cells, stimulating new collagen and elastin production, resulting in plumper, firmer, more youthful looking skin. The red wavelength can be found in the Skin Corrector and Eye Brightener devices.\n\n\nThe blue wavelength (415nm) eliminates bacteria on the surface of the skin to neutralize acne flare ups. The blue wavelength can be found in the Blemish Eraser device."
+          }
+        },
+        "4ab4d7d5-21be-459b-9e5a-f179e6bb6105": {
+          "type": "faq",
+          "settings": {
+            "hoox_faq_question": "How do the Mini devices differ from each other?",
+            "hoox_faq_answer": "The Omnilux Mini Skin Corrector and Eye Brightener use red and near-infrared light to reduce fine line, wrinkles, and improve overall skin tone. They are shaped differently for different parts of your face.\n\nThe Eye Brightener is shaped like a crescent to fit under and around the eye area, the Skin corrector is round to target areas like your cheek or your forehead.\n\n\nThe Blemish Eraser device uses red and blue light to treat acne breakouts. Although all Mini devices have red light, the light is used in combination with other wavelengths (near-infrared and blue) to target two completely different skin concerns.\n\n\nEach Mini's corresponding Hydrocolloid Patches contain skincare ingredients specific to the device's treatment application (ie, salicylic acid for blemishes and amino acid-rich peptides for reducing fine lines and wrinkles)."
+          }
+        },
+        "4ab8adba-b4cc-4ca3-bf6c-052e362e235e": {
+          "type": "faq",
+          "settings": {
+            "hoox_faq_question": "What are the Hydrocolloid Patches?",
+            "hoox_faq_answer": "The Hydrocolloid Patches are infused with active rich ingredients specific to the device's treatment application (ie, salicylic acid for blemishes and amino acid-rich peptides for reducing fine lines and wrinkles). The Hydrocolloid Patches are sticky on both sides and adhere the Mini device to your skin for a hands-free treatment.​​​​​​​\n\nPlease note: The Hydrocolloid Patches are single-use (refills are available)."
+          }
+        },
+        "da9fb4f8-c61e-4178-9259-d0ca7160cc67": {
+          "type": "faq",
+          "settings": {
+            "hoox_faq_question": "What is the recommended treatment regimen?",
+            "hoox_faq_answer": "We recommend using the Eye Brightener and Skin Corrector devices for 3-5 treatments per week for 4-6 weeks followed by maintenance as desired.\n\nWe recommend using the Blemish Eraser device for 4 treatments per week until the blemish subsides, or for 6 weeks if treating recurring acne."
+          }
+        },
+        "d1867c6e-cd32-4b8a-992b-d6f14115fd3c": {
+          "type": "faq",
+          "settings": {
+            "hoox_faq_question": "How do I get 15% off?",
+            "hoox_faq_answer": "When you Subscribe & Save, you will receive 15% off your Mini device and 15% off the recurring shipments of Hydrocolloid Patches to ensure you never miss a treatment."
+          }
+        },
+        "d4caa621-f695-4bbe-a117-9cc0228ff17e": {
+          "type": "faq",
+          "settings": {
+            "hoox_faq_question": "If I subscribe to save 15%, how does it work?",
+            "hoox_faq_answer": "<p>If you choose to “Subscribe & Save” (versus making a one-time purchase), your order will be set up to renew on a recurring basis. Please select your desired subscription interval (4, 6 or 8 weeks) to select how often you’d like to receive your product(s).<\/p>\n<p>*Please note: When you “Subscribe & Save” on any Omnilux Mini product, you will receive the Hydrocolloid Patch Refills for your specific device(s) on a recurring basis. The device is not a recurring shipment.<\/p>"
+          }
+        },
+        "5129113d-7507-4843-a29a-7fa7635dca2c": {
+          "type": "faq",
+          "settings": {
+            "hoox_faq_question": "Is there a minimum subscription period?",
+            "hoox_faq_answer": "No. We want our customers to be confident with their purchases. If you aren’t completely satisfied with your product, you can cancel your subscription at any time."
+          }
+        },
+        "c439c964-caa9-451f-ab60-7b570665af90": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "hoox_faq_question": "Is the Contour worth the price?",
+            "hoox_faq_answer": "The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money."
+          }
+        }
+      },
+      "block_order": [
+        "f425b463-f4a4-43ed-ae56-5ed6bfb60519",
+        "4ab4d7d5-21be-459b-9e5a-f179e6bb6105",
+        "4ab8adba-b4cc-4ca3-bf6c-052e362e235e",
+        "da9fb4f8-c61e-4178-9259-d0ca7160cc67",
+        "d1867c6e-cd32-4b8a-992b-d6f14115fd3c",
+        "d4caa621-f695-4bbe-a117-9cc0228ff17e",
+        "5129113d-7507-4843-a29a-7fa7635dca2c",
+        "c439c964-caa9-451f-ab60-7b570665af90"
+      ],
+      "settings": {
+        "hoox_faq_title": "Frequently asked questions"
+      }
+    },
     "c541efe8-6e88-4742-93c5-578b7e5c0752": {
       "type": "hoox-studies",
       "blocks": {
@@ -312,6 +505,7 @@
         "4f28a892-23c9-4a37-ac6a-09861ae4928e",
         "538de84f-7b07-4119-8456-4e0160d23fd8"
       ],
+      "disabled": true,
       "settings": {
         "hoox_studies_title": "In clinical studies, Omnilux Contour users agreed:",
         "hoox_studies_subtitle": "After 3 treatments per week for 4 weeks",
@@ -411,6 +605,7 @@
         "2f2d4e4b-9377-4d19-ba97-8d1c01d2c16c",
         "12521de5-7ce7-4965-9088-c57079be85ac"
       ],
+      "disabled": true,
       "custom_css": [
         ".hoox-shop__newsletter {display: none;}"
       ],
@@ -424,82 +619,9 @@
         "shop_product_upsell": "hyaluronic-acid-serum",
         "shop_product_upsell_title": "Supercharge Your Results",
         "shop_product_upsell_description": "Pairs perfectly with Contour Face when used during treatment.",
+        "subscription-info-text": "",
         "shop_product_upsell_stars": "<svg width=\"96\" height=\"17\" viewbox=\"0 0 96 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M8 0.399902L10.3511 5.16383L15.6085 5.92777L11.8042 9.63597L12.7023 14.872L8 12.3999L3.29772 14.872L4.19577 9.63597L0.391548 5.92777L5.64886 5.16383L8 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M28 0.399902L30.3511 5.16383L35.6085 5.92777L31.8042 9.63597L32.7023 14.872L28 12.3999L23.2977 14.872L24.1958 9.63597L20.3915 5.92777L25.6489 5.16383L28 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M48 0.399902L50.3511 5.16383L55.6085 5.92777L51.8042 9.63597L52.7023 14.872L48 12.3999L43.2977 14.872L44.1958 9.63597L40.3915 5.92777L45.6489 5.16383L48 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M68 0.399902L70.3511 5.16383L75.6085 5.92777L71.8042 9.63597L72.7023 14.872L68 12.3999L63.2977 14.872L64.1958 9.63597L60.3915 5.92777L65.6489 5.16383L68 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M88 0.399902L90.3511 5.16383L95.6085 5.92777L91.8042 9.63597L92.7023 14.872L88 12.3999L83.2977 14.872L84.1958 9.63597L80.3915 5.92777L85.6489 5.16383L88 0.399902Z\" fill=\"#99552B\"><\/path>\n<\/svg>",
         "shop_gallery_bagde": ""
-      }
-    },
-    "d55c37d3-2303-4327-88c7-dd492dffa149": {
-      "type": "hoox-faq",
-      "blocks": {
-        "f425b463-f4a4-43ed-ae56-5ed6bfb60519": {
-          "type": "faq",
-          "settings": {
-            "hoox_faq_question": "Does LED therapy really work?",
-            "hoox_faq_answer": "Yes. Omnilux’s technology has been clinically proven to produce medical-grade results for nearly 20 years. Omnilux devices have been specifically profiled in over 40 independent, peer-reviewed, published clinical studies, with applications ranging from skin rejuvenation, acne, pigmentation, and other common skin conditions.\n<br>\n<br>\nPlease note: Not all LED masks are created equal! Some brands lack the clinical studies or FDA clearance that demonstrate proven effectiveness."
-          }
-        },
-        "4ab4d7d5-21be-459b-9e5a-f179e6bb6105": {
-          "type": "faq",
-          "settings": {
-            "hoox_faq_question": "How long does it take LED therapy to work?",
-            "hoox_faq_answer": "With consistent use, you should start to see results from your Contour device starting in 4 weeks. Be sure to take before and after pictures to compare your progress. Sometimes it can be hard to notice a difference until you compare your before and after photos."
-          }
-        },
-        "4ab8adba-b4cc-4ca3-bf6c-052e362e235e": {
-          "type": "faq",
-          "settings": {
-            "hoox_faq_question": "What is the recommended treatment regimen for Contour Face?",
-            "hoox_faq_answer": "We recommend using the Contour devices 3-5 times per week for 4-6 weeks. After the initial 6 weeks, you should continue routine maintenance treatments as desired based on lifestyle and skincare needs, as everyone’s skin is different. Consistency is key, so find what works best for you!"
-          }
-        },
-        "da9fb4f8-c61e-4178-9259-d0ca7160cc67": {
-          "type": "faq",
-          "settings": {
-            "hoox_faq_question": "Is the Contour safe to use?",
-            "hoox_faq_answer": "With over 40 peer reviewed clinical studies and nearly 20 years of experience, Omnilux technology has proven to be very safe for all skin types, with no adverse side effects and no pain. Omnilux Contour generates no heat or UV light."
-          }
-        },
-        "d1867c6e-cd32-4b8a-992b-d6f14115fd3c": {
-          "type": "faq",
-          "settings": {
-            "hoox_faq_question": "Can I use the Contour with my other skin products?",
-            "hoox_faq_answer": "Omnilux Contour is compatible with most skin care routines. You should always apply your skin care products after treatments. Please review the Contraindications for a list of products and ingredients to avoid using with LED."
-          }
-        },
-        "d4caa621-f695-4bbe-a117-9cc0228ff17e": {
-          "type": "faq",
-          "settings": {
-            "hoox_faq_question": "Is the Contour safe to use with Retinol or Retin A?",
-            "hoox_faq_answer": "For users taking prescriptive levels of Retin A such as Tretinoin, we do not recommend the use of light devices. Those using cosmetics\/skincare products containing retinol should read the skincare instructions carefully for warnings and precautions in relation to exposure to light. Retin A should be discontinued for at least 5 days before performing light therapy treatments."
-          }
-        },
-        "5129113d-7507-4843-a29a-7fa7635dca2c": {
-          "type": "faq",
-          "settings": {
-            "hoox_faq_question": "Can I complete Contour treatments with Botox and fillers?",
-            "hoox_faq_answer": "Yes, the Contour line helps with bruising that may occur after Botox or fillers. Subjects reported that they felt their Botox treatment lasted longer and results are much more enhanced when combined with Omnilux light therapy. Contour treatments are complementary—they have no direct effect on the Botox or filler treatment."
-          }
-        },
-        "c439c964-caa9-451f-ab60-7b570665af90": {
-          "type": "faq",
-          "settings": {
-            "hoox_faq_question": "Is the Contour worth the price?",
-            "hoox_faq_answer": "The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money."
-          }
-        }
-      },
-      "block_order": [
-        "f425b463-f4a4-43ed-ae56-5ed6bfb60519",
-        "4ab4d7d5-21be-459b-9e5a-f179e6bb6105",
-        "4ab8adba-b4cc-4ca3-bf6c-052e362e235e",
-        "da9fb4f8-c61e-4178-9259-d0ca7160cc67",
-        "d1867c6e-cd32-4b8a-992b-d6f14115fd3c",
-        "d4caa621-f695-4bbe-a117-9cc0228ff17e",
-        "5129113d-7507-4843-a29a-7fa7635dca2c",
-        "c439c964-caa9-451f-ab60-7b570665af90"
-      ],
-      "settings": {
-        "hoox_faq_title": "Frequently asked questions"
       }
     },
     "4ec8afe3-2dcc-46ca-9181-79addcc794cc": {
@@ -553,29 +675,90 @@
         "218fdb2e-b7d3-452a-bfb5-be6421a893af": {
           "type": "video",
           "settings": {
-            "video_link": "https:\/\/www.youtube.com\/watch?v=\/8La4qgpqGY0"
+            "video_link": "https:\/\/youtube.com\/watch?v=Vv9-BQHMIQQ"
           }
         },
         "a258e6e9-e3cc-4fbf-bd1d-a984c6f7b38d": {
           "type": "video",
           "settings": {
-            "video_link": "https:\/\/youtube.com\/watch?v=\/1Qlhsv_1Z4I"
+            "video_link": "https:\/\/www.youtube.com\/watch?v=YEA6B4qv-fs"
           }
         },
         "b25efe71-81a5-4514-933c-4946d43d27d4": {
           "type": "video",
           "settings": {
-            "video_link": "https:\/\/youtube.com\/watch?v=\/Rws2zDzlr9M"
+            "video_link": "https:\/\/youtube.com\/watch?v=\/44I0sdycI_4"
+          }
+        },
+        "video_4itaCq": {
+          "type": "video",
+          "settings": {
+            "video_link": "https:\/\/www.youtube.com\/watch?v=w-Fhq67etAY"
+          }
+        },
+        "video_xUryY6": {
+          "type": "video",
+          "settings": {
+            "video_link": "https:\/\/youtube.com\/watch?v=PZokhU2CL_g"
+          }
+        },
+        "video_9ybMbg": {
+          "type": "video",
+          "settings": {
+            "video_link": "https:\/\/youtube.com\/watch?v=CLFPd7bgIgM"
           }
         }
       },
       "block_order": [
         "218fdb2e-b7d3-452a-bfb5-be6421a893af",
         "a258e6e9-e3cc-4fbf-bd1d-a984c6f7b38d",
-        "b25efe71-81a5-4514-933c-4946d43d27d4"
+        "b25efe71-81a5-4514-933c-4946d43d27d4",
+        "video_4itaCq",
+        "video_xUryY6",
+        "video_9ybMbg"
       ],
       "settings": {
         "section_title": "Real people, real results"
+      }
+    },
+    "hoox_treatment_rightimg_ctGiUc": {
+      "type": "hoox-treatment-rightimg",
+      "blocks": {
+        "description_VKCpNd": {
+          "type": "description",
+          "settings": {
+            "bullet_text": "15% off your Mini device and all recurring shipments of Hydrocolloid Patch refills"
+          }
+        },
+        "description_3KW9h4": {
+          "type": "description",
+          "settings": {
+            "bullet_text": "Free shipping on every subscription order"
+          }
+        },
+        "description_wYt66W": {
+          "type": "description",
+          "settings": {
+            "bullet_text": "VIP access to new product offerings"
+          }
+        }
+      },
+      "block_order": [
+        "description_VKCpNd",
+        "description_3KW9h4",
+        "description_wYt66W"
+      ],
+      "custom_css": [
+        "@media (max-width: 600px) {.hoox-treatment__bullet-text {font-size: 9px; } .hoox-treatment__bullet-2 {margin-bottom: 30px; } .hoox-treatment__bullet-1 {padding: 5px 15px 5px 15px; margin: 0px auto 25px -10px; max-width: 180px; }}"
+      ],
+      "settings": {
+        "section_title": "Why subscribe?",
+        "section_subtitle": "To enjoy exclusive savings and VIP perks, of course!",
+        "section_corner_text": "",
+        "bg_image": "shopify:\/\/shop_images\/eyeb2.jpg",
+        "bg_image_mobile": "shopify:\/\/shop_images\/Frame_1000002767_bd9850e3-6b08-49d4-9b4a-10de3a1a22f8.jpg",
+        "bullet_svg": "<svg width=\"185\" height=\"431\" viewbox=\"0 0 185 431\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M1 0.399902C62.1245 69.8871 147.699 253.169 1 430.4\" stroke=\"black\"><\/path>\n<path d=\"M144.333 371.4C144.333 372.873 145.527 374.067 147 374.067C148.473 374.067 149.667 372.873 149.667 371.4C149.667 369.927 148.473 368.733 147 368.733C145.527 368.733 144.333 369.927 144.333 371.4ZM41 371.9L147 371.9L147 370.9L41 370.9L41 371.9Z\" fill=\"black\"><\/path>\n<path d=\"M149.333 63.3999C149.333 64.8727 150.527 66.0666 152 66.0666C153.473 66.0666 154.667 64.8727 154.667 63.3999C154.667 61.9272 153.473 60.7332 152 60.7332C150.527 60.7332 149.333 61.9272 149.333 63.3999ZM43 63.8999L152 63.8999L152 62.8999L43 62.8999L43 63.8999Z\" fill=\"black\"><\/path>\n<path d=\"M179.333 214.4C179.333 215.873 180.527 217.067 182 217.067C183.473 217.067 184.667 215.873 184.667 214.4C184.667 212.927 183.473 211.733 182 211.733C180.527 211.733 179.333 212.927 179.333 214.4ZM82 214.9L182 214.9L182 213.9L82 213.9L82 214.9Z\" fill=\"black\"><\/path>\n<\/svg>",
+        "bullet_svg_mobile": "<svg width=\"67\" height=\"182\" viewbox=\"0 0 67 182\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M1 0.400391C22.8841 29.6496 53.5218 106.799 1 181.4\" stroke=\"black\" stroke-width=\"0.5\"><\/path>\n<path d=\"M40.6667 152.4C40.6667 153.137 41.2636 153.734 42 153.734C42.7364 153.734 43.3333 153.137 43.3333 152.4C43.3333 151.664 42.7364 151.067 42 151.067C41.2636 151.067 40.6667 151.664 40.6667 152.4ZM17 152.65L42 152.65L42 152.15L17 152.15L17 152.65Z\" fill=\"black\"><\/path>\n<path d=\"M63.6667 88.4004C63.6667 89.1368 64.2636 89.7337 65 89.7337C65.7364 89.7337 66.3333 89.1368 66.3333 88.4004C66.3333 87.664 65.7364 87.0671 65 87.0671C64.2636 87.0671 63.6667 87.664 63.6667 88.4004ZM30 88.6504L65 88.6504L65 88.1504L30 88.1504L30 88.6504Z\" fill=\"black\"><\/path>\n<path d=\"M40.6667 24.4004C40.6667 25.1368 41.2636 25.7337 42 25.7337C42.7364 25.7337 43.3333 25.1368 43.3333 24.4004C43.3333 23.664 42.7364 23.0671 42 23.0671C41.2636 23.0671 40.6667 23.664 40.6667 24.4004ZM15 24.6504L42 24.6504L42 24.1504L15 24.1504L15 24.6504Z\" fill=\"black\"><\/path>\n<\/svg>"
       }
     },
     "ff0dea76-01fe-4895-a40f-5e738647651b": {
@@ -605,6 +788,7 @@
         "90664102-892a-412e-91f3-e5ae13f2ab0c",
         "91bb9692-5ce7-43d3-a09c-071195698071"
       ],
+      "disabled": true,
       "settings": {
         "section_title": "Professional-grade treatment at a fraction of the cost",
         "section_subtitle": "The same LED technology that dermatologists use, but in the comfort of your home.",
@@ -621,72 +805,77 @@
         "671d2e9b-1e2c-425d-91c2-f59384c5d4ba": {
           "type": "review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/Omnilux_mariajr_loves_omnilux_contour_face.jpg",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Omnilux Contour FACE",
-            "review_description": "I'm loving this red-light therapy device. It's so easy to use -- a quick 10 minutes and you're done. I'm 53 years old and I have done numerous treatments. This device is worth the cost.",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704_4.svg",
-            "review_author": "Maria J. R.",
+            "review_title": "Love It",
+            "review_description": "After a few weeks of consistent use, I noticed that my under-eye bags and discoloration had greatly improved. My husband who was skeptical even pointed out that he noticed my skin was glowing!",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002763_7a0d07f7-7a0a-4130-9c74-8defbeaeb8f0.png",
+            "review_author": "Liv",
             "review_verified_text": "Verified buyer"
           }
         },
         "75f1863e-b4aa-48be-b10c-718f622ed99e": {
           "type": "review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/Omnilux_elizabeth_says_facemask_is_great.jpg",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Great Face Mask",
-            "review_description": "Love my Omnilux Mask! Only been using for a short time and have been seeing great improvements in my skin brightness. Red light therapy only 10 minutes in the morning and night for great results.",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704_2.svg",
-            "review_author": "Elizabeth V.",
-            "review_verified_text": "Verified buyer"
-          }
-        },
-        "09e51eaf-1740-42e1-bcb7-f1d459351c4c": {
-          "type": "review",
-          "settings": {
-            "review_image": "shopify:\/\/shop_images\/Omnilux_ellen_give_me_that_glow.jpg",
-            "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Give Me That Glow!",
-            "review_description": "I love, love, love my Omnilux face mask!! It gives my complexion a glow that I can’t duplicate any other way. I had an issue with it after using for almost a year and it was resolved immediately! The customer service is outstanding!!",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704_3.svg",
-            "review_author": "Ellen",
-            "review_verified_text": "Verified buyer"
-          }
-        },
-        "2c6217e1-4375-4c5c-8973-7efbb94ba6d4": {
-          "type": "review",
-          "settings": {
-            "review_image": "shopify:\/\/shop_images\/Omnilux_dorothy_wonderful_addition_to_skincare.jpg",
-            "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Wonderful Addition To Skincare",
-            "review_description": "I am 63 years old and it is starting to show so I decided to order the Omnilux Contour Face led mask. I have been using it for 2 weeks now and have seen usual red patches gone. Very satisfied and highly recommend this product ♥️🥰",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704_4.svg",
-            "review_author": "Dorothy M.",
-            "review_verified_text": "Verified buyer"
-          }
-        },
-        "a136d047-2dd8-4976-a57a-be0d54efdaff": {
-          "type": "review",
-          "settings": {
-            "review_image": "shopify:\/\/shop_images\/Omnilux_chantra_so_far_so_good.jpg",
-            "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "So Far So Good",
-            "review_description": "Been using this mask for the past 5 days straight now and my skin looks more glowy. Fits and stays on well, easy to clean and store, battery lasts a good bit. Can’t wait to see the long term benefits",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704_5.svg",
-            "review_author": "Chantra P.",
+            "review_title": "Very Clever Product!",
+            "review_description": "Has aided with soften around eye area and am very pleased. Look less tired and more alert. The lines around eyes seem decreased and noticed lotion goes on smoother. Pleased!",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002764_68e4d566-5b51-44d9-957e-9055accfbf2b.png",
+            "review_author": "Charles S.",
             "review_verified_text": "Verified buyer"
           }
         },
         "e7bdd677-36eb-43bf-a540-a73029e2bf43": {
           "type": "review",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/image_28.png",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Love It!",
-            "review_description": "I just started using my Omnilux contour face and My skin feels and looks great after every use. I'm hoping my sunspots and wrinkles will fade away.",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704.svg",
-            "review_author": "Sylvie B.",
+            "review_title": "Really Impressed With The Results So Far",
+            "review_description": "I have been using the skin corrector for a few weeks now and so far I am loving how my skin feels more plump and refreshed. I’ve also noticed some fine lines have been disappearing. I’m hoping for more of the age spots to diminish in the next few weeks. I want another one! Thank you.",
+            "review_icon": "shopify:\/\/shop_images\/KK.png",
+            "review_author": "Keely K",
+            "review_verified_text": "Verified buyer"
+          }
+        },
+        "09e51eaf-1740-42e1-bcb7-f1d459351c4c": {
+          "type": "review",
+          "settings": {
+            "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
+            "review_title": "SO GOOD For Random Pimples",
+            "review_description": "I could feel a painful pimple coming a couple days before Thanksgiving and the Blemish Eraser got rid of it in less than 2 days and I had zero sign of any breakout during the holiday. I'm not joking when I say this little device packs a punch. thanks Omnilux for another great product!",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002763_a5385ebb-06e2-472c-899c-113836b6634b.png",
+            "review_author": "Michelle",
+            "review_verified_text": "Verified buyer"
+          }
+        },
+        "2c6217e1-4375-4c5c-8973-7efbb94ba6d4": {
+          "type": "review",
+          "settings": {
+            "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
+            "review_title": "Acne Relief",
+            "review_description": "I started using the Mini on my forehead and I have noticed immediate decrease in redness and swelling. I use it 3 times per week.",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002764_1.png",
+            "review_author": "Isabel H.",
+            "review_verified_text": "Verified buyer"
+          }
+        },
+        "a136d047-2dd8-4976-a57a-be0d54efdaff": {
+          "type": "review",
+          "settings": {
+            "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
+            "review_title": "Totally Worth It",
+            "review_description": "I love LOVE love my Omnilux Mini Skin Corrector! I've been using it religiously for about 2.5 months. I have rosacea that flares up with certain triggers... ever since beginning this light therapy my face doesn't get red like it used to! It's truly a Godsend and I love it so much. Besides reduced redness I feel like my skin also has such a radiant healthy glow overall.",
+            "review_icon": "shopify:\/\/shop_images\/S.png",
+            "review_author": "Shannon",
+            "review_verified_text": "Verified buyer"
+          }
+        },
+        "review_aVjmec": {
+          "type": "review",
+          "settings": {
+            "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
+            "review_title": "LED Mask",
+            "review_description": "Absolutely amazing!! I can’t wait to invest in the full face mask!! Best money I’ve ever spent!!",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002767_d9dfd515-4671-499c-8d61-60e814e57435.png",
+            "review_author": "Tyria H.",
             "review_verified_text": "Verified buyer"
           }
         }
@@ -694,10 +883,11 @@
       "block_order": [
         "671d2e9b-1e2c-425d-91c2-f59384c5d4ba",
         "75f1863e-b4aa-48be-b10c-718f622ed99e",
+        "e7bdd677-36eb-43bf-a540-a73029e2bf43",
         "09e51eaf-1740-42e1-bcb7-f1d459351c4c",
         "2c6217e1-4375-4c5c-8973-7efbb94ba6d4",
         "a136d047-2dd8-4976-a57a-be0d54efdaff",
-        "e7bdd677-36eb-43bf-a540-a73029e2bf43"
+        "review_aVjmec"
       ],
       "settings": {
         "section_id": "#",
@@ -710,11 +900,11 @@
         "1433940b-1449-41e7-afc5-dc679a408424": {
           "type": "column-title",
           "settings": {
-            "first_column_title_one": "Medical-grade LEDs",
-            "first_column_title_two": "Backed by 40+ peer reviewed clinical studies",
-            "first_column_title_three": "FDA-cleared, TGA-approved, CE-certified",
-            "first_column_title_four": "Supported by 20+ years of brand research",
-            "first_column_title_five": "Ultra-contoured fit with adjustable straps",
+            "first_column_title_one": "Medical-grade LEDs to target anti-aging and acne concerns",
+            "first_column_title_two": "Penetrates deep below the skin barrier to repair cells",
+            "first_column_title_three": "Active-rich patches + LED combo for superior results",
+            "first_column_title_four": "FDA-cleared + CE-certified",
+            "first_column_title_five": "Supported by 20+ years of brand research",
             "first_column_title_six": "2 year warranty"
           }
         },
@@ -726,7 +916,7 @@
             "table_column_title_one": "",
             "table_column_tick_one_true": false,
             "table_column_tick_one_false": false,
-            "table_column_one_img": "shopify:\/\/shop_images\/Medical-Grade_LED_Light_Therapy_At_Home_By_Omnilux-8_1.svg",
+            "table_column_one_img": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-13T093800.598.png",
             "table_column_one_img_mobile": "shopify:\/\/shop_images\/Omnilux_logo_mob.svg",
             "table_column_title_two": "",
             "table_column_tick_two_true": true,
@@ -753,7 +943,7 @@
           "settings": {
             "compare_highlight_column_color": "",
             "table_column_highlight": false,
-            "table_column_title_one": "Other LED\u2028Brands",
+            "table_column_title_one": "Traditional Spot Treatments",
             "table_column_tick_one_true": false,
             "table_column_tick_one_false": false,
             "table_column_title_two": "",
@@ -783,7 +973,7 @@
         "9c7e4deb-9cc1-4981-9366-a01918a9703a"
       ],
       "settings": {
-        "compare_headline": "The dermatologist's choice",
+        "compare_headline": "6 reasons to choose",
         "compare_section_first_image": "shopify:\/\/shop_images\/Group_3_5a79dcd5-7a58-467d-90fa-5e8e001461cc.svg",
         "compare_section_last_image": "shopify:\/\/shop_images\/Group_2.svg"
       }
@@ -798,9 +988,9 @@
     "7cddaa24-622a-4429-a62a-cd918d1f673e": {
       "type": "hoox-protect",
       "settings": {
-        "hoox_protect_image": "shopify:\/\/shop_images\/protect_your_most_recognizable_feature-desktop.jpg",
-        "hoox_protect_image_mobile": "shopify:\/\/shop_images\/Protect_Your_Most_Recognizable_Feature_mob.png",
-        "hoox_protect_title": "Protect Your Most Recognizable Feature",
+        "hoox_protect_image": "shopify:\/\/shop_images\/Hoox_LP_Footer_Image_Mobile_5.png",
+        "hoox_protect_image_mobile": "shopify:\/\/shop_images\/Hoox_LP_Footer_Image_3.png",
+        "hoox_protect_title": "It's time to reach your skin goals",
         "hoox_protect_btn_url": "#hoox-shop",
         "hoox_protect_btn_text": "START GLOWING TODAY",
         "hoox_protect_shipping": "FREE Shipping | 30-Day Money-Back Guarantee"
@@ -811,15 +1001,19 @@
     "main",
     "71768739-d7d7-4f5d-87c6-0265594b8fae",
     "832457c1-0171-4350-ad70-04b074b499f1",
+    "global_featured_collection_9a9xNn",
     "585eba5a-4f3a-4591-991d-923ed537d55f",
+    "global_info_block_pxfwdQ",
+    "global_image_with_text_Fgpwpk",
     "26e48694-ed25-458d-b9c5-4b86cbd64b70",
     "hoox_results_VEnHKG",
     "dd98148d-76e8-4e14-8398-6b17b61034dd",
+    "d55c37d3-2303-4327-88c7-dd492dffa149",
     "c541efe8-6e88-4742-93c5-578b7e5c0752",
     "c7458cec-8732-46b2-97a9-601f8b3f28bf",
-    "d55c37d3-2303-4327-88c7-dd492dffa149",
     "4ec8afe3-2dcc-46ca-9181-79addcc794cc",
     "3b02390e-27eb-4acb-b288-cdca10dc2ef9",
+    "hoox_treatment_rightimg_ctGiUc",
     "ff0dea76-01fe-4895-a40f-5e738647651b",
     "ccd2af3c-3893-452e-8e9d-e82555f637c3",
     "f6c1c44d-ee90-4757-a340-28a609f1b66a",

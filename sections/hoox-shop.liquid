@@ -49,6 +49,8 @@
   assign shop_gallery_bagde = section.settings.shop_gallery_bagde
 
   assign videoURL = section.settings.shop_product_video_src
+
+    assign subscription-info-text = section.settings.subscription-info-text
   
 %}
 
@@ -193,6 +195,10 @@
           {%- endform -%}
 
           <div class="hoox-shop__images">
+               <div class="subscription-info">
+                    {{ subscription-info-text }}
+                  </div>
+                     
             {% for block in section.blocks %}
               {% if block.type == 'images' %}
                 {% assign benefitImage = block.settings.benefit_image %}
@@ -437,6 +443,12 @@
         "label": "Upsell short description"
       },
       {
+        "type": "richtext",
+        "id": "subscription-info-text",
+        "label": "Subscription info"
+      },
+      
+      {
         "type": "image_picker",
         "id": "shop_product_upsell_image",
         "label": "Choose Upsell Image",
@@ -472,7 +484,9 @@
             "label": "Benefit image"
           }
         ]
-      }, {
+      }, 
+       
+      {
         "type": "questions",
         "name": "Question",
         "settings": [

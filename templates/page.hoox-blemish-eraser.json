@@ -25,7 +25,7 @@
         "8d4c1d26-ac76-4be7-8bc1-f25fbbd086fc": {
           "type": "bullets",
           "settings": {
-            "bullet_text": "Paired with concentrated hydrocolloid patches for a more powerful spot treatment"
+            "bullet_text": "Paired with concentrated Hydrocolloid Patches for a more powerful spot treatment"
           }
         },
         "e7a9beb7-c5cd-4468-87d8-7b8b9860e9c1": {
@@ -66,7 +66,7 @@
         "section_star_image": "shopify:\/\/shop_images\/Frame_48097853.svg",
         "section_star_text": "275K+ Glowing Customers",
         "section_star_anchor_id": "#hoow-reviws",
-        "section_title": "Meet the supercharged pimple patch",
+        "section_title": "Meet <em>the<\/em> supercharged pimple patch",
         "section_description": "Ultra-targeted LED treatment tackles surprise breakouts and zaps away those pimples that just won’t quit.",
         "section_btn_text": "CLEAR ACNE IN A FLASH",
         "section_btn_url": "#hoox-shop",
@@ -128,7 +128,7 @@
           "settings": {
             "hoox_safe_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-13T101853.972.png",
             "hoox_safe_headline": "Safe & effective",
-            "hoox_safe_text": "Engineered using Omnilux's proprietary medical technology, the Blemish Eraser harnesses the power of <strong>blue<\/strong> and <strong>red<\/strong> light to clear away concentrated breakouts.",
+            "hoox_safe_text": "Engineered using Omnilux's proprietary medical technology, the Blemish Eraser harnesses the power of blue and red light to clear away concentrated breakouts.",
             "hoox_safe_benefit_image1": "shopify:\/\/shop_images\/Icon_FDA_Cleared_png.png",
             "hoox_safe_benefit_image2": "shopify:\/\/shop_images\/Icon_CE_Certified_png.png",
             "hoox_safe_benefit_image3": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-20T144715.658.png"
@@ -139,7 +139,7 @@
           "settings": {
             "hoox_safe_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-13T102606.005.png",
             "hoox_safe_headline": "Superior spot treatment",
-            "hoox_safe_text": "Upgrade your acne treatment with <strong>medical-grade<\/strong> LEDs and hydrocolloid patches infused with <strong>salicylic acid<\/strong> and <strong>green tea<\/strong>. This advanced combination revolutionizes traditional pimple patches for superior results."
+            "hoox_safe_text": "Upgrade your acne treatment with medical-grade LEDs and Hydrocolloid Patches infused with salicylic acid and green tea. This advanced combination revolutionizes traditional pimple patches for superior results."
           }
         },
         "66e98a01-195d-4a1b-8414-cf995d11033a": {
@@ -147,7 +147,7 @@
           "settings": {
             "hoox_safe_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-13T102331.090.png",
             "hoox_safe_headline": "Derm-approved",
-            "hoox_safe_text": "\"When these two wavelengths [blue and red] are used together, you receive a more effective and efficient acne treatment.\" <br> - Dr. Glynis Ablon, MD, FAAD"
+            "hoox_safe_text": "\"When these two wavelengths [blue and red] are used together, you receive a more effective and efficient acne treatment.\"  - Dr. Glynis Ablon, MD, FAAD"
           }
         }
       },
@@ -176,7 +176,7 @@
           "type": "usp",
           "settings": {
             "hoox_how_to_image": "shopify:\/\/shop_images\/MINI_HOW_TO_GLOW_UP_PDPS_1.png",
-            "hoox_how_to_text": "Peel back the salicylic-infused hydrocolloid patch adhesive side 1 (marked with a device icon) and adhere to the device."
+            "hoox_how_to_text": "Peel back the salicylic-infused Hydrocolloid Patch adhesive side 1 (marked with a device icon) and adhere to the device."
           }
         },
         "a9d976ec-6405-473d-adb8-bb5f24e18114": {
@@ -220,8 +220,9 @@
       "block_order": [
         "results_nNGyhx"
       ],
+      "disabled": true,
       "custom_css": [
-        ".hoox-results__item-text{display:none;}"
+        ".hoox-results__item-text {display: none;}"
       ],
       "settings": {
         "section_title": "See it in the wild"
@@ -486,6 +487,7 @@
         "shop_product_upsell": "",
         "shop_product_upsell_title": "Supercharge Your Results",
         "shop_product_upsell_description": "Pairs perfectly with Contour Face when used during treatment.",
+        "subscription-info-text": "<ul><li>Subscribe to recurring Hydrocolloid Patch Refills so you never miss a treatment<\/li><li>15% off every subscription order<\/li><li>Free shipping on every subscription order<\/li><li>First access to new product offerings<\/li><li>Flexible subscription plan options. Auto-delivery every 4, 6, or 8 weeks<\/li><li><strong>Initial order includes: 1 Blemish Eraser LED device + 14 Hydrocolloid Patches<\/strong><\/li><li><strong>Every recurring subscription order includes 20 Hydrocolloid Refill Patches<\/strong><\/li><\/ul>",
         "shop_product_upsell_stars": "<svg width=\"96\" height=\"17\" viewbox=\"0 0 96 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M8 0.399902L10.3511 5.16383L15.6085 5.92777L11.8042 9.63597L12.7023 14.872L8 12.3999L3.29772 14.872L4.19577 9.63597L0.391548 5.92777L5.64886 5.16383L8 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M28 0.399902L30.3511 5.16383L35.6085 5.92777L31.8042 9.63597L32.7023 14.872L28 12.3999L23.2977 14.872L24.1958 9.63597L20.3915 5.92777L25.6489 5.16383L28 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M48 0.399902L50.3511 5.16383L55.6085 5.92777L51.8042 9.63597L52.7023 14.872L48 12.3999L43.2977 14.872L44.1958 9.63597L40.3915 5.92777L45.6489 5.16383L48 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M68 0.399902L70.3511 5.16383L75.6085 5.92777L71.8042 9.63597L72.7023 14.872L68 12.3999L63.2977 14.872L64.1958 9.63597L60.3915 5.92777L65.6489 5.16383L68 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M88 0.399902L90.3511 5.16383L95.6085 5.92777L91.8042 9.63597L92.7023 14.872L88 12.3999L83.2977 14.872L84.1958 9.63597L80.3915 5.92777L85.6489 5.16383L88 0.399902Z\" fill=\"#99552B\"><\/path>\n<\/svg>",
         "shop_gallery_bagde": ""
       }
@@ -497,21 +499,21 @@
           "type": "faq",
           "settings": {
             "hoox_faq_question": "How does the Blemish Eraser work?",
-            "hoox_faq_answer": "The Blemish Eraser uses clinically proven wavelengths of blue and red light to naturally treat acne breakouts.\n<br>\nThe blue wavelength (415nm) eliminates bacteria on the surface of the skin to neutralize acne flare ups. \n<br>\nThe red wavelength (633nm) reduces inflammation, pigmentation, and redness and helps prompt cellular repair and circulation for a more vibrant complexion.\n<br> \nThe Hydrocolloid Patches help adhere the device to the skin for a hands-free treatment while giving extra skincare benefits thanks to ingredients like salicylic acid and green tea antioxidants."
+            "hoox_faq_answer": "<p>The Blemish Eraser uses clinically proven wavelengths of blue and red light to naturally treat acne breakouts.<\/p>\n<p>The blue wavelength (415nm) eliminates bacteria on the surface of the skin to neutralize acne flare ups. <\/p>\n<p>The red wavelength (633nm) reduces inflammation, pigmentation, and redness and helps prompt cellular repair and circulation for a more vibrant complexion.<\/p>\n<p>The Hydrocolloid Patches help adhere the device to the skin for a hands-free treatment while giving extra skincare benefits thanks to ingredients like salicylic acid and green tea antioxidants.<\/p>"
           }
         },
         "4ab4d7d5-21be-459b-9e5a-f179e6bb6105": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "What are the Hydrocolloid Patches?",
-            "hoox_faq_answer": "The Blemish Eraser Hydrocolloid Patches are infused with acne-fighting ingredients such as salicylic acid and green tea antioxidants to help clear congested skin and soothe irritation alongside the Mini LED treatment. The Hydrocolloid Patches are sticky on both sides and adhere the Blemish Eraser device to your skin for a hands-free treatment.\n\nPlease note: The Hydrocolloid Patches are single-use (refills are available)."
+            "hoox_faq_answer": "<p>The Blemish Eraser Hydrocolloid Patches are infused with acne-fighting ingredients such as salicylic acid and green tea antioxidants to help clear congested skin and soothe irritation alongside the Mini LED treatment. The Hydrocolloid Patches are sticky on both sides and adhere the Blemish Eraser device to your skin for a hands-free treatment.<\/p>\n<p>Please note: The Hydrocolloid Patches are single-use (refills are available).<\/p>"
           }
         },
         "4ab8adba-b4cc-4ca3-bf6c-052e362e235e": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "What is the recommended treatment regimen?",
-            "hoox_faq_answer": "We recommend using the Blemish Eraser for 4 treatments per week until the blemish subsides, or for a maximum of 6 weeks if you a treating recurring acne. After the initial 6 weeks, you should only use the Blemish Eraser at the earliest signs of breakout.\n<br>\nPLEASE NOTE: You should not use the Blemish Eraser on the same area of the face for more than 6 weeks consecutively. After 6 weeks we recommend giving that area of your skin a break."
+            "hoox_faq_answer": "<p>We recommend using the Blemish Eraser for 4 treatments per week until the blemish subsides, or for a maximum of 6 weeks if you a treating recurring acne. After the initial 6 weeks, you should only use the Blemish Eraser at the earliest signs of breakout.<\/p>\n<p>PLEASE NOTE: You should not use the Blemish Eraser on the same area of the face for more than 6 weeks consecutively. After 6 weeks we recommend giving that area of your skin a break.<\/p>"
           }
         },
         "da9fb4f8-c61e-4178-9259-d0ca7160cc67": {
@@ -525,7 +527,7 @@
           "type": "faq",
           "settings": {
             "hoox_faq_question": "If I subscribe to save 15%, how does it work?",
-            "hoox_faq_answer": "If you choose to “Subscribe & Save” (versus making a one-time purchase), your order will be set up to renew on a recurring basis. Please select your desired subscription interval (4, 6 or 8 weeks) to select how often you’d like to receive your product(s).\n<br>\n*Please note: When you “Subscribe & Save” on any Omnilux Mini product, you will receive the Hydrocolloid Patch Refills for your specific device(s) on a recurring basis. The device is not a recurring shipment."
+            "hoox_faq_answer": "<p>If you choose to “Subscribe & Save” (versus making a one-time purchase), your order will be set up to renew on a recurring basis. Please select your desired subscription interval (4, 6 or 8 weeks) to select how often you’d like to receive your product(s).<\/p>\n<p>*Please note: When you “Subscribe & Save” on any Omnilux Mini product, you will receive the Hydrocolloid Patch Refills for your specific device(s) on a recurring basis. The device is not a recurring shipment.<\/p>"
           }
         },
         "d4caa621-f695-4bbe-a117-9cc0228ff17e": {
