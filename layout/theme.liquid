@@ -150,14 +150,14 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
   <body class="template-{{ template.name }} {{ page.handle }} {{ collection.handle }} {{ product.handle }} {% if product.tags contains 'men_product' %}product-men{% endif %} ab-test-cartdrawer ab-faq"
     data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}">
 
-    {% comment %} {% if template.name == "login" %}
+    {% if template.name == "login" %}
       <script>
         // Redirect to "/a/account/login"
         if (window.location.pathname === "/account/login") {
           window.location.href = "/a/account/login";
         }
       </script>
-    {% endif %} {% endcomment %}
+    {% endif %}
     
     <img src="https://trkn.us/pixel/conv/ppt=22138;g=sitewide;gid=51408;ord={{ 'now' | date: '%s' }}" height="0" width="0" border="0" style="display:none"/>
 

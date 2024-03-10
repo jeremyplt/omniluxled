@@ -25,12 +25,10 @@ if (!!hooxSliderCentered.length) {
         } else if (window.innerWidth > 767 && slides.length > 3) { // Initialize on desktop with more than 3 slides
             swiperOptions.breakpoints = {
                 766: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 1,
                     spaceBetween: 50,
                     touchRatio: 0,
-                  slidesPerView: 'auto',
-        freeMode: false,
-                  centeredSlides: false,
-          centerInsufficientSlides:true,
                 }
             };
             new Swiper(element, swiperOptions);

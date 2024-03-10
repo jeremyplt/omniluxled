@@ -72,7 +72,7 @@
         "section_btn_url": "#hoox-shop",
         "section_shipping_text": "2 Year Warranty | 30-Day Money-Back Guarantee",
         "section_main_image": "shopify:\/\/shop_images\/Hoox_LP_Hero_Image_Desktop_1.png",
-        "section_main_image_mobile": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-16T155245.988.png"
+        "section_main_image_mobile": "shopify:\/\/shop_images\/Hoox_Mini_LP_Hero_Mobile_3.png"
       }
     },
     "832457c1-0171-4350-ad70-04b074b499f1": {
@@ -639,21 +639,13 @@
           "settings": {
             "video_link": "https:\/\/www.youtube.com\/watch?v=_NK3KSrcA1k"
           }
-        },
-        "b25efe71-81a5-4514-933c-4946d43d27d4": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video_link": "https:\/\/youtube.com\/watch?v=\/Rws2zDzlr9M"
-          }
         }
       },
       "block_order": [
         "a258e6e9-e3cc-4fbf-bd1d-a984c6f7b38d",
         "video_NFVHty",
         "video_YrkWf8",
-        "218fdb2e-b7d3-452a-bfb5-be6421a893af",
-        "b25efe71-81a5-4514-933c-4946d43d27d4"
+        "218fdb2e-b7d3-452a-bfb5-be6421a893af"
       ],
       "settings": {
         "section_title": "See it in action"

@@ -79,24 +79,6 @@
   </script>
 <!-- End NB Pixel Snippet -->
 
-
-  <script>
-
-  window.addEventListener('skio::update-selling-plan', function(e) { 
-    console.log(e) 
-    if (e.detail.sellingPlan) {
-        document.querySelectorAll(".subscription-info").forEach(sub => {
-          sub.classList.add("show")
-        })
-    } else {
-      document.querySelectorAll(".subscription-info").forEach(sub => {
-        sub.classList.remove("show")
-      })
-    }
-})
-
-  </script>
-    
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
