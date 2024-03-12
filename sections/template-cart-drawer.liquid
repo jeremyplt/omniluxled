@@ -1,5 +1,10 @@
 {% assign cartTotal = cart.total_price %}
 
+{% liquid
+  assign eu_countries = "AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LT,LU,MT,NL,PL,PT,RO,SK,SI,ES,SE,NO"
+  assign eu_countries = eu_countries | split: ','
+%}
+
 <section data-section-id="{{ section.id }}">
   <div class="section-content">
     <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
@@ -96,6 +101,28 @@
                               </div>
                             </div>
                             <div class="cart-item-text d-flex flex-column justify-content-between p-0">
+                              {% liquid
+                                assign display_pre_order_tag = false
+                                if item.product.metafield.custom.ca_preorder and localization.country == 'CA'
+                                  assign display_pre_order_tag = true
+                                elsif item.product.metafield.custom.us_preorder and localization.country == 'US'
+                                  assign display_pre_order_tag = true
+                                elsif item.product.metafield.custom.uk_preorder and localization.country == 'GB'
+                                  assign display_pre_order_tag = true
+                                elsif item.product.metafield.custom.au_preorder and localization.country == 'AU'
+                                  assign display_pre_order_tag = true
+                                elsif item.product.metafield.custom.eu_preorder and eu_countries contains localization.country
+                                  assign display_pre_order_tag = true
+                                elsif item.product.metafield.custom.nz_preorder and localization.country == 'NZ'
+                                  assign display_pre_order_tag = true
+                                endif
+                              %}
+
+                              {% if display_pre_order_tag %}
+                                <div class="cart-item__pre-order">
+                                  Pre-order
+                                </div>
+                              {% endif %}
                               <div style="line-height: 1.3571428571;" class="fw-normal pe-4">
                                 {%- if section.settings.show_vendor -%}
                                   <p class="font-size-sm mb-0 text-uppercase fw-normal">{{ item.product.vendor }}</p>
