@@ -351,6 +351,7 @@ const skioStyles = css`
 export class SkioPlanPickerComponent extends LitElement {
   static properties = {
     product: { type: Object },            //required
+    featuredImage: { type: String },      //optional, defaults to product.featured_image
     productHandle: { type: String },      //optional (unless product isn't passed, then required)
     key: { type: String },                //optional, defaults to product.id; identifier for this instance of the Skio plan picker
     
@@ -386,13 +387,16 @@ export class SkioPlanPickerComponent extends LitElement {
     meta: {},
 
     useVariantInputClickEvents: {type: Boolean}, // optional, allows use of variant input click events to update skio's selectedVariant
-    variantInputSelector: {}
+    variantInputSelector: {},
+
+    miniProducts: { type: Array },
   };
 
   static styles = skioStyles;
 
   constructor() {
     super();
+    this.featuredImage = null;
     this.product = null;
     this.selectedVariant = null;
 
@@ -445,6 +449,7 @@ export class SkioPlanPickerComponent extends LitElement {
 
     this.useVariantInputClickEvents = null;
     this.variantInputSelector = null;
+    this.miniProducts = ["Blemish Eraser", "Eye Brightener", "Skin Corrector"]
 
   }
 
@@ -459,6 +464,8 @@ export class SkioPlanPickerComponent extends LitElement {
       this.fetchProduct(this.productHandle);
     }
 
+    console.log("this.product", this.product)
+
     if (this.includedInPackage == null) {
       this.includedInPackage = skio.includedInPackage;
     }
@@ -470,6 +477,9 @@ export class SkioPlanPickerComponent extends LitElement {
     if (this.recurringShipmentImage == null) {
       this.recurringShipmentImage = skio.recurringShipmentImage;
     }
+
+    if (this.featuredImage)
+      this.featuredImage = skio.featuredImage;
 
     if (this.needsFormId && this.formId == null) {
       let forms = document.querySelectorAll('form[action="/cart/add"]');
@@ -573,7 +583,9 @@ export class SkioPlanPickerComponent extends LitElement {
                       <span skio-subscription-price>${ this.price(group.selected_selling_plan) }</span>
                       <span skio-compare-at-price class="concept--two">${ this.moneyFormatter.format(this.selectedVariant.price / 100) }</span>
                     </div>
-                    <div class="skio-price__per-delivery concept--two">Then <strong><span class="delivery-price">${this.moneyFormatter.format(this.availableSellingPlanGroups[0]?.selling_plans[0]?.price_adjustments[1]?.value / 100)}</span> <span class="delivery-frequency">every 4 weeks</span></strong></div>
+                    ${  this.miniProducts.includes(this.product.title) ? html`
+                      <div class="skio-price__per-delivery concept--two">Then <strong><span class="delivery-price">${this.moneyFormatter.format(this.availableSellingPlanGroups[0]?.selling_plans[0]?.price_adjustments[1]?.value / 100)}</span> <span class="delivery-frequency">every 4 weeks</span></strong></div>
+                    ` : '' }
                   </div>
                 </div>
                 <div class="skio-group-content">
@@ -596,12 +608,12 @@ export class SkioPlanPickerComponent extends LitElement {
                 </div>
                 <div class="skio-group__next-shipment concept--two">
                   <div class="next-shipment__image">
-                      <img src="${this.recurringShipmentImage}" alt="Next Shipment" />
+                      <img src="${this.recurringShipmentImage ? this.recurringShipmentImage :  this.product.featured_image }" alt="Next Shipment" />
                   </div>
                   <div class="next-shipment__content">
                     <div class="next-shipment__text">
                         <div>Next shipment includes:</div>
-                        <div>${ this.includedInRecurringShipment }</div>
+                        <div>${ this.includedInRecurringShipment ? this.includedInRecurringShipment : this.product.title }</div>
                     </div>
                     <div class="next-shipment__renews">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -616,11 +628,15 @@ export class SkioPlanPickerComponent extends LitElement {
                   <span>Next auto shipment:</span> <span>Includes <span class="${!this.includedInRecurringShipment && 'variant-title'}">${this.includedInRecurringShipment ? this.includedInRecurringShipment : this.product.title}</span> charged at <strong><span class="delivery-price">${this.moneyFormatter.format(this.availableSellingPlanGroups[0]?.selling_plans[0]?.price_adjustments[1]?.value / 100)}</span> <span class="delivery-frequency">4 weeks</span></strong></span>
               </div>
               <div class="skio-group__shipment concept--two">
+              ${ this.includedInPackage ? html`
                 <span>Includes:</span>
                 <ul>
                   <li>First month includes ${ this.includedInPackage }</li>
                   <li>Every recurring subscription order includes <span class="${!this.includedInRecurringShipment && 'variant-title'}">${this.includedInRecurringShipment ? this.includedInRecurringShipment : this.product.title}</span></li>
                 </ul>
+                ` : html`
+                <div>Every recurring subscription order includes <span class="${!this.includedInRecurringShipment && 'variant-title'}">${this.includedInRecurringShipment ? this.includedInRecurringShipment : this.product.title}</span></div>
+                ` }
               </div>
             </div>
           `

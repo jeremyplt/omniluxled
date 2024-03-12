@@ -2712,6 +2712,11 @@ button.add-to-cart:hover {
   flex: 1;
 }
 
+.next-shipment__image img {
+  width: 80px;
+  height: auto;
+}
+
 .skio-group__shipment .variant-title {
   font-weight: normal !important;
 }
