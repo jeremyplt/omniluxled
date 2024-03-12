@@ -375,6 +375,7 @@ export class SkioPlanPickerComponent extends LitElement {
     selectedVariant: { type: Object },    //placeholder for data
     skioSellingPlanGroups: {},            //placeholder for data
     availableSellingPlanGroups: {},       //placeholder for data
+    subscriptionPrice: { type: String },              //placeholder for data
     selectedSellingPlanGroup: {},         //placeholder for data
     selectedSellingPlan: {},              //placeholder for data
 
@@ -408,6 +409,8 @@ export class SkioPlanPickerComponent extends LitElement {
 
     this.skioSellingPlanGroups = [];
     this.availableSellingPlanGroups = [];
+
+    this.subscriptionPrice = null;
 
     this.selectedSellingPlanGroup = null;
     this.selectedSellingPlan = null;
@@ -570,13 +573,16 @@ export class SkioPlanPickerComponent extends LitElement {
                       <span skio-subscription-price>${ this.price(group.selected_selling_plan) }</span>
                       <span skio-compare-at-price class="concept--two">${ this.moneyFormatter.format(this.selectedVariant.price / 100) }</span>
                     </div>
-                    <div class="skio-price__per-delivery concept--two">Then <strong>${this.moneyFormatter.format(this.availableSellingPlanGroups[0]?.selling_plans[0]?.price_adjustments[1]?.value / 100)} <span class="delivery-frequency">every 4 weeks</span></strong></div>
+                    <div class="skio-price__per-delivery concept--two">Then <strong><span class="delivery-price">${this.moneyFormatter.format(this.availableSellingPlanGroups[0]?.selling_plans[0]?.price_adjustments[1]?.value / 100)}</span> <span class="delivery-frequency">every 4 weeks</span></strong></div>
                   </div>
                 </div>
                 <div class="skio-group-content">
+                ${ this.includedInPackage ? html` 
                   <div class="skio-group__include concept--one">
                     <span class="bold italic">Initial shipment includes:</span> <span>${ this.includedInPackage }</span>
                   </div>
+                ` : '' }
+                
                   <select skio-selling-plans="${ group.id }" class="skio-frequency${ group.selling_plans.length == 1 ? ' skio-frequency--one' : '' }"
                     @change=${ (e) => this.selectSellingPlan(e.target, group) }>
                     ${ group ? group.selling_plans.map((selling_plan) => 
@@ -601,19 +607,19 @@ export class SkioPlanPickerComponent extends LitElement {
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
                       </svg>
-                      <span>Renews at <strong>${this.moneyFormatter.format(this.availableSellingPlanGroups[0]?.selling_plans[0]?.price_adjustments[1]?.value / 100)}</strong></span>
+                      <span>Renews at <strong><span class="delivery-price">${this.moneyFormatter.format(this.availableSellingPlanGroups[0]?.selling_plans[0]?.price_adjustments[1]?.value / 100)}</span></strong></span>
                     </div>
                   </div>
                 </div>
               </label>
               <div class="skio-group__shipment concept--one">
-                  <span>Next auto shipment:</span> <span>Includes ${this.includedInRecurringShipment} charged at <strong>${this.moneyFormatter.format(this.availableSellingPlanGroups[0]?.selling_plans[0]?.price_adjustments[1]?.value / 100)} <span class="delivery-frequency">4 weeks</span></strong></span>
+                  <span>Next auto shipment:</span> <span>Includes <span class="${!this.includedInRecurringShipment && 'variant-title'}">${this.includedInRecurringShipment ? this.includedInRecurringShipment : this.product.title}</span> charged at <strong><span class="delivery-price">${this.moneyFormatter.format(this.availableSellingPlanGroups[0]?.selling_plans[0]?.price_adjustments[1]?.value / 100)}</span> <span class="delivery-frequency">4 weeks</span></strong></span>
               </div>
               <div class="skio-group__shipment concept--two">
                 <span>Includes:</span>
                 <ul>
                   <li>First month includes ${ this.includedInPackage }</li>
-                  <li>Every recurring subscription order includes ${this.includedInRecurringShipment}</li>
+                  <li>Every recurring subscription order includes <span class="${!this.includedInRecurringShipment && 'variant-title'}">${this.includedInRecurringShipment ? this.includedInRecurringShipment : this.product.title}</span></li>
                 </ul>
               </div>
             </div>
@@ -722,6 +728,8 @@ export class SkioPlanPickerComponent extends LitElement {
 
       //update selectedSellingPlan value
       if (this.availableSellingPlanGroups?.length > 0) {
+
+        console.log("this.availableSellingPlanGroups", this.availableSellingPlanGroups)
         //update each group with a default selected_selling_plan
 
         this.availableSellingPlanGroups.forEach((group) => {
@@ -790,7 +798,9 @@ export class SkioPlanPickerComponent extends LitElement {
         composed: true, 
         detail: {
           sellingPlan: this.selectedSellingPlan,
-          key: this.key
+          key: this.key,
+          selectedVariant: this.selectedVariant,
+          moneyFormatter: this.moneyFormatter
         }
       });
 
@@ -1152,7 +1162,27 @@ export class SkioPlanPickerComponent extends LitElement {
 customElements.define('skio-plan-picker', SkioPlanPickerComponent);
 
 document.addEventListener("skio::update-selling-plan", function(e) {
+  const sellingPlan = e.detail.sellingPlan;
+
+  document.querySelectorAll(".variant-title").forEach(title => {
+    if (sellingPlan)
+      title.innerHTML = e.detail.selectedVariant.name;
+  })
+
   document.querySelectorAll(".delivery-frequency").forEach(delivery => {
-    delivery.innerHTML = e.detail.sellingPlan.name.toLowerCase();
+    if (sellingPlan)
+      delivery.innerHTML = e.detail.sellingPlan.name.toLowerCase();
+    })
+
+  document.querySelectorAll(".delivery-price").forEach(function(deliveryPrice) {
+    if (sellingPlan) {
+      const priceAdjustment = sellingPlan.price_adjustments[1] || sellingPlan.price_adjustments[0]
+      if (priceAdjustment.value_type === 'price') {
+        deliveryPrice.innerHTML = e.detail.moneyFormatter.format(priceAdjustment.value / 100);
+      } else {
+        deliveryPrice.innerHTML = e.detail.moneyFormatter.format(e.detail.selectedVariant.price * (1 - (priceAdjustment.value / 100)) / 100);
+      }
+    }
+        
   })
 })

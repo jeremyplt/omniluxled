@@ -2606,7 +2606,7 @@ button.add-to-cart:hover {
   padding: 8px 15px;
 }
 
-.skio-group__shipment span:first-child {
+.skio-group__shipment > span:first-child {
   font-weight: bold;
 }
 
@@ -2710,6 +2710,10 @@ button.add-to-cart:hover {
 
 .next-shipment__content > *:last-child, .skio-group__next-shipment > *:last-child {
   flex: 1;
+}
+
+.skio-group__shipment .variant-title {
+  font-weight: normal !important;
 }
 
 @media (max-width: 749px) {
