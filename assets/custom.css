@@ -2273,3 +2273,20 @@ html .cbb-frequently-bought-recommendations-wrap {
     width: 100%;
   }
 }
+
+/* Cart Item Preorder */
+
+.cart-item__pre-order{
+  background-color: rgba(115, 115, 115, 1);
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+  max-width: fit-content;
+  padding: 2px 7px;
+  font-size: 13px;
+}
+
+.cart-item__next-shipment {
+  font-style: italic;
+  font-size: 13px;
+}

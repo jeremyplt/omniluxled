@@ -1,6 +1,7 @@
 {% assign date = date | date: "%Y-%m-%d" %}
 {% assign day = date | date: "%-d" %}
 {% assign month = date | date: "%B" %}
+{% assign year = date | date: "%Y" %}
 
 {% case day %}
     {% when '1' or '21' or '31' %}
@@ -12,4 +13,4 @@
     {% else %}
         {% assign suffix = 'th' %}
 {% endcase %}
-<span class="formatted-date">{{ month }} {{ day }}{{ suffix }}</span>
+<span class="formatted-date">{{ month }} {{ day }}{{ suffix }}{% if display_year %} {{ year }}{% endif %}</span>
