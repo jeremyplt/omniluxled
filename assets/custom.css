@@ -2289,4 +2289,5 @@ html .cbb-frequently-bought-recommendations-wrap {
 .cart-item__next-shipment {
   font-style: italic;
   font-size: 13px;
+  margin-bottom: 10px;
 }
