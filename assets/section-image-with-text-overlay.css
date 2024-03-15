@@ -4,5 +4,10 @@
 
 .image-text-overlay__text {
     position: absolute;
-    inset: 0;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: clamp(14px, 3vw, 50px)
 }
