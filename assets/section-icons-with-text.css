@@ -1,0 +1,11 @@
+.icons-with-text__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 749px) {
+    .icons-with-text__inner {
+        grid-template-columns: repeat(2, 1fr);
+    }   
+}
