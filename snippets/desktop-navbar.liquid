@@ -97,12 +97,12 @@
                                                     {% if block.type == 'sub_menu' or block.type == 'sub_menu_second' %}
                                                         <div data-menu-title="{{block.settings.menu_title}}" class="sub_menu {% if block.settings.menu_title == 'Devices' %}active{% endif %}">
                                                             <div class="row">
-                                                                {% for i in (1..9) %}
+                                                                {% for i in (1..10) %}
                                                                     {% capture product %}sub_menu_product_{{ i }}{% endcapture %}
                                                                     {% assign current_product = block.settings[product] %}
                                                                     {% assign current_variant = current_product.selected_or_first_available_variant %}             
                                                                     {% if current_product != null %}
-                                                                    <div class="{% if block.type == 'sub_menu_second' %}mega-menu-item-call-second{% else %}mega-menu-item-call{% endif %}">                                                                                       
+                                                                    <div class="{% if block.type == 'sub_menu_second' %}mega-menu-item-call-second test77{% else %}mega-menu-item-call{% endif %}">                                                                                       
                                                                         <div class="card-body mega_menu_container col-12 p-0" data-nav-menu-product-id="{{ current_product.id }}">
                                                                             <div>
                                                                                 {% assign eligible_product = false %}

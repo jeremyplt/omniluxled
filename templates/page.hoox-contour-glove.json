@@ -71,7 +71,7 @@
         "section_btn_text": "Transform My Skin",
         "section_btn_url": "#hoox-shop",
         "section_shipping_text": "FREE Shipping | 30-Day Money-Back Guarantee",
-        "section_main_image": "shopify:\/\/shop_images\/large-Hero_swap_c54ab7ec-1130-4aa2-a72f-82891e49e6c3.png",
+        "section_main_image": "shopify:\/\/shop_images\/Hoox_LP_Hero_Image_Desktop_7.png",
         "section_main_image_mobile": "shopify:\/\/shop_images\/rawbig_c1f9f02a-9a15-4668-8ddf-8f4716c92aac.jpg"
       }
     },
@@ -126,7 +126,7 @@
         "29fbcc08-6999-4b76-b331-b53eec6d4743": {
           "type": "props",
           "settings": {
-            "hoox_safe_image": "shopify:\/\/shop_images\/safe_and_effective.jpg",
+            "hoox_safe_image": "shopify:\/\/shop_images\/Hoox_Mini_LPs_15.png",
             "hoox_safe_headline": "Safe & effective",
             "hoox_safe_text": "Engineered using Omnilux's proprietary medical technology, the Contour Glove harnesses the anti-inflammatory power of red and near-infrared light to improve pain and discomfort associated with joint conditions.",
             "hoox_safe_benefit_image1": "shopify:\/\/shop_images\/Icon_FDA_Cleared_png.png",
@@ -137,7 +137,7 @@
         "723c9410-809c-48d9-b566-eadb3c58e607": {
           "type": "props",
           "settings": {
-            "hoox_safe_image": "shopify:\/\/shop_images\/premium_quality.jpg",
+            "hoox_safe_image": "shopify:\/\/shop_images\/Hoox_Mini_LPs_13.png",
             "hoox_safe_headline": "Non-invasive solution",
             "hoox_safe_text": "Omnilux’s therapeutic wavelengths of light penetrate deep into the skin, promoting cellular regeneration and collagen production to foster both external changes (skin rejuvenation) and internal healing (less inflammation)."
           }
@@ -174,7 +174,7 @@
         "video_style": "col-lg-6",
         "video_style_large": "col-xl-5",
         "content_position": "align-items-center",
-        "title": "How this user found hand relief",
+        "title": "Repair and relieve:<br> A true story",
         "subtitle": "Omnilux user, Jess, had suffered from cystic acne for years. Before resorting to harsh prescription treatments, Jess invested in the Omnilux Clear mask and experienced life changing results.\n<p>\n\"I was collectively spending more money on skincare than I did on this one purchase of the Omnilux, which will continue to treat me for free. My skin texture has improved so so so much. This is the best my skin has been, ever. It has been the greatest gift.\"",
         "txt": "",
         "htmltxt": "",
@@ -214,29 +214,29 @@
         "113949a6-f643-4968-91b9-1c7422018255": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/charge_the_controller.jpg",
-            "hoox_how_to_text": "Charge the controller and connect it to your mask."
+            "hoox_how_to_image": "shopify:\/\/shop_images\/Glove_Hoox_LP_14.png",
+            "hoox_how_to_text": "Charge the device using the supplied charging cable."
           }
         },
         "0ff39d1f-a4b0-43c9-8cbb-dcd284089997": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/secure_the_mask.jpg",
-            "hoox_how_to_text": "Secure the mask on your head using the adjustable velcro straps."
+            "hoox_how_to_image": "shopify:\/\/shop_images\/Glove_Hoox_LP_11.png",
+            "hoox_how_to_text": "Secure the device to your hand using the adjustable velcro strap."
           }
         },
         "a9d976ec-6405-473d-adb8-bb5f24e18114": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/start_the_10min_treatment.jpg",
-            "hoox_how_to_text": "Start the 10-minute treatment."
+            "hoox_how_to_image": "shopify:\/\/shop_images\/Glove_Hoox_LP_18.png",
+            "hoox_how_to_text": "Press and hold the power button to start the 10-minute treatment."
           }
         },
         "42fb2c7a-c3a1-4e11-b32d-90e5d20babee": {
           "type": "usp",
           "settings": {
-            "hoox_how_to_image": "shopify:\/\/shop_images\/remove_the_mask_and_enjoy.jpg",
-            "hoox_how_to_text": "Remove the mask and enjoy the glow."
+            "hoox_how_to_image": "shopify:\/\/shop_images\/Glove_Hoox_LP_19.png",
+            "hoox_how_to_text": "Remove the device and enjoy the relief!"
           }
         }
       },
@@ -355,8 +355,8 @@
       ],
       "settings": {
         "hoox_studies_title": "In clinical studies, Omnilux users had positive outcomes:",
-        "hoox_studies_subtitle": "Improvement using Omnilux medical LEDs for sports injuries",
-        "hoox_studies_image": "shopify:\/\/shop_images\/clinical_studies_results.jpg"
+        "hoox_studies_subtitle": "Improvement using Omnilux Medical LEDs for sports injuries",
+        "hoox_studies_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-03-12T172925.891.png"
       }
     },
     "c7458cec-8732-46b2-97a9-601f8b3f28bf": {
@@ -462,6 +462,7 @@
         "shop_product_upsell": "hyaluronic-acid-serum",
         "shop_product_upsell_title": "Supercharge Your Results",
         "shop_product_upsell_description": "Pairs perfectly with Contour Face when used during treatment.",
+        "subscription-info-text": "",
         "shop_product_upsell_stars": "<svg width=\"96\" height=\"17\" viewbox=\"0 0 96 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M8 0.399902L10.3511 5.16383L15.6085 5.92777L11.8042 9.63597L12.7023 14.872L8 12.3999L3.29772 14.872L4.19577 9.63597L0.391548 5.92777L5.64886 5.16383L8 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M28 0.399902L30.3511 5.16383L35.6085 5.92777L31.8042 9.63597L32.7023 14.872L28 12.3999L23.2977 14.872L24.1958 9.63597L20.3915 5.92777L25.6489 5.16383L28 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M48 0.399902L50.3511 5.16383L55.6085 5.92777L51.8042 9.63597L52.7023 14.872L48 12.3999L43.2977 14.872L44.1958 9.63597L40.3915 5.92777L45.6489 5.16383L48 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M68 0.399902L70.3511 5.16383L75.6085 5.92777L71.8042 9.63597L72.7023 14.872L68 12.3999L63.2977 14.872L64.1958 9.63597L60.3915 5.92777L65.6489 5.16383L68 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M88 0.399902L90.3511 5.16383L95.6085 5.92777L91.8042 9.63597L92.7023 14.872L88 12.3999L83.2977 14.872L84.1958 9.63597L80.3915 5.92777L85.6489 5.16383L88 0.399902Z\" fill=\"#99552B\"><\/path>\n<\/svg>",
         "shop_gallery_bagde": "SIGN UP & SAVE 10%"
       }
@@ -469,57 +470,58 @@
     "d55c37d3-2303-4327-88c7-dd492dffa149": {
       "type": "hoox-faq",
       "blocks": {
+        "4ab4d7d5-21be-459b-9e5a-f179e6bb6105": {
+          "type": "faq",
+          "settings": {
+            "hoox_faq_question": "What is Contour Glove?",
+            "hoox_faq_answer": "Contour Glove is an FDA-cleared, portable LED device with clinically proven results for joint pain and skin rejuvenation. <p>\n<\/p><p>\nThe device utilizes two optimal wavelengths of red light (633nm) and near-infrared light (830nm) that penetrate deep into the skin for powerful anti-inflammatory benefits.<\/p>"
+          }
+        },
         "f425b463-f4a4-43ed-ae56-5ed6bfb60519": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "Does LED therapy really work?",
-            "hoox_faq_answer": "Yes. Omnilux’s technology has been clinically proven to produce medical-grade results for nearly 20 years. Omnilux devices have been specifically profiled in over 40 independent, peer-reviewed, published clinical studies, with applications ranging from skin rejuvenation, acne, pigmentation, and other common skin conditions.\n<br>\n<br>\nPlease note: Not all LED masks are created equal! Some brands lack the clinical studies or FDA clearance that demonstrate proven effectiveness."
-          }
-        },
-        "4ab4d7d5-21be-459b-9e5a-f179e6bb6105": {
-          "type": "faq",
-          "settings": {
-            "hoox_faq_question": "How long does it take LED therapy to work?",
-            "hoox_faq_answer": "With consistent use, you should start to see results from your Contour device starting in 4 weeks. Be sure to take before and after pictures to compare your progress. Sometimes it can be hard to notice a difference until you compare your before and after photos."
-          }
-        },
-        "4ab8adba-b4cc-4ca3-bf6c-052e362e235e": {
-          "type": "faq",
-          "settings": {
-            "hoox_faq_question": "What is the recommended treatment regimen for Contour Face?",
-            "hoox_faq_answer": "We recommend using the Contour devices 3-5 times per week for 4-6 weeks. After the initial 6 weeks, you should continue routine maintenance treatments as desired based on lifestyle and skincare needs, as everyone’s skin is different. Consistency is key, so find what works best for you!"
-          }
-        },
-        "da9fb4f8-c61e-4178-9259-d0ca7160cc67": {
-          "type": "faq",
-          "settings": {
-            "hoox_faq_question": "Is the Contour safe to use?",
-            "hoox_faq_answer": "With over 40 peer reviewed clinical studies and nearly 20 years of experience, Omnilux technology has proven to be very safe for all skin types, with no adverse side effects and no pain. Omnilux Contour generates no heat or UV light."
+            "hoox_faq_answer": "Yes. Omnilux’s gold-standard technology has been clinically proven to produce medical-grade results for over 20 years. Omnilux devices have been specifically profiled in 40+ independent, peer-reviewed published clinical studies, with applications ranging from skin rejuvenation, acne, wound healing and pain attenuation."
           }
         },
         "d1867c6e-cd32-4b8a-992b-d6f14115fd3c": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "Can I use the Contour with my other skin products?",
-            "hoox_faq_answer": "Omnilux Contour is compatible with most skin care routines. You should always apply your skin care products after treatments. Please review the Contraindications for a list of products and ingredients to avoid using with LED."
+            "hoox_faq_question": "What does the red light wavelength do?",
+            "hoox_faq_answer": "Red light (633nm) is the gold standard for wound healing and skin rejuvenation. Its anti-inflammatory effects include reducing oxidative stress and inflammation, often associated with conditions relating to joint discomfort."
           }
         },
         "d4caa621-f695-4bbe-a117-9cc0228ff17e": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "Is the Contour safe to use with Retinol or Retin A?",
-            "hoox_faq_answer": "For users taking prescriptive levels of Retin A such as Tretinoin, we do not recommend the use of light devices. Those using cosmetics\/skincare products containing retinol should read the skincare instructions carefully for warnings and precautions in relation to exposure to light. Retin A should be discontinued for at least 5 days before performing light therapy treatments."
+            "hoox_faq_question": "What does the near-infrared light wavelength do?",
+            "hoox_faq_answer": "Along with red light, near-infrared (830nm) light is the gold standard for wound healing and skin rejuvenation. It penetrates tissues deeply, delivering energy to deeper fibroblast cells. This activity boosts cellular energy production, promoting tissue repair and can contribute to alleviating discomfort associated with joint issues."
+          }
+        },
+        "4ab8adba-b4cc-4ca3-bf6c-052e362e235e": {
+          "type": "faq",
+          "settings": {
+            "hoox_faq_question": "What is the recommended treatment regimen?",
+            "hoox_faq_answer": "We recommend using the Contour Glove device 3-5 times per week for 4-6 weeks. After the initial 6 weeks, you should continue routine maintenance treatments as desired based on lifestyle and needs. Consistency is key, so find what works best for you!"
+          }
+        },
+        "da9fb4f8-c61e-4178-9259-d0ca7160cc67": {
+          "type": "faq",
+          "settings": {
+            "hoox_faq_question": "Is the device safe to use?",
+            "hoox_faq_answer": "With over 40 peer reviewed clinical studies and 20+ years of experience, Omnilux technology has proven to be very safe for all skin types, with no adverse side effects and no pain. Our devices do not generate heat or UV light."
           }
         },
         "5129113d-7507-4843-a29a-7fa7635dca2c": {
           "type": "faq",
           "settings": {
-            "hoox_faq_question": "Can I complete Contour treatments with Botox and fillers?",
-            "hoox_faq_answer": "Yes, the Contour line helps with bruising that may occur after Botox or fillers. Subjects reported that they felt their Botox treatment lasted longer and results are much more enhanced when combined with Omnilux light therapy. Contour treatments are complementary—they have no direct effect on the Botox or filler treatment."
+            "hoox_faq_question": "How many LEDs does the Contour Glove have?",
+            "hoox_faq_answer": "There are a total of 144 LEDs, 72 red and 72 near-infrared. The red and near-infrared LEDs are encased in 72 dual chip bulbs."
           }
         },
         "c439c964-caa9-451f-ab60-7b570665af90": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "hoox_faq_question": "Is the Contour worth the price?",
             "hoox_faq_answer": "The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money."
@@ -527,12 +529,12 @@
         }
       },
       "block_order": [
-        "f425b463-f4a4-43ed-ae56-5ed6bfb60519",
         "4ab4d7d5-21be-459b-9e5a-f179e6bb6105",
-        "4ab8adba-b4cc-4ca3-bf6c-052e362e235e",
-        "da9fb4f8-c61e-4178-9259-d0ca7160cc67",
+        "f425b463-f4a4-43ed-ae56-5ed6bfb60519",
         "d1867c6e-cd32-4b8a-992b-d6f14115fd3c",
         "d4caa621-f695-4bbe-a117-9cc0228ff17e",
+        "4ab8adba-b4cc-4ca3-bf6c-052e362e235e",
+        "da9fb4f8-c61e-4178-9259-d0ca7160cc67",
         "5129113d-7507-4843-a29a-7fa7635dca2c",
         "c439c964-caa9-451f-ab60-7b570665af90"
       ],
@@ -623,29 +625,29 @@
           "type": "product-tabs",
           "settings": {
             "enable_custom_tab_1": true,
-            "tab_1_image": "shopify:\/\/shop_images\/Web_Mini_HP_25.png",
+            "tab_1_image": "shopify:\/\/shop_images\/Glove_Hoox_LP_5.png",
             "tab_1_name": "",
             "tab_1_title": "<strong>A Near-Infrared Led-Based Rehabilitation System: Initial Clinical Experience<\/strong>",
             "tab_1_content": "<p><em>G. David Baxter, Chris Bleakley, Phil Glasgow, R. Glen Calderhead<br\/><br\/><\/em>Sports injuries with athletes in which Omnilux LEDs were specifically used demonstrated that Omnilux is a safe and efficacious in the treatment of a variety of sports injuries. 75% had positive outcomes for joint pain and dysfunction while 71% had positive outcomes for tendinopathies.<br\/><\/p>",
             "enable_custom_tab_2": true,
-            "tab_2_image": "shopify:\/\/shop_images\/Web_Mini_HP_24.png",
+            "tab_2_image": "shopify:\/\/shop_images\/Glove_Hoox_LP_6.png",
             "tab_2_name": "",
-            "tab_2_title": "<strong>Improvement of pain and disability in elderly patients with degenerative osteoarthritis of the knee treated with narrow-band light therapy<\/strong>",
+            "tab_2_title": "<strong>Improvement of Pain and Disability in Elderly Patients With Degenerative Osteoarthritis of the Knee Treated With Narrow-Band Light Therapy<\/strong>",
             "tab_2_content": "<p><em>J Stelian, I Gil, B Habot, M Rosenthal, I Abramovici, N Kutok, A Khahil <br\/><br\/><\/em>Pain reduction in the red and infrared groups after treatment was more than 50% in all scoring methods. There was no significant pain improvement in the placebo group. Conclusion demonstrates low-power light therapy is effective in relieving pain and disability in degenerative osteoarthritis of the knee.<\/p>",
             "enable_custom_tab_3": true,
-            "tab_3_image": "shopify:\/\/shop_images\/Web_Mini_HP_23.png",
+            "tab_3_image": "shopify:\/\/shop_images\/Glove_Hoox_LP_7.png",
             "tab_3_name": "",
-            "tab_3_title": "<strong>Evaluation of the therapeutic effects of led (λ627 ± 10 nm) on the initial phase of ankle sprain treatment: a randomised placebo-controlled clinical trial<\/strong>",
+            "tab_3_title": "<strong>Evaluation of the Therapeutic Effects of LED (λ627 ± 10 nm) on the Initial Phase of Ankle Sprain Treatment: A Randomised Placebo-Controlled Clinical Trial<\/strong>",
             "tab_3_content": "<p><em>Bruno de Moraes Prianti, Giovanna Figueiredo Novello, Tamires de Souza Moreira Prianti, Davidson Ribeiro Costa, Diego Rodrigues Pessoa, Renata Amadei Nicolau<br\/><br\/><\/em>The group treated with LED showed statistically decreased pain compared to the<br\/>placebo group. The reduction of oedema in the LED group on the 3rd and 6th days after<br\/>therapy was statistically superior to that in the placebo. Conclusion demonstrates treatment with LED is effective for pain and oedema in the initial phase of ankle sprains.<\/p>",
             "enable_custom_tab_4": true,
-            "tab_4_image": "shopify:\/\/shop_images\/Hoox_LP_Footer_Image_Mobile_5.png",
+            "tab_4_image": "shopify:\/\/shop_images\/Glove_Hoox_LP_8.png",
             "tab_4_name": "",
-            "tab_4_title": "<strong>Infrared therapy for chronic low back pain: A randomized, controlled trial\n<\/strong>",
+            "tab_4_title": "<strong>Infrared Therapy for Chronic Low Back Pain: A Randomized, Controlled Trial\n<\/strong>",
             "tab_4_content": "<p><em>George D Gale, Peter J Rothbart, Ye Li<br\/><br\/><\/em>The mean NRS scores (NRS: pain screening tool, commonly used to assess pain severity) in the treatment group fell from 6.9\/10 to 3\/10 at the end of the study. Conclusion demonstrates infrared therapy was effective in reducing chronic low back pain, and no adverse effects were observed.<\/p>",
             "enable_custom_tab_5": true,
-            "tab_5_image": "shopify:\/\/shop_images\/Web_Mini_HP_22.png",
+            "tab_5_image": "shopify:\/\/shop_images\/Glove_Hoox_LP_9.png",
             "tab_5_name": "",
-            "tab_5_title": "<strong>830 nm light-emitting diode (led) phototherapy significantly reduced return-to-play in injured university athletes: a pilot study<\/strong>",
+            "tab_5_title": "<strong>830 nm Light-Emitting Diode (LED) Phototherapy Significantly Reduced Return-to-Play in Injured University Athletes: A Pilot Study<\/strong>",
             "tab_5_content": "<p><em>John Foley, David B Vasily, Jeanna Bradle, Catharine Rudio, R Glen Calderhead<br\/><br\/><\/em>Over a 15-month period, 395 injuries (prains, strains, ligament damage, tendonitis) were treated with 1,669 sessions of 830nm LED phototherapy. A full record in 65 subjects who achieved pain relief. The average LED mediated RTP (return to play) in the 65 subjects was significantly shorter at 9.6 days, compared with the mean anti RTP of 19.23 days. Conclusion demonstrates 830nm LEDs significantly and safely reduced the RTP in dedicated university athletes over a wide range of injuries with no adverse events.<\/p>"
           }
         }
@@ -703,22 +705,10 @@
           "settings": {
             "review_image": "shopify:\/\/shop_images\/Omnilux_mariajr_loves_omnilux_contour_face.jpg",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Omnilux Contour FACE",
-            "review_description": "I'm loving this red-light therapy device. It's so easy to use -- a quick 10 minutes and you're done. I'm 53 years old and I have done numerous treatments. This device is worth the cost.",
+            "review_title": "Multi-purpose",
+            "review_description": "I will be 73 in a few months. I had surgery and used it on my scars which have vanished. My surgeon suggested I use it where I have severe back pain. I have now reduced my daily dose of pain meds by 1\/3 in 45 days. So far, so good. I love this thing.",
             "review_icon": "shopify:\/\/shop_images\/Frame_48098704_4.svg",
-            "review_author": "Maria J. R.",
-            "review_verified_text": "Verified buyer"
-          }
-        },
-        "75f1863e-b4aa-48be-b10c-718f622ed99e": {
-          "type": "review",
-          "settings": {
-            "review_image": "shopify:\/\/shop_images\/Omnilux_elizabeth_says_facemask_is_great.jpg",
-            "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Great Face Mask",
-            "review_description": "Love my Omnilux Mask! Only been using for a short time and have been seeing great improvements in my skin brightness. Red light therapy only 10 minutes in the morning and night for great results.",
-            "review_icon": "shopify:\/\/shop_images\/Frame_48098704_2.svg",
-            "review_author": "Elizabeth V.",
+            "review_author": "Catherine D.",
             "review_verified_text": "Verified buyer"
           }
         },
@@ -727,10 +717,10 @@
           "settings": {
             "review_image": "shopify:\/\/shop_images\/Omnilux_ellen_give_me_that_glow.jpg",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Give Me That Glow!",
-            "review_description": "I love, love, love my Omnilux face mask!! It gives my complexion a glow that I can’t duplicate any other way. I had an issue with it after using for almost a year and it was resolved immediately! The customer service is outstanding!!",
+            "review_title": "Fantastic! Does Everything It Claims, Plus More",
+            "review_description": "Received the unit quickly, easy to setup. Works perfectly.\n\nAlso had the added benefit of reducing inflammation which was a nice added bonus!",
             "review_icon": "shopify:\/\/shop_images\/Frame_48098704_3.svg",
-            "review_author": "Ellen",
+            "review_author": "Kathy F.",
             "review_verified_text": "Verified buyer"
           }
         },
@@ -739,10 +729,10 @@
           "settings": {
             "review_image": "shopify:\/\/shop_images\/Omnilux_dorothy_wonderful_addition_to_skincare.jpg",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "Wonderful Addition To Skincare",
-            "review_description": "I am 63 years old and it is starting to show so I decided to order the Omnilux Contour Face led mask. I have been using it for 2 weeks now and have seen usual red patches gone. Very satisfied and highly recommend this product ♥️🥰",
+            "review_title": "The Best",
+            "review_description": "It’s so easy to use right out of the box. The glove is very comfortable and the warmth feels like spa treatment, Just starting using it, but I’m already seeing a difference.",
             "review_icon": "shopify:\/\/shop_images\/Frame_48098704_4.svg",
-            "review_author": "Dorothy M.",
+            "review_author": "Alan G.",
             "review_verified_text": "Verified buyer"
           }
         },
@@ -751,10 +741,10 @@
           "settings": {
             "review_image": "shopify:\/\/shop_images\/Omnilux_chantra_so_far_so_good.jpg",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
-            "review_title": "So Far So Good",
-            "review_description": "Been using this mask for the past 5 days straight now and my skin looks more glowy. Fits and stays on well, easy to clean and store, battery lasts a good bit. Can’t wait to see the long term benefits",
+            "review_title": "Old Hands",
+            "review_description": "I feel it has already helped my 64 year old hands! Thanks you such great devices! I have the neck one also and it has changed my skin texture and evened out skin color! I highly recommend!!!",
             "review_icon": "shopify:\/\/shop_images\/Frame_48098704_5.svg",
-            "review_author": "Chantra P.",
+            "review_author": "Susan C.",
             "review_verified_text": "Verified buyer"
           }
         },
@@ -764,24 +754,36 @@
             "review_image": "shopify:\/\/shop_images\/image_28.png",
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
             "review_title": "Love It!",
-            "review_description": "I just started using my Omnilux contour face and My skin feels and looks great after every use. I'm hoping my sunspots and wrinkles will fade away.",
+            "review_description": "The change to my hands has been amazing. The skin on my hands now ‘matches’ the rest of my skin, it truly has wound back the clock by 10 years, they are smooth and hydrated looking, I can’t stop staring at them! I used the glove religiously every day for 2 months, and now probably 5 days a week. It’s been the biggest change to my skin of any treatment I’ve ever had or any product I’ve ever bought. If you are even considering buying it, stop now and order immediately because you will be SO glad you did!",
             "review_icon": "shopify:\/\/shop_images\/Frame_48098704.svg",
-            "review_author": "Sylvie B.",
+            "review_author": "Kate",
+            "review_verified_text": "Verified buyer"
+          }
+        },
+        "75f1863e-b4aa-48be-b10c-718f622ed99e": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Omnilux_elizabeth_says_facemask_is_great.jpg",
+            "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
+            "review_title": "FANTASTIC GLOVE!!",
+            "review_description": "We’ve been using it faithfully going on two months – and it absolutely does give us some relief!! Neither my husband nor I have debilitating arthritis in our hands, but it’s enough to be quite irritating at times and this has really helped!! The bonus, of course, is my hands have a subtle brighter, smoother texture – just a bit rejuvenated! We’re thrilled!",
+            "review_icon": "shopify:\/\/shop_images\/Frame_48098704_2.svg",
+            "review_author": "Cheryl",
             "review_verified_text": "Verified buyer"
           }
         }
       },
       "block_order": [
         "671d2e9b-1e2c-425d-91c2-f59384c5d4ba",
-        "75f1863e-b4aa-48be-b10c-718f622ed99e",
         "09e51eaf-1740-42e1-bcb7-f1d459351c4c",
         "2c6217e1-4375-4c5c-8973-7efbb94ba6d4",
         "a136d047-2dd8-4976-a57a-be0d54efdaff",
-        "e7bdd677-36eb-43bf-a540-a73029e2bf43"
+        "e7bdd677-36eb-43bf-a540-a73029e2bf43",
+        "75f1863e-b4aa-48be-b10c-718f622ed99e"
       ],
       "settings": {
         "section_id": "#",
-        "section_title": "Join 275K+ others loving the skin they’re in"
+        "section_title": "Join 275K+ other happy Omnilux customers"
       }
     },
     "f6c1c44d-ee90-4757-a340-28a609f1b66a": {

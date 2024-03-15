@@ -69,10 +69,10 @@
         "section_title": "Meet your supercharged spot treatments",
         "section_description": "Precision LED light therapy to tackle blemishes, wrinkles, inflammation, and more.",
         "section_btn_text": "Transform My Skin",
-        "section_btn_url": "#hoox-shop",
+        "section_btn_url": "#featuredcollection",
         "section_shipping_text": "FREE Shipping | 30-Day Money-Back Guarantee",
         "section_main_image": "shopify:\/\/shop_images\/Web_Mini_HP_24.png",
-        "section_main_image_mobile": "shopify:\/\/shop_images\/Hoox_Mini_LP_Hero_Mobile_1.png"
+        "section_main_image_mobile": "shopify:\/\/shop_images\/Hoox_Mini_LP_Hero_Mobile_5.png"
       }
     },
     "832457c1-0171-4350-ad70-04b074b499f1": {
@@ -117,7 +117,7 @@
         "17fe4586-ea01-447c-8760-8f2a92d17537"
       ],
       "settings": {
-        "title": "trusted by:"
+        "title": "Omnilux is trusted by:"
       }
     },
     "global_featured_collection_9a9xNn": {
@@ -160,7 +160,7 @@
           "settings": {
             "hoox_safe_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-13T102606.005.png",
             "hoox_safe_headline": "Superior spot treatments",
-            "hoox_safe_text": "Upgrade your skincare game with medical-grade LEDs and Hydrocolloid Patches infused with active-rich ingredients. This advanced combination revolutionizes traditional spot treatments for significantly better results."
+            "hoox_safe_text": "Each Mini device is equipped with medical-grade LEDs and paired with skincare-infused Hydrocolloid Patches. This advanced combination revolutionizes traditional spot treatments for significantly better results."
           }
         },
         "66e98a01-195d-4a1b-8414-cf995d11033a": {
@@ -178,7 +178,7 @@
         "66e98a01-195d-4a1b-8414-cf995d11033a"
       ],
       "settings": {
-        "hoox_safe_btn_url": "#hoox-shop",
+        "hoox_safe_btn_url": "#featuredcollection",
         "hoox_safe_btn_text": "Start Glowing Today",
         "hoox_safe_guarante_text": "FREE Shipping | 30-Day Money-Back Guarantee"
       }
@@ -201,7 +201,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Web_Mini_HP_21.png",
             "title": "<p>\"I want a supercharged pimple patch to clear breakouts.\"<\/p>",
-            "txt_info": "<p>The Blemish Eraser uses blue and red light to kill acne causing bacteria and calm inflammation associated with breakouts for clearer skin.<\/p>",
+            "txt_info": "<p>The Blemish Eraser uses blue and red light to kill acne causing bacteria while simultaneously calming redness and inflammation associated with breakouts.<\/p>",
             "btn_txt": "SHOP BLEMISH ERASER",
             "btn_url": "shopify:\/\/products\/blemish-eraser"
           }
@@ -242,11 +242,11 @@
           "settings": {
             "fullwidth_content": false,
             "heading_txt": "What's included with your Mini",
+            "max_width_enabled": true,
             "max_width": 530,
-            "txt": "<p>Each Mini LED device includes specially-formulated adhesive Hydrocolloid Patches that deliver extra skincare benefits and keeps your Mini right where you want it during your treatment.<br\/><br\/>Key ingredients:<\/p>",
-            "txt_liquid": "",
+            "txt": "<p>Each Mini LED device includes specially-formulated Hydrocolloid Patches that deliver extra skincare benefits during your treatment. The double-sided adhesive material keeps your Mini in place on your skin to ensure a completely hands-free experience.<br\/><br\/>Key ingredients:<\/p>",
             "step_heading": "",
-            "steps_captions": "<strong>Eye Brightener Hydrocolloid <\/strong>: Amino acid-rich peptides to firm and hydrate + niacinamide to brighten dark circles\n<strong>Blemish Eraser Hydrocolloid<\/strong>: Salicylic acid to clear blocked pores + green tea antioxidants to help soothe irritated skin\n<strong>Skin Corrector Hydrocolloid<\/strong>: Vitamin C to brightens skin tone + azelaic acid to reduce the appearance of dark spots",
+            "steps_captions": "<strong>Eye Brightener Hydrocolloid<\/strong>: Amino acid-rich peptides to firm and hydrate + niacinamide to brighten dark circles\n<strong>Blemish Eraser Hydrocolloid<\/strong>: Salicylic acid to clear blocked pores + green tea antioxidants to help soothe irritated skin\n<strong>Skin Corrector Hydrocolloid<\/strong>: Vitamin C to brighten skin tone + azelaic acid to reduce the appearance of dark spots",
             "steps_captions_2": "",
             "btn_txt": "",
             "btn_link": "",
@@ -256,8 +256,6 @@
             "btn_variant": "primary",
             "btn_size": "",
             "btn_txt_watch": "",
-            "watch_video_id": "",
-            "watch_mobile_video_id": "",
             "btn_type_watch": "",
             "btn_variant_watch": "primary",
             "btn_size_watch": "",
@@ -294,7 +292,7 @@
           "type": "usp",
           "settings": {
             "hoox_how_to_image": "shopify:\/\/shop_images\/MINI_HOW_TO_GLOW_UP_PDPS_5.png",
-            "hoox_how_to_text": "Peel back the amino acid-rich Hydrocolloid Patch adhesive side 1 (marked with a device icon) and adhere to the device."
+            "hoox_how_to_text": "Peel back the ingredient-rich Hydrocolloid Patch adhesive side 1 (marked with a device icon) and adhere to the device."
           }
         },
         "a9d976ec-6405-473d-adb8-bb5f24e18114": {
@@ -407,28 +405,28 @@
           "type": "faq",
           "settings": {
             "hoox_faq_question": "How do the Mini devices work?",
-            "hoox_faq_answer": "The Mini devices use clinically proven wavelengths of light (red, near-infrared, and blue) and optimized light energy output to work at a cellular level to stimulate new collagen and reduce fine lines and wrinkles, sun damage, and acne.\n\nThe red wavelength (633nm) reduces inflammation, pigmentation, and redness and helps prompt cellular repair and circulation for a more vibrant complexion. The red wavelength can be found in the Skin Corrector, Eye Brightener, and Blemish Eraser devices.\n\n\nThe near-infrared wavelength (830nm) targets deeper fibroblast cells, stimulating new collagen and elastin production, resulting in plumper, firmer, more youthful looking skin. The red wavelength can be found in the Skin Corrector and Eye Brightener devices.\n\n\nThe blue wavelength (415nm) eliminates bacteria on the surface of the skin to neutralize acne flare ups. The blue wavelength can be found in the Blemish Eraser device."
+            "hoox_faq_answer": "<p>The Mini devices use clinically proven wavelengths of light (red, near-infrared, and blue) and optimized light energy output to work at a cellular level to stimulate new collagen and reduce fine lines and wrinkles, sun damage, and acne.<\/p>\n<p>The red wavelength (633nm) reduces inflammation, pigmentation, and redness and helps prompt cellular repair and circulation for a more vibrant complexion. The red wavelength can be found in the Skin Corrector, Eye Brightener, and Blemish Eraser devices.<\/p>\n<p>The near-infrared wavelength (830nm) targets deeper fibroblast cells, stimulating new collagen and elastin production, resulting in plumper, firmer, more youthful looking skin. The red wavelength can be found in the Skin Corrector and Eye Brightener devices.<\/p>\n<p>The blue wavelength (415nm) eliminates bacteria on the surface of the skin to neutralize acne flare ups. The blue wavelength can be found in the Blemish Eraser device.<\/p>"
           }
         },
         "4ab4d7d5-21be-459b-9e5a-f179e6bb6105": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "How do the Mini devices differ from each other?",
-            "hoox_faq_answer": "The Omnilux Mini Skin Corrector and Eye Brightener use red and near-infrared light to reduce fine line, wrinkles, and improve overall skin tone. They are shaped differently for different parts of your face.\n\nThe Eye Brightener is shaped like a crescent to fit under and around the eye area, the Skin corrector is round to target areas like your cheek or your forehead.\n\n\nThe Blemish Eraser device uses red and blue light to treat acne breakouts. Although all Mini devices have red light, the light is used in combination with other wavelengths (near-infrared and blue) to target two completely different skin concerns.\n\n\nEach Mini's corresponding Hydrocolloid Patches contain skincare ingredients specific to the device's treatment application (ie, salicylic acid for blemishes and amino acid-rich peptides for reducing fine lines and wrinkles)."
+            "hoox_faq_answer": "<p>The Omnilux Mini Skin Corrector and Eye Brightener use red and near-infrared light to reduce fine line, wrinkles, and improve overall skin tone. They are shaped differently for different parts of your face.<\/p>\n<p>The Eye Brightener is shaped like a crescent to fit under and around the eye area, the Skin corrector is round to target areas like your cheek or your forehead.<\/p>\n<p>The Blemish Eraser device uses red and blue light to treat acne breakouts. Although all Mini devices have red light, the light is used in combination with other wavelengths (near-infrared and blue) to target two completely different skin concerns.<\/p>\n<p>Each Mini's corresponding Hydrocolloid Patches contain skincare ingredients specific to the device's treatment application (ie, salicylic acid for blemishes and amino acid-rich peptides for reducing fine lines and wrinkles).<\/p>"
           }
         },
         "4ab8adba-b4cc-4ca3-bf6c-052e362e235e": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "What are the Hydrocolloid Patches?",
-            "hoox_faq_answer": "The Hydrocolloid Patches are infused with active rich ingredients specific to the device's treatment application (ie, salicylic acid for blemishes and amino acid-rich peptides for reducing fine lines and wrinkles). The Hydrocolloid Patches are sticky on both sides and adhere the Mini device to your skin for a hands-free treatment.​​​​​​​\n\nPlease note: The Hydrocolloid Patches are single-use (refills are available)."
+            "hoox_faq_answer": "<p>The Hydrocolloid Patches are infused with active rich ingredients specific to the device's treatment application (ie, salicylic acid for blemishes and amino acid-rich peptides for reducing fine lines and wrinkles). The Hydrocolloid Patches are sticky on both sides and adhere the Mini device to your skin for a hands-free treatment.​​​​​​​<\/p>\n<p>Please note: The Hydrocolloid Patches are single-use (refills are available).<\/p>"
           }
         },
         "da9fb4f8-c61e-4178-9259-d0ca7160cc67": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "What is the recommended treatment regimen?",
-            "hoox_faq_answer": "We recommend using the Eye Brightener and Skin Corrector devices for 3-5 treatments per week for 4-6 weeks followed by maintenance as desired.\n\nWe recommend using the Blemish Eraser device for 4 treatments per week until the blemish subsides, or for 6 weeks if treating recurring acne."
+            "hoox_faq_answer": "<p>We recommend using the Eye Brightener and Skin Corrector devices for 3-5 treatments per week for 4-6 weeks followed by maintenance as desired.<\/p>\n<p>We recommend using the Blemish Eraser device for 4 treatments per week until the blemish subsides, or for 6 weeks if treating recurring acne.<\/p>"
           }
         },
         "d1867c6e-cd32-4b8a-992b-d6f14115fd3c": {
@@ -752,8 +750,8 @@
         "@media (max-width: 600px) {.hoox-treatment__bullet-text {font-size: 9px; } .hoox-treatment__bullet-2 {margin-bottom: 30px; } .hoox-treatment__bullet-1 {padding: 5px 15px 5px 15px; margin: 0px auto 25px -10px; max-width: 180px; }}"
       ],
       "settings": {
-        "section_title": "Why subscribe?",
-        "section_subtitle": "To enjoy exclusive savings and VIP perks, of course!",
+        "section_title": "Want 15% off?",
+        "section_subtitle": "Subscribe to enjoy exclusive savings and VIP perks! <br> Here's what you'll get:",
         "section_corner_text": "",
         "bg_image": "shopify:\/\/shop_images\/eyeb2.jpg",
         "bg_image_mobile": "shopify:\/\/shop_images\/Frame_1000002767_bd9850e3-6b08-49d4-9b4a-10de3a1a22f8.jpg",
@@ -982,16 +980,19 @@
       "type": "hoox-sticky-bar",
       "settings": {
         "button_title": "Transform My Skin",
-        "button_url": "#hoox-shop"
+        "button_url": "#featuredcollection"
       }
     },
     "7cddaa24-622a-4429-a62a-cd918d1f673e": {
       "type": "hoox-protect",
+      "custom_css": [
+        "@media (max-width: 600px) {.hoox-title {font-size: 24px !important; }}"
+      ],
       "settings": {
         "hoox_protect_image": "shopify:\/\/shop_images\/Hoox_LP_Footer_Image_Mobile_5.png",
         "hoox_protect_image_mobile": "shopify:\/\/shop_images\/Hoox_LP_Footer_Image_3.png",
         "hoox_protect_title": "It's time to reach your skin goals",
-        "hoox_protect_btn_url": "#hoox-shop",
+        "hoox_protect_btn_url": "#featuredcollection",
         "hoox_protect_btn_text": "START GLOWING TODAY",
         "hoox_protect_shipping": "FREE Shipping | 30-Day Money-Back Guarantee"
       }

@@ -35,11 +35,17 @@
       </span>
     {%- endif -%}
 
-    {%- if soldOut -%}
-      <span class="badge badge-right badge-gainsboro text-black">
-        {{ 'products.product.sold_out' | t | escape }}
-      </span>
-    {%- endif -%}
+    {%- unless product.tags contains 'notify-me' -%}
+      {%- if soldOut -%}
+        <span class="badge badge-right badge-gainsboro text-black">
+          {{ 'products.product.sold_out' | t | escape }}
+        </span>
+      {%- endif -%}
+    {%- else -%}
+        <span class="badge badge-right badge-gainsboro text-black">
+          {{ 'COMING SOON' | escape }}
+        </span>
+    {%- endunless -%}
   </span>
   {% assign eligible_product = false %}
   {% for gift_collection in product.collections %}

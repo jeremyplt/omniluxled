@@ -1,5 +1,5 @@
 
-<product-form class="product-form{% unless product.has_only_default_variant %} disable-swatches{% endunless %}">
+<product-form class="product-form{% unless product.has_only_default_variant %} disable-swatches{% endunless %} test66">
 
 {% comment %}theme-check-disable UnusedAssign{% endcomment %}
 {%- liquid
@@ -182,7 +182,21 @@
               {% endif %}
             </span>
             <span class="spinner"></span>
-        </button>{% endunless %}
+        </button>
+          {% if product.tags contains 'notify-me' %}
+          <button class="btn btn btn-primary flex-grow-1 px-2 manual-bis-trigger"
+                type="button"
+              id='klaviyo-data-handle-{{ product.handle }}' 
+              data-klaviyo-handle='{{ product.handle }}' 
+              data-prod_title="{{ product.title }}" 
+              data-prod_id="{{ product.id }}" 
+              data-var_id="{{ product.selected_or_first_available_variant.id }}">
+              Notify Me
+            </button>
+        {% else %}
+          <div class="klaviyo-bis-trigger btn btn-primary flex-grow-1 px-2" style="display:none;">Notify Me</div>
+        {% endif %}
+          {% endunless %}
 
         {% comment %} Dynamic Checkout Button 
         {% if section.settings.enable_dynamic_checkout %}

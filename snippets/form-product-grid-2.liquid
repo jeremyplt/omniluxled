@@ -56,7 +56,7 @@
     <div class="row">
       <div class="col-12 d-flex">
           {% assign prefixes = "us,uk,ca,au,eu,nz" | split: "," %}
-
+{% comment %}
           {% if localization.country == "France" and product.metafields.unavailable.france == true %}
             <span class="not-available">Not Available In France</span>
           {% else %}
@@ -79,9 +79,9 @@
                   data-{{ key_coming_soon }}="{{ data_coming_soon }}"
                   {% if localization.country == "France" and product.metafields.unavailable.france == true %}disabled="disabled"{% endif %}
                 {% endfor %}
-            >
+            >{% endcomment %}
                 {% comment %} <span class="add-text">{%- if current_variant.available -%}<i class="fst-normal me-1">+</i>{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
-                <span class="add-text">
+              {% comment %}  <span class="add-text">
                   {% if localization.country == "France" and product.metafields.unavailable.france == true %}
                     Not Available In France
                   {% else %}
@@ -96,7 +96,49 @@
                 <span class="spinner"></span>
             </button>
           {% endif %}
+{% endcomment %}
+         <button class="addtocartbtn btn-add_to_cart btn btn-card p-0 mt-1 trn data-submit-btn {% if product.tags contains 'notify-me' %} manual-bis-trigger{% endif %}"
+              type="submit"
+              name="add"
+              aria-label="{{ 'products.product.add_to_cart' | t | escape }}"
 
+              id='klaviyo-data-handle-{{ product.handle }}' 
+              data-klaviyo-handle='{{ product.handle }}' 
+              data-prod_title="{{ product.title }}" 
+              data-prod_id="{{ product.id }}" 
+              data-var_id="{{ product.variants.first.id }}"
+              
+              {% unless current_variant.available or product.tags contains 'notify-me' %}disabled{% endunless %}
+              {% for prefix in prefixes %}
+                {% assign key_preorder = prefix | append: '_preorder' %}
+                {% assign data_preorder = product.metafields.custom[key_preorder] %}
+                {% assign key_product_page_messaging = prefix | append: '_product_page_messaging' %}
+                {% assign data_product_page_messaging = product.metafields.custom[key_product_page_messaging] %}
+
+                {% assign key_coming_soon = prefix | append: '_add_coming_soon_tag' %}
+                {% assign data_coming_soon = product.metafields.custom[key_coming_soon] %}
+
+                data-{{ key_preorder }}="{{ data_preorder }}"
+                data-{{ key_product_page_messaging }}="{{ data_product_page_messaging }}"
+                data-{{ key_coming_soon }}="{{ data_coming_soon }}"
+              {% endfor %}
+          >
+              {% comment %} <span class="add-text">{%- if current_variant.available -%}<i class="fst-normal me-1">+</i>{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
+              <span class="add-text">
+                {%- if product.tags contains 'notify-me' -%}
+                  Notify Me
+                {%- else -%}
+                  {%- if current_variant.available -%}
+                    <i class="fst-normal me-1">+</i>
+                    {{ 'products.product.add_to_cart' | t }}
+                  {%- else -%}
+                    {{ 'products.product.sold_out' | t }}
+                  {%- endif -%}
+                {%- endif -%}
+              </span>
+              <span class="spinner"></span>
+          </button>
+         
         {% comment %} {%- if settings.enable_quickshop -%}
             <a href="javascript:void(0);" rel="nofollow" class="btn btn-dark btn-sm ms-2 quickshop--button" data-handle="{{ product.handle }}" title="{{ 'products.product.quickshop' | t | escape }}" aria-label="{{ 'products.product.quickshop' | t | escape }}" data-toggle="tooltip" data-trigger="hover" data-placement="top">
                 <span class="icon-quickview font-size-lg"></span>

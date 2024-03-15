@@ -146,7 +146,6 @@
 
 .template-page.eye-brightener .hoox-hero__wrapper{height:670px;}
 .template-page.blemish-eraser .hoox-hero__wrapper,.template-page.minis .hoox-hero__wrapper{height:645px;}
-.template-page.skin-corrector .hoox-shop__gallery .hoox-shop__video-holder,.template-page.blemish-eraser .hoox-shop__gallery .hoox-shop__video-holder,.template-page.eye-brightener .hoox-shop__gallery .hoox-shop__video-holder{display:none;}
 
     .hoox-hero__content {
         flex: 1;
@@ -233,3 +232,12 @@
   .hoox-hero__bullets li.hoox-hero__bullet:last-child{margin-bottom:0;}
   .hoox-hero__bullets li.hoox-hero__bullet svg{margin-left:-20px;}
 }
+
+
+.template-page.skin-corrector .hoox-shop__video-holder,
+.template-page.blemish-eraser .hoox-shop__video-holder,
+.template-page.eye-brightener .hoox-shop__video-holder{display:none!important;}
+
+.template-page.skin-corrector .hoox-shop__gallery,
+.template-page.blemish-eraser .hoox-shop__gallery,
+.template-page.eye-brightener .hoox-shop__gallery{margin-bottom:0!important;}

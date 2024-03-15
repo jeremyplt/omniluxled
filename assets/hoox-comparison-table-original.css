@@ -223,9 +223,6 @@
         height: 56px;
     }
 
-    .column-row-content p{ 
-        max-width: 90px;
-    }
 
     .primary-col .column-row-content:first-child{
         height: 80px;

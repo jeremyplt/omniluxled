@@ -1,0 +1,40 @@
+<script defer="defer" src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+{{ 'manual-bis.css' | asset_url | stylesheet_tag }}
+<manual-bis>
+  <div id="manual-bis" class="manual-bis-popup js-manual-popup hidden">
+    <div class="popup-overlay" data-close-modal></div>
+    <div class="popup-content">
+      <h4 class="manual-bis-popup__heading">
+        <span class="manual-bis-popup__product">{{ product.title }}</span><span class="manual-bis-popup__variant"></span>
+      </h4>
+      <p class="manual-bis-popup__content">Register to receive a notification when this item becomes available.</p>
+      <form method="post" action="">
+        <input type="hidden" id="manual-bis-account" name="a" value="VjyT7K">
+        <input type="hidden" id="manual-bis-product" name="product" value="{{ product.id }}">
+        <input type="hidden" id="manual-bis-variant" name="variant" value="{{ product.selected_variant.id }}">
+        <input type="hidden" id="manual-bis-platform" name="platform" value="shopify">
+        <input
+          type="email"
+          id="manual-bis-email"
+          name="email"
+          placeholder="Email"
+          value="{% if customer %}{{ customer.email }}{% endif %}"
+          required
+        >
+        <div id="newsletter_subscription"><p><input type="checkbox" id="subscribe_for_newsletter" checked=""><label for="subscribe_for_newsletter" style="margin-left:10px;">Sign up for Omnilux updates</label></p></div>
+        <div class="manual-bis-message"></div>
+        <div class="manual-bis-success hidden">You're in! We'll let you know when it's available.<span data-close-modal>Close</span></div>
+        <button type="submit" class="btn btn-primary">
+          Notify me when available
+        </button>
+      </form>
+      <div id="bis-klaviyo-email" style="display:none;" class="klaviyo-form-TLyKnL"></div>
+      <button type="button" class="btn popup-close" data-close-modal>×</button>
+    </div>
+  </div>
+  <script id="ProductInfoScript--ManualBis" type="application/json">
+    {{- product | json -}}
+  </script>
+</manual-bis>
+{%- if product.has_only_default_variant == false -%}
+{%- endif -%}

@@ -18,7 +18,7 @@
                 {%- if blocks_size > 0 -%}
                 <div class="row my-n3" data-in-view>
                     {% for block in section.blocks %}
-                    <div class="col-sm-4 py-3 col-12" {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                    <div class="col-sm-3 py-3 col-12" {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
                         <div class="card feature-block border-0">
                             <div class="card-img text-center position-relative overflow-hidden" style="padding-top:105.64%;transform-origin: top;">
                                 {%- if block.settings.image != blank -%}

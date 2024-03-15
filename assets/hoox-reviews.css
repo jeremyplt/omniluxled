@@ -82,6 +82,7 @@
     gap: 8px;
 }
 
+
 @media (min-width: 1024px) {
     .hoox-reviews {
         padding: 80px 0 0;
@@ -132,6 +133,8 @@
     .hoox-reviews__item-media {
         margin-bottom: 24px;
     }
+.template-page.minis  .hoox-reviews{min-height:700px;}
+  .template-page.minis .hoox-reviews__item{min-height:440px;}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -142,4 +145,11 @@
     .hoox-reviews__title {
         max-width: 553px;
     }
+  .template-page.minis  .hoox-reviews{min-height:700px;}
+  .template-page.minis .hoox-reviews__item{min-height:440px;}
+}
+
+@media(max-width:600px){
+  .template-page.minis  .hoox-reviews{min-height:600px;}
+  .template-page.minis .hoox-reviews__item{min-height:340px;}
 }

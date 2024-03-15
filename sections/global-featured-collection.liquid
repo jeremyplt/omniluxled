@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
   <noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
   {% assign collection_grid_type = section.settings.collection_grid_type %}
-  <section class="section-content border-bottom pt-lg-7 pb-lg-10 pt-8 pb-8" data-section-id="{{ section.id }}" data-grid-type="{{ collection_grid_type }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
+  <section id="featuredcollection" class="section-content border-bottom pt-lg-7 pb-lg-10 pt-8 pb-8" data-section-id="{{ section.id }}" data-grid-type="{{ collection_grid_type }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
       <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}" {% if collection_grid_type == 'grid' %}data-type="slider"{% endif %}>
         <div class="row">
             <div class="col-12 col-lg-6 col-md-8 mb-4 pb-1 text-center mx-auto">

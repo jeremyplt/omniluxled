@@ -317,6 +317,11 @@
 
                   {% render block %}
                 {%- when 'name' -%}
+                  {%- if product.tags contains 'notify-me' -%}
+                    <span class="badge badge-gainsboro text-black" style="max-width:200px;">
+                      {{ 'COMING SOON' | escape }}
+                    </span>
+                  {%- endif -%}
                   <h1 class="mt-2 h3">{{ product.title }}</h1>
                 {%- when 'subtitle' -%}
                   {% if block.settings.subtitle != '' %}

@@ -106,7 +106,7 @@
                                 {% if menuType == 'megamenu_with_product' %}
                                     <div class="col">
                                         <div class="row h-100 mb-8">
-                                            {% for i in (1..9) %}
+                                            {% for i in (1..20) %}
                                                 {% capture product %}product_{{ i }}{% endcapture %}
                                                 {% assign current_product = megaMenuBlock[product] %}
                                                 {% assign current_variant = current_product.selected_or_first_available_variant %}
@@ -585,6 +585,11 @@
           "type": "text",
           "id": "sub_title_18",
           "label": "Sub title 18"
+        },
+        {
+          "type": "product",
+          "id": "product_10",
+          "label": "Product"
         }
       ]
     },
