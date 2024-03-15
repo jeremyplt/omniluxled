@@ -2288,3 +2288,17 @@ a[title="Topical Skincare"] span {
     width: 100%;
   }
 }
+
+/* Collection page redesign test | class: test-collection-page-redesign */
+
+.test-collection-page-redesign [data-collectionbanner] {
+  display: none !important;
+}
+
+.section-newsletter-banner {
+  display: none;
+}
+
+.test-collection-page-redesign .section-newsletter-banner {
+  display: block;
+}
