@@ -4,6 +4,12 @@
     gap: 1rem;
 }
 
+.icons-with-text__item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
 @media (max-width: 749px) {
     .icons-with-text__inner {
         grid-template-columns: repeat(2, 1fr);
