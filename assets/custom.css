@@ -2262,6 +2262,10 @@ div#shopify-section-template--16531510329506__fa9b8a1b-146c-4f3f-8be9-721ab7ff5c
 a[title="Topical Skincare"] span {
     font-weight: 500 !important;
 }
+
+a[title="Topical Skincare"] {
+    font-weight: 500 !important;
+}
 @media (max-width: 749px) {
   .pre-order-info__inner {
     padding: 1rem;
