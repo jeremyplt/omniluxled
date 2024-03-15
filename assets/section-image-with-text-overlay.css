@@ -1,0 +1,8 @@
+.image-text-overlay__inner {
+    position: relative;
+}
+
+.image-text-overlay__text {
+    position: absolute;
+    inset: 0;
+}

@@ -2295,10 +2295,14 @@ a[title="Topical Skincare"] span {
   display: none !important;
 }
 
-.section-newsletter-banner {
+.section-newsletter-banner, .section-image-text-overlay {
   display: none;
 }
 
-.test-collection-page-redesign .section-newsletter-banner {
+.test-collection-page-redesign.concept--one .section-newsletter-banner {
   display: block;
+}
+
+.test-collection-page-redesign.concept--two .section-image-text-overlay {
+  display: block
 }

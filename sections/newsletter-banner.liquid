@@ -17,40 +17,44 @@
 <div class="section-{{ section.id }}-padding newsletter-banner page-width">
     <div class="newsletter-banner__inner">
         <div class="newsletter-banner__content">
-            {% for block in section.blocks %}
-                {% case block.type %}
-                    {% when 'heading' %}
-                        <h2>{{ block.settings.heading }}</h2>
-                    {% when 'text' %}
-                        <p>{{ block.settings.text }}</p>
-                    {% when 'form' %}
-                        {% form 'customer', id: 'NewsletterPopUp' %}
-                            {% if form.errors %}
-                                <div class="alert alert-warning">
-                                    {{ form.errors | default_errors }}
-                                </div>
-                            {% endif %}
-                        
-                            {% if form.posted_successfully? %}
-                                <h5 class="mt-3">{{ 'general.social.newsletter_form.newsletter_confirmation' | t }}</h5>
-                            {% else %}
-                                {% if section.settings.text != blank %}
-                                    <div>{{ section.settings.text }}</div>
+            <div class="newsletter-banner__content-inner">
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                        {% when 'heading' %}
+                            <h2>{{ block.settings.heading }}</h2>
+                        {% when 'text' %}
+                            <div class="newsletter-banner__text">
+                                {{ block.settings.text }}
+                            </div>
+                        {% when 'form' %}
+                            {% form 'customer', id: 'NewsletterPopUp' %}
+                                {% if form.errors %}
+                                    <div class="alert alert-warning">
+                                        {{ form.errors | default_errors }}
+                                    </div>
                                 {% endif %}
-                                
-                                <div class="input-group mx-auto my-4">
-                                    <input type="email" name="contact[email]" aria-label="email" id="newsletterPopupEmail" class="form-control" placeholder="{{ 'general.social.newsletter_form.newsletter_email' | t }}" value="{% if customer %}{{ customer.email }}{% endif %}" autocorrect="off" autocapitalize="off" required>
-                                    <input type="hidden" name="contact[tags]" value="newsletter">
-                                    <button type="submit" name="commit" class="btn btn-sm btn-primary" >{{ section.settings.btn_txt }}</button>
-                                </div>
                             
-                                {% if section.settings.footer_notes != blank %}
-                                    <div class="small">{{ section.settings.footer_notes }}</div>
+                                {% if form.posted_successfully? %}
+                                    <h5 class="mt-3">{{ 'general.social.newsletter_form.newsletter_confirmation' | t }}</h5>
+                                {% else %}
+                                    {% if section.settings.text != blank %}
+                                        <div>{{ section.settings.text }}</div>
+                                    {% endif %}
+                                    
+                                    <div class="input-group mx-auto my-4 newsletter-form__wrapper">
+                                        <input type="email" name="contact[email]" aria-label="email" id="newsletterPopupEmail" class="form-control" placeholder="Email Address" value="{% if customer %}{{ customer.email }}{% endif %}" autocorrect="off" autocapitalize="off" required>
+                                        <input type="hidden" name="contact[tags]" value="newsletter">
+                                        <button type="submit" name="commit" class="btn btn-sm btn-primary" >{{ block.settings.button_label }}</button>
+                                    </div>
+                                
+                                    {% if section.settings.footer_notes != blank %}
+                                        <div class="small">{{ section.settings.footer_notes }}</div>
+                                    {% endif %}
                                 {% endif %}
-                            {% endif %}
-                        {% endform %}
-                {% endcase %}
-            {% endfor %}
+                            {% endform %}
+                    {% endcase %}
+                {% endfor %}
+            </div>
         </div>
         <div class="newsletter-banner__image">
             {{ section.settings.image | image_url: width: 1200 | image_tag: alt: section.settings.image.alt }}
