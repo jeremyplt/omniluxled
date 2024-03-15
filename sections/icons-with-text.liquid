@@ -1,0 +1,94 @@
+{{ 'section-icons-with-text.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.55 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.55 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding icons-with-text" style="background-color: {{ section.settings.background_color }}">
+    <div class="icons-with-text__inner page-width">
+        {% for block in section.blocks %}
+            <div class="icons-with-text__item">
+                <div class="icons-with-text__icon">
+                    {{ block.settings.icon | image_url: width: 100 | image_tag: alt: block.settings.icon.alt }}
+                </div>
+                <div class="icons-with-text__content">
+                    {{ block.settings.text }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Icons with Text",
+        "tag": "section",
+        "class": "section-icons-with-text",
+        "settings": [
+            {
+                "type": "color",
+                "id": "background_color",
+                "label": "Background Color",
+                "default": "#E5E1E6"
+            },
+            {
+                "type": "header",
+                "content": "Padding"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding Top",
+                "default": 36
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding Bottom",
+                "default": 36
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Icon with text",
+                "type": "icon-with-text",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "icon",
+                        "label": "Icon"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Text",
+                        "default": "<p><strong>Secure Checkout:</strong> SSL & 256-bit encrypted protection.</p>"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Icons with Text"
+            }
+        ]
+    }
+{% endschema %}

@@ -2292,3 +2292,21 @@ a[title="Topical Skincare"] {
     width: 100%;
   }
 }
+
+/* Collection page redesign test | class: test-collection-page-redesign */
+
+.test-collection-page-redesign [data-collectionbanner] {
+  display: none !important;
+}
+
+.section-newsletter-banner, .section-image-text-overlay, .section-icons-with-text {
+  display: none;
+}
+
+.test-collection-page-redesign.concept--one .section-newsletter-banner {
+  display: block;
+}
+
+.test-collection-page-redesign.concept--two .section-image-text-overlay, .test-collection-page-redesign.concept--two .section-icons-with-text {
+  display: block
+}
