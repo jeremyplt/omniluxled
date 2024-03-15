@@ -2295,7 +2295,7 @@ a[title="Topical Skincare"] span {
   display: none !important;
 }
 
-.section-newsletter-banner, .section-image-text-overlay {
+.section-newsletter-banner, .section-image-text-overlay, .section-icons-with-text {
   display: none;
 }
 
@@ -2303,6 +2303,6 @@ a[title="Topical Skincare"] span {
   display: block;
 }
 
-.test-collection-page-redesign.concept--two .section-image-text-overlay {
+.test-collection-page-redesign.concept--two .section-image-text-overlay, .test-collection-page-redesign.concept--two .section-icons-with-text {
   display: block
 }
