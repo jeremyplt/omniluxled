@@ -668,6 +668,7 @@
     },
     "e74cca30-9a8e-4f0e-8e87-cac411799484": {
       "type": "product-video-with-text",
+      "disabled": true,
       "settings": {
         "display_for_this_product": "{{ product.metafields['custom']['vwt_enabled'] }}",
         "fluid_layout": false,

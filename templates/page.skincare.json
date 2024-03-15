@@ -17,8 +17,8 @@
             "loop": true,
             "logo_image__": "",
             "trustedbytxt": "Trusted by 275K+ Customers",
-            "title": "Advance your routine in just <strong><u>3 steps.<\/u><\/strong>",
-            "subtitle": "<p>Discover a power-packed skincare trio proven to fight signs of aging and optimize Omnilux’s signature LED light therapy treatments.<\/p>",
+            "title": "Skincare made for LED",
+            "subtitle": "<p>A power-packed skincare collection to fight signs of aging while optimizing Omnilux’s signature LED light therapy treatments.<\/p>",
             "heading__size": false,
             "heading__lg": 60,
             "heading__md": 55,
@@ -134,6 +134,68 @@
         "css_class": ""
       }
     },
+    "98ce97d7-15c6-46d0-b111-c869d2a20b0b": {
+      "type": "global-info-block",
+      "blocks": {
+        "template--16169064104098__98ce97d7-15c6-46d0-b111-c869d2a20b0b-1684638177820ba2bb-0": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-03-02T142748.417.png",
+            "title": "<p>Enzyme Powder Cleanser <strong>PRE LED TREATMENT<\/strong><\/p>",
+            "txt_info": "<p>Cleanse, brighten, and improve texture with this gently exfoliating cleanser enriched with green tea, rice powder, and enzymes.<\/p>",
+            "btn_txt": "SHOP NOW",
+            "btn_url": "shopify:\/\/products\/enzyme-powder-cleanser"
+          }
+        },
+        "59a2a5b7-b6f5-4566-8ff2-3c5e06fec563": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-03-02T142739.780.png",
+            "title": "<p>Hyaluronic Acid Serum <strong>DURING LED TREATMENT<\/strong><\/p>",
+            "txt_info": "<p>This serum amplifies your LED treatments with hyaluronic acid and niacinamide to hydrate, plump, and calm the skin.<\/p>",
+            "btn_txt": "SHOP NOW",
+            "btn_url": "https:\/\/omniluxled.com\/products\/hyaluronic-acid-serum"
+          }
+        },
+        "0771fb05-3ea9-446b-b6e9-deb71688b602": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-03-02T142757.634.png",
+            "title": "<p>Peptide Concentrate <strong>POST LED TREATMENT<\/strong><\/p>",
+            "txt_info": "<p>Active peptides Matrixyl and Argireline help diminish fine lines and signs of fatigue, while soothing and firming the skin. <\/p>",
+            "btn_txt": "SHOP NOW",
+            "btn_url": "https:\/\/omniluxled.com\/products\/peptide-concentrate"
+          }
+        },
+        "content_9QRfUi": {
+          "type": "content",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-03-02T142813.092.png",
+            "title": "<p>Antioxidant Eye Cream <strong>POST LED TREATMENT<\/strong><\/p>",
+            "txt_info": "<p>Hydrate, smooth, and de-puff the eye area with this nourishing, antioxidant-rich cream featuring green tea and apricot kernel. <\/p>",
+            "btn_txt": "COMING SOON",
+            "btn_url": "shopify:\/\/products\/antioxidant-eye-cream"
+          }
+        }
+      },
+      "block_order": [
+        "template--16169064104098__98ce97d7-15c6-46d0-b111-c869d2a20b0b-1684638177820ba2bb-0",
+        "59a2a5b7-b6f5-4566-8ff2-3c5e06fec563",
+        "0771fb05-3ea9-446b-b6e9-deb71688b602",
+        "content_9QRfUi"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "anchorid": "exploreline",
+        "heading_txt": "We’re moving skincare forward.",
+        "lead_txt": "Elevate your routine with Omnilux’s power-packed formulas right at your fingertips.",
+        "section_bg_color": "",
+        "section_txt_color": "#000000",
+        "btn_type": "outline",
+        "btn_variant": "primary",
+        "btn_size": ""
+      }
+    },
     "23f2fda8-e8a7-4b2d-b176-998ae5de965a": {
       "type": "global-imagevideo-withtext",
       "blocks": {
@@ -240,57 +302,6 @@
         "video_alignment": "justify-content-center"
       }
     },
-    "98ce97d7-15c6-46d0-b111-c869d2a20b0b": {
-      "type": "global-info-block",
-      "blocks": {
-        "template--16169064104098__98ce97d7-15c6-46d0-b111-c869d2a20b0b-1684638177820ba2bb-0": {
-          "type": "content",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_18_copy_1.png",
-            "title": "<p>Enzyme Powder Cleanser <strong>PRE LED TREATMENT<\/strong><\/p>",
-            "txt_info": "<p>Cleanse, brighten, and improve texture with this gently exfoliating cleanser enriched with green tea, rice powder, and enzymes.<\/p>",
-            "btn_txt": "SHOP NOW",
-            "btn_url": "shopify:\/\/products\/enzyme-powder-cleanser"
-          }
-        },
-        "59a2a5b7-b6f5-4566-8ff2-3c5e06fec563": {
-          "type": "content",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_15_1_175b3185-e820-4e61-99b6-4023a8d6d33c.jpg",
-            "title": "<p>Hyaluronic Acid Serum <strong>DURING LED TREATMENT<\/strong><\/p>",
-            "txt_info": "<p>This serum amplifies your LED treatments with hyaluronic acid and niacinamide to hydrate, plump, and calm the skin.<\/p>",
-            "btn_txt": "SHOP NOW",
-            "btn_url": "https:\/\/omniluxled.com\/products\/hyaluronic-acid-serum"
-          }
-        },
-        "0771fb05-3ea9-446b-b6e9-deb71688b602": {
-          "type": "content",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_15_2_4f6ca987-3a77-4f83-9d69-336dc837c7dd.jpg",
-            "title": "<p>Peptide Concentrate <strong>POST LED TREATMENT<\/strong><\/p>",
-            "txt_info": "<p>Active peptides Matrixyl and Argireline help diminish fine lines and signs of fatigue, while soothing and firming the skin. <\/p>",
-            "btn_txt": "SHOP NOW",
-            "btn_url": "https:\/\/omniluxled.com\/products\/peptide-concentrate"
-          }
-        }
-      },
-      "block_order": [
-        "template--16169064104098__98ce97d7-15c6-46d0-b111-c869d2a20b0b-1684638177820ba2bb-0",
-        "59a2a5b7-b6f5-4566-8ff2-3c5e06fec563",
-        "0771fb05-3ea9-446b-b6e9-deb71688b602"
-      ],
-      "settings": {
-        "fluid_layout": false,
-        "anchorid": "exploreline",
-        "heading_txt": "We’re moving skincare forward.",
-        "lead_txt": "Elevate your routine with Omnilux’s power-packed formulas right at your fingertips.",
-        "section_bg_color": "",
-        "section_txt_color": "#000000",
-        "btn_type": "outline",
-        "btn_variant": "primary",
-        "btn_size": ""
-      }
-    },
     "42776c1a-5bf9-4c69-870f-bdc44289f71c": {
       "type": "global-title",
       "custom_css": [
@@ -321,6 +332,50 @@
         "section_text_color": "#000000"
       }
     },
+    "global_image_with_text_aRbMfh": {
+      "type": "global-image-with-text",
+      "blocks": {
+        "image_with_text_block_aaMymc": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Uncover even better skin.",
+            "max_width_enabled": true,
+            "max_width": 530,
+            "txt": "<p>Our trusted LED light therapy treatments just scored an upgrade. Pair the 3-step line with Omnilux at-home devices or the Omnilux Medical professional unit to enhance the firming and brightening benefits that your clients already love.<\/p>",
+            "step_heading": "Clinical studies from Omnilux Contour users showed that:",
+            "steps_captions": "98% agreed their skin felt <em>firmer<\/em>.\n96% agreed their fine lines appeared <em>less visible<\/em>.\n95% agreed their skin was <em>brighter<\/em> and <em>plumper<\/em>.",
+            "steps_captions_2": "<p><em>* After 3 treatments per week for 4 weeks<\/em><\/p>",
+            "btn_txt": "SHOP THE LINE",
+            "btn_link": "shopify:\/\/collections\/all",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Untitled_design_110.png",
+            "alignment": "text-left",
+            "image_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_block_aaMymc"
+      ],
+      "settings": {
+        "fluid_layout": false,
+        "enable_background_tone": false,
+        "border_bottom": false,
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#000000"
+      }
+    },
     "473576ad-4bef-4b6a-af7e-fbea447f4426": {
       "type": "global-image-with-text",
       "blocks": {
@@ -329,9 +384,9 @@
           "settings": {
             "fullwidth_content": false,
             "heading_txt": "Uncover even better skin.",
+            "max_width_enabled": true,
             "max_width": 530,
             "txt": "<p>Our trusted LED light therapy treatments just scored an upgrade. Pair the 3-step line with your Omnilux Contour or Omnilux Men devices to enhance the firming and brightening benefits that users already love.<\/p>",
-            "txt_liquid": "",
             "step_heading": "Clinical studies from Omnilux Contour users showed that:",
             "steps_captions": "98% agreed their skin felt <em>firmer<\/em>.\n96% agreed their fine lines appeared <em>less visible<\/em>.\n95% agreed their skin was <em>brighter<\/em> and <em>plumper<\/em>.",
             "steps_captions_2": "<p><em>* After 3 treatments per week for 4 weeks<\/em><\/p>",
@@ -343,8 +398,6 @@
             "btn_variant": "primary",
             "btn_size": "",
             "btn_txt_watch": "",
-            "watch_video_id": "",
-            "watch_mobile_video_id": "",
             "btn_type_watch": "",
             "btn_variant_watch": "primary",
             "btn_size_watch": "",
@@ -365,6 +418,50 @@
       ],
       "settings": {
         "fluid_layout": true,
+        "enable_background_tone": false,
+        "border_bottom": false,
+        "section_bg_color": "#ffffff",
+        "section_text_color": "#000000"
+      }
+    },
+    "global_image_with_text_yDdTNc": {
+      "type": "global-image-with-text",
+      "blocks": {
+        "image_with_text_block_DaxpJr": {
+          "type": "image-with-text-block",
+          "settings": {
+            "fullwidth_content": false,
+            "heading_txt": "Newest addition: <br>Antioxidant Eye Cream",
+            "max_width_enabled": true,
+            "max_width": 530,
+            "txt": "<p>Bye, bye, bags! Reveal brighter, younger-looking skin with this nourishing, antioxidant-rich eye cream. Featuring ingredients like green tea, avocado oil, and apricot kernel oil, this soothing under eye cream is designed to use post-LED treatment for extra firming effects. <\/p><p><\/p>",
+            "step_heading": "",
+            "steps_captions": "",
+            "steps_captions_2": "",
+            "btn_txt": "COMING SOON",
+            "btn_link": "",
+            "triggerbtn_txt": "",
+            "triggerto": "",
+            "btn_type": "",
+            "btn_variant": "primary",
+            "btn_size": "",
+            "btn_txt_watch": "",
+            "btn_type_watch": "",
+            "btn_variant_watch": "primary",
+            "btn_size_watch": "",
+            "link_txt": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Web_Mini_HP_19.png",
+            "alignment": "text-left",
+            "image_alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_block_DaxpJr"
+      ],
+      "settings": {
+        "fluid_layout": false,
         "enable_background_tone": false,
         "border_bottom": false,
         "section_bg_color": "#ffffff",
@@ -421,11 +518,13 @@
     "main",
     "2cb12f0d-e933-4333-b50d-2dff62cf6fcd",
     "0815808e-a8b7-4e1d-b348-913b81d5e8b1",
+    "98ce97d7-15c6-46d0-b111-c869d2a20b0b",
     "23f2fda8-e8a7-4b2d-b176-998ae5de965a",
     "e38be45f-cef3-48f1-88e5-0e9ae227927c",
-    "98ce97d7-15c6-46d0-b111-c869d2a20b0b",
     "42776c1a-5bf9-4c69-870f-bdc44289f71c",
+    "global_image_with_text_aRbMfh",
     "473576ad-4bef-4b6a-af7e-fbea447f4426",
+    "global_image_with_text_yDdTNc",
     "14b5f872-142c-436c-aa91-9be1f604a443"
   ]
 }
