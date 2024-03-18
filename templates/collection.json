@@ -5,6 +5,7 @@
       "type": "image-with-text-overlay",
       "settings": {
         "image": "shopify:\/\/shop_images\/Frame_1000006412-min.png",
+        "image_mobile": "shopify:\/\/shop_images\/Frame_1000006412_1.png",
         "text": "Enhance Your Glow Up With Omnilux",
         "padding_top": 0,
         "padding_bottom": 0
@@ -49,7 +50,7 @@
         "icon_with_text_yFxGUa"
       ],
       "settings": {
-        "background_color": "#E5E1E6",
+        "background_color": "#e5e1e6",
         "padding_top": 36,
         "padding_bottom": 36
       }
