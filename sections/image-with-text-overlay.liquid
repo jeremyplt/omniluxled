@@ -17,7 +17,12 @@
 <div class="section-{{ section.id }}-padding page-width image-text-overlay">
     <div class="image-text-overlay__inner">
         <div class="image-text-overlay__image">
-            {{ section.settings.image | image_url: width: 2000 | image_tag: alt: section.settings.text }}
+            {% if section.settings.image != blank %}
+                {{ section.settings.image | image_url: width: 2000 | image_tag: alt: section.settings.text, class: "desktop--only" }}
+            {% endif %}
+            {% if section.settings.image_mobile != blank %}
+                {{ section.settings.image_mobile | image_url: width: 1000 | image_tag: alt: section.settings.text, class: "mobile--only" }}
+            {% endif %}
         </div>
         <h2 class="image-text-overlay__text">{{ section.settings.text }}</h2>
     </div>
@@ -33,6 +38,11 @@
                 "type": "image_picker",
                 "id": "image",
                 "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_mobile",
+                "label": "Image (Mobile)"
             },
             {
                 "type": "text",

@@ -2329,3 +2329,16 @@ div#shopify-section-template--16531510329506__fa9b8a1b-146c-4f3f-8be9-721ab7ff5c
   font-size: 13px;
   margin-bottom: 10px;
 }
+
+
+@media (min-width: 750px) {
+  .mobile--only {
+    display: none;
+  }
+}
+
+@media (max-width: 749px) {
+  .desktop--only {
+    display: none;
+  }
+}
