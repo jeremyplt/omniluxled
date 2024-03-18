@@ -381,9 +381,9 @@ body.template-product:not(.product-men)
   bottom: 76px !important;
 }
 
-.ab-faq.template-product #chat-button {
+/*.ab-faq.template-product #chat-button {
   visibility: hidden !important;
-}
+}*/
 
 .template-product #faq_fulllist-new {
   display: none;

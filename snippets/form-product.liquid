@@ -1,5 +1,5 @@
 
-<product-form class="product-form{% unless product.has_only_default_variant %} disable-swatches{% endunless %} test66">
+<product-form class="product-form{% unless product.has_only_default_variant %} disable-swatches{% endunless %}">
 
 {% comment %}theme-check-disable UnusedAssign{% endcomment %}
 {%- liquid
@@ -145,11 +145,12 @@
     </div>
     <div class="col-auto d-flex" style="width:calc(100% - 134px);padding-left: 10px;">
         {% assign prefixes = "us,uk,ca,au,eu,nz" | split: "," %}
-
-        {% unless product.id == 7991999987874 %}<button class="addtocartbtn data-submit-btn btn btn-primary flex-grow-1 px-2 product-add-cart {% if product.tags contains 'providers' %}disabled{% endif %}"
+        {% unless product.id == 7991999987874 %}
+        <button class="addtocartbtn data-submit-btn btn btn-primary flex-grow-1 px-2 product-add-cart {% if product.tags contains 'providers' %}disabled{% endif %}"
             type="submit"
             name="add"
             aria-label="{{ 'products.product.add_to_cart' | t | escape }}"
+
             {% unless current_variant.available %}disabled{% endunless %}
             {% for prefix in prefixes %}
               {% assign key_preorder = prefix | append: '_preorder' %}
@@ -163,14 +164,10 @@
               data-{{ key_preorder }}="{{ data_preorder }}"
               data-{{ key_product_page_messaging }}="{{ data_product_page_messaging }}"
               data-{{ key_coming_soon }}="{{ data_coming_soon }}"
-              {% if localization.country == "France" and product.metafields.unavailable.france == true %} disabled="disabled"{% endif %}
             {% endfor %}
         >
             {% comment %} <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
             <span class="add-text">
-              {% if localization.country == "France" and product.metafields.unavailable.france == true %}
-                <span class="not-available">Not Available In France</span>
-              {% else %}
               {%- if current_variant.available -%}
                 {% if flag == true %}
                   GO TO PURCHASE ORDER
@@ -179,11 +176,10 @@
                 {% endif %}
               {%- else -%}
                 {{ 'products.product.sold_out' | t }}{%- endif -%}
-              {% endif %}
             </span>
             <span class="spinner"></span>
         </button>
-          {% if product.tags contains 'notify-me' %}
+        {% if product.tags contains 'notify-me' %}
           <button class="btn btn btn-primary flex-grow-1 px-2 manual-bis-trigger"
                 type="button"
               id='klaviyo-data-handle-{{ product.handle }}' 
@@ -196,8 +192,7 @@
         {% else %}
           <div class="klaviyo-bis-trigger btn btn-primary flex-grow-1 px-2" style="display:none;">Notify Me</div>
         {% endif %}
-          {% endunless %}
-
+        {% endunless %}
         {% comment %} Dynamic Checkout Button 
         {% if section.settings.enable_dynamic_checkout %}
             <div class="mt-2">{{ form | payment_button }}</div>
@@ -262,14 +257,10 @@
         data-{{ key_preorder }}="{{ data_preorder }}"
         data-{{ key_product_page_messaging }}="{{ data_product_page_messaging }}"
         data-{{ key_coming_soon }}="{{ data_coming_soon }}"
-      {% if localization.country == "France" and product.metafields.unavailable.france == true %} disabled="disabled"{% endif %}
       {% endfor %}
     >
       {% comment %} <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
       <span class="add-text">
-        {% if localization.country == "France" and product.metafields.unavailable.france == true %}
-          Not Available In France
-        {% else %}
         {%- if current_variant.available -%}
           {% if flag == true %}
             GO TO PURCHASE ORDER
@@ -278,27 +269,11 @@
           {% endif %}
         {%- else -%}
           {{ 'products.product.sold_out' | t }}{%- endif -%}
-        {% endif %}
       </span>
       <span class="spinner"></span>
     </button>
   </div>
 </div>
-
-  <div data-product-preorder-message class="my-2"></div>
+<div data-product-preorder-message class="my-2"></div>
 {% endform %}
 </product-form>
-
-{% liquid
-  assign has_new_preorder = false
-  if product.metafields.pre_order.date_step_1 != blank or product.metafields.pre_order.date_step_2 != blank or product.metafields.pre_order.date_step_3 != blank or localization.country == 'United States' 
-    assign has_new_preorder = true
-  endif
-%}
-{% if has_new_preorder %}
-  <style>
-    [data-product-preorder-message] {
-      display: none;
-    }
-  </style>
-{% endif %}

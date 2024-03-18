@@ -91,9 +91,10 @@ p.hoox-shop__upsell-description{font-style:italic;}
   p.hoox-shop__upsell-description{font-size:15px;}
 .hooxupsellwrapper .hoox-shop__upsell-stars{margin-top:-4px!important;}
 
-  .blemish-eraser   .hoox-treatment {
-    min-height: 400px;
-  }
+  .blemish-eraser   .hoox-treatment { min-height: 400px;}
+
+.swiper-button-next, .swiper-button-prev{color:#000;}
+  
   
 }
 
@@ -2259,11 +2260,11 @@ div#shopify-section-template--16531510329506__fa9b8a1b-146c-4f3f-8be9-721ab7ff5c
     display: none !important;
 }
 
-a[title="Topical Skincare"] span {
+.learn a[title="Topical Skincare"] span {
     font-weight: 500 !important;
 }
 
-a[title="Topical Skincare"] {
+.learn a[title="Topical Skincare"] {
     font-weight: 500 !important;
 }
 @media (max-width: 749px) {

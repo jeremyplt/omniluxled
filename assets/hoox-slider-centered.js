@@ -33,7 +33,7 @@ if (!!hooxSliderCentered.length) {
           console.log("here");
 console.log(swiperOptions);
       console.log(element);    
-           new Swiper('.swiper2',swiperOptions );
+           new Swiper(element,swiperOptions );
         } else { // Hide navigation arrows if Swiper is not initialized
             var navigation = element.querySelectorAll('.hoox-ugc-videos__navigation');
             navigation.forEach(navItem => {

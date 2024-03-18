@@ -25,6 +25,7 @@ $(document).ready(function () {
         $("input[value='Mini Eye Brightener Refill']").parent().parent().hide();
         $("input[value='Mini Skin Corrector Refill']").parent().parent().hide();
         $("input[value='Mini Blemish Eraser Refill']").parent().parent().hide();
+        $("input[value='Antioxidant Eye Cream']").parent().parent().hide();
       } else {
         $("input[value='LED Essentials Bundle']").parent().parent().show();
         $("input[value='Enzyme Powder Cleanser']").parent().parent().show();
@@ -35,6 +36,7 @@ $(document).ready(function () {
         $("input[value='Mini Eye Brightener Refill']").parent().parent().show();
         $("input[value='Mini Skin Corrector Refill']").parent().parent().show();
         $("input[value='Mini Blemish Eraser Refill']").parent().parent().show();
+        $("input[value='Antioxidant Eye Cream']").parent().parent().show();
       }
 
       if (method == 'Return' && direct == 'No') {

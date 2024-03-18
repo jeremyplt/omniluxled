@@ -184,6 +184,9 @@
         "0771fb05-3ea9-446b-b6e9-deb71688b602",
         "content_9QRfUi"
       ],
+      "custom_css": [
+        "section#exploreline {border-bottom: 2px solid black !important;}"
+      ],
       "settings": {
         "fluid_layout": false,
         "anchorid": "exploreline",
@@ -271,7 +274,7 @@
         "title": "Doctor-formulated for results you can’t resist",
         "subtitle": "",
         "txt": "",
-        "htmltxt": "<p>An unmatched glow is 3 steps away. Renew, hydrate, and firm your skin with our professional-grade skincare line that includes the Enzyme Powder Cleanser, Hyaluronic Acid Serum, and Peptide Concentrate.<\/p>\n<p>Pair this dynamic line with your Omnilux LED light therapy treatments to help:<\/p>\n<ul class=\"twocolumns\">\n<li>Brighten complexion<\/li>\n<li>Lock in essential hydration<\/li>\n<li>Even skin’s texture<\/li>\n<li>Restore fatigued skin<\/li>\n<li>Reduce the appearance of fine lines &amp; wrinkles<\/li>\n<li>Soothe redness &amp; inflammation<\/li>\n<\/ul>\n<p>Backed by nearly 20 years of aesthetics medicine expertise, world-renowned specialist Dr. Hany Abi Ghosn helped us carefully develop this 3-piece line with concentrated yet gentle ingredients.<\/p>",
+        "htmltxt": "<p>Renew, hydrate, and firm your skin with our professional-grade skincare line that includes the Enzyme Powder Cleanser, Hyaluronic Acid Serum, Peptide Concentrate and Antioxidant Eye Cream.<\/p><br>\n<p>Pair this dynamic line with your Omnilux LED light therapy treatments to help:<\/p>\n<ul class=\"twocolumns\">\n<li>Brighten complexion<\/li>\n<li>Lock in essential hydration<\/li>\n<li>Even skin’s texture<\/li>\n<li>Restore fatigued skin<\/li>\n<li>Reduce the appearance of fine lines &amp; wrinkles<\/li>\n<li>Soothe redness &amp; inflammation<\/li>\n<\/ul>\n<p>Backed by nearly 20 years of aesthetics medicine expertise, world-renowned specialist Dr. Hany Abi Ghosn helped us carefully develop this 4-piece line with concentrated yet gentle ingredients.<\/p>",
         "btn_txt": "",
         "btn_link": "",
         "btn_type": "outline",
@@ -342,7 +345,7 @@
             "heading_txt": "Uncover even better skin.",
             "max_width_enabled": true,
             "max_width": 530,
-            "txt": "<p>Our trusted LED light therapy treatments just scored an upgrade. Pair the 3-step line with Omnilux at-home devices or the Omnilux Medical professional unit to enhance the firming and brightening benefits that your clients already love.<\/p>",
+            "txt": "<p>Our trusted LED light therapy treatments just scored an upgrade. Pair the 4-piece line with your Omnilux Contour or Omnilux Men devices to enhance the firming and brightening benefits that users already love.<\/p>",
             "step_heading": "Clinical studies from Omnilux Contour users showed that:",
             "steps_captions": "98% agreed their skin felt <em>firmer<\/em>.\n96% agreed their fine lines appeared <em>less visible<\/em>.\n95% agreed their skin was <em>brighter<\/em> and <em>plumper<\/em>.",
             "steps_captions_2": "<p><em>* After 3 treatments per week for 4 weeks<\/em><\/p>",
@@ -412,6 +415,7 @@
       "block_order": [
         "29f90a7a-02a7-428e-997c-3300aaebbeef"
       ],
+      "disabled": true,
       "custom_css": [
         ".container-fluid {padding-top: 5.5rem !important; padding-bottom: 4.5rem !important;}",
         "@media (max-width: 600px) {.container-fluid {padding-top: 4.5rem !important; padding-bottom: 0rem !important; }}"
@@ -439,7 +443,7 @@
             "steps_captions": "",
             "steps_captions_2": "",
             "btn_txt": "COMING SOON",
-            "btn_link": "",
+            "btn_link": "shopify:\/\/products\/antioxidant-eye-cream",
             "triggerbtn_txt": "",
             "triggerto": "",
             "btn_type": "",

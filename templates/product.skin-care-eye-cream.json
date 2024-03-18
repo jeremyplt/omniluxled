@@ -991,14 +991,14 @@
           "type": "question",
           "settings": {
             "title": "Are these products gluten free?",
-            "answer": "Yes, all of our products are gluten free."
+            "answer": "With the exception of the Antioxidant Eye Cream, which contains wheatgerm oil, none of the products in our skincare line contain gluten. However, please note that we cannot guarantee there is no cross contamination as our manufacturer and products are not certified gluten free."
           }
         },
         "109d7128-d2f9-4b5a-8f69-00660f9c810b": {
           "type": "question",
           "settings": {
             "title": "Are these products natural\/organic?",
-            "answer": "Enzyme Powder Cleanser: 90% organic.\n\nHyaluronic Acid Serum: 94% organic.\n\nPeptide Concentrate: 70% organic"
+            "answer": "Our topical products are 70-90% organic, depending on the product."
           }
         }
       },

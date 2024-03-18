@@ -51,7 +51,7 @@
                     endfor
                 -%}
                 {% if menuType == 'megamenu_with_product' %}
-                    <li class="a nav-item nav-item-anim dropdown {% if menuType == 'megamenu_with_product' %}megamenu{% endif %} {% if link.active %}active{% endif %}" >
+                    <li class="a nav-item nav-item-anim dropdown {{ link.handle }} {% if menuType == 'megamenu_with_product' %}megamenu{% endif %} {% if link.active %}active{% endif %}" >
                         <a data-href="{{ link.url }}" {% if menuType == 'megamenu_with_product' %}is="drop-down"{%- endif -%} class="nav-link d-flex align-items-center justify-content-between text-uppercase {{ link.handle }}" tabindex="0" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="menu" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}" {% if link.handle == "shop" %}href="/collections/all"{% endif %}>
                             <span>{{ link.title }}</span> <i class="icon-arrow-down ms-1 font-size-xs"></i>
                         </a>
@@ -169,7 +169,7 @@
                         </ul>
                     </li>
                 {% elsif menuType == 'megamenu_with_story' %}
-                    <li class="b nav-item nav-item-anim dropdown {% if menuType == 'megamenu_with_story' %}megamenu{% endif %} {% if link.active %}active{% endif %}" >
+                    <li class="b nav-item nav-item-anim dropdown {{ link.handle }} {% if menuType == 'megamenu_with_story' %}megamenu{% endif %} {% if link.active %}active{% endif %}" >
                         <a data-href="{{ link.url }}" {% if menuType == 'megamenu_with_story' %}is="drop-down"{%- endif -%} class="nav-link d-flex align-items-center justify-content-between text-uppercase {{ link.handle }}" tabindex="0" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="menu" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
                             <span>{{ link.title }}</span> <i class="icon-arrow-down ms-1 font-size-xs"></i>
                         </a>
