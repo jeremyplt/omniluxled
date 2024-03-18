@@ -2306,3 +2306,15 @@ a[title="Topical Skincare"] span {
 .test-collection-page-redesign.concept--two .section-image-text-overlay, .test-collection-page-redesign.concept--two .section-icons-with-text {
   display: block
 }
+
+@media (min-width: 750px) {
+  .mobile--only {
+    display: none;
+  }
+}
+
+@media (max-width: 749px) {
+  .desktop--only {
+    display: none;
+  }
+}
