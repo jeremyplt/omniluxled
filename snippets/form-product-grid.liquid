@@ -1,3 +1,25 @@
+{% liquid
+  assign eu_countries = "AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LT,LU,MT,NL,PL,PT,RO,SK,SI,ES,SE,NO"
+  assign eu_countries = eu_countries | split: ','
+%}
+
+{% liquid
+  assign is_preorder = false
+  if product.metafields.custom.ca_preorder and localization.country.iso_code == 'CA'
+    assign is_preorder = true
+  elsif product.metafields.custom.us_preorder and localization.country.iso_code == 'US'
+    assign is_preorder = true
+  elsif product.metafields.custom.uk_preorder and localization.country.iso_code == 'GB'
+    assign is_preorder = true
+  elsif product.metafields.custom.au_preorder and localization.country.iso_code == 'AU'
+    assign is_preorder = true
+  elsif product.metafields.custom.eu_preorder and eu_countries contains localization.country.iso_code
+    assign is_preorder = true
+  elsif product.metafields.custom.nz_preorder and localization.country.iso_code == 'NZ'
+    assign is_preorder = true
+  endif
+%}
+
 <product-form class="product-form">
   {% assign min = 65 %}
 {% assign max = 80 %}
@@ -86,6 +108,8 @@
               <span class="add-text">
                 {%- if product.tags contains 'notify-me' -%}
                   Notify Me
+                {% elsif is_preorder %}
+                  <i class="fst-normal me-1">+</i> PRE-ORDER
                 {%- else -%}
                   {%- if current_variant.available -%}
                     <i class="fst-normal me-1">+</i>

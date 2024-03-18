@@ -1,3 +1,24 @@
+{% liquid
+  assign eu_countries = "AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LT,LU,MT,NL,PL,PT,RO,SK,SI,ES,SE,NO"
+  assign eu_countries = eu_countries | split: ','
+%}
+
+{% liquid
+  assign is_preorder = false
+  if product.metafields.custom.ca_preorder and localization.country.iso_code == 'CA'
+    assign is_preorder = true
+  elsif product.metafields.custom.us_preorder and localization.country.iso_code == 'US'
+    assign is_preorder = true
+  elsif product.metafields.custom.uk_preorder and localization.country.iso_code == 'GB'
+    assign is_preorder = true
+  elsif product.metafields.custom.au_preorder and localization.country.iso_code == 'AU'
+    assign is_preorder = true
+  elsif product.metafields.custom.eu_preorder and eu_countries contains localization.country.iso_code
+    assign is_preorder = true
+  elsif product.metafields.custom.nz_preorder and localization.country.iso_code == 'NZ'
+    assign is_preorder = true
+  endif
+%}
 
 <product-form class="product-form{% unless product.has_only_default_variant %} disable-swatches{% endunless %}">
 
@@ -168,14 +189,21 @@
         >
             {% comment %} <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
             <span class="add-text">
-              {%- if current_variant.available -%}
-                {% if flag == true %}
-                  GO TO PURCHASE ORDER
-                {% else %}
-                  {{ 'products.product.add_to_cart' | t }}
-                {% endif %}
-              {%- else -%}
-                {{ 'products.product.sold_out' | t }}{%- endif -%}
+              {% if localization.country == "France" and product.metafields.unavailable.france == true %}
+                <span class="not-available">Not Available In France</span>
+              {% elsif is_preorder %}
+                PRE-ORDER
+              {% else %}
+                {%- if current_variant.available -%}
+                  {% if flag == true %}
+                    GO TO PURCHASE ORDER
+                  {% else %}
+                    {{ 'products.product.add_to_cart' | t }}
+                  {% endif %}
+                {%- else -%}
+                  {{ 'products.product.sold_out' | t }}
+                {%- endif -%}
+              {% endif %}
             </span>
             <span class="spinner"></span>
         </button>

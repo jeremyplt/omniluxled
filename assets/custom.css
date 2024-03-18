@@ -2311,3 +2311,21 @@ div#shopify-section-template--16531510329506__fa9b8a1b-146c-4f3f-8be9-721ab7ff5c
 .test-collection-page-redesign.concept--two .section-image-text-overlay, .test-collection-page-redesign.concept--two .section-icons-with-text {
   display: block
 }
+
+/* Cart Item Preorder */
+
+.cart-item__pre-order{
+  background-color: rgba(115, 115, 115, 1);
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+  max-width: fit-content;
+  padding: 2px 7px;
+  font-size: 13px;
+}
+
+.cart-item__next-shipment {
+  font-style: italic;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
