@@ -27,7 +27,7 @@
                                 {{ block.settings.text }}
                             </div>
                         {% when 'form' %}
-                            {% form 'customer', id: 'NewsletterPopUp' %}
+                            {% form 'customer' %}
                                 {% if form.errors %}
                                     <div class="alert alert-warning">
                                         {{ form.errors | default_errors }}
