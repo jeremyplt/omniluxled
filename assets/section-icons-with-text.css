@@ -49,8 +49,12 @@
 
 @media (max-width: 749px) {
     .icons-with-text__inner {
-        grid-template-columns: repeat(1, 1fr);
-    }   
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .icons-with-text__content span {
+        display: none;
+    }
 
     .icons-with-text__icon img {
         width: 35px;

@@ -14,6 +14,6 @@
 
 @media (max-width: 499px) {
     .image-text-overlay__text {
-        max-width: 65%;
+        max-width: 45%;
     }
 }

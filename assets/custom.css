@@ -2697,7 +2697,7 @@ html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected [sk
 
 /* AB test for price clarity (concept one) | class: .test-pricing-clarity-concept--two */
 
-.concept--two {
+.concept--two:not(html) {
   display: none !important;
 }
 

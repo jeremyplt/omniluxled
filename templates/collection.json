@@ -18,28 +18,28 @@
           "type": "icon-with-text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/Group_22.png",
-            "text": "<p><strong>Secure Checkout:<\/strong> SSL & 256-bit encrypted protection.<\/p>"
+            "text": "<p><strong>Secure Checkout<\/strong><span>: SSL & 256-bit encrypted protection.<\/span><\/p>"
           }
         },
         "icon_with_text_WNp3qE": {
           "type": "icon-with-text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/Group_26_2.png",
-            "text": "<p><strong>2-Year Warranty:<\/strong> Comprehensive coverage for LED devices.<\/p>"
+            "text": "<p><strong>2-Year Warranty<\/strong><span>: Comprehensive coverage for LED devices.<\/span><\/p>"
           }
         },
         "icon_with_text_Cj94Ji": {
           "type": "icon-with-text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/Group_25.png",
-            "text": "<p><strong>Globally Certified<\/strong>: FDA, TGA, CE approvals exceeding any brand.<\/p>"
+            "text": "<p><strong>Globally Certified<\/strong><span>: FDA, TGA, CE approvals exceeding any brand.<\/span><\/p>"
           }
         },
         "icon_with_text_yFxGUa": {
           "type": "icon-with-text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/Group_26_1.png",
-            "text": "<p><strong>Clinically Proven<\/strong>: Backed by 40+ peer-reviewed studies.<\/p>"
+            "text": "<p><strong>Clinically Proven<\/strong><span>: Backed by 40+ peer-reviewed studies.<\/span><\/p>"
           }
         }
       },
