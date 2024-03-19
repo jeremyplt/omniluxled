@@ -411,7 +411,7 @@
           "type": "faq",
           "settings": {
             "hoox_faq_question": "How do the Mini devices work?",
-            "hoox_faq_answer": "<p>The Mini devices use clinically proven wavelengths of light (red, near-infrared, and blue) and optimized light energy output to work at a cellular level to stimulate new collagen and reduce fine lines and wrinkles, sun damage, and acne.<\/p>\n<p>The red wavelength (633nm) reduces inflammation, pigmentation, and redness and helps prompt cellular repair and circulation for a more vibrant complexion. The red wavelength can be found in the Skin Corrector, Eye Brightener, and Blemish Eraser devices.<\/p>\n<p>The near-infrared wavelength (830nm) targets deeper fibroblast cells, stimulating new collagen and elastin production, resulting in plumper, firmer, more youthful looking skin. The red wavelength can be found in the Skin Corrector and Eye Brightener devices.<\/p>\n<p>The blue wavelength (415nm) eliminates bacteria on the surface of the skin to neutralize acne flare ups. The blue wavelength can be found in the Blemish Eraser device.<\/p>"
+            "hoox_faq_answer": "<p>The Mini devices use clinically proven wavelengths of light (red, near-infrared, and blue) and optimized light energy output to work at a cellular level to stimulate new collagen and reduce fine lines and wrinkles, sun damage, and acne.<\/p><p>The red wavelength (633nm) reduces inflammation, pigmentation, and redness and helps prompt cellular repair and circulation for a more vibrant complexion. The red wavelength can be found in the Skin Corrector, Eye Brightener, and Blemish Eraser devices.<\/p><p>The near-infrared wavelength (830nm) targets deeper fibroblast cells, stimulating new collagen and elastin production, resulting in plumper, firmer, more youthful looking skin. The red wavelength can be found in the Skin Corrector and Eye Brightener devices.<\/p><p>The blue wavelength (415nm) eliminates bacteria on the surface of the skin to neutralize acne flare ups. The blue wavelength can be found in the Blemish Eraser device.<\/p>"
           }
         },
         "4ab4d7d5-21be-459b-9e5a-f179e6bb6105": {
@@ -439,7 +439,7 @@
           "type": "faq",
           "settings": {
             "hoox_faq_question": "How do I get 15% off?",
-            "hoox_faq_answer": "When you Subscribe & Save, you will receive 15% off your Mini device and 15% off the recurring shipments of Hydrocolloid Patches to ensure you never miss a treatment."
+            "hoox_faq_answer": "<p>When you Subscribe & Save, you will receive 15% off your Mini device and 15% off the recurring shipments of Hydrocolloid Patches to ensure you never miss a treatment.<\/p>"
           }
         },
         "d4caa621-f695-4bbe-a117-9cc0228ff17e": {
@@ -453,7 +453,7 @@
           "type": "faq",
           "settings": {
             "hoox_faq_question": "Is there a minimum subscription period?",
-            "hoox_faq_answer": "No. We want our customers to be confident with their purchases. If you aren’t completely satisfied with your product, you can cancel your subscription at any time."
+            "hoox_faq_answer": "<p>No. We want our customers to be confident with their purchases. If you aren’t completely satisfied with your product, you can cancel your subscription at any time.<\/p>"
           }
         },
         "c439c964-caa9-451f-ab60-7b570665af90": {
@@ -461,7 +461,7 @@
           "disabled": true,
           "settings": {
             "hoox_faq_question": "Is the Contour worth the price?",
-            "hoox_faq_answer": "The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money."
+            "hoox_faq_answer": "<p>The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money.<\/p>"
           }
         }
       },
