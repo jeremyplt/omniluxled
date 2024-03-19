@@ -2590,16 +2590,16 @@ button.add-to-cart:hover {
 
 /* AB test for price clarity (concept one) | class: .test-pricing-clarity-concept--one */
 
-.concept--one {
+/* .concept--one {
   display: none !important;
 }
 
 .test-pricing-clarity-concept--one .concept--one {
   display: block !important
-}
+} */
 
 
-.test-pricing-clarity-concept--one .skio-group__shipment {
+html:not(.test-pricing-clarity-concept--two) .skio-group__shipment {
   display: none !important;
   font-size: 13px;
   background-color: rgba(241, 241, 241, 1);
@@ -2614,12 +2614,12 @@ button.add-to-cart:hover {
   font-style: italic;
 }
 
-.test-pricing-clarity-concept--one .skio-group-container--selected .skio-group__shipment.concept--one {
+html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected .skio-group__shipment.concept--one {
   display: block !important;
 }
 
 
-.test-pricing-clarity-concept--one .skio-group-container--selected [skio-subscription-price] {
+html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected [skio-subscription-price] {
   font-weight: bold;
 }
 
