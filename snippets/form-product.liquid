@@ -136,6 +136,12 @@
       selectedVariant='{{ product.selected_or_first_available_variant | json | escape }}'
       formId='{{ product_form_id }}'
       currency='{{ cart.currency.iso_code }}'
+      includedInPackage="{{ product.metafields.custom.included_in_package }}"
+      includedInRecurringShipment="{{ product.metafields.custom.included_in_recurring_shipment }}"
+      {% if product.metafields.custom.recurring_shipment_image %}
+      recurringShipmentImage="{{ product.metafields.custom.recurring_shipment_image | image_url: width: 80 }}"
+      {% endif %}
+      featuredImage="{{ product.featured_image.src | image_url: width: 80 }}"
       >
     </skio-plan-picker>
     <input type="hidden" aria-hidden="true" name="selling_plan" value="">

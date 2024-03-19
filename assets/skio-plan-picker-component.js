@@ -35,6 +35,16 @@ const skioStyles = css`
   .skio-onetime-second {
     order: 2;
   }
+
+  .skio-group__include {
+    font-size: 13px;
+    font-style: italic;
+    margin: 5px 0 10px 0;
+  }
+
+  .skio-group__include span:first-child {
+    font-weight: bold
+  }
   
   .skio-group-container {
     display: none;
@@ -109,7 +119,7 @@ const skioStyles = css`
     margin-left: 30px;
     transition: max-height 0.25s cubic-bezier(0.4,0,0.2,1),
                 opacity 0.25s cubic-bezier(0.4,0,0.2,1);
-    max-height: 38px;
+    max-height: 100%;
     opacity: 1;
   }
   
@@ -330,16 +340,26 @@ const skioStyles = css`
     gap: 3px;
   }
 
+  .skio-group__shipment {
+    font-size: 14px;
+    background-color: rgba(241, 241, 241, 1);
+    padding: 8px 15px;
+  }
+
 `;
 
 export class SkioPlanPickerComponent extends LitElement {
   static properties = {
     product: { type: Object },            //required
+    featuredImage: { type: String },      //optional, defaults to product.featured_image
     productHandle: { type: String },      //optional (unless product isn't passed, then required)
     key: { type: String },                //optional, defaults to product.id; identifier for this instance of the Skio plan picker
     
     formId: { type: String },             //optional; if passed, used to connect input fields to form
     needsFormId: { type: Boolean },       //optional, defaults to false; if true, element needs to be passed a formId, else it searches for a form
+    includedInPackage: { type: String },
+    includedInRecurringShipment: { type: String },
+    recurringShipmentImage: { type: String },
 
     subscriptionFirst: { type: Boolean }, //optional, defaults to false; if true, shows subscription option above onetime
     startSubscription: { type: Boolean }, //optional, defaults to false; if true, auto-selects subscription on page load
@@ -356,6 +376,7 @@ export class SkioPlanPickerComponent extends LitElement {
     selectedVariant: { type: Object },    //placeholder for data
     skioSellingPlanGroups: {},            //placeholder for data
     availableSellingPlanGroups: {},       //placeholder for data
+    subscriptionPrice: { type: String },              //placeholder for data
     selectedSellingPlanGroup: {},         //placeholder for data
     selectedSellingPlan: {},              //placeholder for data
 
@@ -366,13 +387,16 @@ export class SkioPlanPickerComponent extends LitElement {
     meta: {},
 
     useVariantInputClickEvents: {type: Boolean}, // optional, allows use of variant input click events to update skio's selectedVariant
-    variantInputSelector: {}
+    variantInputSelector: {},
+
+    miniProducts: { type: Array },
   };
 
   static styles = skioStyles;
 
   constructor() {
     super();
+    this.featuredImage = null;
     this.product = null;
     this.selectedVariant = null;
 
@@ -383,9 +407,14 @@ export class SkioPlanPickerComponent extends LitElement {
     this.key = null;
     this.formId = null;
     this.needsFormId = false;
+    this.includedInPackage = null;
+    this.includedInRecurringShipment = null;
+    this.recurringShipmentImage = null;
 
     this.skioSellingPlanGroups = [];
     this.availableSellingPlanGroups = [];
+
+    this.subscriptionPrice = null;
 
     this.selectedSellingPlanGroup = null;
     this.selectedSellingPlan = null;
@@ -420,6 +449,7 @@ export class SkioPlanPickerComponent extends LitElement {
 
     this.useVariantInputClickEvents = null;
     this.variantInputSelector = null;
+    this.miniProducts = ["Blemish Eraser", "Eye Brightener", "Skin Corrector"]
 
   }
 
@@ -433,6 +463,23 @@ export class SkioPlanPickerComponent extends LitElement {
     if(!this.product && this.productHandle) {
       this.fetchProduct(this.productHandle);
     }
+
+    console.log("this.product", this.product)
+
+    if (this.includedInPackage == null) {
+      this.includedInPackage = skio.includedInPackage;
+    }
+
+    if (this.includedInRecurringShipment == null) {
+      this.includedInRecurringShipment = skio.includedInRecurringShipment;
+    }
+
+    if (this.recurringShipmentImage == null) {
+      this.recurringShipmentImage = skio.recurringShipmentImage;
+    }
+
+    if (this.featuredImage)
+      this.featuredImage = skio.featuredImage;
 
     if (this.needsFormId && this.formId == null) {
       let forms = document.querySelectorAll('form[action="/cart/add"]');
@@ -471,6 +518,12 @@ export class SkioPlanPickerComponent extends LitElement {
 
   }
 
+  // Override createRenderRoot to disable Shadow DOM
+  createRenderRoot() {
+    // Renders the template directly into the element's child nodes rather than the shadow DOM
+    return this;
+  }
+
   render() {
     if(!this.product || !this.selectedVariant || this.skioSellingPlanGroups.length == 0 || !this.product?.available) return;
     
@@ -504,7 +557,7 @@ export class SkioPlanPickerComponent extends LitElement {
         </div>
         ${ this.availableSellingPlanGroups ? this.availableSellingPlanGroups.map((group, index) => 
           html`
-            <div class="skio-group-container skio-group-container--available ${ this.selectedSellingPlanGroup == group ? 'skio-group-container--selected' : '' }" skio-group-container
+            <div class="skio-group-container skio-group-container--subscription skio-group-container--available ${ this.selectedSellingPlanGroup == group ? 'skio-group-container--selected' : '' }" skio-group-container
               @click=${() => this.selectSellingPlanGroup(group) }>
               <input id="skio-selling-plan-group-${ index }-${ this.key }" class="skio-group-input" name="skio-group-${ this.key }"
                 type="radio" value="${ group.id }" skio-selling-plan-group="${ group.id }" ?checked=${ this.selectedSellingPlanGroup == group ? true : false } >
@@ -526,10 +579,22 @@ export class SkioPlanPickerComponent extends LitElement {
                     ${ this.selectedVariant.price < this.selectedVariant.price - this.discount(group.selected_selling_plan).amount ? html`
                       <del>${ this.moneyFormatter.format(this.selectedVariant.price / 100) }<del>
                     ` : html`` }
-                    <span skio-subscription-price>${ this.price(group.selected_selling_plan) }</span>
+                    <div class="skio-price__inner">
+                      <span skio-subscription-price>${ this.price(group.selected_selling_plan) }</span>
+                      <span skio-compare-at-price class="concept--two">${ this.moneyFormatter.format(this.selectedVariant.price / 100) }</span>
+                    </div>
+                    ${  this.miniProducts.includes(this.product.title) ? html`
+                      <div class="skio-price__per-delivery concept--two">Then <strong><span class="delivery-price">${this.moneyFormatter.format(this.availableSellingPlanGroups[0]?.selling_plans[0]?.price_adjustments[1]?.value / 100)}</span> <span class="delivery-frequency">every 4 weeks</span></strong></div>
+                    ` : '' }
                   </div>
                 </div>
                 <div class="skio-group-content">
+                ${ this.includedInPackage ? html` 
+                  <div class="skio-group__include concept--one">
+                    <span class="bold italic">Initial shipment includes:</span> <span>${ this.includedInPackage }</span>
+                  </div>
+                ` : '' }
+                
                   <select skio-selling-plans="${ group.id }" class="skio-frequency${ group.selling_plans.length == 1 ? ' skio-frequency--one' : '' }"
                     @change=${ (e) => this.selectSellingPlan(e.target, group) }>
                     ${ group ? group.selling_plans.map((selling_plan) => 
@@ -541,7 +606,38 @@ export class SkioPlanPickerComponent extends LitElement {
                     ): ''}
                   </select>
                 </div>
+                <div class="skio-group__next-shipment concept--two">
+                  <div class="next-shipment__image">
+                      <img src="${this.recurringShipmentImage ? this.recurringShipmentImage :  this.product.featured_image }" alt="Next Shipment" />
+                  </div>
+                  <div class="next-shipment__content">
+                    <div class="next-shipment__text">
+                        <div>Next shipment includes:</div>
+                        <div>${ this.includedInRecurringShipment ? this.includedInRecurringShipment : this.product.title }</div>
+                    </div>
+                    <div class="next-shipment__renews">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                      </svg>
+                      <span>Renews at <strong><span class="delivery-price">${this.moneyFormatter.format(this.availableSellingPlanGroups[0]?.selling_plans[0]?.price_adjustments[1]?.value / 100)}</span></strong></span>
+                    </div>
+                  </div>
+                </div>
               </label>
+              <div class="skio-group__shipment concept--one">
+                  <span>Next auto shipment:</span> <span>Includes <span class="${!this.includedInRecurringShipment && 'variant-title'}">${this.includedInRecurringShipment ? this.includedInRecurringShipment : this.product.title}</span> charged at <strong><span class="delivery-price">${this.moneyFormatter.format(this.availableSellingPlanGroups[0]?.selling_plans[0]?.price_adjustments[1]?.value / 100)}</span> <span class="delivery-frequency">4 weeks</span></strong></span>
+              </div>
+              <div class="skio-group__shipment concept--two">
+              ${ this.includedInPackage ? html`
+                <span>Includes:</span>
+                <ul>
+                  <li>First month includes ${ this.includedInPackage }</li>
+                  <li>Every recurring subscription order includes <span class="${!this.includedInRecurringShipment && 'variant-title'}">${this.includedInRecurringShipment ? this.includedInRecurringShipment : this.product.title}</span></li>
+                </ul>
+                ` : html`
+                <div>Every recurring subscription order includes <span class="${!this.includedInRecurringShipment && 'variant-title'}">${this.includedInRecurringShipment ? this.includedInRecurringShipment : this.product.title}</span></div>
+                ` }
+              </div>
             </div>
           `
         ): ''}
@@ -648,6 +744,8 @@ export class SkioPlanPickerComponent extends LitElement {
 
       //update selectedSellingPlan value
       if (this.availableSellingPlanGroups?.length > 0) {
+
+        console.log("this.availableSellingPlanGroups", this.availableSellingPlanGroups)
         //update each group with a default selected_selling_plan
 
         this.availableSellingPlanGroups.forEach((group) => {
@@ -716,7 +814,9 @@ export class SkioPlanPickerComponent extends LitElement {
         composed: true, 
         detail: {
           sellingPlan: this.selectedSellingPlan,
-          key: this.key
+          key: this.key,
+          selectedVariant: this.selectedVariant,
+          moneyFormatter: this.moneyFormatter
         }
       });
 
@@ -736,7 +836,6 @@ export class SkioPlanPickerComponent extends LitElement {
           input.value = ''
         }
       }
-
     }
 
     if(changed.has('formId')) {
@@ -1077,3 +1176,29 @@ export class SkioPlanPickerComponent extends LitElement {
 }
 
 customElements.define('skio-plan-picker', SkioPlanPickerComponent);
+
+document.addEventListener("skio::update-selling-plan", function(e) {
+  const sellingPlan = e.detail.sellingPlan;
+
+  document.querySelectorAll(".variant-title").forEach(title => {
+    if (sellingPlan)
+      title.innerHTML = e.detail.selectedVariant.name;
+  })
+
+  document.querySelectorAll(".delivery-frequency").forEach(delivery => {
+    if (sellingPlan)
+      delivery.innerHTML = e.detail.sellingPlan.name.toLowerCase();
+    })
+
+  document.querySelectorAll(".delivery-price").forEach(function(deliveryPrice) {
+    if (sellingPlan) {
+      const priceAdjustment = sellingPlan.price_adjustments[1] || sellingPlan.price_adjustments[0]
+      if (priceAdjustment.value_type === 'price') {
+        deliveryPrice.innerHTML = e.detail.moneyFormatter.format(priceAdjustment.value / 100);
+      } else {
+        deliveryPrice.innerHTML = e.detail.moneyFormatter.format(e.detail.selectedVariant.price * (1 - (priceAdjustment.value / 100)) / 100);
+      }
+    }
+        
+  })
+})
