@@ -86,7 +86,14 @@ html .newsletter-banner form > div > div:first-child > div:last-child button {
     width: 100% !important;
     font-weight: bold !important;
     padding: 15px 10px !important;
+    font-size: 0 !important;
 }
+
+html .newsletter-banner form > div > div:first-child > div:last-child button span {
+    font-size: 16px !important; /* Reset to the original font size or whatever size you need */
+    color: rgb(255, 255, 255); /* Ensure the text color is set, if needed */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* Reset the font family, if needed */
+  }
 
 html .newsletter-banner form input {
     border-radius: 0 !important;

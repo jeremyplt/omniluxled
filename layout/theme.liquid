@@ -539,9 +539,7 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
       //moveFormElement();
       //window.addEventListener('resize', moveFormElement);
       document.querySelector(".cbb-frequently-bought-add-button").addEventListener("click", function(e) {
-        setTimeout(function() {
-          document.querySelector('ajax-cart').getCartData("open_drawer");
-        }, 1000)
+        document.querySelector('ajax-cart').getCartData("open_drawer");
       });
     })
     .catch((e) => {
@@ -575,7 +573,7 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
 
     waitForElement("html .newsletter-banner form > div > div:first-child > div:last-child button", 10000).then(() => {
       setTimeout(() => {
-        document.querySelector("html .newsletter-banner form > div > div:first-child > div:last-child button").innerHTML = "Subscribe & Save"
+        document.querySelector("html .newsletter-banner form > div > div:first-child > div:last-child button").innerHTML = "<span>Subscribe & Save</span>"
       }, 1000)
     }).catch((e) => {
       console.error(e.message)
