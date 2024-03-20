@@ -570,7 +570,7 @@ export class SkioPlanPickerComponent extends LitElement {
                     </svg>
                   </div>
                   <div class="skio-group-title group-name-${ group.name }">
-                  ${ group.name == 'Subscription' ? 'Subscribe & Save' : group.name }
+                  ${ group.name == 'Subscription' ? 'Subscribe & Save 15%' : group.name }
                     ${ this.discount(group.selected_selling_plan).percent !== '0%' ? html`
                       <span class="skio-save">Save <span skio-discount>${ this.discountFormat == 'percent' ? this.discount(group.selected_selling_plan).percent : this.discount(group.selected_selling_plan).amount }</span></span>
                     ` : html`` }

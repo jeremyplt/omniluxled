@@ -2461,6 +2461,7 @@ div#shopify-section-template--16531510329506__fa9b8a1b-146c-4f3f-8be9-721ab7ff5c
   border: 1px #0fa573 solid; 
   padding: 0px 8px;
   border-radius: 20px;
+  display: none;
 }
 
 .skio-frequency {
@@ -2793,6 +2794,10 @@ html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected [sk
   font-weight: normal !important;
 }
 
+.test-pricing-clarity-concept--two .skio-price__per-delivery {
+  display: none !important;
+}
+
 @media (max-width: 749px) {
   .next-shipment__content {
     flex-direction: column;
@@ -2818,7 +2823,7 @@ html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected [sk
     display: flex;
   }
 
-  .test-pricing-clarity-concept--two .concept--two:not(.skio-group__shipment) {
+  .test-pricing-clarity-concept--two .skio-price__per-delivery {
     text-align: right;
   }
 
