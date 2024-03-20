@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="{{ request.locale.iso_code }}">
+<html class="no-js test-collection-page-redesign concept--one" lang="{{ request.locale.iso_code }}">
   <head>{% render 'skio-head' %}
 
 <!--Aspire tracking-->
@@ -503,74 +503,83 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
 
   <script>
     function waitForElement(querySelector, timeout) {
-  return new Promise((resolve, reject) => {
-    var timer = false;
-    if (document.querySelectorAll(querySelector).length) return resolve();
-    const observer = new MutationObserver(() => {
-      if (document.querySelectorAll(querySelector).length) {
-        observer.disconnect();
-        if (timer !== false) clearTimeout(timer);
-        return resolve();
-      }
-    });
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-    if (timeout)
-      timer = setTimeout(() => {
-        observer.disconnect();
-        reject();
-      }, timeout);
-  });
-}
-
-function moveFormElement() {
-  const container = document.querySelector(".cbb-frequently-bought-container");
-  const form = document.querySelector(".cbb-frequently-bought-form");
-
-  if (window.innerWidth < 649) {
-    container.insertAdjacentElement('afterend', form);
-  }
-}
-
-waitForElement(".cbb-frequently-bought-form", 5000)
-  .then(() => {
-    //moveFormElement();
-    //window.addEventListener('resize', moveFormElement);
-    document.querySelector(".cbb-frequently-bought-add-button").addEventListener("click", function(e) {
-      setTimeout(function() {
-        document.querySelector('ajax-cart').getCartData("open_drawer");
-      }, 1000)
-    });
-  })
-  .catch((e) => {
-    console.log("error message")
-    console.error(e.message)
-  })
-
-  window.addEventListener('skio::update-selling-plan', function(e) { 
-    console.log(e) 
-    if (e.detail.sellingPlan) {
-        document.querySelectorAll(".subscription-info").forEach(sub => {
-          sub.classList.add("show")
-        })
-    } else {
-      document.querySelectorAll(".subscription-info").forEach(sub => {
-        sub.classList.remove("show")
-      })
+      return new Promise((resolve, reject) => {
+        var timer = false;
+        if (document.querySelectorAll(querySelector).length) return resolve();
+        const observer = new MutationObserver(() => {
+          if (document.querySelectorAll(querySelector).length) {
+            observer.disconnect();
+            if (timer !== false) clearTimeout(timer);
+            return resolve();
+          }
+        });
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+        if (timeout)
+          timer = setTimeout(() => {
+            observer.disconnect();
+            reject();
+          }, timeout);
+      });
     }
-})
-{% if localization.country == "France" and product.metafields.unavailable.france == true %}
-  document.addEventListener("DOMContentLoaded", () => {
-    waitForElement(".cbb-frequently-bought-add-button", 5000).then(() => {
-      document.querySelector(".cbb-frequently-bought-add-button").setAttribute("disabled", "disabled") 
-      document.querySelector(".cbb-frequently-bought-add-button span").innerHTML = "Not Available In France"
+
+    function moveFormElement() {
+      const container = document.querySelector(".cbb-frequently-bought-container");
+      const form = document.querySelector(".cbb-frequently-bought-form");
+
+      if (window.innerWidth < 649) {
+        container.insertAdjacentElement('afterend', form);
+      }
+    }
+
+    waitForElement(".cbb-frequently-bought-form", 5000)
+    .then(() => {
+      //moveFormElement();
+      //window.addEventListener('resize', moveFormElement);
+      document.querySelector(".cbb-frequently-bought-add-button").addEventListener("click", function(e) {
+        setTimeout(function() {
+          document.querySelector('ajax-cart').getCartData("open_drawer");
+        }, 1000)
+      });
+    })
+    .catch((e) => {
+      console.log("error message")
+      console.error(e.message)
+    })
+
+    window.addEventListener('skio::update-selling-plan', function(e) { 
+      console.log(e) 
+      if (e.detail.sellingPlan) {
+          document.querySelectorAll(".subscription-info").forEach(sub => {
+            sub.classList.add("show")
+          })
+      } else {
+        document.querySelectorAll(".subscription-info").forEach(sub => {
+          sub.classList.remove("show")
+        })
+      }
+    })
+
+    {% if localization.country == "France" and product.metafields.unavailable.france == true %}
+      document.addEventListener("DOMContentLoaded", () => {
+        waitForElement(".cbb-frequently-bought-add-button", 5000).then(() => {
+          document.querySelector(".cbb-frequently-bought-add-button").setAttribute("disabled", "disabled") 
+          document.querySelector(".cbb-frequently-bought-add-button span").innerHTML = "Not Available In France"
+        }).catch((e) => {
+          console.error(e.message)
+        })
+      })
+    {% endif %}
+
+    waitForElement("html .newsletter-banner form > div > div:first-child > div:last-child button", 10000).then(() => {
+      setTimeout(() => {
+        document.querySelector("html .newsletter-banner form > div > div:first-child > div:last-child button").innerHTML = "Subscribe & Save"
+      }, 1000)
     }).catch((e) => {
       console.error(e.message)
     })
-  })
-{% endif %}
   </script>
  <script defer src="https://static.myshlf.us/Affiliates/sms_aff_clicktrack.js"></script> </body>
 </html>

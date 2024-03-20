@@ -27,31 +27,7 @@
                                 {{ block.settings.text }}
                             </div>
                         {% when 'form' %}
-                            {% form 'customer' %}
-                                {% if form.errors %}
-                                    <div class="alert alert-warning">
-                                        {{ form.errors | default_errors }}
-                                    </div>
-                                {% endif %}
-                            
-                                {% if form.posted_successfully? %}
-                                    <h5 class="mt-3">{{ 'general.social.newsletter_form.newsletter_confirmation' | t }}</h5>
-                                {% else %}
-                                    {% if section.settings.text != blank %}
-                                        <div>{{ section.settings.text }}</div>
-                                    {% endif %}
-                                    
-                                    <div class="input-group mx-auto my-4 newsletter-form__wrapper">
-                                        <input type="email" name="contact[email]" aria-label="email" id="newsletterPopupEmail" class="form-control" placeholder="Email Address" value="{% if customer %}{{ customer.email }}{% endif %}" autocorrect="off" autocapitalize="off" required>
-                                        <input type="hidden" name="contact[tags]" value="newsletter">
-                                        <button type="submit" name="commit" class="btn btn-sm btn-primary" >{{ block.settings.button_label }}</button>
-                                    </div>
-                                
-                                    {% if section.settings.footer_notes != blank %}
-                                        <div class="small">{{ section.settings.footer_notes }}</div>
-                                    {% endif %}
-                                {% endif %}
-                            {% endform %}
+                            <div id="footer_email_capture" class="klaviyo-form-TLyKnL"></div>
                     {% endcase %}
                 {% endfor %}
             </div>
