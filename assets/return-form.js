@@ -100,7 +100,8 @@ $(document).ready(function () {
           $(product).val() == 'Omnilux Hydrogel Décolleté Mask' ||
           $(product).val() == 'Mini Eye Brightener Refill' ||
           $(product).val() == 'Mini Skin Corrector Refill' ||
-          $(product).val() == 'Mini Blemish Eraser Refill'
+          $(product).val() == 'Mini Blemish Eraser Refill' ||
+          $(product).val() == 'Antioxidant Eye Cream'
         ) {
           skincare = true;
         }        

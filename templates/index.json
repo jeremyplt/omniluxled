@@ -557,6 +557,9 @@
         "b75f44ea-cfb8-43e2-bdcd-c3caa79840fa",
         "03a1158f-a3a0-4d7f-a0b8-baf9c92572f3"
       ],
+      "custom_css": [
+        "@media (max-width: 600px) {.card-body a.btn {margin-bottom: 2.5rem !important; }}"
+      ],
       "settings": {
         "fluid_layout": false,
         "anchorid": "",
