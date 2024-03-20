@@ -1331,6 +1331,13 @@ input:-webkit-autofill:active {
   padding-left: calc(15px * 1);
 }
 
+@media (max-width: 749px) {
+  .row > * {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 .row.no-gutter {
   margin-right: 0;
   margin-left: 0;

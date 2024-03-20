@@ -237,6 +237,12 @@
 
     }
 
+    @media (max-width: 749px) {
+        :root {
+            --bs-container-padding: calc({{ settings.container_padding }} * 0.75);
+        }
+    }
+
     *,
     *::before,
     *::after {
