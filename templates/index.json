@@ -612,7 +612,7 @@
     "dcb3cafc-7296-46cc-8c09-ce11f9bfb43c": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"desktopreviewstitle\"><div class=\"container is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<p>We've helped 275,000+ customers achieve their skin goals.<\/p>\n<\/div>"
+        "custom_liquid": "<div class=\"desktopreviewstitle\"><div class=\"is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<p>We've helped 275,000+ customers achieve their skin goals.<\/p>\n<\/div>"
       }
     },
     "ee29c9a6-cc9d-454d-a792-422630926ee6": {
