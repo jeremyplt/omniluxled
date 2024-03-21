@@ -526,6 +526,9 @@ export class SkioPlanPickerComponent extends LitElement {
 
   render() {
     if(!this.product || !this.selectedVariant || this.skioSellingPlanGroups.length == 0 || !this.product?.available) return;
+
+    // create a random unique ID
+    const uniqueID = Math.random().toString(36).substr(2, 9);
     
     return html`
       <fieldset class="skio-plan-picker" skio-plan-picker="${ this.key }">
@@ -536,9 +539,9 @@ export class SkioPlanPickerComponent extends LitElement {
         <div class="skio-group-container ${ this.product.requires_selling_plan == false ? 'skio-group-container--available' : '' } ${ this.selectedSellingPlanGroup == null ? 'skio-group-container--selected' : '' } ${ this.subscriptionFirst ? 'skio-onetime-second' : ''}" skio-group-container 
           @click=${() => this.selectSellingPlanGroup(null) } >
         
-          <input id="skio-one-time-${ this.key }" class="skio-group-input" name="skio-group-${ this.key }" type="radio" value="" 
+          <input id="skio-one-time-${ this.key }-${uniqueID}" class="skio-group-input" name="skio-group-${ this.key }" type="radio" value="" 
             skio-one-time ?checked=${ this.startSubscription == false && this.product.requires_selling_plan == false ? true : false }>
-          <label class="skio-group-label" for="skio-one-time-${ this.key }">
+          <label class="skio-group-label" for="skio-one-time-${ this.key }-${uniqueID}">
             <div class="skio-group-topline">
               <div class="skio-radio__container">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -559,9 +562,9 @@ export class SkioPlanPickerComponent extends LitElement {
           html`
             <div class="skio-group-container skio-group-container--subscription skio-group-container--available ${ this.selectedSellingPlanGroup == group ? 'skio-group-container--selected' : '' }" skio-group-container
               @click=${() => this.selectSellingPlanGroup(group) }>
-              <input id="skio-selling-plan-group-${ index }-${ this.key }" class="skio-group-input" name="skio-group-${ this.key }"
+              <input id="skio-selling-plan-group-${ index }-${ this.key }-${uniqueID}" class="skio-group-input" name="skio-group-${ this.key }"
                 type="radio" value="${ group.id }" skio-selling-plan-group="${ group.id }" ?checked=${ this.selectedSellingPlanGroup == group ? true : false } >
-              <label class="skio-group-label" for="skio-selling-plan-group-${ index }-${ this.key }">
+              <label class="skio-group-label" for="skio-selling-plan-group-${ index }-${ this.key }-${uniqueID}">
                 <div class="skio-group-topline">
                   <div class="skio-radio__container">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1111,6 +1114,7 @@ export class SkioPlanPickerComponent extends LitElement {
     let skio = this
     for (let el of variantInputs) {
       el.addEventListener('click', function(e) {
+        e.preventDefault();
         // may need to replace with ID / e.target depending on client setup
         // may need to use different attribute depending on ^^
         let variantTitle = e.currentTarget.value
@@ -1178,6 +1182,7 @@ export class SkioPlanPickerComponent extends LitElement {
 customElements.define('skio-plan-picker', SkioPlanPickerComponent);
 
 document.addEventListener("skio::update-selling-plan", function(e) {
+  e.preventDefault();
   const sellingPlan = e.detail.sellingPlan;
 
   document.querySelectorAll(".variant-title").forEach(title => {
