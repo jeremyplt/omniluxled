@@ -549,6 +549,7 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
 
     window.addEventListener('skio::update-selling-plan', function(e) { 
       console.log(e) 
+      e.preventDefault();
       if (e.detail.sellingPlan) {
           document.querySelectorAll(".subscription-info").forEach(sub => {
             sub.classList.add("show")
