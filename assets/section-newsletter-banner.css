@@ -93,7 +93,12 @@ html .newsletter-banner form > div > div:first-child > div:last-child button spa
     font-size: 16px !important; /* Reset to the original font size or whatever size you need */
     color: rgb(255, 255, 255); /* Ensure the text color is set, if needed */
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* Reset the font family, if needed */
+    text-transform: uppercase !important;
   }
+
+html .newsletter-banner form > div:first-child > div:first-child > div:first-child > div:first-child {
+  margin-top: -50px;
+}
 
 html .newsletter-banner form input {
     border-radius: 0 !important;

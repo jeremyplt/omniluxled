@@ -474,49 +474,49 @@
           "type": "faq",
           "settings": {
             "hoox_faq_question": "What is Contour Glove?",
-            "hoox_faq_answer": "Contour Glove is an FDA-cleared, portable LED device with clinically proven results for joint pain and skin rejuvenation. <p>\n<\/p><p>\nThe device utilizes two optimal wavelengths of red light (633nm) and near-infrared light (830nm) that penetrate deep into the skin for powerful anti-inflammatory benefits.<\/p>"
+            "hoox_faq_answer": "<p>Contour Glove is an FDA-cleared, portable LED device with clinically proven results for joint pain and skin rejuvenation. <\/p><p>The device utilizes two optimal wavelengths of red light (633nm) and near-infrared light (830nm) that penetrate deep into the skin for powerful anti-inflammatory benefits.<\/p>"
           }
         },
         "f425b463-f4a4-43ed-ae56-5ed6bfb60519": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "Does LED therapy really work?",
-            "hoox_faq_answer": "Yes. Omnilux’s gold-standard technology has been clinically proven to produce medical-grade results for over 20 years. Omnilux devices have been specifically profiled in 40+ independent, peer-reviewed published clinical studies, with applications ranging from skin rejuvenation, acne, wound healing and pain attenuation."
+            "hoox_faq_answer": "<p>Yes. Omnilux’s gold-standard technology has been clinically proven to produce medical-grade results for over 20 years. Omnilux devices have been specifically profiled in 40+ independent, peer-reviewed published clinical studies, with applications ranging from skin rejuvenation, acne, wound healing and pain attenuation.<\/p>"
           }
         },
         "d1867c6e-cd32-4b8a-992b-d6f14115fd3c": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "What does the red light wavelength do?",
-            "hoox_faq_answer": "Red light (633nm) is the gold standard for wound healing and skin rejuvenation. Its anti-inflammatory effects include reducing oxidative stress and inflammation, often associated with conditions relating to joint discomfort."
+            "hoox_faq_answer": "<p>Red light (633nm) is the gold standard for wound healing and skin rejuvenation. Its anti-inflammatory effects include reducing oxidative stress and inflammation, often associated with conditions relating to joint discomfort.<\/p>"
           }
         },
         "d4caa621-f695-4bbe-a117-9cc0228ff17e": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "What does the near-infrared light wavelength do?",
-            "hoox_faq_answer": "Along with red light, near-infrared (830nm) light is the gold standard for wound healing and skin rejuvenation. It penetrates tissues deeply, delivering energy to deeper fibroblast cells. This activity boosts cellular energy production, promoting tissue repair and can contribute to alleviating discomfort associated with joint issues."
+            "hoox_faq_answer": "<p>Along with red light, near-infrared (830nm) light is the gold standard for wound healing and skin rejuvenation. It penetrates tissues deeply, delivering energy to deeper fibroblast cells. This activity boosts cellular energy production, promoting tissue repair and can contribute to alleviating discomfort associated with joint issues.<\/p>"
           }
         },
         "4ab8adba-b4cc-4ca3-bf6c-052e362e235e": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "What is the recommended treatment regimen?",
-            "hoox_faq_answer": "We recommend using the Contour Glove device 3-5 times per week for 4-6 weeks. After the initial 6 weeks, you should continue routine maintenance treatments as desired based on lifestyle and needs. Consistency is key, so find what works best for you!"
+            "hoox_faq_answer": "<p>We recommend using the Contour Glove device 3-5 times per week for 4-6 weeks. After the initial 6 weeks, you should continue routine maintenance treatments as desired based on lifestyle and needs. Consistency is key, so find what works best for you!<\/p>"
           }
         },
         "da9fb4f8-c61e-4178-9259-d0ca7160cc67": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "Is the device safe to use?",
-            "hoox_faq_answer": "With over 40 peer reviewed clinical studies and 20+ years of experience, Omnilux technology has proven to be very safe for all skin types, with no adverse side effects and no pain. Our devices do not generate heat or UV light."
+            "hoox_faq_answer": "<p>With over 40 peer reviewed clinical studies and 20+ years of experience, Omnilux technology has proven to be very safe for all skin types, with no adverse side effects and no pain. Our devices do not generate heat or UV light.<\/p>"
           }
         },
         "5129113d-7507-4843-a29a-7fa7635dca2c": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "How many LEDs does the Contour Glove have?",
-            "hoox_faq_answer": "There are a total of 144 LEDs, 72 red and 72 near-infrared. The red and near-infrared LEDs are encased in 72 dual chip bulbs."
+            "hoox_faq_answer": "<p>There are a total of 144 LEDs, 72 red and 72 near-infrared. The red and near-infrared LEDs are encased in 72 dual chip bulbs.<\/p>"
           }
         },
         "c439c964-caa9-451f-ab60-7b570665af90": {
@@ -524,7 +524,7 @@
           "disabled": true,
           "settings": {
             "hoox_faq_question": "Is the Contour worth the price?",
-            "hoox_faq_answer": "The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money."
+            "hoox_faq_answer": "<p>The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money.<\/p>"
           }
         }
       },
