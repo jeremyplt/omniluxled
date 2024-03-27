@@ -227,15 +227,19 @@
     // }
 
     function showDualPriceOverride(arguments) {
+      
         jQuery = arguments[0];
         productID = arguments[1];
+     
         productTags = arguments[2];
         productVendor = arguments[3];
         price = arguments[4];
+     
         compareAtPrice = arguments[5];
         pathToPrice = arguments[6];
         type = arguments[7];
         dpMoneyFormat = "{{ shop.money_format }}";
+     
         productVariantIsTaxable = arguments[9];
     
         dpShowTax = true;
@@ -260,17 +264,24 @@
         if (parseInt(dp_base_price_type) == 0) {
             firstPrice = Shopify.formatMoney(price, dpMoneyFormat);
             secondPrice = firstPrice;
+         
             if (!isNaN(taxPercent) && taxPercent > 0) {
                 secondPriceNotFormated = Math.round(price + price * taxPercent / 100);
                 secondPrice = Shopify.formatMoney(secondPriceNotFormated, dpMoneyFormat);
             }
         } else {
             secondPrice = Shopify.formatMoney(price, dpMoneyFormat);
+          
             firstPrice = secondPrice;
             if (!isNaN(taxPercent) && taxPercent > 0) {
                 firstPriceNotFormated = Math.round(price + price * taxPercent / 100);
                 firstPrice = Shopify.formatMoney(firstPriceNotFormated, dpMoneyFormat);
             }
+        }
+        if(productID=="5702727631010"){
+           console.log("<<<<<<<<<<<<<Price override here>>>>>>>>>>>>>>>>>>>"+productID);
+          console.log(firstPrice);
+          console.log(secondPrice);
         }
         compareAtPriceBlock = '';
         firstPriceBlock = '';
