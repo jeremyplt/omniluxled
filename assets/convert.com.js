@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("load", function () {
   console.log("WINDOW_MYSLIDER_LOAD");
-  window.mySwiper.update();
+  window?.mySwiper?.update();
 });
 
 document.addEventListener("cart-drawer:open", () => {
