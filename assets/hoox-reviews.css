@@ -135,7 +135,11 @@
     }
 .template-page.minis  .hoox-reviews{min-height:700px;}
   .template-page.minis .hoox-reviews__item{min-height:440px;}
+
+    .template-page.contour-glove  .hoox-reviews{min-height:710px;}
+   .template-page.contour-glove .hoox-reviews__item{min-height:520px;}
 }
+
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
     .hoox-reviews__item {
@@ -147,9 +151,14 @@
     }
   .template-page.minis  .hoox-reviews{min-height:700px;}
   .template-page.minis .hoox-reviews__item{min-height:440px;}
+   .template-page.contour-glove  .hoox-reviews{min-height:710px;}
+   .template-page.contour-glove .hoox-reviews__item{min-height:520px;}
 }
 
 @media(max-width:600px){
   .template-page.minis  .hoox-reviews{min-height:600px;}
   .template-page.minis .hoox-reviews__item{min-height:340px;}
+
+   .template-page.contour-glove  .hoox-reviews{min-height:610px;}
+   .template-page.contour-glove .hoox-reviews__item{min-height:400px;}
 }

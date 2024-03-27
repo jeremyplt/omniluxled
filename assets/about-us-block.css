@@ -49,10 +49,15 @@
 .borad-block-img{
     position: relative;
     padding-top:34%;
-    width: 114px;
-    height: 114px;
+   /* width: 114px;
+    height: 114px;*/
+  width: 140px;
+    height: 140px;
     margin:0 auto;
 }
+
+
+
 .swiper-arrows {
     display: none;
     align-items: center;

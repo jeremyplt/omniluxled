@@ -2300,9 +2300,9 @@ div#shopify-section-template--16531510329506__fa9b8a1b-146c-4f3f-8be9-721ab7ff5c
   display: none !important;
 }
 
-.section-newsletter-banner, .section-image-text-overlay, .section-icons-with-text {
+/* .section-newsletter-banner, .section-image-text-overlay, .section-icons-with-text {
   display: none;
-}
+} */
 
 .test-collection-page-redesign.concept--one .section-newsletter-banner {
   display: block;

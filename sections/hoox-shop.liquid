@@ -127,6 +127,16 @@
                     allow="autoplay; fullscreen; picture-in-picture"
                     data-original-link="{{ shopProductVideoSrcYoutube }}"
                     allowfullscreen></iframe>
+                  {% else %}
+                
+                  <iframe
+                    src="{{ videoURL }}"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    data-original-link="{{ videoURL }}"
+                    allowfullscreen></iframe>
                 {% endif %}
                 </div>
 
@@ -168,7 +178,14 @@
                 </li>
               {% endif %}
             {% endfor %}
-          </ul>
+          </ul>    
+
+           {% for block in section.blocks %}
+              {% if block.type == 'small_text' %}
+                {% assign small_text = block.settings.small_text %}
+             <div class="smalltext"> {{ small_text }}</div>
+           {% endif %}
+            {% endfor %}
 
           <div class="hoox-js-shop-logic hoox-shop__shop-logic">
             {% render 'hoox-form-product' 
@@ -474,7 +491,20 @@
             "label": "Bullet"
           }
         ]
-      }, {
+      }, 
+        {
+        "type": "small_text",
+        "name": "Small text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "small_text",
+            "label": "SmallText"
+          }
+        ]
+      },
+      
+      {
         "type": "images",
         "name": "Benefit images",
         "settings": [

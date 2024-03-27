@@ -547,6 +547,9 @@
     background: #FFFBFA;
     margin-top: 8px;
 }
+
+.smalltext{font-size: 12px;margin-top: -5px;margin-bottom: 25px;}
+
 @media (min-width: 1023px) {
     .hoox-shop {
         padding: 80px 0;

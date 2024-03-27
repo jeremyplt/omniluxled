@@ -1,8 +1,42 @@
 {
   "wrapper": "section",
   "sections": {
+    "newsletter_banner_MTGLcR": {
+      "type": "newsletter-banner",
+      "blocks": {
+        "heading_BAVgqU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unlock 10% Off Your First Order"
+          }
+        },
+        "text_3HUVDi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe to our newsletter and stay ahead with the latest updates and exclusive offers.<\/p>"
+          }
+        },
+        "form_xwDcWU": {
+          "type": "form",
+          "settings": {
+            "button_label": "Subscribe & Save"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BAVgqU",
+        "text_3HUVDi",
+        "form_xwDcWU"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_341-min.png",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "banner": {
       "type": "template-collection-banner",
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "show_collection_description": true,
@@ -132,6 +166,7 @@
     }
   },
   "order": [
+    "newsletter_banner_MTGLcR",
     "banner",
     "product-grid",
     "a427aa1e-07c5-4c27-bb23-6f7e1ca98c62"
