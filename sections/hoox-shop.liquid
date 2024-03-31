@@ -196,6 +196,10 @@
             {% render 'hoox-afterpay-text' %}
           </div>
 
+          {% if shopProduct.metafields.custom.us_preorder and localization.country == 'United States' %}
+            {% render 'pre-order-info', block: block, product: shopProduct %}
+          {% endif %}
+
           <div class="cc_prod_price_selector"></div>
 
           {%- form 'product', 
