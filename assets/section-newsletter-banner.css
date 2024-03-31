@@ -65,9 +65,9 @@ html .newsletter-banner form {
     padding-left: 0 !important;
 }
 
-html .newsletter-banner form > div > div:nth-child(2), .newsletter-banner form > div > div:nth-child(3) {
+/* html .newsletter-banner form > div > div:nth-child(2), .newsletter-banner form > div > div:nth-child(3) {
     display: none !important;
-}
+} */
 
 html .newsletter-banner form > div > div:first-child {
     flex-direction: column !important;
@@ -86,7 +86,6 @@ html .newsletter-banner form > div > div:first-child > div:last-child button {
     width: 100% !important;
     font-weight: bold !important;
     padding: 15px 10px !important;
-    font-size: 0 !important;
 }
 
 html .newsletter-banner form > div > div:first-child > div:last-child button span {
@@ -113,7 +112,7 @@ html .newsletter-banner form input::placeholder {
     color: rgba(0, 0, 0, 0.5) !important;
 }
 
-html .newsletter-banner #footer_email_capture {
+html .newsletter-banner .klaviyo-form-TeUmFF {
     margin-top: 2.75rem !important;
 }
 

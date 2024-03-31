@@ -575,13 +575,13 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
       })
     {% endif %}
 
-    waitForElement("html .newsletter-banner form > div > div:first-child > div:last-child button", 10000).then(() => {
-      setTimeout(() => {
-        document.querySelector("html .newsletter-banner form > div > div:first-child > div:last-child button").innerHTML = "<span>Subscribe & Save</span>"
-      }, 1000)
-    }).catch((e) => {
-      console.error(e.message)
-    })
+    // waitForElement("html .newsletter-banner form > div > div:first-child > div:last-child button", 10000).then(() => {
+    //   setTimeout(() => {
+    //     document.querySelector("html .newsletter-banner form > div > div:first-child > div:last-child button").innerHTML = "<span>Subscribe & Save</span>"
+    //   }, 1000)
+    // }).catch((e) => {
+    //   console.error(e.message)
+    // })
   </script>
  <script defer src="https://static.myshlf.us/Affiliates/sms_aff_clicktrack.js"></script> </body>
 </html>
