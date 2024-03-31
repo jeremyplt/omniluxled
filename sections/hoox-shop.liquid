@@ -197,7 +197,9 @@
           </div>
 
           {% if shopProduct.metafields.custom.us_preorder and localization.country == 'United States' %}
-            {% render 'pre-order-info', block: block, product: shopProduct %}
+            <div style="margin-bottom: 1rem;">
+              {% render 'pre-order-info', product: shopProduct %}
+            </div>
           {% endif %}
 
           <div class="cc_prod_price_selector"></div>
