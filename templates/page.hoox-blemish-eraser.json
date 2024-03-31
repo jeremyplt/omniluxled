@@ -520,7 +520,7 @@
           "type": "faq",
           "settings": {
             "hoox_faq_question": "How do I get 15% off?",
-            "hoox_faq_answer": "When you Subscribe & Save, you will receive 15% off your Blemish Eraser device and 15% off the recurring shipments of hydrocolloid patches to ensure you never miss a treatment."
+            "hoox_faq_answer": "<p>When you Subscribe & Save, you will receive 15% off your Blemish Eraser device and 15% off the recurring shipments of hydrocolloid patches to ensure you never miss a treatment.</p>"
           }
         },
         "d1867c6e-cd32-4b8a-992b-d6f14115fd3c": {
@@ -534,7 +534,7 @@
           "type": "faq",
           "settings": {
             "hoox_faq_question": "Is there a minimum subscription period?",
-            "hoox_faq_answer": "No. We want our customers to be confident with their purchases. If you aren’t completely satisfied with your product, you can cancel your subscription at any time."
+            "hoox_faq_answer": "<p>No. We want our customers to be confident with their purchases. If you aren’t completely satisfied with your product, you can cancel your subscription at any time.</p>"
           }
         },
         "5129113d-7507-4843-a29a-7fa7635dca2c": {
@@ -542,7 +542,7 @@
           "disabled": true,
           "settings": {
             "hoox_faq_question": "Can I complete Contour treatments with Botox and fillers?",
-            "hoox_faq_answer": "Yes, the Contour line helps with bruising that may occur after Botox or fillers. Subjects reported that they felt their Botox treatment lasted longer and results are much more enhanced when combined with Omnilux light therapy. Contour treatments are complementary—they have no direct effect on the Botox or filler treatment."
+            "hoox_faq_answer": "<p>Yes, the Contour line helps with bruising that may occur after Botox or fillers. Subjects reported that they felt their Botox treatment lasted longer and results are much more enhanced when combined with Omnilux light therapy. Contour treatments are complementary—they have no direct effect on the Botox or filler treatment.</p>"
           }
         },
         "c439c964-caa9-451f-ab60-7b570665af90": {
@@ -550,7 +550,7 @@
           "disabled": true,
           "settings": {
             "hoox_faq_question": "Is the Contour worth the price?",
-            "hoox_faq_answer": "The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money."
+            "hoox_faq_answer": "<p>The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money.</p>"
           }
         }
       },
