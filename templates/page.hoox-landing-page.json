@@ -425,56 +425,56 @@
           "type": "faq",
           "settings": {
             "hoox_faq_question": "Does LED therapy really work?",
-            "hoox_faq_answer": "Yes. Omnilux’s technology has been clinically proven to produce medical-grade results for nearly 20 years. Omnilux devices have been specifically profiled in over 40 independent, peer-reviewed, published clinical studies, with applications ranging from skin rejuvenation, acne, pigmentation, and other common skin conditions.\n<br>\n<br>\nPlease note: Not all LED masks are created equal! Some brands lack the clinical studies or FDA clearance that demonstrate proven effectiveness."
+            "hoox_faq_answer": "<p>Yes. Omnilux’s technology has been clinically proven to produce medical-grade results for nearly 20 years. Omnilux devices have been specifically profiled in over 40 independent, peer-reviewed, published clinical studies, with applications ranging from skin rejuvenation, acne, pigmentation, and other common skin conditions.\n<br>\n<br>\nPlease note: Not all LED masks are created equal! Some brands lack the clinical studies or FDA clearance that demonstrate proven effectiveness.</p>"
           }
         },
         "4ab4d7d5-21be-459b-9e5a-f179e6bb6105": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "How long does it take LED therapy to work?",
-            "hoox_faq_answer": "With consistent use, you should start to see results from your Contour device starting in 4 weeks. Be sure to take before and after pictures to compare your progress. Sometimes it can be hard to notice a difference until you compare your before and after photos."
+            "hoox_faq_answer": "<p>With consistent use, you should start to see results from your Contour device starting in 4 weeks. Be sure to take before and after pictures to compare your progress. Sometimes it can be hard to notice a difference until you compare your before and after photos.</p>"
           }
         },
         "4ab8adba-b4cc-4ca3-bf6c-052e362e235e": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "What is the recommended treatment regimen for Contour Face?",
-            "hoox_faq_answer": "We recommend using the Contour devices 3-5 times per week for 4-6 weeks. After the initial 6 weeks, you should continue routine maintenance treatments as desired based on lifestyle and skincare needs, as everyone’s skin is different. Consistency is key, so find what works best for you!"
+            "hoox_faq_answer": "<p>We recommend using the Contour devices 3-5 times per week for 4-6 weeks. After the initial 6 weeks, you should continue routine maintenance treatments as desired based on lifestyle and skincare needs, as everyone’s skin is different. Consistency is key, so find what works best for you!</p>"
           }
         },
         "da9fb4f8-c61e-4178-9259-d0ca7160cc67": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "Is the Contour safe to use?",
-            "hoox_faq_answer": "With over 40 peer reviewed clinical studies and nearly 20 years of experience, Omnilux technology has proven to be very safe for all skin types, with no adverse side effects and no pain. Omnilux Contour generates no heat or UV light."
+            "hoox_faq_answer": "<p>With over 40 peer reviewed clinical studies and nearly 20 years of experience, Omnilux technology has proven to be very safe for all skin types, with no adverse side effects and no pain. Omnilux Contour generates no heat or UV light.</p>"
           }
         },
         "d1867c6e-cd32-4b8a-992b-d6f14115fd3c": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "Can I use the Contour with my other skin products?",
-            "hoox_faq_answer": "Omnilux Contour is compatible with most skin care routines. You should always apply your skin care products after treatments. Please review the Contraindications for a list of products and ingredients to avoid using with LED."
+            "hoox_faq_answer": "<p>Omnilux Contour is compatible with most skin care routines. You should always apply your skin care products after treatments. Please review the Contraindications for a list of products and ingredients to avoid using with LED.</p>"
           }
         },
         "d4caa621-f695-4bbe-a117-9cc0228ff17e": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "Is the Contour safe to use with Retinol or Retin A?",
-            "hoox_faq_answer": "For users taking prescriptive levels of Retin A such as Tretinoin, we do not recommend the use of light devices. Those using cosmetics\/skincare products containing retinol should read the skincare instructions carefully for warnings and precautions in relation to exposure to light. Retin A should be discontinued for at least 5 days before performing light therapy treatments."
+            "hoox_faq_answer": "<p>For users taking prescriptive levels of Retin A such as Tretinoin, we do not recommend the use of light devices. Those using cosmetics\/skincare products containing retinol should read the skincare instructions carefully for warnings and precautions in relation to exposure to light. Retin A should be discontinued for at least 5 days before performing light therapy treatments.</p>"
           }
         },
         "5129113d-7507-4843-a29a-7fa7635dca2c": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "Can I complete Contour treatments with Botox and fillers?",
-            "hoox_faq_answer": "Yes, the Contour line helps with bruising that may occur after Botox or fillers. Subjects reported that they felt their Botox treatment lasted longer and results are much more enhanced when combined with Omnilux light therapy. Contour treatments are complementary—they have no direct effect on the Botox or filler treatment."
+            "hoox_faq_answer": "<p>Yes, the Contour line helps with bruising that may occur after Botox or fillers. Subjects reported that they felt their Botox treatment lasted longer and results are much more enhanced when combined with Omnilux light therapy. Contour treatments are complementary—they have no direct effect on the Botox or filler treatment.</p>"
           }
         },
         "c439c964-caa9-451f-ab60-7b570665af90": {
           "type": "faq",
           "settings": {
             "hoox_faq_question": "Is the Contour worth the price?",
-            "hoox_faq_answer": "The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money."
+            "hoox_faq_answer": "<p>The Contour devices utilize the same technology you’d find in a dermatologist’s office for a fraction of the cost. The Contour is 9 times more cost-effective than a year of treatment at the dermatologist, saving you significant time and money.</p>"
           }
         }
       },
