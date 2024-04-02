@@ -8,6 +8,12 @@
 
 <section class="hoox-safe bg-green">
   <div class="l">
+    {% if section.settings.section_headline %}
+     <a href ="#hoox-shop"> <h3 class="headline">
+        {{ section.settings.section_headline }}
+      </h3>
+     </a>
+    {% endif %}
     <div class="hoox-safe__wrapper">
   {% if section.blocks.size > 0 %}
     <div class="hoox-safe__items">
@@ -86,8 +92,9 @@
   <p class="hoox-safe-guarante__text hoox-text-small text-align-center"> 
   {{ hooxSafeGuaranteText }}</p>
   </p>
-  {% endif %}
+
 </div>
+        {% endif %}
 </div>
 </div>
 </section>
@@ -110,6 +117,11 @@
         "type": "text",
         "id": "hoox_safe_guarante_text",
         "label": "Section Guarante Text"
+      },
+      {
+        "type": "text",
+        "id": "section_headline",
+        "label": "Section Headline"
       }
     ],
     "blocks": [

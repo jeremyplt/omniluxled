@@ -71,7 +71,7 @@
         "section_title": "Doctor-formulated skincare for maximum results",
         "section_description": "A power-packed skincare trio fights signs of aging while optimizing Omnilux's signature light therapy treatments for enhanced results.",
         "section_btn_text": "Transform My Skin",
-        "section_btn_url": "",
+        "section_btn_url": "#hoox-shop",
         "section_shipping_text": "FREE Shipping | 30-Day Money-Back Guarantee",
         "section_main_image": "shopify:\/\/shop_images\/Hoox_LP_Hero_Image_Desktop_10.png",
         "section_main_image_mobile": "shopify:\/\/shop_images\/Hoox_Mini_LP_Hero_Mobile_7.png"
@@ -156,9 +156,10 @@
         "props_hH6EaK"
       ],
       "settings": {
-        "hoox_safe_btn_url": "shopify:\/\/products\/led-essentials-3-piece-kit",
+        "hoox_safe_btn_url": "#hoox-shop",
         "hoox_safe_btn_text": "SHOP THE BUNDLE",
-        "hoox_safe_guarante_text": "FREE Shipping | Subscribe & Save 15%"
+        "hoox_safe_guarante_text": "FREE Shipping | Subscribe & Save 15%",
+        "section_headline": "What's Included"
       }
     },
     "global_featured_in_3yFAq9": {
@@ -251,7 +252,8 @@
       ],
       "settings": {
         "hoox_how_to_title": "How to glow up:",
-        "hoox_how_to_subtitle": "Unlock firmer and brighter looking skin in a few simple steps"
+        "hoox_how_to_subtitle": "Unlock firmer and brighter looking skin in a few simple steps",
+        "watch_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1aae30fa63b24efbad0f2dea6e835691.mp4"
       }
     },
     "hoox_results_HEYwcD": {
@@ -395,9 +397,9 @@
       "settings": {
         "shop_product": "led-essentials-3-piece-kit",
         "shop_product_video_trigger_text": "Watch Review",
-        "shop_product_video_src": "https:\/\/www.youtube.com\/watch?v=BcT9M0Ye6Is",
+        "shop_product_video_src": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
         "shop_product_review_icon": "<svg width=\"96\" height=\"17\" viewbox=\"0 0 96 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M8 0.899902L10.3511 5.66383L15.6085 6.42777L11.8042 10.136L12.7023 15.372L8 12.8999L3.29772 15.372L4.19577 10.136L0.391548 6.42777L5.64886 5.66383L8 0.899902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M28 0.899902L30.3511 5.66383L35.6085 6.42777L31.8042 10.136L32.7023 15.372L28 12.8999L23.2977 15.372L24.1958 10.136L20.3915 6.42777L25.6489 5.66383L28 0.899902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M48 0.899902L50.3511 5.66383L55.6085 6.42777L51.8042 10.136L52.7023 15.372L48 12.8999L43.2977 15.372L44.1958 10.136L40.3915 6.42777L45.6489 5.66383L48 0.899902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M68 0.899902L70.3511 5.66383L75.6085 6.42777L71.8042 10.136L72.7023 15.372L68 12.8999L63.2977 15.372L64.1958 10.136L60.3915 6.42777L65.6489 5.66383L68 0.899902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M88 0.899902L90.3511 5.66383L95.6085 6.42777L91.8042 10.136L92.7023 15.372L88 12.8999L83.2977 15.372L84.1958 10.136L80.3915 6.42777L85.6489 5.66383L88 0.899902Z\" fill=\"#99552B\"><\/path>\n<\/svg>",
-        "shop_product_review_text": "900+ 5-Star Reviews",
+        "shop_product_review_text": "35+ 5-Star Reviews",
         "shop_product_description": "Renew, hydrate, and firm your skin with our anti-aging trio conveniently bundled together. Developed to enhance Omnilux’s LED light therapy treatments.",
         "shop_product_upsell": "",
         "shop_product_upsell_title": "Supercharge Your Results",
@@ -607,6 +609,7 @@
         "description_FJWXn4",
         "description_qd9jKk"
       ],
+      "disabled": true,
       "settings": {
         "section_title": "Why subscribe?",
         "section_subtitle": "To enjoy exclusive savings and VIP perks, of course!",
@@ -805,7 +808,7 @@
       "type": "hoox-sticky-bar",
       "settings": {
         "button_title": "Transform My Skin",
-        "button_url": ""
+        "button_url": "#hoox-shop"
       }
     },
     "hoox_protect_jrQ6H4": {
@@ -817,8 +820,8 @@
         "hoox_protect_image": "shopify:\/\/shop_images\/Hoox_LP_Footer_Image_Desktop_1.png",
         "hoox_protect_image_mobile": "shopify:\/\/shop_images\/Hoox_LP_Footer_Image_5.png",
         "hoox_protect_title": "Better Skin is Waiting",
-        "hoox_protect_btn_url": "",
-        "hoox_protect_btn_text": "TRY IT FOR YOURSELF",
+        "hoox_protect_btn_url": "#hoox-shop",
+        "hoox_protect_btn_text": "GET GLOWING TODAY",
         "hoox_protect_shipping": "FREE Shipping | Subscribe & Save 15%"
       }
     }

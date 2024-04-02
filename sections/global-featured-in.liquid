@@ -73,6 +73,8 @@
                     }' >
                     <div class="swiper-wrapper logo-list pb-7">
                         {% for block in section.blocks %}
+                     
+                          {% if block.settings.icon_img !="" %}
                             <div class="swiper-slide" >
                                 <div class="logo-list-img text-center d-flex align-items-center justify-content-center position-relative"> 
                                     {% if block.settings.logo_img == '' %} 
@@ -91,6 +93,7 @@
                                     {% endif %} 
                                 </div>
                             </div>
+                          {% endif %}
                         {% endfor %}
                     </div>
                     <div class="swiper-pagination swiper-pagination{{ section.id }}"></div>

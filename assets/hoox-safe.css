@@ -1,6 +1,10 @@
 .hoox-safe {
     padding: 48px 0;
 }
+h3.headline {
+    text-align: center;
+    padding-bottom: 25px;
+}
 
 .hoox-safe__items {
     display: flex;

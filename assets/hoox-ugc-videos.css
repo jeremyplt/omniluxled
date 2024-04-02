@@ -55,4 +55,9 @@
     .hoox-ugc-videos__title {
         max-width: 500px;
     }
+} 
+@media only screen and (max-width: 767px) {
+section.hoox-ugc-videos .swiper-slide.swiper-slide-duplicate {
+    width: 100% !important;
+}
 }

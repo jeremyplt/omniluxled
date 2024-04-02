@@ -4,6 +4,9 @@
 .swiper-container.carousel .testimonial-list[data-slider] .swiper-pagination{
     bottom:0;
 }
+div#shopify-section-template--16705044644002__global_featured_in_3yFAq9 .swiper-pagination {
+    display: none;
+}
 .global-featured-in .testimonial-thumbnails .swiper-slide.swiper-slide-thumb-active .logo-list-img{
     opacity: 1;
 }
@@ -18,6 +21,9 @@
 {
     cursor: pointer;
 }
+/* .template-page.led-essentials #shopify-section-template--16705044644002__global_featured_in_3yFAq9 .swiper-container #swiper-wrapper-bb389cafd7a4bde7 {
+    display: none;
+} */
 @media (min-width:1200px)
 {
     .global-featured-in .logo-list

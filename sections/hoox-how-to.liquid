@@ -44,6 +44,7 @@
         </div>
    </div>
       {% endfor %}
+       
     </div>  <div class="hoox-reviews__arrows">
         <div class="slider-reviews-prev hoox-swiper-arrow hoox-swiper-arrow-prev">
           {% render 'arrow-previous' %}
@@ -54,6 +55,45 @@
         </div>
       </div></div>
   {% endif %}
+    
+    {%- if section.settings.watch_video != "" -%}
+      <div class="hoox-shop__video-holder videoholder">
+        <div class="hoox-hero__btn-wrapper">
+          <button class="hoox-shop__video-trigger js-video-modal-trigger watchbtn">
+              
+              <span class='hoox-btn hoox-shop__video-trigger-text'>WATCH VIDEO</span>
+                 
+            </button>
+        </div>
+        
+            
+            <aside class="hoox-shop__video-modal">
+              <div class="hoox-shop__video-wrapper js-video-modal-outside"></div>
+              <div class="hoox-shop__video-body">
+                <div class="hoox-shop__video-iframe">
+                 
+                  <iframe
+                    src="{{ section.settings.watch_video }}"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    data-original-link="{{ section.settings.watch_video }}"
+                    allowfullscreen></iframe>
+             
+                </div>
+
+                <button class="hoox-shop__video-close js-video-modal-trigger js-video-modal-close">
+                  {% render 'hoox-icon-close' %}
+                </button>
+             
+              </div>
+              
+            </aside>
+          </div>
+      
+     
+      {%- endif -%}
 </div>
 </section>
 <script src="{{ 'glowup-slider.js' | asset_url }}" defer="defer"></script>
@@ -72,6 +112,11 @@
       "type": "text",
       "id": "hoox_how_to_subtitle",
       "label": "Section Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "watch_video",
+      "label": "Watch Video Link"
     }
   ],
   "blocks": [

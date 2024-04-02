@@ -30,7 +30,41 @@
 .hoox-how-to__image, .hoox-how-to__image img {
     width: 100%;
 }
-
+.template-page.led-essentials .watchvid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+    }
+.videoholder{
+    position:relative !important;
+    transform: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    margin-top: 3rem;
+    left: 0 !important;
+}
+.template-page.led-essentials .watchbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--hoox-color-white);
+    background-color: var(--hoox-color-black);
+    height: 48px;
+    width: 100%;
+}
+.template-page.led-essentials button.hoox-shop__video-trigger.js-video-modal-trigger.watchbtn span{
+    font-weight:700;
+    font-size:16px;
+    text-decoration:none;
+}
+.template-page.led-essentials .videoholder{
+  display: flex !important;
+}
 @media (min-width: 1024px) {
     .hoox-to {
         padding: 80px 0;
