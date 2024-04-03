@@ -5,6 +5,7 @@
 </style>
 <script type="text/javascript">
     function getPricePathOverride(arguments) {
+      console.log("here1>>>>>>>>>>>>>>");
         jQuery = arguments[0];
         aObject = arguments[1];
         pathToPrice = null;
@@ -90,6 +91,7 @@
     //     jQuery('.dualPrice').show();
     // }
     function renderProductDetailOverride(arguments) {
+      console.log("here2>>>>>>>>>>>>>>");
         jQuery = arguments[0];
         productDetailPriceParentFound = false;
         if (arguments[1].length > 0 && jQuery(arguments[1]).length > 0) {
@@ -227,7 +229,8 @@
     // }
 
     function showDualPriceOverride(arguments) {
-      
+
+      console.log("here3>>>>>>>>>>>>>>");
         jQuery = arguments[0];
         productID = arguments[1];
      
@@ -278,11 +281,7 @@
                 firstPrice = Shopify.formatMoney(firstPriceNotFormated, dpMoneyFormat);
             }
         }
-        if(productID=="5702727631010"){
-           console.log("<<<<<<<<<<<<<Price override here>>>>>>>>>>>>>>>>>>>"+productID);
-          console.log(firstPrice);
-          console.log(secondPrice);
-        }
+        
         compareAtPriceBlock = '';
         firstPriceBlock = '';
         secondPriceBlock = '';

@@ -317,13 +317,13 @@
                     GO TO PURCHASE ORDER
                   {% else %}
                     {{ 'products.product.add_to_cart' | t }}
-                    {%- if current_variant.compare_at_price > current_variant.price -%}
+                    <!-- {%- if current_variant.compare_at_price > current_variant.price -%}
                       <span class="text-gray-600">$</span
                       ><span class="text-gray-600 money hoox-js-price-compare" data-comparePrice>
                         {{- current_variant.compare_at_price | currency_without_money -}}
-                      </span>
-                    {%- endif -%}
-                    - $<span class="hoox-js-price actual-price money">
+                      </span> - 
+                    {%- endif -%} -->
+                    $<span class="hoox-js-price actual-price money">
                       {{- current_variant.price | currency_without_money -}}
                     </span>
                   {% endif %}

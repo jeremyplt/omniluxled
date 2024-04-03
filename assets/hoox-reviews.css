@@ -4,7 +4,9 @@
     border-bottom: 1px solid var(--hoox-color-black);
     background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 32.54%), linear-gradient(111deg, #F6D3BF 8.55%, #FBF5E2 96.45%);
 }
-
+.hoox-reviews__arrows {
+    padding-bottom: 40px;
+}
 .hoox-reviews__title {
     max-width: 303px;
     margin-bottom: 40px;

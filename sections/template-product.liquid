@@ -351,7 +351,7 @@
                         {%- endif -%}
                         data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
                     {%- endif -%}
-                    <span class="fw-bold actual-price money me-2" data-currentPrice>{{ current_variant.price | money }}</span>
+                    <span class="fw-bold actual-price money me-2 test78" data-currentPrice>{{ current_variant.price | money }}</span>
                     {% unless product.tags contains "no_free_shipping" %}
                       {% comment %} <span class="free-shipping text-uppercase fw-bold font-size-md ls-0" style="line-height: 1.7857142857;">+ free shipping*</span> {% endcomment %}
                     {% endunless %}

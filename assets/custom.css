@@ -2036,6 +2036,7 @@ html .cbb-frequently-bought-recommendations-wrap {
 
 .subscription-info.show {
   display: block;
+  width:100%;
 }
 
 .subscription-info ul {
@@ -2839,4 +2840,27 @@ html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected [sk
 
 .container.mega_menu_container.col-6.mx-0 {
   padding: 0 5px;
+}
+
+
+.template-collection #MainContent .price-with-btn{
+    position: relative !important;
+}
+.template-collection .col-12.btn-card-hide.trn.fw-normal {
+    display: flex;
+}
+.template-collection .position-relative.d-flex.price-with-btn .col-12.btn-card-hide.trn.fw-normal{
+    height: min-content !important;
+}
+
+.template-collection #MainContent .card-body {
+    padding: 0 20px 20px !important;
+}
+
+.template-collection #MainContent .card:hover .btn-card-hide{
+    display: flex !important;
+    justify-content:center;
+}
+.template-collection .position-relative.d-flex.price-with-btn .col-12.btn-card-hide.trn.fw-normal{
+    width: min-content !important;
 }

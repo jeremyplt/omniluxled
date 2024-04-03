@@ -73,8 +73,8 @@
         "section_btn_text": "Transform My Skin",
         "section_btn_url": "#hoox-shop",
         "section_shipping_text": "FREE Shipping | 30-Day Money-Back Guarantee",
-        "section_main_image": "shopify:\/\/shop_images\/Hoox_LP_Hero_Image_Desktop_10.png",
-        "section_main_image_mobile": "shopify:\/\/shop_images\/Hoox_Mini_LP_Hero_Mobile_7.png"
+        "section_main_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-04-02T085439.934.png",
+        "section_main_image_mobile": "shopify:\/\/shop_images\/HOOX_SKINCARE_LP_MOBILE_HERO.png"
       }
     },
     "hoox_press_PhhqaX": {
@@ -252,7 +252,7 @@
       ],
       "settings": {
         "hoox_how_to_title": "How to glow up:",
-        "hoox_how_to_subtitle": "Unlock firmer and brighter looking skin in a few simple steps",
+        "hoox_how_to_subtitle": "Unlock firmer and brighter looking skin in a few simple steps.",
         "watch_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1aae30fa63b24efbad0f2dea6e835691.mp4"
       }
     },
@@ -293,7 +293,7 @@
         "usp_fKJe73"
       ],
       "settings": {
-        "hoox_studies_title": "Our trusted treatments <br>scored an upgrade",
+        "hoox_studies_title": "Our trusted treatments scored an upgrade",
         "hoox_studies_subtitle": "Backed by nearly 20 years of aesthetics medicine expertise, world-renowned specialist Dr. Hany Abi Ghosn helped us carefully develop this 3-piece line to enhance the anti-aging benefits our LED users already love. <br><br>Clinical studies from Omnilux Contour users showed that:",
         "hoox_studies_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-03-28T145905.845.png"
       }
@@ -329,7 +329,7 @@
           "type": "questions",
           "settings": {
             "question_title": "What's Included",
-            "question_answer": "<ul>\n<li>\n<strong>Enzyme Powder Cleanser<\/strong> (1.41 fl. oz \/ 40g) - PRE LED:\nGently exfoliates to renew, brighten, and improve skin’s texture.<\/li>\n<li>\n<strong>Hyaluronic Acid Serum<\/strong> (1 fl. oz \/ 30ml) - DURING LED:\nPlumps skin while reducing redness and signs of fatigue<\/li>\n<li>\n<strong>Peptide Concentrate<\/strong> (1 fl. oz \/ 30ml) - POST LED:\nDiminishes fine lines and firms skin with collagen-inducing ingredients.<\/li>\n<\/ul>"
+            "question_answer": "<ul>\n<li>\n<strong>Enzyme Powder Cleanser<\/strong> (1.41 fl. oz \/ 40g) - PRE LED:\nGently exfoliates to renew, brighten, and improve skin’s texture.<\/li>\n<li>\n<strong>Hyaluronic Acid Serum<\/strong> (1 fl. oz \/ 30ml) - DURING LED:\nPlumps skin while reducing redness and signs of fatigue.<\/li>\n<li>\n<strong>Peptide Concentrate<\/strong> (1 fl. oz \/ 30ml) - POST LED:\nDiminishes fine lines and firms skin with collagen-inducing ingredients.<\/li>\n<\/ul>"
           }
         },
         "questions_AKWbTt": {
@@ -404,7 +404,7 @@
         "shop_product_upsell": "",
         "shop_product_upsell_title": "Supercharge Your Results",
         "shop_product_upsell_description": "Pairs perfectly with Contour Face when used during treatment.",
-        "subscription-info-text": "<ul><li>Subscribe to recurring Hydrocolloid Patch Refills so you never miss a treatment<\/li><li>15% off every subscription order<\/li><li>Free shipping on every subscription order<\/li><li>First access to new product offerings<\/li><li>Flexible subscription plan options. Auto-delivery every 4, 6, or 8 weeks<\/li><li><strong>Initial order includes: 1 Eye Brightener LED device + 14 Hydrocolloid Patches<\/strong><\/li><li><strong>Every recurring subscription order includes 20 Hydrocolloid Refill Patches<\/strong><\/li><\/ul>",
+        "subscription-info-text": "<ul><li>Auto-shipped every 4,6, or 8 weeks so you never run out<\/li><li>15% off every subscription order<\/li><li>Free shipping on every subscription order<\/li><li>First access to new product offerings<\/li><li>Flexible subscription plan options<\/li><\/ul>",
         "shop_product_upsell_stars": "<svg width=\"96\" height=\"17\" viewbox=\"0 0 96 17\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M8 0.399902L10.3511 5.16383L15.6085 5.92777L11.8042 9.63597L12.7023 14.872L8 12.3999L3.29772 14.872L4.19577 9.63597L0.391548 5.92777L5.64886 5.16383L8 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M28 0.399902L30.3511 5.16383L35.6085 5.92777L31.8042 9.63597L32.7023 14.872L28 12.3999L23.2977 14.872L24.1958 9.63597L20.3915 5.92777L25.6489 5.16383L28 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M48 0.399902L50.3511 5.16383L55.6085 5.92777L51.8042 9.63597L52.7023 14.872L48 12.3999L43.2977 14.872L44.1958 9.63597L40.3915 5.92777L45.6489 5.16383L48 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M68 0.399902L70.3511 5.16383L75.6085 5.92777L71.8042 9.63597L72.7023 14.872L68 12.3999L63.2977 14.872L64.1958 9.63597L60.3915 5.92777L65.6489 5.16383L68 0.399902Z\" fill=\"#99552B\"><\/path>\n<path d=\"M88 0.399902L90.3511 5.16383L95.6085 5.92777L91.8042 9.63597L92.7023 14.872L88 12.3999L83.2977 14.872L84.1958 9.63597L80.3915 5.92777L85.6489 5.16383L88 0.399902Z\" fill=\"#99552B\"><\/path>\n<\/svg>",
         "shop_gallery_bagde": ""
       }
@@ -620,6 +620,18 @@
         "bullet_svg_mobile": "<svg width=\"67\" height=\"182\" viewbox=\"0 0 67 182\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M1 0.400391C22.8841 29.6496 53.5218 106.799 1 181.4\" stroke=\"black\" stroke-width=\"0.5\"><\/path>\n<path d=\"M40.6667 152.4C40.6667 153.137 41.2636 153.734 42 153.734C42.7364 153.734 43.3333 153.137 43.3333 152.4C43.3333 151.664 42.7364 151.067 42 151.067C41.2636 151.067 40.6667 151.664 40.6667 152.4ZM17 152.65L42 152.65L42 152.15L17 152.15L17 152.65Z\" fill=\"black\"><\/path>\n<path d=\"M63.6667 88.4004C63.6667 89.1368 64.2636 89.7337 65 89.7337C65.7364 89.7337 66.3333 89.1368 66.3333 88.4004C66.3333 87.664 65.7364 87.0671 65 87.0671C64.2636 87.0671 63.6667 87.664 63.6667 88.4004ZM30 88.6504L65 88.6504L65 88.1504L30 88.1504L30 88.6504Z\" fill=\"black\"><\/path>\n<path d=\"M40.6667 24.4004C40.6667 25.1368 41.2636 25.7337 42 25.7337C42.7364 25.7337 43.3333 25.1368 43.3333 24.4004C43.3333 23.664 42.7364 23.0671 42 23.0671C41.2636 23.0671 40.6667 23.664 40.6667 24.4004ZM15 24.6504L42 24.6504L42 24.1504L15 24.1504L15 24.6504Z\" fill=\"black\"><\/path>\n<\/svg>"
       }
     },
+    "hoox_treatment_BTR96Q": {
+      "type": "hoox_treatment",
+      "settings": {
+        "bg-img": "shopify:\/\/shop_images\/Web-Mini-_-HP-_10_1_1.png",
+        "bg-img-mobile": "shopify:\/\/shop_images\/Rectangle_183.png",
+        "title": "Why Subscribe?",
+        "sub-title": "To enjoy exclusive savings and VIP perks, of course!",
+        "text1": "15% off your LED Essentials Bundle + all recurring shipments",
+        "text2": "Free shipping on every subscription order",
+        "text3": "VIP access to new product offerings"
+      }
+    },
     "hoox_reviews_4NtG4P": {
       "type": "hoox-reviews",
       "blocks": {
@@ -629,7 +641,7 @@
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
             "review_title": "LED Essential Bundle",
             "review_description": "Love this bundle. After using my Omnilux face mask, hand mask and neck equipment my skin of firmer with less wrinkles. Love this product and the results delivered by the essential bundle.",
-            "review_icon": "shopify:\/\/shop_images\/Frame_1000002763_7a0d07f7-7a0a-4130-9c74-8defbeaeb8f0.png",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002768.png",
             "review_author": "Louann K.",
             "review_verified_text": "Verified buyer"
           }
@@ -640,7 +652,7 @@
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
             "review_title": "My BFF",
             "review_description": "My skin has never looked better. I see my wrinkles diminishing, my skin tone has evened out, my eyes and the area around my eyes look refreshed, and my pores are much smaller. Omnilux products, including the new Serums and Face Wash, help keep my skin looking its best.",
-            "review_icon": "shopify:\/\/shop_images\/Frame_1000002764_68e4d566-5b51-44d9-957e-9055accfbf2b.png",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002769.png",
             "review_author": "Melissa L.",
             "review_verified_text": "Verified buyer"
           }
@@ -651,7 +663,7 @@
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
             "review_title": "Noticeable Results!",
             "review_description": "I love this bundle!!! The cleanser removes my makeup with drying my skin and the serum is so dreamy!",
-            "review_icon": "shopify:\/\/shop_images\/Frame_1000002764_fdcb4299-cfa8-4f4c-b7c2-1fbec15aa0df.png",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002770.png",
             "review_author": "Stephanie F.",
             "review_verified_text": "Verified buyer"
           }
@@ -662,7 +674,7 @@
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
             "review_title": "Essential Bundle Is A Great Addition!",
             "review_description": "I used the Omnilux several times without the essential bundle and once I added the essential regiment I found the LED mask results were even better. I am thrilled with the results and I have only used it for about a month so far. I look forward to even more improvements as time goes on.",
-            "review_icon": "shopify:\/\/shop_images\/Frame_1000002764_ef41d7db-aca5-43c9-832c-89975b2c3cf1.png",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002771.png",
             "review_author": "Nancy R.",
             "review_verified_text": "Verified buyer"
           }
@@ -673,7 +685,7 @@
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
             "review_title": "Products That Enhance LED Results",
             "review_description": "I love all 3 products. I have also had great results in just a few weeks and suspect these products contributed to the speed in which the LED system is working.",
-            "review_icon": "shopify:\/\/shop_images\/Frame_1000002764_1_4b9a7918-6d63-40c2-acd3-938ad79c24d4.png",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002772.png",
             "review_author": "Shannon F.",
             "review_verified_text": "Verified buyer"
           }
@@ -684,7 +696,7 @@
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
             "review_title": "Moving The Needle",
             "review_description": "I have super sensitive skin. I thought I would have a reaction to the products. My skin loves them!! The products move the needle in calming irritated skin, hydration and toning.",
-            "review_icon": "shopify:\/\/shop_images\/Frame_1000002764_5c6ae172-f7b4-4cbe-97f2-392d81402423.png",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002773.png",
             "review_author": "Kimberly M.",
             "review_verified_text": "Verified buyer"
           }
@@ -695,6 +707,7 @@
             "review_stars": "shopify:\/\/shop_images\/Frame_48097853.svg",
             "review_title": "Holy Grail",
             "review_description": "Love this combination of skincare! I was looking for something like this, researched a few different brands, but ultimately chose this one. I’ve seen amazing result with my contour device, so I knew I could trust this. After just a few weeks my skin is bright, glowy and so soft! My blemishes disappeared and the wrinkles around my eyes aren’t as visible.",
+            "review_icon": "shopify:\/\/shop_images\/Frame_1000002761_8466a727-1aef-4851-a051-e877b0d5edea.png",
             "review_author": "Jessica",
             "review_verified_text": "Verified buyer"
           }
@@ -840,6 +853,7 @@
     "hoox_value_props_n4PaX3",
     "hoox_ugc_video_XVpztQ",
     "hoox_treatment_rightimg_wJVGyh",
+    "hoox_treatment_BTR96Q",
     "hoox_reviews_4NtG4P",
     "hoox_comparison_table_original_6mTYbQ",
     "hoox_sticky_bar_j4CBjw",
