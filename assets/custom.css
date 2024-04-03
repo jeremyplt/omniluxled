@@ -2673,7 +2673,14 @@ button.add-to-cart:hover {
 } */
 
 
-html:not(.test-pricing-clarity-concept--two) .skio-group__shipment {
+/* html:not(.test-pricing-clarity-concept--two) .skio-group__shipment {
+  display: none !important;
+  font-size: 13px;
+  background-color: rgba(241, 241, 241, 1);
+  padding: 8px 15px;
+} */
+
+body:not(.blemish-eraser):not(.eye-brightener):not(.skin-corrector) .skio-group__shipment {
   display: none !important;
   font-size: 13px;
   background-color: rgba(241, 241, 241, 1);
@@ -2688,12 +2695,12 @@ html:not(.test-pricing-clarity-concept--two) .skio-group__shipment {
   font-style: italic;
 }
 
-html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected .skio-group__shipment.concept--one {
+body:not(.blemish-eraser):not(.eye-brightener):not(.skin-corrector) .skio-group-container--selected .skio-group__shipment.concept--one {
   display: block !important;
 }
 
 
-html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected [skio-subscription-price] {
+body:not(.blemish-eraser):not(.eye-brightener):not(.skin-corrector) .skio-group-container--selected [skio-subscription-price] {
   font-weight: bold;
 }
 
@@ -2703,11 +2710,13 @@ html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected [sk
   display: none !important;
 }
 
-.test-pricing-clarity-concept--two .concept--two {
+.skin-corrector .concept--two, .eye-brightener .concept--two, .blemish-eraser .concept--two {
   display: block !important
 }
 
-.test-pricing-clarity-concept--two .skio-group-container--selected [skio-subscription-price] {
+.skin-corrector .skio-group-container--selected [skio-subscription-price], 
+.eye-brightener .skio-group-container--selected [skio-subscription-price], 
+.blemish-eraser .skio-group-container--selected [skio-subscription-price] {
   font-weight: bold;
 }
 
@@ -2728,14 +2737,18 @@ html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected [sk
   text-decoration: line-through;
 }
 
-.test-pricing-clarity-concept--two .skio-group__shipment {
+.skin-corrector .skio-group__shipment, 
+.eye-brightener .skio-group__shipment, 
+.blemish-eraser .skio-group__shipment {
   display: none !important;
   font-size: 13px;
   background-color: rgba(241, 241, 241, 1);
   padding: 8px 15px;
 }
 
-.test-pricing-clarity-concept--two .skio-group-container--selected .skio-group__shipment.concept--two {
+.skin-corrector .skio-group-container--selected .skio-group__shipment.concept--two, 
+.eye-brightener .skio-group-container--selected .skio-group__shipment.concept--two, 
+.blemish-eraser .skio-group-container--selected .skio-group__shipment.concept--two {
   display: block !important;
 }
 
@@ -2762,7 +2775,9 @@ html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected [sk
   height: 18px;
 }
 
-.test-pricing-clarity-concept--two .skio-group__next-shipment {
+.skin-corrector .skio-group__next-shipment, 
+.eye-brightener .skio-group__next-shipment, 
+.blemish-eraser .skio-group__next-shipment {
   padding: .3rem;
   border: solid 1px black;
   gap: 10px;
@@ -2772,7 +2787,9 @@ html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected [sk
   margin-left: 1.8rem;
 }
 
-.test-pricing-clarity-concept--two .skio-group-container--selected .skio-group__next-shipment {
+.skin-corrector .skio-group-container--selected .skio-group__next-shipment, 
+.eye-brightener .skio-group-container--selected .skio-group__next-shipment, 
+.blemish-eraser .skio-group-container--selected .skio-group__next-shipment {
   display: flex !important;
 }
 
@@ -2795,7 +2812,9 @@ html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected [sk
   font-weight: normal !important;
 }
 
-.test-pricing-clarity-concept--two .skio-price__per-delivery {
+.skin-corrector .skio-price__per-delivery, 
+.eye-brightener .skio-price__per-delivery, 
+.blemish-eraser .skio-price__per-delivery {
   display: none !important;
 }
 
@@ -2814,21 +2833,32 @@ html:not(.test-pricing-clarity-concept--two) .skio-group-container--selected [sk
     font-size: 13px !important;
   }
 
-  .test-pricing-clarity-concept--two .skio-group__next-shipment, .test-pricing-clarity-concept--two .skio-group-content {
+  .skin-corrector .skio-group__next-shipment, 
+  .eye-brightener .skio-group__next-shipment, 
+  .blemish-eraser .skio-group__next-shipment,
+  .skin-corrector .skio-group-content, 
+  .eye-brightener .skio-group-content, 
+  .blemish-eraser .skio-group-content {
     margin-left: 0;
   }
 
-  .test-pricing-clarity-concept--two .skio-group-container--subscription .skio-price {
+  .skin-corrector .skio-group-container--subscription .skio-price, 
+  .eye-brightener .skio-group-container--subscription .skio-price, 
+  .blemish-eraser .skio-group-container--subscription .skio-price {
     margin-left: 30px !important;
     justify-content: space-between;
     display: flex;
   }
 
-  .test-pricing-clarity-concept--two .skio-price__per-delivery {
+  .skin-corrector .skio-price__per-delivery, 
+  .eye-brightener .skio-price__per-delivery, 
+  .blemish-eraser .skio-price__per-delivery  {
     text-align: right;
   }
 
-  .test-pricing-clarity-concept--two .skio-group-container--subscription .skio-price__inner {
+  .skin-corrector .skio-group-container--subscription .skio-price__inner, 
+  .eye-brightener .skio-group-container--subscription .skio-price__inner, 
+  .blemish-eraser .skio-group-container--subscription .skio-price__inner{
     justify-content: flex-start;
   }
 }
