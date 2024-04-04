@@ -2898,3 +2898,12 @@ span.firstPrice {
     display: block;
     min-width: 124px;
 }
+
+.item-price {
+  display: flex !important;
+  align-items: flex-end;
+}
+
+.cart-total-price .firstPriceLabel {
+  font-size: 14px;
+}

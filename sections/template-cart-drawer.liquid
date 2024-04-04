@@ -318,13 +318,13 @@
                                     {% if item.properties['promo_product'] or item.line_price == 0 %}
                                       <span class="m-0 p-0">{{ 'templates.cart.free' | t }}</span>
                                     {% else %}
-                                      <span class="item-price m-0 p-0">
+                                      <div class="item-price price m-0 p-0" data-currentPrice data-variant-price="{{ item.line_price }}">
                                         {% if item.properties['free_gift'] == 'true' %}
                                           Free
                                         {% else %}
-                                          {{ item.line_price | money }}
+                                          <span>{{ item.line_price | money }}</span>
                                         {% endif %}
-                                      </span>
+                                      </div>
                                     {% endif %}
                                   </span>
                                 </div>

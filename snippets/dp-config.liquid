@@ -9,8 +9,8 @@
         jQuery = arguments[0];
         aObject = arguments[1];
         pathToPrice = null;
-        dp_catalog_price_path = '.card-body .price';
-        catalogPricePath = '.card-body .price';
+        dp_catalog_price_path = '.price';
+        catalogPricePath = '.price';
         if (dp_catalog_price_path.length > 0) {
             catalogPricePath = dp_catalog_price_path;
         }
@@ -33,63 +33,7 @@
         }
         return pathToPrice;
     }
-    // function renderProductDetailOverride(arguments) {
-    //     jQuery = arguments[0];
-    //     productDetailPriceParentFound = false;
-    //     if (arguments[1].length > 0 && jQuery(arguments[1]).length > 0) {
-    //         detailPricePath = arguments[1];
-    //         productDetailPriceParentFound = true;
-    //     } else {
-    //         if (jQuery('[itemprop=price]').length > 0) {
-    //             detailPricePath = '[itemprop=price]';
-    //             productDetailPriceParentFound = true;
-    //         } else {
-    //             jQuery.each(dpProductDetailPriceParents, function(index, productDetailPriceParent) {
-    //                 if (jQuery(productDetailPriceParent + ' .dualPrice:not(.dp_catalog)').length > 0 && !productDetailPriceParentFound) {
-    //                     detailPricePath = (productDetailPriceParent + ' .dualPrice:not(.dp_catalog)');
-    //                     productDetailPriceParentFound = true;
-    //                 }
-    //             })
-    //         }
-    //     }
-    //     if (!productDetailPriceParentFound) {
-    //         detailPricePath = '.dualPrice:not(.dp_catalog)';
-    //     }
-
-    //   // console.log('cau');
-
-    //     detailPricePath = '.product-details-wrapper .price-wrapper';
-    //     productDPVariantsJson = JSON.parse(productDPVariants);
-    //     selectedProductDPPriceJson = JSON.parse(selectedProductDPPrice);
-    //     callFunctionDP('showDualPrice', [jQuery, selectedProductDPPriceJson, selectedProductDPCompareAtPrice, jQuery(detailPricePath), 'dp_detail', dp_money_format, callFunctionDP('showDualPriceForCurrentVariant', [jQuery, selectedProductDPVariantID], true)], true);
-    //     jQuery(document).on('change select click', ':input', function() {
-    //         clearInterval(dpVariantChangeInterval);
-    //         variantChangeIntervalCounter = 0;
-    //         dpVariantChangeInterval = setInterval(function () {
-    //             if (variantChangeIntervalCounter < 25) {
-    //                 variantFromUrl = getURLParameter('variant');
-    //                 variantFromForm = jQuery('input[name^=id]:checked, select[name^=id] option:selected, input[name=id], hidden[name^=id]', jQuery('form[action="/cart/add"]')).val();
-    //                 if (variantFromUrl != null) {
-    //                     jQuery.each(productDPVariantsJson, function (index, value) {
-    //                         if (parseInt(value.id) == parseInt(variantFromUrl)) {
-    //                             callFunctionDP('showDualPrice', [jQuery, value.price, callFunctionDP('getCompareAtPriceForCurrentVariant', [jQuery, variantFromUrl], true), jQuery(detailPricePath), 'dp_detail', dp_money_format, callFunctionDP('showDualPriceForCurrentVariant', [jQuery, variantFromUrl], true)]);
-    //                         }
-    //                     });
-    //                 } else if (variantFromForm != null) {
-    //                     jQuery.each(productDPVariantsJson, function (index, value) {
-    //                         if (parseInt(value.id) == parseInt(variantFromForm)) {
-    //                             callFunctionDP('showDualPrice', [jQuery, value.price, callFunctionDP('getCompareAtPriceForCurrentVariant', [jQuery, variantFromForm], true), jQuery(detailPricePath), 'dp_detail', dp_money_format, callFunctionDP('showDualPriceForCurrentVariant', [jQuery, variantFromForm], true)]);
-    //                         }
-    //                     });
-    //                 }
-    //                 variantChangeIntervalCounter++;
-    //             } else {
-    //                 clearInterval(dpVariantChangeInterval);
-    //             }
-    //         }, 200);
-    //     });
-    //     jQuery('.dualPrice').show();
-    // }
+    
     function renderProductDetailOverride(arguments) {
 
         jQuery = arguments[0];
@@ -148,87 +92,6 @@
         });
         jQuery('.dualPrice').show();
     }
-    // function showDualPriceOverride(arguments) {
-    //     jQuery = arguments[0];
-    //     price = arguments[1];
-    //     compareAtPrice = arguments[2];
-    //     pathToPrice = arguments[3];
-    //     type = arguments[4];
-    //     dpMoneyFormat = "{{ shop.money_format }}";
-    //     productVariantIsTaxable = arguments[6];
-    //     if (parseInt(dp_dual_price_for_taxable_products) == 1 && !productVariantIsTaxable) {
-    //         jQuery(pathToPrice).addClass('nonTaxableVariant');
-    //         if (type == 'dp_detail' && (jQuery('.dp_detail .firstPrice').length > 0 || jQuery('.dp_detail .secondPrice').length > 0)) {
-    //             jQuery('.dp_detail').hide();
-    //         }
-    //         return true;
-    //     }
-    //     taxPercent = parseFloat(dp_tax_percent);
-    //     if (parseInt(dp_base_price_type) == 0) {
-    //         firstPrice = Shopify.formatMoney(price, dpMoneyFormat);
-    //         secondPrice = firstPrice;
-    //         if (!isNaN(taxPercent) && taxPercent > 0) {
-    //             secondPriceNotFormated =  (price / (1 + taxPercent / 100));
-    //             secondPrice = Shopify.formatMoney(secondPriceNotFormated, dpMoneyFormat);
-    //         }
-    //     } else {
-    //         secondPrice = Shopify.formatMoney(price, dpMoneyFormat);
-    //         firstPrice = secondPrice;
-    //         if (!isNaN(taxPercent) && taxPercent > 0) {
-    //             firstPriceNotFormated = (price * (1 + taxPercent / 100));
-    //             firstPrice = Shopify.formatMoney(firstPriceNotFormated, dpMoneyFormat);
-    //         }
-    //     }
-    //     compareAtPriceBlock = '';
-    //     firstPriceBlock = '';
-    //     secondPriceBlock = '';
-    //     if (parseInt(dp_show_compare_at_price) == 1 && parseInt(compareAtPrice) > 0 && parseInt(compareAtPrice) != parseInt(price)) {
-    //         compareAtPriceBlock = '<span class="dpCompareAtPrice" style="text-decoration: line-through;"><span>' + Shopify.formatMoney(compareAtPrice, dpMoneyFormat) + '</span></span>' + '<br/>';
-    //     }
-    //     if (parseInt(dp_price_type_to_show) != 2) {
-    //         firstPriceBlock = '<span class="firstPrice" style="color:' + dp_tax_incl_color + '"><span class="firstPriceValue">' + firstPrice + '</span> <span class="firstPriceLabel">' + (dp_tax_incl_label != null ? dp_tax_incl_label : '') + '</span></span>';
-    //     }
-    //     if (parseInt(dp_price_type_to_show) != 1) {
-    //         secondPriceBlock = '<span class="secondPrice" style="color:' + dp_tax_excl_color + '"><span class="secondPriceValue">' + secondPrice + '</span> <span class="secondPriceLabel">' + (dp_tax_excl_label != null ? dp_tax_excl_label : '') + '</span></span>';
-    //     }
-    //     dualPriceBlock = (compareAtPriceBlock + firstPriceBlock + '<br/>' + secondPriceBlock);
-    //     if (parseInt(dp_first_price) == 1) {
-    //         dualPriceBlock = (compareAtPriceBlock + secondPriceBlock + '<br/>' + firstPriceBlock);
-    //     }
-    
-    //     sizeRatio = 1;
-    //     if (parseInt(dp_size_ratio) == 1) {
-    //         sizeRatio = 1.5;
-    //     } else if (parseInt(dp_size_ratio) == 2) {
-    //         sizeRatio = 1.666;
-    //     } else if (parseInt(dp_size_ratio) == 3) {
-    //         sizeRatio = 1.75;
-    //     }
-    
-    //     priceIsFound = false;
-    //     pathToPrice.each(function() {
-    //         jQuery(this).show();
-    //         if (!jQuery(this).is(":hidden") && jQuery(this).is(":visible") && !priceIsFound)  {
-    //             priceIsFound = true;
-    //             callFunctionDP('appendDualPrice', [jQuery, this, type, dualPriceBlock, sizeRatio], false);
-    //         }
-    //     });
-    
-    //     if (type != 'dp_detail') {
-    //         isfirst = true;
-    //         pathToPrice.each(function () {
-    //             if (isfirst && !priceIsFound) {
-    //                 callFunctionDP('appendDualPrice', [jQuery, this, type, dualPriceBlock, sizeRatio], false);
-    //             } else {
-    //                 if (jQuery(this).html() == firstPrice || jQuery(this).html() == secondPrice) {
-    //                     jQuery(this).remove();
-    //                 }
-    //                 jQuery(this).show();
-    //             }
-    //             isfirst = false;
-    //         });
-    //     }
-    // }
 
     function showDualPriceOverride(arguments) {
 
@@ -241,7 +104,6 @@
         price = arguments[4];
      
         compareAtPrice = arguments[5];
-      console.log("Here is compare at price"+compareAtPrice);
         pathToPrice = arguments[6];
         type = arguments[7];
         dpMoneyFormat = "{{ shop.money_format }}";
@@ -271,13 +133,6 @@
       
         if (parseInt(dp_base_price_type) == 0) {
           console.log("here not coming in tax");
-            // firstPrice = Shopify.formatMoney(price, dpMoneyFormat);
-            // secondPrice = firstPrice;
-         
-            // if (!isNaN(taxPercent) && taxPercent > 0) {
-            //     secondPriceNotFormated = Math.round(price + price * taxPercent / 100);
-            //     secondPrice = Shopify.formatMoney(secondPriceNotFormated, dpMoneyFormat);
-            // }
           secondPrice = Shopify.formatMoney(price, dpMoneyFormat);
           
             firstPrice = secondPrice;
@@ -286,17 +141,6 @@
                 firstPrice = Shopify.formatMoney(firstPriceNotFormated, dpMoneyFormat);
             }
         } 
-// else {
-
-// console.log("here coming in tax");
-//             secondPrice = Shopify.formatMoney(price, dpMoneyFormat);
-          
-//             firstPrice = secondPrice;
-//             if (!isNaN(taxPercent) && taxPercent > 0) {
-//                 firstPriceNotFormated = Math.round(price + price * taxPercent / 100);
-//                 firstPrice = Shopify.formatMoney(firstPriceNotFormated, dpMoneyFormat);
-//             }
-//         }
    
         compareAtPriceBlock = '';
         firstPriceBlock = '';
