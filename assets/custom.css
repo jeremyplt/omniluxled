@@ -2894,3 +2894,7 @@ body:not(.blemish-eraser):not(.eye-brightener):not(.skin-corrector) .skio-group-
 .template-collection .position-relative.d-flex.price-with-btn .col-12.btn-card-hide.trn.fw-normal{
     width: min-content !important;
 }
+span.firstPrice {
+    display: block;
+    min-width: 124px;
+}

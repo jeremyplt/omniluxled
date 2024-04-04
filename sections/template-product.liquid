@@ -342,7 +342,9 @@
                       <div class="trustedbypdp">|&nbsp;&nbsp;Trusted by 275K+ Customers</div>
                     {% endif %}
                   {% endfor %}
-                  <div class="price-wrapper mt-2 d-flex align-items-center flex-wrap">
+                  <div class="priceshow" style="display:none">{{ current_variant.price }} - {{ product.compare_at_price }}</div>
+                  <div class="price-wrapper mt-2 d-flex align-items-center flex-wrap test99">
+                    
                     {%- if current_variant.compare_at_price > current_variant.price -%}
                       <s
                         class="text-gray-600 me-2 money"

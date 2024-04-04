@@ -623,13 +623,24 @@
     "hoox_treatment_BTR96Q": {
       "type": "hoox_treatment",
       "settings": {
-        "bg-img": "shopify:\/\/shop_images\/Web-Mini-_-HP-_10_1_1.png",
-        "bg-img-mobile": "shopify:\/\/shop_images\/Rectangle_183.png",
+        "bg-img": "shopify:\/\/shop_images\/Rectangle_183_2_1.png",
         "title": "Why Subscribe?",
         "sub-title": "To enjoy exclusive savings and VIP perks, of course!",
         "text1": "15% off your LED Essentials Bundle + all recurring shipments",
+        "left1": "82%",
+        "top1": "0%",
+        "mobile-left1": "63%",
+        "mobile-top1": "-4%",
         "text2": "Free shipping on every subscription order",
-        "text3": "VIP access to new product offerings"
+        "left2": "98%",
+        "top2": "38%",
+        "mobile-left2": "97%",
+        "mobile-top2": "36%",
+        "text3": "VIP access to new product offerings",
+        "left3": "79%",
+        "bottom1": "3%",
+        "mobile-left3": "62%",
+        "mobile-bottom1": "3%"
       }
     },
     "hoox_reviews_4NtG4P": {

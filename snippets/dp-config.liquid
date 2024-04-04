@@ -5,7 +5,7 @@
 </style>
 <script type="text/javascript">
     function getPricePathOverride(arguments) {
-      console.log("here1>>>>>>>>>>>>>>");
+
         jQuery = arguments[0];
         aObject = arguments[1];
         pathToPrice = null;
@@ -91,7 +91,7 @@
     //     jQuery('.dualPrice').show();
     // }
     function renderProductDetailOverride(arguments) {
-      console.log("here2>>>>>>>>>>>>>>");
+
         jQuery = arguments[0];
         productDetailPriceParentFound = false;
         if (arguments[1].length > 0 && jQuery(arguments[1]).length > 0) {
@@ -116,7 +116,9 @@
 
         detailPricePath = '.product-details-wrapper .price-wrapper';
         productDPVariantsJson = JSON.parse(productDPVariants);
+     
         selectedProductDPPriceJson = JSON.parse(selectedProductDPPrice);
+       console.log(selectedProductDPPriceJson);
         callFunctionDP('showDualPrice', [jQuery, productDPID, productDPTags, productDPVendor, selectedProductDPPriceJson, selectedProductDPCompareAtPrice, jQuery(detailPricePath), 'dp_detail', dp_money_format, callFunctionDP('showDualPriceForCurrentVariant', [jQuery, selectedProductDPVariantID], true)], true);
         jQuery(document).on('change select click', ':input', function() {
             clearInterval(dpVariantChangeInterval);
@@ -230,7 +232,7 @@
 
     function showDualPriceOverride(arguments) {
 
-      console.log("here3>>>>>>>>>>>>>>");
+      
         jQuery = arguments[0];
         productID = arguments[1];
      
@@ -239,6 +241,7 @@
         price = arguments[4];
      
         compareAtPrice = arguments[5];
+      console.log("Here is compare at price"+compareAtPrice);
         pathToPrice = arguments[6];
         type = arguments[7];
         dpMoneyFormat = "{{ shop.money_format }}";
@@ -263,25 +266,38 @@
         taxPercent = parseFloat(dpTaxPercent);        
         window.globalVariables.taxPercent = taxPercent;
         localStorage.setItem("taxPercent", taxPercent);
-
+        console.log(taxPercent);
+      console.log(dp_base_price_type);
+      
         if (parseInt(dp_base_price_type) == 0) {
-            firstPrice = Shopify.formatMoney(price, dpMoneyFormat);
-            secondPrice = firstPrice;
+          console.log("here not coming in tax");
+            // firstPrice = Shopify.formatMoney(price, dpMoneyFormat);
+            // secondPrice = firstPrice;
          
-            if (!isNaN(taxPercent) && taxPercent > 0) {
-                secondPriceNotFormated = Math.round(price + price * taxPercent / 100);
-                secondPrice = Shopify.formatMoney(secondPriceNotFormated, dpMoneyFormat);
-            }
-        } else {
-            secondPrice = Shopify.formatMoney(price, dpMoneyFormat);
+            // if (!isNaN(taxPercent) && taxPercent > 0) {
+            //     secondPriceNotFormated = Math.round(price + price * taxPercent / 100);
+            //     secondPrice = Shopify.formatMoney(secondPriceNotFormated, dpMoneyFormat);
+            // }
+          secondPrice = Shopify.formatMoney(price, dpMoneyFormat);
           
             firstPrice = secondPrice;
             if (!isNaN(taxPercent) && taxPercent > 0) {
                 firstPriceNotFormated = Math.round(price + price * taxPercent / 100);
                 firstPrice = Shopify.formatMoney(firstPriceNotFormated, dpMoneyFormat);
             }
-        }
-        
+        } 
+// else {
+
+// console.log("here coming in tax");
+//             secondPrice = Shopify.formatMoney(price, dpMoneyFormat);
+          
+//             firstPrice = secondPrice;
+//             if (!isNaN(taxPercent) && taxPercent > 0) {
+//                 firstPriceNotFormated = Math.round(price + price * taxPercent / 100);
+//                 firstPrice = Shopify.formatMoney(firstPriceNotFormated, dpMoneyFormat);
+//             }
+//         }
+   
         compareAtPriceBlock = '';
         firstPriceBlock = '';
         secondPriceBlock = '';

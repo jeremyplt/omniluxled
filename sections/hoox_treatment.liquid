@@ -1,5 +1,4 @@
 <style>
-
   .inter-font {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -8,7 +7,7 @@
     font-variation-settings:
       "slnt" 0;
   }
-  .treatment-box{position: relative;padding: 0px;min-height: 1px;display: flex;}
+  .treatment-box{position: relative;padding: 0px;min-height: 1px;display: flex;background: radial-gradient(circle, rgba(250, 243, 227, 1) 0%, rgba(167, 119, 62, 1) 69%);max-height: 775px;}
   .treatment-box:before{content: '';padding-bottom: calc(100% / 2.23544);display: block;}
   .treatment-wrap {
     max-width: 1240px;
@@ -17,36 +16,27 @@
   }
   .treatment__wrapper {
     position: relative;
-    max-width: 75%;
-    margin-top: -20px;
+    display: flex;
+    align-items: flex-start;
   }
   .treatment__media {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
+    max-width: 21.528vw;
   }
-  .treatment__header {position: relative;max-width: 628px;margin: 0 auto 66px;}
+  .treatment__header {position: relative;max-width: 628px;margin: 0 auto;padding-bottom: 20px;}
   .treatment__header h2 {font-size: 40px;line-height: normal;margin: 0;margin-bottom: 16px;text-align: center;font-family: "Inter", sans-serif;font-weight: 500;}
   .treatment__header p {
     text-align: center;
     margin: 0;
     font-family: "Inter", sans-serif;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
   }
-  .hoox-treatment__svg-desktop {
+  .hoox-treatment__svg-desktop,.hoox-treatment__svg-mobile {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-  }
-  .hoox-treatment__svg-mobile {
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translate(-20px);
+    margin-top: 55px;
   }
   .hoox-treatment__bullets {
     max-width: 950px;
@@ -60,43 +50,43 @@
     border: 1px solid #000;
     border-radius: 100px;
     padding: 0;
-    min-width: 260px;
+    max-width: 260px;
     background-color: #FFFFFF4D;
+    width: 100%;
+    position: absolute;
+    min-width: 260px;
   }
   .hoox-treatment__bullet-text {
     font-size: 20px;
     line-height: normal;
     text-align: center;
-    padding: 7px 0;
+    padding: 7px;
     font-family: "Inter", sans-serif;
     font-weight: 300;
     color:#000;
   }
   .hoox-treatment__bullet.hoox-treatment__bullet-1 {
-    top: 0%;
-    left: 89%;
+    top: {{section.settings.top1}};
+    left: {{section.settings.left1}};
   }
   .hoox-treatment__bullet.hoox-treatment__bullet-2 {
-    top: 35%;
-    left: 94%;
-    transform: translateX(-2px);
+    top: {{section.settings.top2}};
+    left: {{section.settings.left2}};
   }
   .hoox-treatment__bullet.hoox-treatment__bullet-3 {
-    bottom: 0%;
-    left: 89%;
-    transform: translateX(-3px);
+    bottom: {{section.settings.bottom1}};
+    left: {{section.settings.left3}};
   }
   .hoox-treatment__bullet-text span {
     font-size: 36px;
     font-weight:400;
   }
   .treatment__media img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    max-width: 100%;
   }
   .hoox-treatment__svg-desktop svg{
     height: 298px;
+    width:auto;
   }
   .mobile-img{display:none;}
   span.cost {
@@ -113,17 +103,10 @@
   @media(min-width:769px){
     .hoox-treatment__svg-mobile{display:none;}
     .cost{display:none;}
-    @media(max-width:1024px){
-      body .treatment-box:before {padding-bottom: calc(80%);}
-      .treatment__wrapper{margin-top: 11.72vw;}
-    }
   }
 
-  
-
   @media(min-width:1200px){
-    .treatment__header h2{font-size: 1.55vw;margin-bottom: 0.926vw;}
-    .treatment__header p {font-size: 0.810vw;}
+    .treatment__header h2{font-size: 2.32vw;margin-bottom: 0.926vw;}
     .treatment-wrap{padding: 2.72vw 20px;}
   }
 
@@ -140,110 +123,78 @@
     .hoox-treatment__bullet-text span{
       font-size: 26px;
     }
-    .hoox-treatment__bullet.hoox-treatment__bullet-1{
-      top: 1%;
-      left: 88%;
-      transform: translateX(-2px);
-    }
-    .hoox-treatment__bullet.hoox-treatment__bullet-2{
-      left: 92%;
-      transform: translateX(-4px);
-    }
-    .hoox-treatment__bullet.hoox-treatment__bullet-3{
-      left: 88%;
-      transform: translateX(-5px);
-    }
   }
   
   @media(max-width:1199px){
     .treatment__header h2{font-size: 32px;}
-    .hoox-treatment__bullet.hoox-treatment__bullet-1{top: -1%;left: 87%;transform: translateX(-4px);}
-    .hoox-treatment__bullet.hoox-treatment__bullet-2{left: 91%;transform: translateX(-9px);top: 34%;}
-    .hoox-treatment__bullet.hoox-treatment__bullet-3{left: 87%;transform: translateX(-7px);bottom: -1%;}
     .hoox-treatment__bullet{min-width: 200px;}
     .hoox-treatment__bullet-text{font-size: 14px;}
     .hoox-treatment__bullet-text span{font-size: 22px;}
     .hoox-treatment__svg-desktop svg{height: 200px;}
-    @media(min-width:769px){
-      .treatment-box:before{padding-bottom: calc(100% / 1.7);}
-    }
   }
 
   @media(max-width:768px){
-    .treatment__wrapper{max-width: 60%;}
-  }
-
-  @media(max-width:768px){
-    .treatment-box:before{padding-bottom: calc(100% / 2.23544);}
     .hoox-treatment__svg-desktop{display:none;}
     .desktop-img{display:none;}
     .mobile-img{display:block;}
     .treatment__header h2{font-size: 22px;}
-    .hoox-treatment__svg-mobile{left: 50%;transform: translate(15%, 30%);position: relative;display: flex;align-items: center;}
+    .hoox-treatment__svg-mobile{margin-top: 15px;}
     .hoox-treatment__bullet-text{font-size: 12px;padding: 8px 10px;}
     .hoox-treatment__bullet-text span{font-size: 16px;}
-    .hoox-treatment__bullet{min-width: 150px;background-color: transparent;}
+    .hoox-treatment__bullet{background-color: transparent;}
     .treatment-box{min-height: 484px;}
-    .treatment__header{margin: 0 auto;}
+    .treatment__header{margin: 0 auto;padding-bottom: 10px;}
     .treatment-wrap{padding: 47px 16px 47px;}
-    .treatment__wrapper{margin-top: 10px;}
-    .hoox-treatment__bullet.hoox-treatment__bullet-2{transform: translateX(10px);}
-    .hoox-treatment__bullet.hoox-treatment__bullet-3{transform: translateX(-5px);bottom: 3%;}
+    .treatment__wrapper{margin-top: 10px;align-items: center;}
+    .hoox-treatment__bullet.hoox-treatment__bullet-1 {
+      top: {{section.settings.mobile-top1}};
+      left: {{section.settings.mobile-left1}};
+    }
+    .hoox-treatment__bullet.hoox-treatment__bullet-2 {
+      top: {{section.settings.mobile-top2}};
+      left: {{section.settings.mobile-left2}};
+    }
+    .hoox-treatment__bullet.hoox-treatment__bullet-3 {
+      bottom: {{section.settings.mobile-bottom1}};
+      left: {{section.settings.mobile-left3}};
+    }
     .treatment__header p{font-size: 16px;line-height: normal;}
-    .hoox-treatment__bullet.hoox-treatment__bullet-1{left: 77%;top: 29%;transform: translateX(-3px);}
-    .hoox-treatment__bullet.hoox-treatment__bullet-2{transform: translateX(-3px);top: 64%;left: 83%;}
-    .hoox-treatment__bullet.hoox-treatment__bullet-3{transform: translateX(-22px);bottom: -28%;left: 82%;}
+    .treatment__media {max-width: 35%;}
+    .treatment-box{background: radial-gradient(at left 50%, rgba(250, 243, 227, 1) 0%, rgba(167, 119, 62, 1) 69%);}
   }
 
   @media(max-width:640px){
-    .hoox-treatment__svg-mobile svg {height: 250px;}
-    .hoox-treatment__svg-mobile{transform: translate(50px);}
-    .hoox-treatment__svg-mobile svg{height: 250px;}
-    .hoox-treatment__bullet.hoox-treatment__bullet-1{left: 77%;top: 13%;transform: translateX(-5px);}
-    .hoox-treatment__bullet.hoox-treatment__bullet-2{transform: translateX(-4px);top: 39%;left: 83%;}
-    .hoox-treatment__bullet.hoox-treatment__bullet-3{transform: translateX(-23px);bottom: 15%;}
+    .hoox-treatment__svg-mobile svg {height: 200px;width:auto;}
   }
   
   @media(max-width:575px){
-    .hoox-treatment__svg-mobile{transform: translate(45px);}
-    .hoox-treatment__svg-mobile svg{height: 200px;}
-    .hoox-treatment__bullet.hoox-treatment__bullet-1{left: 78%;top: 3%;transform: translate(-3px);}
-    .hoox-treatment__bullet.hoox-treatment__bullet-2{transform: translateX(4px);top: 35%;}
-    .hoox-treatment__bullet.hoox-treatment__bullet-3{transform: translateX(-16px);bottom: 7%;}
+    .treatment-box{background: radial-gradient(at left 50%, rgba(250, 243, 227, 1) 0%, rgba(167, 119, 62, 1) 59%);}
   }
 
-  @media(max-width:480px){
-    .hoox-treatment__svg-mobile{transform: translate(30px);}
-    .hoox-treatment__bullet.hoox-treatment__bullet-1{left: 78%;}
-    .hoox-treatment__bullet.hoox-treatment__bullet-2{transform: translateX(8px);}
-    .hoox-treatment__bullet.hoox-treatment__bullet-3{transform: translateX(-13px);}
-    .treatment__wrapper{margin-top: 20px;}
+  @media(max-width:390px){
+    .hoox-treatment__bullet{min-width: 45vw;}
+    .treatment__media {max-width: 30%;}
   }
 
   @media(max-width:375px){
-    .hoox-treatment__svg-mobile{left: 50%;transform: translate(15px);position: relative;display: flex;align-items: center;}
-    .hoox-treatment__bullet.hoox-treatment__bullet-1{left: 80%;}
-    .hoox-treatment__bullet.hoox-treatment__bullet-2{transform: translateX(13px);}
-    .hoox-treatment__bullet.hoox-treatment__bullet-3{transform: translateX(-8px);}
-    .treatment__wrapper{margin-top: 10px;}
+    .hoox-treatment__svg-mobile{margin-top: 10px;}
+    .hoox-treatment__svg-mobile svg{height: 180px;}
+  }
+
+  @media(max-width:374px){
+    .hoox-treatment__bullet-text{font-size: 10px;padding: 5px;}
   }
 </style>
 
-
 <div class="treatment-wrap">
-  <div class="treatment__media">
-    <img src="{{ section.settings.bg-img | image_url }}" class="desktop-img">
-    {% if section.settings.bg-img-mobile != blank %}
-    <img src="{{ section.settings.bg-img-mobile | image_url }}" class="mobile-img">
-    {% else %}
-    <img src="{{ section.settings.bg-img | image_url }}" class="mobile-img">
-    {% endif %}
-  </div>
   <div class="treatment__header">
     <h2>{{ section.settings.title }}</h2>
     <p>{{ section.settings.sub-title }}</p>
   </div>
   <div class="treatment__wrapper">
+    <div class="treatment__media">
+      <img src="{{ section.settings.bg-img | image_url }}">
+    </div>
     <div class="hoox-treatment__svg-desktop">
       <svg width="185" height="431" viewBox="0 0 185 431" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 0.399902C62.1245 69.8871 147.699 253.169 1 430.4" stroke="black"></path>
@@ -251,16 +202,7 @@
         <path d="M149.333 63.3999C149.333 64.8727 150.527 66.0666 152 66.0666C153.473 66.0666 154.667 64.8727 154.667 63.3999C154.667 61.9272 153.473 60.7332 152 60.7332C150.527 60.7332 149.333 61.9272 149.333 63.3999ZM43 63.8999L152 63.8999L152 62.8999L43 62.8999L43 63.8999Z" fill="black"></path>
         <path d="M179.333 214.4C179.333 215.873 180.527 217.067 182 217.067C183.473 217.067 184.667 215.873 184.667 214.4C184.667 212.927 183.473 211.733 182 211.733C180.527 211.733 179.333 212.927 179.333 214.4ZM82 214.9L182 214.9L182 213.9L82 213.9L82 214.9Z" fill="black"></path>
       </svg>
-    </div>
-    <div class="hoox-treatment__svg-mobile">
-      <svg width="67" height="182" viewBox="0 0 67 182" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 0.400391C22.8841 29.6496 53.5218 106.799 1 181.4" stroke="black" stroke-width="0.5"></path>
-        <path d="M40.6667 152.4C40.6667 153.137 41.2636 153.734 42 153.734C42.7364 153.734 43.3333 153.137 43.3333 152.4C43.3333 151.664 42.7364 151.067 42 151.067C41.2636 151.067 40.6667 151.664 40.6667 152.4ZM17 152.65L42 152.65L42 152.15L17 152.15L17 152.65Z" fill="black"></path>
-        <path d="M63.6667 88.4004C63.6667 89.1368 64.2636 89.7337 65 89.7337C65.7364 89.7337 66.3333 89.1368 66.3333 88.4004C66.3333 87.664 65.7364 87.0671 65 87.0671C64.2636 87.0671 63.6667 87.664 63.6667 88.4004ZM30 88.6504L65 88.6504L65 88.1504L30 88.1504L30 88.6504Z" fill="black"></path>
-        <path d="M40.6667 24.4004C40.6667 25.1368 41.2636 25.7337 42 25.7337C42.7364 25.7337 43.3333 25.1368 43.3333 24.4004C43.3333 23.664 42.7364 23.0671 42 23.0671C41.2636 23.0671 40.6667 23.664 40.6667 24.4004ZM15 24.6504L42 24.6504L42 24.1504L15 24.1504L15 24.6504Z" fill="black"></path>
-      </svg>
-    </div>
-    <div class="hoox-treatment__bullets">
+      <div class="hoox-treatment__bullets">
         <div class="hoox-treatment__bullet hoox-treatment__bullet-1">
           <div class="hoox-treatment__bullet-text">
             {{ section.settings.text1 }}
@@ -277,6 +219,33 @@
           </div>
         </div>
     </div>
+    </div>
+    <div class="hoox-treatment__svg-mobile">
+      <svg width="67" height="182" viewBox="0 0 67 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 0.400391C22.8841 29.6496 53.5218 106.799 1 181.4" stroke="black" stroke-width="0.5"></path>
+        <path d="M40.6667 152.4C40.6667 153.137 41.2636 153.734 42 153.734C42.7364 153.734 43.3333 153.137 43.3333 152.4C43.3333 151.664 42.7364 151.067 42 151.067C41.2636 151.067 40.6667 151.664 40.6667 152.4ZM17 152.65L42 152.65L42 152.15L17 152.15L17 152.65Z" fill="black"></path>
+        <path d="M63.6667 88.4004C63.6667 89.1368 64.2636 89.7337 65 89.7337C65.7364 89.7337 66.3333 89.1368 66.3333 88.4004C66.3333 87.664 65.7364 87.0671 65 87.0671C64.2636 87.0671 63.6667 87.664 63.6667 88.4004ZM30 88.6504L65 88.6504L65 88.1504L30 88.1504L30 88.6504Z" fill="black"></path>
+        <path d="M40.6667 24.4004C40.6667 25.1368 41.2636 25.7337 42 25.7337C42.7364 25.7337 43.3333 25.1368 43.3333 24.4004C43.3333 23.664 42.7364 23.0671 42 23.0671C41.2636 23.0671 40.6667 23.664 40.6667 24.4004ZM15 24.6504L42 24.6504L42 24.1504L15 24.1504L15 24.6504Z" fill="black"></path>
+      </svg>
+      <div class="hoox-treatment__bullets">
+        <div class="hoox-treatment__bullet hoox-treatment__bullet-1">
+          <div class="hoox-treatment__bullet-text">
+            {{ section.settings.text1 }}
+          </div>
+        </div>
+        <div class="hoox-treatment__bullet hoox-treatment__bullet-2">
+          <div class="hoox-treatment__bullet-text">
+            {{ section.settings.text2 }}
+          </div>
+        </div>
+        <div class="hoox-treatment__bullet hoox-treatment__bullet-3">
+          <div class="hoox-treatment__bullet-text">
+            {{ section.settings.text3 }}
+          </div>
+        </div>
+    </div>
+    </div>
+    
   </div>
   <span class="cost">*Yearly cost in $USD</span>
 </div>
@@ -286,15 +255,10 @@
     "name": "treatment",
     "class": "treatment-box",
     "settings": [
-      {
+     {
         "type": "image_picker",
         "id": "bg-img",
         "label": "Background Image"
-      },
-      {
-        "type": "image_picker",
-        "id": "bg-img-mobile",
-        "label": "Background Image mobile"
       },
       {
         "type": "text",
@@ -312,14 +276,98 @@
         "label": "Text 1"
       },
       {
+        "type": "text",
+        "id": "left1",
+        "label": "Left",
+        "default":"82%"
+      },
+      {
+        "type": "text",
+        "id": "top1",
+        "label": "Top",
+        "default":"0%"
+      },
+      {
+        "type":"header",
+        "content":"Mobile Points"
+      },
+      {
+        "type": "text",
+        "id": "mobile-left1",
+        "label": "Left",
+        "default":"63%"
+      },
+      {
+        "type": "text",
+        "id": "mobile-top1",
+        "label": "Top",
+        "default":"-4%"
+      },
+      {
         "type": "html",
         "id": "text2",
         "label": "Text 2"
       },
       {
+        "type": "text",
+        "id": "left2",
+        "label": "Left",
+        "default":"98%"
+      },
+      {
+        "type": "text",
+        "id": "top2",
+        "label": "Top",
+        "default":"38%"
+      },
+      {
+        "type":"header",
+        "content":"Mobile Points"
+      },
+      {
+        "type": "text",
+        "id": "mobile-left2",
+        "label": "Left",
+        "default":"97%"
+      },
+      {
+        "type": "text",
+        "id": "mobile-top2",
+        "label": "Top",
+        "default":"36%"
+      },
+      {
         "type": "html",
         "id": "text3",
         "label": "Text 3"
+      },
+      {
+        "type": "text",
+        "id": "left3",
+        "label": "Left",
+        "default":"79%"
+      },
+      {
+        "type": "text",
+        "id": "bottom1",
+        "label": "Bottom",
+        "default":"3%"
+      },
+      {
+        "type":"header",
+        "content":"Mobile Points"
+      },
+      {
+        "type": "text",
+        "id": "mobile-left3",
+        "label": "Left",
+        "default":"62%"
+      },
+      {
+        "type": "text",
+        "id": "mobile-bottom1",
+        "label": "Bottom",
+        "default":"3%"
       }
     ],
     "presets": [
