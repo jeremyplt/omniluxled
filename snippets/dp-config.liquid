@@ -4,6 +4,7 @@
     }
 </style>
 <script type="text/javascript">
+  
     function getPricePathOverride(arguments) {
 
         jQuery = arguments[0];
@@ -62,7 +63,7 @@
         productDPVariantsJson = JSON.parse(productDPVariants);
      
         selectedProductDPPriceJson = JSON.parse(selectedProductDPPrice);
-       console.log(selectedProductDPPriceJson);
+
         callFunctionDP('showDualPrice', [jQuery, productDPID, productDPTags, productDPVendor, selectedProductDPPriceJson, selectedProductDPCompareAtPrice, jQuery(detailPricePath), 'dp_detail', dp_money_format, callFunctionDP('showDualPriceForCurrentVariant', [jQuery, selectedProductDPVariantID], true)], true);
         jQuery(document).on('change select click', ':input', function() {
             clearInterval(dpVariantChangeInterval);
@@ -107,6 +108,7 @@
         pathToPrice = arguments[6];
         type = arguments[7];
         dpMoneyFormat = "{{ shop.money_format }}";
+      
      
         productVariantIsTaxable = arguments[9];
     
@@ -128,11 +130,10 @@
         taxPercent = parseFloat(dpTaxPercent);        
         window.globalVariables.taxPercent = taxPercent;
         localStorage.setItem("taxPercent", taxPercent);
-        console.log(taxPercent);
-      console.log(dp_base_price_type);
+ 
       
         if (parseInt(dp_base_price_type) == 0) {
-          console.log("here not coming in tax");
+         
           secondPrice = Shopify.formatMoney(price, dpMoneyFormat);
           
             firstPrice = secondPrice;
@@ -149,7 +150,7 @@
         if(productTags.includes("BFD") && !isNaN(taxPercent)) {
             compareAtPrice = Math.round((price + price * taxPercent / 100) / 0.85);
         }
-
+ 
         if (parseInt(dp_show_compare_at_price) == 1 && parseInt(compareAtPrice) > 0 && parseInt(compareAtPrice) != parseInt(price)) {
             compareAtPriceBlock = '<span class="dpCompareAtPrice" style="margin-right:5px; text-decoration: line-through;"><span>' + Shopify.formatMoney(compareAtPrice, dpMoneyFormat) + '</span></span>' + '<br/>';
         }
@@ -196,5 +197,20 @@
                 isfirst = false;
             });
         }
+      const divsWithOriginalPrice = document.querySelectorAll('.originalprice');
+      
+      // Loop through each div
+      divsWithOriginalPrice.forEach(div => {
+          // Check if the div also has the dp_catalog class
+          if (!div.classList.contains('dp_catalog')) {
+              // Hide the div if it does not have the dp_catalog class
+              div.style.display = 'none';
+          }
+      });
     }
+
+
+  const divsWithOriginalPrice = document.querySelectorAll('.originalprice');
+
+
 </script>

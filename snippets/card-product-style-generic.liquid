@@ -35,17 +35,11 @@
       </span>
     {%- endif -%}
 
-    {%- unless product.tags contains 'notify-me' -%}
-      {%- if soldOut -%}
-        <span class="badge badge-right badge-gainsboro text-black">
-          {{ 'products.product.sold_out' | t | escape }}
-        </span>
-      {%- endif -%}
-    {%- else -%}
-        <span class="badge badge-right badge-gainsboro text-black">
-          {{ 'COMING SOON' | escape }}
-        </span>
-    {%- endunless -%}
+    {%- if soldOut -%}
+      <span class="badge badge-right badge-gainsboro text-black">
+        {{ 'products.product.sold_out' | t | escape }}
+      </span>
+    {%- endif -%}
   </span>
   {% assign eligible_product = false %}
   {% for gift_collection in product.collections %}
@@ -287,7 +281,7 @@
                               <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s> {% endcomment %}
             {% endif %}
             <span
-              class="price m-0 p-0 money"
+              class="price m-0 p-0 money originalprice"
               data-currentPrice
               data-variant-price="{% if current_variant %}{{current_variant.price}}{% else %}{{product.price}}{% endif %}">
               {% if current_variant %}

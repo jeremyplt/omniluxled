@@ -2907,3 +2907,6 @@ span.firstPrice {
 .cart-total-price .firstPriceLabel {
   font-size: 14px;
 }
+.dp_catalog {
+    text-decoration: none;
+}
