@@ -159,7 +159,40 @@
       "settings": {
         "hoox_safe_btn_url": "#hoox-shop",
         "hoox_safe_btn_text": "TRY IT RISK FREE",
-        "hoox_safe_guarante_text": "FREE Shipping | 30-Day Money-Back Guarantee"
+        "hoox_safe_guarante_text": "FREE Shipping | 30-Day Money-Back Guarantee",
+        "section_headline": ""
+      }
+    },
+    "template_page_banner_text_icCifY": {
+      "type": "template-page-banner-text",
+      "settings": {
+        "fluid_layout": false,
+        "gradient_tone": false,
+        "heading": "",
+        "txt": "",
+        "heading_txt": "Meet Dr. Alex VanDerschelden, DC",
+        "img_text1": "<p>\"As a chiropractor, I understand the importance of maintaining optimal hand health, as they are my primary tools in providing care to my clients. Omnilux red light tech, specifically the Contour Glove device, not only aids in the recovery and soothing of my own hands but also offers substantial advantages to my clients experiencing various concerns.<\/p>",
+        "img_text2": "Its therapeutic benefits promote healing, reduction of inflammation, and enhancement in overall hand mobility - I love it, it works, and I think everybody should get it.\" <br><br> - Dr. Alex VanDerschelden, DC<br>@occhiropractor",
+        "max_width": 700,
+        "image": "shopify:\/\/shop_images\/thumbnail_image1.png",
+        "alignment": "text-left",
+        "image_alignment": "left",
+        "pt": 80,
+        "pb": 40,
+        "pts": 40,
+        "pbs": 40,
+        "border-top": false,
+        "border-bottom": true,
+        "play_icon": false,
+        "play_btn": true,
+        "btn_txt_watch": "",
+        "btn_type_watch": "",
+        "btn_variant_watch": "primary",
+        "btn_size_watch": "",
+        "btn_txt": "",
+        "btn_type": "",
+        "btn_variant": "primary",
+        "btn_size": ""
       }
     },
     "global_rightvideo_text_skincare_YBkFDa": {
@@ -248,7 +281,8 @@
       ],
       "settings": {
         "hoox_how_to_title": "How to use:",
-        "hoox_how_to_subtitle": "Unlock better hands with three to five 10-minute treatments per week."
+        "hoox_how_to_subtitle": "Unlock better hands with three to five 10-minute treatments per week.",
+        "watch_video": ""
       }
     },
     "dd98148d-76e8-4e14-8398-6b17b61034dd": {
@@ -547,6 +581,50 @@
       ],
       "settings": {
         "hoox_faq_title": "Frequently asked questions"
+      }
+    },
+    "hoox_how_to_hTcJQ3": {
+      "type": "hoox-how-to",
+      "blocks": {
+        "usp_zwWe8q": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "shopify:\/\/shop_images\/PDPs_24.png",
+            "hoox_how_to_text": "Reduces cell mediators that influence inflammation in the tissue."
+          }
+        },
+        "usp_JxcQJV": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "shopify:\/\/shop_images\/PDPs_27.png",
+            "hoox_how_to_text": "Increases the level of ATP, providing the cell with more energy to help repair tissues."
+          }
+        },
+        "usp_pXQ6ac": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "shopify:\/\/shop_images\/PDPs_26.png",
+            "hoox_how_to_text": "Stimulates the release of endorphins - the body's natural painkillers."
+          }
+        },
+        "usp_UKKQEV": {
+          "type": "usp",
+          "settings": {
+            "hoox_how_to_image": "shopify:\/\/shop_images\/PDPs_25.png",
+            "hoox_how_to_text": "Calms nerve activity below the surface."
+          }
+        }
+      },
+      "block_order": [
+        "usp_zwWe8q",
+        "usp_JxcQJV",
+        "usp_pXQ6ac",
+        "usp_UKKQEV"
+      ],
+      "settings": {
+        "hoox_how_to_title": "How LED Can Reduce Pain",
+        "hoox_how_to_subtitle": "Cellular processes are stimulated by wavelengths of red and near-infrared <br>light which help reduce pain to the treatment area.",
+        "watch_video": ""
       }
     },
     "4ec8afe3-2dcc-46ca-9181-79addcc794cc": {
@@ -876,7 +954,7 @@
     "974b5ac9-e0f9-4a1c-839b-7ee8f492f953": {
       "type": "hoox-sticky-bar",
       "settings": {
-        "button_title": "TREAT MY HANDS",
+        "button_title": "REPAIR MY HANDS",
         "button_url": "#hoox-shop"
       }
     },
@@ -897,12 +975,14 @@
     "71768739-d7d7-4f5d-87c6-0265594b8fae",
     "832457c1-0171-4350-ad70-04b074b499f1",
     "585eba5a-4f3a-4591-991d-923ed537d55f",
+    "template_page_banner_text_icCifY",
     "global_rightvideo_text_skincare_YBkFDa",
     "26e48694-ed25-458d-b9c5-4b86cbd64b70",
     "dd98148d-76e8-4e14-8398-6b17b61034dd",
     "c541efe8-6e88-4742-93c5-578b7e5c0752",
     "c7458cec-8732-46b2-97a9-601f8b3f28bf",
     "d55c37d3-2303-4327-88c7-dd492dffa149",
+    "hoox_how_to_hTcJQ3",
     "4ec8afe3-2dcc-46ca-9181-79addcc794cc",
     "3b02390e-27eb-4acb-b288-cdca10dc2ef9",
     "about_us_block_Kfz9wF",

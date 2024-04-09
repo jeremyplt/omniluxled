@@ -180,7 +180,7 @@
           "type": "logowidthtext",
           "settings": {
             "title": "How much is shipping?",
-            "answer": "<p>We currently offer free shipping on all LED devices. This applies to ground shipping rates only. Excludes Hawaii, Alaska, New Zealand, and Northern Ireland.  <\/p>"
+            "answer": "<p>You will see your shipping options at checkout. We offer free shipping on orders over $100 USD. This applies to ground shipping rates only and excludes Hawaii, Alaska, New Zealand, and Northern Ireland.<\/p>"
           }
         },
         "5f500928-2e2a-46dc-889e-53025d51346c": {
@@ -201,7 +201,7 @@
           "type": "logowidthtext",
           "settings": {
             "title": "Do you ship internationally?",
-            "answer": "<p>We currently ship to the US, Canada, Australia, New Zealand, the United Kingdom and all EU countries except Bosnia and Herzegovina, Iceland, Latvia and Lithuania.<br\/><br\/>We’re rapidly expanding to other countries and encourage you to sign up for our mailing list to stay updated on our latest news.<\/p>"
+            "answer": "<p>We currently ship to the US, Canada, Australia, New Zealand, the United Kingdom, and most EU countries. We're rapidly expanding to other countries and encourage you to sign up for our mailing list to stay updated on our latest news.<\/p>"
           }
         },
         "f60e0f1f-0e9a-4f22-88ea-e76e48de84ba": {
@@ -229,7 +229,7 @@
           "type": "logowidthtext",
           "settings": {
             "title": "Can I change or cancel my order once it has been placed?",
-            "answer": "<p>If you would like to change or cancel your order, please reach out to <a href=\"mailto:info@omniluxled.com\" target=\"_blank\" title=\"mailto:info@omniluxled.com\">info@omniluxled.com<\/a> as soon as possible and someone will be happy to assist you with your request. <br\/><br\/>PLEASE NOTE: ANY CHANGES TO YOUR ORDER MAY RESULT IN DELAYS.<\/p>"
+            "answer": "<p>Due to quick processing times, we cannot make any edits to an order once it has been placed.<\/p>"
           }
         },
         "ee89efc7-4687-4c86-8f31-95143550c617": {
