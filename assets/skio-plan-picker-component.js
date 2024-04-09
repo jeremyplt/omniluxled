@@ -1196,14 +1196,28 @@ document.addEventListener("skio::update-selling-plan", function(e) {
     })
 
   document.querySelectorAll(".delivery-price").forEach(function(deliveryPrice) {
+    console.log("e.detail", e.detail)
+    const price = document.querySelector(".hoox-js-price.actual-price.money")
     if (sellingPlan) {
       const priceAdjustment = sellingPlan.price_adjustments[1] || sellingPlan.price_adjustments[0]
+
       if (priceAdjustment.value_type === 'price') {
         deliveryPrice.innerHTML = e.detail.moneyFormatter.format(priceAdjustment.value / 100);
+
+        if (price) {
+          price.innerHTML = e.detail.moneyFormatter.format(priceAdjustment.value / 100);
+        }
       } else {
         deliveryPrice.innerHTML = e.detail.moneyFormatter.format(e.detail.selectedVariant.price * (1 - (priceAdjustment.value / 100)) / 100);
+        
+        if (price) {
+          price.innerHTML = e.detail.moneyFormatter.format(e.detail.selectedVariant.price * (1 - (priceAdjustment.value / 100)) / 100);
+        }
+      }
+    } else {
+      if (price) {
+        price.innerHTML = e.detail.moneyFormatter.format(e.detail.selectedVariant.price / 100);
       }
     }
-        
   })
 })
