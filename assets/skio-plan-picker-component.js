@@ -1185,6 +1185,11 @@ document.addEventListener("skio::update-selling-plan", function(e) {
   e.preventDefault();
   const sellingPlan = e.detail.sellingPlan;
 
+  const price = document.querySelector(".hoox-js-price.actual-price.money")
+  if (price && !sellingPlan) {
+    price.innerHTML = e.detail.moneyFormatter.format(e.detail.selectedVariant.price / 100);
+  }
+
   document.querySelectorAll(".variant-title").forEach(title => {
     if (sellingPlan)
       title.innerHTML = e.detail.selectedVariant.name;
@@ -1204,20 +1209,21 @@ document.addEventListener("skio::update-selling-plan", function(e) {
       if (priceAdjustment.value_type === 'price') {
         deliveryPrice.innerHTML = e.detail.moneyFormatter.format(priceAdjustment.value / 100);
 
-        if (price) {
+        if (price && priceAdjustment.value) {
           price.innerHTML = e.detail.moneyFormatter.format(priceAdjustment.value / 100);
         }
       } else {
         deliveryPrice.innerHTML = e.detail.moneyFormatter.format(e.detail.selectedVariant.price * (1 - (priceAdjustment.value / 100)) / 100);
         
-        if (price) {
+        if (price  && priceAdjustment.value) {
           price.innerHTML = e.detail.moneyFormatter.format(e.detail.selectedVariant.price * (1 - (priceAdjustment.value / 100)) / 100);
         }
       }
     } else {
-      if (price) {
+      if (price  && priceAdjustment.value) {
         price.innerHTML = e.detail.moneyFormatter.format(e.detail.selectedVariant.price / 100);
       }
     }
   })
+
 })
