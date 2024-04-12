@@ -2737,6 +2737,10 @@ body:not(.blemish-eraser):not(.eye-brightener):not(.skin-corrector) .skio-group-
   text-decoration: line-through;
 }
 
+[skio-compare-at-price].concept--two:not(html) {
+  display: block !important;
+}
+
 .skin-corrector .skio-group__shipment, 
 .eye-brightener .skio-group__shipment, 
 .blemish-eraser .skio-group__shipment {
