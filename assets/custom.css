@@ -2248,9 +2248,9 @@ html .cbb-frequently-bought-recommendations-wrap {
   top: 0;
   bottom: 0;
 }
-.product-details-wrapper .product-form [type=submit]:has(+.manual-bis-trigger), .product-details-wrapper .product-form [type=submit]:has(+.klaviyo-bis-trigger:not([style="display:none;"])) {
+/* .product-details-wrapper .product-form [type=submit]:has(+.manual-bis-trigger), .product-details-wrapper .product-form [type=submit]:has(+.klaviyo-bis-trigger:not([style="display:none;"])) {
     display: none;
-}
+} */
 #shopify-section-template--16531510329506__fa9b8a1b-146c-4f3f-8be9-721ab7ff5c69 [data-trigger-videobtn] {
     display: none;
 }
