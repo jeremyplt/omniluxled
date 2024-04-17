@@ -303,6 +303,10 @@
 {% endif %}
 
 <script>
+  function sanitizePrice(text) {
+    return text.replace(/[^\d.,]/g, '');
+}
+
   var SHOP_EL_SHOP = document.querySelector('.hoox-shop');
   var shopLogicHolders = SHOP_EL_SHOP.querySelectorAll('.hoox-js-shop-logic');
 
@@ -317,25 +321,26 @@
     var SHOP_AFTERPAY_PRICE = SHOP_AFTERPAY_ELEMENT.querySelector('.js-after-pay-price');
 
     var currentQuantity = parseInt(SHOP_EL_QUANTITY_INPUT.value);
-    var initialPrice = (+ SHOP_EL_ATC_BUTTON_PRICE.textContent / 100).toFixed(2) * currentQuantity;
-    var currentPrice = (+ SHOP_EL_ATC_BUTTON_PRICE.textContent / 100).toFixed(2) * currentQuantity;
+    var initialPrice = (+ sanitizePrice(SHOP_EL_ATC_BUTTON_PRICE.textContent)).toFixed(2) * currentQuantity;
+    var currentPrice = (+ sanitizePrice(SHOP_EL_ATC_BUTTON_PRICE.textContent)).toFixed(2) * currentQuantity;
 
     if (SHOP_EL_PRICE_COMPARE) {
-      var initialPriceCompared = (+ SHOP_EL_PRICE_COMPARE.textContent / 100).toFixed(2) * currentQuantity;
-      var currentPriceCompared = (+ SHOP_EL_PRICE_COMPARE.textContent / 100).toFixed(2) * currentQuantity;
+        var initialPriceCompared = (+ sanitizePrice(SHOP_EL_PRICE_COMPARE.textContent)).toFixed(2) * currentQuantity;
+        var currentPriceCompared = (+ sanitizePrice(SHOP_EL_PRICE_COMPARE.textContent)).toFixed(2) * currentQuantity;
     }
 
-    SHOP_EL_ATC_BUTTON_PRICE.innerHTML = `${
-      (+ SHOP_EL_ATC_BUTTON_PRICE.textContent / 100).toFixed(2)
-    }`;
-    if (SHOP_EL_PRICE_COMPARE) {
-      SHOP_EL_PRICE_COMPARE.innerHTML = `${
-        (+ SHOP_EL_PRICE_COMPARE.textContent / 100).toFixed(2)
-      }`;
-    }
+    // SHOP_EL_ATC_BUTTON_PRICE.innerHTML = `${
+    //   (+ SHOP_EL_ATC_BUTTON_PRICE.textContent / 100).toFixed(2)
+    // }`;
+    // if (SHOP_EL_PRICE_COMPARE) {
+    //   SHOP_EL_PRICE_COMPARE.innerHTML = `${
+    //     (+ SHOP_EL_PRICE_COMPARE.textContent / 100).toFixed(2)
+    //   }`;
+    // }
 
 // AFTERPAY
-    SHOP_AFTERPAY_PRICE.textContent = (initialPrice / 4).toFixed(2);
+    if (initialPrice)
+      SHOP_AFTERPAY_PRICE.textContent = (initialPrice / 4).toFixed(2);
 
     SHOP_EL_BUTTON_INCREASE.addEventListener('click', function() {
       updatePrice('increase');
