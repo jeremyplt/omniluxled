@@ -1600,7 +1600,6 @@ document.addEventListener("skio::update-selling-plan", function (e) {
     ".hoox-js-price.actual-price.money"
   );
 
-  console.log("price parent", price);
   if (price && !sellingPlan) {
     price.innerHTML = e.detail.moneyFormatter.format(
       e.detail.selectedVariant.price / 100
@@ -1623,7 +1622,6 @@ document.addEventListener("skio::update-selling-plan", function (e) {
         ".hoox-js-price.actual-price.money"
       );
 
-      console.log("price children", price);
       if (sellingPlan) {
         const priceAdjustment =
           sellingPlan.price_adjustments[1] || sellingPlan.price_adjustments[0];
@@ -1633,9 +1631,9 @@ document.addEventListener("skio::update-selling-plan", function (e) {
             priceAdjustment.value / 100
           );
 
-          if (price && priceAdjustment.value) {
+          if (price) {
             price.innerHTML = e.detail.moneyFormatter.format(
-              priceAdjustment.value / 100
+              e.detail.selectedVariant.selling_plan_allocations[0].price / 100
             );
           }
         } else {
@@ -1645,11 +1643,9 @@ document.addEventListener("skio::update-selling-plan", function (e) {
               100
           );
 
-          if (price && priceAdjustment.value) {
+          if (price) {
             price.innerHTML = e.detail.moneyFormatter.format(
-              (e.detail.selectedVariant.price *
-                (1 - priceAdjustment.value / 100)) /
-                100
+              e.detail.selectedVariant.selling_plan_allocations[0].price / 100
             );
           }
         }
