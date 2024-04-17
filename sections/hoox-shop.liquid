@@ -195,7 +195,7 @@
              current_variant: current_variant,
              format: 'product-page' %}
 
-            {% render 'hoox-afterpay-text' %}
+            {% render 'hoox-afterpay-text', product: shopProduct %}
           </div>
 
           {% if shopProduct.metafields.custom.us_preorder and localization.country == 'United States' %}
@@ -276,7 +276,7 @@
                    current_variant: shopUpsellProduct.selected_or_first_available_variant,
                    format: 'product-page' %}
 
-                  {% render 'hoox-afterpay-text' %}
+                  {% render 'hoox-afterpay-text', product: shopUpsellProduct %}
                  </div>
             </div>
           {% endif %}

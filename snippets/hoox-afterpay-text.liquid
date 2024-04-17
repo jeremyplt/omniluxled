@@ -1,6 +1,6 @@
 <div class='hoox-shop__afterpay'>
     <p class='hoox-shop__afterpay-text'>
-        or 4 interest-free payments of <span>$</span><span class='js-after-pay-price'>33.00</span>
+        or 4 interest-free payments of <span class='js-after-pay-price'>{{ product.price |  divided_by: 4 | money }}</span>
         with
     </p>
 
