@@ -339,8 +339,8 @@
     // }
 
 // AFTERPAY
-    if (initialPrice)
-      SHOP_AFTERPAY_PRICE.textContent = (initialPrice / 4).toFixed(2);
+    // if (initialPrice)
+    //   SHOP_AFTERPAY_PRICE.textContent = (initialPrice / 4).toFixed(2);
 
     SHOP_EL_BUTTON_INCREASE.addEventListener('click', function() {
       updatePrice('increase');
@@ -376,7 +376,7 @@
           currentPriceCompared = (+ SHOP_EL_PRICE_COMPARE.textContent).toFixed(2) * currentQuantity;
         }
 
-        SHOP_AFTERPAY_PRICE.textContent = (initialPrice / 4).toFixed(2);
+        // SHOP_AFTERPAY_PRICE.textContent = (initialPrice / 4).toFixed(2);
       }, 2000);
     });
 
@@ -390,7 +390,7 @@
           currentPriceCompared = initialPriceCompared * currentQuantity;
         }
 
-        SHOP_AFTERPAY_PRICE.textContent = (currentPrice / 4).toFixed(2);
+        // SHOP_AFTERPAY_PRICE.textContent = (currentPrice / 4).toFixed(2);
       }
 
       if (method == 'decrease' && currentQuantity > 1) {
@@ -401,7 +401,7 @@
           currentPriceCompared = initialPriceCompared * currentQuantity;
         }
 
-        SHOP_AFTERPAY_PRICE.textContent = (currentPrice / 4).toFixed(2);
+        // SHOP_AFTERPAY_PRICE.textContent = (currentPrice / 4).toFixed(2);
       }
 
       SHOP_EL_ATC_BUTTON_PRICE.innerHTML = `${
