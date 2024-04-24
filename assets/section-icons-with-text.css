@@ -1,27 +1,27 @@
 .icons-with-text__inner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    max-width: 1400px;
+    gap: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
 .icons-with-text__item {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
 }
 
 .icons-with-text__icon img {
-    width: 50px;
-    min-width: 50px;
+    width: 40px;
+    min-width: 40px;
     height: auto;
 }
 
 .icons-with-text__content p {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.3;
 }
 
@@ -33,7 +33,7 @@
 
     .icons-with-text__inner {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: .75rem;
     }
 
     .icons-with-text__item {
@@ -63,9 +63,6 @@
 }
 
 @media (max-width: 499px) {
-    .icons-with-text__inner {
-        gap: 1rem;
-    }
 
     .icons-with-text__inner {
         padding-left: .5rem;
