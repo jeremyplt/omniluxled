@@ -307,7 +307,10 @@
           >
             {% comment %} <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
             <span class="add-text">
-              {% if localization.country == "France" and product.metafields.unavailable.france == true %}
+         {% if page.template_suffix == "hoox-landing-page" or page.template_suffix == "hoox-men" or page.template_suffix == "hoox-eye-brightener" or page.template_suffix == "hoox-blemish-eraser"%}
+           SHOP & SAVE!   
+           {% else  %}
+            {% if localization.country == "France" and product.metafields.unavailable.france == true %}
                 Not Available In France
               {% elsif is_preorder %}
                 PRE-ORDER
@@ -331,6 +334,9 @@
                   {{ 'products.product.sold_out' | t }}
                 {%- endif -%}
               {% endif %}
+              
+            {% endif %}  
+              
             </span>
             <span class="spinner"></span>
           </button>
@@ -355,6 +361,7 @@
     </script>
   {% endform %}
 </product-form>
+
 <div id="delm-app"></div>
 
 <product-form>

@@ -66,19 +66,19 @@
     "floating_label_size": "8px",
     "container_width": "1678px",
     "container_padding": "20px",
-    "favicon": "shopify:\/\/shop_images\/favicon_128.png",
-    "main_logo_socials": "shopify:\/\/shop_images\/OG_Image_710eb997-0edf-487e-97b7-a5d78cb2cd59.png",
-    "social_facebook_link": "https:\/\/www.facebook.com\/OmniluxLED\/",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@omniluxled",
-    "social_instagram_link": "https:\/\/www.instagram.com\/omniluxled\/",
-    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCn7h3MjbhCK3u1xBorI2Adg",
+    "favicon": "shopify://shop_images/favicon_128.png",
+    "main_logo_socials": "shopify://shop_images/OG_Image_710eb997-0edf-487e-97b7-a5d78cb2cd59.png",
+    "social_facebook_link": "https://www.facebook.com/OmniluxLED/",
+    "social_tiktok_link": "https://www.tiktok.com/@omniluxled",
+    "social_instagram_link": "https://www.instagram.com/omniluxled/",
+    "social_youtube_link": "https://www.youtube.com/channel/UCn7h3MjbhCK3u1xBorI2Adg",
     "enable_cart_drawer": true,
     "enable_search": true,
     "enable_swatches": true,
     "enable_search_article": false,
     "enable_search_page": false,
     "product_exclude_tag_text": "hidden",
-    "no_image": "shopify:\/\/shop_images\/Omni_57b061ad-6c05-4efc-839f-76a949b3b2eb.jpg",
+    "no_image": "shopify://shop_images/Omni_57b061ad-6c05-4efc-839f-76a949b3b2eb.jpg",
     "enable_custom_video": true,
     "enable_custom_accrodion": true,
     "enable_custom_tabify": true,
@@ -109,7 +109,7 @@
     "shop_product_newsletter_success_heading": "You’re in!",
     "email_placeholder": "Enter your email",
     "shop_product_newsletter_disclaimer": "*Applies to first-time customers*",
-    "newsletter_success_msg": "<span>Use Code: <strong>WELCOME10<\/strong> for <strong>10% OFF<\/strong><\/span>",
+    "newsletter_success_msg": "<span>Use Code: <strong>WELCOME10</strong> for <strong>10% OFF</strong></span>",
     "newsletter_error_msg": "You have entered an invalid email address. Please try again.",
     "enable_gift_tag": false,
     "gift_tag_text": "Free Gift",
@@ -134,7 +134,7 @@
     "enable_freegift_bar": true,
     "free_gift_txt": "Congratulations! You've earned a free gift.",
     "free_gift_left": "Spend ${addMoreForFreeShip}  amount more to receive a free gift!",
-    "checkout_logo_image": "shopify:\/\/shop_images\/OmniLux_Logo.png",
+    "checkout_logo_image": "shopify://shop_images/OmniLux_Logo.png",
     "checkout_accent_color": "#000000",
     "checkout_button_color": "#000000",
     "is_gwp_1_enabled": false,
@@ -143,7 +143,7 @@
     "enable_cart_": true,
     "_block_title": "You might also like",
     "_collection": "all",
-    "no_image_replacement": "shopify:\/\/shop_images\/mlouye-brick-macaron-s1.jpg",
+    "no_image_replacement": "shopify://shop_images/mlouye-brick-macaron-s1.jpg",
     "enable_login": true,
     "sections": {
       "header": {
@@ -171,10 +171,10 @@
               "checkMainBold": false,
               "megamenu_bg_color": "#ffffff",
               "megamenu_txt_color": "#343434",
-              "story_image": "shopify:\/\/shop_images\/OMNILUX_4_05415_1_rrr.jpg",
-              "story_paragraph": "<p>Since 2003, Omnilux has redefined skincare as the world leader in medical-grade LED light therapy. Backed by over 40 peer-reviewed clinical studies and decades of continuous research, Omnilux is the brand most trusted and used by dermatologists worldwide.<\/p>",
+              "story_image": "shopify://shop_images/OMNILUX_4_05415_1_rrr.jpg",
+              "story_paragraph": "<p>Since 2003, Omnilux has redefined skincare as the world leader in medical-grade LED light therapy. Backed by over 40 peer-reviewed clinical studies and decades of continuous research, Omnilux is the brand most trusted and used by dermatologists worldwide.</p>",
               "story_link_text": "Read Our Story",
-              "story_link": "shopify:\/\/pages\/about-us"
+              "story_link": "shopify://pages/about-us"
             }
           },
           "cc76d734-f539-47b6-be17-569028d66ed7": {
@@ -216,10 +216,10 @@
         ],
         "settings": {
           "topbar_enabled": true,
-          "topbar_text": "<strong>FREE SHIPPING ON ORDERS $100+ USD<\/strong>",
+          "topbar_text": "<strong>MOTHER'S DAY SALE! $45 OFF 1 DEVICE: </strong>MOM1,<strong>$110 OFF 2 DEVICES: </strong>MOM2,<strong>$200 OFF 3 DEVICES: </strong>MOM3",
           "page_url": "",
-          "topbar_text2": "<strong>NEW! Antioxidant Eye Cream - <u>SHOP NOW<\/u><\/strong>",
-          "page_url2": "https:\/\/omniluxled.com\/products\/antioxidant-eye-cream",
+          "topbar_text2": "",
+          "page_url2": "",
           "topbar_text3": "",
           "page_url3": "",
           "topbar_text4": "",
@@ -236,8 +236,8 @@
           "enable_sticky_header": true,
           "header_bg_color": "#ffffff",
           "show_line_separator": false,
-          "logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/OmniLux_Logo.svg?v=1669202901",
-          "logo": "shopify:\/\/shop_images\/OmniLux_Logo.png",
+          "logo_svg": "https://cdn.shopify.com/s/files/1/0482/6736/2466/files/OmniLux_Logo.svg?v=1669202901",
+          "logo": "shopify://shop_images/OmniLux_Logo.png",
           "logo_width": 210,
           "menu": "web_normal_menu-1"
         }
@@ -255,7 +255,7 @@
           "footer_bottom_bg_color": "rgba(0,0,0,0)",
           "footer_bottom_txt_color": "#000000",
           "col_1_heading": "Receive updates on special offers, products, new launches, and more",
-          "col_1_txt": "By clicking SIGN UP, you agree to receive marketing text messages from Omnilux LED at the number provided, including messages sent by autodialer. Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help or STOP to cancel. <br>View our <a href=\"\/pages\/privacy-policy\">Privacy Policy<\/a> and <a href=\"#\">Terms of Service<\/a>.",
+          "col_1_txt": "By clicking SIGN UP, you agree to receive marketing text messages from Omnilux LED at the number provided, including messages sent by autodialer. Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help or STOP to cancel. <br>View our <a href=\"/pages/privacy-policy\">Privacy Policy</a> and <a href=\"#\">Terms of Service</a>.",
           "show_newsletter": true,
           "success_message": "Thank you for signing up! Your special offer is on its way!",
           "subscribed_message": "You have already subscribed!",
@@ -266,7 +266,7 @@
           "social_icon_instagram": true,
           "social_icon_reddit": false,
           "social_icon_youtube": true,
-          "footer_logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/OmniLux_Logo.svg?v=1669202901",
+          "footer_logo_svg": "https://cdn.shopify.com/s/files/1/0482/6736/2466/files/OmniLux_Logo.svg?v=1669202901",
           "logo_max_width": 216,
           "col_2_heading": "",
           "footer_linklist_col_2": "praella-footer",
@@ -295,8 +295,8 @@
           "popup_delay": 1,
           "popup_period_until": 7,
           "heading": "Subscribe to Newsletter",
-          "text": "<p>Subscribe and get exclusive offers!<\/p>",
-          "footer_notes": "<p>No SPAM! We not share your email to any 3rd part companies!<\/p>",
+          "text": "<p>Subscribe and get exclusive offers!</p>",
+          "footer_notes": "<p>No SPAM! We not share your email to any 3rd part companies!</p>",
           "btn_txt": "Subscribe",
           "template_type": "image_bg",
           "bg_color_outer": "#ffffff",
@@ -311,7 +311,7 @@
             "type": "app",
             "settings": {
               "title": "Form Builder",
-              "url": "formbuilder.hulkapps.com\/skeletopapp.js",
+              "url": "formbuilder.hulkapps.com/skeletopapp.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -352,7 +352,7 @@
             "type": "app",
             "settings": {
               "title": "GeoLocation",
-              "url": "geolocation-recommendations.shopifyapps.com\/locale_bar\/script.js",
+              "url": "geolocation-recommendations.shopifyapps.com/locale_bar/script.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -393,7 +393,7 @@
             "type": "app",
             "settings": {
               "title": "GeoLocationSelector",
-              "url": "geolocation-recommendations.shopifyapps.com\/selectors\/script.js",
+              "url": "geolocation-recommendations.shopifyapps.com/selectors/script.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -434,7 +434,7 @@
             "type": "app",
             "settings": {
               "title": "Privacy Banner",
-              "url": "cdn.shopify.com\/shopifycloud\/privacy-banner\/storefront-banner.js",
+              "url": "cdn.shopify.com/shopifycloud/privacy-banner/storefront-banner.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -475,7 +475,7 @@
             "type": "app",
             "settings": {
               "title": "Slide Cart",
-              "url": "cdn.jsdelivr.net\/gh\/apphq\/slidecart-dist@master\/slidecarthq-forward.js",
+              "url": "cdn.jsdelivr.net/gh/apphq/slidecart-dist@master/slidecarthq-forward.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -516,7 +516,7 @@
             "type": "app",
             "settings": {
               "title": "Upsells Bold App",
-              "url": "upsells.boldapps.net\/v2_ui\/js\/UpsellTracker.js",
+              "url": "upsells.boldapps.net/v2_ui/js/UpsellTracker.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -557,7 +557,7 @@
             "type": "app",
             "settings": {
               "title": "Quick Announcement",
-              "url": "cdn.hextom.com\/js\/quickannouncementbar.js",
+              "url": "cdn.hextom.com/js/quickannouncementbar.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -598,7 +598,7 @@
             "type": "app",
             "settings": {
               "title": "Privacy Banner",
-              "url": "cdn.shopify.com\/shopifycloud\/privacy-banner\/storefront-banner.js",
+              "url": "cdn.shopify.com/shopifycloud/privacy-banner/storefront-banner.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -639,7 +639,7 @@
             "type": "app",
             "settings": {
               "title": "REorder",
-              "url": "reorder-master.hulkapps.com\/reorderjs\/re-order.js",
+              "url": "reorder-master.hulkapps.com/reorderjs/re-order.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -681,7 +681,7 @@
             "disabled": true,
             "settings": {
               "title": "SWYM",
-              "url": "swymv3pro-01.azureedge.net\/code\/swym-shopify.js",
+              "url": "swymv3pro-01.azureedge.net/code/swym-shopify.js",
               "block_index": true,
               "block_product": false,
               "block_collection": false,
@@ -722,7 +722,7 @@
             "type": "app",
             "settings": {
               "title": "Instafeed",
-              "url": "cdn.nfcube.com\/instafeed-d4fd5592104c5e39445297a7ebcd6665.js",
+              "url": "cdn.nfcube.com/instafeed-d4fd5592104c5e39445297a7ebcd6665.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -763,7 +763,7 @@
             "type": "app",
             "settings": {
               "title": "Upsell",
-              "url": "upsells.boldapps.net\/v2_ui\/js\/UpsellTracker.js",
+              "url": "upsells.boldapps.net/v2_ui/js/UpsellTracker.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -804,7 +804,7 @@
             "type": "app",
             "settings": {
               "title": "Reorder",
-              "url": "reorder-master.hulkapps.com\/reorderjs\/re-order.js",
+              "url": "reorder-master.hulkapps.com/reorderjs/re-order.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -845,7 +845,7 @@
             "type": "app",
             "settings": {
               "title": "Gorgias",
-              "url": "https:\/\/assets.gorgias.chat\/ca3a4d9803e09a91900b42580ae4d2d64d6fe213\/static\/js\/836.js",
+              "url": "https://assets.gorgias.chat/ca3a4d9803e09a91900b42580ae4d2d64d6fe213/static/js/836.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -886,7 +886,7 @@
             "type": "app",
             "settings": {
               "title": "JustUno",
-              "url": "scripttags.jst.ai\/shopify_justuno_48267362466_06232be0-a7de-11ed-8c6c-619441a671ac.js",
+              "url": "scripttags.jst.ai/shopify_justuno_48267362466_06232be0-a7de-11ed-8c6c-619441a671ac.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -927,7 +927,7 @@
             "type": "app",
             "settings": {
               "title": "Gorgias 2",
-              "url": "https:\/\/assets.gorgias.chat\/ca3a4d9803e09a91900b42580ae4d2d64d6fe213\/static\/js\/836.js",
+              "url": "https://assets.gorgias.chat/ca3a4d9803e09a91900b42580ae4d2d64d6fe213/static/js/836.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -1037,8 +1037,8 @@
               "link_url_1": "",
               "megamenu_bg_color": "#ffffff",
               "megamenu_txt_color": "#000000",
-              "story_image": "shopify:\/\/shop_images\/OMNILUX_4_05415_1_rrr.jpg",
-              "story_paragraph": "<p>Since 2003, Omnilux has redefined skincare as the world leader in medical-grade LED light therapy. Backed by over 40 peer-reviewed clinical studies and decades of continuous research, Omnilux is the brand most trusted and used by dermatologists worldwide.<\/p>",
+              "story_image": "shopify://shop_images/OMNILUX_4_05415_1_rrr.jpg",
+              "story_paragraph": "<p>Since 2003, Omnilux has redefined skincare as the world leader in medical-grade LED light therapy. Backed by over 40 peer-reviewed clinical studies and decades of continuous research, Omnilux is the brand most trusted and used by dermatologists worldwide.</p>",
               "story_link_text": "Read Our Story",
               "story_link": "#"
             }
@@ -1161,56 +1161,56 @@
     ],
     "blocks": {
       "2153490007123654574": {
-        "type": "shopify:\/\/apps\/gdpr-ccpa-cookie-management\/blocks\/gdpr_cookie_consent\/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "type": "shopify://apps/gdpr-ccpa-cookie-management/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
         "disabled": false,
         "settings": {
         }
       },
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }
       },
       "3066834073402364550": {
-        "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/global_sellup\/001ec440-29ea-4cbf-9265-4963fa825261",
+        "type": "shopify://apps/sellup-upsell-add-ons/blocks/global_sellup/001ec440-29ea-4cbf-9265-4963fa825261",
         "disabled": false,
         "settings": {
         }
       },
       "733389323033596483": {
-        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "type": "shopify://apps/okendo-product-reviews-ugc/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
         "disabled": false,
         "settings": {
           "show_preview_data": true
         }
       },
       "17327048248777170309": {
-        "type": "shopify:\/\/apps\/all-in-1-discount-on-cart\/blocks\/instant-load\/f428e1ae-8a34-4767-8189-f8339f3ab12b",
+        "type": "shopify://apps/all-in-1-discount-on-cart/blocks/instant-load/f428e1ae-8a34-4767-8189-f8339f3ab12b",
         "disabled": false,
         "settings": {
         }
       },
       "5792010825272225357": {
-        "type": "shopify:\/\/apps\/dual-price-display-pro\/blocks\/app-block\/fbd96439-f105-44a6-b4c5-51766faddec4",
+        "type": "shopify://apps/dual-price-display-pro/blocks/app-block/fbd96439-f105-44a6-b4c5-51766faddec4",
         "disabled": false,
         "settings": {
         }
       },
       "11724500921838622758": {
-        "type": "shopify:\/\/apps\/frequently-bought-together\/blocks\/app-embed-block\/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
+        "type": "shopify://apps/frequently-bought-together/blocks/app-embed-block/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
         "disabled": false,
         "settings": {
         }
       },
       "6279071938380501511": {
-        "type": "shopify:\/\/apps\/powerful-form-builder\/blocks\/app-embed\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "type": "shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
         "disabled": false,
         "settings": {
         }
       },
       "qikify-mobilemenu-1702437136": {
-        "type": "shopify:\/\/apps\/qikify-mobile-menu-navigation\/blocks\/app-embed\/8e0d172b-7f05-43c9-a50d-bc2bff0a5f0a",
+        "type": "shopify://apps/qikify-mobile-menu-navigation/blocks/app-embed/8e0d172b-7f05-43c9-a50d-bc2bff0a5f0a",
         "disabled": false,
         "settings": {
         }

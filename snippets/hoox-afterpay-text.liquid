@@ -8,3 +8,7 @@
         {% render 'hoox-icon-afterpay' %}
     </button>
 </div>
+{% assign metafieldValue = product.metafields.custom.saletext | strip %}
+{% if metafieldValue != blank %}
+  <div class="saletext">{{ metafieldValue }}</div>
+{% endif %}

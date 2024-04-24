@@ -247,7 +247,10 @@
   </script>
 {% endform %}
 </product-form>
-<div id="delm-app"></div>
+
+
+
+<div id="delm-app"></div>  
 <product-form>
   {% form 'product', product, data-productid: product.id, id: product_form_id, class: "mt-4", data-product-form: "", data-product-id: product.id, data-type: 'add-to-cart-form', data-format: format %}
 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
@@ -311,3 +314,7 @@
 <div data-product-preorder-message class="my-2"></div>
 {% endform %}
 </product-form>
+{% assign metafieldValue = product.metafields.custom.saletext | strip %}
+{% if metafieldValue != blank %}
+  <div class="saletext">{{ metafieldValue }}</div>
+{% endif %}

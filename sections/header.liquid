@@ -15,7 +15,7 @@
             </div>
         </div>
       </a>
-      {% unless topbar_text2 == empty %}
+      {% if topbar_text2%}
       <a id="slide2" class="d-nne slidex" href="{{ section.settings.page_url2.url }}">
         <div class="topbar d-flex align-items-center" data-top-bar style="background-color: {{ section.settings.topbar_bg_color }}; min-height: {{ section.settings.topbar_height }}px;">
             <div class="container">
@@ -27,7 +27,7 @@
             </div>
         </div>
       </a>
-      {% endunless %}
+      {% endif %}
 
       {% if topbar_text3 %}
       <a id="slide3" class="d-nne slidex" href="{{ section.settings.page_url3.url }}">
