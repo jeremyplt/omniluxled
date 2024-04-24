@@ -48,11 +48,11 @@
                                               "slidesPerView": 4
                                           },
                                           "1200": {
-                                            "slidesPerView": 5
+                                            "slidesPerView": 6
                                         }
                                       }
                                     }'>
-                                        <div class="swiper-wrapper  board-tabs">
+                                        <div class="swiper-wrapper  board-tabs">                                         
                                           {%- if block.settings.enable_custom_tab_1 -%}
                                             <div class="swiper-slide   carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
                                               <div class="tablink triangle  w-100 open board-block-border" role="tab">
@@ -145,10 +145,29 @@
                                               </div>
                                             </div>
                                             {% endif %}
+                                              {%- if block.settings.enable_custom_tab_6 -%}
+                                            <div class="swiper-slide  carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
+                                              <div class="tablink triangle w-100 board-block-border board-block-end" role="tab">
+                                                <a class="nav-link" data-toggle="tab" href="#custom-tab-6" data-tabcontent="#custom-tab-6" aria-expanded="false">
+                                                  <div class="py-4  ">
+                                                    <div class="borad-block-img">
+                                              {{ block.settings.tab_6_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
+                                                  </div>
+                                                    <div class="text-center pt-3 mx-4">
+                                                      <h5 class="board-member-name">
+                                                        {{ block.settings.tab_6_name }}
+                                                      </h5>
+                                                    </div>
+                                                  </div>
+                                                </a>
+                                              </div>
+                                            </div>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </slider-element>
                                 <div class="tab-content text-left" id="productTabsContent">
+                                   
                                     {%- if block.settings.enable_custom_tab_1 -%}
                                     <div class="tab-pane tabcontent open" id="custom-tab-1" role="tabpanel">
                                       <div class="col-lg-6 pt-8 text-center mx-auto lh-xl">
@@ -214,6 +233,20 @@
                                         <div class="rte  text-center">
                                           <p>
                                             {{ block.settings.tab_5_content }}
+                                          </p>
+                                      </div>
+                                      </div>
+                                    </div>
+                                    {% endif %}
+                                  {%- if block.settings.enable_custom_tab_6 -%}
+                                    <div class="tab-pane tabcontent " id="custom-tab-6" role="tabpanel">
+                                      <div class="col-lg-6 pt-8 text-center mx-auto  lh-xl">
+                                        {{ block.settings.tab_6_title }}
+                                      </div>
+                                      <div class="col-12 col-lg-8 mx-auto">
+                                        <div class="rte  text-center">
+                                          <p>
+                                            {{ block.settings.tab_6_content }}
                                           </p>
                                       </div>
                                       </div>
@@ -396,6 +429,33 @@
           "type": "richtext",
           "id": "tab_5_content",
           "label": "Tab 5 Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_custom_tab_6",
+          "label": "Enable Tab 6?"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_6_image",
+          "label": "Tab Image 6 ",
+          "info": "For Better Viewing Use Example dimentions: 150*150 ( Aspect Ratio: 1:1)"
+        },
+        {
+          "type": "textarea",
+          "id": "tab_6_name",
+          "label": "Tab 6 content name",
+          "default": "Tab Name 6"
+        },
+        {
+          "type": "html",
+          "id": "tab_6_title",
+          "label": "Tab 6 content Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_6_content",
+          "label": "Tab 6 Content"
         }
       ]
     }
