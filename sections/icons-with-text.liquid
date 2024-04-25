@@ -21,8 +21,11 @@
                 <div class="icons-with-text__icon">
                     {{ block.settings.icon | image_url: width: 100 | image_tag: alt: block.settings.icon.alt }}
                 </div>
-                <div class="icons-with-text__content">
+                <div class="icons-with-text__content desktop--only">
                     {{ block.settings.text }}
+                </div>
+              <div class="icons-with-text__content mobile--only">
+                    {{ block.settings.text_mobile }}
                 </div>
             </div>
         {% endfor %}
@@ -81,6 +84,12 @@
                         "id": "text",
                         "label": "Text",
                         "default": "<p><strong>Secure Checkout:</strong> SSL & 256-bit encrypted protection.</p>"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text_mobile",
+                        "label": "Text (Mobile)",
+                        "default": "<p>Trusted by 275K+ Customers. </p>"
                     }
                 ]
             }

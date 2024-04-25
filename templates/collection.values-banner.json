@@ -4,8 +4,8 @@
     "image_with_text_overlay_jJtrR6": {
       "type": "image-with-text-overlay",
       "settings": {
-        "image": "shopify://shop_images/Frame_1000006412-min.png",
-        "image_mobile": "shopify://shop_images/Frame_1000006412_1_feec3296-6380-4dbf-9cbe-5b1c257439df.png",
+        "image": "shopify://shop_images/Frame_1000006492.png",
+        "image_mobile": "shopify://shop_images/Frame_1000006493.png",
         "text": "Enhance Your Glow Up With Omnilux",
         "padding_top": 0,
         "padding_bottom": 0
@@ -17,29 +17,33 @@
         "icon_with_text_ehHKBL": {
           "type": "icon-with-text",
           "settings": {
-            "icon": "shopify://shop_images/Group_22.png",
-            "text": "<p><strong>Secure Checkout</strong><span>: SSL & 256-bit encrypted protection.</span></p>"
+            "icon": "shopify://shop_images/Group_25_e0569969-f9ca-4e43-a13c-e13235ba0b01.png",
+            "text": "<p><strong>Trusted by 275K+ customers: </strong>Thousands of global 5-star customer reviews.</p>",
+            "text_mobile": "<p>Trusted by 275K+ Customers. </p>"
           }
         },
         "icon_with_text_WNp3qE": {
           "type": "icon-with-text",
           "settings": {
             "icon": "shopify://shop_images/Group_26_2.png",
-            "text": "<p><strong>2-Year Warranty</strong><span>: Comprehensive coverage for LED devices.</span></p>"
+            "text": "<p><strong>2-Year Warranty</strong>: Comprehensive coverage for LED devices.</p>",
+            "text_mobile": "<p>2-Year Warranty on LED devices.</p>"
           }
         },
         "icon_with_text_Cj94Ji": {
           "type": "icon-with-text",
           "settings": {
-            "icon": "shopify://shop_images/Group_25.png",
-            "text": "<p><strong>Globally Certified</strong><span>: FDA, TGA, CE approvals exceeding any brand.</span></p>"
+            "icon": "shopify://shop_images/Group_25_6a2ec0d5-27a5-4849-9e36-971203cf2b8d.png",
+            "text": "<p><strong>Shop now, pay later:</strong> Enjoy flexible payment by choosing installment options.</p>",
+            "text_mobile": "<p>Pay with easy monthly installments.</p>"
           }
         },
         "icon_with_text_yFxGUa": {
           "type": "icon-with-text",
           "settings": {
             "icon": "shopify://shop_images/Group_26_1.png",
-            "text": "<p><strong>Clinically Proven</strong><span>: Backed by 40+ peer-reviewed studies.</span></p>"
+            "text": "<p><strong>Globally certified & clinically proven:</strong> Backed by 40+ peer-reviewed studies.</p>",
+            "text_mobile": "<p>Proven Efficacy: 40+ studies.</p>"
           }
         }
       },

@@ -1,0 +1,213 @@
+{
+  "order": [
+    "main",
+    "glabal_featured_product_list_XB3GFc",
+    "global_image_banner_nyezwV",
+    "global_image_banner_jpzFET",
+    "global_blog_posts_RzzLcW"
+  ],
+  "sections": {
+    "main": {
+      "type": "malomo_order_tracking",
+      "blocks": {
+        "malomo_shipment_tracker": {
+          "type": "shopify://apps/malomo-order-tracking/blocks/shipment-tracker/5cb158a1-dc52-4d21-aac7-e017083c11e2",
+          "settings": {
+            "publishable_api_key": "pk_83f702b7487a45a1dd6b8de792acad67",
+            "element": "shipmentTracker",
+            "block_width": 350,
+            "button_background_color": "#000000",
+            "button_border_color": "",
+            "button_border_radius": 3,
+            "button_border_width": 0,
+            "button_capitalization": "uppercase",
+            "button_height": 48,
+            "button_text_color": "#ffffff",
+            "input_background_color": "#FFFFFF",
+            "input_border_color": "#DDDDDD",
+            "input_border_radius": 3,
+            "input_border_width": 1,
+            "input_height": 42,
+            "corso_shop_id": ""
+          }
+        },
+        "image": {
+          "type": "image",
+          "settings": {
+            "image_horizontal_alignment": "center",
+            "image_link_url": "",
+            "image_width": ""
+          }
+        }
+      },
+      "block_order": [
+        "malomo_shipment_tracker",
+        "image"
+      ],
+      "settings": {
+        "background_image_enabled": true,
+        "background_image": "shopify://shop_images/Hero_Image.png",
+        "background_repeat": "no-repeat",
+        "background_size": "cover",
+        "mobile_image": "shopify://shop_images/Hero_Image.png",
+        "background_color": "transparent",
+        "height": "540",
+        "padding": "20",
+        "header_background_color": "transparent",
+        "header_font": "sans-serif",
+        "header_font_size": "40",
+        "header_horizontal_alignment": "center",
+        "header_padding_top": "20",
+        "header_padding_bottom": "20",
+        "header_level": "h2",
+        "header_text": "",
+        "malomo_background_color": "#ffffff",
+        "malomo_border_color": "",
+        "malomo_border_radius": "0",
+        "malomo_border_style": "none",
+        "malomo_border_width": "0",
+        "malomo_padding": "40"
+      }
+    },
+    "glabal_featured_product_list_XB3GFc": {
+      "type": "glabal-featured-product-list",
+      "settings": {
+        "fluid_layout": false,
+        "nav_dots": true,
+        "nav_arrows": true,
+        "nav_arrows_outside": true,
+        "heading_alignment": "me-lg-auto ms-lg-0 mx-auto",
+        "heading_txt": "Supercharge Your Results",
+        "lead_txt": "",
+        "home_featured_collection": "skin-care",
+        "section_bg_color": "#ffffff",
+        "section_txt_color": "#000000",
+        "btn_text": "SHOP ALL",
+        "btn_url": "",
+        "pt": 48,
+        "pb": 72,
+        "pts": 56,
+        "pbs": 56,
+        "border-top": false,
+        "border-bottom": false,
+        "slide_per_": true
+      }
+    },
+    "global_image_banner_nyezwV": {
+      "type": "global-image-banner",
+      "blocks": {
+        "heading_BnMQXX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Explore all LED devices"
+          }
+        },
+        "text_qTHbPj": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
+        "buttons_9gMA9E": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": "shopify://collections/all-devices",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "btn_type_2": "",
+            "btn_variant_2": "primary",
+            "btn_size_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_BnMQXX",
+        "text_qTHbPj",
+        "buttons_9gMA9E"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Explore_all_LED_devices_banner.png",
+        "txt_color": "",
+        "enable_overlay": false,
+        "overlay_bg_color": "#000000",
+        "overlay_opacity": 0.5,
+        "height": "tallheight",
+        "desktop_text_box_position": "flex-start",
+        "text_caption_align": "justify-content-end",
+        "text_align": "text-right",
+        "section_padding": false
+      }
+    },
+    "global_image_banner_jpzFET": {
+      "type": "global-image-banner",
+      "blocks": {
+        "heading_nH8mAU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Discover our LED-loving topicals"
+          }
+        },
+        "text_bb9hVw": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
+        "buttons_z4ANaE": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Discover More",
+            "button_link_1": "shopify://collections/skin-care",
+            "btn_type_1": "",
+            "btn_variant_1": "primary",
+            "btn_size_1": "",
+            "button_label_2": "",
+            "button_link_2": "",
+            "btn_type_2": "",
+            "btn_variant_2": "primary",
+            "btn_size_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_nH8mAU",
+        "text_bb9hVw",
+        "buttons_z4ANaE"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Discover_our_LED-loving_topicals_banner.png",
+        "txt_color": "",
+        "enable_overlay": false,
+        "overlay_bg_color": "#000000",
+        "overlay_opacity": 0.5,
+        "height": "tallheight",
+        "desktop_text_box_position": "flex-start",
+        "text_caption_align": "justify-content-start",
+        "text_align": "text-left",
+        "section_padding": true
+      }
+    },
+    "global_blog_posts_RzzLcW": {
+      "type": "global-blog-posts",
+      "settings": {
+        "fluid_layout": true,
+        "blog_handles": "light-reads",
+        "heading_txt": "Light Reads",
+        "lead_txt": "",
+        "btn_txt": "",
+        "btn_url": "",
+        "section_bg_color": "#ffffff",
+        "section_txt_color": "",
+        "btn_type": "outline",
+        "btn_variant": "primary",
+        "btn_size": ""
+      }
+    }
+  }
+}
