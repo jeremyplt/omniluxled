@@ -2914,3 +2914,15 @@ span.firstPrice {
 .dp_catalog {
     text-decoration: none;
 }
+
+html button.cc-btn.cc-settings.isense-cc-btn.isense-cc-settings {
+  color: white !important;
+}
+
+.cookieconsent-wrapper .cc-compliance.cc-highlight .cc-btn:first-child:not(:hover) {
+  color: white !important;
+}
+
+html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
+  background-color: black !important;
+}
