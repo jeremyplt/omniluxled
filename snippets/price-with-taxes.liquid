@@ -53,7 +53,7 @@
 {% assign no_price_display_countries = "US,CA" | split: "," %}
 
 {% assign tax_rules = tax_data | split: ',' %}
-{% assign customer_country = 'UK' %}  <!-- This should be dynamically set -->
+{% assign customer_country = localization.country.iso_code %}  <!-- This should be dynamically set -->
 
 {% for rule in tax_rules %}
     {% assign clean_rule = rule | strip_newlines | strip %}
