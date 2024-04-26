@@ -2922,3 +2922,14 @@ span.firstPrice {
   font-weight: 600;
   text-align: center;
 }
+
+.swiper-wrapper .position-relative.d-flex.price-with-btn{
+       flex-direction: column;
+}
+
+
+
+.swiper-wrapper .position-relative.d-flex.price-with-btn .col-12.d-flex {
+    justify-content: end;
+    display: flex;
+}

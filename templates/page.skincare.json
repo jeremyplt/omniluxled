@@ -18,7 +18,7 @@
             "logo_image__": "",
             "trustedbytxt": "Trusted by 275K+ Customers",
             "title": "Skincare made for LED",
-            "subtitle": "<p>A power-packed skincare collection to fight signs of aging while optimizing Omnilux’s signature LED light therapy treatments.<\/p>",
+            "subtitle": "<p>A power-packed skincare collection to fight signs of aging while optimizing Omnilux’s signature LED light therapy treatments.</p>",
             "heading__size": false,
             "heading__lg": 60,
             "heading__md": 55,
@@ -29,14 +29,14 @@
             "btn_type_watch": "",
             "btn_variant_watch": "primary",
             "btn_size_watch": "",
-            "btn_txt": "Explore the line",
-            "btn_link": "https:\/\/omniluxled.com\/collections\/skin-care",
+            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_link": "https://omniluxled.com/collections/skin-care",
             "btn_type": "",
             "btn_variant": "white",
             "btn_size": "",
             "poster_type": "video",
-            "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1ef1fe8e2cb144e9bfe2388bd16b1810.mp4",
-            "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1ef1fe8e2cb144e9bfe2388bd16b1810.mp4",
+            "bg_video": "https://cdn.shopify.com/videos/c/o/v/1ef1fe8e2cb144e9bfe2388bd16b1810.mp4",
+            "mobile_bg_video": "https://cdn.shopify.com/videos/c/o/v/1ef1fe8e2cb144e9bfe2388bd16b1810.mp4",
             "video_type": "local",
             "placement": "grid",
             "video_id": "",
@@ -72,7 +72,7 @@
         "template--16169064104098__0815808e-a8b7-4e1d-b348-913b81d5e8b1-1684637742a4279aaf-0": {
           "type": "content",
           "settings": {
-            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/doctorformulated.png?v=1685650055",
+            "icon_img": "https://cdn.shopify.com/s/files/1/0482/6736/2466/files/doctorformulated.png?v=1685650055",
             "title": "",
             "txt": ""
           }
@@ -80,7 +80,7 @@
         "ca9aead8-b99c-4eff-b10b-6c356684e55c": {
           "type": "content",
           "settings": {
-            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Safe_for_all_skin_types_svg.png?v=1685650062",
+            "icon_img": "https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Safe_for_all_skin_types_svg.png?v=1685650062",
             "title": "",
             "txt": ""
           }
@@ -88,7 +88,7 @@
         "c793978a-43fc-4e38-9e66-66871147b723": {
           "type": "content",
           "settings": {
-            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/no_parabens_sulfates.png?v=1686158991",
+            "icon_img": "https://cdn.shopify.com/s/files/1/0482/6736/2466/files/no_parabens_sulfates.png?v=1686158991",
             "title": "",
             "txt": ""
           }
@@ -96,7 +96,7 @@
         "382f22bf-d4b3-496c-b20d-0f71a60d0b47": {
           "type": "content",
           "settings": {
-            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/crueltyfree.png?v=1685650117",
+            "icon_img": "https://cdn.shopify.com/s/files/1/0482/6736/2466/files/crueltyfree.png?v=1685650117",
             "title": "",
             "txt": ""
           }
@@ -104,7 +104,7 @@
         "f5431301-e30f-41c2-b600-bd724527bc5c": {
           "type": "content",
           "settings": {
-            "icon_img": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/vegan.png?v=1685650100",
+            "icon_img": "https://cdn.shopify.com/s/files/1/0482/6736/2466/files/vegan.png?v=1685650100",
             "title": "",
             "txt": ""
           }
@@ -140,41 +140,41 @@
         "template--16169064104098__98ce97d7-15c6-46d0-b111-c869d2a20b0b-1684638177820ba2bb-0": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-03-02T142748.417.png",
-            "title": "<p>Enzyme Powder Cleanser <strong>PRE LED TREATMENT<\/strong><\/p>",
-            "txt_info": "<p>Cleanse, brighten, and improve texture with this gently exfoliating cleanser enriched with green tea, rice powder, and enzymes.<\/p>",
-            "btn_txt": "SHOP NOW",
-            "btn_url": "shopify:\/\/products\/enzyme-powder-cleanser"
+            "image": "shopify://shop_images/Untitled_design_-_2024-03-02T142748.417.png",
+            "title": "<p>Enzyme Powder Cleanser <strong>PRE LED TREATMENT</strong></p>",
+            "txt_info": "<p>Cleanse, brighten, and improve texture with this gently exfoliating cleanser enriched with green tea, rice powder, and enzymes.</p>",
+            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_url": "shopify://products/enzyme-powder-cleanser"
           }
         },
         "59a2a5b7-b6f5-4566-8ff2-3c5e06fec563": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-03-02T142739.780.png",
-            "title": "<p>Hyaluronic Acid Serum <strong>DURING LED TREATMENT<\/strong><\/p>",
-            "txt_info": "<p>This serum amplifies your LED treatments with hyaluronic acid and niacinamide to hydrate, plump, and calm the skin.<\/p>",
-            "btn_txt": "SHOP NOW",
-            "btn_url": "https:\/\/omniluxled.com\/products\/hyaluronic-acid-serum"
+            "image": "shopify://shop_images/Untitled_design_-_2024-03-02T142739.780.png",
+            "title": "<p>Hyaluronic Acid Serum <strong>DURING LED TREATMENT</strong></p>",
+            "txt_info": "<p>This serum amplifies your LED treatments with hyaluronic acid and niacinamide to hydrate, plump, and calm the skin.</p>",
+            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_url": "https://omniluxled.com/products/hyaluronic-acid-serum"
           }
         },
         "0771fb05-3ea9-446b-b6e9-deb71688b602": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-03-02T142757.634.png",
-            "title": "<p>Peptide Concentrate <strong>POST LED TREATMENT<\/strong><\/p>",
-            "txt_info": "<p>Active peptides Matrixyl and Argireline help diminish fine lines and signs of fatigue, while soothing and firming the skin. <\/p>",
-            "btn_txt": "SHOP NOW",
-            "btn_url": "https:\/\/omniluxled.com\/products\/peptide-concentrate"
+            "image": "shopify://shop_images/Untitled_design_-_2024-03-02T142757.634.png",
+            "title": "<p>Peptide Concentrate <strong>POST LED TREATMENT</strong></p>",
+            "txt_info": "<p>Active peptides Matrixyl and Argireline help diminish fine lines and signs of fatigue, while soothing and firming the skin. </p>",
+            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_url": "https://omniluxled.com/products/peptide-concentrate"
           }
         },
         "content_9QRfUi": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-03-02T142813.092.png",
-            "title": "<p>Antioxidant Eye Cream <strong>POST LED TREATMENT<\/strong><\/p>",
-            "txt_info": "<p>Hydrate, smooth, and de-puff the eye area with this nourishing, antioxidant-rich cream featuring green tea and apricot kernel. <\/p>",
-            "btn_txt": "SHOP NOW",
-            "btn_url": "shopify:\/\/products\/antioxidant-eye-cream"
+            "image": "shopify://shop_images/Untitled_design_-_2024-03-02T142813.092.png",
+            "title": "<p>Antioxidant Eye Cream <strong>POST LED TREATMENT</strong></p>",
+            "txt_info": "<p>Hydrate, smooth, and de-puff the eye area with this nourishing, antioxidant-rich cream featuring green tea and apricot kernel. </p>",
+            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_url": "shopify://products/antioxidant-eye-cream"
           }
         }
       },
@@ -211,7 +211,7 @@
             "poster_type": "",
             "bg_video": "",
             "mobile_bg_video": "",
-            "poster_image": "shopify:\/\/shop_images\/1683857591-image_48.jpg",
+            "poster_image": "shopify://shop_images/1683857591-image_48.jpg",
             "enable_overlay": true,
             "overlay_bg_color": "#000000",
             "overlay_opacity": 0.5,
@@ -274,19 +274,19 @@
         "title": "Doctor-formulated for results you can’t resist",
         "subtitle": "",
         "txt": "",
-        "htmltxt": "<p>Renew, hydrate, and firm your skin with our professional-grade skincare line that includes the Enzyme Powder Cleanser, Hyaluronic Acid Serum, Peptide Concentrate and Antioxidant Eye Cream.<\/p><br>\n<p>Pair this dynamic line with your Omnilux LED light therapy treatments to help:<\/p>\n<ul class=\"twocolumns\">\n<li>Brighten complexion<\/li>\n<li>Lock in essential hydration<\/li>\n<li>Even skin’s texture<\/li>\n<li>Restore fatigued skin<\/li>\n<li>Reduce the appearance of fine lines &amp; wrinkles<\/li>\n<li>Soothe redness &amp; inflammation<\/li>\n<\/ul>\n<p>Backed by nearly 20 years of aesthetics medicine expertise, world-renowned specialist Dr. Hany Abi Ghosn helped us carefully develop this 4-piece line with concentrated yet gentle ingredients.<\/p>",
+        "htmltxt": "<p>Renew, hydrate, and firm your skin with our professional-grade skincare line that includes the Enzyme Powder Cleanser, Hyaluronic Acid Serum, Peptide Concentrate and Antioxidant Eye Cream.</p><br>\n<p>Pair this dynamic line with your Omnilux LED light therapy treatments to help:</p>\n<ul class=\"twocolumns\">\n<li>Brighten complexion</li>\n<li>Lock in essential hydration</li>\n<li>Even skin’s texture</li>\n<li>Restore fatigued skin</li>\n<li>Reduce the appearance of fine lines &amp; wrinkles</li>\n<li>Soothe redness &amp; inflammation</li>\n</ul>\n<p>Backed by nearly 20 years of aesthetics medicine expertise, world-renowned specialist Dr. Hany Abi Ghosn helped us carefully develop this 4-piece line with concentrated yet gentle ingredients.</p>",
         "btn_txt": "",
         "btn_link": "",
         "btn_type": "outline",
         "btn_variant": "primary",
         "btn_size": "",
         "poster_type": "",
-        "bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
-        "mobile_bg_video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
-        "poster_image": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/1683857591-image_48.jpg?v=1684337840",
+        "bg_video": "https://cdn.shopify.com/videos/c/o/v/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "mobile_bg_video": "https://cdn.shopify.com/videos/c/o/v/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "poster_image": "https://cdn.shopify.com/s/files/1/0482/6736/2466/files/1683857591-image_48.jpg?v=1684337840",
         "btn_txt_watch": "LEARN MORE",
-        "watch_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
-        "watch_mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "watch_video_id": "https://cdn.shopify.com/videos/c/o/v/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "watch_mobile_video_id": "https://cdn.shopify.com/videos/c/o/v/485ffc73300e414b889c36ba9a6a17ff.mp4",
         "btn_type_watch": "outline",
         "btn_variant_watch": "primary",
         "btn_size_watch": "",
@@ -296,8 +296,8 @@
         "fluid_video_layout": true,
         "video_type": "local",
         "placement": "popup",
-        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
-        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "video_id": "https://cdn.shopify.com/videos/c/o/v/485ffc73300e414b889c36ba9a6a17ff.mp4",
+        "mobile_video_id": "https://cdn.shopify.com/videos/c/o/v/485ffc73300e414b889c36ba9a6a17ff.mp4",
         "video_btn_text": "Watch video",
         "section_bg_color": "#ffffff",
         "section_text_color": "#000000",
@@ -316,8 +316,8 @@
         "fluid_layout": false,
         "css_class": "shopledkit",
         "heading_txt": "Grab the full routine with just one click.",
-        "btn_txt": "SHOP THE LED ESSENTIALS bundle",
-        "btn_link": "shopify:\/\/products\/led-essentials-3-piece-kit",
+        "btn_txt": "SHOP & SAVE 15%!",
+        "btn_link": "shopify://products/led-essentials-3-piece-kit",
         "btn_type": "",
         "btn_variant": "dark",
         "btn_size": "",
@@ -345,12 +345,12 @@
             "heading_txt": "Uncover even better skin.",
             "max_width_enabled": true,
             "max_width": 530,
-            "txt": "<p>Our trusted LED light therapy treatments just scored an upgrade. Pair the 4-piece line with your Omnilux Contour or Omnilux Men devices to enhance the firming and brightening benefits that users already love.<\/p>",
+            "txt": "<p>Our trusted LED light therapy treatments just scored an upgrade. Pair the 4-piece line with your Omnilux Contour or Omnilux Men devices to enhance the firming and brightening benefits that users already love.</p>",
             "step_heading": "Clinical studies from Omnilux Contour users showed that:",
-            "steps_captions": "98% agreed their skin felt <em>firmer<\/em>.\n96% agreed their fine lines appeared <em>less visible<\/em>.\n95% agreed their skin was <em>brighter<\/em> and <em>plumper<\/em>.",
-            "steps_captions_2": "<p><em>* After 3 treatments per week for 4 weeks<\/em><\/p>",
-            "btn_txt": "SHOP THE LINE",
-            "btn_link": "shopify:\/\/collections\/all",
+            "steps_captions": "98% agreed their skin felt <em>firmer</em>.\n96% agreed their fine lines appeared <em>less visible</em>.\n95% agreed their skin was <em>brighter</em> and <em>plumper</em>.",
+            "steps_captions_2": "<p><em>* After 3 treatments per week for 4 weeks</em></p>",
+            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_link": "shopify://collections/all",
             "triggerbtn_txt": "",
             "triggerto": "",
             "btn_type": "",
@@ -362,7 +362,7 @@
             "btn_size_watch": "",
             "link_txt": "",
             "link_url": "",
-            "image": "shopify:\/\/shop_images\/Untitled_design_110.png",
+            "image": "shopify://shop_images/Untitled_design_110.png",
             "alignment": "text-left",
             "image_alignment": "left"
           }
@@ -389,12 +389,12 @@
             "heading_txt": "Uncover even better skin.",
             "max_width_enabled": true,
             "max_width": 530,
-            "txt": "<p>Our trusted LED light therapy treatments just scored an upgrade. Pair the 3-step line with your Omnilux Contour or Omnilux Men devices to enhance the firming and brightening benefits that users already love.<\/p>",
+            "txt": "<p>Our trusted LED light therapy treatments just scored an upgrade. Pair the 3-step line with your Omnilux Contour or Omnilux Men devices to enhance the firming and brightening benefits that users already love.</p>",
             "step_heading": "Clinical studies from Omnilux Contour users showed that:",
-            "steps_captions": "98% agreed their skin felt <em>firmer<\/em>.\n96% agreed their fine lines appeared <em>less visible<\/em>.\n95% agreed their skin was <em>brighter<\/em> and <em>plumper<\/em>.",
-            "steps_captions_2": "<p><em>* After 3 treatments per week for 4 weeks<\/em><\/p>",
+            "steps_captions": "98% agreed their skin felt <em>firmer</em>.\n96% agreed their fine lines appeared <em>less visible</em>.\n95% agreed their skin was <em>brighter</em> and <em>plumper</em>.",
+            "steps_captions_2": "<p><em>* After 3 treatments per week for 4 weeks</em></p>",
             "btn_txt": "SHOP THE LINE",
-            "btn_link": "https:\/\/omniluxled.com\/collections\/skin-care",
+            "btn_link": "https://omniluxled.com/collections/skin-care",
             "triggerbtn_txt": "",
             "triggerto": "",
             "btn_type": "",
@@ -406,7 +406,7 @@
             "btn_size_watch": "",
             "link_txt": "",
             "link_url": "",
-            "image": "shopify:\/\/shop_images\/Untitled_design_110.png",
+            "image": "shopify://shop_images/Untitled_design_110.png",
             "alignment": "text-left",
             "image_alignment": "right"
           }
@@ -438,12 +438,12 @@
             "heading_txt": "Newest addition: <br>Antioxidant Eye Cream",
             "max_width_enabled": true,
             "max_width": 530,
-            "txt": "<p>Bye, bye, bags! Reveal brighter, younger-looking skin with this nourishing, antioxidant-rich eye cream. Featuring ingredients like green tea, avocado oil, and apricot kernel oil, this soothing under eye cream is designed to use post-LED treatment for extra firming effects. <\/p><p><\/p>",
+            "txt": "<p>Bye, bye, bags! Reveal brighter, younger-looking skin with this nourishing, antioxidant-rich eye cream. Featuring ingredients like green tea, avocado oil, and apricot kernel oil, this soothing under eye cream is designed to use post-LED treatment for extra firming effects. </p><p></p>",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
-            "btn_txt": "SHOP NOW",
-            "btn_link": "shopify:\/\/products\/antioxidant-eye-cream",
+            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_link": "shopify://products/antioxidant-eye-cream",
             "triggerbtn_txt": "",
             "triggerto": "",
             "btn_type": "",
@@ -455,7 +455,7 @@
             "btn_size_watch": "",
             "link_txt": "",
             "link_url": "",
-            "image": "shopify:\/\/shop_images\/Web_Mini_HP_19.png",
+            "image": "shopify://shop_images/Web_Mini_HP_19.png",
             "alignment": "text-left",
             "image_alignment": "right"
           }
@@ -495,16 +495,16 @@
         "poster_type": "",
         "bg_video": "",
         "mobile_bg_video": "",
-        "poster_image": "shopify:\/\/shop_images\/testimonialdesktop.png",
-        "image_mobile": "shopify:\/\/shop_images\/testimonialmobile.png",
+        "poster_image": "shopify://shop_images/testimonialdesktop.png",
+        "image_mobile": "shopify://shop_images/testimonialmobile.png",
         "disable_overlay": true,
         "overlay_bg_color": "#000000",
         "overlay_opacity": 0.3,
         "fluid_video_layout": true,
         "video_type": "local",
         "placement": "popup",
-        "video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/fef82764e3a946918d9a98993d598af7.mp4",
-        "mobile_video_id": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/fef82764e3a946918d9a98993d598af7.mp4",
+        "video_id": "https://cdn.shopify.com/videos/c/o/v/fef82764e3a946918d9a98993d598af7.mp4",
+        "mobile_video_id": "https://cdn.shopify.com/videos/c/o/v/fef82764e3a946918d9a98993d598af7.mp4",
         "section_bg_color": "rgba(0,0,0,0)",
         "section_text_color": "#ffffff",
         "alignment": "text-center",

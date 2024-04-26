@@ -71,7 +71,7 @@
         "section_star_anchor_id": "#hoow-reviws",
         "section_title": "Meet <em>the</em> supercharged eye mask",
         "section_description": "Precision LED therapy diminishes fine lines, depuffs under eye bags, and brightens dark circles for a more rejuvenated complexion.",
-        "section_btn_text": "SHOP & SAVE 15!",
+        "section_btn_text": "SHOP & SAVE 15%!",
         "section_btn_url": "#hoox-shop",
         "section_shipping_text": "FREE Shipping | 30-Day Money-Back Guarantee",
         "section_main_image": "shopify://shop_images/Web_Mini_HP_25.png",
@@ -161,7 +161,7 @@
       ],
       "settings": {
         "hoox_safe_btn_url": "#hoox-shop",
-        "hoox_safe_btn_text": "SHOP & SAVE 15!",
+        "hoox_safe_btn_text": "SHOP & SAVE 15%!",
         "hoox_safe_guarante_text": "FREE Shipping | 30-Day Money-Back Guarantee",
         "section_headline": ""
       }
@@ -814,7 +814,7 @@
     "974b5ac9-e0f9-4a1c-839b-7ee8f492f953": {
       "type": "hoox-sticky-bar",
       "settings": {
-        "button_title": "SHOP & SAVE 15!",
+        "button_title": "SHOP & SAVE 15%!",
         "button_url": "#hoox-shop"
       }
     },
@@ -828,7 +828,7 @@
         "hoox_protect_image_mobile": "shopify://shop_images/Hoox_LP_Footer_Image_1.png",
         "hoox_protect_title": "Younger-looking skin is waiting",
         "hoox_protect_btn_url": "#hoox-shop",
-        "hoox_protect_btn_text": "SHOP & SAVE 15!",
+        "hoox_protect_btn_text": "SHOP & SAVE 15%!",
         "hoox_protect_shipping": "FREE Shipping | 30-Day Money-Back Guarantee"
       }
     }
