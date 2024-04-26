@@ -343,6 +343,7 @@
                     {% endif %}
                   {% endfor %}
                   <div class="priceshow" style="display:none">{{ current_variant.price }} - {{ product.compare_at_price }}</div>
+                  {% render 'price-with-taxes' %}
                   <div class="price-wrapper mt-2 d-flex align-items-center flex-wrap test99">
                     
                     {%- if current_variant.compare_at_price > current_variant.price -%}

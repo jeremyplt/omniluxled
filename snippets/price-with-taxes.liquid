@@ -1,0 +1,79 @@
+{% comment %} 
+    Format: [COUNTRY_CODE] | [TAXE_PERCENTAGE] | [IS_TAX_INCLUDED] 
+{% endcomment %}
+
+{% capture tax_data %}
+    NZ|0.15,
+    AU|0.10,
+    AD|0,045,
+    SZ|0.077,
+    LI|0.077,
+    LU|0.16,
+    BA|0.17,
+    MT|0.18,
+    XK|0.18,
+    DE|0.19,
+    CY|0.19,
+    AL|0.21,
+    AT|0.21,
+    BY|0.21,
+    BG|0.21,
+    FR|0.21,
+    EE|0.21,
+    UK|0.21,
+    TR|0.21,
+    SK|0.21,
+    RS|0.21,
+    RU|0.21,
+    MC|0.21,
+    MD|0.21,
+    ES|0.21,
+    NL|0.21,
+    ME|0.21,
+    LT|0.21,
+    LV|0.21,
+    BE|0.21,
+    SI|0.22,
+    IT|0.22,
+    PT|0.23,
+    PL|0.23,
+    IE|0.23,
+    IS|0.24,
+    GR|0.24,
+    FI|0.24,
+    SE|0.25,
+    NO|0.25,
+    DK|0.25,
+    HR|0.25,
+    CA|0.00,
+    HU|0.27,
+    CH|0.081
+{% endcapture %}
+
+{% assign no_price_display_countries = "US,CA" | split: "," %}
+
+{% assign tax_rules = tax_data | split: ',' %}
+{% assign customer_country = 'UK' %}  <!-- This should be dynamically set -->
+
+{% for rule in tax_rules %}
+    {% assign clean_rule = rule | strip_newlines | strip %}
+    {% assign details = clean_rule | split: '|' %}
+    {% if details[0] == customer_country %}
+        {% assign tax_rate = details[1] %}
+    {% endif %}
+{% endfor %}
+
+{% assign product_price = product.price %}
+{% assign tax_amount = product_price | times: tax_rate %}
+
+{% if tax_rate %}
+    {% assign final_price = product_price | plus: tax_amount %}
+    {% assign price_display = "Tax Incl." %}
+{% elsif no_price_display_countries contains customer_country %}
+    {% assign price_display = blank %}
+{% else %}
+    {% assign price_display = "Tax Excl." %}
+{% endif %}
+
+<p>tax_rate: {{ tax_rate }}</p>
+<p>Price: {{ final_price | money }} {% if price_display != blank %}{{ price_display }}{% endif %}</p>
