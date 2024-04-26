@@ -1191,12 +1191,6 @@
         "settings": {
         }
       },
-      "5792010825272225357": {
-        "type": "shopify:\/\/apps\/dual-price-display-pro\/blocks\/app-block\/fbd96439-f105-44a6-b4c5-51766faddec4",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "11724500921838622758": {
         "type": "shopify:\/\/apps\/frequently-bought-together\/blocks\/app-embed-block\/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
         "disabled": false,
@@ -1212,6 +1206,12 @@
       "qikify-mobilemenu-1702437136": {
         "type": "shopify:\/\/apps\/qikify-mobile-menu-navigation\/blocks\/app-embed\/8e0d172b-7f05-43c9-a50d-bc2bff0a5f0a",
         "disabled": false,
+        "settings": {
+        }
+      },
+      "5792010825272225357": {
+        "type": "shopify:\/\/apps\/dual-price-display-pro\/blocks\/app-block\/fbd96439-f105-44a6-b4c5-51766faddec4",
+        "disabled": true,
         "settings": {
         }
       }
