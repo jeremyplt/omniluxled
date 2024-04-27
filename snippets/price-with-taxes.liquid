@@ -53,7 +53,7 @@
 {% assign no_price_display_countries = "US,CA" | split: "," %}
 
 {% assign tax_rules = tax_data | split: ',' %}
-{% assign customer_country = localization.country.iso_code %}  <!-- This should be dynamically set -->
+{% assign customer_country = localization.country.iso_code %}
 
 {% for rule in tax_rules %}
     {% assign clean_rule = rule | strip_newlines | strip %}
@@ -64,16 +64,54 @@
 {% endfor %}
 
 {% assign product_price = product.price %}
+{% assign product_compare_at_price = product.compare_at_price %}
 {% assign tax_amount = product_price | times: tax_rate %}
+{% assign compare_tax_amount = product_compare_at_price | times: tax_rate %}
 
 {% if tax_rate %}
     {% assign final_price = product_price | plus: tax_amount %}
+    {% assign final_compare_at_price = product_compare_at_price | plus: compare_tax_amount %}
     {% assign price_display = "Tax Incl." %}
 {% elsif no_price_display_countries contains customer_country %}
+    {% assign final_price = product_price %}
     {% assign price_display = blank %}
 {% else %}
+    {% assign final_price = product_price %}
     {% assign price_display = "Tax Excl." %}
 {% endif %}
 
-<p>tax_rate: {{ tax_rate }}</p>
-<p>Price: {{ final_price | money }} {% if price_display != blank %}{{ price_display }}{% endif %}</p>
+{% if product_compare_at_price > product_price %}
+    {% assign on_sale = true %}
+{% else %}
+    {% assign on_sale = false %}
+{% endif %}
+
+<span class="price-with-taxes">
+    {% if on_sale %}
+        <span class="price__value compare-at-price">{{ final_compare_at_price | money }}</span>
+    {% endif %}
+    {% if customer_country == "LU" %}
+        <span class="price__tax--included">
+            <span class="price__value {% if on_sale %}price--sale{% else %}price--normal{% endif %}">
+                {{ final_price | money }}
+            </span> 
+            <span class="price__tax">Tax Incl.</span>
+        </span>
+
+        <span class="price__tax--excluded">
+            <span class="price__value {% if on_sale %}price--sale{% else %}price--normal{% endif %}">
+                {{ product_price | money }}
+            </span> 
+            <span class="price__tax">Tax Excl.</span>
+        </span>
+    {% else %}
+    <span class="{% if price_display == "Tax Incl." %}price__tax--included{% elsif price_display == "Tax Excl." %}price__tax--excluded{% else %}price__tax--no-display{% endif %}">
+        <span class="price__value {% if on_sale %}price--sale{% else %}price--normal{% endif %}">
+            {{ final_price | money }}
+        </span> 
+        {% if price_display != blank %}
+            <span class="price__tax">{{ price_display }}</span>
+        {% endif %}
+    </span>
+    {% endif %}
+</span>

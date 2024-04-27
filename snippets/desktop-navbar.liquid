@@ -129,23 +129,27 @@
                                                                             {% capture product_data_attribute %}data-oke-reviews-product-id="shopify-{{ current_product.id }}"{% endcapture %} 
                                                          
                                                                             {% if current_product.metafields.okendo.StarRatingSnippet %}<div data-oke-star-rating {{ product_data_attribute }} style="display:flex">{{ current_product.metafields.okendo.StarRatingSnippet }}</div>{% endif %}
+
+                                                                            <div class="btn-card-hide">
+                                                                                {% render 'price-with-taxes', product: current_variant %}
+                                                                            </div>
                                                           
-                                                                            {% if current_variant and current_variant.compare_at_price > current_variant.price %}
+                                                                            {% comment %} {% if current_variant and current_variant.compare_at_price > current_variant.price %}
                                                                                 <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
                                                                             {% elsif product.compare_at_price > product.price %}
                                                                                 <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
                                                                             {% endif %}
                                                                             <span class="price" data-currentPrice data-variant-price="{% if current_variant %}{{current_variant.price}}{% else %}{{current_product.price}}{% endif %}">
-                                                                            {% if current_variant %}
-                                                                            {{ current_variant.price | money }}
-                                                                            {% elsif current_product.price_varies %}
-                                                                                {% assign minPrice = current_product.price_min | money %}
-                                                                                {% assign maxPrice = current_product.price_max | money %}
-                                                                                {{ 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape }}
-                                                                            {% else %}
-                                                                                {{ current_product.price | money }}
-                                                                            {% endif %}
-                                                                            </span>
+                                                                                {% if current_variant %}
+                                                                                {{ current_variant.price | money }}
+                                                                                {% elsif current_product.price_varies %}
+                                                                                    {% assign minPrice = current_product.price_min | money %}
+                                                                                    {% assign maxPrice = current_product.price_max | money %}
+                                                                                    {{ 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape }}
+                                                                                {% else %}
+                                                                                    {{ current_product.price | money }}
+                                                                                {% endif %}
+                                                                            </span> {% endcomment %}
                                                                             <div class="add-cart-form">
                                                                                 {% assign max = 80 %}
                                                                                 {% assign diff = max | minus: min %}

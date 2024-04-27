@@ -46,7 +46,8 @@
         </div>
        <div class="col-12 pb-3 rightcolprice">
          <a href="{{ all_products[section.settings.home_featured_product].url}}">
-              {% if current_variant and current_variant.compare_at_price > current_variant.price %}
+            {% render 'price-with-taxes', product: product %}
+              {% comment %} {% if current_variant and current_variant.compare_at_price > current_variant.price %}
                 <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
               {% elsif product.compare_at_price > product.price %}
                 <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
@@ -61,7 +62,7 @@
                 {% else %}
                   {{ product.price | money }}
                 {% endif %}
-              </span>
+              </span> {% endcomment %}
         {% unless product.tags contains "no_free_shipping" %}
                               <span class="free-shipping text-uppercase fw-bold font-size-md ls-0" style="line-height: 1.7857142857;">+ free shipping*</span>
                             {% endunless %}

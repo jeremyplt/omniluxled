@@ -306,7 +306,8 @@
                                   </div>
                                 </div>
                                 <div class="text-end cart-total-price ps-3 fw-normal">
-                                  {% if item.variant.price < item.variant.compare_at_price %}
+                                  {% render 'price-with-taxes', product: item.variant %}
+                                  {% comment %} {% if item.variant.price < item.variant.compare_at_price %}
                                     <span class="item__compare-at-price">
                                       {{ item.variant.compare_at_price | times: item.quantity | money }}
                                     </span>
@@ -326,8 +327,8 @@
                                         {% endif %}
                                       </div>
                                     {% endif %}
-                                  </span>
-                                </div>
+                                  </span> {% endcomment %}
+                                </div> 
                               </div>
                             </div>
                           </div>

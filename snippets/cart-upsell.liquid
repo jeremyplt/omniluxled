@@ -125,7 +125,9 @@
                                                         {% endunless %}
                                                     </div>
 
-                                                    <div class="price mt-1" data-currentPrice data-variant-price="{{upsell_variant.price}}" style="line-height: 1.2142857143;">
+                                                    {% render 'price-with-taxes', product: upsell_variant %}
+
+                                                    {% comment %} <div class="price mt-1" data-currentPrice data-variant-price="{{upsell_variant.price}}" style="line-height: 1.2142857143;">
                                                         {% if upsell_variant.price < upsell_variant.compare_at_price %}
                                                             <span class="item__compare-at-price">{{ upsell_variant.compare_at_price | money }}</span>
                                                         {% endif %}
@@ -133,7 +135,7 @@
                                                         {{ upsell_variant.price | money }}
                                                         </span>
 
-                                                    </div>
+                                                    </div> {% endcomment %}
                                                 </div>
                                                 <div class="cart-item-add mt-2">
                                                     <button class="addtocartbtn align-items-center btn-link d-flex font-size-md fw-bold ls-1 px-0 text-uppercase" style="line-height: 1.2857142857;"
@@ -269,7 +271,9 @@
                                                     {% endunless %}
                                                 </div>
 
-                                                <div class="price mt-1" data-currentPrice data-variant-price="{{upsell_variant.price}}" style="line-height: 1.2142857143;">
+                                                {% render 'price-with-taxes', product: upsell_variant %}
+
+                                                {% comment %} <div class="price mt-1" data-currentPrice data-variant-price="{{upsell_variant.price}}" style="line-height: 1.2142857143;">
                                                     {% if upsell_variant.price < upsell_variant.compare_at_price %}
                                                         <span class="item__compare-at-price">{{ upsell_variant.compare_at_price | money }}</span>
                                                     {% endif %}
@@ -277,7 +281,7 @@
                                                     {{ upsell_variant.price | money }}
                                                     </span>
 
-                                                </div>
+                                                </div> {% endcomment %}
                                             </div>
                                             <div class="cart-item-add mt-2">
                                                 <button class="addtocartbtn align-items-center btn-link d-flex font-size-md fw-bold ls-1 px-0 text-uppercase" style="line-height: 1.2857142857;"

@@ -75,6 +75,7 @@
 
 .mega-menu-item-call-second {
     width: 16%;
+    position: relative;
 }
 
 .card-title.shop-all {
@@ -154,7 +155,7 @@
     color: #000000;
 }
 
-.mega_menu_container:hover .price, .mega_menu_container .add-cart-form {
+.mega_menu_container:hover .price, .mega_menu_container .add-cart-form, .mega_menu_container:hover .price-with-taxes {
     display: none !important;
 }
 

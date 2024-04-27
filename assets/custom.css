@@ -2926,3 +2926,39 @@ html button.cc-btn.cc-settings.isense-cc-btn.isense-cc-settings {
 html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
   background-color: black !important;
 }
+
+/* Price with taxes */
+
+.price-with-taxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.price__tax--included ~ .price__tax--excluded  {
+  font-size: 12px;
+}
+
+.product-details-wrapper .price__tax--included .price__value, .product-details-wrapper .price__tax--no-display .price__value {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mega-menu-item-call .price__tax--included, .dropdown-menu-container .price__tax--included {
+  font-size: 14px;
+}
+
+.price__value.compare-at-price {
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+
+.cart-total-price .price-with-taxes {
+  justify-content: flex-end;
+}
+
+#upsell_accordion .price__tax--included {
+  font-size: 14px;
+}
