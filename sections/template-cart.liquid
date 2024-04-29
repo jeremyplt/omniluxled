@@ -229,7 +229,7 @@
                             <span class="font-size-lg-18 ls-0 fw-lighter my-0">Subtotal</span>
                         </div>
                         <div class="col-6 text-end">
-                            <span class="font-size-lg-18 my-0 fw-semibold" data-cartTotal>{{ cart.total_price | money }}</span>
+                            <span class="font-size-lg-18 my-0 fw-semibold" data-cartTotal>{% render 'price-with-taxes', product: null, price: cart.total_price %}</span>
                         </div>
                     </div>
                     <div class="row" id="preTax">

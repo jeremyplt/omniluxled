@@ -2930,7 +2930,7 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
 /* Price with taxes */
 
 .price-with-taxes {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 3px;
@@ -2961,4 +2961,10 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
 
 #upsell_accordion .price__tax--included {
   font-size: 14px;
+}
+
+.cbb-frequently-bought-recommendations-wrap .tax {
+  font-size: 12px !important;
+  font-weight: normal !important;
+  margin-left: 5px !important;
 }

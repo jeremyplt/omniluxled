@@ -77,7 +77,7 @@
 
 .hoox-shop__afterpay {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 8px;
     row-gap: 14px;
@@ -586,8 +586,6 @@
     }
 
     .hoox-shop__afterpay {
-        max-width: 442px;
-        margin-left: auto;
     }
 
     .hoox-shop__afterpay-text {

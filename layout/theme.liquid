@@ -1,6 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+    <script>
+      window.customerCountry = "{{ localization.country.iso_code }}"
+      window.globalVariables.customerCountry = "{{ localization.country.iso_code }}"
+    </script>
     
     {% render 'skio-head' %}
 
