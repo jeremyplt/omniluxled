@@ -140,17 +140,27 @@ function calculatePriceWithTaxes(price, country, showTaxes = false) {
 
   const noPriceDisplayCountries = ["US", "CA"];
 
-  if (
-    (!taxData[country] && noPriceDisplayCountries.includes(country)) ||
-    (!taxData[country] && !showTaxes)
-  )
-    return price;
-  if (!taxData[country]) return price + "<span class='tax'>Excl. Tax</span>";
+  let taxRate = taxData[country];
+  let finalPrice = price;
 
-  return (
-    price * (1 + taxData[country]) +
-    (showTaxes ? "<span class='tax'>Incl. Tax</span>" : "")
+  if (taxRate !== undefined && showTaxes) {
+    finalPrice *= 1 + taxRate;
+    finalPrice = Shopify.formatMoney(
+      finalPrice,
+      window.globalVariables.money_format
+    );
+    return finalPrice + "<span class='tax'> Incl. Tax</span>";
+  } else if (taxRate !== undefined) {
+    finalPrice *= 1 + taxRate;
+  }
+
+  finalPrice = Shopify.formatMoney(
+    finalPrice,
+    window.globalVariables.money_format
   );
+  return noPriceDisplayCountries.includes(country)
+    ? finalPrice
+    : finalPrice + (showTaxes ? "<span class='tax'> Excl. Tax</span>" : "");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
