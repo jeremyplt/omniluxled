@@ -578,6 +578,8 @@ export class SkioPlanPickerComponent extends LitElement {
     };
 
     if (!taxData[country]) return price;
+    console.log("taxData[country]", taxData[country]);
+    console.log("price", price);
     return price * (1 + taxData[country]);
   }
 
@@ -772,7 +774,7 @@ export class SkioPlanPickerComponent extends LitElement {
                           >
                           <span skio-compare-at-price class="concept--two"
                             >${this.moneyFormatter.format(
-                              calculatePriceWithTaxes(
+                              this.calculatePriceWithTaxes(
                                 this.selectedVariant.price / 100,
                                 window.customerCountry
                               )
