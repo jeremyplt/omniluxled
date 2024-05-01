@@ -96,7 +96,7 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "ADD TO CART & SAVE",
+      "add_to_cart": "ADD TO CART",
       "upsell_add": "Add",
       "description": "Description",
       "on_sale": "Sale",
