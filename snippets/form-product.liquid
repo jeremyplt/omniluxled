@@ -204,7 +204,8 @@
                   {% if flag == true %}
                     GO TO PURCHASE ORDER
                   {% else %}
-                    {{ 'products.product.add_to_cart' | t }}
+                    {% comment %} {{ 'products.product.add_to_cart' | t }} {% endcomment %}
+                    ADD TO CART & SAVE
                   {% endif %}
                 {%- else -%}
                   {{ 'products.product.sold_out' | t }}
