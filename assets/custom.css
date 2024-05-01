@@ -2928,6 +2928,7 @@ span.firstPrice {
   margin-bottom: 10px;
   font-weight: 600;
   text-align: center;
+  display: none;
 }
 
 /* .swiper-wrapper .position-relative.d-flex.price-with-btn{
@@ -2940,4 +2941,8 @@ span.firstPrice {
 
 div#shopify-section-template--16763463532706__4f5f33ca-10a4-41a3-b40c-038b76049541 {
     display: none;
+}
+
+[data-type="add-to-cart-form"] {
+  margin: 0 !important;
 }

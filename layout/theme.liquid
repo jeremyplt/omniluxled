@@ -559,10 +559,12 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
           document.querySelectorAll(".subscription-info").forEach(sub => {
             sub.classList.add("show")
           })
+          document.querySelector(".saletext").style.display = "block"
       } else {
         document.querySelectorAll(".subscription-info").forEach(sub => {
           sub.classList.remove("show")
         })
+        document.querySelector(".saletext").style.display = "none"
       }
     })
 
