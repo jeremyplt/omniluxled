@@ -299,7 +299,7 @@
           <div class="col-6">
 
             {%- if settings.enable_product_card_swatches -%}
-              <div class="card-footer bg-transparent border-0 p-0">
+              <div class="card-footer bg-transparent border-0 p-0 {% if template contains 'collection' %}colpage{% endif %}">
                 {%- render 'form-product-grid-2'
                   , product: product
                   , current_variant: current_variant -%}
