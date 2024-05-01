@@ -3,6 +3,14 @@
 {% endif %}
 <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
   <noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
+  {% stylesheet %}
+  .cutsom-slider .card-carousel .swiper-slide {
+    margin: 0px 2px !important;
+}
+  .cutsom-slider .card-carousel .swiper-slide:first-child {
+     margin-left: 0px !important; 
+}
+  {% endstylesheet %}
   {% assign collection_grid_type = section.settings.collection_grid_type %}
   {% assign productExcludeTag = settings.product_exclude_tag_text %}
 
@@ -24,7 +32,7 @@
               <div class="container">
                   <div class="row">
                       <div class="col-12">
-                        <slider-element class="arrow-center swiper-container carousel d-block position-relative arrow-inside">
+                        <slider-element class="arrow-center swiper-container carousel d-block position-relative arrow-inside cutsom-slider">
                             <div class="swiper swiper-slider featured-collection-slider card-carousel" data-slider='{
                                   "loop": false,
                                   "shortSwipes": false,

@@ -1,3 +1,12 @@
+<style>
+  .custom-flex{
+    display: flex !important;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  
+</style>
+
 {% liquid
   assign eu_countries = "AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LT,LU,MT,NL,PL,PT,RO,SK,SI,ES,SE,NO"
   assign eu_countries = eu_countries | split: ','
@@ -76,7 +85,7 @@
       </div>
     </noscript>
     <div class="row">
-      <div class="col-12 d-flex">
+      <div class="col-12 d-flex custom-flex">
           {% assign prefixes = "us,uk,ca,au,eu,nz" | split: "," %}
 {% comment %}
           {% if localization.country == "France" and product.metafields.unavailable.france == true %}

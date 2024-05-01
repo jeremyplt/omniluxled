@@ -690,6 +690,9 @@ p.hoox-shop__upsell-description{font-style:italic;}
 }
 
 @media (max-width: 600px) {
+  .saletext{
+    text-align:left !important;
+  }
   .template-page.anti-acne
     .desktopreviewstitle
     .oke-sr-count.oke-sr-count--brackets {
@@ -2902,7 +2905,11 @@ span.firstPrice {
     display: block;
     min-width: 124px;
 }
+.formatted-list ul.checkmarks li:before{
+	content: "✔" !important;
+    width: 0 !important;
 
+}
 .item-price {
   display: flex !important;
   align-items: flex-end;
@@ -2916,20 +2923,21 @@ span.firstPrice {
 }
 .saletext{
   margin-top: 7px;
-  font-size: 13px;
+  font-size: 12px;
   color: red;
   margin-bottom: 10px;
   font-weight: 600;
   text-align: center;
 }
 
-.swiper-wrapper .position-relative.d-flex.price-with-btn{
+/* .swiper-wrapper .position-relative.d-flex.price-with-btn{
        flex-direction: column;
 }
-
-
-
 .swiper-wrapper .position-relative.d-flex.price-with-btn .col-12.d-flex {
     justify-content: end;
     display: flex;
+} */
+
+div#shopify-section-template--16763463532706__4f5f33ca-10a4-41a3-b40c-038b76049541 {
+    display: none;
 }

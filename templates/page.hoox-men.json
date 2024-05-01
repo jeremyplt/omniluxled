@@ -67,6 +67,8 @@
         "section_star_text": "275K+ Glowing Customers",
         "section_star_anchor_id": "#hoow-reviws",
         "section_title": "One tool. Powerful results.",
+        "subtitle": "<strong>$45 USD off 1 device: MOM1</strong><br><strong>$110 USD off 2 devices: MOM2</strong><br><strong>$200 USD off 3 devices: MOM3</strong><br>",
+        "mobilesubtitle": "<strong>$45 USD off 1 device: MOM1</strong><br><strong>$110 USD off 2 devices: MOM2</strong><br><strong>$200 USD off 3 devices: MOM3</strong><br>",
         "section_description": "For men who want to simplify their routine, yet enjoy all the benefits of high-performance skincare.",
         "section_btn_text": "SHOP & SAVE!",
         "section_btn_url": "#hoox-shop",
@@ -468,7 +470,7 @@
         "shop_product_upsell_description": "Enhances the effects of Omnilux Men when used during treatment.",
         "subscription-info-text": "",
         "shop_product_upsell_stars": "<svg width=\"96\" height=\"17\" viewbox=\"0 0 96 17\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8 0.399902L10.3511 5.16383L15.6085 5.92777L11.8042 9.63597L12.7023 14.872L8 12.3999L3.29772 14.872L4.19577 9.63597L0.391548 5.92777L5.64886 5.16383L8 0.399902Z\" fill=\"#99552B\"></path>\n<path d=\"M28 0.399902L30.3511 5.16383L35.6085 5.92777L31.8042 9.63597L32.7023 14.872L28 12.3999L23.2977 14.872L24.1958 9.63597L20.3915 5.92777L25.6489 5.16383L28 0.399902Z\" fill=\"#99552B\"></path>\n<path d=\"M48 0.399902L50.3511 5.16383L55.6085 5.92777L51.8042 9.63597L52.7023 14.872L48 12.3999L43.2977 14.872L44.1958 9.63597L40.3915 5.92777L45.6489 5.16383L48 0.399902Z\" fill=\"#99552B\"></path>\n<path d=\"M68 0.399902L70.3511 5.16383L75.6085 5.92777L71.8042 9.63597L72.7023 14.872L68 12.3999L63.2977 14.872L64.1958 9.63597L60.3915 5.92777L65.6489 5.16383L68 0.399902Z\" fill=\"#99552B\"></path>\n<path d=\"M88 0.399902L90.3511 5.16383L95.6085 5.92777L91.8042 9.63597L92.7023 14.872L88 12.3999L83.2977 14.872L84.1958 9.63597L80.3915 5.92777L85.6489 5.16383L88 0.399902Z\" fill=\"#99552B\"></path>\n</svg>",
-        "shop_gallery_bagde": "SIGN UP & SAVE 10%"
+        "shop_gallery_bagde": "SAVE UP TO $200!"
       }
     },
     "d55c37d3-2303-4327-88c7-dd492dffa149": {

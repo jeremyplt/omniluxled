@@ -3,7 +3,9 @@
     border-bottom: 1px solid var(--hoox-color-black);
 }
 
-
+.salet{
+  color:red !important;
+}
 .hoox-hero__wrapper {
     display: flex;
     flex-direction: column;
@@ -135,11 +137,14 @@
     .hoox-hero {
         border-bottom: unset;
     }
-
+    .hoox-hero__btn-wrapper.test66 .px-4.px-md-0.caption_txt.fw-normal.mb-1.pb-2.sale_text p{
+    font-size: 20px;
+    letter-spacing: 0px;
+}
     .hoox-hero__wrapper {
         flex-direction: row;
         padding: 0;
-        height: 566px;
+        height: 655px;
         position: relative;
         background: linear-gradient(182deg, rgba(254, 253, 249, 0.80) 2.42%, rgba(254, 253, 249, 0.00) 46.58%), linear-gradient(96deg, #F7DAC6 4.81%, #F9ECD9 55.75%);
     }

@@ -13,9 +13,9 @@
     color: #fff;
 }
 
-#slide1 {
+/* #slide1 {
     display: none !important;
-}
+} */
 
 @media (min-width: 1024px) {
     .hoox-promo-bar {

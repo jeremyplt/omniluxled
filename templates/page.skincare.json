@@ -143,7 +143,7 @@
             "image": "shopify://shop_images/Untitled_design_-_2024-03-02T142748.417.png",
             "title": "<p>Enzyme Powder Cleanser <strong>PRE LED TREATMENT</strong></p>",
             "txt_info": "<p>Cleanse, brighten, and improve texture with this gently exfoliating cleanser enriched with green tea, rice powder, and enzymes.</p>",
-            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_txt": "SAVE 15%",
             "btn_url": "shopify://products/enzyme-powder-cleanser"
           }
         },
@@ -153,7 +153,7 @@
             "image": "shopify://shop_images/Untitled_design_-_2024-03-02T142739.780.png",
             "title": "<p>Hyaluronic Acid Serum <strong>DURING LED TREATMENT</strong></p>",
             "txt_info": "<p>This serum amplifies your LED treatments with hyaluronic acid and niacinamide to hydrate, plump, and calm the skin.</p>",
-            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_txt": "SAVE 15%",
             "btn_url": "https://omniluxled.com/products/hyaluronic-acid-serum"
           }
         },
@@ -163,7 +163,7 @@
             "image": "shopify://shop_images/Untitled_design_-_2024-03-02T142757.634.png",
             "title": "<p>Peptide Concentrate <strong>POST LED TREATMENT</strong></p>",
             "txt_info": "<p>Active peptides Matrixyl and Argireline help diminish fine lines and signs of fatigue, while soothing and firming the skin. </p>",
-            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_txt": "SAVE 15%",
             "btn_url": "https://omniluxled.com/products/peptide-concentrate"
           }
         },
@@ -173,7 +173,7 @@
             "image": "shopify://shop_images/Untitled_design_-_2024-03-02T142813.092.png",
             "title": "<p>Antioxidant Eye Cream <strong>POST LED TREATMENT</strong></p>",
             "txt_info": "<p>Hydrate, smooth, and de-puff the eye area with this nourishing, antioxidant-rich cream featuring green tea and apricot kernel. </p>",
-            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_txt": "SAVE 15%",
             "btn_url": "shopify://products/antioxidant-eye-cream"
           }
         }
@@ -349,7 +349,7 @@
             "step_heading": "Clinical studies from Omnilux Contour users showed that:",
             "steps_captions": "98% agreed their skin felt <em>firmer</em>.\n96% agreed their fine lines appeared <em>less visible</em>.\n95% agreed their skin was <em>brighter</em> and <em>plumper</em>.",
             "steps_captions_2": "<p><em>* After 3 treatments per week for 4 weeks</em></p>",
-            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_txt": "shop the sale",
             "btn_link": "shopify://collections/all",
             "triggerbtn_txt": "",
             "triggerto": "",
@@ -442,7 +442,7 @@
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
-            "btn_txt": "SHOP & SAVE 15%!",
+            "btn_txt": "get 15% off",
             "btn_link": "shopify://products/antioxidant-eye-cream",
             "triggerbtn_txt": "",
             "triggerto": "",
