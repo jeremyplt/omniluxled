@@ -345,8 +345,8 @@ class VariantSelects extends HTMLElement {
         this.addBtn.querySelector(".add-text").textContent =
           window.variantStrings.upsellAddText;
       } else {
-        this.addBtn.querySelector(".add-text").textContent =
-          window.variantStrings.addToCart;
+        // this.addBtn.querySelector(".add-text").textContent =
+        //   window.variantStrings.addToCart;
       }
     }
   }

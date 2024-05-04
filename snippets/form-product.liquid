@@ -20,7 +20,7 @@
   endif
 %}
 
-<product-form class="product-form{% unless product.has_only_default_variant %} disable-swatches{% endunless %}">
+<product-form class="product-form{% unless product.has_only_default_variant %} disable-swatches{% endunless %} test78">
 
 {% comment %}theme-check-disable UnusedAssign{% endcomment %}
 {%- liquid
@@ -173,7 +173,7 @@
     <div class="col-auto d-flex" style="width:calc(100% - 134px);padding-left: 10px;">
         {% assign prefixes = "us,uk,ca,au,eu,nz" | split: "," %}
         {% unless product.id == 7991999987874 %}
-        <button class="addtocartbtn data-submit-btn btn btn-primary flex-grow-1 px-2 product-add-cart {% if product.tags contains 'providers' %}disabled{% endif %}"
+        <button class="addtocartbtn data-submit-btn btn btn-primary flex-grow-1 px-2 product-add-cart {% if product.tags contains 'providers' %}disabled{% endif %} test67"
             type="submit"
             name="add"
             aria-label="{{ 'products.product.add_to_cart' | t | escape }}"
@@ -194,7 +194,7 @@
             {% endfor %}
         >
             {% comment %} <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
-            <span class="add-text">
+            <span class="add-text test44">
               {% if localization.country == "France" and product.metafields.unavailable.france == true %}
                 <span class="not-available">Not Available In France</span>
               {% elsif is_preorder %}
@@ -204,8 +204,36 @@
                   {% if flag == true %}
                     GO TO PURCHASE ORDER
                   {% else %}
-                    {% comment %} {{ 'products.product.add_to_cart' | t }} {% endcomment %}
-                    ADD TO CART & SAVE
+                    {% if template contains 'product' %}
+                      
+                      {% if request.path contains '/products/omnilux-contour-face' or
+                            request.path contains '/products/omnilux-men' or
+                            request.path contains '/products/omnilux-clear' or
+                            request.path contains '/products/omnilux-contour-neck-decollete' or
+                            request.path contains '/products/omnilux-contour-glove' %}
+                          Add to Cart & Save
+                         <span class="test53" style="display:none;"></span>
+                      {% elsif 
+                            request.path contains '/products/blemish-eraser' or
+                            request.path contains '/products/eye-brightener' or
+                            request.path contains '/products/skin-corrector' or
+                            request.path contains '/products/led-essentials-3-piece-kit' or
+                            request.path contains '/products/enzyme-powder-cleanser' or
+                            request.path contains '/products/hyaluronic-acid-serum' or
+                            request.path contains '/products/peptide-concentrate' or
+                            request.path contains '/products/antioxidant-eye-cream' or
+                            request.path contains '/products/omnilux-hydrogel-face-mask' or
+                            request.path contains '/products/omnilux-contour-hydrogel-neck-decollete' or              
+                            request.path contains '/products/hydrocolloid-refill-patch-2' or
+                            request.path contains '/products/hydrocolloid-refill-patch' or
+                            request.path contains '/products/hydrocolloid-refill-patch-3' %}
+                         <span class="test51" style="display:none;"></span>
+                          Add to Cart & Save 15%
+                      {% else %}
+                         <span class="test52" style="display:none;"></span>
+                          {{ 'products.product.add_to_cart' | t }}
+                      {% endif %}
+                    {% endif %}
                   {% endif %}
                 {%- else -%}
                   {{ 'products.product.sold_out' | t }}
@@ -298,12 +326,40 @@
       {% endfor %}
     >
       {% comment %} <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
-      <span class="add-text">
+      <span class="add-text test44">
         {%- if current_variant.available -%}
           {% if flag == true %}
             GO TO PURCHASE ORDER
           {% else %}
-            {{ 'products.product.add_to_cart' | t }}
+            
+               {% if request.path contains '/products/omnilux-contour-face' or
+                    request.path contains '/products/omnilux-men' or
+                    request.path contains '/products/omnilux-clear' or
+                    request.path contains '/products/omnilux-contour-neck-decollete' or
+                    request.path contains '/products/omnilux-contour-glove' %}
+                  Add to Cart & Save
+                 <span class="test53" style="display:none;"></span>
+              {% elsif 
+                    request.path contains '/products/blemish-eraser' or
+                    request.path contains '/products/eye-brightener' or
+                    request.path contains '/products/skin-corrector' or
+                    request.path contains '/products/led-essentials-3-piece-kit' or
+                    request.path contains '/products/enzyme-powder-cleanser' or
+                    request.path contains '/products/hyaluronic-acid-serum' or
+                    request.path contains '/products/peptide-concentrate' or
+                    request.path contains '/products/antioxidant-eye-cream' or
+                    request.path contains '/products/omnilux-hydrogel-face-mask' or
+                    request.path contains '/products/omnilux-contour-hydrogel-neck-decollete' or              
+                    request.path contains '/products/hydrocolloid-refill-patch-2' or
+                    request.path contains '/products/hydrocolloid-refill-patch' or
+                    request.path contains '/products/hydrocolloid-refill-patch-3' %}
+                 <span class="test51" style="display:none;"></span>
+                  Add to Cart & Save 15%
+              {% else %}
+                 <span class="test52" style="display:none;"></span>
+                  {{ 'products.product.add_to_cart' | t }}
+              {% endif %}
+
           {% endif %}
         {%- else -%}
           {{ 'products.product.sold_out' | t }}{%- endif -%}

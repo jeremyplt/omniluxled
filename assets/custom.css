@@ -2941,7 +2941,10 @@ span.firstPrice {
     display: flex;
 } */
 
-div#shopify-section-template--16763463532706__4f5f33ca-10a4-41a3-b40c-038b76049541 {
+.omnilux-hydrogel-face-mask div#shopify-section-template--16763463532706__4f5f33ca-10a4-41a3-b40c-038b76049541 {
+    display: none;
+}
+.omnilux-contour-hydrogel-neck-decollete div#shopify-section-template--16763463532706__4f5f33ca-10a4-41a3-b40c-038b76049541 {
     display: none;
 }
 .colpage button.addtocartbtn.btn-add_to_cart {
