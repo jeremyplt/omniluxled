@@ -45,7 +45,7 @@
         "image"
       ],
       "custom_css": [
-        ".malomo-banner {min-height: 40vw; max-height: 700px;}"
+        "@media (min-width: 990px) {.malomo-banner {min-height: 40vw; max-height: 700px; }}"
       ],
       "settings": {
         "background_image_enabled": true,
