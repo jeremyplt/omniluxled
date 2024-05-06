@@ -75,7 +75,7 @@
     "glabal_featured_product_list_XB3GFc": {
       "type": "glabal-featured-product-list",
       "custom_css": [
-        ".position-relative.d-flex.price-with-btn.test79 > *:nth-child(2) {position: absolute; left: 0; max-width: fit-content;}"
+        "@media (min-width: 990px) {.position-relative.d-flex.price-with-btn.test79 > *:nth-child(2) {position: absolute; left: 0; max-width: fit-content;}}"
       ],
       "settings": {
         "fluid_layout": false,
