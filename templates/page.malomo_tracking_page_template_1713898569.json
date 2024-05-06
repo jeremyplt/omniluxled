@@ -75,7 +75,7 @@
     "glabal_featured_product_list_XB3GFc": {
       "type": "glabal-featured-product-list",
       "custom_css": [
-        ".position-relative.d-flex.price-with-btn.test79 > *:nth-child(2) {position: absolute; left: 0; }",
+        ".position-relative.d-flex.price-with-btn.test79 > *:nth-child(2) {position: absolute; left: 0;}",
         "@media (min-width: 990px) {.position-relative.d-flex.price-with-btn.test79 > *:nth-child(2) {max-width: fit-content; }}"
       ],
       "settings": {
@@ -86,7 +86,7 @@
         "heading_alignment": "mx-auto",
         "heading_txt": "Supercharge Your Results",
         "lead_txt": "",
-        "home_featured_collection": "skin-care",
+        "home_featured_collection": "malomo-upsells",
         "section_bg_color": "#ffffff",
         "section_txt_color": "#000000",
         "btn_text": "SHOP ALL",
