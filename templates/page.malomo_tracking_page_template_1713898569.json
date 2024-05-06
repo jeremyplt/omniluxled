@@ -44,6 +44,9 @@
         "malomo_shipment_tracker",
         "image"
       ],
+      "custom_css": [
+        ".malomo-banner {min-height: 40vw; max-height: 700px;}"
+      ],
       "settings": {
         "background_image_enabled": true,
         "background_image": "shopify:\/\/shop_images\/Hero_Image.png",
