@@ -133,7 +133,8 @@
         "buttons_9gMA9E"
       ],
       "custom_css": [
-        "h2 {font-size: 36px;}"
+        "h2 {font-size: 36px;}",
+        ".banner-section {margin-bottom: 1rem;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/kat_611138119-malomo-lp-banner.png",
