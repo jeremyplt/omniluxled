@@ -134,7 +134,7 @@
       ],
       "custom_css": [
         "h2 {font-size: 36px;}",
-        ".banner-section {margin-bottom: 1rem;}"
+        ".banner-section {margin-bottom: 1rem; height: 40vw; min-height: 400px;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/kat_611138119-malomo-lp-banner.png",
@@ -186,7 +186,8 @@
         "buttons_z4ANaE"
       ],
       "custom_css": [
-        "h2 {font-size: 36px;}"
+        "h2 {font-size: 36px;}",
+        ".banner-section {height: 40vw; min-height: 400px;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/kat_611138113-malomo-lp-banner-2.png",
