@@ -17,7 +17,7 @@
 
 .template-collection #MainContent .card-product.rounded-0{border:1px solid #000!important;}
 .template-collection #MainContent .card-body{padding:0 20px 110px!important;}
-.template-collection #MainContent .card:not(:hover) .btn-card, .template-collection #MainContent .card:hover .btn-card-hide{opacity:1;pointer-events:all;display:block;}
+.template-collection #MainContent .card .btn-card,.template-collection #MainContent .card:not(:hover) .btn-card, .template-collection #MainContent .card:hover .btn-card-hide{width:100%;opacity:1;pointer-events:all;display:block;}
 .template-collection #MainContent .review-box.justify-content-lg-end{justify-content:flex-start!important;margin:10px 0 0 0!important;}
 .template-collection #MainContent .card-body .review-box-wrap{flex-direction:column-reverse!important;}
 .template-collection #MainContent .card-img a.product-link{margin-top:0;}
@@ -28,7 +28,7 @@
 
 .template-collection #MainContent .card-body .pt-1.price-with-btn-col{padding-top:0!important;}
 
-.template-collection #MainContent .price-with-btn{position:absolute!important;bottom:0;display: block!important;width:calc(100% - 20px)}
+.template-collection #MainContent .price-with-btn{position:absolute!important;bottom:0;display: block!important;width:100%}
 .template-collection #MainContent .dualPrice .money{position:relative;display:block;font-size: 22px;font-weight: 700;line-height: 22px;margin-bottom:15px;}
 .template-collection #MainContent .data-submit-btn{margin-bottom:15px;padding:15px 0!important;color:#fff;background:#000;position:relative;display:block;width:calc(100% - 20px);font-size: 16px;font-weight: 800;line-height: 17px;}
 .template-collection #MainContent .btn.loading .add-text{color:#fff!important;opacity:1!important;}
@@ -38,10 +38,12 @@
 
 .template-collection #MainContent .card-product .badges{left:auto;right:0;top:0;}
 
+.template-collection .card-body .col-12.d-flex.custom-flex{justify-content: start !important;}
+
 @media(max-width:999px){
   .template-collection #MainContent .card-body .review-box-wrap{flex-direction: column!important;}
   .template-collection #MainContent .card-title .product-link{margin-top:0!important; margin-bottom: 10px!important;}
- .template-collection #MainContent .card-footer .row>*{padding-left:0!important;padding-right:20px!important;}
+ .template-collection #MainContent .card-footer .row>*{padding-left:0!important;}
   .template-collection #MainContent .data-submit-btn{width:100%!important;}
   .template-collection #MainContent .card-body{padding:0 20px 115px!important}
   .template-collection #MainContent .data-submit-btn{margin-bottom:20px!important;}
@@ -2925,4 +2927,18 @@ html button.cc-btn.cc-settings.isense-cc-btn.isense-cc-settings {
 
 html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
   background-color: black !important;
+}
+/* div#shopify-section-template--16416230867106__4f5f33ca-10a4-41a3-b40c-038b76049541{
+  display:none;
+} */
+
+.cutsom-slider .card-carousel .swiper-slide {
+    margin: 0px 2px !important;
+}
+
+@media (max-width: 767px){
+
+  body .klaviyo-form--code .klaviyo-form > div{
+    justify-content: normal !important;
+  }
 }

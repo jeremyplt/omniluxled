@@ -88,6 +88,7 @@
     "enable_newletter": false,
     "enable_custom_klaviyo": true,
     "enable_product_card_swatches": true,
+    "show_secondary_image": true,
     "show_vendor": false,
     "enable_cart_notes": false,
     "enable_cart_upsell": true,

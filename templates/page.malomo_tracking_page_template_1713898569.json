@@ -11,7 +11,7 @@
       "type": "malomo_order_tracking",
       "blocks": {
         "malomo_shipment_tracker": {
-          "type": "shopify://apps/malomo-order-tracking/blocks/shipment-tracker/5cb158a1-dc52-4d21-aac7-e017083c11e2",
+          "type": "shopify:\/\/apps\/malomo-order-tracking\/blocks\/shipment-tracker\/5cb158a1-dc52-4d21-aac7-e017083c11e2",
           "settings": {
             "publishable_api_key": "pk_83f702b7487a45a1dd6b8de792acad67",
             "element": "shipmentTracker",
@@ -23,8 +23,8 @@
             "button_capitalization": "uppercase",
             "button_height": 48,
             "button_text_color": "#ffffff",
-            "input_background_color": "#FFFFFF",
-            "input_border_color": "#DDDDDD",
+            "input_background_color": "#ffffff",
+            "input_border_color": "#dddddd",
             "input_border_radius": 3,
             "input_border_width": 1,
             "input_height": 42,
@@ -46,14 +46,14 @@
       ],
       "settings": {
         "background_image_enabled": true,
-        "background_image": "shopify://shop_images/Hero_Image.png",
+        "background_image": "shopify:\/\/shop_images\/Hero_Image.png",
         "background_repeat": "no-repeat",
         "background_size": "cover",
-        "mobile_image": "shopify://shop_images/Hero_Image.png",
-        "background_color": "transparent",
-        "height": "540",
+        "mobile_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-02T105137.533.png",
+        "background_color": "rgba(0,0,0,0)",
+        "height": "500",
         "padding": "20",
-        "header_background_color": "transparent",
+        "header_background_color": "rgba(0,0,0,0)",
         "header_font": "sans-serif",
         "header_font_size": "40",
         "header_horizontal_alignment": "center",
@@ -74,9 +74,9 @@
       "settings": {
         "fluid_layout": false,
         "nav_dots": true,
-        "nav_arrows": true,
-        "nav_arrows_outside": true,
-        "heading_alignment": "me-lg-auto ms-lg-0 mx-auto",
+        "nav_arrows": false,
+        "nav_arrows_outside": false,
+        "heading_alignment": "mx-auto",
         "heading_txt": "Supercharge Your Results",
         "lead_txt": "",
         "home_featured_collection": "skin-care",
@@ -90,7 +90,7 @@
         "pbs": 56,
         "border-top": false,
         "border-bottom": false,
-        "slide_per_": true
+        "slide_per_": false
       }
     },
     "global_image_banner_nyezwV": {
@@ -104,16 +104,15 @@
         },
         "text_qTHbPj": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template."
+            "text": "From full-sized masks to ultra-mini spot treatments, all of our LED devices utilize our proprietary medical technology to help you reach your skin goals."
           }
         },
         "buttons_9gMA9E": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop now",
-            "button_link_1": "shopify://collections/all-devices",
+            "button_label_1": "Shop LED",
+            "button_link_1": "shopify:\/\/collections\/all-devices",
             "btn_type_1": "",
             "btn_variant_1": "primary",
             "btn_size_1": "",
@@ -130,14 +129,17 @@
         "text_qTHbPj",
         "buttons_9gMA9E"
       ],
+      "custom_css": [
+        "h2 {font-size: 36px;}"
+      ],
       "settings": {
-        "image": "shopify://shop_images/Explore_all_LED_devices_banner.png",
+        "image": "shopify:\/\/shop_images\/kat_611138119-malomo-lp-banner.png",
         "txt_color": "",
         "enable_overlay": false,
         "overlay_bg_color": "#000000",
         "overlay_opacity": 0.5,
-        "height": "tallheight",
-        "desktop_text_box_position": "flex-start",
+        "height": "shortheight",
+        "desktop_text_box_position": "center",
         "text_caption_align": "justify-content-end",
         "text_align": "text-right",
         "section_padding": false
@@ -152,18 +154,17 @@
             "heading": "Discover our LED-loving topicals"
           }
         },
-        "text_bb9hVw": {
+        "text_VF7e6K": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template."
+            "text": "A power-packed skincare collection fights signs of aging while optimizing our signature LED light therapy treatments."
           }
         },
         "buttons_z4ANaE": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Discover More",
-            "button_link_1": "shopify://collections/skin-care",
+            "button_label_1": "SHOP SKINCARE",
+            "button_link_1": "shopify:\/\/collections\/skin-care",
             "btn_type_1": "",
             "btn_variant_1": "primary",
             "btn_size_1": "",
@@ -177,20 +178,23 @@
       },
       "block_order": [
         "heading_nH8mAU",
-        "text_bb9hVw",
+        "text_VF7e6K",
         "buttons_z4ANaE"
       ],
+      "custom_css": [
+        "h2 {font-size: 36px;}"
+      ],
       "settings": {
-        "image": "shopify://shop_images/Discover_our_LED-loving_topicals_banner.png",
+        "image": "shopify:\/\/shop_images\/kat_611138113-malomo-lp-banner-2.png",
         "txt_color": "",
         "enable_overlay": false,
         "overlay_bg_color": "#000000",
         "overlay_opacity": 0.5,
-        "height": "tallheight",
-        "desktop_text_box_position": "flex-start",
+        "height": "shortheight",
+        "desktop_text_box_position": "center",
         "text_caption_align": "justify-content-start",
         "text_align": "text-left",
-        "section_padding": true
+        "section_padding": false
       }
     },
     "global_blog_posts_RzzLcW": {

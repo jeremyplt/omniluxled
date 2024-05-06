@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "main": {
+      "type": "template-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "klaviyo_form_4kUR3z": {
+      "type": "klaviyo-form",
+      "settings": {
+        "desktop-image": "shopify:\/\/shop_images\/D2C_SMS_Sign_Up_Landing_Page_3_c543543b-5cc5-4bd2-ade1-6b67b669b02d.png",
+        "desktop_form_position": "left",
+        "mobile-image": "shopify:\/\/shop_images\/D2C_Email_SMS_Sign_Up_Landing_Page_12.png",
+        "form-code": "<div class=\"klaviyo-form-X2qgnC\"><\/div>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "klaviyo_form_4kUR3z"
+  ]
+}
