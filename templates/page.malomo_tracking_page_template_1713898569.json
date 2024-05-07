@@ -137,8 +137,9 @@
         "buttons_9gMA9E"
       ],
       "custom_css": [
-        "h2 {font-size: 36px;}",
-        ".banner-section {margin-bottom: 1rem; height: 40vw; min-height: 400px;}"
+        ".banner-section {margin-bottom: 2rem; }",
+        "@media (min-width: 750px) {h2 {font-size: 36px; } .banner-section {height: 40vw; min-height: 400px; }}",
+        "@media (max-width: 749px) {h2 {font-size: 28px; } .col-xl-5.col-lg-6.col-md-7.px-0 {text-align: center !important; } .banner__content {align-items: flex-start !important; padding-top: 1rem !important; } .banner-section {min-height: 500px }}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/kat_611138119-malomo-lp-banner.png",
@@ -191,7 +192,7 @@
       ],
       "custom_css": [
         "@media (min-width: 750px) {h2 {font-size: 36px; } .banner-section {height: 40vw; min-height: 400px; }}",
-        "@media (max-width: 749px) {h2 {font-size: 28px; } .col-xl-5.col-lg-6.col-md-7.px-0 {text-align: center !important; } .banner__content {align-items: flex-start !important; padding-top: 1rem !important; } .banner-section {min-height: 500px }}"
+        "@media (max-width: 749px) {h2 {font-size: 28px; } .col-xl-5.col-lg-6.col-md-7.px-0 {text-align: center !important; } .banner__content {align-items: flex-start !important; padding-top: 1rem !important; } .banner-section {min-height: 500px; }}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/kat_611138113-malomo-lp-banner-2.png",
