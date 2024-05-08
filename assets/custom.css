@@ -2873,6 +2873,9 @@ body:not(.blemish-eraser):not(.eye-brightener):not(.skin-corrector) .skio-group-
   .blemish-eraser .skio-group-container--subscription .skio-price__inner{
     justify-content: flex-start;
   }
+  button.addtocartbtn.btn-add_to_cart.data-submit-btn {
+    min-width: 122px;
+}
 }
 
 #advisoryBlock .row > .col-12.mt-4.mt-lg-7 {

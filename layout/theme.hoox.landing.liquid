@@ -526,13 +526,15 @@
     });
   </script>
 
-  <script>
+    <script>
     window.addEventListener('skio::update-selling-plan', function(e) { 
-      console.log(e) 
+      console.log(e.target) 
+      let closestParent = e.target.closest(".hoox-js-shop-logic")
+      if (!closestParent) closestParent = e.target.closest(".hoox-shop__informations")
       if (e.detail.sellingPlan) {
-        document.querySelector(".saletext").style.display = "block"
+        closestParent.querySelector(".saletext").style.display = "block"
       } else {
-        document.querySelector(".saletext").style.display = "none"
+        closestParent.querySelector(".saletext").style.display = "none"
       }
     })
   </script>

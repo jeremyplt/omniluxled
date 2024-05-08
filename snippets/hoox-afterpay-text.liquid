@@ -11,12 +11,15 @@
 {% if request.path contains '/pages/anti-aging'
   or request.path contains '/pages/men'
   or request.path contains '/pages/contour-glove'
+  or request.path contains '/pages/eye-brightener'
+  or request.path contains '/pages/blemish-eraser'
+  or request.path contains '/pages/minis'
 %}
-  <style>
+  <!-- <style>
     .hoox-js-shop-logic.hoox-shop__shop-logic .saletext{
       display:block !important;
     }
-  </style>
+  </style> -->
   {% assign metafieldValue = product.metafields.custom.saletext | strip %}
   {% if metafieldValue != blank %}
     <div class="saletext test66">{{ metafieldValue }}</div>
