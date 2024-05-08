@@ -150,9 +150,14 @@
         if(productTags.includes("BFD") && !isNaN(taxPercent)) {
             compareAtPrice = Math.round((price + price * taxPercent / 100) / 0.85);
         }
+
+        const compareAtPriceTaxIncluded =  Math.round(parseInt(compareAtPrice) + (parseInt(compareAtPrice) * taxPercent / 100))
+      console.log("compareAtPrice", compareAtPrice)
+      console.log("(parseInt(compareAtPrice) * taxPercent / 100)", (parseInt(compareAtPrice) * taxPercent / 100))
+        console.log("compareAtPriceTaxIncluded", compareAtPriceTaxIncluded)
  
         if (parseInt(dp_show_compare_at_price) == 1 && parseInt(compareAtPrice) > 0 && parseInt(compareAtPrice) != parseInt(price)) {
-            compareAtPriceBlock = '<span class="dpCompareAtPrice" style="margin-right:5px; text-decoration: line-through;"><span>' + Shopify.formatMoney(compareAtPrice, dpMoneyFormat) + '</span></span>' + '<br/>';
+            compareAtPriceBlock = '<span class="dpCompareAtPrice" style="margin-right:5px; text-decoration: line-through;"><span>' + Shopify.formatMoney(compareAtPriceTaxIncluded, dpMoneyFormat) + '</span></span>' + '<br/>';
         }
         if (parseInt(dpPriceTypeToShow) != 2) {
             firstPriceBlock = '<span class="firstPrice" style="color:' + dp_tax_incl_color + '"><span class="firstPriceValue">' + firstPrice + '</span> <span class="firstPriceLabel">' + (dp_tax_incl_label != null && taxPercent > 0 ? dp_tax_incl_label : '') + '</span></span>';

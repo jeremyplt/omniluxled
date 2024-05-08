@@ -12913,9 +12913,9 @@ body .cc-compliance {
 .cc-settings-dialog .cc-checkbox:after {
   border-color: rgb(255, 255, 255) !important;
 }
-.cookieconsent-wrapper .cc-compliance.cc-highlight .cc-btn:first-child:not(:hover) {
+/* .cookieconsent-wrapper .cc-compliance.cc-highlight .cc-btn:first-child:not(:hover) {
   color: rgb(0, 0, 0) !important;
-}
+} */
 body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
   background-color: unset !important;
 }

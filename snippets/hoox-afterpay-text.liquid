@@ -1,14 +1,24 @@
-<div class='hoox-shop__afterpay'>
-    <p class='hoox-shop__afterpay-text'>
-        or 4 interest-free payments of <span class='js-after-pay-price'>{{ product.price |  divided_by: 4 | money }}</span>
-        with
-    </p>
+<div class="hoox-shop__afterpay">
+  <p class="hoox-shop__afterpay-text">
+    or 4 interest-free payments of <span class="js-after-pay-price">{{ product.price | divided_by: 4 | money }}</span>
+    with
+  </p>
 
-    <button class='hoox-shop__afterpay-icon js-afterpay-toggle'>
-        {% render 'hoox-icon-afterpay' %}
-    </button>
+  <button class="hoox-shop__afterpay-icon js-afterpay-toggle">
+    {% render 'hoox-icon-afterpay' %}
+  </button>
 </div>
-{% assign metafieldValue = product.metafields.custom.saletext | strip %}
-{% if metafieldValue != blank %}
-  <div class="saletext">{{ metafieldValue }}</div>
+{% if request.path contains '/pages/anti-aging'
+  or request.path contains '/pages/men'
+  or request.path contains '/pages/contour-glove'
+%}
+  <style>
+    .hoox-js-shop-logic.hoox-shop__shop-logic .saletext{
+      display:block !important;
+    }
+  </style>
+  {% assign metafieldValue = product.metafields.custom.saletext | strip %}
+  {% if metafieldValue != blank %}
+    <div class="saletext test66">{{ metafieldValue }}</div>
+  {% endif %}
 {% endif %}

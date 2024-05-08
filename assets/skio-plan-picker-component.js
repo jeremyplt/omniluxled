@@ -712,9 +712,6 @@ export class SkioPlanPickerComponent extends LitElement {
                           : html``}
                         <div class="skio-price__inner">
                           <span skio-subscription-price
-                            >${this.price(group.selected_selling_plan)}</span
-                          >
-                          <span skio-compare-at-price class="concept--two"
                             >${this.moneyFormatter.format(
                               this.selectedVariant.price / 100
                             )}</span
