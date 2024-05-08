@@ -143,7 +143,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/kat_611138119-malomo-lp-banner.png",
-        "image_mobile": "shopify:\/\/shop_images\/Frame_1000006468.png",
+        "image_mobile": "shopify:\/\/shop_images\/Frame_1000006468_1.png",
         "txt_color": "",
         "enable_overlay": false,
         "overlay_bg_color": "#000000",
@@ -197,7 +197,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/kat_611138113-malomo-lp-banner-2.png",
-        "image_mobile": "shopify:\/\/shop_images\/Frame_1000006467.png",
+        "image_mobile": "shopify:\/\/shop_images\/Frame_1000006467_1.png",
         "txt_color": "",
         "enable_overlay": false,
         "overlay_bg_color": "#000000",
