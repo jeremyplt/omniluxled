@@ -85,8 +85,11 @@ if (inputElement)
 function sanitizePrice(priceString) {
   // Remove any non-digit characters except for the decimal point
   let numericString = priceString.replace(/[^\d.]/g, "");
+  const numeric = priceString.includes(",")
+    ? numericString * 1
+    : numericString * 100;
   // Convert the clean string to a float to handle numbers correctly
-  return parseFloat(numericString);
+  return parseFloat(numeric);
 }
 
 function calculatePriceWithTaxes(price, country, showTaxes = false) {
