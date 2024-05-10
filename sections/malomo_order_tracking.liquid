@@ -144,7 +144,7 @@
   {%- endif -%}
 
   {%- if section.settings.mobile_image != blank -%}
-    {{ section.settings.mobile_image | image_url: width: 480 | image_tag: class: 'malomo-banner-mobile-img', loading: 'lazy' }}
+    {{ section.settings.mobile_image | image_url: width: 1000 | image_tag: class: 'malomo-banner-mobile-img', loading: 'lazy' }}
   {%- endif -%}
 
   {%- if section.blocks.size > 0 -%}
