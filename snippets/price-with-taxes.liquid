@@ -75,7 +75,7 @@
 {% if tax_rate %}
     {% assign final_price = product_price | plus: tax_amount %}
     {% assign final_compare_at_price = product_compare_at_price | plus: compare_tax_amount %}
-    {% assign price_display = "Tax Incl." %}
+    {% assign price_display = "Incl. Tax" %}
 {% elsif no_price_display_countries contains customer_country %}
     {% assign final_price = product_price %}
     {% assign final_compare_at_price = product_compare_at_price %}
@@ -83,7 +83,7 @@
 {% else %}
     {% assign final_price = product_price %}
     {% assign final_compare_at_price = product_compare_at_price %}
-    {% assign price_display = "Tax Excl." %}
+    {% assign price_display = "Excl. Tax" %}
 {% endif %}
 
 {% if product_compare_at_price > product_price %}
@@ -113,7 +113,7 @@
             <span class="price__tax">Excl. Tax</span>
         </span>
     {% else %}
-    <span class="{% if price_display == "Tax Incl." %}price__tax--included{% elsif price_display == "Tax Excl." %}price__tax--excluded{% else %}price__tax--no-display{% endif %}">
+    <span class="{% if price_display == "Incl. Tax" %}price__tax--included{% elsif price_display == "Excl. Tax" %}price__tax--excluded{% else %}price__tax--no-display{% endif %}">
         <span class="price__value {% if on_sale %}price--sale{% else %}price--normal{% endif %}" data-currentPrice>
             {{ final_price | money }}
         </span> 

@@ -145,25 +145,28 @@ function calculatePriceWithTaxes(price, country, showTaxes = false) {
 
   let taxRate = taxData[country];
   let finalPrice = price;
-
-  if (taxRate !== undefined && showTaxes) {
-    finalPrice *= 1 + taxRate;
-    finalPrice = Shopify.formatMoney(
-      finalPrice,
-      window.globalVariables.money_format
-    );
-    return finalPrice + "<span class='tax'> Incl. Tax</span>";
-  } else if (taxRate !== undefined) {
-    finalPrice *= 1 + taxRate;
-  }
-
-  finalPrice = Shopify.formatMoney(
-    finalPrice,
+  let taxInclusivePrice = price * (1 + taxRate);
+  let formattedTaxInclusivePrice = Shopify.formatMoney(
+    taxInclusivePrice,
     window.globalVariables.money_format
   );
+  let formattedTaxExclusivePrice = Shopify.formatMoney(
+    price,
+    window.globalVariables.money_format
+  );
+
+  if (country === "LU") {
+    return `<span class="tax-excl-price">${formattedTaxExclusivePrice}</span><span class='tax tax-excl'> Excl. Tax</span> <span>${formattedTaxInclusivePrice}</span><span class='tax'> Incl. Tax</span>`;
+  } else if (taxRate !== undefined && showTaxes) {
+    return formattedTaxInclusivePrice + "<span class='tax'> Incl. Tax</span>";
+  } else if (taxRate !== undefined) {
+    taxInclusivePrice = price;
+  }
+
   return noPriceDisplayCountries.includes(country)
-    ? finalPrice
-    : finalPrice + (showTaxes ? "<span class='tax'> Excl. Tax</span>" : "");
+    ? formattedTaxExclusivePrice
+    : formattedTaxExclusivePrice +
+        (showTaxes ? "<span class='tax'> Excl. Tax</span>" : "");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
