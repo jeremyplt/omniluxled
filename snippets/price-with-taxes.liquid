@@ -78,9 +78,11 @@
     {% assign price_display = "Tax Incl." %}
 {% elsif no_price_display_countries contains customer_country %}
     {% assign final_price = product_price %}
+    {% assign final_compare_at_price = product_compare_at_price %}
     {% assign price_display = blank %}
 {% else %}
     {% assign final_price = product_price %}
+    {% assign final_compare_at_price = product_compare_at_price %}
     {% assign price_display = "Tax Excl." %}
 {% endif %}
 
@@ -89,6 +91,8 @@
 {% else %}
     {% assign on_sale = false %}
 {% endif %}
+
+
 
 <span class="price-with-taxes">
     {% if on_sale %}
