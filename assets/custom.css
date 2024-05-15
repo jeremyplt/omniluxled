@@ -865,7 +865,7 @@ p.hoox-shop__upsell-description{font-style:italic;}
 
 /*CSS abtest for cart drawer*/
 
-body.ab-test-cartdrawer #cartdrawerheader {
+body #cartdrawerheader {
   position: sticky;
   top: 0px;
   left: 0px;
@@ -873,20 +873,20 @@ body.ab-test-cartdrawer #cartdrawerheader {
   background: rgb(255, 255, 255);
   z-index: 999;
 }
-body.ab-test-cartdrawer .cart-drawer.opened-drawer .delivery-shipping p {
+body .cart-drawer.opened-drawer .delivery-shipping p {
   padding-top: 5px;
   color: #07272d;
   font-weight: 500 !important;
   font-size: 16px !important;
   line-height: 14px !important;
 }
-body.ab-test-cartdrawer .cart-drawer .section-header .page-title {
+body .cart-drawer .section-header .page-title {
   letter-spacing: 0 !important;
 }
-body.ab-test-cartdrawer .cart-drawer .progress {
+body .cart-drawer .progress {
   margin: 13px 20px 21px;
 }
-body.ab-test-cartdrawer .cart-drawer .progress-bar {
+body .cart-drawer .progress-bar {
   background: linear-gradient(
     270deg,
     #5cb8b2 0%,
@@ -894,29 +894,29 @@ body.ab-test-cartdrawer .cart-drawer .progress-bar {
     #07272d 100.22%
   );
 }
-body.ab-test-cartdrawer .no-touch .button,
+body .no-touch .button,
 .no-touch .button:hover {
   border-radius: 0;
   border: 1px solid #5cb8b2;
   color: #5cb8b2;
 }
-body.ab-test-cartdrawer .no-touch .button:hover {
+body .no-touch .button:hover {
   border: 1px solid #5cb8b2 !important;
   background: #5cb8b2 !important;
   color: #fff;
 }
-body.ab-test-cartdrawer .cart-drawer .cart-body .cart-items.border-bottom {
+body .cart-drawer .cart-body .cart-items.border-bottom {
   background: #f5f5f5;
   padding: 15px !important;
   border-bottom: 0 !important;
   margin: 0 20px 15px 20px !important;
 }
-body.ab-test-cartdrawer .cart-drawer .product-form {
+body .cart-drawer .product-form {
   background: #f5f5f5;
   padding: 15px !important;
 }
 
-body.ab-test-cartdrawer
+body
   .cart-drawer
   #upsell_accordion
   .swiper-wrapper
@@ -924,10 +924,10 @@ body.ab-test-cartdrawer
   width: 40% !important;
   margin-right: 5% !important;
 }
-body.ab-test-cartdrawer .cart-drawer .cursor-pointer .btn-link:hover {
+body .cart-drawer .cursor-pointer .btn-link:hover {
   border-bottom: 0 !important;
 }
-body.ab-test-cartdrawer .cart-drawer .cart-item-add button {
+body .cart-drawer .cart-item-add button {
   background: #000;
   color: #fff;
   display: block !important;
@@ -935,51 +935,51 @@ body.ab-test-cartdrawer .cart-drawer .cart-item-add button {
   width: 100%;
   text-align: center;
 }
-body.ab-test-cartdrawer .cart-drawer .card-title {
+body .cart-drawer .card-title {
   font-size: 18px;
   line-height: 20px;
 }
-body.ab-test-cartdrawer .cart-drawer .cart-upsell-section {
+body .cart-drawer .cart-upsell-section {
   background: #fff !important;
 }
-body.ab-test-cartdrawer .cart-drawer .cart-upsell-form .card-title {
+body .cart-drawer .cart-upsell-form .card-title {
   font-size: 14px;
   line-height: 16px;
   font-weight: 600 !important;
   letter-spacing: 0 !important;
 }
-body.ab-test-cartdrawer .cart-drawer .cart-body {
+body .cart-drawer .cart-body {
   border-top: 0 !important;
 }
-body.ab-test-cartdrawer .cart-drawer .cart-item-text .mt-1 {
+body .cart-drawer .cart-item-text .mt-1 {
   font-size: 13px;
   line-height: 11px;
 }
-body.ab-test-cartdrawer .cart-drawer .hideabtest {
+body .cart-drawer .hideabtest {
   display: none !important;
 }
-body.ab-test-cartdrawer .cart-drawer .afterpay.showabtest {
+body .cart-drawer .afterpay.showabtest {
   display: block !important;
 }
-body.ab-test-cartdrawer .cart-drawer .cart-upsell-section .text-primary span {
+body .cart-drawer .cart-upsell-section .text-primary span {
   text-transform: capitalize;
   font-size: 16px;
   line-height: 22px;
   font-weight: 600;
 }
-/* body.ab-test-cartdrawer .cart-drawer .cart-upsell-section .text-primary span:after{content: "↓";margin-left:5px;display: inline-block;} */
+/* body .cart-drawer .cart-upsell-section .text-primary span:after{content: "↓";margin-left:5px;display: inline-block;} */
 
-body.ab-test-cartdrawer .cart-drawer .shopify-installments {
+body .cart-drawer .shopify-installments {
   text-align: center !important;
   margin-top: 8px;
   margin-bottom: 0;
 }
-body.ab-test-cartdrawer .cart-drawer .shopify-installments__content {
+body .cart-drawer .shopify-installments__content {
   font-size: 14px !important;
   line-height: 17px !important;
 }
 
-body.ab-test-cartdrawer
+body
   .cart-drawer
   .cart-body
   .cart-items
@@ -988,30 +988,30 @@ body.ab-test-cartdrawer
   .cart-img {
   width: 120px !important;
 }
-body.ab-test-cartdrawer .cart-drawer .quantity-box-wrap.mt-3 {
+body .cart-drawer .quantity-box-wrap.mt-3 {
   margin: 0 0 0 !important;
 }
-body.ab-test-cartdrawer .cart-drawer .quantity-box-wrap.mt-3 iframe {
+body .cart-drawer .quantity-box-wrap.mt-3 iframe {
   margin: 30px 0 0 !important;
 }
-body.ab-test-cartdrawer .cart-drawer .extend-side-cart-offer {
+body .cart-drawer .extend-side-cart-offer {
   margin: 0 0 0 !important;
 }
-body.ab-test-cartdrawer .cart-drawer .cart-upsell-section {
+body .cart-drawer .cart-upsell-section {
   border-top: 1.5px solid #000;
   margin-top: 0;
   padding-top: 10px;
 }
 
 @media (max-width: 768px) {
-  body.ab-test-cartdrawer .cart-drawer .progress {
+  body .cart-drawer .progress {
     margin: 10px 20px;
   }
-  body.ab-test-cartdrawer .cart-drawer .product-form {
+  body .cart-drawer .product-form {
     padding: 10px !important;
   }
   /* .cart-drawer .cart-body .cart-items.border-bottom{margin:0 20px;} */
-  body.ab-test-cartdrawer .cart-drawer .cart-upsell-section {
+  body .cart-drawer .cart-upsell-section {
     margin-top: 0px;
     padding-top: 10px;
   }
@@ -1168,12 +1168,12 @@ body .cart-drawer .docapp-coupon-input {
   font-size: 18px !important;
 }
 
-body.ab-test-cartdrawer .cart-drawer .showabtest,
-body.ab-test-cartdrawer .cart-drawer .docapp-widget,
-body.ab-test-cartdrawer .cart-drawer #docapp-cart-with-coupon-summary,
-body.ab-test-cartdrawer .cart-drawer .docapp-cart-with-coupon-summary,
-body.ab-test-cartdrawer .cart-drawer .docapp-coupon-input,
-body.ab-test-cartdrawer .cart-drawer .docapp-volume-discounts-legacy-promo {
+body .cart-drawer .showabtest,
+body .cart-drawer .docapp-widget,
+body .cart-drawer #docapp-cart-with-coupon-summary,
+body .cart-drawer .docapp-cart-with-coupon-summary,
+body .cart-drawer .docapp-coupon-input,
+body .cart-drawer .docapp-volume-discounts-legacy-promo {
   display: block !important;
 }
 
@@ -2054,7 +2054,7 @@ html .cbb-frequently-bought-recommendations-wrap {
 }
 
 @media (max-width: 749px) {
-  .test-cart-upsell-checkbox body.ab-test-cartdrawer .cart-drawer .cart-body .cart-items>.cart-item .cart-product-img .cart-img {
+  .test-cart-upsell-checkbox body .cart-drawer .cart-body .cart-items>.cart-item .cart-product-img .cart-img {
     width: 100px !important;
   }
 
