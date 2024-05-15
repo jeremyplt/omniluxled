@@ -978,10 +978,6 @@ async function addOrUpdateSellingPlan(variant, plan) {
   if (lineItemWithPlan) await removeLineItem(lineItemWithPlan.key);
   if (lineItemWithoutPlan) await removeLineItem(lineItemWithoutPlan.key);
 
-  // document.querySelectorAll(`[data-item-id="${variant}"]`).forEach((item) => {
-  //   if (!item.querySelector(".rc90-item-main-upsell")) item.remove();
-  // });
-
   return result;
 }
 

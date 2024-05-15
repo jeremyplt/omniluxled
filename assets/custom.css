@@ -863,8 +863,6 @@ p.hoox-shop__upsell-description{font-style:italic;}
   overflow: clip !important;
 }
 
-/*CSS abtest for cart drawer*/
-
 body #cartdrawerheader {
   position: sticky;
   top: 0px;
@@ -958,9 +956,6 @@ body .cart-drawer .cart-item-text .mt-1 {
 body .cart-drawer .hideabtest {
   display: none !important;
 }
-body .cart-drawer .afterpay.showabtest {
-  display: block !important;
-}
 body .cart-drawer .cart-upsell-section .text-primary span {
   text-transform: capitalize;
   font-size: 16px;
@@ -1017,12 +1012,7 @@ body .cart-drawer .cart-upsell-section {
   }
 }
 /*CSS abtest for cart drawer - hide stuff*/
-.cart-drawer .showabtest {
-  display: none !important;
-}
-.cart-drawer .hideabtest {
-  display: block !important;
-}
+
 .cart-drawer .docapp-widget,
 body .cart-drawer #docapp-cart-with-coupon-summary,
 body .cart-drawer .docapp-cart-with-coupon-summary,
@@ -1168,7 +1158,6 @@ body .cart-drawer .docapp-coupon-input {
   font-size: 18px !important;
 }
 
-body .cart-drawer .showabtest,
 body .cart-drawer .docapp-widget,
 body .cart-drawer #docapp-cart-with-coupon-summary,
 body .cart-drawer .docapp-cart-with-coupon-summary,
@@ -1324,16 +1313,6 @@ body .cart-drawer .docapp-volume-discounts-legacy-promo {
   padding: 15px 0;
 }
 
-/*a.reviews-results{display:none!important;}
-li.dropdown a.reviews-results{display:block!important;}
-
-@media(max-width:999px){
-  a.reviews-results{display:block!important;}
-  li.dropdown a.reviews-results{display:none!important;}
-}*/
-
-/*test 7 video testimonials*/
-
 /* delm app */
 #delm-app {
   display: none;
@@ -1354,14 +1333,6 @@ li.dropdown a.reviews-results{display:block!important;}
   }
 }
 
-/*omnilux clear test 7b*/
-.circle-video-menu-wrap--template--16184566874274__d84aa67d-fef0-442d-8364-790f28934d4d {
-  display: none;
-}
-.circle-video-menu-wrap--template--16184566874274__d84aa67d-fef0-442d-8364-790f28934d4d
-  .circle-menu-items {
-  text-align: center;
-}
 /*end omnilux clear test 7b*/
 
 .circle-menu {
@@ -2036,82 +2007,6 @@ html .cbb-frequently-bought-recommendations-wrap {
   }
 }
 
-/* Subscription upsell cart */
-
-.item-main-upsell {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 100%;
-  padding: 10px 10px;
-  border: solid 1px #5CB8B2;
-  background-color: #E6EFEE;
-  color: #004851;
-  display: none;
-}
-
-.test-cart-upsell-checkbox .item-main-upsell {
-  display: block;
-}
-
-@media (max-width: 749px) {
-  .test-cart-upsell-checkbox body .cart-drawer .cart-body .cart-items>.cart-item .cart-product-img .cart-img {
-    width: 100px !important;
-  }
-
-  .test-cart-upsell-checkbox .cart-product-img {
-    padding: 0 !important;
-  }
-}
-
-
-.item-main-upsell input {
-  appearance: auto;
-}
-
-.item-main-upsell__checkbox {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.item-main-upsell__checkbox input {
-  margin-top: 2px;
-}
-
-.item-main-upsell__checkbox label, .item-main-upsell__checkbox label span {
-  font-weight: normal;
-  font-size: 14px;
-}
-
-.item-main-upsell__checkbox label span {
-  color: #5CB8B2;
-  font-weight: bold;
-}
-
-.item-main-header-remove {
-  align-items: baseline;
-}
-
-.item-main-header-remove {
-  height: auto;
-}
-
-.item-main-upsell select {
-  min-height: 0;
-  height: auto;
-  line-height: 1.5;
-  padding: 0 35px 0 10px;
-  margin-top: 10px;
-  border-radius: 6px;
-  border: none;
-  background-color: white;
-  font-size: 14px;
-}
-
-.item-main-upsell select option {
-  font-size: 14px;
-}
-
 .spinner {
   border: 4px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
@@ -2142,10 +2037,6 @@ html .cbb-frequently-bought-recommendations-wrap {
 
 .cart {
   position: relative;
-}
-
-.test-cart-upsell-checkbox .cart-item .product-option {
-  display: none;
 }
 
 .not-available {
@@ -2279,24 +2170,6 @@ div#shopify-section-template--16531510329506__fa9b8a1b-146c-4f3f-8be9-721ab7ff5c
   .pre-order-info__progress {
     width: 100%;
   }
-}
-
-/* Collection page redesign test | class: test-collection-page-redesign */
-
-.test-collection-page-redesign [data-collectionbanner] {
-  display: none !important;
-}
-
-/* .section-newsletter-banner, .section-image-text-overlay, .section-icons-with-text {
-  display: none;
-} */
-
-.test-collection-page-redesign.concept--one .section-newsletter-banner {
-  display: block;
-}
-
-.test-collection-page-redesign.concept--two .section-image-text-overlay, .test-collection-page-redesign.concept--two .section-icons-with-text {
-  display: block
 }
 
 /* Cart Item Preorder */
@@ -2648,24 +2521,6 @@ button.add-to-cart:hover {
   gap: 3px;
 }
 
-/* AB test for price clarity (concept one) | class: .test-pricing-clarity-concept--one */
-
-/* .concept--one {
-  display: none !important;
-}
-
-.test-pricing-clarity-concept--one .concept--one {
-  display: block !important
-} */
-
-
-/* html:not(.test-pricing-clarity-concept--two) .skio-group__shipment {
-  display: none !important;
-  font-size: 13px;
-  background-color: rgba(241, 241, 241, 1);
-  padding: 8px 15px;
-} */
-
 body:not(.blemish-eraser):not(.eye-brightener):not(.skin-corrector) .skio-group__shipment {
   display: none !important;
   font-size: 13px;
@@ -2689,8 +2544,6 @@ body:not(.blemish-eraser):not(.eye-brightener):not(.skin-corrector) .skio-group-
 body:not(.blemish-eraser):not(.eye-brightener):not(.skin-corrector) .skio-group-container--selected [skio-subscription-price] {
   font-weight: bold;
 }
-
-/* AB test for price clarity (concept one) | class: .test-pricing-clarity-concept--two */
 
 .concept--two:not(html) {
   display: none !important;

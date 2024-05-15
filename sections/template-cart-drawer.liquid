@@ -184,43 +184,6 @@
                                 {%- endif -%}
                               </div>
 
-                              {% unless item.product.selling_plan_groups.size == 0 %}
-                                <div class="item-main-upsell">
-                                  <!-- The Checkbox -->
-                                  <div class="item-main-upsell__checkbox">
-                                    <input
-                                      type="checkbox"
-                                      class="upsell__checkbox"
-                                      id="sellingPlanCheckbox-{{ item.variant.id }}"
-                                      data-variant-id="{{ item.variant.id }}"
-                                    {% if item.selling_plan_allocation != blank %}checked{% endif %}
-                                    >
-                                    <label for="sellingPlanCheckbox-{{ item.variant.id }}">
-                                      Subscribe & <span>Save 15%</span>
-                                    </label>
-                                  </div>
-                  
-                                  <!-- The Dropdown (hidden by default) -->
-                                  <!-- The Select Dropdown (hidden by default) -->
-                                  {% assign has_plan = false %}
-                                  {%- for plan in item.product.selling_plan_groups[0].selling_plans -%}
-                                    {% if item.selling_plan_allocation.selling_plan.id == plan.id %}
-                                      {% assign has_plan = true %}
-                                    {% endif %}
-                                  {%- endfor -%}
-                                  <select id="sellingPlanOptions" class="upsell__options" {% if has_plan == false %}style="display: none;"{% endif %}>
-                                    {%- for plan in item.product.selling_plan_groups[0].selling_plans -%}
-                                      <option
-                                        value="{{ plan.id }}"
-                                        {% if item.selling_plan_allocation.selling_plan.id == plan.id %}selected{% endif %}
-                                      >
-                                        {{ plan.name }}
-                                      </option>
-                                    {%- endfor -%}
-                                  </select>
-                                </div>
-                              {% endunless %}
-
                               <div class="d-flex quantity-box-wrap justify-content-between align-items-center mt-3">
                                 <div class="quantity-box">
                                   <div class="d-flex align-items-center justify-content-center">
