@@ -1204,14 +1204,14 @@
         "settings": {
         }
       },
-      "qikify-mobilemenu-1702437136": {
-        "type": "shopify:\/\/apps\/qikify-mobile-menu-navigation\/blocks\/app-embed\/8e0d172b-7f05-43c9-a50d-bc2bff0a5f0a",
-        "disabled": false,
+      "3066834073402364550": {
+        "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/global_sellup\/001ec440-29ea-4cbf-9265-4963fa825261",
+        "disabled": true,
         "settings": {
         }
       },
-      "3066834073402364550": {
-        "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/global_sellup\/001ec440-29ea-4cbf-9265-4963fa825261",
+      "qikify-mobilemenu-1702437136": {
+        "type": "shopify:\/\/apps\/qikify-mobile-menu-navigation\/blocks\/app-embed\/8e0d172b-7f05-43c9-a50d-bc2bff0a5f0a",
         "disabled": true,
         "settings": {
         }
