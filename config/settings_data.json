@@ -1173,12 +1173,6 @@
         "settings": {
         }
       },
-      "3066834073402364550": {
-        "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/global_sellup\/001ec440-29ea-4cbf-9265-4963fa825261",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "733389323033596483": {
         "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
         "disabled": false,
@@ -1213,6 +1207,12 @@
       "qikify-mobilemenu-1702437136": {
         "type": "shopify:\/\/apps\/qikify-mobile-menu-navigation\/blocks\/app-embed\/8e0d172b-7f05-43c9-a50d-bc2bff0a5f0a",
         "disabled": false,
+        "settings": {
+        }
+      },
+      "3066834073402364550": {
+        "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/global_sellup\/001ec440-29ea-4cbf-9265-4963fa825261",
+        "disabled": true,
         "settings": {
         }
       }

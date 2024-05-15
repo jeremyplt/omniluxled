@@ -160,22 +160,6 @@
             "subtitle": "<div id=\"mobile-warranty\">{{ product.metafields['custom']['warranty'] }}<\/div>"
           }
         },
-        "3ec0cedf-fb32-4e6f-b392-8ad9d16f7103": {
-          "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/onpage_offers\/001ec440-29ea-4cbf-9265-4963fa825261",
-          "settings": {
-          }
-        },
-        "8a51062c-4d9c-422e-b490-fae013f03593": {
-          "type": "shopify:\/\/apps\/sellup-upsell-add-ons\/blocks\/onpage_offers\/001ec440-29ea-4cbf-9265-4963fa825261",
-          "settings": {
-          }
-        },
-        "ca347699-3f52-4af0-801c-1e7f4098829d": {
-          "type": "subscription-info",
-          "settings": {
-            "info": "<ul><li>Auto-shipped every 4, 6, or 8 weeks so you never run out<\/li><li>15% off every subscription order<\/li><li>Free shipping on every subscription order<\/li><li>First access to new product offerings<\/li><li>Flexible subscription plan options<\/li><\/ul>"
-          }
-        },
         "product-tabs": {
           "type": "product-tabs",
           "settings": {
@@ -236,9 +220,6 @@
         "b253ffff-d04d-43a0-9d68-fabdd77b595a",
         "pre_order_info_AYfy4W",
         "9f1de049-9d28-4e94-8dc3-d64735f73336",
-        "3ec0cedf-fb32-4e6f-b392-8ad9d16f7103",
-        "8a51062c-4d9c-422e-b490-fae013f03593",
-        "ca347699-3f52-4af0-801c-1e7f4098829d",
         "product-tabs",
         "3fc244f3-9eea-4a61-874a-b551b0227aff",
         "5ff57fbd-bd1b-4246-8fda-fbffa899311f",
@@ -1068,20 +1049,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "4f65bf04-3141-4ace-b69f-74d2f7c94563": {
-      "type": "info-text",
-      "disabled": true,
-      "settings": {
-        "fluid_layout": false,
-        "img_text1": "<p>*Applies to Ground shipping rates only. Excludes Hawaii, Alaska, New Zealand, Bosnia & Herzegovina, Iceland, Latvia, Lithuania, and Northern Ireland<\/p>",
-        "pt": 0,
-        "pb": 5,
-        "pts": 0,
-        "pbs": 15,
-        "border-top": false,
-        "border-bottom": false
-      }
     }
   },
   "order": [
@@ -1104,7 +1071,6 @@
     "27a0c0a9-9daf-4c71-981d-3e756aa3b3bb",
     "167152762813570154",
     "3b0cd3cc-5517-4d50-b829-9db880165ae6",
-    "1676318184d0f06530",
-    "4f65bf04-3141-4ace-b69f-74d2f7c94563"
+    "1676318184d0f06530"
   ]
 }
