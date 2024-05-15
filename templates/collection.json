@@ -4,8 +4,8 @@
     "image_with_text_overlay_hEKi9R": {
       "type": "image-with-text-overlay",
       "settings": {
-        "image": "shopify://shop_images/Frame_1000006492.png",
-        "image_mobile": "shopify://shop_images/Frame_1000006493.png",
+        "image": "shopify:\/\/shop_images\/Frame_1000006492.png",
+        "image_mobile": "shopify:\/\/shop_images\/Frame_1000006493.png",
         "text": "Enhance Your Glow Up With Omnilux",
         "padding_top": 0,
         "padding_bottom": 0
@@ -17,33 +17,33 @@
         "icon_with_text_Jx7CLL": {
           "type": "icon-with-text",
           "settings": {
-            "icon": "shopify://shop_images/Group_25_e0569969-f9ca-4e43-a13c-e13235ba0b01.png",
-            "text": "<p><strong>Trusted By 275K+ Customers: </strong>Thousands of global 5-star customer reviews</p>",
-            "text_mobile": "<p>Trusted By 275K+ Customers</p>"
+            "icon": "shopify:\/\/shop_images\/Group_25_e0569969-f9ca-4e43-a13c-e13235ba0b01.png",
+            "text": "<p><strong>Trusted By 300K+ Customers: <\/strong>Thousands of global 5-star customer reviews<\/p>",
+            "text_mobile": "<p>Trusted By 300K+ Customers<\/p>"
           }
         },
         "icon_with_text_Ri7U68": {
           "type": "icon-with-text",
           "settings": {
-            "icon": "shopify://shop_images/Group_26_2.png",
-            "text": "<p><strong>2-Year Warranty</strong>: Comprehensive coverage for LED devices</p>",
-            "text_mobile": "<p>2-Year Warranty On LED Devices</p>"
+            "icon": "shopify:\/\/shop_images\/Group_26_2.png",
+            "text": "<p><strong>2-Year Warranty<\/strong>: Comprehensive coverage for LED devices<\/p>",
+            "text_mobile": "<p>2-Year Warranty On LED Devices<\/p>"
           }
         },
         "icon_with_text_VPWYrH": {
           "type": "icon-with-text",
           "settings": {
-            "icon": "shopify://shop_images/Group_25_6a2ec0d5-27a5-4849-9e36-971203cf2b8d.png",
-            "text": "<p><strong>Shop Now, Pay Later:</strong> Enjoy flexible payment by choosing installment options</p>",
-            "text_mobile": "<p>Pay With Easy Monthly Installments</p>"
+            "icon": "shopify:\/\/shop_images\/Group_25_6a2ec0d5-27a5-4849-9e36-971203cf2b8d.png",
+            "text": "<p><strong>Shop Now, Pay Later:<\/strong> Enjoy flexible payment by choosing installment options<\/p>",
+            "text_mobile": "<p>Pay With Easy Monthly Installments<\/p>"
           }
         },
         "icon_with_text_VVa4Vh": {
           "type": "icon-with-text",
           "settings": {
-            "icon": "shopify://shop_images/Group_26_1.png",
-            "text": "<p><strong>Globally Certified & Clinically Proven:</strong> Backed by 40+ peer-reviewed studies</p>",
-            "text_mobile": "<p>Proven Efficacy: 40+ Studies</p>"
+            "icon": "shopify:\/\/shop_images\/Group_26_1.png",
+            "text": "<p><strong>Globally Certified & Clinically Proven:<\/strong> Backed by 40+ peer-reviewed studies<\/p>",
+            "text_mobile": "<p>Proven Efficacy: 40+ Studies<\/p>"
           }
         }
       },
@@ -92,7 +92,7 @@
         "24d362fa-8328-4dfc-8fe1-89efec14d327": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify://shop_images/Untitled_design_91.png",
+            "image": "shopify:\/\/shop_images\/Untitled_design_91.png",
             "brfore_aftertext": true,
             "contour_text": false
           }
@@ -100,7 +100,7 @@
         "5529f550-fbcc-4e26-8c91-bdd82be55d06": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify://shop_images/Untitled_design_77.png",
+            "image": "shopify:\/\/shop_images\/Untitled_design_77.png",
             "brfore_aftertext": true,
             "contour_text": false
           }
@@ -108,7 +108,7 @@
         "08f9853c-cf7f-4897-818d-4e79a2535749": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify://shop_images/Untitled_design_80.png",
+            "image": "shopify:\/\/shop_images\/Untitled_design_80.png",
             "brfore_aftertext": true,
             "contour_text": false
           }
@@ -116,7 +116,7 @@
         "4d8a7b33-198a-459e-ab6d-cb4b96facf3e": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify://shop_images/BA_WEBSITE_2.png",
+            "image": "shopify:\/\/shop_images\/BA_WEBSITE_2.png",
             "brfore_aftertext": true,
             "contour_text": false
           }
@@ -124,7 +124,7 @@
         "86bc02a4-5135-4787-810c-934239173886": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify://shop_images/Untitled_design_90.png",
+            "image": "shopify:\/\/shop_images\/Untitled_design_90.png",
             "brfore_aftertext": true,
             "contour_text": false
           }
@@ -132,7 +132,7 @@
         "67a92370-39d3-49bc-9dbc-4eebad8fbc70": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify://shop_images/Untitled_design_86.png",
+            "image": "shopify:\/\/shop_images\/Untitled_design_86.png",
             "brfore_aftertext": true,
             "contour_text": false
           }
@@ -140,7 +140,7 @@
         "2370ff6d-546f-4bd9-baf2-0eb5f1a22429": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify://shop_images/Untitled_design_74_8a59c6a5-d2c8-4c4d-b3c9-e4690f34f7a0.png",
+            "image": "shopify:\/\/shop_images\/Untitled_design_74_8a59c6a5-d2c8-4c4d-b3c9-e4690f34f7a0.png",
             "brfore_aftertext": true,
             "contour_text": false
           }
@@ -148,7 +148,7 @@
         "ae76aa1f-9260-4a8f-bd40-ec333399d92d": {
           "type": "logowidthtext",
           "settings": {
-            "image": "shopify://shop_images/Untitled_design_75.png",
+            "image": "shopify:\/\/shop_images\/Untitled_design_75.png",
             "brfore_aftertext": true,
             "contour_text": false
           }
@@ -176,7 +176,7 @@
         "heading_txt": "See for yourself",
         "txt": "",
         "btn_txt": "Reviews & results",
-        "btn_link": "shopify://pages/reviews-results",
+        "btn_link": "shopify:\/\/pages\/reviews-results",
         "btn_type": "outline",
         "btn_variant": "primary",
         "btn_size": "",

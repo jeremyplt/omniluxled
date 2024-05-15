@@ -13288,3 +13288,26 @@ width: auto;
 .omnilux-contour-hydrogel-neck-decollete div#shopify-section-template--16416230867106__4f5f33ca-10a4-41a3-b40c-038b76049541 {
   display: none;
 }
+
+
+ #shopify-section-template--16416230867106__3b0cd3cc-5517-4d50-b829-9db880165ae6 .swiper-slider .position-relative.d-flex.price-with-btn.test79{
+    display: flex !important;
+    flex-direction: column;
+  }
+  
+#shopify-section-template--16416230867106__3b0cd3cc-5517-4d50-b829-9db880165ae6 .swiper-slider .custom-flex{
+    justify-content: start !important;
+}
+#shopify-section-template--16416230867106__3b0cd3cc-5517-4d50-b829-9db880165ae6 .card:not(:hover) .btn-card, .card:hover .btn-card-hide{
+    display:none;
+}
+#featuredcollection  button.addtocartbtn.btn-add_to_cart.btn.btn-card.p-0.mt-1.trn.data-submit-btn{
+    position: absolute;
+    background:white;
+    left: 0;
+}
+.formatted-list ul.checkmarks li:before{
+	content: "✔" !important;
+    width: 0 !important;
+
+}
