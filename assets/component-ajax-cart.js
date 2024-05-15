@@ -177,30 +177,22 @@ class AjaxCart extends HTMLElement {
       .then((responseText) => {
         const html = new DOMParser().parseFromString(responseText, "text/html");
         const source = html.querySelector(
-          ".swiper-container.upsell-test-variant .swiper-wrapper"
+          ".swiper-container.upsell-slider .swiper-wrapper"
         );
         const destination = document.querySelector(
-          ".swiper-container.upsell-test-variant .swiper-wrapper"
+          ".swiper-container.upsell-slider .swiper-wrapper"
         );
 
-        const sourceTitle = html.querySelector(
-          ".cart-upsell-title.upsell-test-variant"
-        );
-        const destinationTitle = document.querySelector(
-          ".cart-upsell-title.upsell-test-variant"
-        );
+        const sourceTitle = html.querySelector(".cart-upsell-title");
+        const destinationTitle = document.querySelector(".cart-upsell-title");
 
         destinationTitle.innerHTML = sourceTitle.innerHTML;
         destination.innerHTML = source.innerHTML;
 
         if (source.children.length == 0) {
-          document.querySelector(
-            ".cart-upsell-title.upsell-test-variant"
-          ).style.display = "none";
+          document.querySelector(".cart-upsell-title").style.display = "none";
         } else {
-          document.querySelector(
-            ".cart-upsell-title.upsell-test-variant"
-          ).style.display = "block";
+          document.querySelector(".cart-upsell-title").style.display = "block";
         }
 
         this.addEventListenerUpsells();
