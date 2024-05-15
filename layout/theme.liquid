@@ -1,95 +1,88 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
-    
-    {% render 'skio-head' %}
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  {% render 'skio-head' %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-<!--Aspire tracking-->
-<script> 
 
-!function(){var o=window.tdl=window.tdl||[];if(o.invoked)window.console&&console.error&&console.error("Tune snippet has been included more than once.");else{o.invoked=!0,o.methods=["init","identify","convert"],o.factory=function(n){return function(){var e=Array.prototype.slice.call(arguments);return e.unshift(n),o.push(e),o}};for(var e=0;e<o.methods.length;e++){var n=o.methods[e];o[n]=o.factory(n)}o.init=function(e){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://js.go2sdk.com/v2/tune.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(n,t),o.domain=e}}}();
+  <!--Aspire tracking-->
+  <script> 
+    !function(){var o=window.tdl=window.tdl||[];if(o.invoked)window.console&&console.error&&console.error("Tune snippet has been included more than once.");else{o.invoked=!0,o.methods=["init","identify","convert"],o.factory=function(n){return function(){var e=Array.prototype.slice.call(arguments);return e.unshift(n),o.push(e),o}};for(var e=0;e<o.methods.length;e++){var n=o.methods[e];o[n]=o.factory(n)}o.init=function(e){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://js.go2sdk.com/v2/tune.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(n,t),o.domain=e}}}();
 
-tdl.init("https://aspireiq.go2cloud.org") 
-tdl.identify() 
-</script>
-<!--END Aspire tracking-->
+    tdl.init("https://aspireiq.go2cloud.org") 
+    tdl.identify() 
+  </script>
+  <!--END Aspire tracking-->
     
-{{!-- GTM Enhanced Conversion Tracking --}}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-620800940"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  {{!-- GTM Enhanced Conversion Tracking --}}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-620800940"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'AW-620800940', {'allow_enhanced_conversions': true});
-</script>
-
+    gtag('config', 'AW-620800940', {'allow_enhanced_conversions': true});
+  </script>
     
-<script src="https://tracking.upfluence.co/js/v1/init-249fbd7f-ec24-4799-a7fa-22d273cda0c0.js"></script>
+  <script src="https://tracking.upfluence.co/js/v1/init-249fbd7f-ec24-4799-a7fa-22d273cda0c0.js"></script>
 
-<!-- Begin BlackCrow Script Tag: DO NOT MODIFY! -->
-     <script type="text/javascript" async src="https://shopify-init.blackcrow.ai/js/core/getomnilux.js?shopify_app_version=1.0.243&shop=getomnilux.myshopify.com"></script>
-<!-- End BlackCrow Script Tag -->   {% render 'site-speed' %}
+  <!-- Begin BlackCrow Script Tag: DO NOT MODIFY! -->
+    <script type="text/javascript" async src="https://shopify-init.blackcrow.ai/js/core/getomnilux.js?shopify_app_version=1.0.243&shop=getomnilux.myshopify.com"></script>
+  <!-- End BlackCrow Script Tag -->   {% render 'site-speed' %}
 
-<!-- begin Convert Experiences code-->
-  <script type="text/javascript" src="//cdn-4.convertexperiments.com/js/1004940-1004874.js"></script>
-<!-- end Convert Experiences code -->
+  <!-- begin Convert Experiences code-->
+    <script type="text/javascript" src="//cdn-4.convertexperiments.com/js/1004940-1004874.js"></script>
+  <!-- end Convert Experiences code -->
 
 
-<script>
-(function(w,d,t,r,u)
-{
-var f,n,i;
-w[u]=w[u]||[],f=function()
-{
-var o={ti:"137030122", enableAutoSpaTracking: true};
-o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")
-},
-n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function()
-{
-var s=this.readyState;
-s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)
-},
-i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
-})
-(window,document,"script","//bat.bing.com/bat.js","uetq");
-</script>
+  <script>
+    (function(w,d,t,r,u)
+    {
+    var f,n,i;
+    w[u]=w[u]||[],f=function()
+    {
+    var o={ti:"137030122", enableAutoSpaTracking: true};
+    o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")
+    },
+    n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function()
+    {
+    var s=this.readyState;
+    s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)
+    },
+    i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
+    })
+    (window,document,"script","//bat.bing.com/bat.js","uetq");
+  </script>
 
-{% comment %} {% render 'pagefly-head' %} {% endcomment %}
-    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"><meta name="theme-color" content=""> <link rel="canonical" href="{{ canonical_url }}">
-    {%- comment -%}Favicon Icon{%- endcomment -%}
-    {%- if settings.favicon != blank -%}
-      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
-    {%- endif -%}
-    {%- comment -%}Pre-connects{%- endcomment -%}
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-    <link rel="preconnect" href="https://monorail-edge.shopifysvc.com" crossorigin>
-    <title>{{ page_title }}</title>
+  <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"><meta name="theme-color" content=""> <link rel="canonical" href="{{ canonical_url }}">
 
-    {% comment %}theme-check-disable LiquidTag{% endcomment %}
-    <meta name="facebook-domain-verification" content="o1pj57xuqx8yqom3zq7uzhrq4gib2i" />
-    {%- render 'meta-tags' -%}
-    {% capture CFH %}{{ content_for_header }}
-{%- render 'bold-common' -%}
-{%- render 'bold-includes' -%}{% endcapture %}
-    {% if template.name != 'product' and template.name != 'cart' %}
-      {% capture CFH %}
-        {{ CFH | replace: 'data-source-attribution="shopify.dynamic-checkout"', 'data-source-attribution="shopify.dynamic-checkout" type="text/gzip"' }}{% endcapture %}
-    {% endif %}
-    {% comment %}theme-check-enable LiquidTag{% endcomment %}
-    {{ CFH }}
-    {% comment %}preloads{% endcomment %}
-    <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient-HD.jpg?v=1672819271">
-    <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/OmniLux_Logo.svg?v=1669202901">
-    <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient-HM.jpg?v=1672819385">
-    <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient02M.jpg?v=1677741220">
-    <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient03M.jpg?v=1677741220">
+  {%- if settings.favicon != blank -%}
+    <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+  {%- endif -%}
 
-    {%- render 'styles-tags' -%}
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+  <link rel="preconnect" href="https://monorail-edge.shopifysvc.com" crossorigin>
+  <title>{{ page_title }}</title>
+
+  <meta name="facebook-domain-verification" content="o1pj57xuqx8yqom3zq7uzhrq4gib2i" />
+  {%- render 'meta-tags' -%}
+  {% capture CFH %}{{ content_for_header }}{% endcapture %}
+  {% if template.name != 'product' and template.name != 'cart' %}
+    {% capture CFH %}
+      {{ CFH | replace: 'data-source-attribution="shopify.dynamic-checkout"', 'data-source-attribution="shopify.dynamic-checkout" type="text/gzip"' }}{% endcapture %}
+  {% endif %}
+
+  {{ CFH }}
+
+  <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient-HD.jpg?v=1672819271">
+  <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/OmniLux_Logo.svg?v=1669202901">
+  <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient-HM.jpg?v=1672819385">
+  <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient02M.jpg?v=1677741220">
+  <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Background-Gradient03M.jpg?v=1677741220">
+
+  {%- render 'styles-tags' -%}
 
     <style>
       {% if product.handle == "omnilux-contour-face" %}
@@ -146,15 +139,6 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
 </head>
 
   <body class="template-{{ template.name }} {{ page.handle }} {{ collection.handle }} {{ product.handle }} {% if product.tags contains 'men_product' %}product-men{% endif %} ab-faq" data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}">
-
-    {% comment %}{% if template.name == "login" %}
-      <script>
-        // Redirect to "/a/account/login"
-        if (window.location.pathname === "/account/login") {
-          window.location.href = "/a/account/login";
-        }
-      </script>
-    {% endif %}{% endcomment %}
     
     <img src="https://trkn.us/pixel/conv/ppt=22138;g=sitewide;gid=51408;ord={{ 'now' | date: '%s' }}" height="0" width="0" border="0" style="display:none"/>
 
@@ -426,12 +410,6 @@ i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
 <!-- Stamped - Begin script -->
 {% comment %} <script async type="text/javascript" id="stamped-script-widget" data-api-key="pubkey-0222n1h8tQ2vG56Mr6Mv363g3UUEeN" src="https://cdn1.stamped.io/files/widget.min.js"></script> {% endcomment %}
 <!-- Stamped - End script -->
-
-
-
-<!-- **BEGIN** Hextom USB Integration // Main Include - DO NOT MODIFY -->
-    {% render 'hextom_usb_main', product: product, customer: customer %}
-    <!-- **END** Hextom USB Integration // Main Include - DO NOT MODIFY -->
 
 <!-- BEGIN KLAVIYO Back in Stock Snippet -->
 
