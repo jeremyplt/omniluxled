@@ -23,7 +23,6 @@
 .template-collection #MainContent .card-img a.product-link{margin-top:0;}
 .template-collection #MainContent .card-title .product-link{font-size: 18px!important;font-weight: 700!important;margin-top:10px!important;display:block;}
 .template-collection #MainContent .badgepills img{margin:0;}
-.template-collection #MainContent .newcollectiondescription{color:#000000;font-size:16px;text-align:center;padding-bottom:20px;}
 .template-collection .card-product .badges{padding:0!important;}
 
 .template-collection #MainContent .card-body .pt-1.price-with-btn-col{padding-top:0!important;}
@@ -100,20 +99,13 @@ p.hoox-shop__upsell-description{font-style:italic;}
   
 }
 
-/*collection page abtest*/
-.card-product .badges,#collectionabhide,.newcollectiondescription{display:none}
-.newcollectiondescription img{width:16px;display:inline-block;}
+.card-product .badges{display:none}
 
-
-/*hide mini faq*/
-/* .help-center-products #custom-tab-btn-7{display:none;} */
-
-
-.vendorname{    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 12px;}
-
-
+.vendorname {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+}
 
 /*new header height*/
 .image-hero.shortbanner .tallheight .swiper-slide {height: calc(80vh - 140px);min-height: 0vw!important;}
