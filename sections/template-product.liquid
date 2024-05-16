@@ -343,7 +343,8 @@
                     {% endif %}
                   {% endfor %}
                   <div class="priceshow" style="display:none">{{ current_variant.price }} - {{ product.compare_at_price }}</div>
-                  <div class="price-wrapper mt-2 d-flex align-items-center flex-wrap test99">
+                  {% render 'price-with-taxes' %}
+                  {% comment %} <div class="price-wrapper mt-2 d-flex align-items-center flex-wrap test99">
                     
                     {%- if current_variant.compare_at_price > current_variant.price -%}
                       <s
@@ -357,7 +358,7 @@
                     {% unless product.tags contains "no_free_shipping" %}
                       {% comment %} <span class="free-shipping text-uppercase fw-bold font-size-md ls-0" style="line-height: 1.7857142857;">+ free shipping*</span> {% endcomment %}
                     {% endunless %}
-                  </div>
+                  </div> {% endcomment %}
                   <div class="cc_prod_price_selector"></div>
 
                   {%- unless product.type contains 'Gift' or product.type contains 'gift' -%}

@@ -2905,19 +2905,18 @@ body:not(.blemish-eraser):not(.eye-brightener):not(.skin-corrector) .skio-group-
     display: flex;
 }
 .template-collection .position-relative.d-flex.price-with-btn .col-12.btn-card-hide.trn.fw-normal{
-    height: min-content !important;
+    /* height: min-content !important; */
 }
 
 .template-collection #MainContent .card-body {
     padding: 0 20px 20px !important;
 }
 
-.template-collection #MainContent .card:hover .btn-card-hide{
-    display: flex !important;
-    justify-content:center;
+.template-collection #MainContent .card .btn-card-hide {
+  margin-bottom: 5px;
 }
 .template-collection .position-relative.d-flex.price-with-btn .col-12.btn-card-hide.trn.fw-normal{
-    width: min-content !important;
+    /* width: min-content !important; */
 }
 span.firstPrice {
     display: block;
@@ -2960,4 +2959,55 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
   body .klaviyo-form--code .klaviyo-form > div{
     justify-content: normal !important;
   }
+}
+
+/* Price with taxes */
+
+.price-with-taxes {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.price__tax--included ~ .price__tax--excluded  {
+  font-size: 12px;
+}
+
+.product-details-wrapper .price__tax--included .price__value, .product-details-wrapper .price__tax--no-display .price__value {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mega-menu-item-call .price__tax--included, .dropdown-menu-container .price__tax--included {
+  font-size: 14px;
+}
+
+.price__value.compare-at-price {
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+
+.cart-total-price .price-with-taxes {
+  justify-content: flex-end;
+}
+
+#upsell_accordion .price__tax--included {
+  font-size: 14px;
+}
+
+.cbb-frequently-bought-recommendations-wrap .tax {
+  font-size: 12px !important;
+  font-weight: normal !important;
+  margin-left: 5px !important;
+}
+
+.cbb-frequently-bought-selector-label-compare-at-price .tax, .cbb-frequently-bought-selector-label-compare-at-price .tax-excl-price,
+.cbb-frequently-bought-total-price-was-price .tax, .cbb-frequently-bought-total-price-was-price .tax-excl-price {
+  display: none;
+}
+
+.cbb-frequently-bought-recommendations-wrap .tax-excl-price {
+  font-size: 14px !important;
 }

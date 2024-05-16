@@ -1,0 +1,132 @@
+{% comment %} 
+    Format: [COUNTRY_CODE] | [TAXE_PERCENTAGE]
+{% endcomment %}
+
+{% capture tax_data %}
+    NZ|0.15,
+    AU|0.10,
+    AD|0,045,
+    SZ|0.077,
+    LI|0.077,
+    LU|0.16,
+    BA|0.17,
+    MT|0.18,
+    XK|0.18,
+    DE|0.19,
+    CY|0.19,
+    AL|0.21,
+    AT|0.21,
+    BY|0.21,
+    BG|0.21,
+    FR|0.21,
+    EE|0.21,
+    GB|0.21,
+    TR|0.21,
+    SK|0.21,
+    RS|0.21,
+    RU|0.21,
+    MC|0.21,
+    MD|0.21,
+    ES|0.21,
+    NL|0.21,
+    ME|0.21,
+    LT|0.21,
+    LV|0.21,
+    BE|0.21,
+    SI|0.22,
+    IT|0.22,
+    PT|0.23,
+    PL|0.23,
+    IE|0.23,
+    IS|0.24,
+    GR|0.24,
+    FI|0.24,
+    SE|0.25,
+    NO|0.25,
+    DK|0.25,
+    HR|0.25,
+    CA|0.00,
+    HU|0.27,
+    CH|0.081
+{% endcapture %}
+
+{% assign no_price_display_countries = "US,CA" | split: "," %}
+
+{% assign tax_rules = tax_data | split: ',' %}
+{% assign customer_country = localization.country.iso_code %}
+
+{% for rule in tax_rules %}
+    {% assign clean_rule = rule | strip_newlines | strip %}
+    {% assign details = clean_rule | split: '|' %}
+    {% if details[0] == customer_country %}
+        {% assign tax_rate = details[1] %}
+    {% endif %}
+{% endfor %}
+
+{% if price %}
+    {% assign product_price = price %}
+{% elsif is_cart %}
+    {% assign product_price = product.final_line_price %}
+{% else %}
+    {% assign product_price = product.price %}
+{% endif %}
+
+{% if is_cart %}
+    {% assign product_compare_at_price = product.original_price %}
+{% else %}
+    {% assign product_compare_at_price = product.compare_at_price %}
+{% endif %}
+{% assign tax_amount = product_price | times: tax_rate %}
+{% assign compare_tax_amount = product_compare_at_price | times: tax_rate %}
+
+{% if tax_rate %}
+    {% assign final_price = product_price | plus: tax_amount %}
+    {% assign final_compare_at_price = product_compare_at_price | plus: compare_tax_amount %}
+    {% assign price_display = "Incl. Tax" %}
+{% elsif no_price_display_countries contains customer_country %}
+    {% assign final_price = product_price %}
+    {% assign final_compare_at_price = product_compare_at_price %}
+    {% assign price_display = blank %}
+{% else %}
+    {% assign final_price = product_price %}
+    {% assign final_compare_at_price = product_compare_at_price %}
+    {% assign price_display = "Excl. Tax" %}
+{% endif %}
+
+{% if product_compare_at_price > product_price %}
+    {% assign on_sale = true %}
+{% else %}
+    {% assign on_sale = false %}
+{% endif %}
+
+
+
+<span class="price-with-taxes">
+    {% if on_sale %}
+        <span class="price__value compare-at-price" data-comparePrice>{{ final_compare_at_price | money }}</span>
+    {% endif %}
+    {% if customer_country == "LU" %}
+        <span class="price__tax--included">
+            <span class="price__value {% if on_sale %}price--sale{% else %}price--normal{% endif %}" data-currentPrice>
+                {{ final_price | money }}
+            </span> 
+            <span class="price__tax">Incl. Tax</span>
+        </span>
+
+        <span class="price__tax--excluded">
+            <span class="price__value {% if on_sale %}price--sale{% else %}price--normal{% endif %}" data-currentPrice>
+                {{ product_price | money }}
+            </span> 
+            <span class="price__tax">Excl. Tax</span>
+        </span>
+    {% else %}
+    <span class="{% if price_display == "Incl. Tax" %}price__tax--included{% elsif price_display == "Excl. Tax" %}price__tax--excluded{% else %}price__tax--no-display{% endif %}">
+        <span class="price__value {% if on_sale %}price--sale{% else %}price--normal{% endif %}" data-currentPrice>
+            {{ final_price | money }}
+        </span> 
+        {% if price_display != blank %}
+            <span class="price__tax">{{ price_display }}</span>
+        {% endif %}
+    </span>
+    {% endif %}
+</span>

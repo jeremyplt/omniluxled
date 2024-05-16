@@ -12097,6 +12097,8 @@ footer .col_1_txt a {
   }
   .btn-card {
     justify-content: flex-start;
+    position: absolute;
+    left:0;
   }
   .card:not(:hover) .btn-card,
   .card:hover .btn-card-hide {

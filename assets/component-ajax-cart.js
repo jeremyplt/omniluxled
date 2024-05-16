@@ -289,6 +289,59 @@ class AjaxCart extends HTMLElement {
     document.querySelector("body").classList.remove("gwp-tier-open");
   }
 
+  calculatePriceWithTaxes(price, country) {
+    const taxData = {
+      NZ: 0.15,
+      AU: 0.1,
+      AD: 0.045,
+      SZ: 0.077,
+      LI: 0.077,
+      LU: 0.16,
+      BA: 0.17,
+      MT: 0.18,
+      XK: 0.18,
+      DE: 0.19,
+      CY: 0.19,
+      AL: 0.21,
+      AT: 0.21,
+      BY: 0.21,
+      BG: 0.21,
+      FR: 0.21,
+      EE: 0.21,
+      GB: 0.21,
+      TR: 0.21,
+      SK: 0.21,
+      RS: 0.21,
+      RU: 0.21,
+      MC: 0.21,
+      MD: 0.21,
+      ES: 0.21,
+      NL: 0.21,
+      ME: 0.21,
+      LT: 0.21,
+      LV: 0.21,
+      BE: 0.21,
+      SI: 0.22,
+      IT: 0.22,
+      PT: 0.23,
+      PL: 0.23,
+      IE: 0.23,
+      IS: 0.24,
+      GR: 0.24,
+      FI: 0.24,
+      SE: 0.25,
+      NO: 0.25,
+      DK: 0.25,
+      HR: 0.25,
+      CA: 0.0,
+      HU: 0.27,
+      CH: 0.081,
+    };
+
+    if (!taxData[country]) return price;
+    return price * (1 + taxData[country]);
+  }
+
   /**
    * Update cart HTML and Trigger Open Drawer event
    *
@@ -315,8 +368,12 @@ class AjaxCart extends HTMLElement {
 
     let cartElement = cartHTML.querySelector("ajax-cart form");
     this.querySelector("form").innerHTML = cartElement.innerHTML;
+
     this.querySelector("[data-carttotal]").innerHTML = Shopify.formatMoney(
-      window.globalVariables.cart.total_price,
+      this.calculatePriceWithTaxes(
+        window.globalVariables.cart.total_price,
+        window.customerCountry
+      ),
       window.globalVariables.money_format
     );
 

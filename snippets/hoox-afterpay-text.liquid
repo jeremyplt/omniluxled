@@ -1,6 +1,8 @@
+{% assign price = product.price | divided_by: 4 %}
+
 <div class='hoox-shop__afterpay'>
     <p class='hoox-shop__afterpay-text'>
-        or 4 interest-free payments of <span class='js-after-pay-price'>{{ product.price |  divided_by: 4 | money }}</span>
+        or 4 interest-free payments of <span class='js-after-pay-price'>{% render 'price-with-taxes', price: price %}</span>
         with
     </p>
 
