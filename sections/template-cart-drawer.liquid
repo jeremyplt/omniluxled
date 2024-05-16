@@ -306,7 +306,7 @@
                                   </div>
                                 </div>
                                 <div class="text-end cart-total-price ps-3 fw-normal">
-                                  {% render 'price-with-taxes', product: item.variant %}
+                                  {% render 'price-with-taxes', product: item, is_cart: true %}
                                   {% comment %} {% if item.variant.price < item.variant.compare_at_price %}
                                     <span class="item__compare-at-price">
                                       {{ item.variant.compare_at_price | times: item.quantity | money }}

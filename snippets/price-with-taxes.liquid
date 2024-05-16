@@ -65,10 +65,17 @@
 
 {% if price %}
     {% assign product_price = price %}
+{% elsif is_cart %}
+    {% assign product_price = product.final_line_price %}
 {% else %}
     {% assign product_price = product.price %}
 {% endif %}
-{% assign product_compare_at_price = product.compare_at_price %}
+
+{% if is_cart %}
+    {% assign product_compare_at_price = product.original_price %}
+{% else %}
+    {% assign product_compare_at_price = product.compare_at_price %}
+{% endif %}
 {% assign tax_amount = product_price | times: tax_rate %}
 {% assign compare_tax_amount = product_compare_at_price | times: tax_rate %}
 
