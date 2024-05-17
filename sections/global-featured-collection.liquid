@@ -15,8 +15,11 @@
               <div class="container">
                   <div class="row">
                       {% unless section.settings.home_featured_product == blank %}
-                      <div class="col-12 col-lg-6 mb-4 mb-lg-0 pb-1 pb-lg-0">
+                      <div class="col-12 col-lg-6 mb-4 mb-lg-0 pb-1 pb-lg-0 swap-product--original">
                         {% render 'card-product-style-featured', product: section.settings.home_featured_product %}
+                      </div>
+                      <div class="col-12 col-lg-6 mb-4 mb-lg-0 pb-1 pb-lg-0 swap-product--test">
+                        {% render 'card-product-style-featured', product: all_products["omnilux-men"] %}
                       </div>
                     {% endunless %}
                       <div class="col-12 col-lg-6">

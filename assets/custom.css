@@ -3011,3 +3011,11 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
 .cbb-frequently-bought-recommendations-wrap .tax-excl-price {
   font-size: 14px !important;
 }
+
+.test-swap-product .swap-product--original {
+  display: none;
+}
+
+html:not(.test-swap-product) .swap-product--test {
+  display: none;
+}
