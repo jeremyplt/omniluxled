@@ -22,6 +22,58 @@ The following web component can be dropped into any standard Shopify theme (i.e.
   document.dispatchEvent( new CustomEvent("variantChanged", { detail: { variantId: variant.id } }) );
 */
 
+function calculatePriceWithTaxes(price, country) {
+  const taxData = {
+    NZ: 0.15,
+    AU: 0.1,
+    AD: 0.045,
+    SZ: 0.077,
+    LI: 0.077,
+    LU: 0.16,
+    BA: 0.17,
+    MT: 0.18,
+    XK: 0.18,
+    DE: 0.19,
+    CY: 0.19,
+    AL: 0.21,
+    AT: 0.21,
+    BY: 0.21,
+    BG: 0.21,
+    FR: 0.21,
+    EE: 0.21,
+    GB: 0.21,
+    TR: 0.21,
+    SK: 0.21,
+    RS: 0.21,
+    RU: 0.21,
+    MC: 0.21,
+    MD: 0.21,
+    ES: 0.21,
+    NL: 0.21,
+    ME: 0.21,
+    LT: 0.21,
+    LV: 0.21,
+    BE: 0.21,
+    SI: 0.22,
+    IT: 0.22,
+    PT: 0.23,
+    PL: 0.23,
+    IE: 0.23,
+    IS: 0.24,
+    GR: 0.24,
+    FI: 0.24,
+    SE: 0.25,
+    NO: 0.25,
+    DK: 0.25,
+    HR: 0.25,
+    HU: 0.27,
+    CH: 0.081,
+  };
+
+  if (!taxData[country]) return price;
+  return price * (1 + taxData[country]);
+}
+
 import {
   LitElement,
   html,
@@ -528,61 +580,6 @@ export class SkioPlanPickerComponent extends LitElement {
     return this;
   }
 
-  calculatePriceWithTaxes(price, country) {
-    const taxData = {
-      NZ: 0.15,
-      AU: 0.1,
-      AD: 0.045,
-      SZ: 0.077,
-      LI: 0.077,
-      LU: 0.16,
-      BA: 0.17,
-      MT: 0.18,
-      XK: 0.18,
-      DE: 0.19,
-      CY: 0.19,
-      AL: 0.21,
-      AT: 0.21,
-      BY: 0.21,
-      BG: 0.21,
-      FR: 0.21,
-      EE: 0.21,
-      GB: 0.21,
-      TR: 0.21,
-      SK: 0.21,
-      RS: 0.21,
-      RU: 0.21,
-      MC: 0.21,
-      MD: 0.21,
-      ES: 0.21,
-      NL: 0.21,
-      ME: 0.21,
-      LT: 0.21,
-      LV: 0.21,
-      BE: 0.21,
-      SI: 0.22,
-      IT: 0.22,
-      PT: 0.23,
-      PL: 0.23,
-      IE: 0.23,
-      IS: 0.24,
-      GR: 0.24,
-      FI: 0.24,
-      SE: 0.25,
-      NO: 0.25,
-      DK: 0.25,
-      HR: 0.25,
-      CA: 0.0,
-      HU: 0.27,
-      CH: 0.081,
-    };
-
-    if (!taxData[country]) return price;
-    console.log("taxData[country]", taxData[country]);
-    console.log("price", price);
-    return price * (1 + taxData[country]);
-  }
-
   render() {
     if (
       !this.product ||
@@ -672,7 +669,7 @@ export class SkioPlanPickerComponent extends LitElement {
             <div class="skio-price">
               <span skio-onetime-price
                 >${this.moneyFormatter.format(
-                  this.calculatePriceWithTaxes(
+                  calculatePriceWithTaxes(
                     this.selectedVariant.price / 100,
                     window.customerCountry
                   )
@@ -771,7 +768,7 @@ export class SkioPlanPickerComponent extends LitElement {
                         <div class="skio-price__inner">
                           <span skio-subscription-price>
                             ${this.moneyFormatter.format(
-                              this.calculatePriceWithTaxes(
+                              calculatePriceWithTaxes(
                                 this.price(group.selected_selling_plan, false) /
                                   100,
                                 window.customerCountry
@@ -780,7 +777,7 @@ export class SkioPlanPickerComponent extends LitElement {
                           </span>
                           <span skio-compare-at-price class="concept--two"
                             >${this.moneyFormatter.format(
-                              this.calculatePriceWithTaxes(
+                              calculatePriceWithTaxes(
                                 this.selectedVariant.price / 100,
                                 window.customerCountry
                               )
@@ -1669,7 +1666,10 @@ document.addEventListener("skio::update-selling-plan", function (e) {
 
   if (price && !sellingPlan) {
     price.innerHTML = e.detail.moneyFormatter.format(
-      e.detail.selectedVariant.price / 100
+      calculatePriceWithTaxes(
+        e.detail.selectedVariant.price / 100,
+        window.customerCountry
+      )
     );
   }
 
@@ -1695,31 +1695,48 @@ document.addEventListener("skio::update-selling-plan", function (e) {
 
         if (priceAdjustment.value_type === "price") {
           deliveryPrice.innerHTML = e.detail.moneyFormatter.format(
-            priceAdjustment.value / 100
+            calculatePriceWithTaxes(
+              priceAdjustment.value / 100,
+              window.customerCountry
+            )
           );
 
           if (price) {
             price.innerHTML = e.detail.moneyFormatter.format(
-              e.detail.selectedVariant.selling_plan_allocations[0].price / 100
+              calculatePriceWithTaxes(
+                e.detail.selectedVariant.selling_plan_allocations[0].price /
+                  100,
+                window.customerCountry
+              )
             );
           }
         } else {
           deliveryPrice.innerHTML = e.detail.moneyFormatter.format(
-            (e.detail.selectedVariant.price *
-              (1 - priceAdjustment.value / 100)) /
-              100
+            calculatePriceWithTaxes(
+              (e.detail.selectedVariant.price *
+                (1 - priceAdjustment.value / 100)) /
+                100,
+              window.customerCountry
+            )
           );
 
           if (price) {
             price.innerHTML = e.detail.moneyFormatter.format(
-              e.detail.selectedVariant.selling_plan_allocations[0].price / 100
+              calculatePriceWithTaxes(
+                e.detail.selectedVariant.selling_plan_allocations[0].price /
+                  100,
+                window.customerCountry
+              )
             );
           }
         }
       } else {
         if (price && priceAdjustment.value) {
           price.innerHTML = e.detail.moneyFormatter.format(
-            e.detail.selectedVariant.price / 100
+            calculatePriceWithTaxes(
+              e.detail.selectedVariant.price / 100,
+              window.customerCountry
+            )
           );
         }
       }

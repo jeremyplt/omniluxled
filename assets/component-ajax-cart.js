@@ -333,7 +333,6 @@ class AjaxCart extends HTMLElement {
       NO: 0.25,
       DK: 0.25,
       HR: 0.25,
-      CA: 0.0,
       HU: 0.27,
       CH: 0.081,
     };

@@ -136,7 +136,6 @@ function calculatePriceWithTaxes(price, country, showTaxes = false) {
     NO: 0.25,
     DK: 0.25,
     HR: 0.25,
-    CA: 0.0,
     HU: 0.27,
     CH: 0.081,
   };
@@ -173,11 +172,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const customerCountry = window.customerCountry;
   waitForElm(".cbb-frequently-bought-selector-label-regular-price", 5000).then(
     () => {
-      const prices = document.querySelectorAll(
-        ".cbb-frequently-bought-selector-label-regular-price, .cbb-frequently-bought-selector-label-compare-at-price, .cbb-frequently-bought-selector-label-sale-price, .cbb-frequently-bought-total-price-sale-price, .cbb-frequently-bought-total-price-was-price"
-      );
-
-      setTimeout(() => {
+      function changePrices() {
+        const prices = document.querySelectorAll(
+          ".cbb-frequently-bought-selector-label-regular-price, .cbb-frequently-bought-selector-label-compare-at-price, .cbb-frequently-bought-selector-label-sale-price, .cbb-frequently-bought-total-price-sale-price, .cbb-frequently-bought-total-price-was-price, .cbb-frequently-bought-total-price-regular-price"
+        );
         prices.forEach((price) => {
           const hasAnyClass = [
             "cbb-frequently-bought-selector-label-compare-at-price",
@@ -194,6 +192,24 @@ document.addEventListener("DOMContentLoaded", function () {
           );
           priceElement.innerHTML = priceWithTaxes;
         });
+      }
+
+      setTimeout(() => {
+        const variantSelects = document.querySelectorAll(
+          ".cbb-recommendations-variant-select"
+        );
+
+        console.log("variantSelects", variantSelects);
+
+        if (variantSelects.length > 0) {
+          variantSelects.forEach((select) => {
+            select.addEventListener("change", () => {
+              changePrices();
+            });
+          });
+        }
+
+        changePrices();
       }, 1000);
     }
   );

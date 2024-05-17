@@ -329,15 +329,6 @@
         var currentPriceCompared = (+ sanitizePrice(SHOP_EL_PRICE_COMPARE.textContent)).toFixed(2) * currentQuantity;
     }
 
-    // SHOP_EL_ATC_BUTTON_PRICE.innerHTML = `${
-    //   (+ SHOP_EL_ATC_BUTTON_PRICE.textContent / 100).toFixed(2)
-    // }`;
-    // if (SHOP_EL_PRICE_COMPARE) {
-    //   SHOP_EL_PRICE_COMPARE.innerHTML = `${
-    //     (+ SHOP_EL_PRICE_COMPARE.textContent / 100).toFixed(2)
-    //   }`;
-    // }
-
 // AFTERPAY
     // if (initialPrice)
     //   SHOP_AFTERPAY_PRICE.textContent = (initialPrice / 4).toFixed(2);
@@ -353,9 +344,9 @@
     SHOP_EL_QUANTITY_INPUT.addEventListener('change', function() {
       currentQuantity = parseInt(SHOP_EL_QUANTITY_INPUT.value);
       currentPrice = initialPrice * currentQuantity;
-      SHOP_EL_ATC_BUTTON_PRICE.innerHTML = `${
+      SHOP_EL_ATC_BUTTON_PRICE.innerHTML = currentPrice ? `${
         currentPrice.toFixed(2)
-      }`;
+      }` : "";
 
       if (SHOP_EL_PRICE_COMPARE) {
         currentPriceCompared = initialPriceCompared * currentQuantity;
@@ -367,12 +358,12 @@
 
     SHOP_EL_ATC_BUTTON.addEventListener('click', function() {
       setTimeout(function() {
-        SHOP_EL_ATC_BUTTON_PRICE.innerHTML = initialPrice.toFixed(2);
+        SHOP_EL_ATC_BUTTON_PRICE.innerHTML = initialPrice ? initialPrice.toFixed(2) : "" ; 
         currentQuantity = 1;
         currentPrice = (+ SHOP_EL_ATC_BUTTON_PRICE.textContent).toFixed(2) * currentQuantity;
 
         if (SHOP_EL_PRICE_COMPARE) {
-          SHOP_EL_PRICE_COMPARE.innerHTML = initialPriceCompared.toFixed(2);
+          SHOP_EL_PRICE_COMPARE.innerHTML = intialPriceCompared ? initialPriceCompared.toFixed(2) : "";
           currentPriceCompared = (+ SHOP_EL_PRICE_COMPARE.textContent).toFixed(2) * currentQuantity;
         }
 

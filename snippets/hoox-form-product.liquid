@@ -324,7 +324,7 @@
                       </span> - 
                     {%- endif -%} -->
                     <span class="hoox-js-price actual-price money">
-                      {{- current_variant.price | money -}}
+                      {% render 'price-with-taxes', product: current_variant %}
                     </span>
                   {% endif %}
                 {%- else -%}
