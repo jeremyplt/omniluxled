@@ -19,16 +19,34 @@
 
 /*droplette giveaway*/
 @media(min-width:768px) and (max-width:1600px){
-  body.template-page.omnilux-x-droplette-giveaway-signup .klaviyo-form--code{top:42%!important;}
+body.signup-page.template-page .klaviyo-form--code{top:42%!important;}
 }
 
 @media(min-width:768px) and (max-width:1400px){
-  body.template-page.omnilux-x-droplette-giveaway-signup .klaviyo-form--code{top:36%!important;}
-.template-page.omnilux-x-droplette-giveaway-signup .klaviyo-form--desktop-image{min-height:700px;}
-.template-page.omnilux-x-droplette-giveaway-signup .klaviyo-form--desktop-image img{object-fit: cover;
+body.signup-page.template-page .klaviyo-form--code{top:36%!important;}
+body.signup-page.template-page .klaviyo-form--desktop-image{min-height:700px;}
+body.signup-page.template-page .klaviyo-form--desktop-image img{object-fit: cover;
     height: 100%;
     width: 100%;
     min-height: 700px;}
+}
+
+@media (max-width: 450px) {
+body.signup-page.template-page .klaviyo-form--code {
+        bottom: -12%;
+    }
+body.template-page.subscribe .klaviyo-form--code{
+  bottom: -9%;
+}
+}
+
+@media (max-width: 375px) {
+body.signup-page.template-page .klaviyo-form--code {
+        bottom: -17%;
+    }
+body.template-page.subscribe .klaviyo-form--code{
+  bottom: -15%;
+}
 }
 
 /*new collection page design*/

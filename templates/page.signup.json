@@ -9,10 +9,10 @@
     "klaviyo_form_A6ewfX": {
       "type": "klaviyo-form",
       "settings": {
-        "desktop-image": "shopify://shop_images/D2C_Color_Wow_Giveaway_Email_SMS_Sign_Up_Desktop_Landing_Page_1.png",
+        "desktop-image": "shopify:\/\/shop_images\/D2C_CSC_Giveaway_Email_SMS_Sign_Up_Desktop_Landing_Page.png",
         "desktop_form_position": "right",
-        "mobile-image": "shopify://shop_images/D2C_Color_Wow_Giveaway_Email_SMS_Sign_Up_Mobile_Landing_Page_2.png",
-        "form-code": "<div class=\"klaviyo-form-UUwnT5\"></div>"
+        "mobile-image": "shopify:\/\/shop_images\/D2C_CSC_Giveaway_Email_SMS_Sign_Up_Mobile_Landing_Page_1.png",
+        "form-code": "<div class=\"klaviyo-form-SuwaZ4\"><\/div>"
       }
     }
   },

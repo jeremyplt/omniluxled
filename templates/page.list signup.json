@@ -9,10 +9,10 @@
     "klaviyo_form_Laptga": {
       "type": "klaviyo-form",
       "settings": {
-        "desktop-image": "shopify://shop_images/D2C_Email_SMS_Sign_Up_Landing_Page_11.png",
+        "desktop-image": "shopify:\/\/shop_images\/D2C_Email_SMS_Sign_Up_Landing_Page_11.png",
         "desktop_form_position": "left",
-        "mobile-image": "shopify://shop_images/D2C_Color_Wow_Giveaway_Email_SMS_Sign_Up_Mobile_Landing_Page_1.png",
-        "form-code": "<div class=\"klaviyo-form-SGmdyK\"></div>"
+        "mobile-image": "shopify:\/\/shop_images\/D2C_Evergreen_Email_SMS_Sign_Up_Mobile_Landing_Page.png",
+        "form-code": "<div class=\"klaviyo-form-SGmdyK\"><\/div>"
       }
     }
   },
