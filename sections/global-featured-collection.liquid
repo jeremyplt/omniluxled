@@ -14,12 +14,9 @@
 
               <div class="container">
                   <div class="row">
-                      {% unless section.settings.home_featured_product == blank %}
-                      <div class="col-12 col-lg-6 mb-4 mb-lg-0 pb-1 pb-lg-0 swap-product--original">
+                    {% unless section.settings.home_featured_product == blank %}
+                      <div class="col-12 col-lg-6 mb-4 mb-lg-0 pb-1 pb-lg-0">
                         {% render 'card-product-style-featured', product: section.settings.home_featured_product %}
-                      </div>
-                      <div class="col-12 col-lg-6 mb-4 mb-lg-0 pb-1 pb-lg-0 swap-product--test">
-                        {% render 'card-product-style-featured', product: all_products["omnilux-men"] %}
                       </div>
                     {% endunless %}
                       <div class="col-12 col-lg-6">
@@ -47,12 +44,15 @@
                                   }
                               }'>
                                   <div class="swiper-wrapper">
-                                        {% for i in (1..2) %}
-                                            {% capture featured_product %}featured_product_{{ i }}{% endcapture %}
-                                            <div class="swiper-slide collection-style-4">
-                                            {% render 'card-product-style-featured', product: section.settings[featured_product] %}
-                                            </div>
-                                        {% endfor %}
+                                    <div class="swiper-slide collection-style-4 swap-product--test">
+                                      {% render 'card-product-style-featured', product: all_products["omnilux-men"] %}
+                                    </div>
+                                    {% for i in (1..2) %}
+                                        {% capture featured_product %}featured_product_{{ i }}{% endcapture %}
+                                        <div class="swiper-slide collection-style-4 {% if i == 1 %}swap-product--original{% endif %}">
+                                        {% render 'card-product-style-featured', product: section.settings[featured_product] %}
+                                        </div>
+                                    {% endfor %}
                                   </div>
                                   {% if section.settings.nav_dots %}
                                       <div class="swiper-pagination bottom-0 w-100 text-center mt-3 position-relative"></div>
@@ -74,9 +74,9 @@
                       </div>
                   </div>
               </div>
-
       </div>
   </section>
+  
   {% schema %}
 {
   "name": "Featured Collection",
