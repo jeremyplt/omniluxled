@@ -1374,5 +1374,282 @@
         "default": "ERROR MESSAGE"
       }
     ]
-  }
+  },
+  {
+    "name": "Tax Rates",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Manage Tax Rates"
+      },
+      {
+        "type": "paragraph",
+        "content": "Enter the tax rates for each country. Use decimal values (e.g., 0.15 for 15%)."
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_NZ",
+        "label": "New Zealand (NZ)",
+        "default": "0.15"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_AU",
+        "label": "Australia (AU)",
+        "default": "0.10"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_AD",
+        "label": "Andorra (AD)",
+        "default": "0.045"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_SZ",
+        "label": "Swaziland (SZ)",
+        "default": "0.077"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_LI",
+        "label": "Liechtenstein (LI)",
+        "default": "0.077"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_LU",
+        "label": "Luxembourg (LU)",
+        "default": "0.16"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_BA",
+        "label": "Bosnia and Herzegovina (BA)",
+        "default": "0.17"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_MT",
+        "label": "Malta (MT)",
+        "default": "0.18"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_XK",
+        "label": "Kosovo (XK)",
+        "default": "0.18"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_DE",
+        "label": "Germany (DE)",
+        "default": "0.19"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_CY",
+        "label": "Cyprus (CY)",
+        "default": "0.19"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_AL",
+        "label": "Albania (AL)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_AT",
+        "label": "Austria (AT)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_BY",
+        "label": "Belarus (BY)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_BG",
+        "label": "Bulgaria (BG)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_FR",
+        "label": "France (FR)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_EE",
+        "label": "Estonia (EE)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_GB",
+        "label": "United Kingdom (GB)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_TR",
+        "label": "Turkey (TR)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_SK",
+        "label": "Slovakia (SK)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_RS",
+        "label": "Serbia (RS)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_RU",
+        "label": "Russia (RU)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_MC",
+        "label": "Monaco (MC)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_MD",
+        "label": "Moldova (MD)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_ES",
+        "label": "Spain (ES)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_NL",
+        "label": "Netherlands (NL)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_ME",
+        "label": "Montenegro (ME)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_LT",
+        "label": "Lithuania (LT)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_LV",
+        "label": "Latvia (LV)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_BE",
+        "label": "Belgium (BE)",
+        "default": "0.21"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_SI",
+        "label": "Slovenia (SI)",
+        "default": "0.22"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_IT",
+        "label": "Italy (IT)",
+        "default": "0.22"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_PT",
+        "label": "Portugal (PT)",
+        "default": "0.23"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_PL",
+        "label": "Poland (PL)",
+        "default": "0.23"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_IE",
+        "label": "Ireland (IE)",
+        "default": "0.23"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_IS",
+        "label": "Iceland (IS)",
+        "default": "0.24"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_GR",
+        "label": "Greece (GR)",
+        "default": "0.24"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_FI",
+        "label": "Finland (FI)",
+        "default": "0.24"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_SE",
+        "label": "Sweden (SE)",
+        "default": "0.25"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_NO",
+        "label": "Norway (NO)",
+        "default": "0.25"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_DK",
+        "label": "Denmark (DK)",
+        "default": "0.25"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_HR",
+        "label": "Croatia (HR)",
+        "default": "0.25"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_HU",
+        "label": "Hungary (HU)",
+        "default": "0.27"
+      },
+      {
+        "type": "text",
+        "id": "tax_rate_CH",
+        "label": "Switzerland (CH)",
+        "default": "0.081"
+      }
+    ]
+  }  
 ]
