@@ -3031,9 +3031,9 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
 }
 
 .test-swap-product .swap-product--original {
-  display: none;
+  display: none !important;
 }
 
 html:not(.test-swap-product) .swap-product--test {
-  display: none;
+  display: none !important;
 }
