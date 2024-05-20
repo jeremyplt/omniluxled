@@ -16,7 +16,48 @@
 
 <div class="section-{{ section.id }}-padding  reviews-tabs">
     <div class="reviews-tabs__header">
-
+        <div class="container">
+            {% if section.settings.heading != blank %}
+                <h2 class="reviews-tabs__heading">{{ section.settings.heading }}</h2>
+            {% endif %}
+            {% if section.settings.rating != blank %}
+                <div class="reviews-tabs__rating">
+                    <span>{{ section.settings.rating }}</span>
+                    <div class="reviews-tabs__stars">
+                        {% for i in (1..5) %}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                            </svg>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+            {% if section.settings.description != blank %}
+                <div class="reviews-tabs__description">
+                    {{ section.settings.description }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="reviews-tabs__tabs">
+            <div class="container">
+                <div class="reviews-tabs__tab">Video Reviews</div>
+                <div class="reviews-tabs__tab">Written Reviews</div>
+            </div>
+        </div>
+        <div class="reviews-tabs__body">
+            <div class="reviews-tabs__navigation">
+                {% for object in page.metafields.custom.reviews.value %}
+                    <div class="reviews-tabs__navigation-item">{{ object.product.title }}</div>
+                {% endfor %}
+            </div>
+            {% for object in page.metafields.custom.reviews.value %}
+                <div class="reviews-tabs__grid">
+                  {% for review in object.reviews.value %}
+                        {{ review.author }}
+                  {% endfor %}  
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 
