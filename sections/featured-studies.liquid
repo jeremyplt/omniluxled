@@ -1,0 +1,130 @@
+{{ 'section-featured-studies.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding page-width featured-studies">
+    <div class="featured-studies__inner">
+        <h2 class="featured-studies__heading">{{ section.settings.heading }}</h2>
+        <div class="featured-studies__grid">
+            {% for block in section.blocks %}
+                <div class="featured-studies__item">
+                    {% if block.settings.subheading != blank %}
+                        <div class="featured-studies__subheading">{{ block.settings.subheading }}</div>
+                    {% endif %}
+                    {% if block.settings.heading != blank %}
+                        <div class="featured-studies__heading">{{ block.settings.heading }}</div>
+                    {% endif %}
+                    {% if block.settings.description != blank %}
+                        <div class="featured-studies__description">{{ block.settings.description }}</div>
+                    {% endif %}
+                    <div class="featured-studies__buttons">
+                        {% if block.settings.link_1 != blank %}
+                            <a href="{{ block.setings.link_1 }}" class="featured-studies__button">Read the study</a>
+                        {% endif %}
+                        {% if block.settings.link_2 != blank %}
+                            <a href="{{ block.setings.link_2 }}" class="featured-studies__button">Read the study 2</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Featured Studies",
+        "tag": "section",
+        "class": "section-featured-studies",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Over 40 peer-reviewed clinical papers & studies"
+            },
+            {
+                "type": "header",
+                "content": "Padding"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding Top",
+                "default": 36
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding Bottom",
+                "default": 36
+            }
+        ],
+        "blocks": [
+            {
+                "type": "study",
+                "name": "Study",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "subtitle",
+                        "label": "Subtitle",
+                        "default": "Elegance in Aging"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title",
+                        "default": "Contour with Confidence"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "description",
+                        "label": "Description",
+                        "default": "<p>See the transformative effects of the Omnilux Contour™ FACE, backed by scientific evidence. <ul><li>98% of participants reported their skin felt firmer</li><li>96% of participants reported their fine lines appeared less visible</li><li>95% of participants reported that their skin was brighter and plumper</li></ul></p>"
+                    },
+                    {
+                        "type": "url",
+                        "id": "link_1",
+                        "label": "Link to Study (1)"
+                    },
+                    {
+                        "type": "url",
+                        "id": "link_2",
+                        "label": "Link to Study (2)"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Featured Studies"
+            }
+        ]
+    }
+{% endschema %}
