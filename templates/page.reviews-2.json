@@ -49,15 +49,18 @@
         "study_YxwBmr"
       ],
       "settings": {
-        "heading": "Over 40 peer-reviewed clinical papers & studies",
+        "heading": "Over 40 Peer-Reviewed Clinical Papers & Studies",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
     "custom_liquid_4VjPzJ": {
       "type": "custom-liquid",
+      "custom_css": [
+
+      ],
       "settings": {
-        "custom_liquid": "<h3 style=\"text-align: center;\">Full Clinical Bibliography<\/h3>"
+        "custom_liquid": "<h3 style=\"text-align: center; \n margin-top: 4rem\">Full Clinical Bibliography<\/h3>"
       }
     },
     "c8796014-9257-41d1-8ecf-4012fbcd8414": {
