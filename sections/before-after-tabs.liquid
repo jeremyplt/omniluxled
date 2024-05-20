@@ -14,7 +14,21 @@
     }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding page-width before-after-tabs"></div>
+<div class="section-{{ section.id }}-padding before-after-tabs">
+    <div class="before-after-tabs__inner container">
+        {% if section.settings.heading != blank %}
+            <h3 class="before-after-tabs__heading">{{ section.settings.heading  }}</h3>
+        {% endif %}
+        <div class="before-after-tabs__slider">
+            {% for object in shop.metaobjects %}
+                la
+            {% endfor %}
+            {% for block in section.blocks %}
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 {% schema %}
     {
@@ -22,6 +36,10 @@
         "tag": "section",
         "class": "section-before-after-tabs",
         "settings": [
+            {
+                "type": "paragraph",
+                "content": "This section is using the custom.before_after page metafield"
+            },
             {
                 "type": "text",
                 "id": "heading",
@@ -51,20 +69,6 @@
                 "unit": "px",
                 "label": "Padding Bottom",
                 "default": 36
-            }
-        ],
-        "blocks": [
-            {
-                "type": "category",
-                "name": "category",
-                "settings": [
-                    {
-                        "type": "text",
-                        "id": "category",
-                        "label": "Category",
-                        "default": "Anti-Aging"
-                    }
-                ]
             }
         ],
         "presets": [
