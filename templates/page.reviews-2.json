@@ -6,6 +6,46 @@
       "settings": {
       }
     },
+    "before_after_tabs_hFNhEJ": {
+      "type": "before-after-tabs",
+      "blocks": {
+        "category_jp6qCU": {
+          "type": "category",
+          "settings": {
+            "category": "Anti-Aging"
+          }
+        },
+        "category_UwMjc6": {
+          "type": "category",
+          "settings": {
+            "category": "Anti-Acne"
+          }
+        },
+        "category_rNpGXN": {
+          "type": "category",
+          "settings": {
+            "category": "Skin Hydration & Soothing"
+          }
+        },
+        "category_rme4hX": {
+          "type": "category",
+          "settings": {
+            "category": "Pigmentation & Redness"
+          }
+        }
+      },
+      "block_order": [
+        "category_jp6qCU",
+        "category_UwMjc6",
+        "category_rNpGXN",
+        "category_rme4hX"
+      ],
+      "settings": {
+        "heading": "Before & Afters",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_doctors_T4jUz6": {
       "type": "featured-doctors",
       "blocks": {
@@ -212,6 +252,7 @@
   },
   "order": [
     "main",
+    "before_after_tabs_hFNhEJ",
     "featured_doctors_T4jUz6",
     "featured_studies_A8FzYY",
     "custom_liquid_4VjPzJ",
