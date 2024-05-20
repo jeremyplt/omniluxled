@@ -14,28 +14,45 @@
     }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding page-width featured-studies">
-    <div class="featured-studies__inner">
-        <h2 class="featured-studies__heading">{{ section.settings.heading }}</h2>
+<div class="section-{{ section.id }}-padding featured-studies">
+    <div class="featured-studies__inner container">
+        <h3 class="featured-studies__heading">{{ section.settings.heading }}</h3>
         <div class="featured-studies__grid">
             {% for block in section.blocks %}
                 <div class="featured-studies__item">
-                    {% if block.settings.subheading != blank %}
-                        <div class="featured-studies__subheading">{{ block.settings.subheading }}</div>
+                    {% if block.settings.image != blank %}
+                        <div class="featured-studies__image">
+                            {{ block.settings.image | image_url: width: 800 | image_tag: loading: "lazy" }}
+                        </div>
                     {% endif %}
-                    {% if block.settings.heading != blank %}
-                        <div class="featured-studies__heading">{{ block.settings.heading }}</div>
-                    {% endif %}
-                    {% if block.settings.description != blank %}
-                        <div class="featured-studies__description">{{ block.settings.description }}</div>
-                    {% endif %}
-                    <div class="featured-studies__buttons">
-                        {% if block.settings.link_1 != blank %}
-                            <a href="{{ block.setings.link_1 }}" class="featured-studies__button">Read the study</a>
+                    <div class="featured-studies__content">
+                        {% if block.settings.subtitle != blank %}
+                            <div class="featured-studies__subtitle">{{ block.settings.subtitle }}</div>
                         {% endif %}
-                        {% if block.settings.link_2 != blank %}
-                            <a href="{{ block.setings.link_2 }}" class="featured-studies__button">Read the study 2</a>
+                        {% if block.settings.title != blank %}
+                            <div class="featured-studies__title">{{ block.settings.title }}</div>
                         {% endif %}
+                        {% if block.settings.description != blank %}
+                            <div class="featured-studies__description">{{ block.settings.description }}</div>
+                        {% endif %}
+                        <div class="featured-studies__buttons">
+                            {% if block.settings.link_1 != blank %}
+                                <a href="{{ block.setings.link_1 }}" class="featured-studies__button">
+                                    <span>Read the study</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                </a>
+                            {% endif %}
+                            {% if block.settings.link_2 != blank %}
+                                <a href="{{ block.setings.link_2 }}" class="featured-studies__button">
+                                    <span>Read study 2</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                </a>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             {% endfor %}

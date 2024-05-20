@@ -1,0 +1,46 @@
+.featured-doctors__navigation {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.featured-doctors__navigation-item:not(.active) {
+    color: #9C9C9C;
+}
+
+.featured-doctors__navigation-item.active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.featured-doctors__slide {
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.featured-doctors__slide.active {
+    display: block
+}
+
+.featured-doctors__slide > * {
+    flex: 1;
+}
+
+.featured-doctors__content {
+    padding: 3rem;
+}
+
+.featured-doctors__quote {
+    font-weight: bold;
+}
+
+.featured-doctors__name {
+    font-weight: 500;
+}
+
+.featured-doctors__qualification {
+    font-size: 13px;
+    font-weight: 100;
+    font-style: italic;
+}

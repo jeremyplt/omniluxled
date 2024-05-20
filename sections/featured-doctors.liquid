@@ -1,0 +1,157 @@
+{{ 'section-featured-doctors.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding featured-doctors">
+    <div class="container featured-doctors__inner">
+        <div class="featured-doctors__navigation">
+            {% for block in section.blocks %}
+                <div class="featured-doctors__navigation-item{% if forloop.first %} active{% endif %}" data-doctor="{{ block.settings.name | handleize }}">
+                    {{ block.settings.name }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="featured-doctors__slider">
+            {% for block in section.blocks %}
+                <div class="featured-doctors__slide{% if forloop.first %} active{% endif %}">
+                    <div class="featured-doctors__content">
+                        {% if block.settings.quote != blank %}
+                            <div class="featured-doctors__quote">
+                                "{{ block.settings.quote }}"
+                            </div>
+                        {% endif %}
+                        <div class="featured-doctors__info">
+                            {% if block.settings.name != blank %}
+                                <div class="featured-doctors__name">{{ block.settings.name }}</div>
+                            {% endif %}
+                            {% if block.settings.qualification != blank %}
+                                <div class="featured-doctors__qualification">{{ block.settings.qualification }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if block.settings.image != blank %}
+                        <div class="featured-doctors__image">
+                            {{ block.settings.image | image_url: width: 1500 | image_tag: loading: "lazy" }}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <div class="featured-doctors__navigation-bottom">
+                <div class="featured-doctors__dots">
+                    {% for block in section.blocks %}
+                        <div class="featured-doctors__dot" data-doctor="{{ block.settings.name |  handleize }}"></div>
+                    {% endfor %}
+                </div>
+                <div class="featured-doctors__arrows">
+                    <div class="featured-doctors__arrow left">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                        </svg>
+                    </div>
+                    <div class="featured-doctors__arrow right">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const navigationItems = document.querySelectorAll(".featured-doctors__navigation-item")
+        const navigationDots = document.querySelectorAll(".featured-doctors__dot")
+        const navigationArrows = document.querySelectorAll(".featured-doctors__arrow")
+    })
+</script>
+
+{% schema %}
+    {
+        "name": "Featured Doctors",
+        "tag": "section",
+        "class": "section-featured-doctors",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Trusted by dermatologists and aesthetic experts"
+            },
+            {
+                "type": "header",
+                "content": "Padding"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding Top",
+                "default": 36
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding Bottom",
+                "default": 36
+            }
+        ],
+        "blocks": [
+            {
+                "type": "doctor",
+                "name": "Doctor",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "name",
+                        "label": "Name",
+                        "default": "Dr. Andrea Suarez, MD, FAAD"
+                    },
+                    {
+                        "type": "text",
+                        "id": "qualification",
+                        "label": "Qualification",
+                        "default": "PhD, Molecular Biology"
+                    },
+                    {
+                        "type": "text",
+                        "id": "quote",
+                        "label": "Quote",
+                        "default": "I am honored and excited to be a part of the Omnilux Scientific Advisory Board. I recommend their devices to patients seeking to complement in office treatments. Their devices are backed by clinical evidence and are based on the same Omnilux Medical devices used in dermatology clinics for years. Plus, patients love using them and appreciate excellent results."
+                    }
+                
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Featured Doctors"
+            }
+        ]
+    }
+{% endschema %}
