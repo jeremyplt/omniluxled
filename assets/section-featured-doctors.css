@@ -15,6 +15,11 @@
     min-width: max-content;
 }
 
+.featured-doctors__navigation-item:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 .featured-doctors__navigation-item:not(.current) {
     color: #9C9C9C;
 }

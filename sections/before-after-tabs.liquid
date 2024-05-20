@@ -15,20 +15,55 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding before-after-tabs">
-    <div class="before-after-tabs__inner container">
+    <div class="before-after-tabs__inner">
         {% if section.settings.heading != blank %}
-            <h3 class="before-after-tabs__heading">{{ section.settings.heading  }}</h3>
+            <h3 class="before-after-tabs__heading container">{{ section.settings.heading  }}</h3>
         {% endif %}
-        <div class="before-after-tabs__slider">
-            {% for object in shop.metaobjects %}
-                la
+        <div class="before-after-tabs__navigation container">
+            {% for object in page.metafields.custom.before_after.value %}
+                <div class="before-after-tabs__navigation-item{% if forloop.first %} current{% endif %}" data-category="{{ object.category | handleize }}">
+                    {{ object.category }}
+                </div>
             {% endfor %}
-            {% for block in section.blocks %}
-
+        </div>
+        <div class="before-after-tabs__wrapper">
+            {% for object in page.metafields.custom.before_after.value %}
+                <div class="before-after-tabs__slider{% if forloop.first %} current{% endif %}" data-category="{{ object.category | handleize }}">
+                    {% for image in object.images.value %}
+                        <div class="before-after-tabs__image">
+                            {{ image | image_url: width: 800 | image_tag: alt: object.category }}
+                        </div>
+                    {% endfor %}
+                </div>
             {% endfor %}
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const navigationItems = document.querySelectorAll('.before-after-tabs__navigation-item');
+        const sliders = document.querySelectorAll('.before-after-tabs__slider');
+
+        navigationItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const category = item.getAttribute('data-category');
+                const currentSlider = document.querySelector(`.before-after-tabs__slider[data-category="${category}"]`);
+                const currentNavItem = document.querySelector(`.before-after-tabs__navigation-item[data-category="${category}"]`);
+
+                sliders.forEach(slider => {
+                    slider.classList.remove('current');
+                });
+                navigationItems.forEach(navItem => {
+                    navItem.classList.remove('current');
+                });
+
+                currentSlider.classList.add('current');
+                currentNavItem.classList.add('current');
+            });
+        })
+    })
+</script>
 
 {% schema %}
     {
