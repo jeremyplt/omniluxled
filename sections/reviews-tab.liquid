@@ -40,12 +40,12 @@
         </div>
         <div class="reviews-tabs__tabs">
             <div class="container">
-                <div class="reviews-tabs__tab current">Video Reviews</div>
-                <div class="reviews-tabs__tab">Written Reviews</div>
+                <div class="reviews-tabs__tab current" data-reviews="video">Video Reviews</div>
+                <div class="reviews-tabs__tab" data-reviews="written">Written Reviews</div>
             </div>
         </div>
     </div>
-    <div class="reviews-tabs__body">
+    <div class="reviews-tabs__body current" data-reviews="video">
         <div class="reviews-tabs__navigation container">
             {% for object in page.metafields.custom.reviews.value %}
                 <div class="reviews-tabs__navigation-item{% if forloop.first %} current{% endif %}" data-product="{{ object.product.value.title | handleize }}">{{ object.product.value.title }}</div>
@@ -111,6 +111,11 @@
             </div>
         {% endfor %}
     </div>
+    <div class="reviews-tabs__body" data-reviews="written">
+        <div class="reviews-tabs__okendo">
+            {% render 'okendo-reviews-media-grid' %}
+        </div>
+    </div>
 </div>
 
 <div class="video-wrapper">
@@ -129,6 +134,7 @@
         const videoPopup = document.querySelector(".video-wrapper")
         const videoContainer = document.querySelector(".video-wrapper__container")
         const navigationItems = document.querySelectorAll(".reviews-tabs__navigation-item")
+        const reviewsTabs = document.querySelectorAll(".reviews-tabs__tab")
 
         videoWrapper.addEventListener('click', function() {
             console.log("here")
@@ -162,6 +168,24 @@
 
                 currentGrid.classList.add('current');
                 currentNavItem.classList.add('current');
+            })
+        })
+
+        reviewsTabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                const reviews = tab.getAttribute('data-reviews');
+                const currentBody = document.querySelector(`.reviews-tabs__body[data-reviews="${reviews}"]`);
+                const currentTab = document.querySelector(`.reviews-tabs__tab[data-reviews="${reviews}"]`);
+
+                document.querySelectorAll('.reviews-tabs__body').forEach(body => {
+                    body.classList.remove('current');
+                });
+                reviewsTabs.forEach(tab => {
+                    tab.classList.remove('current');
+                });
+
+                currentBody.classList.add('current');
+                currentTab.classList.add('current');
             })
         })
 

@@ -165,6 +165,10 @@
     background: linear-gradient(180deg, #FFFFFF 0%, #FFF7EA 100%);
 }
 
+.reviews-tabs__body:not(.current) {
+    display: none;
+}
+
 .reviews-tabs__navigation {
     display: flex;
     gap: .5rem;
