@@ -6,6 +6,16 @@
       "settings": {
       }
     },
+    "reviews_tab_8C4DhL": {
+      "type": "reviews-tab",
+      "settings": {
+        "heading": "Trusted by 275K+ Customers",
+        "rating": "4.8",
+        "description": "<p>We've helped thousands of customers achieve their skin goals.<\/p>",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "before_after_tabs_hFNhEJ": {
       "type": "before-after-tabs",
       "settings": {
@@ -220,6 +230,7 @@
   },
   "order": [
     "main",
+    "reviews_tab_8C4DhL",
     "before_after_tabs_hFNhEJ",
     "featured_doctors_T4jUz6",
     "featured_studies_A8FzYY",
