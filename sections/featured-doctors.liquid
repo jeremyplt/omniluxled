@@ -16,16 +16,19 @@
 
 <div class="section-{{ section.id }}-padding featured-doctors">
     <div class="container featured-doctors__inner">
+        {% if section.settings.heading != blank %}
+            <h3 class="featured-doctors__heading">{{ section.settings.heading }}</h3>
+        {% endif %}
         <div class="featured-doctors__navigation">
             {% for block in section.blocks %}
-                <div class="featured-doctors__navigation-item{% if forloop.first %} active{% endif %}" data-doctor="{{ block.settings.name | handleize }}">
+                <div class="featured-doctors__navigation-item{% if forloop.first %} current{% endif %}" data-doctor="{{ block.settings.name | handleize }}">
                     {{ block.settings.name }}
                 </div>
             {% endfor %}
         </div>
         <div class="featured-doctors__slider">
             {% for block in section.blocks %}
-                <div class="featured-doctors__slide{% if forloop.first %} active{% endif %}">
+                <div class="featured-doctors__slide{% if forloop.first %} current{% endif %}" data-doctor="{{ block.settings.name | handleize }}">
                     <div class="featured-doctors__content">
                         {% if block.settings.quote != blank %}
                             <div class="featured-doctors__quote">
@@ -43,7 +46,7 @@
                     </div>
                     {% if block.settings.image != blank %}
                         <div class="featured-doctors__image">
-                            {{ block.settings.image | image_url: width: 1500 | image_tag: loading: "lazy" }}
+                            {{ block.settings.image | image_url: width: 1500 | image_tag: alt: block.settings.name }}
                         </div>
                     {% endif %}
                 </div>
@@ -51,11 +54,11 @@
             <div class="featured-doctors__navigation-bottom">
                 <div class="featured-doctors__dots">
                     {% for block in section.blocks %}
-                        <div class="featured-doctors__dot" data-doctor="{{ block.settings.name |  handleize }}"></div>
+                        <div class="featured-doctors__dot{% if forloop.first %} current{% endif %}" data-doctor="{{ block.settings.name |  handleize }}"></div>
                     {% endfor %}
                 </div>
                 <div class="featured-doctors__arrows">
-                    <div class="featured-doctors__arrow left">
+                    <div class="featured-doctors__arrow left disabled">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>
@@ -72,11 +75,69 @@
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const navigationItems = document.querySelectorAll(".featured-doctors__navigation-item")
-        const navigationDots = document.querySelectorAll(".featured-doctors__dot")
-        const navigationArrows = document.querySelectorAll(".featured-doctors__arrow")
-    })
+document.addEventListener("DOMContentLoaded", () => {
+    const navigationItems = document.querySelectorAll(".featured-doctors__navigation-item");
+    const navigationDots = document.querySelectorAll(".featured-doctors__dot");
+    const navigationArrows = document.querySelectorAll(".featured-doctors__arrow");
+    const slides = document.querySelectorAll(".featured-doctors__slide");
+
+    let currentIndex = 0;
+
+    const updateSlide = (newIndex) => {
+        const currentSlide = document.querySelector(`.featured-doctors__slide.current`);
+        const currentDot = document.querySelector(`.featured-doctors__dot.current`);
+        const currentNavItem = document.querySelector(`.featured-doctors__navigation-item.current`);
+
+        currentSlide.classList.remove("current");
+        currentDot.classList.remove("current");
+        currentNavItem.classList.remove("current");
+
+        const nextSlide = slides[newIndex];
+        const nextDot = document.querySelector(`.featured-doctors__dot[data-doctor="${nextSlide.getAttribute('data-doctor')}"]`);
+        const nextNavItem = document.querySelector(`.featured-doctors__navigation-item[data-doctor="${nextSlide.getAttribute('data-doctor')}"]`);
+
+        nextSlide.classList.add("current");
+        nextDot.classList.add("current");
+        nextNavItem.classList.add("current");
+
+        currentIndex = newIndex;
+        updateArrows();
+    };
+
+    const updateArrows = () => {
+        const leftArrow = document.querySelector(".featured-doctors__arrow.left");
+        const rightArrow = document.querySelector(".featured-doctors__arrow.right");
+
+        leftArrow.classList.toggle("disabled", currentIndex === 0);
+        rightArrow.classList.toggle("disabled", currentIndex === slides.length - 1);
+    };
+
+    navigationItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            updateSlide(index);
+        });
+    });
+
+    navigationDots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            updateSlide(index);
+        });
+    });
+
+    navigationArrows.forEach(arrow => {
+        arrow.addEventListener("click", () => {
+            if (arrow.classList.contains("left") && currentIndex > 0) {
+                updateSlide(currentIndex - 1);
+            } else if (arrow.classList.contains("right") && currentIndex < slides.length - 1) {
+                updateSlide(currentIndex + 1);
+            }
+        });
+    });
+
+    // Initial update to set correct state for arrows
+    updateArrows();
+});
+
 </script>
 
 {% schema %}
