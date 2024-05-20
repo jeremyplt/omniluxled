@@ -5,12 +5,6 @@
       "settings": {
       }
     },
-    "custom_liquid_AQM6Hw": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<h2 style=\"text-align: center;\">Full Clinical Bibliography<\/h2>"
-      }
-    },
     "c8796014-9257-41d1-8ecf-4012fbcd8414": {
       "type": "bibliography-tab",
       "blocks": {
@@ -88,7 +82,6 @@
   },
   "order": [
     "main",
-    "custom_liquid_AQM6Hw",
     "c8796014-9257-41d1-8ecf-4012fbcd8414",
     "138dfabd-182e-4514-a987-b7301826198f"
   ]
