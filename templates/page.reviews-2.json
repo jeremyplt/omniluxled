@@ -6,6 +6,54 @@
       "settings": {
       }
     },
+    "featured_studies_A8FzYY": {
+      "type": "featured-studies",
+      "blocks": {
+        "study_HApnFc": {
+          "type": "study",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Placeholder_Image.png",
+            "subtitle": "Elegance in Aging",
+            "title": "Contour with Confidence",
+            "description": "<p>See the transformative effects of the Omnilux Contour™ FACE, backed by scientific evidence. <\/p><ul><li>98% of participants reported their skin felt firmer<\/li><li>96% of participants reported their fine lines appeared less visible<\/li><li>95% of participants reported that their skin was brighter and plumper<\/li><\/ul><p><\/p>",
+            "link_1": "",
+            "link_2": ""
+          }
+        },
+        "study_jG6AGH": {
+          "type": "study",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image.png",
+            "subtitle": "Science-Driven Results",
+            "title": "Changing Men's Skincare",
+            "description": "<p>Discover how our LED mask uniquely benefits men's skin, proven by rigorous study. After 3-5 treatments per week for 6 weeks participants reported:<\/p><ul><li>Reduction in UV spots (sun damage)<\/li><li>Fine lines appeared less visible<\/li><li>Skin tone was more even<\/li><\/ul><p><\/p>",
+            "link_1": "",
+            "link_2": ""
+          }
+        },
+        "study_YxwBmr": {
+          "type": "study",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_353775c0-976b-43e0-891e-da279f3a8358.png",
+            "subtitle": "Safety in Light",
+            "title": "Safety Shines Bright",
+            "description": "<p>Groundbreaking research verifies Red and red and near-infrared therapy's safety, offering peace of mind with every session.<\/p><ul><li>Confirmed safe on human skin cells, causing no DNA damage.<\/li><li>Extensive testing underscores red and near-infrared light therapy as a safe skincare solution.<\/li><li>Demonstrated near-infrared light, even at doses significantly higher than standard clinical guidelines, does not induce DNA damage and has a favorable safety profile.<\/li><\/ul><p><\/p>",
+            "link_1": "",
+            "link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "study_HApnFc",
+        "study_jG6AGH",
+        "study_YxwBmr"
+      ],
+      "settings": {
+        "heading": "Over 40 peer-reviewed clinical papers & studies",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_liquid_4VjPzJ": {
       "type": "custom-liquid",
       "settings": {
@@ -89,6 +137,7 @@
   },
   "order": [
     "main",
+    "featured_studies_A8FzYY",
     "custom_liquid_4VjPzJ",
     "c8796014-9257-41d1-8ecf-4012fbcd8414",
     "138dfabd-182e-4514-a987-b7301826198f"
