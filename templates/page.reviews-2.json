@@ -6,6 +6,78 @@
       "settings": {
       }
     },
+    "featured_doctors_T4jUz6": {
+      "type": "featured-doctors",
+      "blocks": {
+        "doctor_k3CWeU": {
+          "type": "doctor",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Placeholder_Image_67bb9fb8-8f13-4450-9961-f2bc9cb2a8e3.png",
+            "name": "Dr. Andrea Suarez, MD, FAAD",
+            "qualification": "PhD, Molecular Biology",
+            "quote": "I am honored and excited to be a part of the Omnilux Scientific Advisory Board. I recommend their devices to patients seeking to complement in office treatments. Their devices are backed by clinical evidence and are based on the same Omnilux Medical devices used in dermatology clinics for years. Plus, patients love using them and appreciate excellent results."
+          }
+        },
+        "doctor_9pCVWM": {
+          "type": "doctor",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Placeholder_Image_b41bca24-41aa-429d-9aa7-cb553012cdd8.png",
+            "name": "Dr. Jared Jagdeo, MD",
+            "qualification": "Associate Professor of Dermatology, SUNDY Downstate Medical Center",
+            "quote": "I trust Omnilux Contour as it’s backed by clinical evidence and based on the same Omnilux Medical devices we’ve used in our clinic for years. And my patients love it - they appreciate the excellent results and convenience of in-home treatments"
+          }
+        },
+        "doctor_7BMLYq": {
+          "type": "doctor",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Placeholder_Image_4af08ce0-8dc0-4227-a3c9-96fc3d37fd71.png",
+            "name": "Dr. Glynis Ablon, MD, FAAD",
+            "qualification": "Associate Clinical Professor, UCLA",
+            "quote": "The amount of LED bulbs, the ease of use, maneuverability, portability, and significant results all played a part in my choice of purchasing not one but two Omnilux Medical devices for my office - and to offer the home-use contour and CLEAR units to my patterns"
+          }
+        },
+        "doctor_i3zV8N": {
+          "type": "doctor",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Placeholder_Image_4f8f255f-5404-444d-a0f8-5fb90fa451bb.png",
+            "name": "Dr. Hany Abi Ghosn, MD",
+            "qualification": "Aesthetic Medicine, Winner Best Medical Practice Award, Europe 2018",
+            "quote": "The devices provide them with a powerful tool to achieve excellent clearance from home without the adverse effects from more aggressive treatments. It is a must for those looking for non-invasive and sustainable results"
+          }
+        },
+        "doctor_eMEerJ": {
+          "type": "doctor",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Placeholder_Image_9813d9b1-0586-432a-9116-4c42d34cc4cc.png",
+            "name": "Terrie Absher Kochman",
+            "qualification": "Licensed Medical Aesthetician; Founder, Total Glow Medical Spa",
+            "quote": "The Omnilux Contour Mask is the best home device ever! Just three (3) treatments a week produces very noticeable results such as a brightening of the complexion, reducing pigmentation. inflammation and redness, and smoothing fine lines. At Total Glow we know firsthand the superior performance of the Omnilux Professional FDA-approved LED device, and therefore had high expectations for the home-use Omnilux Contour Mask. We were not disappointed"
+          }
+        },
+        "doctor_if7kat": {
+          "type": "doctor",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Placeholder_Image_2e1eea38-aef5-4260-8847-11d5fbb3953a.png",
+            "name": "Dr. Clara Hurst",
+            "qualification": "Aesthetic Expert, Founder,Blanc Skin",
+            "quote": "The Omnilux Contour Mask is great for general rejuvenation of the skin. The red light is going to work really well on pigmentation, redness, and inflammation of the skin. The red light brightens up the skin and the white light [the near-infared light] means you’re going to be producing more collagen which has the benefit of softer, smoother, more dewy, healthy skin - you just get a beautiful glow."
+          }
+        }
+      },
+      "block_order": [
+        "doctor_k3CWeU",
+        "doctor_9pCVWM",
+        "doctor_7BMLYq",
+        "doctor_i3zV8N",
+        "doctor_eMEerJ",
+        "doctor_if7kat"
+      ],
+      "settings": {
+        "heading": "Trusted by dermatologists and aesthetic experts",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_studies_A8FzYY": {
       "type": "featured-studies",
       "blocks": {
@@ -140,6 +212,7 @@
   },
   "order": [
     "main",
+    "featured_doctors_T4jUz6",
     "featured_studies_A8FzYY",
     "custom_liquid_4VjPzJ",
     "c8796014-9257-41d1-8ecf-4012fbcd8414",
