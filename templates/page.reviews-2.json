@@ -2,7 +2,14 @@
   "sections": {
     "main": {
       "type": "template-page",
+      "disabled": true,
       "settings": {
+      }
+    },
+    "custom_liquid_4VjPzJ": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": ""
       }
     },
     "c8796014-9257-41d1-8ecf-4012fbcd8414": {
@@ -82,6 +89,7 @@
   },
   "order": [
     "main",
+    "custom_liquid_4VjPzJ",
     "c8796014-9257-41d1-8ecf-4012fbcd8414",
     "138dfabd-182e-4514-a987-b7301826198f"
   ]
