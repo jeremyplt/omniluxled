@@ -18,9 +18,7 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
 
     {% comment %}theme-check-disable LiquidTag{% endcomment %}
     {%- render 'meta-tags' -%}
-    {% capture CFH %}{{ content_for_header }}
-{%- render 'bold-common' -%}
-{%- render 'bold-includes' -%}{% endcapture %}
+    {% capture CFH %}{{ content_for_header }}{% endcapture %}
     {% if template.name != 'product' and template.name != 'cart' %}
       {% capture CFH %}
         {{ CFH | replace: 'data-source-attribution="shopify.dynamic-checkout"', 'data-source-attribution="shopify.dynamic-checkout" type="text/gzip"' }}{% endcapture %}
