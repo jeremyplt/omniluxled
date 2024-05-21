@@ -338,36 +338,7 @@ body.template-product:not(.product-men)
 .product-details-wrapper .product-form [type='submit']::before {
   display: none !important;
 }
-/* wishlist */
-.wishlist-button-bar-wrap .swym-wishlist-button-bar,
-.wishlist-button-bar-wrap .swym-btn-container.swym-inject {
-  width: 100% !important;
-  display: flex;
-}
-.wishlist-button-bar-wrap .swym-wishlist-button-bar button {
-  text-transform: uppercase;
-  font-family: var(--bs-font-family-button) !important;
-  font-weight: var(--bs-font-weight-button) !important;
-  letter-spacing: var(--bs-letter-spacing) !important;
-  font-size: var(--bs-font-size-button) !important;
-  line-height: var(--bs-line-height-button) !important;
-  padding: 4px !important;
-  height: auto !important;
-}
-.swym-btn-container[data-position='default']
-  .swym-add-to-wishlist.swym-iconbtnlink:after {
-  width: auto !important;
-  margin-left: 8px;
-  position: relative;
-  top: 1px;
-}
-.swym-btn-container[data-position='default']
-  .swym-add-to-wishlist.swym-iconbtnlink:hover:after {
-  content: '' !important;
-}
-.wishlist-button-bar-wrap .swym-wishlist-button-bar button {
-  margin: 16px auto 0;
-}
+
 [data-stickyBtn] {
   position: fixed;
   z-index: 99;

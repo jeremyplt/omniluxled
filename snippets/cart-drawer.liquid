@@ -236,10 +236,6 @@
     </div>
     <div class="col-12 cart-total mt-auto border-top position-sticky bottom-0 {% unless cart.item_count > 0 %}d-none{% endunless %}" data-checkoutBtns style="background-image: url('https://cdn.shopify.com/s/files/1/0482/6736/2466/files/total-bg.jpg?v=1671701148');background-size: 100% 100%;padding:8px 20px;z-index: 4;background-color: #fff;">
             <div class="row no-gutters">
-                <div class="col">
-                    <h5 class="text-capitalize font-size-lg-20 my-0 fw-semibold hideabtest">{{ 'templates.cart.total' | t }}:</h5>
-                  {% comment %} <h5 class="text-capitalize font-size-lg-20 my-0 fw-semibold showabtest">Subtotal:</h5> {% endcomment %}
-                </div>
                 <div class="col-12 d-flex">
                     <span class="flex-fill font-size-lg-20 fw-bold">Subtotal</span>
                     <span class="font-size-lg-20 my-0" data-cartTotal>
@@ -251,7 +247,6 @@
                     <span class="font-size-lg-20 my-0" data-preTaxCartTotal>{{ cart.total_price | money }}</span>
                 </div>
             </div>
-          <div class="afterpay hideabtest">  <div class="cart-afterpay"></div></div>
 
             {% if settings.enable_cart_notes %}
                 {%- assign cartNote = cart.note -%}
@@ -265,22 +260,13 @@
                 </div>
             {% endif %}
 
-            <a href="/checkout" class="btn btn-primary btn-block mt-3 hideabtest">{{ 'templates.cart.checkout' | t }}</a>
-     <a href="/checkout" class="btn btn-primary btn-block mt-2 showabtest">PROCEED TO CHECKOUT →</a>
+     <a href="/checkout" class="btn btn-primary btn-block mt-2">PROCEED TO CHECKOUT →</a>
 
-            {% if additional_checkout_buttons %}
-                <span class="additional-checkout-buttons additional-checkout-buttons d-flex flex-column hideabtest">
-                    <div id="additional-checkout-buttons">
-                    {{ content_for_additional_checkout_buttons }}
-                    </div>
-                </span>
-            {% endif %}
-           <div class="afterpay showabtest" bis_skin_checked="1">
+           <div class="afterpay" bis_skin_checked="1">
             <p class="shopify-installments" id="shopify-installments">
     <span class="shopify-installments__content" id="shopify-installments-content">Pay in full, or make 4 easy payments with <img class="shopify-installments__content-image" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/ShopPay_-_Color.svg?v=1697732176" style="display:inline;width:60px;">
 </span>
   </p></div>
-            <div class="text-center fw-normal font-size-md hideabtest" style="line-height: 1.2142857143;">Shipping and taxes are calculated during checkout.</div>
         </div>
     </div>
     <script type="application/json" data-cartScriptJSON>

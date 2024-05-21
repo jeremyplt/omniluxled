@@ -75,7 +75,6 @@
     src="{{ 'sections.js' | asset_url }}"
     defer></script>
 {%- endif -%}
-<script src="{{ 'aos.js' | asset_url }}"></script>
 <script src="{{ 'jquery.min.js' | asset_url }}"></script>
 
 {% comment %} {% render 'pre-order' %} {% endcomment %}
@@ -84,8 +83,6 @@
 <script src="{{ 'location-handler.js' | asset_url }}" defer></script>
 
 <script>
-  AOS.init();
-
   window.addEventListener('Afterpay.ready', function() {
     Afterpay.createPlacements({
       targetSelector: '.cart-afterpay',
