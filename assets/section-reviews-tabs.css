@@ -172,6 +172,7 @@
 .reviews-tabs__navigation {
     display: flex;
     gap: .5rem;
+    overflow: auto;
 }
 
 .reviews-tabs__navigation-item {
@@ -180,13 +181,13 @@
     color: #9C9C9C;
     font-size: 18px !important;
     cursor: pointer;
+    width: fit-content;
+    min-width: max-content;
 }
 
 .reviews-tabs__navigation-item.current {
     color: black;
     border-bottom: solid 2px black;
-    width: fit-content;
-    min-width: max-content;
 }
 
 .reviews-tabs__navigation {
@@ -275,4 +276,50 @@
     .reviews-tabs__content {
         padding: .5rem;
     }
+
+    .review-tabs__product {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .reviews-tabs__item:nth-child(7) {
+        grid-row-start: 5;
+    }
+
+    .reviews-tabs__item:not(.hidden):last-of-type {
+        display: none;
+    }
+
+    .review-tabs__product {
+        border: none;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        background-color: white;
+        margin: 1rem 0;
+    }
+
+    .review-tabs__product-image {
+        width: 100px;
+    }
+
+    .review-tabs__product-content {
+        border: none;
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 100%;
+    }
+  }
+
+  .load-more {
+    background: transparent;
+    margin: 2rem auto 0 auto;
+    display: block;
+    border: none;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+  
+  .load-more-button:not(.current) {
+    display: none;
   }

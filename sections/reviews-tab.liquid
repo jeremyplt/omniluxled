@@ -14,7 +14,7 @@
     }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding  reviews-tabs">
+<div class="section-{{ section.id }}-padding reviews-tabs">
     <div class="reviews-tabs__header">
         <div class="container">
             {% if section.settings.heading != blank %}
@@ -55,7 +55,6 @@
             <div class="reviews-tabs__grid container{% if forloop.first %} current{% endif %}" data-product="{{ object.product.value.title | handleize }}">
                 {% assign index = 0 %}
                 {% for review in object.reviews.value %}
-                    {% assign author_name = review.author_name | split: " | " | first %}
                     {% if forloop.index == 8 %}
                         <div class="review-tabs__product">
                             <div class="review-tabs__product-image">
@@ -69,7 +68,7 @@
                             </div>
                         </div>
                     {% endif %}
-                    <div class="reviews-tabs__item">
+                    <div class="reviews-tabs__item{% if forloop.index >= 12 %} hidden{% elsif forloop.index == 11 %} hidden--mobile{% endif %}">
                         <div class="reviews-tabs__poster" data-video-src="{{ review.video.value.sources[1].url }}">
                             <div class="image">
                                 {% if review.poster != blank %}
@@ -81,7 +80,7 @@
                         </div>
                         <div class="reviews-tabs__content">
                             <div class="content--left">
-                                <div class="reviews-tabs__author">{{ author_name }}'s Story</div>
+                                <div class="reviews-tabs__author">{{ review.author_name }}'s Story</div>
                                 <div class="reviews-tabs__product">
                                     {{ object.product.value.title }}
                                 </div>
@@ -109,6 +108,11 @@
                     </div>
                 {% endif %}  
             </div>
+            {% if index > 12 %}
+                <div class="load-more-button container {% if forloop.first %} current{% endif %}" data-product="{{ object.product.value.title | handleize }}">
+                    <button class="load-more">Load More</button>
+                </div>
+            {% endif %}
         {% endfor %}
     </div>
     <div class="reviews-tabs__body" data-reviews="written">
@@ -129,38 +133,40 @@
 </div>
 
 <script>
-    document.querySelectorAll('.reviews-tabs__poster').forEach(videoWrapper => {
-        const videoClose = document.querySelector(".video-wrapper__close")
-        const videoPopup = document.querySelector(".video-wrapper")
-        const videoContainer = document.querySelector(".video-wrapper__container")
-        const navigationItems = document.querySelectorAll(".reviews-tabs__navigation-item")
-        const reviewsTabs = document.querySelectorAll(".reviews-tabs__tab")
+    document.addEventListener('DOMContentLoaded', () => {
+        const videoWrappers = document.querySelectorAll('.reviews-tabs__poster');
+        const videoClose = document.querySelector(".video-wrapper__close");
+        const videoPopup = document.querySelector(".video-wrapper");
+        const videoContainer = document.querySelector(".video-wrapper__container");
+        const navigationItems = document.querySelectorAll(".reviews-tabs__navigation-item");
+        const reviewsTabs = document.querySelectorAll(".reviews-tabs__tab");
+        const loadMoreButtons = document.querySelectorAll('.load-more');
 
-        videoWrapper.addEventListener('click', function() {
-            console.log("here")
-            var video = this.dataset.videoSrc;
-            openPopup(video)
-            videoContainer.querySelector("video").addEventListener('webkitendfullscreen', function() {
-                closePopup()
-            }, false);
-        })
+        videoWrappers.forEach(videoWrapper => {
+            videoWrapper.addEventListener('click', function() {
+                var video = this.dataset.videoSrc;
+                openPopup(video);
+                videoContainer.querySelector("video").addEventListener('webkitendfullscreen', function() {
+                    closePopup();
+                }, false);
+            });
+        });
 
-        videoClose.addEventListener('click', function() {
-            closePopup()
-        })
-
-        videoPopup.addEventListener('click', function(e) {
-            closePopup()
-        })
+        videoClose.addEventListener('click', closePopup);
+        videoPopup.addEventListener('click', closePopup);
 
         navigationItems.forEach(item => {
             item.addEventListener("click", () => {
                 const product = item.getAttribute('data-product');
                 const currentGrid = document.querySelector(`.reviews-tabs__grid[data-product="${product}"]`);
                 const currentNavItem = document.querySelector(`.reviews-tabs__navigation-item[data-product="${product}"]`);
+                const currentButton = document.querySelector(`.load-more-button[data-product="${product}"]`);
 
                 document.querySelectorAll('.reviews-tabs__grid').forEach(grid => {
                     grid.classList.remove('current');
+                });
+                document.querySelectorAll(".load-more-button").forEach(button => {
+                    button.classList.remove('current');
                 });
                 navigationItems.forEach(navItem => {
                     navItem.classList.remove('current');
@@ -168,8 +174,9 @@
 
                 currentGrid.classList.add('current');
                 currentNavItem.classList.add('current');
-            })
-        })
+                currentButton?.classList.add('current')
+            });
+        });
 
         reviewsTabs.forEach(tab => {
             tab.addEventListener("click", () => {
@@ -186,14 +193,39 @@
 
                 currentBody.classList.add('current');
                 currentTab.classList.add('current');
-            })
-        })
+            });
+        });
+
+        loadMoreButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const currentGrid = button.parentElement.previousElementSibling;
+                let hiddenItems
+                if (window.innerWidth > 750) {
+                    hiddenItems = currentGrid.querySelectorAll('.reviews-tabs__item.hidden');
+                } else {
+                    hiddenItems = currentGrid.querySelectorAll('.reviews-tabs__item.hidden, .reviews-tabs__item.hidden--mobile');
+                }
+
+                const itemsToShow = Math.min(hiddenItems.length, 4);
+
+                for (let i = 0; i < itemsToShow; i++) {
+                    hiddenItems[i].classList.remove('hidden');
+                    hiddenItems[i].classList.remove('hidden--mobile');
+                }
+
+                if (hiddenItems.length <= itemsToShow) {
+                    button.style.display = 'none';
+                }
+            });
+        });
 
         function closePopup() {
             videoPopup.style.display = "none";
             videoContainer.innerHTML = "";
-            videoContainer.querySelector('video').pause()
-
+            const videoElement = videoContainer.querySelector('video');
+            if (videoElement) {
+                videoElement.pause();
+            }
         }
 
         function openPopup(video) {
@@ -202,7 +234,10 @@
             <source src="${video}" type="video/mp4" />
             </video>`;
 
-            videoContainer.querySelector('video').play()
+            const videoElement = videoContainer.querySelector('video');
+            if (videoElement) {
+                videoElement.play();
+            }
         }
     });
 </script>
