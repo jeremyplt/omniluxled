@@ -47,6 +47,7 @@
     HR|{{ settings.tax_rate_HR | default: 0.25 }},
     HU|{{ settings.tax_rate_HU | default: 0.27 }},
     CH|{{ settings.tax_rate_CH | default: 0.081 }}
+{% endcapture %}
 
 {% assign no_price_display_countries = "US,CA" | split: "," %}
 
