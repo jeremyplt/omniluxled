@@ -11,7 +11,7 @@
 .help-categories ul.tabs li a
 {
     border: 1.5px solid;
-    border-bottom: solid 2px white;
+    border-bottom: solid 3px white;
     position: relative;
     z-index: 1000;
     padding: 22px 2%;
