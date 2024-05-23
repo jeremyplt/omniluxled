@@ -11,7 +11,9 @@
 .help-categories ul.tabs li a
 {
     border: 1.5px solid;
-    border-bottom: 0;
+    border-bottom: solid 2px white;
+    position: relative;
+    z-index: 1000;
     padding: 22px 2%;
     min-width:134px;
     white-space: nowrap;
@@ -28,7 +30,7 @@
     transform: translateX(-50%);
     border-bottom: 1.5px solid;
     width: 100vw;
-    top: 77px;
+    top: 78px;
 }
 .help-categories ul li a{
     text-decoration: none;
