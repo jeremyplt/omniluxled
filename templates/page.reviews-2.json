@@ -228,7 +228,8 @@
         "36e76037-b7c4-4224-87ba-d4ebb152ab41"
       ],
       "custom_css": [
-        "p {margin-bottom: 1rem;}"
+        "p {margin-bottom: 1rem;}",
+        ".tab-content {margin-bottom: 3rem}"
       ],
       "settings": {
       }
