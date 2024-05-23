@@ -191,6 +191,9 @@
         "e527e35c-5720-46ea-9cc9-5317de3f63ca",
         "b942fc5b-cb84-4404-8ecc-6e358225eca9"
       ],
+      "custom_css": [
+        "p {margin-bottom: 1rem;}"
+      ],
       "settings": {
       }
     },
@@ -223,6 +226,9 @@
         "5a72daae-0439-4898-a335-d2494700b4aa",
         "de5e9dd0-d495-427d-a30e-408692dc8823",
         "36e76037-b7c4-4224-87ba-d4ebb152ab41"
+      ],
+      "custom_css": [
+        "p {margin-bottom: 1rem;}"
       ],
       "settings": {
       }
