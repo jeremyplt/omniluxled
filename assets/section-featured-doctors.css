@@ -82,6 +82,10 @@
     .featured-doctors__quote {
         font-size: 20px;
     }
+
+    .featured-doctors__slide {
+        max-height: 600px;
+    }
 }
 
 @media (min-width: 1440px) {
