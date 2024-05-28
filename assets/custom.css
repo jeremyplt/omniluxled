@@ -2874,3 +2874,9 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
 html:not(.test-swap-product) .swap-product--test {
   display: none !important;
 }
+
+@media (max-width: 749px) {
+  .hidden--mobile {
+    display: none;
+  }
+}

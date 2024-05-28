@@ -1,0 +1,59 @@
+.before-after-tabs {
+    background: linear-gradient(360deg, #FFFCF7 0%, #FFE2D5 21.74%, #FFFFFF 59.6%, #FBFBFB 86.73%, #FFF7EA 100%);
+}
+
+.before-after-tabs__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.before-after-tabs__slider {
+    display: flex;
+    gap: 1rem;
+    overflow: auto;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.before-after-tabs__image {
+    min-width: 325px;
+    width: 325px;
+}
+
+.before-after-tabs__heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.before-after-tabs__navigation {
+    display: flex;
+    gap: .5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    justify-content: center;
+}
+
+.before-after-tabs__navigation-item {
+    font-size: 18px;
+    padding: .5rem .75rem;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    min-width: max-content;
+}
+
+.before-after-tabs__navigation-item:hover {
+    border-bottom: solid 2px #9C9C9C;
+}
+
+.before-after-tabs__navigation-item:not(.current) {
+    color: #9C9C9C;
+}
+
+.before-after-tabs__navigation-item.current {
+    border-bottom: solid 2px black;
+}
+
+.before-after-tabs__slider:not(.current) {
+    display: none;
+}

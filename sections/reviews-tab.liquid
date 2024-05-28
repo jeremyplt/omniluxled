@@ -1,0 +1,301 @@
+{{ 'section-reviews-tabs.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding reviews-tabs">
+    <div class="reviews-tabs__header">
+        <div class="container">
+            {% if section.settings.heading != blank %}
+                <h2 class="reviews-tabs__heading">{{ section.settings.heading }}</h2>
+            {% endif %}
+            {% if section.settings.rating != blank %}
+                <div class="reviews-tabs__rating">
+                    <span>{{ section.settings.rating }}</span>
+                    <div class="reviews-tabs__stars">
+                        {% for i in (1..5) %}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                            </svg>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+            {% if section.settings.description != blank %}
+                <div class="reviews-tabs__description">
+                    {{ section.settings.description }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="reviews-tabs__tabs">
+            <div class="container">
+                <div class="reviews-tabs__tab current" data-reviews="video">Video Reviews</div>
+                <div class="reviews-tabs__tab" data-reviews="written">Written Reviews</div>
+            </div>
+        </div>
+    </div>
+    <div class="reviews-tabs__body current" data-reviews="video">
+        <div class="reviews-tabs__navigation container">
+            {% for object in page.metafields.custom.reviews.value %}
+                <div class="reviews-tabs__navigation-item{% if forloop.first %} current{% endif %}" data-product="{{ object.product.value.title | handleize }}">{{ object.product.value.title }}</div>
+            {% endfor %}
+        </div>
+        {% for object in page.metafields.custom.reviews.value %}
+            <div class="reviews-tabs__grid container{% if forloop.first %} current{% endif %}" data-product="{{ object.product.value.title | handleize }}">
+                {% assign index = 0 %}
+                {% for review in object.reviews.value %}
+                    {% if forloop.index == 8 %}
+                        <div class="review-tabs__product">
+                            <div class="review-tabs__product-image">
+                                {{ object.product.value.featured_image | image_url: width: 800 | image_tag: alt: object.product.value.title }}
+                            </div>
+                            <div class="review-tabs__product-content">
+                                <div class="review-tabs__product-title">
+                                    Shop <span>{{ object.product.value.title }}</span>
+                                </div>
+                                <a href="{{ object.product.value.url }}" class="review-tabs__product-link">Learn More</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="reviews-tabs__item{% if forloop.index >= 12 %} hidden{% elsif forloop.index == 11 %} hidden--mobile{% endif %}">
+                        <div class="reviews-tabs__poster" data-video-src="{{ review.video.value.sources[1].url }}">
+                            <div class="image">
+                                {% if review.poster != blank %}
+                                    {{ review.poster | image_url: width: 600 | image_tag: alt: review.poster.alt }}
+                                {% elsif review.video.value.preview_image != blank %}
+                                    {{ review.video.value.preview_image | image_url: width: 600 | image_tag: alt: review.poster.alt }}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="reviews-tabs__content">
+                            <div class="content--left">
+                                <div class="reviews-tabs__author">{{ review.author_name | split: " | " | first }}'s Story</div>
+                                <div class="reviews-tabs__product">
+                                    {{ object.product.value.title }}
+                                </div>
+                            </div>
+                            <div class="play-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                    <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    {% assign index = index | plus: 1 %}
+                {% endfor %}
+                {% if index < 8 %}
+                    <div class="review-tabs__product">
+                        <div class="review-tabs__product-image">
+                            {{ object.product.value.featured_image | image_url: width: 800 | image_tag: alt: object.product.value.title }}
+                        </div>
+                        <div class="review-tabs__product-content">
+                            <div class="review-tabs__product-title">
+                                Shop <span>{{ object.product.value.title }}</span>
+                            </div>
+                            <a href="{{ object.product.value.url }}" class="review-tabs__product-link">Learn More</a>
+                        </div>
+                    </div>
+                {% endif %}  
+            </div>
+            {% if index > 12 %}
+                <div class="load-more-button container {% if forloop.first %} current{% endif %}" data-product="{{ object.product.value.title | handleize }}">
+                    <button class="load-more">Load More</button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="reviews-tabs__body" data-reviews="written">
+        <div class="reviews-tabs__okendo">
+            {% render 'okendo-reviews-media-grid' %}
+        </div>
+    </div>
+</div>
+
+<div class="video-wrapper">
+    <div class="video-wrapper__close">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+        </svg>
+    </div>
+    <div class="video-wrapper__container">
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const videoWrappers = document.querySelectorAll('.reviews-tabs__poster');
+        const videoClose = document.querySelector(".video-wrapper__close");
+        const videoPopup = document.querySelector(".video-wrapper");
+        const videoContainer = document.querySelector(".video-wrapper__container");
+        const navigationItems = document.querySelectorAll(".reviews-tabs__navigation-item");
+        const reviewsTabs = document.querySelectorAll(".reviews-tabs__tab");
+        const loadMoreButtons = document.querySelectorAll('.load-more');
+
+        videoWrappers.forEach(videoWrapper => {
+            videoWrapper.addEventListener('click', function() {
+                var video = this.dataset.videoSrc;
+                openPopup(video);
+                videoContainer.querySelector("video").addEventListener('webkitendfullscreen', function() {
+                    closePopup();
+                }, false);
+            });
+        });
+
+        videoClose.addEventListener('click', closePopup);
+        videoPopup.addEventListener('click', closePopup);
+
+        navigationItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const product = item.getAttribute('data-product');
+                const currentGrid = document.querySelector(`.reviews-tabs__grid[data-product="${product}"]`);
+                const currentNavItem = document.querySelector(`.reviews-tabs__navigation-item[data-product="${product}"]`);
+                const currentButton = document.querySelector(`.load-more-button[data-product="${product}"]`);
+
+                document.querySelectorAll('.reviews-tabs__grid').forEach(grid => {
+                    grid.classList.remove('current');
+                });
+                document.querySelectorAll(".load-more-button").forEach(button => {
+                    button.classList.remove('current');
+                });
+                navigationItems.forEach(navItem => {
+                    navItem.classList.remove('current');
+                });
+
+                currentGrid.classList.add('current');
+                currentNavItem.classList.add('current');
+                currentButton?.classList.add('current')
+            });
+        });
+
+        reviewsTabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                const reviews = tab.getAttribute('data-reviews');
+                const currentBody = document.querySelector(`.reviews-tabs__body[data-reviews="${reviews}"]`);
+                const currentTab = document.querySelector(`.reviews-tabs__tab[data-reviews="${reviews}"]`);
+
+                document.querySelectorAll('.reviews-tabs__body').forEach(body => {
+                    body.classList.remove('current');
+                });
+                reviewsTabs.forEach(tab => {
+                    tab.classList.remove('current');
+                });
+
+                currentBody.classList.add('current');
+                currentTab.classList.add('current');
+            });
+        });
+
+        loadMoreButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const currentGrid = button.parentElement.previousElementSibling;
+                let hiddenItems
+                if (window.innerWidth > 750) {
+                    hiddenItems = currentGrid.querySelectorAll('.reviews-tabs__item.hidden');
+                } else {
+                    hiddenItems = currentGrid.querySelectorAll('.reviews-tabs__item.hidden, .reviews-tabs__item.hidden--mobile');
+                }
+
+                const itemsToShow = Math.min(hiddenItems.length, 4);
+
+                for (let i = 0; i < itemsToShow; i++) {
+                    hiddenItems[i].classList.remove('hidden');
+                    hiddenItems[i].classList.remove('hidden--mobile');
+                }
+
+                if (hiddenItems.length <= itemsToShow) {
+                    button.style.display = 'none';
+                }
+            });
+        });
+
+        function closePopup() {
+            videoPopup.style.display = "none";
+            videoContainer.innerHTML = "";
+            const videoElement = videoContainer.querySelector('video');
+            if (videoElement) {
+                videoElement.pause();
+            }
+        }
+
+        function openPopup(video) {
+            videoPopup.style.display = "flex";
+            videoContainer.innerHTML = `<video controls autoplay>
+            <source src="${video}" type="video/mp4" />
+            </video>`;
+
+            const videoElement = videoContainer.querySelector('video');
+            if (videoElement) {
+                videoElement.play();
+            }
+        }
+    });
+</script>
+
+{% schema %}
+    {
+        "name": "Reviews Tabs",
+        "tag": "section",
+        "class": "section-reviews-tabs",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Trusted by 275K+ Customers"
+            },
+            {
+                "type": "text",
+                "id": "rating",
+                "label": "Rating",
+                "default": "4.8"
+            },
+            {
+                "type": "text",
+                "id": "description",
+                "label": "Description",
+                "default": "<p>We've helped thousands of customers achieve their skin goals.</p>"
+            },
+            {
+                "type": "header",
+                "content": "Padding"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding Top",
+                "default": 36
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 4,
+                "unit": "px",
+                "label": "Padding Bottom",
+                "default": 36
+            }
+        ],
+        "blocks": [],
+        "presets": [
+            {
+                "name": "Reviews Tabs"
+            }
+        ]
+    }
+{% endschema %}
