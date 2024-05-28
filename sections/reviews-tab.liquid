@@ -80,7 +80,7 @@
                         </div>
                         <div class="reviews-tabs__content">
                             <div class="content--left">
-                                <div class="reviews-tabs__author">{{ review.author_name }}'s Story</div>
+                                <div class="reviews-tabs__author">{{ review.author_name | split: " | " | first }}'s Story</div>
                                 <div class="reviews-tabs__product">
                                     {{ object.product.value.title }}
                                 </div>
