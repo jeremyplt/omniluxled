@@ -577,19 +577,19 @@
         "b449261e-a45d-4160-9075-f152abf13acb": {
           "type": "description",
           "settings": {
-            "bullet_text": "Costs <span>9x<\/span> less than a dermatologist visit"
+            "bullet_text": "Costs 9x less than a dermatologist visit"
           }
         },
         "90664102-892a-412e-91f3-e5ae13f2ab0c": {
           "type": "description",
           "settings": {
-            "bullet_text": "Dermatologist Visit* <span>$3,600+<\/span>"
+            "bullet_text": "Dermatologist Visit* $3,600+"
           }
         },
         "91bb9692-5ce7-43d3-a09c-071195698071": {
           "type": "description",
           "settings": {
-            "bullet_text": "Omnilux Contour Face <span>$395<\/span>"
+            "bullet_text": "Omnilux Contour Face<br>$395"
           }
         }
       },

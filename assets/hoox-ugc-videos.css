@@ -2,7 +2,8 @@
     padding: 48px 0;
 }
 .hoox-ugc-videos__title{
-    max-width: 223px;
+    /*max-width: 223px;*/
+  max-width: 340px;
     margin-bottom: 51px;
     margin-inline: auto;
 }
