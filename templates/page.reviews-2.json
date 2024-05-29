@@ -39,7 +39,7 @@
         "doctor_9pCVWM": {
           "type": "doctor",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Placeholder_Image_b41bca24-41aa-429d-9aa7-cb553012cdd8.png",
+            "image": "shopify:\/\/shop_images\/a3468cb534f27195_org_a4b74d5e-ccb0-4484-bfe5-c37bf7be82c9.jpg",
             "name": "Dr. Jared Jagdeo, MD",
             "qualification": "Associate Professor of Dermatology, SUNDY Downstate Medical Center",
             "quote": "I trust Omnilux Contour as it’s backed by clinical evidence and based on the same Omnilux Medical devices we’ve used in our clinic for years. And my patients love it - they appreciate the excellent results and convenience of in-home treatments"
@@ -229,7 +229,7 @@
       ],
       "custom_css": [
         "p {margin-bottom: 1rem;}",
-        ".tab-content {margin-bottom: 3rem}"
+        ".tab-content {margin-bottom: 3rem;}"
       ],
       "settings": {
       }
