@@ -28,9 +28,9 @@
         </div>
         <div class="before-after-tabs__wrapper">
             {% for object in page.metafields.custom.before_after.value %}
-                <div class="before-after-tabs__slider{% if forloop.first %} current{% endif %}" data-category="{{ object.category | handleize }}">
+                <div class="before-after-tabs__slider keen-slider {% if forloop.first %} current{% endif %}" data-category="{{ object.category | handleize }}">
                     {% for image in object.images.value %}
-                        <div class="before-after-tabs__image">
+                        <div class="before-after-tabs__image keen-slider__slide">
                             {{ image | image_url: width: 800 | image_tag: alt: object.category }}
                         </div>
                     {% endfor %}
@@ -44,6 +44,45 @@
     document.addEventListener("DOMContentLoaded", () => {
         const navigationItems = document.querySelectorAll('.before-after-tabs__navigation-item');
         const sliders = document.querySelectorAll('.before-after-tabs__slider');
+
+        new KeenSlider(sliders[0], {
+            loop: true,
+            slides: {
+                perView: 5,
+                spacing: 10,
+            },
+            breakpoints: {
+                '(max-width: 1199px)': {
+                    slides: {
+                        perView: 4,
+                        spacing: 10,
+                    },
+                },
+                '(max-width: 999px)': {
+                    slides: {
+                        perView: 3,
+                        spacing: 10,
+                    },
+                },
+                '(max-width: 659px)': {
+                    slides: {
+                        perView: 2,
+                        spacing: 10,
+                    },
+                },
+            },
+            created(s) {
+                s.moveToIdx(5, true, animation);
+            },
+            updated(s) {
+                s.moveToIdx(s.track.details.abs + 5, true, animation);
+            },
+            animationEnded(s) {
+                s.moveToIdx(s.track.details.abs + 5, true, animation);
+            },
+        });
+        
+        var animation = { duration: 50000, easing: (t) => t }
 
         navigationItems.forEach(item => {
             item.addEventListener('click', () => {
@@ -60,6 +99,75 @@
 
                 currentSlider.classList.add('current');
                 currentNavItem.classList.add('current');
+
+                if (currentSlider.children.length > 4 || window.innerWidth < 999) {
+                    new KeenSlider(currentSlider, {
+                        loop: true,
+                        slides: {
+                            perView: 5,
+                            spacing: 10,
+                        },
+                        breakpoints: {
+                            '(max-width: 1199px)': {
+                                slides: {
+                                    perView: 4,
+                                    spacing: 10,
+                                },
+                            },
+                            '(max-width: 999px)': {
+                                slides: {
+                                    perView: 3,
+                                    spacing: 10,
+                                },
+                            },
+                            '(max-width: 659px)': {
+                                slides: {
+                                    perView: 2,
+                                    spacing: 10,
+                                },
+                            },
+                        },
+                        created(s) {
+                            s.moveToIdx(5, true, animation);
+                        },
+                        updated(s) {
+                            s.moveToIdx(s.track.details.abs + 5, true, animation);
+                        },
+                        animationEnded(s) {
+                            s.moveToIdx(s.track.details.abs + 5, true, animation);
+                        },
+                    });
+                } else {
+                    new KeenSlider(currentSlider, {
+                        loop: false,
+                        slides: {
+                            perView: 5,
+                            spacing: 10,
+                        },
+                        breakpoints: {
+                            '(max-width: 1199px)': {
+                                slides: {
+                                    perView: 4,
+                                    spacing: 10,
+                                },
+                            },
+                            '(max-width: 999px)': {
+                                slides: {
+                                    perView: 3,
+                                    spacing: 10,
+                                },
+                            },
+                            '(max-width: 659px)': {
+                                slides: {
+                                    perView: 2,
+                                    spacing: 10,
+                                },
+                            },
+                        },
+                    });
+
+                    currentSlider.classList.add("justify-center")
+                }
             });
         })
     })

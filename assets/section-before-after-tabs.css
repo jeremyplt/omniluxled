@@ -9,15 +9,23 @@
 
 .before-after-tabs__slider {
     display: flex;
-    gap: 1rem;
     overflow: auto;
     padding: 1rem;
     margin: 0 auto;
 }
 
+.before-after-tabs__slider.justify-center {
+    justify-content: center;
+}
+
 .before-after-tabs__image {
     min-width: 325px;
     width: 325px;
+}
+
+.before-after-tabs__image img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .before-after-tabs__heading {
@@ -31,7 +39,6 @@
     padding: 1rem;
     margin-bottom: 1rem;
     overflow-x: auto;
-    justify-content: center;
 }
 
 .before-after-tabs__navigation-item {
@@ -48,6 +55,10 @@
 
 .before-after-tabs__navigation-item:not(.current) {
     color: #9C9C9C;
+}
+
+.before-after-tabs__navigation-item {
+    border-bottom: solid 2px transparent;
 }
 
 .before-after-tabs__navigation-item.current {
