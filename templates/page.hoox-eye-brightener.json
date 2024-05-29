@@ -73,7 +73,7 @@
         "section_description": "Precision LED therapy diminishes fine lines, depuffs under eye bags, and brightens dark circles for a more rejuvenated complexion.",
         "section_btn_text": "Transform My Skin",
         "section_btn_url": "#hoox-shop",
-        "section_shipping_text": "FREE Shipping | 30-Day Money-Back Guarantee",
+        "section_shipping_text": "2 Year Warranty | 30-Day Money-Back Guarantee",
         "section_main_image": "shopify:\/\/shop_images\/Web_Mini_HP_25.png",
         "section_main_image_mobile": "shopify:\/\/shop_images\/Hoox_Mini_LP_Hero_Mobile_2.png"
       }
@@ -162,7 +162,8 @@
       "settings": {
         "hoox_safe_btn_url": "#hoox-shop",
         "hoox_safe_btn_text": "Start Glowing Today",
-        "hoox_safe_guarante_text": "FREE Shipping | 30-Day Money-Back Guarantee"
+        "hoox_safe_guarante_text": "FREE Shipping | 30-Day Money-Back Guarantee",
+        "section_headline": ""
       }
     },
     "26e48694-ed25-458d-b9c5-4b86cbd64b70": {
@@ -208,7 +209,8 @@
       ],
       "settings": {
         "hoox_how_to_title": "How to glow up:",
-        "hoox_how_to_subtitle": "Unlock younger-looking skin with three to five 10-minute treatments per week."
+        "hoox_how_to_subtitle": "Unlock younger-looking skin with three to five 10-minute treatments per week.",
+        "watch_video": ""
       }
     },
     "hoox_results_JimrzQ": {
