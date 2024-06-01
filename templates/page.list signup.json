@@ -11,12 +11,12 @@
       "custom_css": [
         "p {color: #000 !important;}",
         ".klaviyo-form--code {width: 58.25% !important;}",
-        "@media(max-width:600px){.klaviyo-form--code {width: 100% !important;}}"
+        "@media (max-width: 600px) {.klaviyo-form--code {width: 100% !important; }}"
       ],
       "settings": {
-        "desktop-image": "shopify:\/\/shop_images\/D2C_Email_SMS_Sign_Up_Landing_Page_11.png",
+        "desktop-image": "shopify:\/\/shop_images\/D2C_Email_SMS_Sign_Up_Landing_Page_17.png",
         "desktop_form_position": "left",
-        "mobile-image": "shopify:\/\/shop_images\/D2C_Evergreen_Email_SMS_Sign_Up_Mobile_Landing_Page.png",
+        "mobile-image": "shopify:\/\/shop_images\/D2C_Color_Wow_Giveaway_Email_SMS_Sign_Up_Mobile_Landing_Page_3.png",
         "form-code": "<div class=\"klaviyo-form-SGmdyK\"><\/div>"
       }
     }
