@@ -13,9 +13,7 @@
             <div class="banner__media">
               {% if section.settings.image_mobile != blank %}
                 <picture>
-                    {%- if mobileImage.width >= 375 -%}<source media="(max-width: 375px)" srcset="{{ mobileImage | image_url: width: 375 }}">{%- endif -%}
-                    {%- if mobileImage.width >= 550 -%}<source media="(max-width: 550px)" srcset="{{ mobileImage | image_url: width: 550 }}">{%- endif -%}
-                    {%- if mobileImage.width >= 767 -%}<source media="(max-width: 767px)" srcset="{{ mobileImage | image_url: width: 767 }}">{%- endif -%}
+                    <source media="(max-width: 767px)" srcset="{{ mobileImage | image_url: width: 1000 }}">
                     {%- if section.settings.image.width >= 991 -%}<source media="(max-width: 991px)" srcset="{{ section.settings.image | image_url: width: 991 }}">{%- endif -%}
                     {%- if section.settings.image.width >= 1200 -%}<source media="(max-width: 1200px)" srcset="{{ section.settings.image | image_url: width: 1200 }}">{%- endif -%}
                     {%- if section.settings.image.width >= 1500 -%}<source media="(max-width: 1500px)" srcset="{{ section.settings.image | image_url: width: 1500 }}">{%- endif -%}

@@ -44,12 +44,15 @@
         "malomo_shipment_tracker",
         "image"
       ],
+      "custom_css": [
+        "@media (min-width: 990px) {.malomo-banner {min-height: 40vw; max-height: 700px; }}"
+      ],
       "settings": {
         "background_image_enabled": true,
         "background_image": "shopify:\/\/shop_images\/Hero_Image.png",
         "background_repeat": "no-repeat",
         "background_size": "cover",
-        "mobile_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-02T105137.533.png",
+        "mobile_image": "shopify:\/\/shop_images\/Untitled_design_-_2024-05-02T105137.533_1ad64196-a485-475f-bc6c-33f95712862c.png",
         "background_color": "rgba(0,0,0,0)",
         "height": "500",
         "padding": "20",
@@ -71,6 +74,10 @@
     },
     "glabal_featured_product_list_XB3GFc": {
       "type": "glabal-featured-product-list",
+      "custom_css": [
+        ".position-relative.d-flex.price-with-btn.test79 > *:nth-child(2) {position: absolute; left: 0;}",
+        "@media (min-width: 990px) {.position-relative.d-flex.price-with-btn.test79 > *:nth-child(2) {max-width: fit-content; }}"
+      ],
       "settings": {
         "fluid_layout": false,
         "nav_dots": true,
@@ -79,7 +86,7 @@
         "heading_alignment": "mx-auto",
         "heading_txt": "Supercharge Your Results",
         "lead_txt": "",
-        "home_featured_collection": "skin-care",
+        "home_featured_collection": "malomo-upsells",
         "section_bg_color": "#ffffff",
         "section_txt_color": "#000000",
         "btn_text": "SHOP ALL",
@@ -130,10 +137,13 @@
         "buttons_9gMA9E"
       ],
       "custom_css": [
-        "h2 {font-size: 36px;}"
+        ".banner-section {margin-bottom: 2rem;}",
+        "@media (min-width: 750px) {h2 {font-size: 36px; } .banner-section {height: 40vw; min-height: 400px; }}",
+        "@media (max-width: 749px) {h2 {font-size: 28px; } .col-xl-5.col-lg-6.col-md-7.px-0 {text-align: center !important; } .banner__content {align-items: flex-start !important; padding-top: 1rem !important; } .banner-section {min-height: 500px; }}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/kat_611138119-malomo-lp-banner.png",
+        "image_mobile": "shopify:\/\/shop_images\/Frame_1000006429.png",
         "txt_color": "",
         "enable_overlay": false,
         "overlay_bg_color": "#000000",
@@ -182,10 +192,12 @@
         "buttons_z4ANaE"
       ],
       "custom_css": [
-        "h2 {font-size: 36px;}"
+        "@media (min-width: 750px) {h2 {font-size: 36px; } .banner-section {height: 40vw; min-height: 400px; }}",
+        "@media (max-width: 749px) {h2 {font-size: 28px; } .col-xl-5.col-lg-6.col-md-7.px-0 {text-align: center !important; } .banner__content {align-items: flex-start !important; padding-top: 1rem !important; } .banner-section {min-height: 500px; }}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/kat_611138113-malomo-lp-banner-2.png",
+        "image_mobile": "shopify:\/\/shop_images\/Frame_1000006467_1.png",
         "txt_color": "",
         "enable_overlay": false,
         "overlay_bg_color": "#000000",
@@ -199,6 +211,10 @@
     },
     "global_blog_posts_RzzLcW": {
       "type": "global-blog-posts",
+      "custom_css": [
+        ".article-tags:not(:last-child) {padding-right: 5px; margin-right: 5px; border-right: 1px solid black;}",
+        ".card-body {padding-top: 10px !important;}"
+      ],
       "settings": {
         "fluid_layout": true,
         "blog_handles": "light-reads",
