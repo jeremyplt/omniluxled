@@ -9,7 +9,7 @@
     "reviews_tab_8C4DhL": {
       "type": "reviews-tab",
       "settings": {
-        "heading": "Trusted by 275K+ Customers",
+        "heading": "Trusted by 300K+ Customers",
         "rating": "4.8",
         "description": "We've helped thousands of customers achieve their skin goals.",
         "padding_top": 0,
@@ -117,7 +117,7 @@
             "subtitle": "Science-Driven Results",
             "title": "Changing Men's Skincare",
             "description": "<p>Discover how our LED mask uniquely benefits men's skin, proven by rigorous study. After 3-5 treatments per week for 6 weeks participants reported:<\/p><ul><li>Reduction in UV spots (sun damage)<\/li><li>Fine lines appeared less visible<\/li><li>Skin tone was more even<\/li><\/ul><p><\/p>",
-            "link_1": "shopify:\/\/pages\/appi-compliance",
+            "link_1": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Jagdeo_Study_Male_Facial_Rejuvenation.pdf?v=1717202763",
             "link_2": ""
           }
         },
@@ -128,8 +128,8 @@
             "subtitle": "Safety in Light",
             "title": "Safety Shines Bright",
             "description": "<p>Groundbreaking research verifies Red and red and near-infrared therapy's safety, offering peace of mind with every session.<\/p><ul><li>Confirmed safe on human skin cells, causing no DNA damage.<\/li><li>Extensive testing underscores red and near-infrared light therapy as a safe skincare solution.<\/li><li>Demonstrated near-infrared light, even at doses significantly higher than standard clinical guidelines, does not induce DNA damage and has a favorable safety profile.<\/li><\/ul><p><\/p>",
-            "link_1": "shopify:\/\/collections\/frontpage",
-            "link_2": "shopify:\/\/products\/extend-50c018b3-ede1-4e3d-be88-5498a52efd40"
+            "link_1": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Biophotonics_Red_Light.pdf?v=1717202767",
+            "link_2": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Biophotonics_Near-infrared.pdf?v=1717202766"
           }
         }
       },
