@@ -77,8 +77,7 @@
                             {% if linklists[footer_linklist_2].links.size > 0 %}
                                 <ul class="list-unstyled footer-navigation">
                                 {% for link in linklists[footer_linklist_2].links %}
-
-                                    <li class="py-1 text-capitalize">
+                                    <li class="py-1{% unless link.title contains ' a ' %} text-capitalize{% endunless %}">
                                     <a class="position-relative" href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
                                         <span>{{ link.title }}</span>
                                     </a>
@@ -95,7 +94,7 @@
                             {% if linklists[footer_linklist_3].links.size > 0 %}
                                 <ul class="list-unstyled footer-navigation ms-n1 ms-lg-0">
                                     {% for link in linklists[footer_linklist_3].links %}
-                                        <li class="py-1 text-capitalize">
+                                        <li class="py-1{% unless link.title contains ' a ' %} text-capitalize{% endunless %}">
                                             <a class="position-relative" href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
                                                 <span>{{ link.title }}</span>
                                             </a>
@@ -112,7 +111,7 @@
                             {% if linklists[footer_linklist_4].links.size > 0 %}
                                 <ul class="list-unstyled footer-navigation">
                                     {% for link in linklists[footer_linklist_4].links %}
-                                        <li class="py-1 text-capitalize">
+                                        <li class="py-1{% unless link.title contains ' a ' %} text-capitalize{% endunless %}">
                                             <a class="position-relative" href="{{ link.url }}" style="color: {{ section.settings.footer_top_link_color }};" name="{{ link.title }}" title="{{ link.title }}" aria-label="{{ link.title }}">
                                                 <span>{{ link.title }}</span>
                                             </a>

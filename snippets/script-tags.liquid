@@ -30,7 +30,9 @@
 
 {%- comment -%} Product Page JS {%- endcomment -%}
 {%- if template.name == 'product' or template.name == 'page' -%}
-  <script src="{{ 'template-product.js' | asset_url }}" defer></script>
+  {%- unless page.handle == 'cookie-consent-page' -%}
+    <script src="{{ 'template-product.js' | asset_url }}" defer></script>
+  {%- endunless -%}
 {%- endif -%}
 
 <script src="{{ 'convert.com.js' | asset_url }}"></script>

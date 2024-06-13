@@ -117,7 +117,13 @@
     </div>
     <div class="reviews-tabs__body" data-reviews="written">
         <div class="reviews-tabs__okendo">
-            {% render 'okendo-reviews-media-grid' %}
+          {% if product != blank %} 
+              {% capture product_data_attribute %}data-oke-reviews-product-id="shopify-{{ product.id }}"{% endcapture %} 
+          {% endif %} 
+          {% if shop.metafields.okendo.WidgetPreRenderBodyStyleTags != blank %}
+          {{- shop.metafields.okendo.WidgetPreRenderBodyStyleTags }}
+          {% endif %} 
+          <div data-oke-widget {{ product_data_attribute }}>{{ product.metafields.okendo.ReviewsWidgetSnippet }}</div>
         </div>
     </div>
 </div>

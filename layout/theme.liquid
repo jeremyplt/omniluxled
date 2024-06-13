@@ -580,8 +580,7 @@
       });
     })
     .catch((e) => {
-      console.log("error message")
-      console.error(e.message)
+      console.log(e)
     })
 
     window.addEventListener('skio::update-selling-plan', function(e) { 
@@ -604,7 +603,7 @@
           document.querySelector(".cbb-frequently-bought-add-button").setAttribute("disabled", "disabled") 
           document.querySelector(".cbb-frequently-bought-add-button span").innerHTML = "Not Available In France"
         }).catch((e) => {
-          console.error(e.message)
+          console.error(e)
         })
       })
     {% endif %}

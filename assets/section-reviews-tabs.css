@@ -323,3 +323,7 @@
   .load-more-button:not(.current) {
     display: none;
   }
+
+div.okeReviews[data-oke-container].oke-w {
+  max-width: 1200px;
+}

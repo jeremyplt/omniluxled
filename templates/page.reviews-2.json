@@ -41,7 +41,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/a3468cb534f27195_org_a4b74d5e-ccb0-4484-bfe5-c37bf7be82c9.jpg",
             "name": "Dr. Jared Jagdeo, MD",
-            "qualification": "Associate Professor of Dermatology, SUNDY Downstate Medical Center",
+            "qualification": "Associate Professor of Dermatology, SUNY Downstate Medical Center",
             "quote": "I trust Omnilux Contour as it’s backed by clinical evidence and based on the same Omnilux Medical devices we’ve used in our clinic for years. And my patients love it - they appreciate the excellent results and convenience of in-home treatments"
           }
         },
@@ -51,7 +51,7 @@
             "image": "shopify:\/\/shop_images\/Placeholder_Image_4af08ce0-8dc0-4227-a3c9-96fc3d37fd71.png",
             "name": "Dr. Glynis Ablon, MD, FAAD",
             "qualification": "Associate Clinical Professor, UCLA",
-            "quote": "The amount of LED bulbs, the ease of use, maneuverability, portability, and significant results all played a part in my choice of purchasing not one but two Omnilux Medical devices for my office - and to offer the home-use contour and CLEAR units to my patterns"
+            "quote": "The amount of LED bulbs, the ease of use, maneuverability, portability, and significant results all played a part in my choice of purchasing not one but two Omnilux Medical devices for my office - and to offer the home-use contour and CLEAR units to my patients"
           }
         },
         "doctor_i3zV8N": {
@@ -78,7 +78,7 @@
             "image": "shopify:\/\/shop_images\/Placeholder_Image_2e1eea38-aef5-4260-8847-11d5fbb3953a.png",
             "name": "Dr. Clara Hurst",
             "qualification": "Aesthetic Expert, Founder,Blanc Skin",
-            "quote": "The Omnilux Contour Mask is great for general rejuvenation of the skin. The red light is going to work really well on pigmentation, redness, and inflammation of the skin. The red light brightens up the skin and the white light [the near-infared light] means you’re going to be producing more collagen which has the benefit of softer, smoother, more dewy, healthy skin - you just get a beautiful glow."
+            "quote": "The Omnilux Contour Mask is great for general rejuvenation of the skin. The red light is going to work really well on pigmentation, redness, and inflammation of the skin. The red light brightens up the skin and the white light [the near-infrared light] means you’re going to be producing more collagen which has the benefit of softer, smoother, more dewy, healthy skin - you just get a beautiful glow."
           }
         }
       },
@@ -127,7 +127,7 @@
             "image": "shopify:\/\/shop_images\/Image_353775c0-976b-43e0-891e-da279f3a8358.png",
             "subtitle": "Safety in Light",
             "title": "Safety Shines Bright",
-            "description": "<p>Groundbreaking research verifies Red and red and near-infrared therapy's safety, offering peace of mind with every session.<\/p><ul><li>Confirmed safe on human skin cells, causing no DNA damage.<\/li><li>Extensive testing underscores red and near-infrared light therapy as a safe skincare solution.<\/li><li>Demonstrated near-infrared light, even at doses significantly higher than standard clinical guidelines, does not induce DNA damage and has a favorable safety profile.<\/li><\/ul><p><\/p>",
+            "description": "<p>Groundbreaking research verifies red and near-infrared therapy's safety, offering peace of mind with every session.<\/p><ul><li>Confirmed safe on human skin cells, causing no DNA damage.<\/li><li>Extensive testing underscores red and near-infrared light therapy as a safe skincare solution.<\/li><li>Demonstrated near-infrared light, even at doses significantly higher than standard clinical guidelines, does not induce DNA damage and has a favorable safety profile.<\/li><\/ul><p><\/p>",
             "link_1": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Biophotonics_Red_Light.pdf?v=1717202767",
             "link_2": "https:\/\/cdn.shopify.com\/s\/files\/1\/0482\/6736\/2466\/files\/Biophotonics_Near-infrared.pdf?v=1717202766"
           }
@@ -210,7 +210,7 @@
         "de5e9dd0-d495-427d-a30e-408692dc8823": {
           "type": "bibliography-tab",
           "settings": {
-            "title": "ALA — PDT REJUVINATION [1] *",
+            "title": "ALA — PDT REJUVENATION [1] *",
             "bibliography_content": "<p><strong>Pilot Study to Determine the Efficacy of ALAPDT Photorejuvenation for the Treatment of Facial Aging<\/strong><br\/>Lowe NJ and Lowe P1.<br\/><a href=\"https:\/\/www.ncbi.nlm.nih.gov\/pubmed\/?term=Pilot+Study+to+determine+the+efficacy+of+ALAPDT+photorejuvenation+for+the+treatment+of+facial\">Journal of Cosmetic and Laser Therapy. 2005; 7: 159-162<\/a><\/p><p>* Please Note: Wound Healing & Photodynamic Therapy are not FDA-cleared indications.[1]<\/p>"
           }
         },

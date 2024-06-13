@@ -35,6 +35,10 @@
     object-position: right;
 }
 
+.hoox-hero__media.case-b img {
+    object-position: left;
+}
+
 .hoox-hero-star__image {
     display: flex;
     gap: 8px;
@@ -242,3 +246,9 @@
 .template-page.skin-corrector .hoox-shop__gallery,
 .template-page.blemish-eraser .hoox-shop__gallery,
 .template-page.eye-brightener .hoox-shop__gallery{margin-bottom:0!important;}
+
+
+/* A/B Test for collection hero */
+.hoox-hero__media.case-b { display: none; }
+body.case-b .hoox-hero__media.case-a {display: none;}
+body.case-b .hoox-hero__media.case-b {display: block;}

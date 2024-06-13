@@ -1011,7 +1011,7 @@ body #one-page-customer-form .form-group select {
   height: 100%;
 }
 .quantity-wrapper .input-group input {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
 }
 .quantity-wrapper .input-group-append {
@@ -12284,15 +12284,7 @@ p strong {
     /* padding-top: 120%; */
   }
 }
-/* policies page   */
 
-.shopify-policy__container {
-  max-width: 1378px !important;
-}
-.shopify-policy__title {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
 .template-collection #shopify-section-footer {
   position: relative;
 }
@@ -13162,4 +13154,65 @@ width: auto;
 	content: "✔" !important;
     width: 0 !important;
 
+}
+
+/* Order Tracking page - Supercharge Your Results */
+.card .card-footer .addtocartbtn .add-text {
+  white-space: nowrap;
+}
+
+/* Policy pages */
+.shopify-policy__container {
+  max-width: 1378px !important;
+}
+.shopify-policy__title {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.ccpa-compliance h2 {
+  font-size: 36px;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.ccpa-compliance p {
+  margin-bottom: 1em;
+}
+
+
+.shopify-policy__body h1 {
+  font-size: 48px;
+}
+
+.shopify-policy__body h2 {
+  font-size: 24px;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.shopify-policy__body h3 {
+  font-size: 22px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.shopify-policy__body p {
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+.sms-privacy-policy h2 {
+  font-size: 24px;
+  margin: 1em 0 0.5em;
+}
+
+.sms-privacy-policy p {
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.sms-terms-of-service p {
+  line-height: 1.5;
+  margin-bottom: 1rem; 
 }

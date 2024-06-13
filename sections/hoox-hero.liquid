@@ -11,6 +11,9 @@
   assign sectionShippingText = section.settings.section_shipping_text
   assign sectionMainImage = section.settings.section_main_image
   assign sectionMainImageMobile = section.settings.section_main_image_mobile
+  assign sectionABTestImage = section.settings.section_abtest_image
+  assign sectionABTestImageMobile = section.settings.section_abtest_image_mobile
+
 %}
 
 <section class="hoox-hero">
@@ -92,7 +95,7 @@
   </div>
 </div>
 </div>
-<div class="hoox-hero__media">
+<div class="hoox-hero__media case-a">
   {%- if sectionMainImage -%}
     <figure class="hoox-hero__main-image desktop">
       {% render 'snippet-image', image: sectionMainImage, loadingLazy: 'false' %}
@@ -104,6 +107,21 @@
     </figure>
   {%- endif -%}
 </div>
+
+{%- if sectionABTestImage and sectionABTestImageMobile -%}
+  <div class="hoox-hero__media case-b">
+    {%- if sectionABTestImage -%}
+      <figure class="hoox-hero__main-image desktop">
+        {% render 'snippet-image', image: sectionABTestImage, loadingLazy: 'false' %}
+      </figure>
+    {%- endif -%}
+     {%- if sectionABTestImageMobile -%}
+      <figure class="hoox-hero__main-image mobile">
+        {% render 'snippet-image', image: sectionABTestImageMobile, loadingLazy: 'false' %}
+      </figure>
+    {%- endif -%}
+  </div>
+{%- endif -%}
 </div>
   <div class="hoox-hero__items-mob">
   {% for block in section.blocks %}
@@ -172,11 +190,22 @@
       "id": "section_main_image",
       "label": "Section Main Image"
     },
-        {
+    {
       "type": "image_picker",
       "id": "section_main_image_mobile",
       "label": "Section Main Image Mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_abtest_image",
+      "label": "Section A/B Test Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_abtest_image_mobile",
+      "label": "Section A/B Test Image Mobile"
     }
+    
   ],
   "blocks": [
     {

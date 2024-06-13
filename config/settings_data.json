@@ -105,12 +105,12 @@
     "account_invited": "Account Invited.",
     "account_declined": "Account declined.",
     "shop_newsletter_checkbox": true,
-    "shop_product_newsletter_text": "Sign up for exclusive skincare offers.",
-    "shop_product_newsletter_heading": "Want TO SAVE 10% TODAY?",
-    "shop_product_newsletter_success_heading": "You’re in!",
-    "email_placeholder": "Enter your email",
+    "shop_product_newsletter_text": "",
+    "shop_product_newsletter_heading": "",
+    "shop_product_newsletter_success_heading": "",
+    "email_placeholder": "",
     "shop_product_newsletter_disclaimer": "*Applies to first-time customers*",
-    "newsletter_success_msg": "<span>Use Code: <strong>WELCOME10<\/strong> for <strong>10% OFF<\/strong><\/span>",
+    "newsletter_success_msg": "",
     "newsletter_error_msg": "You have entered an invalid email address. Please try again.",
     "enable_gift_tag": false,
     "gift_tag_text": "Free Gift",
@@ -1222,7 +1222,8 @@
     "custom_css": [
       "body .accessibility-trigger.aioa-small-icon button {width: 60px !important; height: 60px !important; margin: 7px 10px;}",
       "body .accessibility-trigger.aioa-small-icon button img {width: 50px !important; height: 50px !important;}",
-      "@media screen and (max-width: 992px) {body .accessibility-trigger.aioa-small-icon button {width: 50px !important; height: 50px !important; }}"
+      "@media screen and (max-width: 992px) {body .accessibility-trigger.aioa-small-icon button {width: 50px !important; height: 50px !important; }}",
+      "\/* 20240605 - Nested Pop-Up widgets *\/.sticky-bar-visible .accessibility-trigger.aioa_bottom_left button {margin-bottom: 60px;}"
     ]
   }
 }

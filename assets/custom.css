@@ -1,3 +1,32 @@
+/*pdp save 10%*/
+.save10pdp .hoox-newsletter__form-group{flex-direction: column;}
+.save10pdp div.needsclick{padding:0!important;background:transparent!important;}
+.save10pdp form.klaviyo-form{background:transparent!important;padding:0!important;}
+.save10pdp form.klaviyo-form input[type="email"]{    width: 100%;
+    border: 1px solid #B67D5B!important;
+    background: #fff!important;
+    height: 100%;border-radius:0!important;
+    padding-left: 16px!important;
+    max-width:305px!important;    color:#000!mportant;                            
+    height: 48px!important;
+}
+.save10pdp form.klaviyo-form h3{padding-top:5px!important;}
+
+.save10pdp form.klaviyo-form input[type="email"]::placeholder{color:#717171!important;}
+
+.save10pdp form.klaviyo-form button{background: #b67d5b!important;
+    border: none!important;
+    height: 48px!important;padding:0!important;min-width:215px!important;
+    width: 100%!important;font-family: Neufile-Grotesk!important;
+    font-size: 16px!important;
+    font-weight: 600!important;text-transform:uppercase!important;
+    color:#fff!important;}
+
+.save10pdp form.klaviyo-form, .save10pdp form.klaviyo-form p, .save10pdp form.klaviyo-form span{font-family: Neufile-Grotesk!important;}
+.hoox-shop__newsletter.save10pdp{padding:24px 24px 34px 24px!important;}
+
+.save10pdp span[role="alert"]{background:#fff!important;}
+
 /*home page - reduce header text*/
 .template-index .image-hero-desktop h2 {
   font-size: 48px;
@@ -18,35 +47,45 @@
 
 
 /*droplette giveaway*/
-@media(min-width:768px) and (max-width:1600px){
-body.signup-page.template-page .klaviyo-form--code{top:42%!important;}
+@media (min-width:768px) {
+  body.signup-page.template-page .klaviyo-form--code {top:50%!important;}
 }
-
-@media(min-width:768px) and (max-width:1400px){
-body.signup-page.template-page .klaviyo-form--code{top:36%!important;}
-body.signup-page.template-page .klaviyo-form--desktop-image{min-height:700px;}
-body.signup-page.template-page .klaviyo-form--desktop-image img{object-fit: cover;
+@media (min-width:768px) and (max-width:1400px) {
+  body.signup-page.template-page .klaviyo-form--desktop-image{min-height:700px;}
+  body.signup-page.template-page .klaviyo-form--desktop-image img{object-fit: cover;
     height: 100%;
     width: 100%;
-    min-height: 700px;}
+    min-height: 700px;
+  }
+}
+
+@media (max-width: 767px) {
+  body.signup-page .klaviyo-form--code .klaviyo-form > div{
+    min-height: auto !important;
+  }
 }
 
 @media (max-width: 450px) {
-body.signup-page.template-page .klaviyo-form--code {
-        bottom: -12%;
-    }
-body.template-page.subscribe .klaviyo-form--code{
-  bottom: -9%;
+  body.template-page.subscribe .klaviyo-form--code{
+    bottom: -9%;
+  }
+  
+  body.signup-page.template-page .klaviyo-form--code {
+    bottom: 6%;
+  }
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+  body.signup-page.template-page .klaviyo-form--code {
+    top: 108vw;
+    bottom: unset;
+  }
 }
 
 @media (max-width: 375px) {
-body.signup-page.template-page .klaviyo-form--code {
-        bottom: -17%;
-    }
-body.template-page.subscribe .klaviyo-form--code{
-  bottom: -15%;
-}
+  body.template-page.subscribe .klaviyo-form--code{
+    bottom: -15%;
+  }
 }
 
 /*new collection page design*/
@@ -2809,8 +2848,7 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
     margin: 0px 2px !important;
 }
 
-@media (max-width: 767px){
-
+@media (max-width: 767px) {
   body .klaviyo-form--code .klaviyo-form > div{
     justify-content: normal !important;
   }
