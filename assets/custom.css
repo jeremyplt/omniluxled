@@ -2918,3 +2918,43 @@ html:not(.test-swap-product) .swap-product--test {
     display: none;
   }
 }
+
+/* Animated Number Test | class: .test-animated-review-text */
+
+.review__stars {
+  display: flex;
+  align-items: center;
+}
+
+.review__stars svg {
+  width: 18px;
+  height: 18px;
+  color: #ffdc00;
+}
+
+html:not(.test-animated-review-text) .rev-txt--test {
+  display: none;
+}
+
+.test-animated-review-text .rev-txt-mbl:not(.rev-txt--test), .test-animated-review-text .rev-txt:not(.rev-txt--test) {
+  display: none;
+}
+
+@media (max-width: 749px) {
+  .test-animated-review-text .review-ctr-mbl {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+  }
+}
+
+.test-animated-review-text .review-ctr-mbl .ds-flx {
+  max-width: fit-content;
+  margin: 0;
+}
+
+.animated-number {
+  font-weight: bold;
+  font-size: 20px;
+}
