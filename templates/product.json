@@ -46,7 +46,9 @@
         "circle_link_NENwhG": {
           "type": "circle-link",
           "settings": {
-            "label": ""
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_12.56.02_PM.png",
+            "label": "Sarah's Story",
+            "video": "shopify:\/\/files\/videos\/Omnilux Contour LED Mask Review.mp4"
           }
         }
       },
