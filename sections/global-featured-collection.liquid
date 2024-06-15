@@ -44,15 +44,15 @@
                                   }
                               }'>
                                   <div class="swiper-wrapper">
-                                    <div class="swiper-slide collection-style-4 swap-product--test">
-                                      {% render 'card-product-style-featured', product: all_products["omnilux-men"] %}
-                                    </div>
                                     {% for i in (1..2) %}
                                         {% capture featured_product %}featured_product_{{ i }}{% endcapture %}
-                                        <div class="swiper-slide collection-style-4 {% if i == 1 %}swap-product--original{% endif %}">
+                                        <div class="swiper-slide collection-style-4 {% if i == 2 %}swap-product--original{% endif %}">
                                         {% render 'card-product-style-featured', product: section.settings[featured_product] %}
                                         </div>
                                     {% endfor %}
+                                    <div class="swiper-slide collection-style-4 swap-product--test">
+                                      {% render 'card-product-style-featured', product: all_products["omnilux-men"] %}
+                                    </div>
                                   </div>
                                   {% if section.settings.nav_dots %}
                                       <div class="swiper-pagination bottom-0 w-100 text-center mt-3 position-relative"></div>

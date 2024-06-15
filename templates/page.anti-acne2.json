@@ -154,7 +154,7 @@
       "settings": {
         "class_names": "",
         "section_id": "#",
-        "section_title": "Real Stories, Real Impact"
+        "section_title": "Real Stories,<br>Real Impact"
       }
     },
     "839046eb-ba08-422a-bf0e-7cc84c8fcd1c": {
@@ -356,6 +356,7 @@
           "settings": {
             "fullwidth_content": false,
             "heading_txt": "Loved by Dermatologists",
+            "max_width_enabled": true,
             "max_width": 570,
             "txt": "<p>\"Omnilux Clear is an amazing low level light therapy device that I feel works on everything from acne to breakouts. The blue light neutralizes bacteria on the surface of your skin that is responsible for acne. The red light reduces inflammation and redness and is great at reducing excess oil production in the sebaceous glands. When these two wavelengths are used together, you receive a more effective and efficient acne treatment. This is why I love the Omnilux Clear mask.\"<\/p><p><strong>Dr. Glynis Ablon, MD, FAAD<\/strong><br\/>Associate Clinical Professor of Dermatology, UCLA<br\/>The Ablon Skin Institute<\/p>",
             "step_heading": "",
@@ -481,6 +482,7 @@
           "settings": {
             "fullwidth_content": false,
             "heading_txt": "\"This is the best my skin has been, ever.\"",
+            "max_width_enabled": true,
             "max_width": 530,
             "txt": "<p>Omnilux user, Jess, had suffered from cystic acne for years. Before resorting to harsh prescription treatments, Jess invested in the Omnilux Clear mask and experienced life changing results.<br\/><br\/><em>\"I was collectively spending more money on skincare than I did on this one purchase of the Omnilux, which will continue to treat me for free. <\/em><em><strong>My skin texture has improved so so so much<\/strong><\/em><em>. This is the best my skin has been, ever. It has been the greatest gift.\"<\/em><\/p>",
             "step_heading": "",
@@ -581,7 +583,7 @@
             "table_column_title_one": "",
             "table_column_tick_one_true": false,
             "table_column_tick_one_false": false,
-            "table_column_one_img": "shopify:\/\/shop_images\/OmniluxClear-Logo.png",
+            "table_column_one_img": "shopify:\/\/shop_images\/OmniLux_Logo_b1e66e4d-0c73-4534-a6a3-8245f7e52626.svg",
             "table_column_title_two": "",
             "table_column_tick_two_true": true,
             "table_column_tick_two_false": false,
@@ -707,6 +709,7 @@
           "settings": {
             "fullwidth_content": false,
             "heading_txt": "Why Omnilux",
+            "max_width_enabled": true,
             "max_width": 530,
             "txt": "",
             "step_heading": "",
@@ -735,6 +738,7 @@
           "settings": {
             "fullwidth_content": false,
             "heading_txt": "Show me the clinical data!",
+            "max_width_enabled": true,
             "max_width": 420,
             "txt": "",
             "step_heading": "",

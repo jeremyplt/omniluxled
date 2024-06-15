@@ -9,10 +9,10 @@
     "klaviyo_form_ArxtRR": {
       "type": "klaviyo-form",
       "settings": {
-        "desktop-image": "shopify:\/\/shop_images\/D2C_Email_SMS_Sign_Up_Landing_Page_14.png",
+        "desktop-image": "shopify:\/\/shop_images\/D2C_Email_SMS_Sign_Up_Landing_Page_19.png",
         "desktop_form_position": "left",
-        "mobile-image": "shopify:\/\/shop_images\/D2C_Email_SMS_Sign_Up_Landing_Page_13.png",
-        "form-code": "<div class=\"klaviyo-form-T5hr8v\"><\/div>"
+        "mobile-image": "shopify:\/\/shop_images\/D2C_Email_SMS_Sign_Up_Landing_Page.png",
+        "form-code": "<div class=\"klaviyo-form\">\n<div class=\"need-justuno\"><\/div><\/div>"
       }
     }
   },

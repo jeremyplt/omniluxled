@@ -178,7 +178,6 @@
       const start = 220000;
       const end = 300000;
       const duration = 6000; // duration in milliseconds
-      const updateInterval = 70; // update interval in milliseconds
 
       const animatedNumber = document.querySelectorAll('.animated-number');
       const startTime = performance.now();
@@ -199,7 +198,7 @@
           });
 
           if (progress < 1) {
-              setTimeout(animate, updateInterval);
+              requestAnimationFrame(animate);
           } else {
             animatedNumber.forEach(number => {
               number.textContent = "300K+";
@@ -209,9 +208,10 @@
           }
       };
 
-      animate();
+      requestAnimationFrame(animate);
   });
 </script>
+
 
 
 {% schema %}
