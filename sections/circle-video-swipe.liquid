@@ -1,4 +1,4 @@
-<div class="circle-video-menu-wrap circle-video-menu-wrap--{{ section.id }} {{ section.settings.div_id }}">
+<div class="circle-video-swipe circle-video-menu-wrap circle-video-menu-wrap--{{ section.id }} {{ section.settings.div_id }}">
   <div class="circle-video-menu circle-video-menu--{{ section.id }} {% if section.settings.ignore %}circle-vide-menu--ignore{% endif %}">
     <div class="circle-menu-items">
       {% for block in section.blocks %}
@@ -13,20 +13,19 @@
     </div>
   </div>
 
-  {% for block in section.blocks %}
-    <div class="circle-video-menu-modal">
-      <div class="width">
-        <div class="circle-video-menu-modal-inner">
-          <button class="circle-video-menu-modal-close">{% render 'icon-close' %}</button>
-          <video playsinline preload="none" controls>
-            {% for source in block.settings.video.sources %}
-              <source src="{{ source.url }}" type="{{ source.mime_type }}">
-            {% endfor %}
-          </video>
-        </div>
-      </div>
+  <div class="circle-video-swipe__modal">
+    <div class="circle-video-swipe__slider keen-slider">
+        {% for block in section.blocks %}
+            <div class="circle-video__item keen-slider__slide">
+                <video playsinline preload="none" controls>
+                    {% for source in block.settings.video.sources %}
+                        <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                    {% endfor %}
+                </video>
+            </div>
+        {% endfor %}
     </div>
-  {% endfor %}
+    </div>
 </div>
 
 <style>
@@ -38,27 +37,26 @@
 <script>
   document.querySelectorAll('.circle-video-menu--{{ section.id }} .circle-video-menu-item').forEach((item, i) => {
     item.addEventListener('click', () => {
-      const root = item.closest('.circle-video-menu-wrap');
-      const modal = root.querySelectorAll(`.circle-video-menu-modal`)[i];
-      const video = modal.querySelector('video');
+      const modal = document.querySelector(`.circle-video-swipe__modal`)
+      const video = modal.querySelectorAll('circle-video__item')[i];
 
-      modal.classList.add('circle-video-menu-modal--active');
+      modal.classList.add('modal--active');
       video.play();
     });
   });
 
   document.querySelectorAll('.circle-video-menu-wrap--{{ section.id }} .circle-video-menu-modal').forEach((el) => {
     el.addEventListener('click', () => {
-      const video = el.querySelector('video');
+    const video = modal.querySelectorAll('circle-video__item')[i];
       video.pause();
-      el.classList.remove('circle-video-menu-modal--active');
+      el.classList.remove('modal--active');
     });
   });
 </script>
 
 {% schema %}
 {
-  "name": "Circle video menu",
+  "name": "Circle video swipe",
   "class": "circle-video-menu-wrap-wrap",
   "settings": [
     {
@@ -104,7 +102,7 @@
   ],
   "presets": [
     {
-      "name": "Circle video menu"
+      "name": "Circle video swipe"
     }
   ]
 }
