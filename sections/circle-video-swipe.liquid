@@ -1,31 +1,44 @@
 <div class="circle-video-swipe circle-video-menu-wrap circle-video-menu-wrap--{{ section.id }} {{ section.settings.div_id }}">
-  <div class="circle-video-menu circle-video-menu--{{ section.id }} {% if section.settings.ignore %}circle-vide-menu--ignore{% endif %}">
-    <div class="circle-menu-items">
-      {% for block in section.blocks %}
-        <a class="circle-video-menu-item">
-          <span class="circle-video-menu-item-image">
-            {{ block.settings.image | image_url: width: 120 | image_tag: class: 'circle-menu-item-img' }}
-            {% render 'icon-play' %}
-          </span>
-          <span class="circle-menu-item-label">{{ block.settings.label }}</span>
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-
-  <div class="circle-video-swipe__modal">
-    <div class="circle-video-swipe__slider keen-slider">
+    <div class="circle-video-menu circle-video-menu--{{ section.id }} {% if section.settings.ignore %}circle-vide-menu--ignore{% endif %}">
+        <div class="circle-menu-items">
         {% for block in section.blocks %}
-            <div class="circle-video__item keen-slider__slide">
-                <video playsinline preload="none" controls>
-                    {% for source in block.settings.video.sources %}
-                        <source src="{{ source.url }}" type="{{ source.mime_type }}">
-                    {% endfor %}
-                </video>
-            </div>
+            <a class="circle-video-menu-item">
+            <span class="circle-video-menu-item-image">
+                {{ block.settings.image | image_url: width: 120 | image_tag: class: 'circle-menu-item-img' }}
+                {% render 'icon-play' %}
+            </span>
+            <span class="circle-menu-item-label">{{ block.settings.label }}</span>
+            </a>
         {% endfor %}
+        </div>
     </div>
+
+    <div class="circle-video-swipe__modal">
+        <div class="circle-video-swipe__slider keen-slider">
+            {% for block in section.blocks %}
+                <div class="circle-video__item keen-slider__slide">
+                    <video playsinline preload="auto" autoplay loop>
+                            <source src="{{ block.settings.video.sources[1].url }}" type="{{ block.settings.video.sources[1].mime_type }}">
+                    </video>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="modal__close">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </div>
+        <div class="modal__sound">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+            </svg>
+        </div>
     </div>
+
+
 </div>
 
 <style>
@@ -37,21 +50,64 @@
 <script>
   document.querySelectorAll('.circle-video-menu--{{ section.id }} .circle-video-menu-item').forEach((item, i) => {
     item.addEventListener('click', () => {
-      const modal = document.querySelector(`.circle-video-swipe__modal`)
-      const video = modal.querySelectorAll('circle-video__item')[i];
+      const modal = document.querySelector('.circle-video-swipe__modal');
+      const videos = modal.querySelectorAll('.circle-video__item video');
+      const video = videos[i];
+
+      document.documentElement.style.overflow = 'hidden';
 
       modal.classList.add('modal--active');
       video.play();
+
+      var currentSlide = 0;
+
+      if (typeof slider === 'undefined') {
+        var slider = new KeenSlider(".circle-video-swipe__slider", {
+          vertical: true,
+          slideChanged: (s) => {
+                const slide = s.track.details.rel;
+                // if going forward
+                console.log("s", s);
+                if (slide > currentSlide) {
+                    videos[slide].play();
+                    videos[slide - 1].pause();
+                } else {
+                    videos[slide].play();
+                    videos[slide + 1].pause();
+                }
+
+                currentSlide = slide
+            }
+        });
+      }
+
+      slider.moveToIdx(i);
     });
   });
 
-  document.querySelectorAll('.circle-video-menu-wrap--{{ section.id }} .circle-video-menu-modal').forEach((el) => {
-    el.addEventListener('click', () => {
-    const video = modal.querySelectorAll('circle-video__item')[i];
-      video.pause();
-      el.classList.remove('modal--active');
-    });
+  document.querySelector('.circle-video-swipe__modal').addEventListener('click', (e) => {
+    if (e.target.classList.contains('circle-video-swipe__modal')) {
+      const modal = document.querySelector('.circle-video-swipe__modal');
+      document.documentElement.style.overflow = 'auto';
+      modal.classList.remove('modal--active');
+      modal.querySelectorAll('video').forEach(video => video.pause());
+    }
   });
+
+  document.querySelector(".modal__close").addEventListener("click", () => {
+    const modal = document.querySelector('.circle-video-swipe__modal');
+    document.documentElement.style.overflow = 'auto';
+    modal.classList.remove('modal--active');
+    modal.querySelectorAll('video').forEach(video => video.pause());
+  });
+
+  document.querySelector(".modal__sound").addEventListener("click", () => {
+    const videos = document.querySelectorAll('.circle-video-swipe__modal video');
+    videos.forEach(video => {
+        video.muted =!video.muted;
+        video.volume = video.muted? 0 : 1;
+    });
+    document.querySelector(".modal__sound").classList.toggle("muted")
 </script>
 
 {% schema %}
