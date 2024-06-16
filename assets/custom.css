@@ -2968,6 +2968,10 @@ html:not(.test-animated-review-text) .rev-txt--test {
     display: none !important;
   }
 
+  .circle-video-swipe__modal {
+    position: relative;
+  }
+
   .circle-video-swipe__modal:not(.modal--active) {
     display: none;
   }
@@ -3002,4 +3006,38 @@ html:not(.test-animated-review-text) .rev-txt--test {
 
 .modal__sound:not(.muted) svg:last-child, .modal__sound.muted svg:first-child {
   display: none;
+}
+
+.modal__controls {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal__controls svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.modal__button {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: .3rem;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__swipe-animation {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  height: 100px;
 }
