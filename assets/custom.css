@@ -3041,3 +3041,9 @@ html:not(.test-animated-review-text) .rev-txt--test {
   bottom: 2rem;
   height: 100px;
 }
+
+@media (min-width: 601px) {
+  .circle-video-swipe__modal {
+    display: none;
+  }
+}
