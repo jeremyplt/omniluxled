@@ -20,6 +20,14 @@
   endif
 %}
 
+{%- liquid
+  assign is_birthday_sale_product = false
+
+  if product.tags contains 'birthday-sale'
+    assign is_birthday_sale_product = true
+  endif
+-%}
+
 <product-form class="product-form{% unless product.has_only_default_variant %} disable-swatches{% endunless %}">
 
 {% comment %}theme-check-disable UnusedAssign{% endcomment %}
@@ -195,7 +203,9 @@
         >
             {% comment %} <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
             <span class="add-text">
-              {% if localization.country == "France" and product.metafields.unavailable.france == true %}
+              {% if is_birthday_sale_product %}
+                {{ 'products.product.add_to_cart' | t | append: ' & Save'}}
+              {% elsif localization.country == "France" and product.metafields.unavailable.france == true %}
                 <span class="not-available">Not Available In France</span>
               {% elsif is_preorder %}
                 PRE-ORDER
@@ -242,12 +252,17 @@
   </script>
 {% endform %}
 </product-form>
+
+{%- if is_birthday_sale_product -%}
+  <div class="saletext small text-center">$45 USD off 1 device: BDAY1, $110 USD off 2 devices: BDAY2, $175 USD off 3 devices: BDAY3</div>  
+{%- endif -%}
+
 <div id="delm-app"></div>
 <product-form>
   {% form 'product', product, data-productid: product.id, id: product_form_id, class: "mt-4", data-product-form: "", data-product-id: product.id, data-type: 'add-to-cart-form', data-format: format %}
 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
 
-  <div class="product-sticky-btn d-none w-100" data-stickyBtn>
+<div class="product-sticky-btn d-none w-100" data-stickyBtn>
   <div class="d-flex mx-auto">
     <div class="col-auto" style="min-width: 134px;max-width: 134px;padding-right: 10px;">
       <div class="quantity-wrapper mb-0 h-100" data-qty-container>
@@ -258,7 +273,7 @@
               <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
             </span>
           </div>
-          <input  type="number"   name="quantity" aria-label="{{ 'products.product.quantity.input_label' | t: product: product.title | escape }}" value="1" step="1" min="1" inputmode="numeric" data-qty-input class="quantity form-control text-center">
+          <input type="number" name="quantity" aria-label="{{ 'products.product.quantity.input_label' | t: product: product.title | escape }}" value="1" step="1" min="1" inputmode="numeric" data-qty-input class="quantity form-control text-center">
           <div class="input-group-append">
             <span  class="input-group-text cursor-pointer" rel="nofollow" aria-label="{{ 'products.product.quantity.increase' | t: product: product.title | escape }}" title="{{ 'products.product.quantity.increase' | t: product: product.title | escape }}" data-for="increase" data-qty-btn>
               <span class="btn-increase"><span class="ox-plus"></span></span>
@@ -290,7 +305,9 @@
     >
       {% comment %} <span class="add-text">{%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else-%}{{ 'products.product.sold_out' | t }}{%- endif -%}</span> {% endcomment %}
       <span class="add-text">
-        {%- if current_variant.available -%}
+        {%- if is_birthday_sale_product -%}
+          {{ 'products.product.add_to_cart' | t | append: ' & Save'}}
+        {%- elsif current_variant.available -%}
           {% if flag == true %}
             GO TO PURCHASE ORDER
           {% else %}

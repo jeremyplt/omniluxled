@@ -98,6 +98,7 @@ function calculatePriceWithTaxes(price, country, showTaxes = false) {
   const noPriceDisplayCountries = ["US", "CA"];
 
   let taxRate = taxData[country];
+  let finalPrice = price;
   let taxInclusivePrice = price * (1 + taxRate);
   let formattedTaxInclusivePrice = Shopify.formatMoney(
     taxInclusivePrice,
@@ -113,7 +114,7 @@ function calculatePriceWithTaxes(price, country, showTaxes = false) {
   } else if (taxRate !== undefined && showTaxes) {
     return formattedTaxInclusivePrice + "<span class='tax'> Incl. Tax</span>";
   } else if (taxRate !== undefined) {
-    return formattedTaxInclusivePrice;
+    taxInclusivePrice = price;
   }
 
   return noPriceDisplayCountries.includes(country)
@@ -139,15 +140,11 @@ document.addEventListener("DOMContentLoaded", function () {
           const priceElement = price.querySelector(".money")
             ? price.querySelector(".money")
             : price;
-
-          console.log("priceElement", priceElement.textContent);
           const priceWithTaxes = calculatePriceWithTaxes(
             sanitizePrice(priceElement.textContent),
             customerCountry,
             hasAnyClass ? false : true
           );
-
-          console.log("priceWithTaxes", priceWithTaxes);
           priceElement.innerHTML = priceWithTaxes;
         });
       }

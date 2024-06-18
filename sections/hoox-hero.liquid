@@ -5,6 +5,8 @@
   assign sectionStarText = section.settings.section_star_text
   assign sectionStarAchorId = section.settings.section_star_anchor_id
   assign sectionTitle = section.settings.section_title
+  assign sectionSubtitle = section.settings.section_subtitle
+  assign sectionMobileSubtitle = section.settings.section_mobile_subtitle
   assign sectionDescription = section.settings.section_description
   assign sectionBtnText = section.settings.section_btn_text
   assign sectionBtnUrl = section.settings.section_btn_url
@@ -72,6 +74,8 @@
       >
         {{- sectionBtnText -}}
       </a>
+      <div class="px-4 px-md-0 caption_txt fw-normal hidemobile">{{ sectionSubtitle }}</div>
+      <div class="px-4 px-md-0 caption_txt fw-normal hidedesktop">{{ sectionMobileSubtitle }}</div>
       {% if sectionShippingText != 'blank' %}
       <p class="hoox-hero__shipping-text">
         {{ sectionShippingText }}
@@ -164,6 +168,16 @@
       "type": "html",
       "id": "section_title",
       "label": "Section Title"
+    },
+    {
+      "type": "html",
+      "id": "section_subtitle",
+      "label": "Sub Title"
+    },
+    {
+      "type": "html",
+      "id": "section_mobile_subtitle",
+      "label": "Mobile Sub Title"
     },
     {
       "type": "text",

@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "enable_skio": true,
@@ -217,9 +226,9 @@
         ],
         "settings": {
           "topbar_enabled": true,
-          "topbar_text": "<strong>FREE SHIPPING ON ORDERS $100+ USD<\/strong>",
+          "topbar_text": "<strong>OMNILUX BIRTHDAY SALE! $45 OFF 1 DEVICE:<\/strong> BDAY1, <strong>$110 OFF 2 DEVICES:<\/strong> BDAY2, <strong>$175 OFF 3 DEVICES:<\/strong> BDAY3",
           "page_url": "",
-          "topbar_text2": "<strong>FREE SHIPPING ON ORDERS $100+ USD<\/strong>",
+          "topbar_text2": "",
           "page_url2": "",
           "topbar_text3": "",
           "page_url3": "",
@@ -1223,7 +1232,7 @@
       "body .accessibility-trigger.aioa-small-icon button {width: 60px !important; height: 60px !important; margin: 7px 10px;}",
       "body .accessibility-trigger.aioa-small-icon button img {width: 50px !important; height: 50px !important;}",
       "@media screen and (max-width: 992px) {body .accessibility-trigger.aioa-small-icon button {width: 50px !important; height: 50px !important; }}",
-      "\/* 20240605 - Nested Pop-Up widgets *\/.sticky-bar-visible .accessibility-trigger.aioa_bottom_left button {margin-bottom: 60px;}"
+      " \/* 20240605 - Nested Pop-Up widgets *\/.sticky-bar-visible .accessibility-trigger.aioa_bottom_left button {margin-bottom: 60px;}"
     ]
   }
 }

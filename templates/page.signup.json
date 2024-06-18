@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -9,10 +18,10 @@
     "klaviyo_form_A6ewfX": {
       "type": "klaviyo-form",
       "settings": {
-        "desktop-image": "shopify:\/\/shop_images\/D2C_Nutrafol_Giveaway_Email_SMS_Sign_Up_Desktop_Landing_Page.png",
+        "desktop-image": "shopify:\/\/shop_images\/D2C_Babyliss_Giveaway_Email_SMS_Sign_Up_Desktop_Landing_Page.png",
         "desktop_form_position": "right",
-        "mobile-image": "shopify:\/\/shop_images\/D2C_Nutrafol_Giveaway_Email_SMS_Sign_Up_Mobile_Landing_Page.png",
-        "form-code": "<div class=\"klaviyo-form-SkECXS\"><\/div>"
+        "mobile-image": "shopify:\/\/shop_images\/D2C_Babyliss_Giveaway_Email_SMS_Sign_Up_Mobile_Landing_Page.png",
+        "form-code": "<div class=\"klaviyo-form-VhuzPu\"><\/div>"
       }
     }
   },

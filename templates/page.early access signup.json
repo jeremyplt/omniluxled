@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -9,10 +18,10 @@
     "klaviyo_form_w68Agp": {
       "type": "klaviyo-form",
       "settings": {
-        "desktop-image": "shopify:\/\/shop_images\/D2C_SMS_Sign_Up_Landing_Page_5.png",
+        "desktop-image": "shopify:\/\/shop_images\/D2C_SMS_Sign_Up_Landing_Page_4.png",
         "desktop_form_position": "left",
-        "mobile-image": "shopify:\/\/shop_images\/D2C_Email_SMS_Sign_Up_Landing_Page_1.png",
-        "form-code": "<div class=\"klaviyo-form\">\n<div class=\"need-justuno\"><\/div><\/div>"
+        "mobile-image": "shopify:\/\/shop_images\/D2C_Email_SMS_Sign_Up_Landing_Page_15.png",
+        "form-code": "<div class=\"klaviyo-form-X2qgnC\"><\/div>"
       }
     }
   },

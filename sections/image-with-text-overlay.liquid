@@ -24,7 +24,11 @@
                 {{ section.settings.image_mobile | image_url: width: 1000 | image_tag: alt: section.settings.text, class: "mobile--only" }}
             {% endif %}
         </div>
-        <h2 class="image-text-overlay__text">{{ section.settings.text }}</h2>
+        {% if collection.handle == 'all' or collection.handle == 'all-devices' %}
+            <h2 class="image-text-overlay__text">Save up to $175 on LED!</h2>        
+        {% else %}
+            <h2 class="image-text-overlay__text">{{ section.settings.text }}</h2>            
+        {% endif %}
     </div>
 </div>
 
