@@ -16,16 +16,28 @@
 
 .save10pdp form.klaviyo-form button{background: #b67d5b!important;
     border: none!important;
-    height: 48px!important;padding:0!important;min-width:215px!important;
+    height: 48px!important;padding:0!important;min-width:215px;
     width: 100%!important;font-family: Neufile-Grotesk!important;
     font-size: 16px!important;
     font-weight: 600!important;text-transform:uppercase!important;
     color:#fff!important;}
 
+
 .save10pdp form.klaviyo-form, .save10pdp form.klaviyo-form p, .save10pdp form.klaviyo-form span{font-family: Neufile-Grotesk!important;}
-.hoox-shop__newsletter.save10pdp{padding:24px 24px 34px 24px!important;}
+.hoox-shop__newsletter.save10pdp{padding:24px 24px 34px 24px;}
 
 .save10pdp span[role="alert"]{background:#fff!important;}
+
+@media (max-width: 767px) {
+  .save10pdp form.klaviyo-form button {
+      min-width: 136px;
+  }
+
+  .hoox-shop__newsletter.save10pdp {
+    padding-left: 12px;
+    padding-right: 12px;
+  } 
+}
 
 /*home page - reduce header text*/
 .template-index .image-hero-desktop h2 {
