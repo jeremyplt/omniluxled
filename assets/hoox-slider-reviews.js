@@ -18,6 +18,6 @@ if (hooxSliderReviews) {
     navigation: {
       nextEl: ".hoox-swiper-arrow-next",
       prevEl: ".hoox-swiper-arrow-prev",
-    },
+    }
   });
 }

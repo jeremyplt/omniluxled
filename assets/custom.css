@@ -202,8 +202,6 @@ p.hoox-shop__upsell-description{font-style:italic;}
 .template-page.home .badges .gradient-fair-tone,.template-index .badges .gradient-fair-tone{display:none;}
 .template-page.home .badges .mb-lg-5{margin-bottom:20px!important;}
 
-.image-hero.shortbanner.withreviews .container-fluid{padding:0 0 0!important;}
-
 .template-page.home .index-featured-collectiion{max-width:1350px;margin:0 auto;}
 .template-page.home .index-featured-collectiion .border-bottom{border-bottom:0!important;}
 .template-page.home .text-with-right-video .footer-btn-warp{margin-top: 26px!important;}
@@ -222,7 +220,6 @@ p.hoox-shop__upsell-description{font-style:italic;}
 
 @media(max-width:600px){
 .image-hero.shortbanner .align-items-end{align-items: flex-start!important;}
-.image-hero.shortbanner.withreviews .container-fluid{padding:0 0 0!important;}
   .image-hero.shortbanner.withreviews .overlay{display:none!important;}
 .image-hero.withreviews.shortbanner h2.h1{text-shadow:none!important;color:#000;font-size:40px;line-height:45px;}
 .image-hero.withreviews.shortbanner h2.h1.mb-3{margin-bottom:10px!important;}

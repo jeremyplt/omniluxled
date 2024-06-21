@@ -1,18 +1,9 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "fb5ecb5e-55ca-4dd5-a283-3b9b227357b3": {
       "type": "image_hero_3_shortheight",
       "custom_css": [
-        ".image-hero.withreviews .container-fluid {padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important;}",
+        ".image-hero.withreviews .container-fluid {padding-bottom: 0;}",
         ".overlay {opacity: 0.2 !important;}",
         "h2 {color: #fff !important;}",
         "@media (min-width: 1000px) {.col-xl-4.col-lg-6.col-md-6.col-12.pe-0.ps-0 {width: 50%; }}",

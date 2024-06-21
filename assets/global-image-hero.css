@@ -35,23 +35,6 @@
   min-height: 500px !important;
 }
 
-.image-hero .container-fluid {
-  padding: 101.01px 20px 20px 20px !important;
-}
-
-.image-hero.withreviews .container-fluid{padding-top:0!important;}
-
-.template-index .image-hero.withreviews .container-fluid {
-  padding: 120px 20px 20px 20px !important;
-}
-
-
-#shopify-section-template--16184566120610__4650e625-58c1-458d-8bb0-ff104d2e5c72
-  > section
-  > div {
-  padding: 101.01px 20px 20px !important;
-}
-
 .image-hero .media-wrap img,
 .image-hero .media-wrap svg,
 .image-hero .media-wrap {
@@ -148,17 +131,13 @@
   }
 }
 
-@media(max-width:992px){
-  .image-hero.withreviews .container-fluid{padding-top:0!important;}
+@media (max-width:992px) {
+  .image-hero.withreviews .container-fluid{
+    padding-top: 0;
+  }
 
-.template-index .image-hero.withreviews .container-fluid {
-  padding-top:80px!important;
+  .anti-acne .image-hero .media-wrap{object-position: 80% 0!important;}
 }
-.anti-acne .image-hero .media-wrap{object-position: 80% 0!important;}
-
-}
-
-  
 
 @media (max-width: 600px) {
   .image-hero-desktop .caption_txt > * {
