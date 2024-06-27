@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "46303bd3-da3b-4cc4-9804-394607ef3f06": {
@@ -14,9 +5,9 @@
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/Untitled-222_e65c0107-3a4e-4b4d-bade-6fd0644b515c.jpg",
         "image_mobile": "shopify:\/\/shop_images\/Untitled-8.png",
-        "title": "Save up to $175",
-        "subtitle": "$45 USD off 1 full size device: BDAY1<br>$110 USD off 2 full size devices: BDAY2<br>$175 USD off 3 full size devices: BDAY3",
-        "btn_text": "Shop & Save!",
+        "title": "Mask on, acne gone.",
+        "subtitle": "Save $50 on Omnilux Clear: code CLEAR",
+        "btn_text": "SHOP & SAVE $50",
         "btn_link": "shopify:\/\/products\/omnilux-clear",
         "content_position": "2",
         "custom_class": ""
@@ -163,7 +154,7 @@
       "settings": {
         "class_names": "",
         "section_id": "#",
-        "section_title": "Real Stories, Real Impact"
+        "section_title": "Real Stories,<br>Real Impact"
       }
     },
     "839046eb-ba08-422a-bf0e-7cc84c8fcd1c": {
@@ -592,7 +583,7 @@
             "table_column_title_one": "",
             "table_column_tick_one_true": false,
             "table_column_tick_one_false": false,
-            "table_column_one_img": "shopify:\/\/shop_images\/OmniluxClear-Logo.png",
+            "table_column_one_img": "shopify:\/\/shop_images\/OmniLux_Logo_b1e66e4d-0c73-4534-a6a3-8245f7e52626.svg",
             "table_column_title_two": "",
             "table_column_tick_two_true": true,
             "table_column_tick_two_false": false,

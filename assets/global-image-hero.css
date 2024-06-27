@@ -32,7 +32,7 @@
 .image-hero .container-fluid .tallheight .swiper-slide {
   transition: 0.3s;
   overflow: hidden;
-  min-height: 500px !important;
+  min-height: 580px !important;
 }
 
 .image-hero .media-wrap img,

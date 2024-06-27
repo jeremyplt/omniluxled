@@ -143,7 +143,7 @@
     .hoox-hero__wrapper {
         flex-direction: row;
         padding: 0;
-        height: 655px;
+        height: 566px;
         position: relative;
         background: linear-gradient(182deg, rgba(254, 253, 249, 0.80) 2.42%, rgba(254, 253, 249, 0.00) 46.58%), linear-gradient(96deg, #F7DAC6 4.81%, #F9ECD9 55.75%);
     }

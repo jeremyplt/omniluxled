@@ -89,7 +89,6 @@ body:not(.opened-menu-drawer) #shopify-section-header:not(.shopify-section-heade
     position: relative;
     line-height: 1.285714285714286;
     letter-spacing: 0.06em;
-    white-space: nowrap;
 }
 .main-menu-link > li + li
 {

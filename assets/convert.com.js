@@ -59,10 +59,10 @@ function featuredCollectionViewport() {
   const hasElementInViewport =
     featuredCollection && isInViewport(featuredCollection);
 
-  if (!window.runExperiment100483406 && hasElementInViewport) {
-    window.runExperiment100483406 = 1;
+  if (!window.runExperiment100477329 && hasElementInViewport) {
+    window.runExperiment100477329 = 1;
     window._conv_q = window._conv_q || [];
-    window._conv_q.push(["executeExperiment", "100483406"]);
+    window._conv_q.push(["executeExperiment", "100477329"]);
     console.log(
       "Convert - Home Page Featured Products Swap - Experiment Activated"
     );

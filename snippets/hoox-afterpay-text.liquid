@@ -10,3 +10,11 @@
         {% render 'hoox-icon-afterpay' %}
     </button>
 </div>
+
+{%- if request.path contains '/pages/blemish-eraser' -%}
+    {%- assign metafieldValue = product.metafields.custom.saletext | strip -%}
+    {%- if metafieldValue != blank -%}
+      <div class="saletext small text-center" style="display: none">{{ metafieldValue }}</div>
+    {%- endif -%}
+{%- endif -%}
+  

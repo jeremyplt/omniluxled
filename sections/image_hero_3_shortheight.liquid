@@ -68,23 +68,26 @@
             <div
               class="container px-0 text-center text-md-start">
               <div
-                class="row mx-auto col-md-11 col-lg-10 col-12 px-0 py-xl-12 py-lg-10 mb-xl-2 py-md-5 py-10 justify-content-start">
+                class="row mx-auto col-md-11 col-lg-11 col-12 px-0 py-xl-12 py-lg-10 mb-xl-2 py-md-5 py-10 justify-content-start">
                 <div
-                  class="col-xl-4 col-lg-6 col-md-6 col-12 pe-0 ps-0 ">
+                  class="col-xl-4 col-lg-5 col-md-6 col-12 pe-0 ps-0 ">
                   <div class="review-ctr">
-                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
-                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
-                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
-                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
-                    <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                    <div class="review__stars">
+                      {% for i in (1..5) %}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                          <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                        </svg>
+                      {% endfor %}
+                    </div>
                     <p class="rev-txt">&nbsp; &nbsp;Trusted by 300K+ Customers</p>
+                    <p class="rev-txt rev-txt--test">&nbsp; &nbsp;<span class="animated-number">300K+</span> Glowing Customers</p>
                   </div>
                   <h2
                     class="h1 px-4 px-md-0 heading_txt mb-3">{{ section.settings.title }}</h2>
                   <p
                     class="px-4 px-md-0 caption_txt fw-normal mb-1 pb-2 hidemobile"
                     style="color: #ffffff;">{{ section.settings.subtitle }}</p>
-                  <p
+                   <p
                     class="px-4 px-md-0 caption_txt fw-normal mb-1 pb-2 hidedesktop"
                     style="color: #ffffff;">{{ section.settings.mobilesubtitle }}</p>
                   <a
@@ -92,13 +95,16 @@
                     class="btn btn-white mt-3 px-10">{{ section.settings.btn_text }}</a>
                   <div class="review-ctr-mbl">
                     <div class="ds-flx">
-                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
-                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
-                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
-                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
-                    <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
+                      <div class="review__stars">
+                        {% for i in (1..5) %}
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                          </svg>
+                        {% endfor %}
+                      </div>
                     </div>
                     <p class="rev-txt-mbl">&nbsp; &nbsp;Trusted by 300K+ Customers</p>
+                    <p class="rev-txt-mbl rev-txt--test"><span class="animated-number">300K+</span> Glowing Customers</p>
                   </div>
                 </div>
               </div>
@@ -166,6 +172,47 @@
 
 {{ 'global-image-hero.css' | asset_url | stylesheet_tag }}
 {{ 'global-video-with-text.css' | asset_url | stylesheet_tag }}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const start = 220000;
+      const end = 300000;
+      const duration = 6000; // duration in milliseconds
+
+      const animatedNumber = document.querySelectorAll('.animated-number');
+      const startTime = performance.now();
+
+      animatedNumber.forEach(number => {
+        number.style.width = "80px";
+        number.style.display = "inline-block";
+      });
+
+      const animate = () => {
+          const currentTime = performance.now();
+          const elapsedTime = currentTime - startTime;
+          const progress = Math.min(elapsedTime / duration, 1);
+          const currentNumber = Math.floor(progress * (end - start) + start);
+
+          animatedNumber.forEach(number => {
+            number.textContent = currentNumber.toLocaleString();
+          });
+
+          if (progress < 1) {
+              requestAnimationFrame(animate);
+          } else {
+            animatedNumber.forEach(number => {
+              number.textContent = "300K+";
+              number.style.width = "auto";
+              number.style.display = "content";  
+            });
+          }
+      };
+
+      requestAnimationFrame(animate);
+  });
+</script>
+
+
 
 {% schema %}
   {
@@ -236,3 +283,4 @@
     ]
   }
 {% endschema %}
+

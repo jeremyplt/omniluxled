@@ -76,8 +76,6 @@
 
     gtag('config', 'AW-620800940', {'allow_enhanced_conversions': true});
   </script>
-    
-  <script src="https://tracking.upfluence.co/js/v1/init-249fbd7f-ec24-4799-a7fa-22d273cda0c0.js"></script>
 
   <!-- Begin BlackCrow Script Tag: DO NOT MODIFY! -->
     <script type="text/javascript" async src="https://shopify-init.blackcrow.ai/js/core/getomnilux.js?shopify_app_version=1.0.243&shop=getomnilux.myshopify.com"></script>
@@ -194,7 +192,7 @@
     {% comment %} {% include 'dp-config' %} {% endcomment %}
 </head>
 
-  <body class="{% if template == 'page.signup' %}signup-page{% endif %} template-{{ template.name }} {{ page.handle }} {{ collection.handle }} {{ product.handle }} {% if product.tags contains 'men_product' %}product-men{% endif %} ab-test-cartdrawer ab-faq" data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}">
+  <body class="{% if template == 'page.signup' %}signup-page{% endif %} template-{{ template.name }}{% if template.name == 'page' %} {{ page.template_suffix | handleize | prepend: 'page-' }}{% endif %} {{ page.handle }} {{ collection.handle }} {{ product.handle }} {% if product.tags contains 'men_product' %}product-men{% endif %} ab-test-cartdrawer ab-faq" data-money-format="{{ shop.money_format }}" data-shop-url="{{ shop.url }}">
 
     {% comment %}{% if template.name == "login" %}
       <script>
@@ -597,6 +595,22 @@
         })
       }
     })
+
+    window.addEventListener('skio::update-selling-plan', function(e) { 
+      console.log(e) 
+      e.preventDefault();
+      if (e.detail.sellingPlan) {
+          document.querySelectorAll(".subscription-info").forEach(sub => {
+            sub.classList.add("show")
+          })
+          document.querySelector(".saletext").style.display = "block"
+      } else {
+        document.querySelectorAll(".subscription-info").forEach(sub => {
+          sub.classList.remove("show")
+        })
+        document.querySelector(".saletext").style.display = "none"
+      }
+    })    
 
     {% if localization.country == "France" and product.metafields.unavailable.france == true %}
       document.addEventListener("DOMContentLoaded", () => {

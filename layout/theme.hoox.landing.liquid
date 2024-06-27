@@ -563,3 +563,16 @@
     });
     });
   </script>
+
+  <script>
+    window.addEventListener('skio::update-selling-plan', function(e) { 
+      console.log(e.target) 
+      let closestParent = e.target.closest(".hoox-js-shop-logic")
+      if (!closestParent) closestParent = e.target.closest(".hoox-shop__informations")
+      if (e.detail.sellingPlan) {
+        closestParent.querySelector(".saletext").style.display = "block"
+      } else {
+        closestParent.querySelector(".saletext").style.display = "none"
+      }
+    })
+  </script>

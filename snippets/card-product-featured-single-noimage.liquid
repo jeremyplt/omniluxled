@@ -89,10 +89,13 @@
  <div class="card-footer bg-transparent border-0 p-0">
    render 'form-product-grid-3', product: product, current_variant: current_variant 
   </div>-->
-<a href="https://omniluxled.com/products/omnilux-clear" class="btn btn-primary" alt="Shop & Save!">Shop & Save!</a>
-<div class="saletext small">
-  $45 USD off 1 device: BDAY1, $110 USD off 2 devices: BDAY2, $175 USD off 3 devices: BDAY3
-</div>
+
+    {%- if page.handle == 'anti-acne' %}
+      <a alt="SHOP & SAVE $50" href="https://omniluxled.com/products/omnilux-clear" class="btn btn-primary">SHOP & SAVE $50</a>
+      <div class="saletext">$50 USD off Omnilux Clear: CLEAR</div>
+    {%- else -%}
+      <a alt="TRANSFORM MY SKIN" href="https://omniluxled.com/products/omnilux-clear" class="btn btn-primary">TRANSFORM MY SKIN</a>
+    {%- endif -%}
 
  {%- if section.settings.small_txt != blank -%}            
 <span style="display:block;margin-top:1rem;">{{ section.settings.small_txt }}</span>

@@ -49,13 +49,9 @@
   assign shop_gallery_bagde = section.settings.shop_gallery_bagde
 
   assign videoURL = section.settings.shop_product_video_src
-  assign subscription-info-text = section.settings.subscription-info-text
 
+    assign subscription-info-text = section.settings.subscription-info-text
   
-  assign is_birthday_sale_product = false
-  if shopProduct.tags contains 'birthday-sale'
-    assign is_birthday_sale_product = true
-  endif
 %}
 
 {% if section.settings.shop_product != blank %}
@@ -200,12 +196,6 @@
              format: 'product-page' %}
 
             {% render 'hoox-afterpay-text', product: shopProduct %}
-
-            {%- if is_birthday_sale_product -%}
-              <div class="saletext small text-center">
-                $45 USD off 1 device: BDAY1, $110 USD off 2 devices: BDAY2, $175 USD off 3 devices: BDAY3
-              </div>              
-            {%- endif -%}
           </div>
 
           {% if shopProduct.metafields.custom.us_preorder and localization.country == 'United States' %}

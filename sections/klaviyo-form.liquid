@@ -50,10 +50,6 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-  .klaviyo-form--code .klaviyo-form [data-testid="form-component"] p {
-    color: #fff !important;
-    text-align: center !important;
-  }
   .klaviyo-form--code .klaviyo-form [data-testid="form-component"] input {
     text-transform: uppercase !important;
     text-align: center !important;
@@ -83,18 +79,31 @@
       font-size: 8px !important;
       line-height: 1.2em !important;
     }
+
     .template-page.mothers-day-early-access-signup .klaviyo-form--code{
-                  bottom: -29%;
+        bottom: -29%;
         top: unset;
     }
-.template-page.spring-sale-early-access-signup .klaviyo-form--code{ bottom: -27%; top: unset;}
-.template-page.mothers-day-sale-early-access-signup-social .klaviyo-form--code{ bottom: -21.5%; top: unset;}
-.template-page.mothers-day-sale-early-access-signup-social .klaviyo-form--code .needsclick{padding: 2px 0!important;}
+
+    .template-page.spring-sale-early-access-signup .klaviyo-form--code{ bottom: -27%; top: unset;}
+    .template-page.mothers-day-sale-early-access-signup-social .klaviyo-form--code{ bottom: -21.5%; top: unset;}
   }
 
-  @media (min-width: 768px) {
-    .klaviyo-form {
-      padding-left: calc( 16px + 10px ) !important;
+  @media (max-width: 1120px) {
+    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] {
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+    }
+    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] div:has(> input[type="tel"]) {
+      height: 40px !important;
+    }
+    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] button[type="button"],
+    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] input {
+      height: 40px !important;
+    }
+    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] p {
+      font-size: 7px !important;
+      line-height: 1.1em !important;
     }
   }
 
@@ -114,21 +123,6 @@
     }
     .klaviyo-form--code .klaviyo-form > div {
       justify-content: flex-end !important;
-    }
-    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] {
-      padding-top: 5px !important;
-      padding-bottom: 5px !important;
-    }
-    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] div:has(> input[type="tel"]) {
-      height: 40px !important;
-    }
-    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] button[type="button"],
-    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] input {
-      height: 40px !important;
-    }
-    .klaviyo-form--code .klaviyo-form [data-testid="form-component"] p {
-      font-size: 7px !important;
-      line-height: 1.1em !important;
     }
   }
   @media (max-width: 550px) {
@@ -215,6 +209,44 @@
       }
     }
   {% endif %}
+
+  .template-page.page-early-access-signup .klaviyo-form--code,
+  .template-page.page-early-access-signup-social .klaviyo-form--code {
+    top: 43vw;
+    bottom: auto;
+  }
+
+  .template-page.page-early-access-signup .klaviyo-form--code .klaviyo-form > div,
+  .template-page.page-early-access-signup-social .klaviyo-form--code .klaviyo-form > div {
+    min-height: 0 !important;
+  }
+
+  @media (min-width: 767px) {
+    .template-page.page-early-access-signup .klaviyo-form--code {
+      top: auto;
+      bottom: 0;
+    }
+
+    .template-page.page-early-access-signup-social .klaviyo-form--code {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .template-page.page-early-access-signup .klaviyo-form--code {
+      top: 26vw;
+      bottom: auto;
+    }
+
+  }
+
+  @media (min-width: 1200px) {
+    .template-page.page-early-access-signup-social .klaviyo-form--code {
+      top: 24vw;
+      bottom: auto;
+    }
+  }
 </style>
 
 {% schema %}
