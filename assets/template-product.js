@@ -62,28 +62,38 @@ const selectors = {
 
 typeof TemplateProductJS !== 'undefined' && new TemplateProductJS();
 
-const box = document.querySelector('.product-add-cart');
-var stickyBtn = document.querySelector('[data-stickyBtn]');
-document.addEventListener('scroll', function () {
-  if (isInViewport(box)) {
-    if(stickyBtn.classList.contains('d-block')){
-      stickyBtn.classList.remove('d-block');
-    }
-    stickyBtn.classList.add('d-none');
-    document.body.classList.remove('sticky-bar-visible');
+let box = document.querySelector('.product-add-cart');
+if ( !box ) {
+  box = document.querySelector('.btn-notify-me');
+}
 
-  } else {
-    if(stickyBtn.classList.contains('d-none')){
-      stickyBtn.classList.remove('d-none');
+if (box) {
+  var stickyBtn = document.querySelector('[data-stickyBtn]');
+  document.addEventListener('scroll', function () {
+    if (isInViewport(box)) {
+      if(stickyBtn.classList.contains('d-block')){
+        stickyBtn.classList.remove('d-block');
+      }
+      stickyBtn.classList.add('d-none');
+      document.body.classList.remove('sticky-bar-visible');
+
+    } else {
+      if(stickyBtn.classList.contains('d-none')){
+        stickyBtn.classList.remove('d-none');
+      }
+      stickyBtn.classList.add('d-block');
+      document.body.classList.add('sticky-bar-visible');
     }
-    stickyBtn.classList.add('d-block');
-    document.body.classList.add('sticky-bar-visible');
-  }
-}, {
-  passive: true
-});
+  }, {
+    passive: true
+  });
+}
 
 function isInViewport(el) {
+  if (!el) {
+    return false;
+  }
+  
   const rect = el.getBoundingClientRect();
   return (
       rect.top >= 0 &&

@@ -32,7 +32,7 @@
 .image-hero .container-fluid .tallheight .swiper-slide {
   transition: 0.3s;
   overflow: hidden;
-  min-height: 500px !important;
+  min-height: 580px !important;
 }
 
 .image-hero .media-wrap img,
@@ -131,10 +131,10 @@
   }
 }
 
-@media(max-width:992px){
+@media (max-width:992px) {
   .image-hero.withreviews .container-fluid{
     padding-top: 0;
-}
+  }
 
   .anti-acne .image-hero .media-wrap{object-position: 80% 0!important;}
 }

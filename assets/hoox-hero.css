@@ -143,13 +143,13 @@
     .hoox-hero__wrapper {
         flex-direction: row;
         padding: 0;
-        height: 655px;
+        height: 566px;
         position: relative;
         background: linear-gradient(182deg, rgba(254, 253, 249, 0.80) 2.42%, rgba(254, 253, 249, 0.00) 46.58%), linear-gradient(96deg, #F7DAC6 4.81%, #F9ECD9 55.75%);
     }
 
     .template-page.eye-brightener .hoox-hero__wrapper, .template-page.led-essentials .hoox-hero__wrapper { height:670px; }
-.template-page.blemish-eraser .hoox-hero__wrapper,.template-page.minis .hoox-hero__wrapper{height:645px;}
+    .template-page.blemish-eraser .hoox-hero__wrapper, .template-page.minis .hoox-hero__wrapper{height:645px;}
 
     .hoox-hero__content {
         flex: 1;

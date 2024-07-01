@@ -20,15 +20,14 @@ html.no-js .no-js-hidden {
 }
 
 .saletext {
-  font-weight: bold;
-  text-align: center;
+  font-weight: 700;
   color: red;
+  margin-top: 8px;
 }
 
 .saletext.small {
-  font-size: 12px;
-  text-align: left;
-  margin-top: 7px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 a:empty,

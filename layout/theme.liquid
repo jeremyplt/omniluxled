@@ -596,6 +596,22 @@
       }
     })
 
+    window.addEventListener('skio::update-selling-plan', function(e) { 
+      console.log(e) 
+      e.preventDefault();
+      if (e.detail.sellingPlan) {
+          document.querySelectorAll(".subscription-info").forEach(sub => {
+            sub.classList.add("show")
+          })
+          document.querySelector(".saletext").style.display = "block"
+      } else {
+        document.querySelectorAll(".subscription-info").forEach(sub => {
+          sub.classList.remove("show")
+        })
+        document.querySelector(".saletext").style.display = "none"
+      }
+    })    
+
     {% if localization.country == "France" and product.metafields.unavailable.france == true %}
       document.addEventListener("DOMContentLoaded", () => {
         waitForElement(".cbb-frequently-bought-add-button", 5000).then(() => {

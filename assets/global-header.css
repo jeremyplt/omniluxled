@@ -91,7 +91,6 @@ body:not(.opened-menu-drawer) #shopify-section-header:not(.shopify-section-heade
     letter-spacing: 0.06em;
     white-space: nowrap;
 }
-
 @media (min-width: 992px) {
     .navbar-expand-xl {
         -ms-flex-wrap: nowrap;
@@ -114,7 +113,7 @@ body:not(.opened-menu-drawer) #shopify-section-header:not(.shopify-section-heade
             flex-basis: auto;
     }
     .navbar-main .navbar-nav > .nav-item > .nav-link {
-        padding: 31px 21px;
+        padding: 31px 25px;
     }
     .navbar-main .navbar-nav.navbar-icon-links .nav-item .nav-link{
         padding: 26px 12px;
@@ -264,8 +263,8 @@ body:not(.opened-menu-drawer) #shopify-section-header:not(.shopify-section-heade
 }
 
 @media(max-width:600px){
-   .topbar{padding-top:5px;padding-bottom:5px;}
- .anti-aging #shopify-section-header, .anti-acne #shopify-section-header, .men #shopify-section-header{
+    .topbar {padding-top:5px;padding-bottom:5px;}
+    .anti-aging #shopify-section-header, .anti-acne #shopify-section-header, .men #shopify-section-header{
     position: sticky!important;}
-  .template-collection.anti-aging #MainContent, .template-collection.anti-acne #MainContent{top:0!important;}
+    .template-collection.anti-aging #MainContent, .template-collection.anti-acne #MainContent{top:0!important;}
 }

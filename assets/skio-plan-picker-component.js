@@ -630,6 +630,16 @@ export class SkioPlanPickerComponent extends LitElement {
                   )
                 )}</span
               >
+              <span skio-compare-at-price class="concept--two"
+                >${this.selectedVariant.compare_at_price
+                  ? this.moneyFormatter.format(
+                      calculatePriceWithTaxes(
+                        this.selectedVariant.compare_at_price / 100,
+                        window.customerCountry
+                      )
+                    )
+                  : ""}
+              </span>
             </div>
           </div>
         </label>
@@ -731,13 +741,20 @@ export class SkioPlanPickerComponent extends LitElement {
                             )}
                           </span>
                           <span skio-compare-at-price class="concept--two"
-                            >${this.moneyFormatter.format(
-                              calculatePriceWithTaxes(
-                                this.selectedVariant.price / 100,
-                                window.customerCountry
-                              )
-                            )}</span
-                          >
+                            >${this.selectedVariant.compare_at_price
+                              ? this.moneyFormatter.format(
+                                  calculatePriceWithTaxes(
+                                    this.selectedVariant.compare_at_price / 100,
+                                    window.customerCountry
+                                  )
+                                )
+                              : this.moneyFormatter.format(
+                                  calculatePriceWithTaxes(
+                                    this.selectedVariant.price / 100,
+                                    window.customerCountry
+                                  )
+                                )}
+                          </span>
                         </div>
                         ${this.miniProducts.includes(this.product.title)
                           ? html`
@@ -1085,6 +1102,7 @@ export class SkioPlanPickerComponent extends LitElement {
 
     if (changed.has("selectedVariant") && this.selectedVariant) {
       //update availableSellingPlanGroups based on skioSellingPlanGroups and selectedVariant.id
+      console.log("this.selectedVariant", this.selectedVariant);
       let skioSellingPlanGroups = JSON.parse(
         JSON.stringify(this.skioSellingPlanGroups)
       );

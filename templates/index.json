@@ -3,7 +3,7 @@
     "fb5ecb5e-55ca-4dd5-a283-3b9b227357b3": {
       "type": "image_hero_3_shortheight",
       "custom_css": [
-        ".image-hero.withreviews .container-fluid {padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important;}",
+        ".image-hero.withreviews .container-fluid {padding-bottom: 0;}",
         ".overlay {opacity: 0.2 !important;}",
         "h2 {color: #fff !important;}",
         "@media (min-width: 750px) {.image-hero-desktop.tallheight .col-xl-4.col-lg-6.col-md-6.col-12.pe-0.ps-0 {width: 50%; }}",
@@ -11,12 +11,12 @@
         "@media (max-width: 600px) {.image-hero-desktop h2 {font-size: 30px !important; letter-spacing: unset !important; }}"
       ],
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/Save_up_to_100_3.png",
-        "image_mobile": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-28T075217.791.png",
-        "title": "#1 Dermatologist  Recommended LED Brand",
-        "subtitle": "Clinically proven LED devices boost collagen production & soothe skin in just 10 mins.",
-        "mobilesubtitle": "Clinically proven LED devices boost collagen production & soothe skin in just 10 mins.",
-        "btn_text": "TRANSFORM YOUR SKIN",
+        "image_desktop": "shopify:\/\/shop_images\/Web_skincare_awareness.png",
+        "image_mobile": "shopify:\/\/shop_images\/Mobile_skincare_awareness.png",
+        "title": "Our Acne Sale is Here!",
+        "subtitle": "$50 off Omnilux Clear: code CLEAR<br>15% off Mini Blemish Eraser",
+        "mobilesubtitle": "$50 off Omnilux Clear: code CLEAR<br>15% off Mini Blemish Eraser",
+        "btn_text": "CLEAR MY SKIN & SAVE!",
         "btn_link": "https:\/\/omniluxled.com\/collections\/all",
         "content_position": "2",
         "custom_class": ""
@@ -32,8 +32,8 @@
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/Untitled_design_115_471db1ca-9374-4f7f-b1dc-851300332e2f.png",
         "image_mobile": "shopify:\/\/shop_images\/Untitled_design_43_copy_2_1_59734e6b-9d64-4e3e-b61b-13dda714ea96.png",
-        "title": "NEW!<br> Omnilux Mini",
-        "subtitle": "Full strength LED devices sized <br>down for ultra-targeted treatments.",
+        "title": "NEW! Omnilux Mini",
+        "subtitle": "Full strength LED devices sized down for ultra-targeted treatments.",
         "btn_text": "Shop Now",
         "btn_link": "shopify:\/\/collections\/minis",
         "content_position": "2",
