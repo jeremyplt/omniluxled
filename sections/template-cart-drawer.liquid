@@ -51,6 +51,11 @@
                 <div class="cart-body">
                   {%- for item in cart.items -%}
 
+                    {% assign disabled_edit = false %}
+                    {% if item.properties['free_product'] == 'true' or item.properties['free_gift'] == 'true' %}
+                      {% assign disabled_edit = true %}
+                    {% endif %}
+
                     {%- liquid
                       assign currentVar = item.product.first_available_variant
                       for var in item.product.variants
@@ -127,17 +132,20 @@
                                 {%- if section.settings.show_vendor -%}
                                   <p class="font-size-sm mb-0 text-uppercase fw-normal">{{ item.product.vendor }}</p>
                                 {%- endif -%}
-                                <a
-                                  {% if item.properties['free_product'] == 'true' or item.properties['free_gift'] == 'true' %}
-                                  type="button"
-                                  {% else %}
-                                  href="{{ item.url }}"
-                                  {% endif %}
-                                  style="line-height: 1.1875;"
-                                  class="card-title fw-semibold">
-                                  {{ item.product.title | escape }}
-                                </a>
-
+                                {% if disabled_edit %}
+                                  <span
+                                    style="line-height: 1.1875;"
+                                    class="card-title fw-semibold">
+                                    {{ item.product.title | escape }}
+                                  </span>
+                                {% else %}
+                                  <a
+                                    href="{{ item.url }}"
+                                    style="line-height: 1.1875;"
+                                    class="card-title fw-semibold">
+                                    {{ item.product.title | escape }}
+                                  </a>
+                                {% endif %}
                                 {% if display_pre_order_tag and item.product.metafields.pre_order.date_step_2 != blank %}
                                   <div class="cart-item__next-shipment">
                                     Est. Shipping: {% render 'formatted-date', date: item.product.metafields.pre_order.date_step_2, display_year: true %}
@@ -200,59 +208,57 @@
                                         data-qty-input
                                         class="quantity form-control text-center">
                                     {% else %}
-                                      {% assign disabled_edit = false %}
-                                      {% if item.properties['free_product'] == 'true' or item.properties['free_gift'] == 'true' %}
-                                        {% assign disabled_edit = true %}
-                                      {% endif %}
-                                      <div class="quantity-wrapper mx-auto" data-qty-container>
-                                        <label for="{{ 'templates.cart.quantity.label' | t }}" title="{{ 'templates.cart.quantity.label' | t }}">{{ 'templates.cart.quantity.label' | t }}</label>
-                                        <div class="input-group input-group-sm">
-                                          <div class="input-group-prepend">
-                                            <span
-                                              class="input-group-text h-100 cursor-pointer {% if disabled_edit %} disabled{% endif %}"
-                                              rel="nofollow"
-                                              aria-label="{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}"
-                                              title="{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}"
-                                              data-for="decrease"
-                                              data-qty-btn>
-                                              <span class="btn-decrease d-flex h-100 align-items-center">
-                                                <span class="ox-minus"></span>
+                                      {% unless disabled_edit %}
+                                        <div class="quantity-wrapper mx-auto" data-qty-container>
+                                          <label for="{{ 'templates.cart.quantity.label' | t }}" title="{{ 'templates.cart.quantity.label' | t }}">{{ 'templates.cart.quantity.label' | t }}</label>
+                                          <div class="input-group input-group-sm">
+                                            <div class="input-group-prepend">
+                                              <span
+                                                class="input-group-text h-100 cursor-pointer {% if disabled_edit %} disabled{% endif %}"
+                                                rel="nofollow"
+                                                aria-label="{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}"
+                                                title="{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}"
+                                                data-for="decrease"
+                                                data-qty-btn>
+                                                <span class="btn-decrease d-flex h-100 align-items-center">
+                                                  <span class="ox-minus"></span>
+                                                </span>
+                                                <span class="visually-hidden">{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}</span>
                                               </span>
-                                              <span class="visually-hidden">{{ 'templates.cart.quantity.decrease' | t: product: item.title | escape }}</span>
-                                            </span>
-                                          </div>
-                                          <input
-                                            type="number"
-                                            name="updates[]"
-                                            id="updates_{{ item.key }}"
-                                            aria-label="{{ 'templates.cart.quantity.input_label' | t: product: item.title | escape }}"
-                                            value="{{ item.quantity }}"
-                                            step="1"
-                                            min="1"
-                                            inputmode="numeric"
-                                            data-qty-input
-                                            data-index="{{ item.key }}"
-                                            class="quantity form-control text-center py-2 {% if disabled_edit %} text-gray-300{% endif %}"
-                                            {% if disabled_edit %}
-                                            readonly{% endif %}
-                                            data-qty-input-cart-update>
-                                          <div class="input-group-append">
-                                            <span
-                                              class="input-group-text h-100 cursor-pointer {% if varStatus == 'modify' or varStatus == 'locked' %}disabled{% endif %} {% if disabled_edit %} disabled{% endif %}"
-                                              rel="nofollow"
-                                              aria-label="{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}"
-                                              title="{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}"
-                                              data-for="increase"
-                                              data-qty-btn>
-                                              <span class="btn-increase d-flex h-100 align-items-center">
-                                                <span class="ox-plus"></span>
+                                            </div>
+                                            <input
+                                              type="number"
+                                              name="updates[]"
+                                              id="updates_{{ item.key }}"
+                                              aria-label="{{ 'templates.cart.quantity.input_label' | t: product: item.title | escape }}"
+                                              value="{{ item.quantity }}"
+                                              step="1"
+                                              min="1"
+                                              inputmode="numeric"
+                                              data-qty-input
+                                              data-index="{{ item.key }}"
+                                              class="quantity form-control text-center py-2 {% if disabled_edit %} text-gray-300{% endif %}"
+                                              {% if disabled_edit %}
+                                              readonly{% endif %}
+                                              data-qty-input-cart-update>
+                                            <div class="input-group-append">
+                                              <span
+                                                class="input-group-text h-100 cursor-pointer {% if varStatus == 'modify' or varStatus == 'locked' %}disabled{% endif %} {% if disabled_edit %} disabled{% endif %}"
+                                                rel="nofollow"
+                                                aria-label="{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}"
+                                                title="{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}"
+                                                data-for="increase"
+                                                data-qty-btn>
+                                                <span class="btn-increase d-flex h-100 align-items-center">
+                                                  <span class="ox-plus"></span>
+                                                </span>
+                                                <span class="visually-hidden">{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}</span>
                                               </span>
-                                              <span class="visually-hidden">{{ 'templates.cart.quantity.increase' | t: product: item.title | escape }}</span>
-                                            </span>
+                                            </div>
                                           </div>
                                         </div>
-                                      </div>
-                                      {% unless item.properties['free_product'] == 'true' %}
+                                      {% endunless %}
+                                      {% unless disabled_edit %}
                                         <span
                                           class="cart-item-close position-absolute top-0 font-size-xs end-0 me-3 cursor-pointer {% if item.properties['free_gift'] == 'true' %} free-gift-with-purchase{% endif %}"
                                           href="javascript:void(0);"
@@ -269,28 +275,11 @@
                                   </div>
                                 </div>
                                 <div class="text-end cart-total-price ps-3 fw-normal">
-                                  {% render 'price-with-taxes', product: item, is_cart: true %}
-                                  {% comment %} {% if item.variant.price < item.variant.compare_at_price %}
-                                    <span class="item__compare-at-price">
-                                      {{ item.variant.compare_at_price | times: item.quantity | money }}
-                                    </span>
+                                  {% if disabled_edit %}
+                                    <span style="font-weight: bold;">FREE</span>
+                                  {% else %}
+                                    {% render 'price-with-taxes', product: item, is_cart: true %}
                                   {% endif %}
-                                  <span
-                                    {% if item.variant.price < item.variant.compare_at_price %}
-                                    class="item__price--sale"
-                                    {% endif %}>
-                                    {% if item.properties['promo_product'] or item.line_price == 0 %}
-                                      <span class="m-0 p-0">{{ 'templates.cart.free' | t }}</span>
-                                    {% else %}
-                                      <div class="item-price price m-0 p-0" data-currentPrice data-variant-price="{{ item.line_price }}">
-                                        {% if item.properties['free_gift'] == 'true' %}
-                                          Free
-                                        {% else %}
-                                          <span>{{ item.line_price | money }}</span>
-                                        {% endif %}
-                                      </div>
-                                    {% endif %}
-                                  </span> {% endcomment %}
                                 </div> 
                               </div>
                             </div>

@@ -4,49 +4,54 @@
   class="card card-product card-product-style-1 text-start rounded-0 border-0 test66"
   data-product-grid
   data-prod-id="{{product.id}}">
-  <span class="badges">
   {% assign benefitpills = product.metafields.custom.benefitpills %}
-<div class="badgepills">{{ benefitpills }}</div>
-    {%- liquid
-      assign onSale = false
-      assign soldOut = false
-
-      if current_variant and current_variant.compare_at_price > current_variant.price or product.compare_at_price > product.price
-        assign onSale = true
-      endif
-      if current_variant and current_variant.available == false or product.available == false
-        assign soldOut = true
-      endif
-
-      assign productBadges = settings.custom_badges | newline_to_br | split: '<br />'
-    -%}
-    {%- for badge in productBadges -%}
-      {%- assign badgeData = badge | strip | split: ':' -%}
-      {%- assign badgeLabel = badgeData[1] | strip -%}
-      {%- if product.tags contains badgeData[0] -%}
-        <span class="badge badge-right badge-secondary">
-          {{ badgeLabel }}
-        </span>
-      {%- endif -%}
-    {%- endfor -%}
-    {%- if onSale -%}
-      <span class="badge badge-right badge-saddle-brown">
-        {{ 'products.product.on_sale' | t | escape }}
-      </span>
-    {%- endif -%}
-
-    {%- if soldOut -%}
-      <span class="badge badge-right badge-gainsboro text-black">
-        {{ 'products.product.sold_out' | t | escape }}
-      </span>
-    {%- endif -%}
-  </span>
   {% assign eligible_product = false %}
   {% for gift_collection in product.collections %}
     {% if gift_collection.handle == settings.gwp_collection and settings.gwp_enabled == true %}
       {% assign eligible_product = true %}
     {% endif %}
   {% endfor %}
+  
+  {% unless eligible_product %}
+    <span class="badges">
+    
+      <div class="badgepills">{{ benefitpills }}</div>
+      {%- liquid
+        assign onSale = false
+        assign soldOut = false
+  
+        if current_variant and current_variant.compare_at_price > current_variant.price or product.compare_at_price > product.price
+          assign onSale = true
+        endif
+        if current_variant and current_variant.available == false or product.available == false
+          assign soldOut = true
+        endif
+  
+        assign productBadges = settings.custom_badges | newline_to_br | split: '<br />'
+      -%}
+      {%- for badge in productBadges -%}
+        {%- assign badgeData = badge | strip | split: ':' -%}
+        {%- assign badgeLabel = badgeData[1] | strip -%}
+        {%- if product.tags contains badgeData[0] -%}
+          <span class="badge badge-right badge-secondary">
+            {{ badgeLabel }}
+          </span>
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if onSale -%}
+        <span class="badge badge-right badge-saddle-brown">
+          {{ 'products.product.on_sale' | t | escape }}
+        </span>
+      {%- endif -%}
+  
+      {%- if soldOut -%}
+        <span class="badge badge-right badge-gainsboro text-black">
+          {{ 'products.product.sold_out' | t | escape }}
+        </span>
+      {%- endif -%}
+    </span>
+  {% endunless %}
+
   {% if eligible_product %}
     <span class="badges free-gift-badge-sec">
       <span class="badge free-gift-badge text-white bg-black">
