@@ -245,6 +245,8 @@
     width: 100%;
     margin-top: .5rem;
     display: block;
+    background-color: black;
+    color: white;
     text-align: center;
     text-transform: uppercase;
     font-size: 14px !important;
@@ -312,12 +314,13 @@
   }
 
   .load-more {
-    background: transparent;
     margin: 2rem auto 0 auto;
     display: block;
-    border: none;
+    border: solid 1px black;
+    background-color: black;
+    color: white;
     text-transform: uppercase;
-    text-decoration: underline;
+    padding: .75rem 2rem;
   }
   
   .load-more-button:not(.current) {

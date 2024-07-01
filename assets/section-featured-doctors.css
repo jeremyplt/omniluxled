@@ -130,6 +130,7 @@
     width: 40px;
     min-width: 40px;
     border: solid 1px black;
+    background: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,6 +140,7 @@
 .featured-doctors__arrow svg {
     width: 18px;
     height: 18px;
+    color: white;
 }
 
 @media (min-width: 750px) {

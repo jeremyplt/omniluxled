@@ -155,8 +155,14 @@
     color: #000000;
 }
 
-.mega_menu_container:hover .price, .mega_menu_container .add-cart-form, .mega_menu_container:hover .price-with-taxes {
+.mega_menu_container .add-cart-form {
     display: none !important;
+}
+
+@media (min-width: 750px) {
+    .mega_menu_container:hover .price, .mega_menu_container:hover .price-with-taxes {
+        display: none !important;
+    }
 }
 
 .mega_menu_container:hover .add-cart-form{
