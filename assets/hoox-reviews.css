@@ -4,9 +4,7 @@
     border-bottom: 1px solid var(--hoox-color-black);
     background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 32.54%), linear-gradient(111deg, #F6D3BF 8.55%, #FBF5E2 96.45%);
 }
-.hoox-reviews__arrows {
-    padding-bottom: 40px;
-}
+
 .hoox-reviews__title {
     max-width: 303px;
     margin-bottom: 40px;
@@ -86,6 +84,10 @@
 
 
 @media (min-width: 1024px) {
+    h2 {
+        user-select: none;
+    }
+    
     .hoox-reviews {
         padding: 80px 0 0;
         min-height: 1042px;
@@ -104,7 +106,7 @@
     }
 
     .hoox-reviews__item {
-        min-height: 730px;
+        height: 100%;
         padding: 40px 32px;
         background: transparent;
         border: unset;
@@ -116,15 +118,19 @@
         padding: 0;
     }
 
-    .hoox-reviews__slider-reviews {
-        max-width: 1200px;
-        margin: 0 auto;
+    .hoox-reviews__slider-container {
+        border-top: 1px solid var(--hoox-color-black);
+        border-bottom: 1px solid var(--hoox-color-black);        
     }
 
-    .hoox-reviews__wrapper {
-        border-top: 1px solid var(--hoox-color-black);
-        border-bottom: 1px solid var(--hoox-color-black);
-        max-height: 730px;
+    .hoox-reviews__slider-reviews {
+        max-width: 1200px;
+    }
+
+    .hoox-reviews .swiper-slide {
+        cursor: grab;
+        height: auto;
+        user-select: none;
     }
 
     .hoox-reviews .swiper-slide-active .hoox-reviews__item {

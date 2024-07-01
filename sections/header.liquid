@@ -15,7 +15,8 @@
             </div>
         </div>
       </a>
-      {% unless topbar_text2 == empty %}
+      
+      {% unless section.settings.topbar_text2 == empty %}
       <a id="slide2" class="d-nne slidex" href="{{ section.settings.page_url2.url }}">
         <div class="topbar d-flex align-items-center" data-top-bar style="background-color: {{ section.settings.topbar_bg_color }}; min-height: {{ section.settings.topbar_height }}px;">
             <div class="container">
@@ -29,7 +30,7 @@
       </a>
       {% endunless %}
 
-      {% if topbar_text3 %}
+      {% if section.settings.topbar_text3 != '' %}
       <a id="slide3" class="d-nne slidex" href="{{ section.settings.page_url3.url }}">
         <div class="topbar d-flex align-items-center" data-top-bar style="background-color: {{ section.settings.topbar_bg_color }}; min-height: {{ section.settings.topbar_height }}px;">
             <div class="container">
@@ -43,7 +44,7 @@
       </a>
       {% endif %}
       
-      {% if topbar_text4 %}
+      {% if section.settings.topbar_text4 != '' %}
       <a id="slide4" class="d-nne slidex" href="{{ section.settings.page_url4.url }}">
         <div class="topbar d-flex align-items-center" data-top-bar style="background-color: {{ section.settings.topbar_bg_color }}; min-height: {{ section.settings.topbar_height }}px;">
             <div class="container">
@@ -56,7 +57,7 @@
         </div>
       </a>
       {% endif %}
-      {% if topbar_text5 %}
+      {% if section.settings.topbar_text5 != '' %}
       <a id="slide5" class="d-nne slidex" href="{{ section.settings.page_url5.url }}">
         <div class="topbar d-flex align-items-center" data-top-bar style="background-color: {{ section.settings.topbar_bg_color }}; min-height: {{ section.settings.topbar_height }}px;">
             <div class="container">

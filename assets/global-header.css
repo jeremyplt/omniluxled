@@ -11,27 +11,12 @@
     position: sticky;
     top: 0;
 }
-.template-index #shopify-section-header,
-.anti-aging-old #shopify-section-header,
-.anti-acne-old #shopify-section-header
-{
-    position: fixed !important;
-    width: 100%;
-}
 
-/*remove this when new men's page goes live*/
-.men #shopify-section-header{
-    /* position: fixed !important; */
-    /* width: 100%; */
-}
-/*end section to remove*/
-
-.site-header
-{
+.site-header {
     transition: all 0.5s;
 }
-body:not(.opened-menu-drawer) #shopify-section-header:not(.shopify-section-header-sticky):not(:hover) .site-header
-{
+
+body:not(.opened-menu-drawer) #shopify-section-header:not(.shopify-section-header-sticky):not(:hover) .site-header {
     background-color: transparent !important;
 }
 
@@ -104,11 +89,9 @@ body:not(.opened-menu-drawer) #shopify-section-header:not(.shopify-section-heade
     position: relative;
     line-height: 1.285714285714286;
     letter-spacing: 0.06em;
+    white-space: nowrap;
 }
-.main-menu-link > li + li
-{
-    margin-left: 18px;
-}
+
 @media (min-width: 992px) {
     .navbar-expand-xl {
         -ms-flex-wrap: nowrap;
@@ -131,7 +114,7 @@ body:not(.opened-menu-drawer) #shopify-section-header:not(.shopify-section-heade
             flex-basis: auto;
     }
     .navbar-main .navbar-nav > .nav-item > .nav-link {
-        padding: 31px 16px;
+        padding: 31px 21px;
     }
     .navbar-main .navbar-nav.navbar-icon-links .nav-item .nav-link{
         padding: 26px 12px;
@@ -285,5 +268,4 @@ body:not(.opened-menu-drawer) #shopify-section-header:not(.shopify-section-heade
  .anti-aging #shopify-section-header, .anti-acne #shopify-section-header, .men #shopify-section-header{
     position: sticky!important;}
   .template-collection.anti-aging #MainContent, .template-collection.anti-acne #MainContent{top:0!important;}
-.template-index .image-hero.withreviews .container-fluid{margin-top:20px;}
 }

@@ -48,7 +48,13 @@
     <div class="reviews-tabs__body current" data-reviews="video">
         <div class="reviews-tabs__navigation container">
             {% for object in page.metafields.custom.reviews.value %}
-                <div class="reviews-tabs__navigation-item{% if forloop.first %} current{% endif %}" data-product="{{ object.product.value.title | handleize }}">{{ object.product.value.title }}</div>
+                <div class="reviews-tabs__navigation-item{% if forloop.first %} current{% endif %}" data-product="{{ object.product.value.title | handleize }}">
+                  {% if object.product.value.title contains "Contour" %}
+                    {{ object.product.value.title | remove: "Omnilux" }}
+                  {% else %}
+                    {{ object.product.value.title }} 
+                  {% endif %}
+                </div>
             {% endfor %}
         </div>
         {% for object in page.metafields.custom.reviews.value %}
@@ -69,7 +75,7 @@
                         </div>
                     {% endif %}
                     <div class="reviews-tabs__item{% if forloop.index >= 12 %} hidden{% elsif forloop.index == 11 %} hidden--mobile{% endif %}">
-                        <div class="reviews-tabs__poster" data-video-src="{{ review.video.value.sources[1].url }}">
+                        <div class="reviews-tabs__poster" data-video-src="{% if review.video.value.sources[1].url != blank %}{{ review.video.value.sources[1].url }}{% else %}{{ review.video.value.sources[0].url }}{% endif %}">
                             <div class="image">
                                 {% if review.poster != blank %}
                                     {{ review.poster | image_url: width: 600 | image_tag: alt: review.poster.alt }}
@@ -118,7 +124,7 @@
     <div class="reviews-tabs__body" data-reviews="written">
         <div class="reviews-tabs__okendo">
           {% if product != blank %} 
-              {% capture product_data_attribute %}data-oke-reviews-product-id="shopify-{{ product.id }}"{% endcapture %} 
+              {% capture product_data_attribute %}data-oke-reviews-write-review-product-id="{{ product.id }}"{% endcapture %} 
           {% endif %} 
           {% if shop.metafields.okendo.WidgetPreRenderBodyStyleTags != blank %}
           {{- shop.metafields.okendo.WidgetPreRenderBodyStyleTags }}

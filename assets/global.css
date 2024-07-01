@@ -19,6 +19,18 @@ html.no-js .no-js-hidden {
   display: none !important;
 }
 
+.saletext {
+  font-weight: bold;
+  text-align: center;
+  color: red;
+}
+
+.saletext.small {
+  font-size: 12px;
+  text-align: left;
+  margin-top: 7px;
+}
+
 a:empty,
 ul:empty,
 dl:empty,
