@@ -84,6 +84,10 @@ document.addEventListener('scroll', function () {
 });
 
 function isInViewport(el) {
+  if (!el) {
+    return false;
+  }
+  
   const rect = el.getBoundingClientRect();
   return (
       rect.top >= 0 &&
