@@ -2913,14 +2913,6 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
   font-size: 14px !important;
 }
 
-.test-swap-product .swap-product--original {
-  display: none !important;
-}
-
-html:not(.test-swap-product) .swap-product--test {
-  display: none !important;
-}
-
 @media (max-width: 749px) {
   .hidden--mobile {
     display: none;

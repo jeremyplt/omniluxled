@@ -12,7 +12,7 @@
         </div>
        
         <div class="drawer-body">
-        {%- if settings.enable_search -%}
+        {%- if settings.enable_search -%} 
         <search-modal class="header__search d-block position-static">
             <div class="searchform">
               <div class="search-modal modal__content bg-white" aria-label="{{ 'general.search.placeholder' | t }}">
@@ -115,20 +115,22 @@
                                                   <a class="card-body" href="{{ current_product.url | within: collection }}">
                                                     <div class="row">
                                                       <div class="col-12 mega_menu_image_container">
-                                                        {% assign eligible_product = false %}
-                                                        {% for gift_collection in current_product.collections %}
-                                                          {% if gift_collection.handle == settings.gwp_collection %}
-                                                            {% assign eligible_product = true %}
-                                                          {% endif %}
-                                                        {% endfor %}
-                                                        {% if eligible_product %}
-                                                          <span class="badges free-gift-badge-sec">
-                                                            <span class="badge free-gift-badge text-white bg-black">
-                                                              {{ settings.gwp_label }}
+                                                        {%- if settings.gwp_enabled -%}
+                                                          {% assign eligible_product = false %}
+                                                          {% for gift_collection in current_product.collections %}
+                                                            {% if gift_collection.handle == settings.gwp_collection %}
+                                                              {% assign eligible_product = true %}
+                                                            {% endif %}
+                                                          {% endfor %}
+                                                          {% if eligible_product %}
+                                                            <span class="badges free-gift-badge-sec"> 
+                                                              <span class="badge free-gift-badge text-white bg-black"> 
+                                                                {{ settings.gwp_label }}
+                                                              </span>
                                                             </span>
-                                                          </span>
-                                                        {% endif %}
-                                                          <img src="{{current_product.featured_image | image_url: width: 850 }}"/>    
+                                                          {% endif %}
+                                                        {%- endif -%}
+                                                        <img src="{{current_product.featured_image | image_url: width: 850 }}" />    
                                                       </div>
                                                       <div class="col-12">
                                                           <div class="card-title mx-0 mt-1 mb-0 font-family-base lh-1 fw-semibold order-1 order-lg-0">
@@ -174,7 +176,7 @@
                                                             </button>
                                                           {% endform %} {% endcomment %}
                                                           <ul class="mega_menu_ul">                                                            
-                                                          <ul>
+                                                          </ul>
                                                       </div>
                                                     </div>
                                                   </a>
@@ -223,6 +225,7 @@
                                             </div>
                                             <a class="btn-link" style="line-height:1.1875;" href="{{ megaMenuBlock.story_link }}">{{ megaMenuBlock.story_link_text }}</a>
                                         </div>
+                                    </div>
                                 {% endif %}
                             </div>
                             
