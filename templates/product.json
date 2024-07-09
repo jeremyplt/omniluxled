@@ -123,54 +123,6 @@
         "ignore": true
       }
     },
-    "d84aa67d-fef0-442d-8364-790f28934d4d": {
-      "type": "circle-video-menu",
-      "blocks": {
-        "6ce22c15-9550-44cf-b290-22e0d69efb10": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-07_at_2.21.22_PM.jpg",
-            "label": "Ariana's Story",
-            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Ariana's Story.mp4"
-          }
-        },
-        "f5ead3a0-d024-4492-80ff-131f79ca714d": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-19_at_9.40.29_PM.jpg",
-            "label": "Jess's Story",
-            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Jess' Story.mp4"
-          }
-        },
-        "90ccee30-cb0b-4eff-b493-24753f4bc1fd": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-07_at_2.26.19_PM.jpg",
-            "label": "Sophie's Story",
-            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Sophie's Story.mp4"
-          }
-        },
-        "f6c1532d-2a8e-4c7d-901d-cf816d9d28f9": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/alana.jpg",
-            "label": "Alana's Story",
-            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Alana's Story.mp4"
-          }
-        }
-      },
-      "block_order": [
-        "6ce22c15-9550-44cf-b290-22e0d69efb10",
-        "f5ead3a0-d024-4492-80ff-131f79ca714d",
-        "90ccee30-cb0b-4eff-b493-24753f4bc1fd",
-        "f6c1532d-2a8e-4c7d-901d-cf816d9d28f9"
-      ],
-      "settings": {
-        "border_color": "#000000",
-        "div_id": "clearpdp",
-        "ignore": true
-      }
-    },
     "main": {
       "type": "template-product",
       "blocks": {
@@ -1111,7 +1063,6 @@
   "order": [
     "circle_video_swipe_D6adpk",
     "circle_video_swipe_zKNzXf",
-    "d84aa67d-fef0-442d-8364-790f28934d4d",
     "main",
     "8b7008db-ace8-41cc-9cda-be64cf66dd7e",
     "1012647f-8fc2-4238-8ef1-51aef396d8d1",
