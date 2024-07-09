@@ -75,54 +75,6 @@
         "ignore": true
       }
     },
-    "circle_video_swipe_zKNzXf": {
-      "type": "circle-video-swipe",
-      "blocks": {
-        "circle_link_yDpLmn": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-07_at_2.21.22_PM.jpg",
-            "label": "Ariana's Story",
-            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Ariana's Story.mp4"
-          }
-        },
-        "circle_link_9kN8Ky": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-19_at_9.40.29_PM.jpg",
-            "label": "Jess's Story",
-            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Jess' Story.mp4"
-          }
-        },
-        "circle_link_t8y9cd": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-07_at_2.26.19_PM.jpg",
-            "label": "Sophie's Story",
-            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Sophie's Story.mp4"
-          }
-        },
-        "circle_link_HYxg7C": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/alana.jpg",
-            "label": "Alana's Story",
-            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Alana's Story.mp4"
-          }
-        }
-      },
-      "block_order": [
-        "circle_link_yDpLmn",
-        "circle_link_9kN8Ky",
-        "circle_link_t8y9cd",
-        "circle_link_HYxg7C"
-      ],
-      "settings": {
-        "border_color": "#000000",
-        "div_id": "clearpdp",
-        "ignore": true
-      }
-    },
     "main": {
       "type": "template-product",
       "blocks": {
@@ -1062,7 +1014,6 @@
   },
   "order": [
     "circle_video_swipe_D6adpk",
-    "circle_video_swipe_zKNzXf",
     "main",
     "8b7008db-ace8-41cc-9cda-be64cf66dd7e",
     "1012647f-8fc2-4238-8ef1-51aef396d8d1",
