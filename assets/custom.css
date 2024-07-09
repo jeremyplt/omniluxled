@@ -2960,14 +2960,6 @@ html:not(.test-animated-review-text) .rev-txt--test {
 }
 
 @media screen and (max-width: 600px) {
-  html:not(.test-circle-video-swipe) .template-product.omnilux-contour-face .circle-video-swipe {
-    display: none !important;
-  }
-  
-  .test-circle-video-swipe .template-product.omnilux-contour-face .circle-video-menu-wrap:not(.circle-video-swipe) {
-    display: none !important;
-  }
-
   .circle-video-swipe__modal {
     position: relative;
   }
