@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "circle_video_swipe_D6adpk": {
@@ -62,73 +71,55 @@
       ],
       "settings": {
         "border_color": "#000000",
-        "div_id": "",
+        "div_id": "contourpdp",
         "ignore": true
       }
     },
-    "d70430d9-8de9-4f06-8108-95d6601a15ab": {
-      "type": "circle-video-menu",
+    "circle_video_swipe_zKNzXf": {
+      "type": "circle-video-swipe",
       "blocks": {
-        "e38ac31d-5bd6-47c0-9bc0-dd866e282641": {
+        "circle_link_yDpLmn": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-07-12_at_5.38.00_PM.jpg",
-            "label": "Lizeth’s Story",
-            "video": "shopify:\/\/files\/videos\/lizethstory.mp4"
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-07_at_2.21.22_PM.jpg",
+            "label": "Ariana's Story",
+            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Ariana's Story.mp4"
           }
         },
-        "e6acb30c-fb23-47bd-9aca-c1da92e3dcfc": {
+        "circle_link_9kN8Ky": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_5.09.51_PM.jpg",
-            "label": "Deborah's Story",
-            "video": "shopify:\/\/files\/videos\/test2.mov"
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-19_at_9.40.29_PM.jpg",
+            "label": "Jess's Story",
+            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Jess' Story.mp4"
           }
         },
-        "97612f92-d4dc-4b9a-8da8-18305aa85257": {
+        "circle_link_t8y9cd": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_8.29.07_AM.png",
-            "label": "Anna's Story",
-            "video": "shopify:\/\/files\/videos\/Video 3 - IG Scroller.mp4"
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-07_at_2.26.19_PM.jpg",
+            "label": "Sophie's Story",
+            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Sophie's Story.mp4"
           }
         },
-        "392cd7d4-bfcd-45f2-a584-98c96d8332d9": {
+        "circle_link_HYxg7C": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_8.28.15_AM.png",
-            "label": "Tanya's Story",
-            "video": "shopify:\/\/files\/videos\/Video 2 - IG Scroller.mp4"
-          }
-        },
-        "cd5a9719-eda6-4ad9-9b9d-c3c66cf96667": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_12.48.02_PM.png",
-            "label": "Lina's Story",
-            "video": "shopify:\/\/files\/videos\/Testimonial 6.mp4"
-          }
-        },
-        "46b73a84-50cf-4aab-8f9e-de39a54a1613": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_12.56.02_PM.png",
-            "label": "Sarah's Story",
-            "video": "shopify:\/\/files\/videos\/Omnilux Contour LED Mask Review.mp4"
+            "image": "shopify:\/\/shop_images\/alana.jpg",
+            "label": "Alana's Story",
+            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Alana's Story.mp4"
           }
         }
       },
       "block_order": [
-        "e38ac31d-5bd6-47c0-9bc0-dd866e282641",
-        "e6acb30c-fb23-47bd-9aca-c1da92e3dcfc",
-        "97612f92-d4dc-4b9a-8da8-18305aa85257",
-        "392cd7d4-bfcd-45f2-a584-98c96d8332d9",
-        "cd5a9719-eda6-4ad9-9b9d-c3c66cf96667",
-        "46b73a84-50cf-4aab-8f9e-de39a54a1613"
+        "circle_link_yDpLmn",
+        "circle_link_9kN8Ky",
+        "circle_link_t8y9cd",
+        "circle_link_HYxg7C"
       ],
       "settings": {
         "border_color": "#000000",
-        "div_id": "contourpdp",
+        "div_id": "clearpd∫p",
         "ignore": true
       }
     },
@@ -1119,7 +1110,7 @@
   },
   "order": [
     "circle_video_swipe_D6adpk",
-    "d70430d9-8de9-4f06-8108-95d6601a15ab",
+    "circle_video_swipe_zKNzXf",
     "d84aa67d-fef0-442d-8364-790f28934d4d",
     "main",
     "8b7008db-ace8-41cc-9cda-be64cf66dd7e",
