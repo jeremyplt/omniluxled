@@ -2987,7 +2987,7 @@ html:not(.test-animated-review-text) .rev-txt--test {
 
   .circle-video__item video {
     max-height: 100vh;
-    object-fit: cover;
+    object-fit: contain;
     height: 100%;
     width: 100%;
   }
