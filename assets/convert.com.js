@@ -68,3 +68,23 @@ function featuredCollectionViewport() {
     );
   }
 }
+
+window.addEventListener("scroll", featuredInViewport);
+document.addEventListener("DOMContentLoaded", featuredInViewport);
+
+function featuredInViewport() {
+  const featuredIn = document.querySelector(
+    ".section-content.global-featured-in.overflow-hidden.border-bottom.py-8.pt-xl-11"
+  );
+
+  const hasElementInViewport = featuredIn && isInViewport(featuredIn);
+
+  if (!window.runExperiment100489702 && hasElementInViewport) {
+    window.runExperiment100489702 = 1;
+    window._conv_q = window._conv_q || [];
+    window._conv_q.push(["executeExperiment", "100489702"]);
+    console.log(
+      "Convert - Move Social proof below featured products - Experiment Activated"
+    );
+  }
+}
