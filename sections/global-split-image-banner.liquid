@@ -46,7 +46,7 @@
             {%- if section.settings.image_small.width >= 3800 -%}<source media="(max-width: 3800px)" srcset="{{ section.settings.image_small | image_url: width: 3800 }}">{%- endif -%}
             <img src="{{ section.settings.image_small | image_url }}"
             {% if section.settings.image_small_2 != blank %}class="banner__media-image-half"{% endif %} 
-            alt="{{ section.settings.image_small.alt | default: block.settings.heading | escape }}"
+            alt="{{ section.settings.image_small.alt | escape }}"
             width="{{ section.settings.image_small.width }}" loading="lazy"
             height="{{ section.settings.image_small.width | divided_by: section.settings.image_small.aspect_ratio | round }}"
             >
@@ -96,7 +96,7 @@
             {%- if section.settings.image_small_2.width >= 3800 -%}<source media="(max-width: 3800px)" srcset="{{ section.settings.image_small_2 | image_url: width: 3800 }}">{%- endif -%}
             <img src="{{ section.settings.image_small_2 | image_url }}" loading="lazy"
             {% if section.settings.image_small_2 != blank %}class="banner__media-image-half"{% endif %} 
-            alt="{{ section.settings.image_small_2.alt | default: block.settings.heading | escape }}"
+            alt="{{ section.settings.image_small_2.alt | escape }}"
             width="{{ section.settings.image_small_2.width }}"
             height="{{ section.settings.image_small_2.width | divided_by: section.settings.image_small_2.aspect_ratio | round }}"
             >

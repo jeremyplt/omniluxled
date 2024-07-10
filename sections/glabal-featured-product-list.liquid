@@ -7,89 +7,87 @@
   {% assign productExcludeTag = settings.product_exclude_tag_text %}
 
   <section class="section-content {% if section.settings.slide_per_ %}outer-slide-visible{% endif %}" data-section-id="{{ section.id }}" data-grid-type="{{ collection_grid_type }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
-      <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}" {% if collection_grid_type == 'grid' %}data-type="slider"{% endif %}>
-        <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 mb-4 pb-1 {{ section.settings.heading_alignment }} {% if section.settings.heading_alignment == 'mx-auto' %}text-center{% elsif section.settings.heading_alignment == 'ms-auto' %}text-center text-lg-end {% else %}text-center text-lg-start{% endif %}">
-                {% if section.settings.heading_txt != blank %}
-                    <h3 class="section-title mb-2">{{ section.settings.heading_txt | escape }}</h3>
-                {% endif %}
-                {% if section.settings.lead_txt != blank %}
-                    <p>
-                        {{ section.settings.lead_txt }}
-                    </p>
-                {% endif %}
-            </div>
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}" {% if collection_grid_type == 'grid' %}data-type="slider"{% endif %}>
+      <div class="row">
+        <div class="col-12 col-lg-6 col-md-8 mb-4 pb-1 {{ section.settings.heading_alignment }} {% if section.settings.heading_alignment == 'mx-auto' %}text-center{% elsif section.settings.heading_alignment == 'ms-auto' %}text-center text-lg-end {% else %}text-center text-lg-start{% endif %}">
+          {% if section.settings.heading_txt != blank %}
+              <h3 class="section-title mb-2">{{ section.settings.heading_txt | escape }}</h3>
+          {% endif %}
+          {% if section.settings.lead_txt != blank %}
+              <p>
+                  {{ section.settings.lead_txt }}
+              </p>
+          {% endif %}
         </div>
       </div>
-              <div class="container">
-                  <div class="row">
-                      <div class="col-12">
-                        <slider-element class="arrow-center swiper-container carousel d-block position-relative arrow-inside">
-                            <div class="swiper swiper-slider featured-collection-slider card-carousel" data-slider='{
-                                  "loop": false,
-                                  "shortSwipes": false,
-                                  "freeMode": true,
-                                  "slidesPerView": "1.34",
-                                  "spaceBetween": 15,
-                                  "grabCursor": true,
-                                  "preloadImages": false,
-                                  "lazy": true,
-                                  "navigation": {
-                                      "nextEl": ".product-button-next",
-                                      "prevEl": ".product-button-prev"
-                                  },
-                                  "pagination": {
-                                      "el": ".swiper-pagination"
-                                  },
-                                  "breakpoints": {
-                                    "660": {
-                                      "slidesPerView": 2,
-                                      "spaceBetween": 30
-                                    },
-                                    "992": {
-                                      "slidesPerView":3,
-                                      "spaceBetween": 10
-                                    }
-                                 }
-                              }'>
-                                  <div class="swiper-wrapper">
-                                        {% for product in collections[section.settings.home_featured_collection].products limit: 9 %}
-                                          {% liquid 
-                                            if product == current_product 
-                                              continue 
-                                            endif
-                                            assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
-                                            assign checkWholesaleProducts = false
-                                            for tag in hideWholesalersProducts
-                                              assign tag = tag | downcase
-                                              if product.tags contains tag
-                                                assign checkWholesaleProducts = true
-                                              endif
-                                            endfor
-                                          %}
-                                          {% unless checkWholesaleProducts == true %}
-                                            {% unless product.tags contains productExcludeTag %}
-                                              <div class="swiper-slide">
-                                                  {% render 'card-product-style-generic', product: product %}
-                                              </div>
-                                            {% endunless %}
-                                          {% endunless %}
-                                          {% endfor %}
-                                  </div>
-                                  {% if section.settings.nav_dots %}
-                                      <div class="swiper-pagination bottom-0 w-100 text-center mt-3 position-relative"></div>
-                                  {% endif %}
-                              </div>
-                              {% if section.settings.nav_arrows %}
-                                  <div class="swiper-button-next product-button-next collection-style-4-next icon-next ox-arrow-right"></div>
-                                  <div class="swiper-button-prev product-button-prev collection-style-4-prev icon-previous ox-arrow-left"></div>
-                              {% endif %}
-                          </slider-element>
-                      </div>
-                  </div>
-              </div>
-
-      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+              <slider-element class="arrow-center swiper-container carousel d-block position-relative arrow-inside">
+                  <div class="swiper swiper-slider featured-collection-slider card-carousel" data-slider='{
+                        "loop": false,
+                        "shortSwipes": false,
+                        "freeMode": true,
+                        "slidesPerView": "1.34",
+                        "spaceBetween": 15,
+                        "grabCursor": true,
+                        "preloadImages": false,
+                        "lazy": true,
+                        "navigation": {
+                            "nextEl": ".product-button-next",
+                            "prevEl": ".product-button-prev"
+                        },
+                        "pagination": {
+                            "el": ".swiper-pagination"
+                        },
+                        "breakpoints": {
+                          "660": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 30
+                          },
+                          "992": {
+                            "slidesPerView":3,
+                            "spaceBetween": 10
+                          }
+                        }
+                    }'>
+                        <div class="swiper-wrapper">
+                              {% for product in collections[section.settings.home_featured_collection].products limit: 9 %}
+                                {% liquid 
+                                  if product == current_product 
+                                    continue 
+                                  endif
+                                  assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
+                                  assign checkWholesaleProducts = false
+                                  for tag in hideWholesalersProducts
+                                    assign tag = tag | downcase
+                                    if product.tags contains tag
+                                      assign checkWholesaleProducts = true
+                                    endif
+                                  endfor
+                                %}
+                                {% unless checkWholesaleProducts == true %}
+                                  {% unless product.tags contains productExcludeTag %}
+                                    <div class="swiper-slide">
+                                        {% render 'card-product-style-generic', product: product %}
+                                    </div>
+                                  {% endunless %}
+                                {% endunless %}
+                                {% endfor %}
+                        </div>
+                        {% if section.settings.nav_dots %}
+                            <div class="swiper-pagination bottom-0 w-100 text-center mt-3 position-relative"></div>
+                        {% endif %}
+                    </div>
+                    {% if section.settings.nav_arrows %}
+                        <div class="swiper-button-next product-button-next collection-style-4-next icon-next ox-arrow-right"></div>
+                        <div class="swiper-button-prev product-button-prev collection-style-4-prev icon-previous ox-arrow-left"></div>
+                    {% endif %}
+                </slider-element>
+            </div>
+        </div>
+    </div>
   </section>
   <style>
 .arrow-center.carousel .swiper-button-next {

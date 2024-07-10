@@ -54,6 +54,8 @@
     
     {% render 'skio-head' %}
 
+
+    
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -66,6 +68,10 @@
     tdl.identify() 
   </script>
   <!--END Aspire tracking-->
+
+ 
+
+    
     
   {{!-- GTM Enhanced Conversion Tracking --}}
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-620800940"></script>
@@ -269,8 +275,8 @@
             <div class="modal-body py-10">
               <div class="">
                 <div class="text-center">
-                  <h4>Seems like you are not on our wholesale store</h3>
-                    <p class="mt-1 mt-lg-3 font-size-lg-20">Please visit <a href="https://wholesale.omniluxled.com/" style="color:#5cb8b2">wholesale store</a>.</p>
+                  <h4>Seems like you are not on our wholesale store</h4>
+                  <p class="mt-1 mt-lg-3 font-size-lg-20">Please visit <a href="https://wholesale.omniluxled.com/" style="color:#5cb8b2">wholesale store</a>.</p>
                 </div>
               </div>
             </div>
@@ -668,7 +674,7 @@
   var afterpay_cart_total_price = {{ cart.total_price | json }};
   var afterpay_js_snippet_version = '1.1.5';
   </script>
-  <script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
+  <script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js" defer></script>
   {% else %}
   <!-- Afterpay disabled: {{ cart.currency.iso_code }} != {{ shop.currency }} -->
   {% endif %}

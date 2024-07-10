@@ -162,7 +162,6 @@
                               placeholder="0"
                               min="0"
                               max="{{ filter.range_max | money_without_currency | replace: ',', '' | plus: 0 | ceil }}">
-                            </input>
 
                             <input 
                               name="{{ filter.max_value.param_name }}"
@@ -180,8 +179,6 @@
                               placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
                               min="0"
                               max="{{ filter.range_max | money_without_currency | replace: ',', '' | plus: 0 | ceil }}">
-                            </input>
-
                           </section>
                       </range-slider>
 
@@ -221,7 +218,6 @@
                               placeholder="0"
                               min="0"
                               max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
-                            </input>
                           </div>
                           <span class="mx-3">-</span>
                           <div class="d-flex w-100 align-items-center">
@@ -240,7 +236,6 @@
                               placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
                               min="0"
                               max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
-                            </input>
                           </div>
                         </price-range>
                       </div>
@@ -314,7 +309,7 @@
 
             <div class="col-12 d-lg-none mt-auto">
                 <button class="btn btn-primary btn-sm btn-block" type="button" aria-label="{{ 'templates.collection.apply_btn' | t }}" data-applyFilters>
-                  </span>{{ 'templates.collection.apply_btn' | t }}
+                  {{ 'templates.collection.apply_btn' | t }}
                 </button>
             </div>
           </form>

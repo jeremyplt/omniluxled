@@ -3,18 +3,18 @@
 <section data-section-id="{{ section.id }}" class="how-its-works-accrdian border-top ">
     <div class="overflow-hidden">
         <div class="row">
-            <custom-accordion {{ block.shopify_attributes }} data-accordionType="single" >
+            <custom-accordion data-accordionType="single" >
                 <div class="">
                     <div class="accordion__container ">
-                        <a class="accordion__toggle d-flex align-items-center container py-5 " data-how-its-work href="javascript:void(0);" title="Open {{ block.settings.title | strip_html }}" rel="nofollow" aria-label="Open {{ block.settings.title | strip_html }}" role="button" aria-expanded="false" aria-controls="faq-{{ section.settings.heading | handleize }}-{{ forloop.index }}">
-                            <div class="col-5  col-lg-3 " style="pointer-events:none;">
+                        <a class="accordion__toggle d-flex align-items-center container py-5 " data-how-its-work href="javascript:void(0);" title="Open" rel="nofollow" aria-label="Open" role="button" aria-expanded="false" aria-controls="faq-{{ section.settings.heading | handleize }}-1">
+                            <div class="col-5 col-lg-3" style="pointer-events:none;">
                                 <img src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Group_1562.svg?v=1669461824" alt="{{ shop.name | escape }}" class="img-fluid" style="width: {{ section.settings.logo_width }}px" loading="lazy" width="{{ section.settings.logo_width }}" height="{{ section.settings.logo_width }}">
                             </div>
                             <div class="col-7 col-lg-3  text-end ms-auto">
                                 <div class="h6 btn btn-simple m-0 btn-hiw ls-sm">SEE HOW IT WORKS +</div>
                             </div>
                         </a>
-                        <div class="accordion__block toggle-content mt-4" id="faq-{{ section.settings.heading | handleize }}-{{ forloop.index }}-1" data-type="content">
+                        <div class="accordion__block toggle-content mt-4" id="faq-{{ section.settings.heading | handleize }}-1" data-type="content">
                             <section class="mb-11 image-with-text"  data-section-id="{{ section.id }}" >
                                 <div class="container">
                                     <div class="row align-items-end">
@@ -225,9 +225,9 @@
 <section data-section-id="{{ section.id }}" class="how-its-works-accrdian border-top  overflow-hidden">
     <div class="">
         <div class="row">
-            <custom-accordion {{ block.shopify_attributes }} data-accordionType="single" >
+            <custom-accordion data-accordionType="single" >
                 <div class="accordion__container ">
-                    <a class="accordion__toggle d-flex align-items-center container py-5" data-how-its-work href="javascript:void(0);" title="Open {{ block.settings.title | strip_html }}" rel="nofollow" aria-label="Open {{ block.settings.title | strip_html }}" role="button" aria-expanded="false" aria-controls="faq-{{ section.settings.heading | handleize }}-{{ forloop.index }}">
+                    <a class="accordion__toggle d-flex align-items-center container py-5" data-how-its-work href="javascript:void(0);" title="Open" rel="nofollow" aria-label="Open" role="button" aria-expanded="false" aria-controls="faq-{{ section.settings.heading | handleize }}-2">
                         <div class="col-5  col-lg-3 " style="pointer-events:none;">
                             <img src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Group_1563.png?v=1669874448" alt="{{ shop.name | escape }}" class="img-fluid" style="width:216px" loading="lazy" height="216" width="216" loading="lazy">
                         </div>
@@ -235,7 +235,7 @@
                             <div class="h6 btn btn-simple m-0 btn-hiw ls-sm">SEE HOW IT WORKS +</div>
                         </div>
                     </a>
-                    <div class="accordion__block toggle-content mt-4" id="faq-{{ section.settings.heading | handleize }}-{{ forloop.index }}-2" data-type="content">
+                    <div class="accordion__block toggle-content mt-4" id="faq-{{ section.settings.heading | handleize }}-2" data-type="content">
                         <section class="mb-11 image-with-text"  data-section-id="{{ section.id }}" >
                             <div class="container">
                                 <div class="row align-items-end">
@@ -267,7 +267,7 @@
                                     <div class="col-12 col-md-6 col-lg-5  mt-4 mt-md-0 {% if section.settings.image_alignment == 'left' %}order-md-2{% else %} ms-auto order-md-1{% endif %}">
                                         <div class="inside-block {{ section.settings.alignment }}">
                                             {% if section.settings.clear_heading_txt1 != blank %}
-                                                <p class="mb-3">{{ section.settings.clear_heading_txt1 }}</h3>
+                                                <p class="mb-3">{{ section.settings.clear_heading_txt1 }}</p>
                                             {% endif %}
                                             {% if section.settings.clear_heading_txt2 != blank %}
                                                 <p class="mb-3 ">{{ section.settings.clear_heading_txt2 }}</p>

@@ -41,11 +41,7 @@
 
     {{ checkout_stylesheets }}
     {{ checkout_scripts }}
-    
-    {% comment %}Added by Rainfactory on August 04, 2021{% endcomment %}
-    {% if settings.rf_checkout_customization %}
-        {% render 'rf-checkout-customization' %}
-    {% endif %} 
+
     <style>
       .main__content .custom-message {
           text-align: center;

@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-12 col-lg-6 text-center mx-auto">
                     {% if section.settings.heading_txt != blank %}
-                    <h2 class="mb-3">{{ section.settings.heading_txt }}</h1>
+                    <h2 class="mb-3">{{ section.settings.heading_txt }}</h2>
                     {% endif %}
                     {% if section.settings.heading_paragraph != blank %}
                         <p class="m-0">{{ section.settings.heading_paragraph }}</p>
@@ -13,248 +13,247 @@
                 </div>
                 <div class="col-12 mt-4 mt-lg-7">
                     {%- for block in section.blocks -%}
-                        <custom-tabs class="bg-white d-block" {{ block.shopify_attributes }}>
-                            <div class="">
-                                <div id="productTabs" data-product-tabs style="position: relative;">
-                                  <div class="swiper-arrows">
-                                    <div class="slider-reviews-prev">
-                                      {% render 'hoox-snippet-arrow-previous' %}
-                                    </div>
-                                    <div class="slider-reviews-next">
-                                      {% render 'hoox-snippet-arrow-next' %}
-                                    </div>
-                                  </div>
-                                  <slider-element class="swiper-container  carousel collection-slider-style-3 d-block position-relative px-1">
-                                    <div class="swiper swiper-slider  pb-3" data-slider='{
-                                        "loop": false,
-                                        "slidesPerView": 1.1,
-                                        "spaceBetween": 0,
-                                        "shortSwipes": true,
-                                        "grabCursor": true,
-                                        "pagination": {
-                                            "el": ".swiper-pagination"
-                                        },
-                                        "breakpoints": {
-                                          "300": {
-                                              "slidesPerView": 1
-                                          },
-                                          "560": {
-                                              "slidesPerView": 2
-                                          },
-                                          "768": {
-                                              "slidesPerView": 3
-                                          },
-                                          "992": {
-                                              "slidesPerView": 4
-                                          },
-                                          "1200": {
-                                            "slidesPerView": 6
-                                        }
-                                      }
-                                    }'>
-                                        <div class="swiper-wrapper  board-tabs">                                         
-                                          {%- if block.settings.enable_custom_tab_1 -%}
-                                            <div class="swiper-slide   carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
-                                              <div class="tablink triangle  w-100 open board-block-border" role="tab">
-                                                <a class="nav-link" data-toggle="tab" href="#custom-tab-1" data-tabcontent="#custom-tab-1" aria-expanded="false">
-                                                  <div class="py-4  ">
-                                                    <div class="">
-                                                      <div class="borad-block-img">
-                                                        {{ block.settings.tab_1_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-center pt-3 mx-4">
-                                                      <h5 class="board-member-name">
-                                                        {{ block.settings.tab_1_name }}
-                                                      </h5>
-                                                    </div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                            {% endif %}
-                                            {%- if block.settings.enable_custom_tab_2 -%}
-                                            <div class="swiper-slide  carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
-                                              <div class="tablink triangle w-100  board-block-border" role="tab">
-                                                <a class="nav-link" data-toggle="tab" href="#custom-tab-2" data-tabcontent="#custom-tab-2" aria-expanded="false">
-                                                  <div class="py-4  ">
-                                                    <div class="borad-block-img">
-                                              {{ block.settings.tab_2_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
-                                                  </div>
-                                                    <div class="text-center pt-3 mx-4">
-                                                      <h5 class="board-member-name">
-                                                        {{ block.settings.tab_2_name }}
-                                                      </h5>
-                                                    </div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                            {% endif %}
-                                            {%- if block.settings.enable_custom_tab_3 -%}
-                                            <div class="swiper-slide carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
-                                              <div class="tablink triangle w-100 board-block-border " role="tab">
-                                                <a class="nav-link" data-toggle="tab" href="#custom-tab-3" data-tabcontent="#custom-tab-3" aria-expanded="false">
-                                                  <div class="py-4  ">
-                                                    <div class="borad-block-img">
-                                                      {{ block.settings.tab_3_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
-                                                    </div>
-                                                    <div class="text-center pt-3 mx-4">
-                                                      <h5 class="board-member-name">
-                                                        {{ block.settings.tab_3_name }}
-                                                      </h5>
-                                                    </div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                            {% endif %}
-                                            {%- if block.settings.enable_custom_tab_4 -%}
-                                            <div class="swiper-slide   carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
-                                              <div class="tablink triangle w-100  board-block-border" role="tab">
-                                                <a class="nav-link" data-toggle="tab" href="#custom-tab-4" data-tabcontent="#custom-tab-4" aria-expanded="false">
-                                                  <div class="py-4  ">
-                                                    <div class="borad-block-img">
-                                              {{ block.settings.tab_4_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
-                                                    </div>
-                                                    <div class="text-center pt-3 mx-4">
-                                                      <h5 class="board-member-name">
-                                                        {{ block.settings.tab_4_name }}
-                                                      </h5>
-                                                    </div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                            {% endif %}
-                                            {%- if block.settings.enable_custom_tab_5 -%}
-                                            <div class="swiper-slide  carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
-                                              <div class="tablink triangle w-100 board-block-border board-block-end" role="tab">
-                                                <a class="nav-link" data-toggle="tab" href="#custom-tab-5" data-tabcontent="#custom-tab-5" aria-expanded="false">
-                                                  <div class="py-4  ">
-                                                    <div class="borad-block-img">
-                                              {{ block.settings.tab_5_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
-                                                  </div>
-                                                    <div class="text-center pt-3 mx-4">
-                                                      <h5 class="board-member-name">
-                                                        {{ block.settings.tab_5_name }}
-                                                      </h5>
-                                                    </div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                            {% endif %}
-                                              {%- if block.settings.enable_custom_tab_6 -%}
-                                            <div class="swiper-slide  carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
-                                              <div class="tablink triangle w-100 board-block-border board-block-end" role="tab">
-                                                <a class="nav-link" data-toggle="tab" href="#custom-tab-6" data-tabcontent="#custom-tab-6" aria-expanded="false">
-                                                  <div class="py-4  ">
-                                                    <div class="borad-block-img">
-                                              {{ block.settings.tab_6_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
-                                                  </div>
-                                                    <div class="text-center pt-3 mx-4">
-                                                      <h5 class="board-member-name">
-                                                        {{ block.settings.tab_6_name }}
-                                                      </h5>
-                                                    </div>
-                                                  </div>
-                                                </a>
-                                              </div>
-                                            </div>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </slider-element>
-                                <div class="tab-content text-left" id="productTabsContent">
-                                   
+                      <custom-tabs class="bg-white d-block" {{ block.shopify_attributes }}>
+                          <div id="productTabs" data-product-tabs style="position: relative;">
+                            <div class="swiper-arrows">
+                              <div class="slider-reviews-prev">
+                                {% render 'hoox-snippet-arrow-previous' %}
+                              </div>
+                              <div class="slider-reviews-next">
+                                {% render 'hoox-snippet-arrow-next' %}
+                              </div>
+                            </div>
+                            <slider-element class="swiper-container  carousel collection-slider-style-3 d-block position-relative px-1">
+                              <div class="swiper swiper-slider  pb-3" data-slider='{
+                                  "loop": false,
+                                  "slidesPerView": 1.1,
+                                  "spaceBetween": 0,
+                                  "shortSwipes": true,
+                                  "grabCursor": true,
+                                  "pagination": {
+                                      "el": ".swiper-pagination"
+                                  },
+                                  "breakpoints": {
+                                    "300": {
+                                        "slidesPerView": 1
+                                    },
+                                    "560": {
+                                        "slidesPerView": 2
+                                    },
+                                    "768": {
+                                        "slidesPerView": 3
+                                    },
+                                    "992": {
+                                        "slidesPerView": 4
+                                    },
+                                    "1200": {
+                                      "slidesPerView": 6
+                                  }
+                                }
+                              }'>
+                                  <div class="swiper-wrapper  board-tabs">                                         
                                     {%- if block.settings.enable_custom_tab_1 -%}
-                                    <div class="tab-pane tabcontent open" id="custom-tab-1" role="tabpanel">
-                                      <div class="col-lg-6 pt-8 text-center mx-auto lh-xl">
-                                        {{ block.settings.tab_1_title }}
+                                      <div class="swiper-slide   carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
+                                        <div class="tablink triangle  w-100 open board-block-border" role="tab">
+                                          <a class="nav-link" data-toggle="tab" href="#custom-tab-1" data-tabcontent="#custom-tab-1" aria-expanded="false">
+                                            <div class="py-4  ">
+                                              <div class="">
+                                                <div class="borad-block-img">
+                                                  {{ block.settings.tab_1_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
+                                                  </div>
+                                              </div>
+                                              <div class="text-center pt-3 mx-4">
+                                                <h5 class="board-member-name">
+                                                  {{ block.settings.tab_1_name }}
+                                                </h5>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
                                       </div>
-                                      <div class="col-12 col-lg-8 mx-auto">
-                                        <div class="rte  text-center">
-                                          <p>
-                                            {{ block.settings.tab_1_content }}
-                                          </p>
+                                      {% endif %}
+                                      {%- if block.settings.enable_custom_tab_2 -%}
+                                      <div class="swiper-slide  carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
+                                        <div class="tablink triangle w-100  board-block-border" role="tab">
+                                          <a class="nav-link" data-toggle="tab" href="#custom-tab-2" data-tabcontent="#custom-tab-2" aria-expanded="false">
+                                            <div class="py-4  ">
+                                              <div class="borad-block-img">
+                                        {{ block.settings.tab_2_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
+                                            </div>
+                                              <div class="text-center pt-3 mx-4">
+                                                <h5 class="board-member-name">
+                                                  {{ block.settings.tab_2_name }}
+                                                </h5>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
                                       </div>
+                                      {% endif %}
+                                      {%- if block.settings.enable_custom_tab_3 -%}
+                                      <div class="swiper-slide carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
+                                        <div class="tablink triangle w-100 board-block-border " role="tab">
+                                          <a class="nav-link" data-toggle="tab" href="#custom-tab-3" data-tabcontent="#custom-tab-3" aria-expanded="false">
+                                            <div class="py-4  ">
+                                              <div class="borad-block-img">
+                                                {{ block.settings.tab_3_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
+                                              </div>
+                                              <div class="text-center pt-3 mx-4">
+                                                <h5 class="board-member-name">
+                                                  {{ block.settings.tab_3_name }}
+                                                </h5>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
                                       </div>
-                                    </div>
-                                    {% endif %}
-                                    {%- if block.settings.enable_custom_tab_2 -%}
-                                    <div class="tab-pane tabcontent " id="custom-tab-2" role="tabpanel">
-                                      <div class="col-lg-6 pt-8 text-center mx-auto lh-xl">
-                                        {{ block.settings.tab_2_title }}
+                                      {% endif %}
+                                      {%- if block.settings.enable_custom_tab_4 -%}
+                                      <div class="swiper-slide   carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
+                                        <div class="tablink triangle w-100  board-block-border" role="tab">
+                                          <a class="nav-link" data-toggle="tab" href="#custom-tab-4" data-tabcontent="#custom-tab-4" aria-expanded="false">
+                                            <div class="py-4  ">
+                                              <div class="borad-block-img">
+                                        {{ block.settings.tab_4_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
+                                              </div>
+                                              <div class="text-center pt-3 mx-4">
+                                                <h5 class="board-member-name">
+                                                  {{ block.settings.tab_4_name }}
+                                                </h5>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
                                       </div>
-                                      <div class="col-12 col-lg-8 mx-auto">
-                                        <div class="rte  text-center">
-                                          <p>
-                                            {{ block.settings.tab_2_content }}
-                                          </p>
+                                      {% endif %}
+                                      {%- if block.settings.enable_custom_tab_5 -%}
+                                      <div class="swiper-slide  carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
+                                        <div class="tablink triangle w-100 board-block-border board-block-end" role="tab">
+                                          <a class="nav-link" data-toggle="tab" href="#custom-tab-5" data-tabcontent="#custom-tab-5" aria-expanded="false">
+                                            <div class="py-4  ">
+                                              <div class="borad-block-img">
+                                        {{ block.settings.tab_5_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
+                                            </div>
+                                              <div class="text-center pt-3 mx-4">
+                                                <h5 class="board-member-name">
+                                                  {{ block.settings.tab_5_name }}
+                                                </h5>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
                                       </div>
+                                      {% endif %}
+                                        {%- if block.settings.enable_custom_tab_6 -%}
+                                      <div class="swiper-slide  carousel-cell d-flex align-items-center justify-content-center"  role="treeitem">
+                                        <div class="tablink triangle w-100 board-block-border board-block-end" role="tab">
+                                          <a class="nav-link" data-toggle="tab" href="#custom-tab-6" data-tabcontent="#custom-tab-6" aria-expanded="false">
+                                            <div class="py-4  ">
+                                              <div class="borad-block-img">
+                                        {{ block.settings.tab_6_image | image_url: width: 360, format: 'pjpg' | image_tag: class: 'card-img-top' }}
+                                            </div>
+                                              <div class="text-center pt-3 mx-4">
+                                                <h5 class="board-member-name">
+                                                  {{ block.settings.tab_6_name }}
+                                                </h5>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        </div>
                                       </div>
-                                    </div>
-                                    {% endif %}
-                                    {%- if block.settings.enable_custom_tab_3 -%}
-                                    <div class="tab-pane tabcontent " id="custom-tab-3" role="tabpanel">
-                                      <div class="col-lg-6 pt-8 text-center mx-auto lh-xl">
-                                        {{ block.settings.tab_3_title }}
-                                      </div>
-                                      <div class="col-12 col-lg-8 mx-auto">
-                                        <div class="rte  text-center">
-                                          <p>
-                                            {{ block.settings.tab_3_content }}
-                                          </p>
-                                      </div>
-                                      </div>
-                                    </div>
-                                    {% endif %}
-                                    {%- if block.settings.enable_custom_tab_4 -%}
-                                    <div class="tab-pane tabcontent " id="custom-tab-4" role="tabpanel">
-                                      <div class="col-lg-6 pt-8 text-center mx-auto text-uppercase lh-xl">
-                                        {{ block.settings.tab_4_title }}
-                                      </div>
-                                      <div class="col-12 col-lg-8 mx-auto">
-                                        <div class="rte  text-center">
-                                          <p>
-                                            {{ block.settings.tab_4_content }}
-                                          </p>
-                                      </div>
-                                      </div>
-                                    </div>
-                                    {% endif %}
-                                    {%- if block.settings.enable_custom_tab_5 -%}
-                                    <div class="tab-pane tabcontent " id="custom-tab-5" role="tabpanel">
-                                      <div class="col-lg-6 pt-8 text-center mx-auto  lh-xl">
-                                        {{ block.settings.tab_5_title }}
-                                      </div>
-                                      <div class="col-12 col-lg-8 mx-auto">
-                                        <div class="rte  text-center">
-                                          <p>
-                                            {{ block.settings.tab_5_content }}
-                                          </p>
-                                      </div>
-                                      </div>
-                                    </div>
-                                    {% endif %}
-                                  {%- if block.settings.enable_custom_tab_6 -%}
-                                    <div class="tab-pane tabcontent " id="custom-tab-6" role="tabpanel">
-                                      <div class="col-lg-6 pt-8 text-center mx-auto  lh-xl">
-                                        {{ block.settings.tab_6_title }}
-                                      </div>
-                                      <div class="col-12 col-lg-8 mx-auto">
-                                        <div class="rte  text-center">
-                                          <p>
-                                            {{ block.settings.tab_6_content }}
-                                          </p>
-                                      </div>
-                                      </div>
-                                    </div>
-                                    {% endif %}
+                                      {% endif %}
+                                  </div>
+                              </div>
+                          </slider-element>
+
+                          <div class="tab-content text-left" id="productTabsContent">
+                              {%- if block.settings.enable_custom_tab_1 -%}
+                              <div class="tab-pane tabcontentopen" id="custom-tab-1" role="tabpanel">
+                                <div class="col-lg-6 pt-8 text-center mx-auto lh-xl">
+                                  {{ block.settings.tab_1_title }}
+                                </div>
+                                <div class="col-12 col-lg-8 mx-auto">
+                                  <div class="rte  text-center">
+                                    <p>
+                                      {{ block.settings.tab_1_content }}
+                                    </p>
+                                </div>
                                 </div>
                               </div>
-                        </custom-tabs>
+                              {% endif %}
+                              {%- if block.settings.enable_custom_tab_2 -%}
+                              <div class="tab-pane tabcontent" id="custom-tab-2" role="tabpanel">
+                                <div class="col-lg-6 pt-8 text-center mx-auto lh-xl">
+                                  {{ block.settings.tab_2_title }}
+                                </div>
+                                <div class="col-12 col-lg-8 mx-auto">
+                                  <div class="rte  text-center">
+                                    <p>
+                                      {{ block.settings.tab_2_content }}
+                                    </p>
+                                </div>
+                                </div>
+                              </div>
+                              {% endif %}
+                              {%- if block.settings.enable_custom_tab_3 -%}
+                              <div class="tab-pane tabcontent" id="custom-tab-3" role="tabpanel">
+                                <div class="col-lg-6 pt-8 text-center mx-auto lh-xl">
+                                  {{ block.settings.tab_3_title }}
+                                </div>
+                                <div class="col-12 col-lg-8 mx-auto">
+                                  <div class="rte  text-center">
+                                    <p>
+                                      {{ block.settings.tab_3_content }}
+                                    </p>
+                                </div>
+                                </div>
+                              </div>
+                              {% endif %}
+                              {%- if block.settings.enable_custom_tab_4 -%}
+                              <div class="tab-pane tabcontent" id="custom-tab-4" role="tabpanel">
+                                <div class="col-lg-6 pt-8 text-center mx-auto text-uppercase lh-xl">
+                                  {{ block.settings.tab_4_title }}
+                                </div>
+                                <div class="col-12 col-lg-8 mx-auto">
+                                  <div class="rte  text-center">
+                                    <p>
+                                      {{ block.settings.tab_4_content }}
+                                    </p>
+                                </div>
+                                </div>
+                              </div>
+                              {% endif %}
+                              {%- if block.settings.enable_custom_tab_5 -%}
+                              <div class="tab-pane tabcontent" id="custom-tab-5" role="tabpanel">
+                                <div class="col-lg-6 pt-8 text-center mx-auto  lh-xl">
+                                  {{ block.settings.tab_5_title }}
+                                </div>
+                                <div class="col-12 col-lg-8 mx-auto">
+                                  <div class="rte  text-center">
+                                    <p>
+                                      {{ block.settings.tab_5_content }}
+                                    </p>
+                                </div>
+                                </div>
+                              </div>
+                              {% endif %}
+                            {%- if block.settings.enable_custom_tab_6 -%}
+                              <div class="tab-pane tabcontent" id="custom-tab-6" role="tabpanel">
+                                <div class="col-lg-6 pt-8 text-center mx-auto  lh-xl">
+                                  {{ block.settings.tab_6_title }}
+                                </div>
+                                <div class="col-12 col-lg-8 mx-auto">
+                                  <div class="rte  text-center">
+                                    <p>
+                                      {{ block.settings.tab_6_content }}
+                                    </p>
+                                </div>
+                                </div>
+                              </div>
+                              {% endif %}
+                          </div>
+                        </div>
+                      </custom-tabs>
                     {%- endfor -%}
                 </div>
             </div>

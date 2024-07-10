@@ -63,7 +63,7 @@
                                                 width="75"
                                                 height="{{ 75 | divided_by: item.image.aspect_ratio | ceil }}" >
                                             {% else %}
-                                            <img class="img-fluid item-img no-image"
+                                            <img class="img-fluid item-img"
                                                 src="{{ settings.no_image | image_url: width: 150 }}"
                                                 alt="{{ settings.no_image.alt | default: item.product_title | escape }}"
                                                 loading="lazy"
@@ -97,9 +97,9 @@
                                                 {% if item.properties.size != 0 %}
                                                     <ul class="list-unstyled">
                                                     {%- for property in item.properties -%}
+                                                        {% if property.first == 'free_gift' %}{% continue %}{% endif %}
                                                         {%- assign property_first_char = property.first | slice: 0 -%}
                                                         {%- if property.last != blank and property_first_char != '_' -%}
-                                                            {% if property.first == 'free_gift' %}{% continue %}{% endif %}
                                                             <li>
                                                                 <span class="text-muted small text-capitalize">{{ property.first }}:</span>
                                                                 <span class="text-muted small text-capitalize">
@@ -234,36 +234,39 @@
             {% endif %}
         </div>
     </div>
+    
     <div class="col-12 cart-total mt-auto border-top position-sticky bottom-0 {% unless cart.item_count > 0 %}d-none{% endunless %}" data-checkoutBtns style="background-image: url('https://cdn.shopify.com/s/files/1/0482/6736/2466/files/total-bg.jpg?v=1671701148');background-size: 100% 100%;padding:8px 20px;z-index: 4;background-color: #fff;">
-            <div class="row no-gutters">
-                <div class="col-12 d-flex">
-                    <span class="flex-fill font-size-lg-20 fw-bold">Subtotal</span>
-                    <span class="font-size-lg-20 my-0" data-cartTotal>{% render 'price-with-taxes', price: cart.total_price %}</span>
-                </div>
-                <div class="col-12" id="preTax">
-                    <span class="flex-fill font-size-lg-20 fw-bold">Pre tax</span>
-                    <span class="font-size-lg-20 my-0" data-preTaxCartTotal>{{ cart.total_price | money }}</span>
+        <div class="row no-gutters">
+            <div class="col-12 d-flex">
+                <span class="flex-fill font-size-lg-20 fw-bold">Subtotal</span>
+                <span class="font-size-lg-20 my-0" data-cartTotal>
+                    {% render 'price-with-taxes', price: cart.total_price %}
+                </span>
+            </div>
+            <div class="col-12" id="preTax">
+                <span class="flex-fill font-size-lg-20 fw-bold">Pre tax</span>
+                <span class="font-size-lg-20 my-0" data-preTaxCartTotal>{{ cart.total_price | money }}</span>
+            </div>
+        </div>
+
+        {% if settings.enable_cart_notes %}
+            {%- assign cartNote = cart.note -%}
+            <div class="row mt-5" data-cartNote>
+                <div class="col-12 mx-auto text-center">
+                <p>{{ 'templates.cart.note' | t }}:</p>
+                    <textarea name="note" class="form-control" rows="4" data-default="{{ cartNote | strip }}">{{ cart.note }}</textarea>
+                    <button type="submit" class="btn m-auto text-decoration-underline" data-saveNote style="display: none;" data-default="Save" data-adding_txt="saving..">Save</button>
+                    <p class="font-size-sm text-center pt-3" data-resultMsg style="display: none;"></p>
                 </div>
             </div>
+        {% endif %}
 
-            {% if settings.enable_cart_notes %}
-                {%- assign cartNote = cart.note -%}
-                <div class="row mt-5" data-cartNote>
-                    <div class="col-12 mx-auto text-center">
-                    <p>{{ 'templates.cart.note' | t }}:</p>
-                        <textarea name="note" class="form-control" rows="4" data-default="{{ cartNote | strip }}">{{ cart.note }}</textarea>
-                        <button type="submit" class="btn m-auto text-decoration-underline" data-saveNote style="display: none;" data-default="Save" data-adding_txt="saving..">Save</button>
-                        <p class="font-size-sm text-center pt-3" data-resultMsg style="display: none;"></p>
-                    </div>
-                </div>
-            {% endif %}
-     <a href="/checkout" class="btn btn-primary btn-block mt-2">PROCEED TO CHECKOUT →</a>
+        <a href="/checkout" class="btn btn-primary btn-block mt-2">PROCEED TO CHECKOUT →</a>
 
-           <div class="afterpay" bis_skin_checked="1">
+        <div class="afterpay" bis_skin_checked="1">
             <p class="shopify-installments" id="shopify-installments">
-    <span class="shopify-installments__content" id="shopify-installments-content">Pay in full, or make 4 easy payments with <img class="shopify-installments__content-image" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/ShopPay_-_Color.svg?v=1697732176" style="display:inline;width:60px;">
-</span>
-  </p></div>
+                <span class="shopify-installments__content" id="shopify-installments-content">Pay in full, or make 4 easy payments with <img class="shopify-installments__content-image" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/ShopPay_-_Color.svg?v=1697732176" style="display:inline;width:60px;"></span>
+            </p>
         </div>
     </div>
     <script type="application/json" data-cartScriptJSON>
@@ -271,32 +274,6 @@
     </script>
     <div id="cart-overlay" style="display:none;">
         <div class="spinner"></div>
-      </div>
+    </div>
 </ajax-cart>
 <!-- END of AJAX CART HTML -->
-
-
-{%- liquid
-  assign free_gift_product = all_products[settings.gwp_product]
-  assign free_gift_variant = free_gift_product.selected_or_first_available_variant
-  assign gift_collection = collections[settings.gwp_collection]
-  assign eligible_products = '|'
-  for product in gift_collection.products
-    assign eligible_products = eligible_products | append: product.handle | append: '|'
-  endfor
--%}
-<script>
-  window.theme = window.theme || {};
-  window.theme.giftWithPurchase = window.theme.giftWithPurchase || {};
-  {% if free_gift_variant.available == false %}
-    window.theme.giftWithPurchase.enabled = false;
-  {% else %}
-    window.theme.giftWithPurchase.enabled = {{ settings.gwp_enabled }};
-    window.theme.giftWithPurchase.giftCollection = "{{ settings.gwp_collection }}";
-    window.theme.giftWithPurchase.eligigleProducts = "{{ eligible_products }}";
-    window.theme.giftWithPurchase.giftProduct = "{{ all_products[settings.gwp_product].title }}";
-    {% assign gwp_product = all_products[settings.gwp_product] %}
-    {% assign gwp_variant = gwp_product.selected_or_first_available_variant  %}
-    window.theme.giftWithPurchase.giftProductID = "{{ gwp_variant.id }}"
-  {% endif %}
-</script>

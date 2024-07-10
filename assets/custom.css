@@ -186,7 +186,7 @@ p.hoox-shop__upsell-description{font-style:italic;}
   
 }
 
-.card-product .badges{display:none}
+.card-product .badges:not(.free-gift-badge-sec) {display:none}
 
 .vendorname {
   text-transform: uppercase;

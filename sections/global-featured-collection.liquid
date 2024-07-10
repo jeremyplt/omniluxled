@@ -2,76 +2,75 @@
   <noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
   {% assign collection_grid_type = section.settings.collection_grid_type %}
   <section id="featuredcollection" class="section-content border-bottom pt-lg-7 pb-lg-10 pt-8 pb-8" data-section-id="{{ section.id }}" data-grid-type="{{ collection_grid_type }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
-      <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}" {% if collection_grid_type == 'grid' %}data-type="slider"{% endif %}>
+    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}" {% if collection_grid_type == 'grid' %}data-type="slider"{% endif %}>
+      <div class="row">
+          <div class="col-12 col-lg-6 col-md-8 mb-4 pb-1 text-center mx-auto">
+              {% if section.settings.heading_txt != blank %}
+                <h3 class="h2 section-title mb-0 d-lg-none">{{ section.settings.heading_txt | escape }}</h3>
+              {% endif %}
+          </div>
+      </div>
+    </div>
+
+    <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 mb-4 pb-1 text-center mx-auto">
-                {% if section.settings.heading_txt != blank %}
-                  <h3 class="h2 section-title mb-0 d-lg-none">{{ section.settings.heading_txt | escape }}</h3>
-                {% endif %}
+          {% unless section.settings.home_featured_product == blank %}
+            <div class="col-12 col-lg-6 mb-4 mb-lg-0 pb-1 pb-lg-0">
+              {% render 'card-product-style-featured', product: section.settings.home_featured_product %}
+            </div>
+          {% endunless %}
+            <div class="col-12 col-lg-6">
+                <slider-element class="swiper-container carousel collection-slider-style-3 d-block position-relative {% if section.settings.nav_arrows_outside %}arrow-outside{% endif %}">
+                    <div class="swiper swiper-slider card-carousel" data-slider='{
+                        "loop": false,
+                        "slidesPerView": 1.335,
+                        "spaceBetween": 15,
+                        "shortSwipes": true,
+                        "grabCursor": true,
+                        "preloadImages": false,
+                        "lazy": true,
+                        "navigation": {
+                            "nextEl": ".collection-style-4-next",
+                            "prevEl": ".collection-style-4-prev"
+                        },
+                        "pagination": {
+                            "el": ".swiper-pagination"
+                        },
+                        "breakpoints": {
+                            "768": {
+                                "slidesPerView": 2,
+                                "spaceBetween": 30
+                            }
+                        }
+                    }'>
+                        <div class="swiper-wrapper">
+                          {% for i in (1..2) %}
+                              {% capture featured_product %}featured_product_{{ i }}{% endcapture %}
+                              <div class="swiper-slide collection-style-4">
+                              {% render 'card-product-style-featured', product: section.settings[featured_product] %}
+                              </div>
+                          {% endfor %}
+                        </div>
+                        {% if section.settings.nav_dots %}
+                            <div class="swiper-pagination bottom-0 w-100 text-center mt-3 position-relative"></div>
+                        {% endif %}
+                    </div>
+                    {% if section.settings.nav_arrows %}
+                        <div class="swiper-button-next collection-style-4-next icon-next"></div>
+                        <div class="swiper-button-prev collection-style-4-prev icon-previous"></div>
+                    {% endif %}
+                </slider-element>
+                <div class="pt-xl-7 pt-lg-4 pt-5 mt-1">
+                  {% if section.settings.heading_txt != blank %}
+                      <h3 class="h2 section-title mb-5 d-lg-block d-none col-xl-5 col-6 px-0">{{ section.settings.heading_txt | escape }}</h3>
+                  {% endif %}
+                  {% if section.settings.btn_text != blank %}
+                      <a class="btn w-lg-auto w-100 btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+                  {% endif %}
+                </div>
             </div>
         </div>
-      </div>
-
-              <div class="container">
-                  <div class="row">
-                    {% unless section.settings.home_featured_product == blank %}
-                      <div class="col-12 col-lg-6 mb-4 mb-lg-0 pb-1 pb-lg-0">
-                        {% render 'card-product-style-featured', product: section.settings.home_featured_product %}
-                      </div>
-                    {% endunless %}
-                      <div class="col-12 col-lg-6">
-                          <slider-element class="swiper-container carousel collection-slider-style-3 d-block position-relative {% if section.settings.nav_arrows_outside %}arrow-outside{% endif %}">
-                              <div class="swiper swiper-slider card-carousel" data-slider='{
-                                  "loop": false,
-                                  "slidesPerView": 1.335,
-                                  "spaceBetween": 15,
-                                  "shortSwipes": true,
-                                  "grabCursor": true,
-                                  "preloadImages": false,
-                                  "lazy": true,
-                                  "navigation": {
-                                      "nextEl": ".collection-style-4-next",
-                                      "prevEl": ".collection-style-4-prev"
-                                  },
-                                  "pagination": {
-                                      "el": ".swiper-pagination"
-                                  },
-                                  "breakpoints": {
-                                      "768": {
-                                          "slidesPerView": 2,
-                                          "spaceBetween": 30
-                                      }
-                                  }
-                              }'>
-                                  <div class="swiper-wrapper">
-                                    {% for i in (1..2) %}
-                                        {% capture featured_product %}featured_product_{{ i }}{% endcapture %}
-                                        <div class="swiper-slide collection-style-4">
-                                        {% render 'card-product-style-featured', product: section.settings[featured_product] %}
-                                        </div>
-                                    {% endfor %}
-                                  </div>
-                                  {% if section.settings.nav_dots %}
-                                      <div class="swiper-pagination bottom-0 w-100 text-center mt-3 position-relative"></div>
-                                  {% endif %}
-                              </div>
-                              {% if section.settings.nav_arrows %}
-                                  <div class="swiper-button-next collection-style-4-next icon-next"></div>
-                                  <div class="swiper-button-prev collection-style-4-prev icon-previous"></div>
-                              {% endif %}
-                          </slider-element>
-                          <div class="pt-xl-7 pt-lg-4 pt-5 mt-1">
-                            {% if section.settings.heading_txt != blank %}
-                                <h3 class="h2 section-title mb-5 d-lg-block d-none col-xl-5 col-6 px-0">{{ section.settings.heading_txt | escape }}</h3>
-                            {% endif %}
-                            {% if section.settings.btn_text != blank %}
-                                <a class="btn w-lg-auto w-100 btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
-                            {% endif %}
-                          </div>
-                      </div>
-                  </div>
-              </div>
-      </div>
+    </div>
   </section>
   
   {% schema %}
