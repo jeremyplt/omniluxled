@@ -133,7 +133,7 @@
                                                 {% endif %}
                                             </div>
                                             {% unless item.properties['free_gift'] == 'true' %}
-                                            <div class="col-6 col-md-4 quantity-box">
+                                              <div class="col-6 col-md-4 quantity-box">
                                                 <div class="d-flex align-items-center justify-content-md-center">
                                                     {% if item.properties['promo_product'] %}
                                                         <input type="hidden" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" step="1" min="1" pattern="[0-9]*" inputmode="numeric" data-qty-input class="quantity form-control text-center">
@@ -268,6 +268,7 @@
 
                     <div class="text-center fw-normal font-size-md mt-3" style="line-height: 1.2142857143;">Shipping and taxes are calculated during checkout.</div>
                 </div>
+            </div>
             </div>
 
             {% if section.settings.show_back_btn %}

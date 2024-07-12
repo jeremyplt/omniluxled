@@ -63,6 +63,8 @@
       </div>
       <div class="col-12 col-lg-3 text-center text-lg-start pt-lg-2 mt-lg-10 mt-2 pt-1">
         <div class="d-inline-block ps-lg-4">
+          {% if line_item.fulfillment.tracking_number %}
+          <a href="{{ line_item.fulfillment.tracking_url }}"><p class="mb-0 fw-medium border-bottom lh-1">{{ 'customer.order.track_shipment' | t: name: order.name }}</p></a>{% endif %}
         </div>
     </div>
     </div>
@@ -271,3 +273,7 @@
 
   </div>
 </div>
+
+
+
+

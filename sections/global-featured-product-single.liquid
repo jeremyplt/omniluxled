@@ -1,26 +1,27 @@
 <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
-{% assign collection_grid_type = section.settings.collection_grid_type %}
-<section class="section-content border-top border-bottom pt-0 pb-0 featuredproductsingle" data-section-id="{{ section.id }}" data-grid-type="{{ collection_grid_type }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
-  <div class="row">
-    {% unless section.settings.home_featured_product == blank %}
-      <div class="col-12 col-lg-6">
-        {% render 'card-product-featured-single', product: section.settings.home_featured_product %}
+  <noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
+  {% assign collection_grid_type = section.settings.collection_grid_type %}
+  <section class="section-content border-top border-bottom pt-0 pb-0 featuredproductsingle" data-section-id="{{ section.id }}" data-grid-type="{{ collection_grid_type }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
+
+                  <div class="row">
+                      {% unless section.settings.home_featured_product == blank %}
+                      <div class="col-12 col-lg-6">
+                        {% render 'card-product-featured-single', product: section.settings.home_featured_product %}
+                      </div>
+                    {% endunless %}
+                      <div class="col-12 col-lg-6">
+                    <div class="inside-block text-left text-p-end ps-5  pb-lg-5 pt-4 mt-1 mt-lg-0 mb-lg-0 mb-1 pb-8 pe-20 ps-20" style="max-width:675px" bis_skin_checked="1"><div class="formatted-list pe-lg-3 ps-0 col-sm-10 col-12" bis_skin_checked="1">
+                            {% if section.settings.heading_txt != blank %}
+                                <h3 class="h2 section-title d-lg-block px-0"><a href="{{ all_products[section.settings.home_featured_product].url}}">{{ section.settings.heading_txt | escape }}</a></h3>
+                            {% endif %}
+                            {% render 'card-product-featured-single-noimage', product: section.settings.home_featured_product %}
+                          </div>
+                      </div></div>
+                  </div>
+
       </div>
-    {% endunless %}
-    <div class="col-12 col-lg-6">
-      <div class="inside-block text-left text-p-end ps-5  pb-lg-5 pt-4 mt-1 mt-lg-0 mb-lg-0 mb-1 pb-8 pe-20 ps-20" style="max-width:675px" bis_skin_checked="1">
-        <div class="formatted-list pe-lg-3 ps-0 col-sm-10 col-12" bis_skin_checked="1">
-          {% if section.settings.heading_txt != blank %}
-              <h3 class="h2 section-title d-lg-block px-0"><a href="{{ all_products[section.settings.home_featured_product].url}}">{{ section.settings.heading_txt | escape }}</a></h3>
-          {% endif %}
-          {% render 'card-product-featured-single-noimage', product: section.settings.home_featured_product %}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{% schema %}
+  </section>
+  {% schema %}
 {
   "name": "Featured Product Single",
   "tag": "section",

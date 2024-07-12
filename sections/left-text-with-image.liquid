@@ -8,104 +8,105 @@
     endif
 -%}
 {%- if section.settings.background_imagetone != blank -%}
-  <div class="{% if section.settings.image_bg_tone %}position-relative top-20 {% endif %}left-text-with-image">
+<div class="{% if section.settings.image_bg_tone %}position-relative top-20{% endif %} left-text-with-image">
     <span class="back-ground-fair-tone position-absolute w-100 start-0 top-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
         <span class="white-anim"></span>
     </span>
-  </div>
-{% endif %}
-<section class="{% if section.settings.section_padding %}section-content py-lg-11 py-8{% else %}mb-lg-10 mb-8{% endif %}" data-section-id="{{ section.id }}">
-  <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
-    <div id="Banner-{{ section.id }}" class="banner-section position-relative {{ section.settings.height }}">
-      {%- if section.settings.image != blank -%}
-          <div class="banner__media">
-            {% if section.settings.image_mobile != blank %}
-              <picture>
-                  {%- if mobileImage.width >= 375 -%}<source media="(max-width: 375px)" srcset="{{ mobileImage | image_url: width: 375, format: 'pjpg' }}">{%- endif -%}
-                  {%- if mobileImage.width >= 550 -%}<source media="(max-width: 550px)" srcset="{{ mobileImage | image_url: width: 550, format: 'pjpg' }}">{%- endif -%}
-                  {%- if mobileImage.width >= 767 -%}<source media="(max-width: 767px)" srcset="{{ mobileImage | image_url: width: 767, format: 'pjpg' }}">{%- endif -%}
-                  {%- if section.settings.image.width >= 991 -%}<source media="(max-width: 991px)" srcset="{{ section.settings.image | image_url: width: 991, format: 'pjpg' }}">{%- endif -%}
-                  {%- if section.settings.image.width >= 1200 -%}<source media="(max-width: 1200px)" srcset="{{ section.settings.image | image_url: width: 1200, format: 'pjpg' }}">{%- endif -%}
-                  {%- if section.settings.image.width >= 1500 -%}<source media="(max-width: 1500px)" srcset="{{ section.settings.image | image_url: width: 1500, format: 'pjpg' }}">{%- endif -%}
-                  {%- if section.settings.image.width >= 1720 -%}<source media="(max-width: 1720px)" srcset="{{ section.settings.image | image_url: width: 1720, format: 'pjpg' }}">{%- endif -%}
-                  {%- if section.settings.image.width >= 1920 -%}<source media="(max-width: 1920px)" srcset="{{ section.settings.image | image_url: width: 1920, format: 'pjpg' }}">{%- endif -%}
-                  {%- if section.settings.image.width >= 2560 -%}<source media="(max-width: 2560px)" srcset="{{ section.settings.image | image_url: width: 2560, format: 'pjpg' }}">{%- endif -%}
-                  {%- if section.settings.image.width >= 3800 -%}<source media="(max-width: 3800px)" srcset="{{ section.settings.image | image_url: width: 3800, format: 'pjpg' }}">{%- endif -%}
-                  <img src="{{ section.settings.image | image_url: width:section.settings.image.width, format: 'pjpg' }}" loading="lazy"
-                  alt="{{ section.settings.image.alt | default: block.settings.heading | escape }}"
-                  width="{{ section.settings.image.width }}"
-                  height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio | round }}"
-                  >
-              </picture>
-            {% else %}
-                <img srcset="
-                  {%- if mobileImage.width >= 375 -%}{{ mobileImage | image_url: width: 375, format: 'pjpg' }} 375w,{%- endif -%}
-                  {%- if mobileImage.width >= 550 -%}{{ mobileImage | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}
-                  {%- if mobileImage.width >= 768 -%}{{ mobileImage | image_url: width: 768, format: 'pjpg' }} 767w,{%- endif -%}
-                  {%- if section.settings.image.width >= 991 -%}{{ section.settings.image | image_url: width: 991, format: 'pjpg' }} 991w,{%- endif -%}
-                  {%- if section.settings.image.width >= 1200 -%}{{ section.settings.image | image_url: width: 1200, format: 'pjpg' }} 1200w,{%- endif -%}
-                  {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500, format: 'pjpg' }} 1500w,{%- endif -%}
-                  {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | image_url: width: 1780, format: 'pjpg' }} 1780w,{%- endif -%}
-                  {%- if section.settings.image.width >= 1920 -%}{{ section.settings.image | image_url: width: 1920, format: 'pjpg' }} 1920w,{%- endif -%}
-                  {%- if section.settings.image.width >= 2560 -%}{{ section.settings.image | image_url: width: 2560, format: 'pjpg' }} 2560w,{%- endif -%}
-                  {%- if section.settings.image.width >= 3800 -%}{{ section.settings.image | image_url: width: 3800, format: 'pjpg' }} 3800w,{%- endif -%}
-                  {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
-                  src="{{ section.settings.image | image_url: width: 1500, format: 'pjpg' }}" loading="lazy"
-                  alt="{{ section.settings.image.alt | default: block.settings.heading | escape }}"
-                  width="{{ section.settings.image.width }}"
-                  height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio | round }}"
-                  sizes="(max-width: 375px) 375px, (max-width: 550px) 550px, (max-width: 750px) 750px,
-                          (max-width: 991px) 991px, (max-width: 1200px) 1200px, (max-width: 1500px) 1500px, (max-width: 1780px) 1780px, (max-width: 1920px) 1920px,
-                          (max-width: 2560px) 2560px, (max-width: 3800px) 3800px, {{ section.settings.image.width }}px" >
-            {% endif %}
-            {% if section.settings.enable_overlay %}
-                <div class="overlay" style="background-color: {{ section.settings.overlay_bg_color }}; opacity: {{ section.settings.overlay_opacity }}; mix-blend-mode: multiply;"></div>
-            {% endif %}
-          </div>
-      {%- else -%}
-          <div class="banner__media placeholder">
-          {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-          </div>
-      {%- endif -%}
-      <div class="banner__content  py-md-11 {% if section.settings.mobile_TEXT %}mobile_text_center{% endif %} {{ section.settings.text_caption_align }}" style="align-items: {{ section.settings.desktop_text_box_position }};">
-        <div class="container px-0 mx-0">
-          <div class="col-md-11  ms-auto col-12 px-0  text-left {{ section.settings.text_align }}" style="color: {{ section.settings.txt_color }}">
-            <div class="assessment-content px-3 px-md-0">
-              {%- for block in section.blocks -%}
-                {%- case block.type -%}
-                {%- when 'heading' -%}
-                  <h1 class="banner__heading  mb-3 " {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
-                      <span>{{ block.settings.heading | escape }}</span>
-                  </h1>
-                {%- when 'html' -%}
-                  {{ block.settings.html }}
-                {%- when 'text' -%}
-                  <div class="banner__text " {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
-                      <p class="{% if section.settings.paragraph_bold %}font-size-lg-20 fw-normal{% else %}mt-3 {% endif %} {% if block.settings.text_2 != blank %}mb-4{%- endif -%} ">{{ block.settings.text }}</p>
-                  </div>
-                  {% if block.settings.text_2 != blank %}
-                  <div class="banner__text " {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
-                      <p class=" {% if section.settings.paragraph_bold %}font-size-lg-20 fw-normal{% endif %} mb-2">{{ block.settings.text_2 | escape }}</p>
-                  </div>
-                  {%- endif -%}
-                {%- when 'buttons' -%}
-                  <div class="mt-4 mt-md-5" {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
-                    {%- if block.settings.button_label_1 != blank -%}
-                        <a href="{{ block.settings.button_link_1 }}" class="btn btn{% if block.settings.btn_type_1 == 'outline' %}-{% endif %}{{ block.settings.btn_type_1 }}-{{ block.settings.btn_variant_1 }} {{ block.settings.btn_size_1 }}">{{ block.settings.button_label_1 | escape }}</a>
-                    {%- endif -%}
-                    {%- if block.settings.button_label_2 != blank -%}
-                        <a href="{{ block.settings.button_link_2 }}" class="btn btn{% if block.settings.btn_type_2 == 'outline' %}-{% endif %}{{ block.settings.btn_type_2 }}-{{ block.settings.btn_variant_2 }} {{ block.settings.btn_size_2 }}">{{ block.settings.button_label_2 | escape }}</a>
-                    {%- endif -%}
-                  </div>
-                {%- endcase -%}
-              {%- endfor -%}
+    {% endif %}
+    <section class="{% if section.settings.section_padding %}section-content py-lg-11 py-8{% else %}mb-lg-10 mb-8 {% endif %}"  data-section-id="{{ section.id }}">
+        <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+            <div id="Banner-{{ section.id }}" class="banner-section position-relative {{ section.settings.height }}">
+                {%- if section.settings.image != blank -%}
+                    <div class="banner__media">
+                      {% if section.settings.image_mobile != blank %}
+                        <picture>
+                            {%- if mobileImage.width >= 375 -%}<source media="(max-width: 375px)" srcset="{{ mobileImage | image_url: width: 375, format: 'pjpg' }}">{%- endif -%}
+                            {%- if mobileImage.width >= 550 -%}<source media="(max-width: 550px)" srcset="{{ mobileImage | image_url: width: 550, format: 'pjpg' }}">{%- endif -%}
+                            {%- if mobileImage.width >= 767 -%}<source media="(max-width: 767px)" srcset="{{ mobileImage | image_url: width: 767, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 991 -%}<source media="(max-width: 991px)" srcset="{{ section.settings.image | image_url: width: 991, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 1200 -%}<source media="(max-width: 1200px)" srcset="{{ section.settings.image | image_url: width: 1200, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 1500 -%}<source media="(max-width: 1500px)" srcset="{{ section.settings.image | image_url: width: 1500, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 1720 -%}<source media="(max-width: 1720px)" srcset="{{ section.settings.image | image_url: width: 1720, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 1920 -%}<source media="(max-width: 1920px)" srcset="{{ section.settings.image | image_url: width: 1920, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 2560 -%}<source media="(max-width: 2560px)" srcset="{{ section.settings.image | image_url: width: 2560, format: 'pjpg' }}">{%- endif -%}
+                            {%- if section.settings.image.width >= 3800 -%}<source media="(max-width: 3800px)" srcset="{{ section.settings.image | image_url: width: 3800, format: 'pjpg' }}">{%- endif -%}
+                            <img src="{{ section.settings.image | image_url: width:section.settings.image.width, format: 'pjpg' }}" loading="lazy"
+                            alt="{{ section.settings.image.alt | default: block.settings.heading | escape }}"
+                            width="{{ section.settings.image.width }}"
+                            height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio | round }}"
+                            >
+                        </picture>
+                      {% else %}
+                          <img srcset="
+                            {%- if mobileImage.width >= 375 -%}{{ mobileImage | image_url: width: 375, format: 'pjpg' }} 375w,{%- endif -%}
+                            {%- if mobileImage.width >= 550 -%}{{ mobileImage | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}
+                            {%- if mobileImage.width >= 768 -%}{{ mobileImage | image_url: width: 768, format: 'pjpg' }} 767w,{%- endif -%}
+                            {%- if section.settings.image.width >= 991 -%}{{ section.settings.image | image_url: width: 991, format: 'pjpg' }} 991w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1200 -%}{{ section.settings.image | image_url: width: 1200, format: 'pjpg' }} 1200w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500, format: 'pjpg' }} 1500w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | image_url: width: 1780, format: 'pjpg' }} 1780w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1920 -%}{{ section.settings.image | image_url: width: 1920, format: 'pjpg' }} 1920w,{%- endif -%}
+                            {%- if section.settings.image.width >= 2560 -%}{{ section.settings.image | image_url: width: 2560, format: 'pjpg' }} 2560w,{%- endif -%}
+                            {%- if section.settings.image.width >= 3800 -%}{{ section.settings.image | image_url: width: 3800, format: 'pjpg' }} 3800w,{%- endif -%}
+                            {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+                            src="{{ section.settings.image | image_url: width: 1500, format: 'pjpg' }}" loading="lazy"
+                            alt="{{ section.settings.image.alt | default: block.settings.heading | escape }}"
+                            width="{{ section.settings.image.width }}"
+                            height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio | round }}"
+                            sizes="(max-width: 375px) 375px, (max-width: 550px) 550px, (max-width: 750px) 750px,
+                                   (max-width: 991px) 991px, (max-width: 1200px) 1200px, (max-width: 1500px) 1500px, (max-width: 1780px) 1780px, (max-width: 1920px) 1920px,
+                                   (max-width: 2560px) 2560px, (max-width: 3800px) 3800px, {{ section.settings.image.width }}px" >
+                      {% endif %}
+                        {% if section.settings.enable_overlay %}
+                            <div class="overlay" style="background-color: {{ section.settings.overlay_bg_color }}; opacity: {{ section.settings.overlay_opacity }}; mix-blend-mode: multiply;"></div>
+                        {% endif %}
+                    </div>
+                {%- else -%}
+                    <div class="banner__media placeholder">
+                    {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                    </div>
+                {%- endif -%}
+                <div class="banner__content  py-md-11 {% if section.settings.mobile_TEXT %}mobile_text_center{% endif %} {{ section.settings.text_caption_align }}" style="align-items: {{ section.settings.desktop_text_box_position }};">
+                    <div class="container px-0 mx-0">
+                        <div class="col-md-11  ms-auto col-12 px-0  text-left {{ section.settings.text_align }}" style="color: {{ section.settings.txt_color }}">
+                        <div class="assessment-content px-3 px-md-0">
+                            {%- for block in section.blocks -%}
+                        {%- case block.type -%}
+                            {%- when 'heading' -%}
+                            <h1 class="banner__heading  mb-3 " {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                                <span>{{ block.settings.heading | escape }}</span>
+                            </h1>
+                            {%- when 'html' -%}
+                                {{ block.settings.html }}
+                            {%- when 'text' -%}
+                            <div class="banner__text " {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                                <p class="{% if section.settings.paragraph_bold %}font-size-lg-20 fw-normal{% else %}mt-3 {% endif %} {% if block.settings.text_2 != blank %}mb-4{%- endif -%} ">{{ block.settings.text }}</p>
+                            </div>
+                            {% if block.settings.text_2 != blank %}
+                            <div class="banner__text " {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                                <p class=" {% if section.settings.paragraph_bold %}font-size-lg-20 fw-normal{% endif %} mb-2">{{ block.settings.text_2 | escape }}</p>
+                            </div>
+                            {%- endif -%}
+                            {%- when 'buttons' -%}
+                                <div class="mt-4 mt-md-5" {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+                                    {%- if block.settings.button_label_1 != blank -%}
+                                        <a href="{{ block.settings.button_link_1 }}" class="btn btn{% if block.settings.btn_type_1 == 'outline' %}-{% endif %}{{ block.settings.btn_type_1 }}-{{ block.settings.btn_variant_1 }} {{ block.settings.btn_size_1 }}">{{ block.settings.button_label_1 | escape }}</a>
+                                    {%- endif -%}
+                                    {%- if block.settings.button_label_2 != blank -%}
+                                        <a href="{{ block.settings.button_link_2 }}" class="btn btn{% if block.settings.btn_type_2 == 'outline' %}-{% endif %}{{ block.settings.btn_type_2 }}-{{ block.settings.btn_variant_2 }} {{ block.settings.btn_size_2 }}">{{ block.settings.button_label_2 | escape }}</a>
+                                    {%- endif -%}
+                                </div>
+                            {%- endcase -%}
+                        {%- endfor -%}
+                        </div>
+                    </div>
+                        </div>
+
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+</div>
 
 {% schema %}
 {

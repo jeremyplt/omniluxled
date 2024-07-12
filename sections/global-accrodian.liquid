@@ -27,10 +27,10 @@
                         {% endif %}
                     </div>
                 {% endif %}
-                <custom-accordion data-accordionType="single">
+                <custom-accordion {{ block.shopify_attributes }} data-accordionType="single">
                     {% for block in section.blocks %}
                         {% if block.settings.title != blank and block.settings.answer != blank %}
-                            <div class="accordion__container  border-top {% if forloop.last == true %}border-bottom{% endif %} py-3" {{ block.shopify_attributes }}>
+                            <div class="accordion__container  border-top {% if forloop.last == true %}border-bottom{% endif %} py-3">
                                 <a class="accordion__toggle d-flex align-items-center pe-2 justify-content-between" href="javascript:void(0);" title="Open Are all products made with organic ingredients?" rel="nofollow" aria-label="Open Are all products made with organic ingredients?" role="button" aria-expanded="false" aria-controls="faq-product-information-1">
                                     <p class="m-0 fw-bold font-size-md h6 ls-1">{{ block.settings.title }}</p>
                                     <span class="ox-plus d-block font-size-sm"></span>

@@ -41,10 +41,8 @@ class ProductForm extends HTMLElement {
     const qtyInput = this.querySelector("[data-qty-input]");
     const pdpContainer = this.closest(".product-details-wrapper");
 
-    if (submitButton) {
-      submitButton.setAttribute("disabled", true);
-      submitButton.classList.add("loading");
-    }
+    submitButton.setAttribute("disabled", true);
+    submitButton.classList.add("loading");
 
     addItems.push(JSON.parse(serializeForm(this.form)));
     if (pdpContainer) {
@@ -82,10 +80,8 @@ class ProductForm extends HTMLElement {
         console.error(e);
       })
       .finally(() => {
-        if (submitButton) {
-          submitButton.classList.remove("loading");
-          submitButton.removeAttribute("disabled");
-        }
+        submitButton.classList.remove("loading");
+        submitButton.removeAttribute("disabled");
       });
   }
 

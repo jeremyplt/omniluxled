@@ -64,26 +64,24 @@ typeof TemplateProductJS !== 'undefined' && new TemplateProductJS();
 
 const box = document.querySelector('.product-add-cart');
 var stickyBtn = document.querySelector('[data-stickyBtn]');
-if (stickyBtn) {
-  document.addEventListener('scroll', function () {
-    if (isInViewport(box)) {
-      if(stickyBtn.classList.contains('d-block')){
-        stickyBtn.classList.remove('d-block');
-      }
-      stickyBtn.classList.add('d-none');
-      document.body.classList.remove('sticky-bar-visible');
-  
-    } else {
-      if(stickyBtn.classList.contains('d-none')){
-        stickyBtn.classList.remove('d-none');
-      }
-      stickyBtn.classList.add('d-block');
-      document.body.classList.add('sticky-bar-visible');
+document.addEventListener('scroll', function () {
+  if (isInViewport(box)) {
+    if(stickyBtn.classList.contains('d-block')){
+      stickyBtn.classList.remove('d-block');
     }
-  }, {
-    passive: true
-  });
-}
+    stickyBtn.classList.add('d-none');
+    document.body.classList.remove('sticky-bar-visible');
+
+  } else {
+    if(stickyBtn.classList.contains('d-none')){
+      stickyBtn.classList.remove('d-none');
+    }
+    stickyBtn.classList.add('d-block');
+    document.body.classList.add('sticky-bar-visible');
+  }
+}, {
+  passive: true
+});
 
 function isInViewport(el) {
   if (!el) {

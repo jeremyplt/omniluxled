@@ -51,19 +51,27 @@
     </p>
   {% endif %}
 
+  {%- liquid
+     assign bullet_count = 0
+     for block in section.blocks
+        if block.type == 'bullets'
+          assign bullet_count = bullet_count | plus: 1
+        endif
+     endfor
+  -%}
+
+  {% if bullet_count > 0 %}
   <ul class="hoox-hero__bullets">
-    {% for block in section.blocks %}
+    {%- for block in section.blocks -%}
       {% if block.type == 'bullets' %}
-        {% liquid
-          assign bulletText = block.settings.bullet_text
-        %}
         <li class="hoox-hero__bullet hoox-text-primary">
           {% render 'hoox-icon-checkmark' %}
-          {{ bulletText }}
+          {{ block.settings.bullet_text }}
         </li>
       {% endif %}
-    {% endfor %}
+    {%- endfor -%}
   </ul>
+  {% endif %}
 
   {%- if sectionBtnUrl -%}
     <div class="hoox-hero__btn-wrapper">

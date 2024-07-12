@@ -79,10 +79,10 @@ function featuredInViewport() {
 
   const hasElementInViewport = featuredIn && isInViewport(featuredIn);
 
-  if (!window.runExperiment100489702 && hasElementInViewport) {
-    window.runExperiment100489702 = 1;
+  if (!window.runExperiment100489995 && hasElementInViewport) {
+    window.runExperiment100489995 = 1;
     window._conv_q = window._conv_q || [];
-    window._conv_q.push(["executeExperiment", "100489702"]);
+    window._conv_q.push(["executeExperiment", "100489995"]);
     console.log(
       "Convert - Move Social proof below featured products - Experiment Activated"
     );

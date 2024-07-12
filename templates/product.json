@@ -1,18 +1,9 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
-    "circle_video_swipe_D6adpk": {
-      "type": "circle-video-swipe",
+    "d70430d9-8de9-4f06-8108-95d6601a15ab": {
+      "type": "circle-video-menu",
       "blocks": {
-        "circle_link_JQ9fLc": {
+        "e38ac31d-5bd6-47c0-9bc0-dd866e282641": {
           "type": "circle-link",
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-07-12_at_5.38.00_PM.jpg",
@@ -20,7 +11,7 @@
             "video": "shopify:\/\/files\/videos\/lizethstory.mp4"
           }
         },
-        "circle_link_qiTQpk": {
+        "e6acb30c-fb23-47bd-9aca-c1da92e3dcfc": {
           "type": "circle-link",
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_5.09.51_PM.jpg",
@@ -28,7 +19,7 @@
             "video": "shopify:\/\/files\/videos\/test2.mov"
           }
         },
-        "circle_link_YDewYG": {
+        "97612f92-d4dc-4b9a-8da8-18305aa85257": {
           "type": "circle-link",
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_8.29.07_AM.png",
@@ -36,7 +27,7 @@
             "video": "shopify:\/\/files\/videos\/Video 3 - IG Scroller.mp4"
           }
         },
-        "circle_link_YiGjkJ": {
+        "392cd7d4-bfcd-45f2-a584-98c96d8332d9": {
           "type": "circle-link",
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_8.28.15_AM.png",
@@ -44,7 +35,7 @@
             "video": "shopify:\/\/files\/videos\/Video 2 - IG Scroller.mp4"
           }
         },
-        "circle_link_9GJXpR": {
+        "cd5a9719-eda6-4ad9-9b9d-c3c66cf96667": {
           "type": "circle-link",
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_12.48.02_PM.png",
@@ -52,7 +43,7 @@
             "video": "shopify:\/\/files\/videos\/Testimonial 6.mp4"
           }
         },
-        "circle_link_NENwhG": {
+        "46b73a84-50cf-4aab-8f9e-de39a54a1613": {
           "type": "circle-link",
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_12.56.02_PM.png",
@@ -62,16 +53,64 @@
         }
       },
       "block_order": [
-        "circle_link_JQ9fLc",
-        "circle_link_qiTQpk",
-        "circle_link_YDewYG",
-        "circle_link_YiGjkJ",
-        "circle_link_9GJXpR",
-        "circle_link_NENwhG"
+        "e38ac31d-5bd6-47c0-9bc0-dd866e282641",
+        "e6acb30c-fb23-47bd-9aca-c1da92e3dcfc",
+        "97612f92-d4dc-4b9a-8da8-18305aa85257",
+        "392cd7d4-bfcd-45f2-a584-98c96d8332d9",
+        "cd5a9719-eda6-4ad9-9b9d-c3c66cf96667",
+        "46b73a84-50cf-4aab-8f9e-de39a54a1613"
       ],
       "settings": {
         "border_color": "#000000",
         "div_id": "contourpdp",
+        "ignore": true
+      }
+    },
+    "d84aa67d-fef0-442d-8364-790f28934d4d": {
+      "type": "circle-video-menu",
+      "blocks": {
+        "6ce22c15-9550-44cf-b290-22e0d69efb10": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-07_at_2.21.22_PM.jpg",
+            "label": "Ariana's Story",
+            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Ariana's Story.mp4"
+          }
+        },
+        "f5ead3a0-d024-4492-80ff-131f79ca714d": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-19_at_9.40.29_PM.jpg",
+            "label": "Jess's Story",
+            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Jess' Story.mp4"
+          }
+        },
+        "90ccee30-cb0b-4eff-b493-24753f4bc1fd": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-07_at_2.26.19_PM.jpg",
+            "label": "Sophie's Story",
+            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Sophie's Story.mp4"
+          }
+        },
+        "f6c1532d-2a8e-4c7d-901d-cf816d9d28f9": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/alana.jpg",
+            "label": "Alana's Story",
+            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Alana's Story.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "6ce22c15-9550-44cf-b290-22e0d69efb10",
+        "f5ead3a0-d024-4492-80ff-131f79ca714d",
+        "90ccee30-cb0b-4eff-b493-24753f4bc1fd",
+        "f6c1532d-2a8e-4c7d-901d-cf816d9d28f9"
+      ],
+      "settings": {
+        "border_color": "#000000",
+        "div_id": "clearpdp",
         "ignore": true
       }
     },
@@ -484,6 +523,7 @@
         "0fb9a067-2046-4361-9075-78ba613a0a94",
         "76e7d130-868f-4603-9228-3ce3e820fb17"
       ],
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "heading_style": "heading_style_1",
@@ -1013,7 +1053,8 @@
     }
   },
   "order": [
-    "circle_video_swipe_D6adpk",
+    "d70430d9-8de9-4f06-8108-95d6601a15ab",
+    "d84aa67d-fef0-442d-8364-790f28934d4d",
     "main",
     "8b7008db-ace8-41cc-9cda-be64cf66dd7e",
     "1012647f-8fc2-4238-8ef1-51aef396d8d1",

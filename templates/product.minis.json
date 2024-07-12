@@ -627,6 +627,7 @@
         "0fb9a067-2046-4361-9075-78ba613a0a94",
         "76e7d130-868f-4603-9228-3ce3e820fb17"
       ],
+      "disabled": true,
       "settings": {
         "fluid_layout": false,
         "heading_style": "heading_style_1",

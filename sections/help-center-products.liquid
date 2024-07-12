@@ -74,6 +74,7 @@ tab == 'hydrocolloid-refill-patch-3'
                 {% endif %}
 
                 <custom-tabs class="d-block help-categories position-relative" {{ block.shopify_attributes }}>
+                    <div class="">
                       <div id="productTabs" class="d-flex flex-wrap" data-product-tabs>
                         <ul class="tabs d-flex list-unstyled text-uppercase fw-medium border-0 mx-auto" role="tablist">
                           <li id="custom-tab-btn-1" class="tablink px-md-3 px-2 {% if tab == 'contour-face' %} open {% endif %}" role="tab" data-tablink="#{{ section.settings.pro_btn1 | handle }}">
@@ -596,7 +597,7 @@ tab == 'hydrocolloid-refill-patch-3'
                                       </div>
                                     </div>
                                 </div>
-                          <div class="accordion__container py-3 border-top ">
+              <div class="accordion__container py-3 border-top ">
                                   <a class="text-decoration-none accordion__toggle d-flex h6 text-uppercase mb-0" href="javascript:void(0);" title="Open FAQS" rel="nofollow" aria-label="Open FAQS" role="button" aria-expanded="false" aria-controls="accordion_customTab4">
                                     <span>{{ section.settings.tabTitle3 }}</span>
                                     <span class="ms-auto d-flex justify-content-center align-items-center font-size-xs">

@@ -1,7 +1,7 @@
 <!-- section: product-image-with_table -->
 {%- if section.settings.display_for_this_product == 'true' -%}
 <link rel="stylesheet" href="{{ 'global-image-with-text.css' | asset_url }}">
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" defer></script>
 
 <section class="section-content image-with-text image-with-table py-0 position-relative {% if section.settings.enable_background_tone %}background-tone{% endif %}"  data-section-id="{{ section.id }}" style="background:{{ section.settings.section_bg_color }}; color:{{ section.settings.section_txt_color }}">
 
