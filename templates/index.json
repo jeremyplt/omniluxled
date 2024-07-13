@@ -604,15 +604,15 @@
         "collection_xGYCHd": {
           "type": "collection",
           "settings": {
-            "url": "shopify:\/\/products\/omnilux-men",
-            "title": "Anti-aging"
+            "url": "shopify:\/\/pages\/men",
+            "title": "Men's"
           }
         },
         "collection_UipieC": {
           "type": "collection",
           "settings": {
-            "url": "",
-            "title": "Anti-aging"
+            "url": "shopify:\/\/collections\/topical-skincare",
+            "title": "Topicals"
           }
         }
       },
