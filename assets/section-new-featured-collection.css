@@ -81,4 +81,9 @@
     .new-featured-collection__title {
         padding: .6rem 1rem;
     }
+
+    .new-featured-collection__heading {
+        font-size: 32px;
+        margin-bottom: 1rem;
+    }
 }
