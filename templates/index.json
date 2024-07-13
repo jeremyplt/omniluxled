@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "fb5ecb5e-55ca-4dd5-a283-3b9b227357b3": {
@@ -575,6 +584,53 @@
         "btn_size": ""
       }
     },
+    "new_featured_collection_dDJLD8": {
+      "type": "new-featured-collection",
+      "blocks": {
+        "collection_ETn7mE": {
+          "type": "collection",
+          "settings": {
+            "url": "shopify:\/\/pages\/anti-aging",
+            "title": "Anti-Aging"
+          }
+        },
+        "collection_knzPTX": {
+          "type": "collection",
+          "settings": {
+            "url": "shopify:\/\/pages\/anti-acne",
+            "title": "Anti-Acne"
+          }
+        },
+        "collection_xGYCHd": {
+          "type": "collection",
+          "settings": {
+            "url": "shopify:\/\/products\/omnilux-men",
+            "title": "Anti-aging"
+          }
+        },
+        "collection_UipieC": {
+          "type": "collection",
+          "settings": {
+            "url": "",
+            "title": "Anti-aging"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ETn7mE",
+        "collection_knzPTX",
+        "collection_xGYCHd",
+        "collection_UipieC"
+      ],
+      "settings": {
+        "heading": "Shop By Skincare Need",
+        "description": "<p>Find the right device with clinically-proven results for clearer and healthier skin.<\/p>",
+        "button_label": "Shop All products",
+        "button_url": "shopify:\/\/collections\/all",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "77fd4976-1b8b-4bdf-82b9-0edcf38a733b": {
       "type": "global-text-with-right-video",
       "settings": {
@@ -1086,6 +1142,7 @@
     "7caf6918-0887-4d78-b125-88468bd9dd86",
     "483972b6-05da-4d1a-964a-d5598ce78682",
     "c552e92a-f090-4e52-8c25-337f36136add",
+    "new_featured_collection_dDJLD8",
     "77fd4976-1b8b-4bdf-82b9-0edcf38a733b",
     "dcb3cafc-7296-46cc-8c09-ce11f9bfb43c",
     "ee29c9a6-cc9d-454d-a792-422630926ee6",
