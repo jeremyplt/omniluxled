@@ -15,7 +15,7 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding new-featured-collection">
-    <div class="new-featured-collection__inner page-width">
+    <div class="new-featured-collection__inner container">
         {% if section.settings.heading != blank %}
             <h2 class="new-featured-collection__heading">{{ section.settings.heading }}</h2>
         {% endif %}
@@ -25,14 +25,14 @@
         {% if section.blocks.size > 0 %}
             <div class="new-featured-collection__grid">
                 {% for block in section.blocks %}
-                    <div class="new-featured-collection__item">
+                    <a href="{{ block.settings.url }}" class="new-featured-collection__item">
                         {% if block.settings.image != blank %}
                             <div class="new-featured-collection__image">{{ block.settings.image | image_url: width: 1000 | image_tag: alt: block.settings.image.alt }}</div>
                         {% endif %}
                         {% if block.settings.title != blank %}
                             <div class="new-featured-collection__title">{{ block.settings.title }}</div>
                         {% endif %}
-                    </div>
+                    </a>
                 {% endfor %}
             </div>
         {% endif %}

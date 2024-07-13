@@ -2958,3 +2958,11 @@ html:not(.test-animated-review-text) .rev-txt--test {
   font-weight: bold;
   font-size: 20px;
 }
+
+.test-skin-goal .section-content.info-block-wrapper.py-8.border-bottom.py-lg-11 {
+  display: none;
+}
+
+html:not(.test-skin-goal) .new-featured-collection {
+  display: none;
+}
