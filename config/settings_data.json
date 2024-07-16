@@ -98,7 +98,7 @@
     "enable_shipping_bar": true,
     "free_shipping_txt": "Congratulations! You've earned free shipping.",
     "free_shipping_left": "You are ${addMoreForFreeShip} away from free shipping!",
-    "gwp_enabled": false,
+    "gwp_enabled": true,
     "gwp_collection": "eligible-for-free-gift",
     "gwp_product": "omnilux-hydrogel-facial-mask-free-gift",
     "enable_login_helper": false,
@@ -220,9 +220,9 @@
         ],
         "settings": {
           "topbar_enabled": true,
-          "topbar_text": "<strong>FREE SHIPPING ON ORDERS $100+ USD<\/strong>",
+          "topbar_text": "<strong>HAPPENING NOW: FREE GIFT WITH PURCHASE OF ANY FULL-SIZE LED DEVICE<\/strong>",
           "page_url": "",
-          "topbar_text2": "<strong>FREE SHIPPING ON ORDERS $100+ USD<\/strong>",
+          "topbar_text2": "<strong>HAPPENING NOW: FREE GIFT WITH PURCHASE OF ANY FULL-SIZE LED DEVICE<\/strong>",
           "page_url2": "",
           "topbar_text3": "",
           "page_url3": "",
@@ -1226,7 +1226,7 @@
       "body .accessibility-trigger.aioa-small-icon button {width: 60px !important; height: 60px !important; margin: 7px 10px;}",
       "body .accessibility-trigger.aioa-small-icon button img {width: 50px !important; height: 50px !important;}",
       "@media screen and (max-width: 992px) {body .accessibility-trigger.aioa-small-icon button {width: 50px !important; height: 50px !important; }}",
-      "\/* 20240605 - Nested Pop-Up widgets *\/.sticky-bar-visible .accessibility-trigger.aioa_bottom_left button {margin-bottom: 60px;}"
+      " \/* 20240605 - Nested Pop-Up widgets *\/.sticky-bar-visible .accessibility-trigger.aioa_bottom_left button {margin-bottom: 60px;}"
     ]
   }
 }

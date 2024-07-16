@@ -1,3 +1,7 @@
+/*hide testimonials on hydrogel*/
+.template-product.omnilux-hydrogel-face-mask .clearpdp{display:none!important;}
+.template-product.omnilux-hydrogel-face-mask .cbb-frequently-bought-container.cbb-desktop-view{margin-bottom:110px!important;}
+
 /*pdp save 10%*/
 .save10pdp .hoox-newsletter__form-group{flex-direction: column;}
 .save10pdp div.needsclick{padding:0!important;background:transparent!important;}
@@ -205,8 +209,13 @@ p.hoox-shop__upsell-description{font-style:italic;}
 .template-page.home .index-featured-collectiion{max-width:1350px;margin:0 auto;}
 .template-page.home .index-featured-collectiion .border-bottom{border-bottom:0!important;}
 .template-page.home .text-with-right-video .footer-btn-warp{margin-top: 26px!important;}
+
 @media(min-width:1800px){
 .image-hero.shortbanner .tallheight .swiper-slide {height: calc(85vh - 140px);min-height: 0vw!important;}
+}
+
+@media(min-width:1400px){
+.image-hero.shortbanner .media-wrap{object-position: center center!important;}
 }
 
 @media(min-width:999px){

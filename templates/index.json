@@ -11,14 +11,14 @@
         "@media (max-width: 600px) {.image-hero-desktop h2 {font-size: 30px !important; letter-spacing: unset !important; }}"
       ],
       "settings": {
-        "image_desktop": "shopify:\/\/shop_images\/Save_up_to_100_3.png",
-        "image_mobile": "shopify:\/\/shop_images\/Untitled_design_-_2024-02-28T075217.791.png",
-        "title": "#1 Dermatologist  Recommended LED Brand",
-        "subtitle": "Clinically proven LED devices boost collagen production & soothe skin in just 10 mins.",
-        "mobilesubtitle": "Clinically proven LED devices boost collagen production & soothe skin in just 10 mins.",
+        "image_desktop": "shopify:\/\/shop_images\/free-gift-hero-desktop.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/free-gift-hero-mobile.jpg",
+        "title": "Free Gift with Purchase!",
+        "subtitle": "Purchase any full-size LED device and receive a free 3-pack of Hydrogel Facial Masks.",
+        "mobilesubtitle": "Purchase any full-size LED device and receive a free 3-pack of Hydrogel Facial Masks.",
         "btn_text": "TRANSFORM YOUR SKIN",
         "btn_link": "https:\/\/omniluxled.com\/collections\/all",
-        "content_position": "2",
+        "content_position": "1",
         "custom_class": ""
       }
     },
