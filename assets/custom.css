@@ -795,6 +795,7 @@ p.hoox-shop__upsell-description{font-style:italic;}
 /*trusted by stars*/
 .review-ctr {
   display: flex;
+  align-items: center;
 }
 .review-ctr-mbl {
   display: none;

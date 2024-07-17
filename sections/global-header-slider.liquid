@@ -112,7 +112,7 @@
                     <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
                     <img class="star-img-mbl" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
                     </div>
-                    <p class="rev-txt-mbl">&nbsp; &nbsp;{{ block.settings.trustedbytxt }}</p>
+                    <p class="rev-txt-mbl rev-txt--test"><span class="animated-number">300K+</span> Glowing Customers</p>
                   </div>
                                             {% endif %}
                                               </div>
@@ -229,7 +229,7 @@
                     <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
                     <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
                     <img class="star-img" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Icon_ionic-ios-star.png?v=1689126865">
-                    <p class="rev-txt">&nbsp; &nbsp;{{ block.settings.trustedbytxt }}</p>
+                    <p class="rev-txt rev-txt--test">&nbsp; &nbsp;<span class="animated-number">300K+</span> Glowing Customers</p>
                   </div>
                      {% endif %}
                         
@@ -644,6 +644,47 @@
 
 {{ 'global-header-slider.css' | asset_url | stylesheet_tag }}
 {{ 'global-video-with-text.css' | asset_url | stylesheet_tag }}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const start = 220000;
+      const end = 300000;
+      const duration = 6000; // duration in milliseconds
+
+      const animatedNumber = document.querySelectorAll('.animated-number');
+      const startTime = performance.now();
+
+      animatedNumber.forEach(number => {
+        number.style.width = "80px";
+        number.style.display = "inline-block";
+      });
+
+      const animate = () => {
+          const currentTime = performance.now();
+          const elapsedTime = currentTime - startTime;
+          const progress = Math.min(elapsedTime / duration, 1);
+          const currentNumber = Math.floor(progress * (end - start) + start);
+
+          animatedNumber.forEach(number => {
+            number.textContent = currentNumber.toLocaleString();
+          });
+
+          if (progress < 1) {
+              requestAnimationFrame(animate);
+          } else {
+            animatedNumber.forEach(number => {
+              number.textContent = "300K+";
+              number.style.width = "auto";
+              number.style.display = "content";  
+            });
+          }
+      };
+
+      requestAnimationFrame(animate);
+  });
+</script>
+
+
 {% if section.settings.top_padding_zero %}
   <style>
   .header-slider .container-fluid.aos-init{
