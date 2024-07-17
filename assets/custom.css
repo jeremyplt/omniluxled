@@ -3070,3 +3070,14 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
 html .circle-video-menu-wrap.circle-video-swipe {
   display: block !important;
 }
+
+.hoox-hero__reviews {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.hoox-hero__reviews .rev-txt--test {
+  margin-bottom: 0;
+}
