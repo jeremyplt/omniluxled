@@ -2954,7 +2954,7 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
 
 @media (max-width: 749px) {
   .review-ctr-mbl {
-    display: flex;
+    display: flex !important;
     align-items: center;
     gap: 5px;
     justify-content: center;
