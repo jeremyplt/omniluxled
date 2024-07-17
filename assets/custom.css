@@ -2944,16 +2944,16 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
   color: #ffdc00;
 }
 
-html:not(.test-animated-review-text) .rev-txt--test {
+/* html:not(.test-animated-review-text) .rev-txt--test {
   display: none;
-}
+} */
 
-.test-animated-review-text .rev-txt-mbl:not(.rev-txt--test), .test-animated-review-text .rev-txt:not(.rev-txt--test) {
+.rev-txt-mbl:not(.rev-txt--test), .rev-txt:not(.rev-txt--test) {
   display: none;
 }
 
 @media (max-width: 749px) {
-  .test-animated-review-text .review-ctr-mbl {
+  .review-ctr-mbl {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -2961,7 +2961,7 @@ html:not(.test-animated-review-text) .rev-txt--test {
   }
 }
 
-.test-animated-review-text .review-ctr-mbl .ds-flx {
+.review-ctr-mbl .ds-flx {
   max-width: fit-content;
   margin: 0;
 }
