@@ -55,7 +55,7 @@
         "76a7a38c-9d9a-449e-8772-ccd3c36b9a06"
       ],
       "custom_css": [
-        "@media (max-width: 1350px) {.header-slider-desktop__content {-webkit-box-flex: 0 !important; -ms-flex: 0 0 auto !important; flex: 0 0 auto !important; width: 66.66667% !important; }}"
+        "@media (max-width: 1350px) {.header-slider-desktop__content {-webkit-box-flex: 0 !important; -ms-flex: 0 0 auto !important; flex: 0 0 auto !important; width: 100% !important; }}"
       ],
       "settings": {
         "enabled": true,
