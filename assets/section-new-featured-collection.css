@@ -4,10 +4,12 @@
 
 .new-featured-collection__heading {
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .new-featured-collection__description {
     text-align: center;
+    font-size: 18px;
 }
 
 .new-featured-collection__grid {
@@ -21,8 +23,28 @@
     border: solid 1px black;
 }
 
+.new-featured-collection__image {
+    position: relative;
+}
+
+.new-featured-collection__image::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    opacity: 0;
+    background-color: black;
+    transition: all .2s ease-in-out;
+    position: absolute;
+}
+
+.new-featured-collection__item:hover .new-featured-collection__image::after {
+    opacity: 0.5;
+}
+
 .new-featured-collection__image img {
-    aspect-ratio: 10/8;
+    aspect-ratio: 338/310;
     object-fit: cover;
 }
 
@@ -30,6 +52,12 @@
     text-align: center;
     padding: 1rem;
     font-size: 18px;
+    background-color: transparent;
+    transition: all .2s ease-in-out;
+}
+
+.new-featured-collection__item:hover .new-featured-collection__title {
+    background-color: white;
 }
 
 .new-featured-collection__button {
@@ -60,23 +88,15 @@
 
 @media (max-width: 749px) {
     .new-featured-collection__grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         column-gap: .75rem;
         row-gap: .75rem;
     }
 
-    .new-featured-collection__item:first-child {
+    /* .new-featured-collection__item:first-child {
         grid-column-start: 1;
         grid-column-end: 4;
-    }
-
-    .new-featured-collection__image img {
-        aspect-ratio: 8/10;
-    }
-
-    .new-featured-collection__item:first-child img {
-        aspect-ratio: 10/6;
-    }
+    } */
 
     .new-featured-collection__title {
         padding: .6rem .5rem;
@@ -86,5 +106,23 @@
     .new-featured-collection__heading {
         font-size: 32px;
         margin-bottom: 1rem;
+    }
+
+    .new-featured-collection__title {
+        font-weight: bold;
+        text-decoration: underline;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .new-featured-collection__title::after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-size: 16px 16px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3' /%3E%3C/svg%3E%0A");
     }
 }
