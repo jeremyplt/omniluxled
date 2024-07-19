@@ -591,7 +591,7 @@
           "type": "collection",
           "settings": {
             "url": "shopify:\/\/pages\/anti-aging",
-            "image": "shopify:\/\/shop_images\/Omnilux_33637.png",
+            "image": "shopify:\/\/shop_images\/Frame_21.png",
             "title": "Anti-Aging"
           }
         },
@@ -599,7 +599,7 @@
           "type": "collection",
           "settings": {
             "url": "shopify:\/\/pages\/anti-acne",
-            "image": "shopify:\/\/shop_images\/Omnilux_May.png",
+            "image": "shopify:\/\/shop_images\/Frame_21_76f15b24-c215-4bbb-92c4-b40dab81955c.png",
             "title": "Anti-Acne"
           }
         },
@@ -607,7 +607,7 @@
           "type": "collection",
           "settings": {
             "url": "shopify:\/\/pages\/men",
-            "image": "shopify:\/\/shop_images\/Omnilux.png",
+            "image": "shopify:\/\/shop_images\/Frame_21_794cdc2c-ba5c-4ebf-a26e-dc83787dc1ea.png",
             "title": "Men's"
           }
         },
@@ -615,7 +615,7 @@
           "type": "collection",
           "settings": {
             "url": "shopify:\/\/collections\/topical-skincare",
-            "image": "shopify:\/\/shop_images\/Eye_Cream_Selects.png",
+            "image": "shopify:\/\/shop_images\/Frame_21_d5c9d0bf-1f18-4c98-b3ea-9302b27bc2bc.png",
             "title": "Topicals"
           }
         }
