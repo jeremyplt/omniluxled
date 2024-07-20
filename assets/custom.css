@@ -214,9 +214,6 @@ p.hoox-shop__upsell-description{font-style:italic;}
 .image-hero.shortbanner .tallheight .swiper-slide {height: calc(85vh - 140px);min-height: 0vw!important;}
 }
 
-@media(min-width:1400px){
-.image-hero.shortbanner .media-wrap{object-position: center center!important;}
-}
 
 @media(min-width:999px){
 .image-hero.shortbanner .media-wrap{object-position: top center;}
