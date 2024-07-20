@@ -2959,6 +2959,8 @@ html:not(.test-animated-review-text) .rev-txt--test {
   font-size: 20px;
 }
 
+/* Test Skin Goal | Class: .test-skin-goal */
+
 .test-skin-goal .section-content.info-block-wrapper.py-8.border-bottom.py-lg-11 {
   display: none;
 }

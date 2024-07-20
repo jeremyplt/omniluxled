@@ -88,3 +88,22 @@ function featuredInViewport() {
     );
   }
 }
+
+// Skin Goal A/B Test
+
+window.addEventListener("scroll", featuredCollectionInViewport);
+document.addEventListener("DOMContentLoaded", featuredCollectionInViewport);
+
+function featuredCollectionInViewport() {
+  const featuredCollection = document.querySelector("#featuredcollection");
+
+  const hasElementInViewport =
+    featuredCollection && isInViewport(featuredCollection);
+
+  if (!window.runExperiment100492045 && hasElementInViewport) {
+    window.runExperiment100492045 = 1;
+    window._conv_q = window._conv_q || [];
+    window._conv_q.push(["executeExperiment", "100492045"]);
+    console.log("Convert - Homepage | Skin Goal - Experiment Activated");
+  }
+}
