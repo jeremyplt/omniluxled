@@ -39,15 +39,12 @@
         </div>
         <div class="modal__swipe-animation">
             <span style="margin-bottom: 1rem;">Swipe up</span>
-            {% comment %} <iframe src="https://lottie.host/embed/7e8cdc85-0dc4-4086-af5e-e4b1f5b55f62/X6onBgMQvk.json" style="transform: rotate(180deg)" ></iframe> {% endcomment %}
             <span style="transform: rotate(180deg)">
               <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
               <dotlottie-player src="https://lottie.host/9e15963a-59ab-415c-ac89-6fa66ca3baa1/Q84skeKrwV.json" background="transparent" speed="3" style="width: 100px; height: 100px;" loop autoplay></dotlottie-player>
             </span>
         </div>
     </div>
-
-
 </div>
 
 <style>
@@ -86,93 +83,153 @@
   }
 </style>
 
+<!-- Keep the HTML structure the same as before -->
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.querySelector('.circle-video-swipe__modal');
+  const videoItems = Array.from(modal.querySelectorAll('.circle-video__item'));
+  let slider;
+  let currentIndex = 0;
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.querySelector('.circle-video-swipe__modal');
-    const videos = modal.querySelectorAll('.circle-video__item video');
+  function prepareVideo(video) {
+    if (!video) return;
+    video.preload = 'metadata';
+    video.playsInline = true;
+    // Remove muted attribute to allow sound
+    video.muted = false;
+    if (video.src) {
+      video.dataset.src = video.src;
+      video.removeAttribute('src');
+    }
+  }
 
-    videos.forEach(video => {
-      video.addEventListener('loadeddata', () => {
-        console.log('loaded', video.parentElement.querySelector('.loading-spinner'))
-        video.parentElement.querySelector('.loading-spinner').classList.add("hidden")
-      });
-      video.addEventListener('canplay', () => {
-        console.log('canplay', video.parentElement.querySelector('.loading-spinner'))
-        video.parentElement.querySelector('.loading-spinner').classList.add("hidden")
-      });
-      video.addEventListener('play', () => {
-        console.log('play', video.parentElement.querySelector('.loading-spinner'))
-        video.parentElement.querySelector('.loading-spinner').classList.add("hidden")
-      });
-    });
+  async function loadVideo(index) {
+    const item = videoItems[index];
+    if (!item) return;
 
-    document.querySelectorAll('.circle-video-menu--{{ section.id }} .circle-video-menu-item').forEach((item, i) => {
-      item.addEventListener('click', () => {
-        const video = videos[i];
-  
-        document.documentElement.style.overflow = 'hidden';
-        document.querySelector("body").style.overflow = 'hidden';
-  
-        modal.classList.add('modal--active');
-        video.play();
-  
-        var currentSlide = 0;
-  
-        if (typeof slider === 'undefined') {
-          var slider = new KeenSlider(".circle-video-swipe__slider", {
-            vertical: true,
-            slideChanged: (s) => {
-                  const slide = s.track.details.rel;
-                  videos.forEach((video, i) => {
-                      if (i !== slide) {
-                          video.pause();
-                      }
-                  });
-                  videos[slide].play();
-  
-                  currentSlide = slide
-              }
-          });
+    const spinner = item.querySelector('.loading-spinner');
+    const video = item.querySelector('video');
+
+    if (!video) return;
+
+    if (!video.src && video.dataset.src) {
+      spinner.classList.remove('hidden');
+      video.src = video.dataset.src;
+
+      try {
+        await new Promise((resolve, reject) => {
+          video.addEventListener('loadeddata', resolve, { once: true });
+          video.addEventListener('error', reject, { once: true });
+          setTimeout(reject, 10000, new Error('Video loading timeout'));
+        });
+      } catch (error) {
+        console.error(`Error loading video ${index}:`, error);
+      } finally {
+        spinner.classList.add('hidden');
+      }
+    } else {
+      // If video is already loaded, just hide the spinner
+      spinner.classList.add('hidden');
+    }
+
+    return video;
+  }
+
+  async function loadAdjacentVideos(index) {
+    const promises = [
+      loadVideo(index - 1),
+      loadVideo(index),
+      loadVideo(index + 1)
+    ];
+    await Promise.all(promises);
+  }
+
+  function initializeSlider() {
+    if (slider) return;
+
+    slider = new KeenSlider(".circle-video-swipe__slider", {
+      vertical: true,
+      slideChanged: (s) => {
+        const newIndex = s.track.details.rel;
+        if (newIndex !== currentIndex) {
+          currentIndex = newIndex;
+          loadAdjacentVideos(currentIndex);
+          updateVideoPlayback();
         }
-  
-        slider.moveToIdx(i);
-  
-        setTimeout(() => {
-          document.querySelector('.modal__swipe-animation').style.display = "none"
-        }, 6000)
-      });
-    });
-  
-    document.querySelector('.circle-video-swipe__modal').addEventListener('click', (e) => {
-      if (e.target.classList.contains('circle-video-swipe__modal')) {
-        const modal = document.querySelector('.circle-video-swipe__modal');
-        document.documentElement.style.overflow = 'auto';
-        document.querySelector("body").style.overflow = 'auto';
-        modal.classList.remove('modal--active');
-        modal.querySelectorAll('video').forEach(video => video.pause());
       }
     });
-  
-    document.querySelector(".modal__close").addEventListener("click", () => {
-      const modal = document.querySelector('.circle-video-swipe__modal');
-      document.documentElement.style.overflow = 'auto';
-      document.querySelector("body").style.overflow = 'auto';
-      modal.classList.remove('modal--active');
-      modal.querySelectorAll('video').forEach(video => video.pause());
+  }
+
+  function updateVideoPlayback() {
+    videoItems.forEach((item, i) => {
+      const video = item.querySelector('video');
+      const spinner = item.querySelector('.loading-spinner');
+      if (video) {
+        if (i === currentIndex) {
+          video.play().catch(e => console.error('Error playing video:', e));
+          spinner.classList.add('hidden');
+        } else {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
     });
-  
-    document.querySelector(".modal__sound").addEventListener("click", () => {
-      const videos = document.querySelectorAll('.circle-video-swipe__modal video');
-      videos.forEach(video => {
-          video.muted =!video.muted;
-          video.volume = video.muted? 0 : 1;
-      });
-  
-      document.querySelector(".modal__sound").classList.toggle("muted")
-      })
-  })
+  }
+
+  // Prepare all videos initially
+  videoItems.forEach(item => {
+    const video = item.querySelector('video');
+    prepareVideo(video);
+  });
+
+  document.querySelectorAll('.circle-video-menu--{{ section.id }} .circle-video-menu-item').forEach((item, i) => {
+    item.addEventListener('click', async () => {
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+      modal.classList.add('modal--active');
+
+      currentIndex = i;
+      await loadAdjacentVideos(currentIndex);
+      initializeSlider();
+      slider.moveToIdx(currentIndex);
+      updateVideoPlayback();
+
+      setTimeout(() => {
+        document.querySelector('.modal__swipe-animation').style.display = "none";
+      }, 6000);
+    });
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.querySelector(".modal__close").addEventListener("click", closeModal);
+
+  function closeModal() {
+    document.documentElement.style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
+    modal.classList.remove('modal--active');
+    videoItems.forEach(item => {
+      const video = item.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  }
+
+  document.querySelector(".modal__sound").addEventListener("click", () => {
+    const video = videoItems[currentIndex].querySelector('video');
+    if (video) {
+      video.muted = !video.muted;
+    }
+    document.querySelector(".modal__sound").classList.toggle("muted");
+  });
+});
 </script>
 
 {% schema %}
@@ -187,10 +244,10 @@
       "default": "#000000"
     },
     {
-          "label": "Section Product ID",
-          "id": "div_id",
-          "type": "text"
-        },
+      "label": "Section Product ID",
+      "id": "div_id",
+      "type": "text"
+    },
     {
       "label": "Ignore theme fonts",
       "id": "ignore",
