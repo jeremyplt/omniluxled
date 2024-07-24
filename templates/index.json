@@ -473,7 +473,7 @@
         "4edc5075-0dae-4ab2-ac0c-40e67a2e95e9"
       ],
       "custom_css": [
-        ".section-content.global-featured-in.overflow-hidden.border-bottom.py-8.pt-xl-11 {border-top: solid 1.5px black; border-bottom: solid 1.5px black}"
+        ".section-content.global-featured-in.overflow-hidden.border-bottom.py-8.pt-xl-11 {border-top: solid 1.5px black; border-bottom: solid 1.5px black;}"
       ],
       "settings": {
         "fluid_layout": false,
@@ -648,7 +648,7 @@
         "collection_ETn7mE": {
           "type": "collection",
           "settings": {
-            "url": "shopify:\/\/pages\/anti-aging",
+            "url": "shopify:\/\/products\/omnilux-contour-face",
             "image": "shopify:\/\/shop_images\/Frame_21.png",
             "title": "Anti-Aging"
           }
@@ -656,7 +656,7 @@
         "collection_knzPTX": {
           "type": "collection",
           "settings": {
-            "url": "shopify:\/\/pages\/anti-acne",
+            "url": "shopify:\/\/products\/omnilux-clear",
             "image": "shopify:\/\/shop_images\/Frame_21_76f15b24-c215-4bbb-92c4-b40dab81955c.png",
             "title": "Anti-Acne"
           }
@@ -664,7 +664,7 @@
         "collection_xGYCHd": {
           "type": "collection",
           "settings": {
-            "url": "shopify:\/\/pages\/men",
+            "url": "shopify:\/\/products\/omnilux-men",
             "image": "shopify:\/\/shop_images\/Frame_21_794cdc2c-ba5c-4ebf-a26e-dc83787dc1ea.png",
             "title": "Men's"
           }

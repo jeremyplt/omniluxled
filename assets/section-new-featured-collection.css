@@ -57,6 +57,10 @@
 }
 
 .new-featured-collection__item:hover .new-featured-collection__title {
+  text-decoration: underline;
+}
+
+.new-featured-collection__item:hover .new-featured-collection__title {
     background-color: white;
 }
 
