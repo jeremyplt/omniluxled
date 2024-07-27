@@ -1,10 +1,10 @@
-<div class="circle-video-swipe circle-video-menu-wrap circle-video-menu-wrap--{{ section.id }} {{ section.settings.div_id }}{% if section.settings.desktop %} circle-video--desktop{% endif %}">
+<div class="circle-video-swipe circle-video-menu-wrap circle-video-menu-wrap--{{ section.id }} {{ section.settings.div_id }}{% if section.settings.desktop %} circle-video-desktop{% endif %}">
     <div class="circle-video-menu circle-video-menu--{{ section.id }} {% if section.settings.ignore %}circle-vide-menu--ignore{% endif %}">
         <div class="circle-menu-items">
         {% for block in section.blocks %}
             <a class="circle-video-menu-item">
             <span class="circle-video-menu-item-image">
-                {{ block.settings.image | image_url: width: 120 | image_tag: class: 'circle-menu-item-img' }}
+                {{ block.settings.image | image_url: width: 350 | image_tag: class: 'circle-menu-item-img', loading: "lazy" }}
                 {% render 'icon-play' %}
             </span>
             <span class="circle-menu-item-label">{{ block.settings.label }}</span>

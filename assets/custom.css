@@ -3108,3 +3108,30 @@ html:not(.test-skin-goal) .new-featured-collection {
 main {
   position: relative !important;
 }
+
+/* Circle video swipe desktop */
+
+html .circle-video-swipe.circle-video-desktop .circle-video-menu-item-image {
+  border: none !important;
+  width: auto !important
+}
+
+html .circle-video-swipe.circle-video-desktop .circle-video-menu-item {
+  position: relative;
+}
+
+html .circle-video-swipe.circle-video-desktop .circle-menu-item-label {
+  position: absolute;
+  top: auto;
+  bottom: 30px;
+  left: 20px;
+  z-index: 10;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 999px) {
+  html .circle-video-swipe.circle-video-desktop .circle-video-menu-item-image {
+      min-width: 275px !important;
+  }
+}
