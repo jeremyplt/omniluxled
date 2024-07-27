@@ -1,4 +1,4 @@
-<div class="circle-video-swipe circle-video-menu-wrap circle-video-menu-wrap--{{ section.id }} {{ section.settings.div_id }}">
+<div class="circle-video-swipe circle-video-menu-wrap circle-video-menu-wrap--{{ section.id }} {{ section.settings.div_id }}{% if section.settings.desktop %} circle-video--desktop{% endif %}">
     <div class="circle-video-menu circle-video-menu--{{ section.id }} {% if section.settings.ignore %}circle-vide-menu--ignore{% endif %}">
         <div class="circle-menu-items">
         {% for block in section.blocks %}
@@ -203,6 +203,11 @@
       "id": "ignore",
       "type": "checkbox",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "desktop",
+      "label": "Desktop"
     }
   ],
   "blocks": [

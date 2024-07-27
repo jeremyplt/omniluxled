@@ -2986,7 +2986,7 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
 
   .circle-video-swipe__modal.modal--active {
     display: block;
-    position: absolute;
+    position: fixed;
     inset: 0;
     min-height: 100vh;
     height: 100vh;
@@ -3103,4 +3103,8 @@ html:not(.test-skin-goal) .new-featured-collection {
 .card-product span.badge.badge-gainsboro.text-black {
     position: absolute;
     z-index: 1;
+}
+
+main {
+  position: relative !important;
 }
