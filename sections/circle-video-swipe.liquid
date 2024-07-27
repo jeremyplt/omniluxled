@@ -131,7 +131,12 @@
                 setTimeout(() => {
                   videos[slide].parentElement.querySelector('.loading-spinner').classList.add("hidden");
                   videos[slide].play();
-                  videos[slide].muted = false;
+                  if (document.querySelector(".modal__sound").classList.contains("muted")) {
+                    videos[slide].muted = true;
+                    videos[slide].volume = 0;
+                  } else {
+                    videos[slide].muted = false;
+                  }
                 });
 
                 currentSlide = slide
@@ -140,10 +145,15 @@
 
   
         slider.moveToIdx(i);
-        console.log("videos[i]", videos[i])
         videos[i].parentElement.querySelector('.loading-spinner').classList.add("hidden");
         videos[i].play();
-        videos[i].muted = false;
+        if (document.querySelector(".modal__sound").classList.contains("muted")) {
+          videos[i].muted = true;
+          videos[i].volume = 0;
+        } else {
+          videos[i].muted = false;
+        }
+        
         
   
         setTimeout(() => {
