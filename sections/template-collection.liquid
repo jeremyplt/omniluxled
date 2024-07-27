@@ -1,123 +1,149 @@
 <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
-    <div class="row">
+  <div class="row">
+    {%- assign filter_type = section.settings.filter_type -%}
 
-        {%- assign filter_type = section.settings.filter_type -%}
+    {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
 
-        {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+    {%- liquid
+      assign product_count = section.settings.products_per_page
+      assign page_url = contentForQuerystring | split: '"pageurl":"' | last | split: '"' | first | split: '.myshopify.com' | last | replace: '\/', '/' | replace: '%20', ' ' | replace: '\u0026', '&'
+      assign product_count = section.settings.products_per_page
 
-        {%- liquid 
-          assign product_count = section.settings.products_per_page
-          assign page_url = contentForQuerystring | split: '"pageurl":"' | last | split: '"' | first | split: '.myshopify.com' | last | replace: '\/', '/' | replace: '%20', ' ' | replace: '\u0026', '&' 
-          assign product_count = section.settings.products_per_page
-
-          if section.settings.enable_custom_pagination and page_url contains "?" and page_url contains 'count='
-            assign page_url = page_url | split: '?'
-            assign page_url = page_url[1] | split: '&'
-            for param in page_url
-              if param contains 'count'
-                assign page_url = param | split: '='
-                assign product_count = page_url[1] | plus: 0
-              endif
-            endfor
+      if section.settings.enable_custom_pagination and page_url contains '?' and page_url contains 'count='
+        assign page_url = page_url | split: '?'
+        assign page_url = page_url[1] | split: '&'
+        for param in page_url
+          if param contains 'count'
+            assign page_url = param | split: '='
+            assign product_count = page_url[1] | plus: 0
           endif
-        -%}
+        endfor
+      endif
+    -%}
 
-        {%- case filter_type -%}
-          {%- when 'horizontal-filters' -%}
-            {%- render 'collection-topbar-filters' , product_count : product_count -%}
-          {%- else -%}
-            {%- render 'collection-sidebar-filters' , product_count : product_count -%}
-        {%- endcase -%}
-        
-        <div class="col-12 d-flex grid-box justify-content-end pb-lg-4 pb-3 mb-1 mb-lg-0">
-         
-            <span  data-view-desktop="col-grid-1" class="cursor-pointer ox-grid-4 d-lg-inline-flex d-none grid-active" style="font-size: 19.5px;"></span>
-            <span data-view-desktop="col-grid-2" class="cursor-pointer ms-3 ox-grid-2 d-lg-inline-flex d-none"></span> 
-            
-            <span data-view-desktop="col-grid-1" class="cursor-pointer ms-3 ox-grid-1 d-lg-none d-inline-flex grid-active"></span>
-            <span data-view-desktop="col-grid-2" class="cursor-pointer ms-3 ox-grid-2m d-lg-none d-inline-flex"></span>
-            
-        </div>
-        <div class="col">
-            <div id="collection-product-grid">
-                {%- paginate collection.products by product_count -%}
-                    {%- if collection.products.size == 0 -%}
-                        <div class="row mt-5" id="template-collection" data-id="{{ section.id }}">
-                            <div class="col-12 text-center mt-5">
-                                <h5>{{ 'templates.collection.no_matches_within_filters' | t }}</h5>
-                                {% if section.settings.enable_filtering %}
-                                    <p>{{ 'templates.collection.refine_search' | t }} <a href="javascript:void(0);" rel="nofollow" aria-label="{{ 'templates.collection.reset_filters' | t }}" title="{{ 'templates.collection.reset_filters' | t }}">{{ 'templates.collection.reset_filters' | t }}</a></p>
-                                {% endif %}
-                            </div>
-                        </div>
-                    {%- else -%}
-                        <div class="row col-grid-1" data-final-view="col-grid-1" id="template-collection" data-id="{{ section.id }}">
-                            {%- liquid 
-                              assign loopIndex = 0 
-                              assign totalProducts = collection.products.count
-                              assign productExcludeTag = settings.product_exclude_tag_text
-                            -%}
+    {%- case filter_type -%}
+      {%- when 'horizontal-filters' -%}
+        {%- render 'collection-topbar-filters', product_count: product_count -%}
+      {%- else -%}
+        {%- render 'collection-sidebar-filters', product_count: product_count -%}
+    {%- endcase -%}
 
-                            
-                          
+    <div class="col-12 d-flex grid-box justify-content-end pb-lg-4 pb-3 mb-1 mb-lg-0">
+      <span
+        data-view-desktop="col-grid-1"
+        class="cursor-pointer ox-grid-4 d-lg-inline-flex d-none grid-active"
+        style="font-size: 19.5px;"
+      ></span>
+      <span data-view-desktop="col-grid-2" class="cursor-pointer ms-3 ox-grid-2 d-lg-inline-flex d-none"></span>
 
-                            {% for product in collection.products %}
-                              {% liquid 
-                                assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
-                                assign checkWholesaleProducts = false
-                                for tag in hideWholesalersProducts
-                                  assign tag = tag | downcase
-                                  if product.tags contains tag
-                                    assign checkWholesaleProducts = true
-                                  endif
-                                endfor
-                              %}
-                              {% unless checkWholesaleProducts == true %}
-                              {% unless product.tags contains productExcludeTag %}
-                                  {% assign loopIndex = loopIndex | plus: 1 %}
-                                  <div id="product-{{ loopIndex }}" data-prod-type="{{ product.type }}" class="col-6 col-lg-4 mb-5 mb-lg-7 d-flex align-items-stretch justify-content-around pb-lg-0 pb-1">
-                                      {% render 'card-product-style-generic', product: product %}
-                                  </div>
-                                  {% render 'card-collection-promo', loopIndex: loopIndex, totalProducts: totalProducts %}
-                              {% endunless %}
-                            {% endunless %}
-                         
-                            {% endfor %}
-                          <script>
-    // Find the product-6 element
-var product6 = document.getElementById('product-6');
-
-// Check if the product-6 element exists
-if (product6) {
-    // Add HTML content after the product-6 element
-    product6.insertAdjacentHTML('beforebegin', '<div id="product-6-2" data-prod-type="LED mask" class="col-6 col-lg-4 mb-5 mb-lg-7 d-flex align-items-stretch justify-content-around pb-lg-0 pb-1"><img src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/afterpay.png?v=1706223903" alt="Aftersell"></div>');
-}
-
-</script>
-                        </div>
-                        {% if paginate.pages > 1 %}
-                            <div class="row" data-pagination data-type="{{ section.settings.pagination_type }}">
-                                <div class="col-12 text-center mt-5">
-                                {% if section.settings.pagination_type == 'loadmore' and paginate.next %}
-                                <a href="{{ paginate.next.url }}" rel="nofollow" class="btn btn-primary text-white" data-pagination id="load-more">
-                                    {{ 'templates.collection.load-more' | t }}
-                                </a>
-                                {% elsif section.settings.pagination_type == 'numbers' %}
-                                {% render 'pagination', paginate: paginate , product_count : product_count %}
-                                {% endif %}
-                                </div>
-                            </div>
-                        {% endif %}
-                    {%- endif -%}
-                {%- endpaginate -%}
+      <span
+        data-view-desktop="col-grid-1"
+        class="cursor-pointer ms-3 ox-grid-1 d-lg-none d-inline-flex grid-active"
+      ></span>
+      <span data-view-desktop="col-grid-2" class="cursor-pointer ms-3 ox-grid-2m d-lg-none d-inline-flex"></span>
+    </div>
+    <div class="col">
+      <div id="collection-product-grid">
+        {%- paginate collection.products by product_count -%}
+          {%- if collection.products.size == 0 -%}
+            <div class="row mt-5 test778" id="template-collection" data-id="{{ section.id }}">
+              <div class="col-12 text-center mt-5">
+                <h5>{{ 'templates.collection.no_matches_within_filters' | t }}</h5>
+                {% if section.settings.enable_filtering %}
+                  <p>
+                    {{ 'templates.collection.refine_search' | t }}
+                    <a
+                      href="javascript:void(0);"
+                      rel="nofollow"
+                      aria-label="{{ 'templates.collection.reset_filters' | t }}"
+                      title="{{ 'templates.collection.reset_filters' | t }}"
+                    >
+                      {{- 'templates.collection.reset_filters' | t -}}
+                    </a>
+                  </p>
+                {% endif %}
+              </div>
             </div>
-        </div>
-    {%- comment -%}
-    {% if collection.description != blank %}
-      <div class="text-center mt-7">
-        {{ collection.description }}
+          {%- else -%}
+            <div
+              class="row col-grid-1 test5546"
+              data-final-view="col-grid-1"
+              id="template-collection"
+              data-id="{{ section.id }}"
+            >
+              {%- liquid
+                assign loopIndex = 0
+                assign totalProducts = collection.products.count
+                assign productExcludeTag = settings.product_exclude_tag_text
+              -%}
+
+              {% for product in collection.products %}
+                {% liquid
+                  assign hideWholesalersProducts = settings.hide_product_tag_text | split: ','
+                  assign checkWholesaleProducts = false
+                  for tag in hideWholesalersProducts
+                    assign tag = tag | downcase
+                    if product.tags contains tag
+                      assign checkWholesaleProducts = true
+                    endif
+                  endfor
+                %}
+                {% unless checkWholesaleProducts == true %}
+                  {% unless product.tags contains productExcludeTag %}
+                    {% assign loopIndex = loopIndex | plus: 1 %}
+                    <div
+                      id="product-{{ loopIndex }}"
+                      data-prod-type="{{ product.type }}"
+                      class="col-6 col-lg-4 mb-5 mb-lg-7 d-flex align-items-stretch justify-content-around pb-lg-0 pb-1"
+                    >
+                      {% render 'card-product-style-generic', product: product %}
+                    </div>
+
+                    {% render 'card-collection-promo', loopIndex: loopIndex, totalProducts: totalProducts %}
+                  {% endunless %}
+                {% endunless %}
+              {% endfor %}
+
+              <script>
+                    // Find the product-6 element
+                var product6 = document.getElementById('product-6');
+
+                // Check if the product-6 element exists
+                if (product6) {
+                    // Add HTML content after the product-6 element
+                    product6.insertAdjacentHTML('beforebegin', '<div id="product-6-2" data-prod-type="LED mask" class="col-6 col-lg-4 mb-5 mb-lg-7 d-flex align-items-stretch justify-content-around pb-lg-0 pb-1"><img src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/afterpay.png?v=1706223903" alt="Aftersell"></div>');
+                }
+              </script>
+            </div>
+            {% if paginate.pages > 1 %}
+              <div class="row" data-pagination data-type="{{ section.settings.pagination_type }}">
+                <div class="col-12 text-center mt-5">
+                  {% if section.settings.pagination_type == 'loadmore' and paginate.next %}
+                    <a
+                      href="{{ paginate.next.url }}"
+                      rel="nofollow"
+                      class="btn btn-primary text-white"
+                      data-pagination
+                      id="load-more"
+                    >
+                      {{ 'templates.collection.load-more' | t }}
+                    </a>
+                  {% elsif section.settings.pagination_type == 'numbers' %}
+                    {% render 'pagination', paginate: paginate, product_count: product_count %}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          {%- endif -%}
+        {%- endpaginate -%}
       </div>
-    {% endif %}
+    </div>
+    {%- comment -%}
+      {% if collection.description != blank %}
+        <div class="text-center mt-7">
+          {{ collection.description }}
+        </div>
+      {% endif %}
     {%- endcomment -%}
   </div>
 </div>

@@ -103,13 +103,14 @@ class SearchModal extends HTMLElement {
           let productsList = '';
           if(searchResults.products.length > 0){
             searchResults.products.forEach((product)=>{
+              
             if(product.tags.includes('free-product') != true){
               
               const productPrice = Shopify.formatMoney(product.price * 100, window.globalVariables.money_format);
               let productImage = product.image;
               if(product.image == null || product.image == '')
                 productImage = window.globalVariables.no_image;
-              if(product.id != 7991999987874) {
+              if(product.id != 7991999987874 && product.id != 8314329661602) {
                 let resultUI = `<div class="col-sm-6 p-2"><div class="border h-100"><div class="predictive-search-product align-items-center mx-n2 row h-100">
                     <div class="col-3 px-2">
                         <a href="${product.url}"><img src="${productImage}" alt="${product.title}"></a>

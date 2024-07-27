@@ -1,123 +1,198 @@
 <link rel="stylesheet" href="{{ 'global-video-with-text.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'global-video-with-text.css' | asset_url | stylesheet_tag }}</noscript>
 
-<section id="{{ section.settings.sectionid }}" class="video-with-text text-with-right-video skincare {% if section.settings.border_bottom %}border-bottom{% endif %}" data-section-id="{{ section.id }}">
-    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+<section
+  id="{{ section.settings.sectionid }}"
+  class="video-with-text text-with-right-video skincare {% if section.settings.border_bottom %}border-bottom{% endif %}"
+  data-section-id="{{ section.id }}"
+>
+  <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+    {% if section.settings.title != blank %}
+      <h3 class="mb-3 hidedesktop" style="text-align:center;max-width:{{ section.settings.max_width }}px;">
+        {{ section.settings.title }}
+      </h3>
+    {% endif %}
 
-              {% if section.settings.title != blank %}
-                            <h3 class="mb-3 hidedesktop" style="text-align:center;max-width:{{ section.settings.max_width }}px;">{{ section.settings.title }}</h3>
-                        {% endif %} 
-      
-        <div class="custom-video-container row {{ section.settings.content_position }} justify-content-center">
-            <div class="col-12 col-lg-6 order-lg-2 ps-0">
-                <custom-video class="video-with--text position-relative d-block placement--{{ section.settings.placement }}"
-                    data-loop="{{ section.settings.loop }}" data-autoplay="true" data-controls="{{ section.settings.controls }}" data-muted="{{ section.settings.muted }}"
-                    data-video-type="{{ section.settings.video_type }}"  data-placement="{{ section.settings.placement }}"
-                    {% if section.settings.mobile_video_id != blank %}data-mobileVideo="{{ section.settings.mobile_video_id }}"{% endif %} data-video-id="{{ section.settings.video_id }}">
-                    <div class="cta-btn">
-                        <span class="d-inline-flex" role="button" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
-                            <span class="btn btn-white d-flex align-items-center d-lg-inline-flex"> {{ section.settings.video_btn_text }} <i class="ox-play ms-2" style="font-size:11px;"></i></span>
-
-                        </span>
-                        <span class="d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
-                            <span class="btn btn btn-white">Watch video <i class="ox-play ms-2"></i></span>
-                        </span>
-                    </div>
-                    <div class="content-section">
-                        <div class="poster-image {{ section.settings.height }}">
-                            {%- if section.settings.poster_type == 'video' and section.settings.bg_video != blank -%}
-                                <video class="h-100 object-cover position-absolute start-0 top-0 w-100" data-posterVideo preload="yes" playsinline muted loop data-mobileSrc="{{ section.settings.mobile_bg_video }}">
-                                    <source src="{{ section.settings.bg_video }}" type="video/mp4">
-                                </video>
-                            {%- elsif section.settings.poster_image != blank -%}
-<img
-                                
-                                src="{{ section.settings.poster_image }}"
-                               
-                                alt="{{ section.settings.poster_image.alt | escape }}"
-                                class="h-100 object-cover position-absolute start-0 top-0 w-100"
-                                loading="lazy"
-                                width="{{ section.settings.poster_image.width | divided_by: 3 }}"
-                                height="{{ section.settings.poster_image.height | divided_by: 3 }}"
-                            >
-                            {%- else -%}
-                                <img 
-                                src="{{ settings.no_image | image_url: width: 1500 }}" loading="lazy"
-                                
-                                alt="{{ settings.no_image.alt | default: section.settings.title | escape }}"
-                                width="{{ settings.no_image.width }}"
-                                height="{{ settings.no_image.width | divided_by: settings.no_image.aspect_ratio | round }}"
-                            >
-
-                            {%- endif -%}
-                        </div>
-                    </div>
-                    {%- if section.settings.placement == 'grid' -%}
-                        <div class="video-section {{ section.settings.height }}" tabindex="0"></div>
-                    {%- endif -%}
-                    {% if section.settings.enable_overlay %}
-                                <div class="poster-overlay {% if section.settings.placement == 'grid' %}poster-overlay-grid{% endif %}" style="background-color: {{ section.settings.overlay_bg_color }}!important; opacity: {{ section.settings.overlay_opacity }}!important;mix-blend-mode: multiply!important;"></div>
-                    {% endif %}
-                </custom-video>
+    <div class="custom-video-container row {{ section.settings.content_position }} justify-content-center">
+      <div class="col-12 col-lg-6 order-lg-2 ps-0">
+        <custom-video
+          class="video-with--text position-relative d-block placement--{{ section.settings.placement }}"
+          data-loop="{{ section.settings.loop }}"
+          data-autoplay="true"
+          data-controls="{{ section.settings.controls }}"
+          data-muted="{{ section.settings.muted }}"
+          data-video-type="{{ section.settings.video_type }}"
+          data-placement="{{ section.settings.placement }}"
+          {% if section.settings.mobile_video_id != blank %}
+            data-mobileVideo="{{ section.settings.mobile_video_id }}"
+          {% endif %}
+          data-video-id="{{ section.settings.video_id }}"
+        >
+          {% if product.id != 8314329661602 %}
+            <div class="cta-btn">
+              <span
+                class="d-inline-flex"
+                role="button"
+                data-trigger-video
+                aria-label="{{ 'sections.video-with-text.play_video' | t }}"
+              >
+                <span class="btn btn-white d-flex align-items-center d-lg-inline-flex">
+                  {{ section.settings.video_btn_text }}
+                  <i class="ox-play ms-2" style="font-size:11px;"></i
+                ></span>
+              </span>
+              <span class="d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
+                <span class="btn btn btn-white">Watch video <i class="ox-play ms-2"></i></span>
+              </span>
             </div>
-            <div class="col-12 col-lg-6 d-flex align-items-center inside-block-col order-lg-1">
-            <div class="inside-block {{ section.settings.alignment }} {% if section.settings.image_alignment == 'left' %}text-p-end ps-5{% else %}ms-lg-auto text-p-start{% endif %}  pb-lg-5 pt-4 mt-1 mt-lg-0 mb-lg-0 mb-1 pb-8 pe-20 ps-20" style="max-width:675px">
-<div class="formatted-list pe-lg-3 ps-0 {% if section.settings.fullwidth_content %} col-12 {% else %}col-sm-10 col-12{% endif %}">           
-              {% if section.settings.title != blank %}
-                            <h3 class="mb-3 hidemobile" style="max-width:{{ section.settings.max_width }}px;">{{ section.settings.title }}</h3>
-                        {% endif %}                                          
-                    {% if section.settings.subtitle != blank %}
-                        <p class="mb-4 pb-1">{{ section.settings.subtitle }}</p>
-                    {% endif %}
-                        {% if section.settings.txt != blank %}
-                            <div class="{% if section.settings.btn_txt != blank or section.settings.btn_txt_watch != blank or section.settings.steps_captions != blank or section.settings.step_heading != blank or section.settings.steps_captions_2 != blank %}pb-2 mb-1{% else %}mb-n3 pb-0{% endif %}">{{ section.settings.txt }}</div>
-                        {% endif %}
-                         {% if section.settings.htmltxt != blank %}
-                            <div class="{% if section.settings.btn_txt != blank or section.settings.btn_txt_watch != blank or section.settings.steps_captions != blank or section.settings.step_heading != blank or section.settings.steps_captions_2 != blank %}pb-2 mb-1{% else %}mb-n3 pb-0{% endif %}">{{ section.settings.htmltxt }}</div>
-                        {% endif %}
+          {% endif %}
+          <div class="content-section">
+            <div class="poster-image {{ section.settings.height }}">
+              {%- if section.settings.poster_type == 'video' and section.settings.bg_video != blank -%}
+                <video
+                  class="h-100 object-cover position-absolute start-0 top-0 w-100"
+                  data-posterVideo
+                  preload="yes"
+                  playsinline
+                  muted
+                  loop
+                  data-mobileSrc="{{ section.settings.mobile_bg_video }}"
+                >
+                  <source src="{{ section.settings.bg_video }}" type="video/mp4">
+                </video>
+              {%- elsif section.settings.poster_image != blank -%}
+                <img
+                  src="{{ section.settings.poster_image }}"
 
-                        {% if section.settings.btn_txt_watch != blank %}
-                        <div class="mt-lg-3 mt-2 pt-1 w-100 w-sm-auto">
+                  alt="{{ section.settings.poster_image.alt | escape }}"
+                  class="h-100 object-cover position-absolute start-0 top-0 w-100"
+                  loading="lazy"
+                  width="{{ section.settings.poster_image.width | divided_by: 3 }}"
+                  height="{{ section.settings.poster_image.height | divided_by: 3 }}"
+                >
+              {%- else -%}
+                <img
+                  src="{{ settings.no_image | image_url: width: 1500 }}"
+                  loading="lazy"
 
-                            <div class="custom-video-container ">
-                                <span data-trigger-videobtn class="cursor-pointer btn w-100 w-sm-auto {% if section.settings.btn_type_watch == "border-0" %}border-0{% endif %} btn{% if section.settings.btn_type_watch == 'outline' %}-{% endif %}{% if section.settings.btn_type_watch != "border-0" %}{{ section.settings.btn_type_watch }}{% endif %}-{{ section.settings.btn_variant_watch }} {{ section.settings.btn_size_watch }}" title="{{ section.settings.btn_txt_watch }}">
-                                    {{ section.settings.btn_txt_watch }}
-                                    <i class="ox-play ms-2" style="font-size:11px;"></i>
-                                </span>
-                                
-                                
-                                <custom-video class="video-with--text position-relative d-block placement--popup"
-                                    data-loop="true" data-autoplay="true" data-controls="true" data-muted="false"
-                                    data-video-type="local"  data-placement="popup"
-                                    {% if section.settings.watch_mobile_video_id != blank %}data-mobileVideo="{{ section.settings.watch_mobile_video_id }}"{% endif %} 
-                                    data-video-id="{{ section.settings.watch_video_id }}">
-                                    <div class="cta-btn d-none">
-                                        <button class="play__button btn btn-primary" data-trigger-video aria-label="{{ 'sections.video-with-text.play_video' | t }}">
-                                            <span class="icon-play"></span>
-                                        </button>
-                                        <button class="bg-transparent border-2 border-white btn btn-primary p-3 pause__button rounded-pill d-none" data-pause-video aria-label="{{ 'sections.video-with-text.paused_video' | t }}">
-                                            <span class="ox-play" style="position: relative;right: -2px;"></span>
-                                        </button>
-                                    </div>
-                                </custom-video>
-
-                            </div>
-
-                            
-                        </div>
-                        {% endif %}
-                        {% if section.settings.btn_txt != blank %}
-                            <a {% if section.settings.btn_link %} href="{{ section.settings.btn_link }}" {% endif %}class="btn btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}">{{ section.settings.btn_txt }}</a>
-                        {% endif %}
-                        {% if section.settings.link_txt != blank %}
-                            <div class="mt-3 pt-1">
-                                <a target="_blank" {% if section.settings.link_url %} href="{{ section.settings.link_url }}" {% endif %}class="btn-link">{{ section.settings.link_txt }}</a>
-                            </div>
-                        {% endif %}
-                </div></div>
+                  alt="{{ settings.no_image.alt | default: section.settings.title | escape }}"
+                  width="{{ settings.no_image.width }}"
+                  height="{{ settings.no_image.width | divided_by: settings.no_image.aspect_ratio | round }}"
+                >
+              {%- endif -%}
             </div>
+          </div>
+          {%- if section.settings.placement == 'grid' -%}
+            <div class="video-section {{ section.settings.height }}" tabindex="0"></div>
+          {%- endif -%}
+          {% if section.settings.enable_overlay %}
+            <div
+              class="poster-overlay {% if section.settings.placement == 'grid' %}poster-overlay-grid{% endif %}"
+              style="background-color: {{ section.settings.overlay_bg_color }}!important; opacity: {{ section.settings.overlay_opacity }}!important;mix-blend-mode: multiply!important;"
+            ></div>
+          {% endif %}
+        </custom-video>
+      </div>
+      <div class="col-12 col-lg-6 d-flex align-items-center inside-block-col order-lg-1">
+        <div
+          class="inside-block {{ section.settings.alignment }} {% if section.settings.image_alignment == 'left' %}text-p-end ps-5{% else %}ms-lg-auto text-p-start{% endif %}  pb-lg-5 pt-4 mt-1 mt-lg-0 mb-lg-0 mb-1 pb-8 pe-20 ps-20"
+          style="max-width:675px"
+        >
+          <div class="formatted-list pe-lg-3 ps-0 {% if section.settings.fullwidth_content %} col-12 {% else %}col-sm-10 col-12{% endif %}">
+            {% if section.settings.title != blank %}
+              <h3 class="mb-3 hidemobile" style="max-width:{{ section.settings.max_width }}px;">
+                {{ section.settings.title }}
+              </h3>
+            {% endif %}
+            {% if section.settings.subtitle != blank %}
+              <p class="mb-4 pb-1">{{ section.settings.subtitle }}</p>
+            {% endif %}
+            {% if section.settings.txt != blank %}
+              <div class="{% if section.settings.btn_txt != blank or section.settings.btn_txt_watch != blank or section.settings.steps_captions != blank or section.settings.step_heading != blank or section.settings.steps_captions_2 != blank %}pb-2 mb-1{% else %}mb-n3 pb-0{% endif %}">
+                {{ section.settings.txt }}
+              </div>
+            {% endif %}
+            {% if section.settings.htmltxt != blank %}
+              <div class="{% if section.settings.btn_txt != blank or section.settings.btn_txt_watch != blank or section.settings.steps_captions != blank or section.settings.step_heading != blank or section.settings.steps_captions_2 != blank %}pb-2 mb-1{% else %}mb-n3 pb-0{% endif %}">
+                {{ section.settings.htmltxt }}
+              </div>
+            {% endif %}
+
+            {% if section.settings.btn_txt_watch != blank %}
+              {% if product.id != 8314329661602 %}
+                <div class="mt-lg-3 mt-2 pt-1 w-100 w-sm-auto">
+                  <div class="custom-video-container ">
+                    <span
+                      data-trigger-videobtn
+                      class="cursor-pointer btn w-100 w-sm-auto {% if section.settings.btn_type_watch == "border-0" %}border-0{% endif %} btn{% if section.settings.btn_type_watch == 'outline' %}-{% endif %}{% if section.settings.btn_type_watch != "border-0" %}{{ section.settings.btn_type_watch }}{% endif %}-{{ section.settings.btn_variant_watch }} {{ section.settings.btn_size_watch }}"
+                      title="{{ section.settings.btn_txt_watch }}"
+                    >
+                      {{ section.settings.btn_txt_watch }}
+                      <i class="ox-play ms-2" style="font-size:11px;"></i>
+                    </span>
+
+                    <custom-video
+                      class="video-with--text position-relative d-block placement--popup"
+                      data-loop="true"
+                      data-autoplay="true"
+                      data-controls="true"
+                      data-muted="false"
+                      data-video-type="local"
+                      data-placement="popup"
+                      {% if section.settings.watch_mobile_video_id != blank %}
+                        data-mobileVideo="{{ section.settings.watch_mobile_video_id }}"
+                      {% endif %}
+                      data-video-id="{{ section.settings.watch_video_id }}"
+                    >
+                      <div class="cta-btn d-none">
+                        <button
+                          class="play__button btn btn-primary"
+                          data-trigger-video
+                          aria-label="{{ 'sections.video-with-text.play_video' | t }}"
+                        >
+                          <span class="icon-play"></span>
+                        </button>
+                        <button
+                          class="bg-transparent border-2 border-white btn btn-primary p-3 pause__button rounded-pill d-none"
+                          data-pause-video
+                          aria-label="{{ 'sections.video-with-text.paused_video' | t }}"
+                        >
+                          <span class="ox-play" style="position: relative;right: -2px;"></span>
+                        </button>
+                      </div>
+                    </custom-video>
+                  </div>
+                </div>
+              {% endif %}
+            {% endif %}
+            {% if section.settings.btn_txt != blank %}
+              <a
+                {% if section.settings.btn_link %}
+                  href="{{ section.settings.btn_link }}"
+                {% endif -%}
+                class="btn btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}"
+              >
+                {{- section.settings.btn_txt -}}
+              </a>
+            {% endif %}
+            {% if section.settings.link_txt != blank %}
+              <div class="mt-3 pt-1">
+                <a
+                  target="_blank"
+                  {% if section.settings.link_url %}
+                    href="{{ section.settings.link_url }}"
+                  {% endif -%}
+                  class="btn-link"
+                >
+                  {{- section.settings.link_txt -}}
+                </a>
+              </div>
+            {% endif %}
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 {% schema %}
@@ -394,7 +469,7 @@
               "value": "",
               "label": "Solid"
             }
-          ], 
+          ],
           "default": ""
         },
      {

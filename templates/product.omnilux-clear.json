@@ -6,7 +6,7 @@
         "circle_link_MkaAWd": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-07_at_2.21.22_PM.jpg",
+            "image": "shopify:\/\/shop_images\/Omnilux_LED_Screenshot_Apr_7.jpg",
             "label": "Ariana's Story",
             "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Ariana's Story.mp4"
           }
@@ -14,7 +14,7 @@
         "circle_link_trigM4": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-19_at_9.40.29_PM.jpg",
+            "image": "shopify:\/\/shop_images\/Omnilux_LED_Screenshot_Mar_19.jpg",
             "label": "Jess's Story",
             "video": "shopify:\/\/files\/videos\/Omnilux LED testimonial mobile.mp4"
           }
@@ -22,7 +22,7 @@
         "circle_link_wDjUgP": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-07_at_2.26.19_PM.jpg",
+            "image": "shopify:\/\/shop_images\/Omnilux_LED_Screenshot_Apr_7_1.jpg",
             "label": "Sophie's Story",
             "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Sophie's Story.mp4"
           }
@@ -30,7 +30,7 @@
         "circle_link_bt3JyV": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/alana.jpg",
+            "image": "shopify:\/\/shop_images\/Omnilux_LED_Alana.jpg",
             "label": "Alana's Story",
             "video": "shopify:\/\/files\/videos\/Omnilux LED testimonial Alana.mp4"
           }
@@ -298,6 +298,7 @@
         "2bcaf647-14b0-4037-8ae3-cd56658f49b4",
         "7979fdba-e6ce-4ff0-91c2-f0c569c9fffd"
       ],
+      "disabled": true,
       "settings": {
         "class_names": "before-after-scroller-contour",
         "section_id": "#beforeafter",
@@ -310,75 +311,13 @@
         "custom_liquid": "<div class=\"desktopreviewstitle\"><div class=\"is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<div class=\"starreviews\"><div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.StarRatingSnippet }} <span class=\"reviewstxt\">Reviews<\/span>\n<\/div><\/div><\/div>\n<p>We've helped 300,000+ customers achieve their skin goals.<\/p>\n<\/div>\n\n<div class=\"clearpdp\">\n<div class=\"desktopreviewstitle\"><div class=\"is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<div class=\"starreviews\"><div data-oke-star-rating data-oke-reviews-product-id=\"shopify-6760463892642\">{{ product.metafields.okendo.StarRatingSnippet }} <span class=\"reviewstxt\">Reviews<\/span>\n<\/div><\/div><\/div>\n<p>We've helped 300,000+ customers achieve their skin goals.<\/p>\n<\/div><\/div>"
       }
     },
-    "1598637a-3252-49e4-bfcc-d63e53d9c6b6": {
-      "type": "circle-video-menu-desktop",
-      "blocks": {
-        "10e6e883-2fc2-43bf-a56f-3ce24c0149cf": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Video_Testimonial.png",
-            "label": "Lizeth’s Story",
-            "excerpt": "",
-            "video": "shopify:\/\/files\/videos\/lizethstory.mp4"
-          }
-        },
-        "c422a032-1e24-42cd-adec-7c9a126fafc4": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Video_Testimonial_copy.png",
-            "label": "Deborah's Story",
-            "excerpt": "",
-            "video": "shopify:\/\/files\/videos\/test2.mov"
-          }
-        },
-        "19dec470-df8b-4c9f-9194-2029fc26965f": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Video_Testimonial_copy_2.png",
-            "label": "Anna's Story",
-            "excerpt": "",
-            "video": "shopify:\/\/files\/videos\/Video 3 - IG Scroller.mp4"
-          }
-        },
-        "93b0c54c-0a98-4ab9-964a-07d92c83d255": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Video_Testimonial_copy_4.png",
-            "label": "Tanya's Story",
-            "excerpt": "",
-            "video": "shopify:\/\/files\/videos\/Video 2 - IG Scroller.mp4"
-          }
-        },
-        "e828c705-b186-4d23-a4ac-48e83bd77a68": {
-          "type": "circle-link",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Video_Testimonial_copy_3.png",
-            "label": "Lina's Story",
-            "excerpt": "",
-            "video": "shopify:\/\/files\/videos\/Testimonial 6.mp4"
-          }
-        }
-      },
-      "block_order": [
-        "10e6e883-2fc2-43bf-a56f-3ce24c0149cf",
-        "c422a032-1e24-42cd-adec-7c9a126fafc4",
-        "19dec470-df8b-4c9f-9194-2029fc26965f",
-        "93b0c54c-0a98-4ab9-964a-07d92c83d255",
-        "e828c705-b186-4d23-a4ac-48e83bd77a68"
-      ],
-      "settings": {
-        "border_color": "#000000",
-        "div_id": "",
-        "ignore": true
-      }
-    },
     "1598637a-3252-49e4-bfcc-d63e53d9c6b61": {
       "type": "circle-video-menu-desktop",
       "blocks": {
         "5e3b736c-3b1c-4c18-b1d0-61ead0e0b5f0": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ariana.png",
+            "image": "shopify:\/\/shop_images\/Omnilux_LED_logo.jpg",
             "label": "Ariana's Story",
             "excerpt": "",
             "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Ariana's Story.mp4"
@@ -387,7 +326,7 @@
         "c7297638-eac3-4d36-9152-471ba21228db": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/jess.png",
+            "image": "shopify:\/\/shop_images\/Omnilux_LED_Jess.jpg",
             "label": "Jess's Story",
             "excerpt": "",
             "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Jess' Story.mp4"
@@ -396,7 +335,7 @@
         "c258c722-53d6-454c-9fda-07f5b7e0f916": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Video_Testimonial_0ade517f-a55c-4c60-b8ab-a3a81fe10ba2.png",
+            "image": "shopify:\/\/shop_images\/Omnilux_LED_Testimonial.jpg",
             "label": "Sophie's Story",
             "excerpt": "",
             "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Sophie's Story.mp4"
@@ -405,7 +344,7 @@
         "1861f051-aea6-4057-b328-f041be4f2c58": {
           "type": "circle-link",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Video_Testimonial_copy_b6bc44ea-a3d5-4fa7-84bd-6e0883900c6f.png",
+            "image": "shopify:\/\/shop_images\/Omnilux_LED_Testimonial_1.jpg",
             "label": "Alana's Story",
             "excerpt": "",
             "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Alana's Story.mp4"
@@ -992,7 +931,6 @@
     "8b7008db-ace8-41cc-9cda-be64cf66dd7e",
     "1012647f-8fc2-4238-8ef1-51aef396d8d1",
     "4f5f33ca-10a4-41a3-b40c-038b76049541",
-    "1598637a-3252-49e4-bfcc-d63e53d9c6b6",
     "1598637a-3252-49e4-bfcc-d63e53d9c6b61",
     "5fc33cbe-b23b-43d7-b393-0425cd94b49e",
     "8d4dfa60-174c-4b28-9812-ab31ef599696",

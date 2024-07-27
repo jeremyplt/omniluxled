@@ -2970,6 +2970,12 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
 }
 
 @media screen and (max-width: 600px) {
+  div#shopify-section-template--16970647109794__0815808e-a8b7-4e1d-b348-913b81d5e8b1 .section-content {
+    margin-top: 31px;
+}
+  section#exploreline {
+    padding-top: 0px !important;
+}
   .circle-video-swipe__modal {
     position: relative;
   }
@@ -3088,4 +3094,13 @@ html .circle-video-menu-wrap.circle-video-swipe {
 
 html:not(.test-skin-goal) .new-featured-collection {
   display: none;
+}
+
+.mega-menu-item-call-second.test77 button#klaviyo-data-handle-coq10-face-cream{
+  padding-left: 15px !important;
+}
+
+.card-product span.badge.badge-gainsboro.text-black {
+    position: absolute;
+    z-index: 1;
 }

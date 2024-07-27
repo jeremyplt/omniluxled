@@ -5,112 +5,163 @@
     assign emptySearch = true
   endif
 -%}
+{% assign target_product_id = 8314329661602 %}
+<!-- Replace with the ID you are looking for -->
+{% assign product_found = false %}
 
-<section class="section-content ">
-    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
-      <span class="account-fair-tone gradient-fair-tone position-absolute w-100 start-0 top-0 overflow-hidden" style="pointer-events: none;z-index: -1;">
-      </span>
-        <div class="row pb-lg-12 pb-md-10 pb-9 align-items-stretch justify-content-around">
-            <div class="col-lg-5 ml-auto mr-auto text-center">
-                <form action="/search" method="get" role="search">
-                {%- capture searchType -%}{%- if settings.enable_search_product -%}product,{%- endif -%}{%- if settings.enable_search_article -%}article,{%- endif -%}{%- if settings.enable_search_page -%}page{%- endif -%}{%- endcapture -%}
-                <div class="input-group">
-                    <input type="hidden" name="type" value="{{ searchType }}">
-                    <input type="search" name="q" id="Search" aria-label="search" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}" class="form-control">
-                    <button type="submit" class="btn btn-outline-primary border-start-0">Search</button>
-                </div>
-                </form>
-            </div>
-        </div>
+{% for item in search.results %}
+  {% if item.object_type == 'product' %}
+    {% if item.id == target_product_id %}
+      {% assign product_found = true %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
-        <div class="row">
-          <div class="col-12">
-              <div class="row mb-4 align-items-start">
-                  {%- if section.settings.enable_sorting and emptySearch == false -%}
-                     {%- render 'template-search-sorting' -%}
-                  {%- endif -%}
-
-                  {% if emptySearch == false and section.settings.enable_filtering or section.settings.enable_sorting %}
-                    <div class="col-12 d-lg-none mt-3">
-                        <div class="d-flex justify-content-between">
-                            {% if section.settings.enable_filtering %}
-                            <a href="javascript:void(0);" class="btn btn-primary btn-sm" id="filter-drawer" data-for="filter" title="{{ 'templates.collection.filter_lable' | t }}" rel="nofollow" aria-label="{{ 'templates.collection.filter_lable' | t }}" role="button" aria-expanded="false" aria-controls="filtersCollapse">
-                                {{ 'templates.collection.filter_lable' | t }}
-                            </a>
-                            {% endif %}
-                            {% if section.settings.enable_filtering and section.settings.enable_sorting %}
-                            <a href="javascript:void(0);" class="btn btn-primary btn-sm" id="sortby-drawer" data-for="sort_by" title="{{ 'templates.collection.sortby_lable' | t }}" rel="nofollow" aria-label="{{ 'templates.collection.sortby_lable' | t }}" role="button" aria-expanded="false" aria-controls="filtersCollapse">
-                                {{ 'templates.collection.sortby_lable' | t }}
-                            </a>
-                            {% endif %}
-                        </div>
-                    </div>
-                  {% endif %}
-
-                  {% if emptySearch == false %}
-                    <div class="col-lg-3 order-lg-1">
-                      <div class="py-lg-2 pt-3 total-products" data-totalProducts>
-                        <p class="m-0">{{ search.results_count }} {{ 'templates.collection.results_found' | t }}</p>
-                      </div>
-                    </div>
-                  {% endif %}
-              </div>
+<section class="section-content test22">
+  <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+    <span
+      class="account-fair-tone gradient-fair-tone position-absolute w-100 start-0 top-0 overflow-hidden"
+      style="pointer-events: none;z-index: -1;"
+    >
+    </span>
+    <div class="row pb-lg-12 pb-md-10 pb-9 align-items-stretch justify-content-around">
+      <div class="col-lg-5 ml-auto mr-auto text-center">
+        <form action="/search" method="get" role="search">
+          {%- capture searchType -%}{%- if settings.enable_search_product -%}product,{%- endif -%}{%- if settings.enable_search_article -%}article,{%- endif -%}{%- if settings.enable_search_page -%}page{%- endif -%}{%- endcapture -%}
+          <div class="input-group">
+            <input type="hidden" name="type" value="{{ searchType }}">
+            <input
+              type="search"
+              name="q"
+              id="Search"
+              aria-label="search"
+              value="{{ search.terms | escape }}"
+              placeholder="{{ 'general.search.placeholder' | t }}"
+              class="form-control"
+            >
+            <button type="submit" class="btn btn-outline-primary border-start-0">Search</button>
           </div>
-
-          <div class="col">
-              <div id="search-product-grid">
-                  {%- paginate search.results by items_per_page -%}
-                      {%- if search.results_count == 0 -%}
-                          <div class="row mt-5" id="template-search" data-id="{{ section.id }}">
-                              <div class="col-12 text-center mt-5">
-                                {% if search.terms.size > 0 %}
-                                  <h5> {{ 'templates.search.no_results' | t: terms: search.terms }}</h5>
-                                {% else %}
-                                  <h5> {{ 'templates.search.no_search_term' | t }}</h5>
-                                {% endif %}
-                              </div>
-                          </div>
-                      {%- else -%}
-                          <div class="row justify-content-center" id="template-search" data-id="{{ section.id }}">
-                            
-
-                              {% assign productExcludeTag = settings.product_exclude_tag_text %}
-                              {% for item in search.results %}
-                                {% liquid 
-                                  assign hideWholesalersProducts = settings.hide_product_tag_text | split:','
-                                  assign checkWholesaleProducts = false
-                                  for tag in hideWholesalersProducts
-                                    assign tag = tag | downcase
-                                    if item.tags contains tag
-                                      assign checkWholesaleProducts = true
-                                    endif
-                                  endfor
-                                %}
-                                {% unless checkWholesaleProducts == true %}
-                                  {% unless item.tags contains productExcludeTag %}
-                                    {% if item.id != 7991999987874 %}
-                                  <div class="col-12 col-lg-{{ section.settings.product_per_row }} col-md-4 col-sm-6 mb-5 d-flex align-items-stretch justify-content-around">
-                                      {% render 'card-search-item', item: item %}
-                                  </div>
-                                    {% endif %}
-                                  {% endunless %}
-                                  {% endunless %}
-                              {% endfor %}
-                          </div>
-                          {% if paginate.pages > 1 %}
-                              <div class="row" data-pagination data-type="numbers">
-                                  <div class="col-12 text-center mt-5">
-                                      {% render 'pagination', paginate: paginate %}
-                                  </div>
-                              </div>
-                          {% endif %}
-                      {%- endif -%}
-                  {%- endpaginate -%}
-              </div>
-          </div>
-
-        </div>
+        </form>
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="row mb-4 align-items-start">
+          {%- if section.settings.enable_sorting and emptySearch == false -%}
+            {%- render 'template-search-sorting' -%}
+          {%- endif -%}
+
+          {% if emptySearch == false and section.settings.enable_filtering or section.settings.enable_sorting %}
+            <div class="col-12 d-lg-none mt-3">
+              <div class="d-flex justify-content-between">
+                {% if section.settings.enable_filtering %}
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-primary btn-sm"
+                    id="filter-drawer"
+                    data-for="filter"
+                    title="{{ 'templates.collection.filter_lable' | t }}"
+                    rel="nofollow"
+                    aria-label="{{ 'templates.collection.filter_lable' | t }}"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="filtersCollapse"
+                  >
+                    {{ 'templates.collection.filter_lable' | t }}
+                  </a>
+                {% endif %}
+                {% if section.settings.enable_filtering and section.settings.enable_sorting %}
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-primary btn-sm"
+                    id="sortby-drawer"
+                    data-for="sort_by"
+                    title="{{ 'templates.collection.sortby_lable' | t }}"
+                    rel="nofollow"
+                    aria-label="{{ 'templates.collection.sortby_lable' | t }}"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="filtersCollapse"
+                  >
+                    {{ 'templates.collection.sortby_lable' | t }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if emptySearch == false %}
+            {% if product_found %}
+              <p>No result Found</p>
+            {% else %}
+              <div class="col-lg-3 order-lg-1">
+                <div class="py-lg-2 pt-3 total-products" data-totalProducts>
+                  <p class="m-0">
+                    {{ search.results_count }}
+                    {{ 'templates.collection.results_found' | t }}
+                  </p>
+                </div>
+              </div>
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="col">
+        <div id="search-product-grid" class="searchresult">
+          {%- paginate search.results by items_per_page -%}
+            {%- if search.results_count == 0 -%}
+              <div class="row mt-5" id="template-search" data-id="{{ section.id }}">
+                <div class="col-12 text-center mt-5">
+                  {% if search.terms.size > 0 %}
+                    <h5>{{ 'templates.search.no_results' | t: terms: search.terms }}</h5>
+                  {% else %}
+                    <h5>{{ 'templates.search.no_search_term' | t }}</h5>
+                  {% endif %}
+                </div>
+              </div>
+            {%- else -%}
+              <div class="row justify-content-center" id="template-search" data-id="{{ section.id }}">
+                {% assign productExcludeTag = settings.product_exclude_tag_text %}
+                {% for item in search.results %}
+                  {% if item.id != 8314329661602 %}
+                    {% liquid
+                      assign hideWholesalersProducts = settings.hide_product_tag_text | split: ','
+                      assign checkWholesaleProducts = false
+                      for tag in hideWholesalersProducts
+                        assign tag = tag | downcase
+                        if item.tags contains tag
+                          assign checkWholesaleProducts = true
+                        endif
+                      endfor
+                    %}
+                    {% unless checkWholesaleProducts == true %}
+                      {% unless item.tags contains productExcludeTag %}
+                        {% if item.id != 7991999987874 %}
+                          <div class="col-12 col-lg-{{ section.settings.product_per_row }} col-md-4 col-sm-6 mb-5 d-flex align-items-stretch justify-content-around">
+                            {% render 'card-search-item', item: item %}
+                          </div>
+                        {% endif %}
+                      {% endunless %}
+                    {% endunless %}
+                  {% endif %}
+                {% endfor %}
+              </div>
+              {% if paginate.pages > 1 %}
+                <div class="row" data-pagination data-type="numbers">
+                  <div class="col-12 text-center mt-5">
+                    {% render 'pagination', paginate: paginate %}
+                  </div>
+                </div>
+              {% endif %}
+            {%- endif -%}
+          {%- endpaginate -%}
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 {% schema %}

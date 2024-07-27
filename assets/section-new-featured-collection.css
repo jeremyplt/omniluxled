@@ -54,10 +54,7 @@
     font-size: 18px;
     background-color: transparent;
     transition: all .2s ease-in-out;
-}
-
-.new-featured-collection__item:hover .new-featured-collection__title {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .new-featured-collection__item:hover .new-featured-collection__title {

@@ -1,20 +1,40 @@
 {%- comment -%}Desktop Search Modal{%- endcomment -%}
 <search-modal class="header__search" style="display: none;">
-  <div class="searchform">
-    <div class="search-modal modal__content bg-white" role="dialog" aria-hidden="true" aria-modal="true" aria-label="{{ 'general.search.placeholder' | t }}" style="padding: 17.5px; 0">
+  <div class="searchform testresult">
+    <div
+      class="search-modal modal__content bg-white"
+      role="dialog"
+      aria-hidden="true"
+      aria-modal="true"
+      aria-label="{{ 'general.search.placeholder' | t }}"
+      style="padding: 17.5px; 0"
+    >
       <div class="container">
         <div class="search-modal__content" tabindex="-1">
           <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
             {%- capture searchType -%}{%- if settings.enable_search_product -%}product,{%- endif -%}{%- if settings.enable_search_article -%}article,{%- endif -%}{%- if settings.enable_search_page -%}page{%- endif -%}{%- endcapture -%}
             <div class="field">
-              <input class="form-control rounded-0 search__input border-0" data-search-input id="Search-In-Modal" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}">
+              <input
+                class="form-control rounded-0 search__input border-0"
+                data-search-input
+                id="Search-In-Modal"
+                type="search"
+                name="q"
+                value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.placeholder' | t }}"
+              >
               <input type="hidden" name="type" value="{{ searchType }}">
               {%- comment -%}
-              <button class="search__button field__button focus-inset text-primary" aria-label="{{ 'general.search.placeholder' | t }}">
-                <span class="ox-search"></span>
-              </button>
+                <button class="search__button field__button focus-inset text-primary" aria-label="{{ 'general.search.placeholder' | t }}">
+                  <span class="ox-search"></span>
+                </button>
               {%- endcomment -%}
-              <button style="font-size: 15.56px;" type="button" class="search-modal__close-button modal__close-button focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+              <button
+                style="font-size: 15.56px;"
+                type="button"
+                class="search-modal__close-button modal__close-button focus-inset"
+                aria-label="{{ 'accessibility.close' | t }}"
+              >
                 <span class="ox-close"></span>
               </button>
             </div>

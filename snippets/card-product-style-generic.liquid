@@ -3,7 +3,8 @@
 <div
   class="card card-product card-product-style-1 text-start rounded-0 border-0 test66"
   data-product-grid
-  data-prod-id="{{product.id}}">
+  data-prod-id="{{product.id}}"
+>
   {% assign benefitpills = product.metafields.custom.benefitpills %}
   {% assign eligible_product = false %}
   {% for gift_collection in product.collections %}
@@ -11,22 +12,21 @@
       {% assign eligible_product = true %}
     {% endif %}
   {% endfor %}
-  
+
   {% unless eligible_product %}
     <span class="badges">
-    
       <div class="badgepills">{{ benefitpills }}</div>
       {%- liquid
         assign onSale = false
         assign soldOut = false
-  
+
         if current_variant and current_variant.compare_at_price > current_variant.price or product.compare_at_price > product.price
           assign onSale = true
         endif
         if current_variant and current_variant.available == false or product.available == false
           assign soldOut = true
         endif
-  
+
         assign productBadges = settings.custom_badges | newline_to_br | split: '<br />'
       -%}
       {%- for badge in productBadges -%}
@@ -43,7 +43,7 @@
           {{ 'products.product.on_sale' | t | escape }}
         </span>
       {%- endif -%}
-  
+
       {%- if soldOut -%}
         <span class="badge badge-right badge-gainsboro text-black">
           {{ 'products.product.sold_out' | t | escape }}
@@ -59,6 +59,11 @@
       </span>
     </span>
   {% endif %}
+  {%- if product.tags contains 'notify-me' -%}
+    <span class="badge badge-gainsboro text-black" style="max-width:200px;">
+      {{ 'COMING SOON' | escape }}
+    </span>
+  {%- endif -%}
 
   <div class="card-img text-center {% if product.featured_image.size == 0 %}bg-gray-300{% endif %}">
     {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
@@ -68,19 +73,21 @@
       <a href="{{ product.url | within: collection }}" class="d-block product-link">
         <img
           srcset="
-              {%- if current_variant.image.width >= 360 -%}{{ current_variant.image | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
-              {%- if current_variant.image.width >= 533 -%}{{ current_variant.image | image_url: width: 533, format: 'pjpg' }} 533w,{%- endif -%}
-              {%- if current_variant.image.width >= 720 -%}{{ current_variant.image | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
-              {%- if current_variant.image.width >= 820 -%}{{ current_variant.image | image_url: width: 820, format: 'pjpg' }} 820w,{%- endif -%}
-              {%- if current_variant.image.width >= 950 -%}{{ current_variant.image | image_url: width: 950, format: 'pjpg' }} 950w,{%- endif -%}
-              {{ current_variant.image | image_url }} {{ current_variant.image.width }}w"
+            {%- if current_variant.image.width >= 360 -%}{{ current_variant.image | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+            {%- if current_variant.image.width >= 533 -%}{{ current_variant.image | image_url: width: 533, format: 'pjpg' }} 533w,{%- endif -%}
+            {%- if current_variant.image.width >= 720 -%}{{ current_variant.image | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
+            {%- if current_variant.image.width >= 820 -%}{{ current_variant.image | image_url: width: 820, format: 'pjpg' }} 820w,{%- endif -%}
+            {%- if current_variant.image.width >= 950 -%}{{ current_variant.image | image_url: width: 950, format: 'pjpg' }} 950w,{%- endif -%}
+            {{ current_variant.image | image_url }} {{ current_variant.image.width }}w
+          "
           src="{{ current_variant.image | image_url: width: 533, format: 'pjpg' }}"
           sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 3 }}px, 100vw"
           loading="lazy"
           data-feauredImage
           alt="{{ current_variant.image.alt | default: product.title | escape }}"
           width="{{ current_variant.image.width }}"
-          height="{{ current_variant.image.width | divided_by: current_variant.image.aspect_ratio }}">
+          height="{{ current_variant.image.width | divided_by: current_variant.image.aspect_ratio }}"
+        >
         {%- if settings.show_secondary_image and secondaryImage -%}
           {%- liquid
             assign checkVideoFound = false
@@ -97,7 +104,6 @@
             endfor
           -%}
 
-
           {% if checkVideoFound %}
             <custom-video
               class="h-100 placement--grid position-absolute position-relative start-0 top-0 video-with--text w-100"
@@ -108,7 +114,8 @@
               data-video-type="local"
               data-placement="grid"
               data-mobilevideo="{{ videolink }}"
-              data-video-id="{{ videolink }}">
+              data-video-id="{{ videolink }}"
+            >
               <video
                 class="h-100 object-cover position-absolute start-0 top-0 w-100"
                 data-postervideo=""
@@ -116,19 +123,21 @@
                 preload="yes"
                 playsinline=""
                 loop=""
-                data-mobilesrc="{{ videolink }}">
+                data-mobilesrc="{{ videolink }}"
+              >
                 <source src="{{ videolink }}" type="video/mp4">
               </video>
             </custom-video>
           {% else %}
             <img
               srcset="
-              {%- if secondaryImage.width >= 360 -%}{{ secondaryImage | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
-              {%- if secondaryImage.width >= 533 -%}{{ secondaryImage | image_url: width: 533, format: 'pjpg' }} 533w,{%- endif -%}
-              {%- if secondaryImage.width >= 720 -%}{{ secondaryImage | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
-              {%- if secondaryImage.width >= 820 -%}{{ secondaryImage | image_url: width: 820, format: 'pjpg' }} 820w,{%- endif -%}
-              {%- if secondaryImage.width >= 950 -%}{{ secondaryImage | image_url: width: 950, format: 'pjpg' }} 950w,{%- endif -%}
-              {{ secondaryImage | image_url }} {{ secondaryImage.width }}w"
+                {%- if secondaryImage.width >= 360 -%}{{ secondaryImage | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+                {%- if secondaryImage.width >= 533 -%}{{ secondaryImage | image_url: width: 533, format: 'pjpg' }} 533w,{%- endif -%}
+                {%- if secondaryImage.width >= 720 -%}{{ secondaryImage | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
+                {%- if secondaryImage.width >= 820 -%}{{ secondaryImage | image_url: width: 820, format: 'pjpg' }} 820w,{%- endif -%}
+                {%- if secondaryImage.width >= 950 -%}{{ secondaryImage | image_url: width: 950, format: 'pjpg' }} 950w,{%- endif -%}
+                {{ secondaryImage | image_url }} {{ secondaryImage.width }}w
+              "
               src="{{ secondaryImage | image_url: width: 533 }}"
               sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 4 }}px, 100vw"
               loading="lazy"
@@ -136,20 +145,21 @@
               data-hoverImage
               alt="{{ secondaryImage.alt | default: product.title | escape }}"
               width="{{ secondaryImage.width }}"
-              height="{{ secondaryImage.width | divided_by: secondaryImage.aspect_ratio }}">
+              height="{{ secondaryImage.width | divided_by: secondaryImage.aspect_ratio }}"
+            >
           {% endif %}
-          {%- comment -%} 
-            <custom-video class="h-100 placement--grid position-absolute position-relative start-0 top-0 video-with--text w-100" data-loop="true" data-autoplay="true" 
-            data-controls="false" data-muted="true" data-video-type="local" data-placement="grid" 
-            data-mobilevideo="https://cdn.shopify.com/videos/c/o/v/49825a6165874aacae5ae8a919751dde.mp4" 
-            data-video-id="https://cdn.shopify.com/videos/c/o/v/49825a6165874aacae5ae8a919751dde.mp4"> 
-            <video class="h-100 object-cover position-absolute start-0 top-0 w-100" 
-            data-postervideo="" muted="" preload="yes" playsinline="" loop="" 
-            data-mobilesrc="https://cdn.shopify.com/videos/c/o/v/49825a6165874aacae5ae8a919751dde.mp4"> 
-            <source src="https://cdn.shopify.com/videos/c/o/v/49825a6165874aacae5ae8a919751dde.mp4" type="video/mp4"> 
-            </video> 
+          {%- comment -%}
+            <custom-video class="h-100 placement--grid position-absolute position-relative start-0 top-0 video-with--text w-100" data-loop="true" data-autoplay="true"
+            data-controls="false" data-muted="true" data-video-type="local" data-placement="grid"
+            data-mobilevideo="https://cdn.shopify.com/videos/c/o/v/49825a6165874aacae5ae8a919751dde.mp4"
+            data-video-id="https://cdn.shopify.com/videos/c/o/v/49825a6165874aacae5ae8a919751dde.mp4">
+            <video class="h-100 object-cover position-absolute start-0 top-0 w-100"
+            data-postervideo="" muted="" preload="yes" playsinline="" loop=""
+            data-mobilesrc="https://cdn.shopify.com/videos/c/o/v/49825a6165874aacae5ae8a919751dde.mp4">
+            <source src="https://cdn.shopify.com/videos/c/o/v/49825a6165874aacae5ae8a919751dde.mp4" type="video/mp4">
+            </video>
 
-            </custom-video> 
+            </custom-video>
           {%- endcomment -%}
         {%- endif -%}
       </a>
@@ -157,20 +167,21 @@
       <a href="{{ product.url | within: collection }}" class="d-block product-link">
         <img
           srcset="
-                  {%- if product.featured_image.width >= 360 -%}{{ product.featured_image | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
-                  {%- if product.featured_image.width >= 533 -%}{{ product.featured_image | image_url: width: 533, format: 'pjpg' }} 533w,{%- endif -%}
-                  {%- if product.featured_image.width >= 720 -%}{{ product.featured_image | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
-                  {%- if product.featured_image.width >= 850 -%}{{ product.featured_image | image_url: width: 850, format: 'pjpg' }} 850w,{%- endif -%}
-                  {%- if product.featured_image.width >= 950 -%}{{ product.featured_image | image_url: width: 950, format: 'pjpg' }} 950w,{%- endif -%}
-                  {{ product.featured_image | image_url }} {{ product.featured_image.width }}w"
+            {%- if product.featured_image.width >= 360 -%}{{ product.featured_image | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+            {%- if product.featured_image.width >= 533 -%}{{ product.featured_image | image_url: width: 533, format: 'pjpg' }} 533w,{%- endif -%}
+            {%- if product.featured_image.width >= 720 -%}{{ product.featured_image | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
+            {%- if product.featured_image.width >= 850 -%}{{ product.featured_image | image_url: width: 850, format: 'pjpg' }} 850w,{%- endif -%}
+            {%- if product.featured_image.width >= 950 -%}{{ product.featured_image | image_url: width: 950, format: 'pjpg' }} 950w,{%- endif -%}
+            {{ product.featured_image | image_url }} {{ product.featured_image.width }}w
+          "
           src="{{ product.featured_image | image_url: width: 533 }}"
           sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 4 }}px, 100vw"
           loading="lazy"
           data-feauredImage
           alt="{{ product.featured_image.alt | default: product.title | escape }}"
           width="{{ product.featured_image.width }}"
-          height="{{ product.featured_image.width | divided_by: product.featured_image.aspect_ratio }}">
-
+          height="{{ product.featured_image.width | divided_by: product.featured_image.aspect_ratio }}"
+        >
 
         {%- if settings.show_secondary_image and product.images[1] -%}
           {%- liquid
@@ -197,7 +208,8 @@
               data-video-type="local"
               data-placement="grid"
               data-mobilevideo="{{ videolink }}"
-              data-video-id="{{ videolink }}">
+              data-video-id="{{ videolink }}"
+            >
               <video
                 class="h-100 object-cover position-absolute start-0 top-0 w-100"
                 data-postervideo=""
@@ -205,20 +217,21 @@
                 preload="yes"
                 playsinline=""
                 loop=""
-                data-mobilesrc="{{ videolink }}">
+                data-mobilesrc="{{ videolink }}"
+              >
                 <source src="{{ videolink }}" type="video/mp4">
               </video>
-
             </custom-video>
           {% else %}
             <img
               srcset="
-                  {%- if product.images[1].width >= 360 -%}{{ product.images[1] | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
-                  {%- if product.images[1].width >= 533 -%}{{ product.images[1] | image_url: width: 533, format: 'pjpg' }} 533w,{%- endif -%}
-                  {%- if product.images[1].width >= 720 -%}{{ product.images[1] | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
-                  {%- if product.images[1].width >= 850 -%}{{ product.images[1] | image_url: width: 850, format: 'pjpg' }} 850w,{%- endif -%}
-                  {%- if product.images[1].width >= 950 -%}{{ product.images[1] | image_url: width: 950, format: 'pjpg' }} 950w,{%- endif -%}
-                  {{ product.images[1] | image_url }} {{ product.images[1].width }}w"
+                {%- if product.images[1].width >= 360 -%}{{ product.images[1] | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+                {%- if product.images[1].width >= 533 -%}{{ product.images[1] | image_url: width: 533, format: 'pjpg' }} 533w,{%- endif -%}
+                {%- if product.images[1].width >= 720 -%}{{ product.images[1] | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
+                {%- if product.images[1].width >= 850 -%}{{ product.images[1] | image_url: width: 850, format: 'pjpg' }} 850w,{%- endif -%}
+                {%- if product.images[1].width >= 950 -%}{{ product.images[1] | image_url: width: 950, format: 'pjpg' }} 950w,{%- endif -%}
+                {{ product.images[1] | image_url }} {{ product.images[1].width }}w
+              "
               src="{{ product.images[1] | image_url: width: 533 }}"
               sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 2 }}px, 100vw"
               loading="lazy"
@@ -226,9 +239,10 @@
               data-hoverImage
               alt="{{ product.images[1].alt | default: product.title | escape }}"
               width="{{ product.images[1].width }}"
-              height="{{ product.images[1].width | divided_by: product.images[1].aspect_ratio }}">
+              height="{{ product.images[1].width | divided_by: product.images[1].aspect_ratio }}"
+            >
           {% endif %}
-          {%- comment -%} 
+          {%- comment -%}
             <custom-video class="h-100 placement--grid position-absolute position-relative start-0 top-0 video-with--text w-100" data-loop="true" data-autoplay="true"
             data-controls="false" data-muted="true" data-video-type="local" data-placement="grid"
             data-mobilevideo="https://cdn.shopify.com/videos/c/o/v/49825a6165874aacae5ae8a919751dde.mp4"
@@ -238,7 +252,7 @@
             data-mobilesrc="https://cdn.shopify.com/videos/c/o/v/49825a6165874aacae5ae8a919751dde.mp4">
             <source src="https://cdn.shopify.com/videos/c/o/v/49825a6165874aacae5ae8a919751dde.mp4" type="video/mp4">
             </video>
-            </custom-video> 
+            </custom-video>
           {%- endcomment -%}
         {%- endif -%}
       </a>
@@ -247,19 +261,21 @@
         <img
           src="{{ settings.no_image | image_url }}"
           srcset="
-                  {%- if settings.no_image.width >= 360 -%}{{ settings.no_image | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
-                  {%- if settings.no_image.width >= 533 -%}{{ settings.no_image | image_url: width: 533, format: 'pjpg' }} 533w,{%- endif -%}
-                  {%- if settings.no_image.width >= 720 -%}{{ settings.no_image | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
-                  {%- if settings.no_image.width >= 850 -%}{{ settings.no_image | image_url: width: 850, format: 'pjpg' }} 850w,{%- endif -%}
-                  {%- if settings.no_image.width >= 950 -%}{{ settings.no_image | image_url: width: 950, format: 'pjpg' }} 950w,{%- endif -%}
-                  {{ settings.no_image | image_url }} {{ settings.no_image.width }}w"
+            {%- if settings.no_image.width >= 360 -%}{{ settings.no_image | image_url: width: 360, format: 'pjpg' }} 360w,{%- endif -%}
+            {%- if settings.no_image.width >= 533 -%}{{ settings.no_image | image_url: width: 533, format: 'pjpg' }} 533w,{%- endif -%}
+            {%- if settings.no_image.width >= 720 -%}{{ settings.no_image | image_url: width: 720, format: 'pjpg' }} 720w,{%- endif -%}
+            {%- if settings.no_image.width >= 850 -%}{{ settings.no_image | image_url: width: 850, format: 'pjpg' }} 850w,{%- endif -%}
+            {%- if settings.no_image.width >= 950 -%}{{ settings.no_image | image_url: width: 950, format: 'pjpg' }} 950w,{%- endif -%}
+            {{ settings.no_image | image_url }} {{ settings.no_image.width }}w
+          "
           sizes="(min-width: {{ settings.container_width }}) {{ settings.container_width | minus: 150 | divided_by: 2 }}px, 100vw"
           loading="lazy"
           class="w-100"
           data-feauredImage
           alt="{{ settings.no_image.alt | default: product.title | escape }}"
           width="{{ settings.no_image.width }}"
-          height="{{ settings.no_image.width | divided_by: settings.no_image.aspect_ratio }}">
+          height="{{ settings.no_image.width | divided_by: settings.no_image.aspect_ratio }}"
+        >
       </a>
     {% else %}
       {{ 'product-' | append: current | placeholder_svg_tag: 'img-fluid' }}
@@ -268,47 +284,47 @@
   <div class="card-body px-0 pb-0">
     <div class="row no-gutter">
       <div class="col-12 d-flex justify-content-between review-box-wrap flex-column flex-lg-row">
-
         <div class="card-title m-0 font-family-base lh-1 fw-semibold order-1 order-lg-0 mt-2 mt-lg-0">
           <a class="product-link lh-1" href="{{ product.url | within: collection }}">{{ product.title }}</a>
         </div>
         <div class="review-box d-flex ms-lg-3 justify-content-lg-end" style="padding-top: 2px;">
-          {% render 'okendo-reviews-product-rating-summary'
-            , product: product %}
+          {% render 'okendo-reviews-product-rating-summary', product: product %}
         </div>
       </div>
       <div class="col-12 mt-2 pt-1 price-with-btn-col">
         <div class="position-relative d-flex price-with-btn test79">
           <div class="col-12 btn-card-hide trn fw-normal">
             {% render 'price-with-taxes', product: product %}
-            {% comment %} {% if current_variant and current_variant.compare_at_price > current_variant.price %}
-              <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s> {% endcomment %}
-              {% comment %} {% elsif product.compare_at_price > product.price %}
-                              <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s> {% endcomment %}
-            {% comment %} {% endif %}
-            <span
-              class="price m-0 p-0 money originalprice"
-              data-currentPrice
-              data-variant-price="{% if current_variant %}{{current_variant.price}}{% else %}{{product.price}}{% endif %}">
-              {% if current_variant %}
-                {{ current_variant.price | money }}
-              {% elsif product.price_varies %}
-                {% assign minPrice = product.price_min | money %}
-                {% assign maxPrice = product.price_max | money %}
-                {{ 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape }}
-              {% else %}
-                {{ product.price | money }}
+            {% comment %}
+              {% if current_variant and current_variant.compare_at_price > current_variant.price %}
+              <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ current_variant.compare_at_price | money }}</s>
+            {% endcomment %}
+            {% comment %}
+              {% elsif product.compare_at_price > product.price %}
+              <s class="price small m-0 p-0 text-gray-600 me-1 money" data-comparePrice>{{ product.compare_at_price | money }}</s>
+            {% endcomment %}
+            {% comment %}
               {% endif %}
-            </span> {% endcomment %}
-                   
+              <span
+                class="price m-0 p-0 money originalprice"
+                data-currentPrice
+                data-variant-price="{% if current_variant %}{{current_variant.price}}{% else %}{{product.price}}{% endif %}">
+                {% if current_variant %}
+                  {{ current_variant.price | money }}
+                {% elsif product.price_varies %}
+                  {% assign minPrice = product.price_min | money %}
+                  {% assign maxPrice = product.price_max | money %}
+                  {{ 'products.product.price_range' | t: min: minPrice, max: maxPrice | escape }}
+                {% else %}
+                  {{ product.price | money }}
+                {% endif %}
+              </span>
+            {% endcomment %}
           </div>
           <div class="col-12">
-
             {%- if settings.enable_product_card_swatches -%}
               <div class="card-footer bg-transparent border-0 p-0">
-                {%- render 'form-product-grid-2'
-                  , product: product
-                  , current_variant: current_variant -%}
+                {%- render 'form-product-grid-2', product: product, current_variant: current_variant -%}
               </div>
             {%- endif -%}
           </div>

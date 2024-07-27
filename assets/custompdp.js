@@ -70,20 +70,38 @@ if (manualBISpopup) {
       const variantID = parseInt(manualBISform.querySelector('[id="manual-bis-variant"]').value);
       const productID = manualBISform.querySelector('[id="manual-bis-product"]').value;
       const subscribe = manualBISform.querySelector('[id="subscribe_for_newsletter"]').checked;
+  const listID = manualBISform.querySelector('[id="manual-bis-list-id"]').value;
+
+
 
       const isValid = Utility.validateEmail(email);
 
+
+
       if (!isValid) return;
 
+
+
+      console.log(subscribe);
+
       const data = {
+
         a: accountID,
+
         email: email,
+
         variant: variantID,
+
         product: productID,
+
         platform: 'shopify',
-        subscribe_for_newsletter: subscribe,
+
+        subscribe_for_newsletter: true,
+
+        g: listID
+
       };
-      console.log(data);
+       console.log(data);
       /*
       fetch(`https://a.klaviyo.com/onsite/components/back-in-stock/subscribe`, {
           method: "POST",

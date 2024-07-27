@@ -825,7 +825,7 @@
             "answer6": "<p>No, none of our products contain parabens.<\/p>",
             "enableFaq7": true,
             "question7": "What preservatives are used in these products?",
-            "answer7": "<p>The Enzyme Powder Cleanser is not a water-based product and therefore does not use a preservative.<\/p><p>The Hyaluronic Acid Serum uses Phenoxyethanol.<\/p><p>Peptide Concentrate uses Potassium Sorbate.<\/p><p>The Hydrogel Face Mask and Hydrogel Neck and Décolleté Mask use Ethylhexylglycerin.<\/p><p>The Antioxidant Eye Cream uses Phenoxyethanol.<\/p>",
+            "answer7": "<p>The Enzyme Powder Cleanser is not a water-based product and therefore does not use a preservative.<\/p><p>The Hyaluronic Acid Serum uses Phenoxyethanol.<\/p><p>Peptide Concentrate uses Potassium Sorbate.<\/p><p>The Hydrogel Face Mask and Hydrogel Neck and Décolleté Mask use Ethylhexylglycerin.<\/p><p>The Antioxidant Eye Cream uses Phenoxyethanol.<\/p><p>The CoQ10 Face Cream uses Phenoxyethanol and Ethylhexylglycerin.<\/p>",
             "enableFaq8": true,
             "question8": "Do I have to use these products with LED light therapy?",
             "answer8": "<p>This system of products was designed to use in combination with LED light therapy treatments. However, you can certainly use these products without LED and experience skin benefits! <\/p>",
@@ -834,7 +834,7 @@
             "answer9": "<p>We are happy to accept returns of unopened product within 30 days of receiving your order. Returns must be unopened with the original packaging seal intact, and must be verified by photo. We are unable to accept returns of any open product. To initiate your return please contact our customer service team.<\/p>",
             "enableFaq10": true,
             "question10": "Where are the products made?",
-            "answer10": "<p>Our Enzyme Powder Cleanser, Hyaluronic Acid Serum, and Peptide Concentrate are made in the UK. Our Hydrogel Face Mask and Hydrogel Neck and Décolleté Mask are made in South Korea. Our Antioxidant Eye Cream is made in the UK.<\/p>"
+            "answer10": "<p>Our Enzyme Powder Cleanser, Hyaluronic Acid Serum, Peptide Concentrate, Antioxidant Eye Cream, and CoQ10 Face Cream are made in the UK. Our Hydrogel Face Mask and Hydrogel Neck and Décolleté Mask are made in South Korea.<\/p>"
           }
         },
         "453017c9-bbb0-443d-99b8-9c2c325e4a07": {
@@ -855,7 +855,7 @@
             "answer4": "<p>Yes, these products are suitable for sensitive skin. If you have particularly sensitive skin, we recommend performing a patch test prior to using any new skincare products.<\/p>",
             "enableFaq5": true,
             "question5": "How can I incorporate these products into my skin care routine?",
-            "answer5": "<ol><li>Cleanse your skin using the  Enzyme Powder Cleanser<\/li><li>Before your LED treatment, apply the Hyaluronic Acid Serum<\/li><li>Conduct your 10 minute Omnilux LED Light Therapy Treatment<\/li><li>Follow with the Peptide Concentrate to amplify anti-aging effects<\/li><li>Apply your favorite moisturizer<\/li><li>Apply the Antioxidant Eye Cream<\/li><li>During the daytime, never forget your SPF!<\/li><\/ol>",
+            "answer5": "<ol><li>Cleanse your skin using the Enzyme Powder Cleanser<\/li><li>Before your LED treatment, apply the Hyaluronic Acid Serum <\/li><li>Conduct your 10 minute Omnilux LED Light Therapy Treatment <\/li><li>Follow with the Peptide Concentrate to amplify anti-aging effects <\/li><li>Apply the CoQ10 Face Cream <\/li><li>Apply the Antioxidant Eye Cream  <\/li><li>During the daytime, never forget your SPF!  <\/li><\/ol>",
             "enableFaq6": true,
             "question6": "Can I pair or layer these products with other serums?",
             "answer6": "<p>Yes, you can certainly use these products with other serums. We recommend performing a patch test prior to using any new skincare products.<\/p>",
@@ -889,9 +889,9 @@
             "enableFaq4": true,
             "question4": "Can I shop for these products in person somewhere?\/ Where can I buy Omnilux Skin Care products?",
             "answer4": "<p>You can purchase these products from our website (<a href=\"https:\/\/omniluxled.com\/\" title=\"https:\/\/omniluxled.com\/\">omniluxled.com<\/a>) or with a provider partner who carries Omnilux products. <\/p>",
-            "enableFaq5": false,
-            "question5": "",
-            "answer5": "",
+            "enableFaq5": true,
+            "question5": "Can I use these products alongside retinol products?",
+            "answer5": "<p>Retinol and prescription tretinoin are strong active ingredients that may leave your skin extra sensitive. If you are using a retinol or prescription tretinoin, we recommend performing a patch test prior to using any new skincare products.<\/p>",
             "enableFaq6": false,
             "question6": "",
             "answer6": "",
