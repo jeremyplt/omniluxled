@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "fb5ecb5e-55ca-4dd5-a283-3b9b227357b3": {
@@ -380,6 +389,54 @@
         "24904fc5-10b3-427d-91ff-3e75778d2c43",
         "4739a565-41ab-4342-b43c-b575d5da3451",
         "70578d00-be1c-45ca-b4e3-5610c7a56de4"
+      ],
+      "settings": {
+        "border_color": "#000000",
+        "div_id": "",
+        "ignore": true
+      }
+    },
+    "circle_video_swipe_H4bnJa": {
+      "type": "circle-video-swipe",
+      "blocks": {
+        "circle_link_H8zaDe": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LANDING_PAGE_SOCIAL_PROOF.png",
+            "label": "Sarah's Story",
+            "video": "shopify:\/\/files\/videos\/Omnilux Contour LED Mask Review.mp4"
+          }
+        },
+        "circle_link_bVHyGT": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LANDING_PAGE_SOCIAL_PROOF_1.png",
+            "label": "Ariana's Story",
+            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Ariana's Story.mp4"
+          }
+        },
+        "circle_link_h3xQkf": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LANDING_PAGE_SOCIAL_PROOF_5.png",
+            "label": "Lizeth's Story",
+            "video": "shopify:\/\/files\/videos\/lizethstory.mp4"
+          }
+        },
+        "circle_link_GCaKEL": {
+          "type": "circle-link",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LANDING_PAGE_SOCIAL_PROOF_6.png",
+            "label": "Jess' Story",
+            "video": "shopify:\/\/files\/videos\/Omnilux CLEAR_ Jess' Story.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "circle_link_H8zaDe",
+        "circle_link_bVHyGT",
+        "circle_link_h3xQkf",
+        "circle_link_GCaKEL"
       ],
       "settings": {
         "border_color": "#000000",
@@ -1139,6 +1196,7 @@
     "59bdd293-efe7-4fcd-8619-feac003821e6",
     "dcb3cafc-7296-46cc-8c09-ce11f9bfb43c",
     "ee29c9a6-cc9d-454d-a792-422630926ee6",
+    "circle_video_swipe_H4bnJa",
     "0cc6c87d-8225-4d2d-8409-1e4c60f0753c",
     "7caf6918-0887-4d78-b125-88468bd9dd86",
     "483972b6-05da-4d1a-964a-d5598ce78682",
