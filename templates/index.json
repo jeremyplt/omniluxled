@@ -390,6 +390,7 @@
         "4739a565-41ab-4342-b43c-b575d5da3451",
         "70578d00-be1c-45ca-b4e3-5610c7a56de4"
       ],
+      "disabled": true,
       "settings": {
         "border_color": "#000000",
         "div_id": "",
