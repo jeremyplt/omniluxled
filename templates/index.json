@@ -442,7 +442,8 @@
       "settings": {
         "border_color": "#000000",
         "div_id": "",
-        "ignore": true
+        "ignore": true,
+        "desktop": true
       }
     },
     "0cc6c87d-8225-4d2d-8409-1e4c60f0753c": {
