@@ -40,14 +40,22 @@
             perView: 4,
             spacing: 40 // Optional: Adjust the spacing between slides if needed
         },
+        breakpoints: {
+            "(max-width: 749px)": {
+                slides: {
+                    perView: 3,
+                    spacing: 20
+                }
+            }
+        },
         created(s) {
-            s.moveToIdx(4, true, animation)
+            s.moveToIdx(5, true, animation)
         },
         updated(s) {
-            s.moveToIdx(s.track.details.abs + 4, true, animation)
+            s.moveToIdx(s.track.details.abs + 5, true, animation)
         },
         animationEnded(s) {
-            s.moveToIdx(s.track.details.abs + 4, true, animation)
+            s.moveToIdx(s.track.details.abs + 5, true, animation)
         },
     })
 </script>
