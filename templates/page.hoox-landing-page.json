@@ -49,7 +49,8 @@
         "before_after_gaKTt7": {
           "type": "before-after",
           "settings": {
-            "before_image": "shopify:\/\/shop_images\/Listitem_-_Slide_6_Picture_image_607_1_png_7a7661a0-1580-4431-a523-15ccb677740f.jpg"
+            "before_image": "shopify:\/\/shop_images\/Listitem_-_Slide_6_Picture_image_607_1_png_7a7661a0-1580-4431-a523-15ccb677740f.jpg",
+            "after_image": "shopify:\/\/shop_images\/Listitem_-_Slide_6_Picture_image_607_1_png.jpg"
           }
         }
       },
@@ -64,7 +65,7 @@
         "heading": "Over 300,000 Customers Trust Omnilux to Achieve Younger Skin with a 10-Minute Treatment",
         "description": "<ul><li>Reduces fine lines and wrinkles<\/li><li>Clinically proven results for anti-aging<\/li><li>10-minute, at home, spa level treatment<\/li><\/ul>",
         "button_label": "TRANSFORM MY SKIN",
-        "button_url": "",
+        "button_url": "shopify:\/\/products\/omnilux-contour-face",
         "additional_info": "<p>FREE Shipping | 30-Day Money-Back Guarantee<\/p>",
         "padding_top": 36,
         "padding_bottom": 36
