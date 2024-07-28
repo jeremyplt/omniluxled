@@ -2986,7 +2986,7 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
 
   .circle-video-swipe__modal.modal--active {
     display: block;
-    position: absolute;
+    position: fixed;
     inset: 0;
     min-height: 100vh;
     height: 100vh;
