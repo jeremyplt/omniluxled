@@ -15,16 +15,55 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding new-before-after-banner">
-    <div class="page-width">
-        <div class="hoox-hero__reviews">
-            <div class="review__stars">
-              {% for i in (1..5) %}
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
-                </svg>
-              {% endfor %}
+    {% comment %} Not as a background CSS prop to avoid render-blocking ressources {% endcomment %}
+    <img class="before-after-banner__background" src="https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Untitled_background.png?v=1722171148" width="2000" height="2000" alt="gardient background"/>
+    <div class="page-width before-after-banner__inner">
+        <div class="before-after-banner__left">
+            <div class="hoox-hero__reviews">
+                <div class="review__stars">
+                  {% for i in (1..5) %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                    </svg>
+                  {% endfor %}
+                </div>
+                <p class="rev-txt--test"><span class="animated-number">300K+</span> Glowing Customers</p>
             </div>
-            <p class="rev-txt--test"><span class="animated-number">300K+</span> Glowing Customers</p>
+            {% if section.settings.heading != blank %}
+                <h2 class="before-after-banner__heading">{{ section.settings.heading }}</h2>
+            {% endif %}
+            {% if section.settings.description != blank %}
+                <div class="before-after-banner__description">
+                    {{ section.settings.description }}
+                </div>
+            {% endif %}
+            {% if section.settings.button_label != blank %}
+                <a href="{{ section.settings.button_label }}" class="before-after-banner__button">{{ section.settings.button_label }}</a>
+            {% endif %}
+        </div>
+        <div class="before-after-banner__right">
+            <div class="before-after-banner__slider keen-slider">
+                {% for block in section.blocks %}
+                    <div class="before-after-banner__slide keen-slider__slide" {{ block.shopify_attributes }}>
+                        {% if block.settings.before_image != blank %}
+                            <div class="before-after-banner__before">
+                                <div class="before-after-banner__image">
+                                    {{ block.settings.before_image | image_url: width: 750 | image_tag: alt: block.settings.before_image.alt, loading: "lazy" }}
+                                </div>
+                                <div class="before-after-banner__label">Before</div>
+                            </div>
+                        {% endif %}
+                        {% if block.settings.after_image != blank %}
+                            <div class="before-after-banner__after">
+                                <div class="before-after-banner__image">
+                                    {{ block.settings.after_image | image_url: width: 750 | image_tag: alt: block.settings.after_image.alt, loading: "lazy" }}
+                                </div>
+                                <div class="before-after-banner__label">After</div>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
