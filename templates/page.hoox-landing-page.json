@@ -53,6 +53,13 @@
             "before_image": "shopify:\/\/shop_images\/before_5_copy.jpg",
             "after_image": "shopify:\/\/shop_images\/after_5_copy.jpg"
           }
+        },
+        "before_after_yygVPD": {
+          "type": "before-after",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/Omnilux_Younger_Skin_copy.jpg",
+            "after_image": "shopify:\/\/shop_images\/After.jpg"
+          }
         }
       },
       "block_order": [
@@ -60,7 +67,8 @@
         "before_after_8WQJxy",
         "before_after_cW3hQT",
         "before_after_jzMPwe",
-        "before_after_gaKTt7"
+        "before_after_gaKTt7",
+        "before_after_yygVPD"
       ],
       "settings": {
         "heading": "Over 300,000 Customers Trust Omnilux to Achieve Younger Skin with a 10-Minute Treatment",
