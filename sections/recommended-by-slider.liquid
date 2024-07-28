@@ -14,8 +14,8 @@
     }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding recommended-by-slider">
-    <div class="page-width recommended-by-slider__inner">
+<div class="section-{{ section.id }}-padding recommended-by-slider" style="background-color: {{ section.settings.background_color }}">
+    <div class="recommended-by-slider__inner">
         {% if section.settings.text != blank %}
             <div class="recommended-by-slider__left">{{ section.settings.text }}</div>
         {% endif %}
@@ -36,6 +36,10 @@
         loop: true,
         renderMode: "performance",
         drag: false,
+        slides: {
+            perView: 4,
+            spacing: 40 // Optional: Adjust the spacing between slides if needed
+        },
         created(s) {
             s.moveToIdx(4, true, animation)
         },
@@ -48,6 +52,7 @@
     })
 </script>
 
+
 {% schema %}
     {
         "name": "[NEW] Recommended By",
@@ -56,9 +61,15 @@
         "settings": [
             {
                 "type": "color",
-                "id": "background-color",
+                "id": "background_color",
                 "label": "Background Color",
                 "default": "#F5F5F5"
+            },
+            {
+                "type": "richtext",
+                "id": "text",
+                "label": "Text",
+                "default": "<p>Approved and <br>Recommended by:</p>"
             },
             {
                 "type": "header",
