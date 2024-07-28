@@ -43,7 +43,8 @@
         "before_after_jzMPwe": {
           "type": "before-after",
           "settings": {
-            "before_image": "shopify:\/\/shop_images\/Listitem_-_Slide_6_Picture_image_607_1_png_7a7661a0-1580-4431-a523-15ccb677740f.jpg"
+            "before_image": "shopify:\/\/shop_images\/Listitem_-_Slide_6_Picture_image_607_1_png_7a7661a0-1580-4431-a523-15ccb677740f.jpg",
+            "after_image": "shopify:\/\/shop_images\/Listitem_-_Slide_6_Picture_image_607_1_png.jpg"
           }
         },
         "before_after_gaKTt7": {
