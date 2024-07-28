@@ -3114,3 +3114,7 @@ html:not(.test-skin-goal) .new-featured-collection {
 .test-replo-banner .hoox-hero {
   display: none;
 }
+
+.test-replo-banner .image-hero.overflow-hidden.withreviews {
+  display: none;
+}
