@@ -37,23 +37,29 @@
         renderMode: "performance",
         drag: false,
         created(s) {
-            s.moveToIdx(5, true, animation)
+            s.moveToIdx(4, true, animation)
         },
         updated(s) {
-            s.moveToIdx(s.track.details.abs + 5, true, animation)
+            s.moveToIdx(s.track.details.abs + 4, true, animation)
         },
         animationEnded(s) {
-            s.moveToIdx(s.track.details.abs + 5, true, animation)
+            s.moveToIdx(s.track.details.abs + 4, true, animation)
         },
     })
 </script>
 
 {% schema %}
     {
-        "name": "[NEW] Recommended By Slider",
+        "name": "[NEW] Recommended By",
         "tag": "section",
         "class": "section-recommended-by-slider",
         "settings": [
+            {
+                "type": "color",
+                "id": "background-color",
+                "label": "Background Color",
+                "default": "#F5F5F5"
+            },
             {
                 "type": "header",
                 "content": "Padding"
@@ -82,7 +88,7 @@
         "blocks": [],
         "presets": [
             {
-                "name": "[NEW] Recommended By Slider"
+                "name": "[NEW] Recommended"
             }
         ]
     }
