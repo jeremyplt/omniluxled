@@ -78,27 +78,31 @@
         "logo_rATCUe": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/4_d6c9b03a-4f07-44a3-89b4-c4248bb9f683.svg"
+            "logo": "shopify:\/\/shop_images\/2_svg.png"
           }
         },
         "logo_jFJC8x": {
           "type": "logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/Picture_1_svg.png"
           }
         },
         "logo_xJm36w": {
           "type": "logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/Picture_4_svg.png"
           }
         },
         "logo_jpbpr7": {
           "type": "logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/Picture_3_svg.png"
           }
         },
         "logo_TtgyjQ": {
           "type": "logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/Figma_Logo.png"
           }
         }
       },
