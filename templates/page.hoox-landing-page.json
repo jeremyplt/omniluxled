@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "layout": "theme.hoox.landing",
   "sections": {
@@ -5,6 +14,54 @@
       "type": "template-page",
       "disabled": true,
       "settings": {
+      }
+    },
+    "new_before_after_banner_ajnpaV": {
+      "type": "new-before-after-banner",
+      "blocks": {
+        "before_after_gcwFii": {
+          "type": "before-after",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/Listitem_-_Slide_6_Picture_image_607_1_png_7a7661a0-1580-4431-a523-15ccb677740f.jpg",
+            "after_image": "shopify:\/\/shop_images\/Listitem_-_Slide_6_Picture_image_607_1_png.jpg"
+          }
+        },
+        "before_after_8WQJxy": {
+          "type": "before-after",
+          "settings": {
+          }
+        },
+        "before_after_cW3hQT": {
+          "type": "before-after",
+          "settings": {
+          }
+        },
+        "before_after_jzMPwe": {
+          "type": "before-after",
+          "settings": {
+          }
+        },
+        "before_after_gaKTt7": {
+          "type": "before-after",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "before_after_gcwFii",
+        "before_after_8WQJxy",
+        "before_after_cW3hQT",
+        "before_after_jzMPwe",
+        "before_after_gaKTt7"
+      ],
+      "settings": {
+        "heading": "Over 300,000 Customers Trust Omnilux to Achieve Younger Skin with a 10-Minute Treatment",
+        "description": "<ul><li>Reduces fine lines and wrinkles<\/li><li>Clinically proven results for anti-aging<\/li><li>10-minute, at home, spa level treatment<\/li><\/ul>",
+        "button_label": "TRANSFORM MY SKIN",
+        "button_url": "",
+        "additional_info": "<p>FREE Shipping | 30-Day Money-Back Guarantee<\/p>",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "71768739-d7d7-4f5d-87c6-0265594b8fae": {
@@ -70,6 +127,8 @@
         "section_star_text": "300K+ Glowing Customers",
         "section_star_anchor_id": "#hoow-reviws",
         "section_title": "#1 Dermatologist Recommended LED Device",
+        "section_subtitle": "",
+        "section_mobile_subtitle": "",
         "section_description": "Introducing Contour Face—a dermatologist-recommended red light therapy device with clinically proven results for anti-aging and skin rejuvenation.",
         "section_btn_text": "TRANSFORM MY SKIN",
         "section_btn_url": "#hoox-shop",
@@ -799,6 +858,7 @@
   },
   "order": [
     "main",
+    "new_before_after_banner_ajnpaV",
     "71768739-d7d7-4f5d-87c6-0265594b8fae",
     "c7458cec-8732-46b2-97a9-601f8b3f28bf",
     "832457c1-0171-4350-ad70-04b074b499f1",
