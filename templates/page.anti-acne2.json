@@ -28,21 +28,36 @@
         "before_after_PjR7nP": {
           "type": "before-after",
           "settings": {
+            "before_image": "shopify:\/\/shop_images\/before_1.jpg",
+            "after_image": "shopify:\/\/shop_images\/after_1.jpg"
           }
         },
         "before_after_qhDaG8": {
           "type": "before-after",
           "settings": {
+            "before_image": "shopify:\/\/shop_images\/before_2.jpg",
+            "after_image": "shopify:\/\/shop_images\/after_2.jpg"
           }
         },
         "before_after_UpfCa7": {
           "type": "before-after",
           "settings": {
+            "before_image": "shopify:\/\/shop_images\/before_3.jpg",
+            "after_image": "shopify:\/\/shop_images\/before_3.jpg"
           }
         },
         "before_after_zEhgTq": {
           "type": "before-after",
           "settings": {
+            "before_image": "shopify:\/\/shop_images\/before_4.jpg",
+            "after_image": "shopify:\/\/shop_images\/after_4.jpg"
+          }
+        },
+        "before_after_twNPFg": {
+          "type": "before-after",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/before_5.jpg",
+            "after_image": "shopify:\/\/shop_images\/after_5.jpg"
           }
         }
       },
@@ -50,7 +65,8 @@
         "before_after_PjR7nP",
         "before_after_qhDaG8",
         "before_after_UpfCa7",
-        "before_after_zEhgTq"
+        "before_after_zEhgTq",
+        "before_after_twNPFg"
       ],
       "settings": {
         "heading": "Over 300,000 Customers Trust Omnilux to Achieve Younger Skin with a 10-Minute Treatment",
