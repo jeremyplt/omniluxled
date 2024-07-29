@@ -182,11 +182,18 @@
         return window.innerWidth <= 767; // Adjust the width as per your mobile breakpoint
       }
 
-      // Example usage
-      if (isMobileDevice()) {
+
       console.log("on mobile");
                 var swiper = new Swiper(".mySwiper", {
-            slidesPerView: "auto",
+            slidesPerView: 1,
+            breakpoints: {
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            },
             observer: true,
             observeParents: true,
             spaceBetween: 30,
@@ -195,7 +202,6 @@
               clickable: true,
             },
           });
-      }
 
         $('#BlogTagFilter span').on('click',function(){
     $(this).parent().find('span').removeClass('active');
