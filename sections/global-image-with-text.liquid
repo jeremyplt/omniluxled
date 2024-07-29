@@ -602,11 +602,7 @@
                     {% endif -%}
                     class="btn btn{% if block.settings.btn_type == 'outline' %}-{% endif %}{{ block.settings.btn_type }}-{{ block.settings.btn_variant }} {{ block.settings.btn_size }}"
                   >
-                    {% if block.settings.btn_link contains 'coq10' %}
-                      Coming Soon
-                    {% else %}
-                      {{- block.settings.btn_txt -}}
-                    {% endif %}
+                    {{- block.settings.btn_txt -}}
                   </a>
                 {% endif %}
                 {% if block.settings.triggerto != blank %}

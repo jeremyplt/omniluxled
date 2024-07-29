@@ -52,7 +52,7 @@ const selectors = {
     productMedia: document.querySelector('[data-productMedia]')
   };
 
-  const mediaJSON = selectors.productMedia ? JSON.parse(selectors.productMedia.innerHTML) : {};
+  const mediaJSON = JSON.parse(selectors.productMedia.innerHTML);
   window.productMedia = mediaJSON;
   class TemplateProductJS {
     constructor() {
@@ -65,29 +65,21 @@ typeof TemplateProductJS !== 'undefined' && new TemplateProductJS();
 const box = document.querySelector('.product-add-cart');
 var stickyBtn = document.querySelector('[data-stickyBtn]');
 document.addEventListener('scroll', function () {
-  if (isInViewport(box)) {
-    if(stickyBtn.classList.contains('d-block')){
-      stickyBtn.classList.remove('d-block');
+    if(isInViewport(box)){
+         if(stickyBtn.classList.contains('d-block')){
+            stickyBtn.classList.remove('d-block');
+        }
+        stickyBtn.classList.add('d-none')
+    } else{
+       if(stickyBtn.classList.contains('d-none')){
+            stickyBtn.classList.remove('d-none');
+        }
+        stickyBtn.classList.add('d-block')
     }
-    stickyBtn.classList.add('d-none');
-    document.body.classList.remove('sticky-bar-visible');
-
-  } else {
-    if(stickyBtn.classList.contains('d-none')){
-      stickyBtn.classList.remove('d-none');
-    }
-    stickyBtn.classList.add('d-block');
-    document.body.classList.add('sticky-bar-visible');
-  }
 }, {
-  passive: true
+    passive: true
 });
-
 function isInViewport(el) {
-  if (!el) {
-    return false;
-  }
-  
   const rect = el.getBoundingClientRect();
   return (
       rect.top >= 0 &&
@@ -101,14 +93,11 @@ function isInViewport(el) {
 
 class model3d {
   constructor() {
-    this.model3d_btn = document.querySelector('.cover-3d-wrap');
-    if (this.model3d_btn) {
-      this.model3d_btn.addEventListener('click', this.toggle3Dmodel.bind(this));
-    }
+    this.model3d_btn=document.querySelector('.cover-3d-wrap');
+    this.model3d_btn.addEventListener('click', this.toggle3Dmodel.bind(this));
   }
-
   toggle3Dmodel(event){
-    let currentTarget = event.currentTarget;
+    let currentTarget=  event.currentTarget;
     if (currentTarget.classList.contains('show_3d_btn')) {
       currentTarget.classList.remove('show_3d_btn')
     } else {

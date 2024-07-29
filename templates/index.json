@@ -594,8 +594,10 @@
         "template--16029767729314__c552e92a-f090-4e52-8c25-337f36136add-166983408100e94b55-0": {
           "type": "content",
           "settings": {
+            "tabtitle": "",
             "image": "shopify:\/\/shop_images\/skin-goal-min.jpg",
             "title": "<p>“I want plumper, younger-looking skin.” <\/p>",
+            "subtitle": "",
             "txt_info": "<p>Omnilux Contour red and near-infrared LED devices reduce fine lines, wrinkles, redness, and the appearance of pigmentation, while restoring a healthy, youthful glow.<\/p>",
             "btn_txt": "Shop contour",
             "btn_url": "shopify:\/\/products\/omnilux-contour-face"
@@ -604,8 +606,10 @@
         "b75f44ea-cfb8-43e2-bdcd-c3caa79840fa": {
           "type": "content",
           "settings": {
+            "tabtitle": "",
             "image": "shopify:\/\/shop_images\/skin-goal-02-min.jpg",
             "title": "<p>“I want to treat my acne and clear breakouts fast.”<\/p>",
+            "subtitle": "",
             "txt_info": "<p>The Omnilux Clear blue and red LED device significantly reduces or eliminates acne, blemishes, redness, and inflammation, and may regulate excess oil production.<\/p>",
             "btn_txt": "Shop clear",
             "btn_url": "shopify:\/\/products\/omnilux-clear"
@@ -614,8 +618,10 @@
         "03a1158f-a3a0-4d7f-a0b8-baf9c92572f3": {
           "type": "content",
           "settings": {
+            "tabtitle": "",
             "image": "shopify:\/\/shop_images\/omnilux-men_e5b4fcae-9b28-4ee7-825b-5a0484e47f1e.jpg",
             "title": "<p>“I want a superior skincare solution for men.”<\/p>",
+            "subtitle": "",
             "txt_info": "<p>Omnilux Men revolutionizes male skincare by tackling razor burn, dryness, fine lines, and dark circles with advanced LED technology.<\/p>",
             "btn_txt": "Shop Men",
             "btn_url": "shopify:\/\/products\/omnilux-men"
@@ -859,15 +865,15 @@
           "type": "image-with-text-block",
           "settings": {
             "fullwidth_content": false,
-            "heading_txt": "Newest addition:<br>\nAntioxidant Eye Cream",
+            "heading_txt": "Newest addition:<br>\nCoQ10 Face Cream",
             "max_width_enabled": true,
             "max_width": 530,
-            "txt": "<p>Bye, bye, bags! Reveal brighter, younger-looking skin with this nourishing, antioxidant-rich eye cream. Featuring ingredients like green tea, avocado oil, and apricot kernel oil, this soothing under eye cream is designed to use post-LED treatment for extra firming effects.<\/p>",
+            "txt": "<p>Maximize hydration and nourish the skin with this lightweight, nutrient-rich moisturizer. Developed to enhance Omnilux’s LED light therapy when used post treatment.<\/p>",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
             "btn_txt": "Shop now",
-            "btn_link": "shopify:\/\/products\/antioxidant-eye-cream",
+            "btn_link": "shopify:\/\/products\/coq10-face-cream",
             "triggerbtn_txt": "",
             "triggerto": "",
             "btn_type": "",
@@ -879,7 +885,7 @@
             "btn_size_watch": "",
             "link_txt": "",
             "link_url": "",
-            "image": "shopify:\/\/shop_images\/Untitled_design_-_2024-03-02T142813.092.png",
+            "image": "shopify:\/\/shop_images\/SPF_FaceCream-9735_2.jpg",
             "alignment": "text-left",
             "image_alignment": "left"
           }

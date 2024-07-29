@@ -1,85 +1,225 @@
-<section id="{{ section.settings.anchorid }}" class="section-content info-block-wrapper py-8 border-bottom py-lg-11"  data-section-id="{{ section.id }}" style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}">
-    <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
-        <div class="row">
-            <div class="col-12 text-center d-flex flex-column justify-content-center mb-6 mb-lg-8 pb-1 pb-lg-0">
-                {%- if section.settings.heading_txt != blank -%}
-                  <h3 class="h2 section-title mb-3">{{ section.settings.heading_txt }}</h3>
-                {% endif %}
-                {%- if section.settings.lead_txt != blank -%}
-                  <p class="me-xl-n1 mb-0">
-                      {{ section.settings.lead_txt }}
-                  </p>
-                {% endif %}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                {% assign blocks_size = section.blocks | size %}
-                {%- if blocks_size > 0 -%}
-                <div class="row my-n3" data-in-view>
-                    {% for block in section.blocks %}
-                    <div class="
-                      {%- if blocks_size == 2 -%} col-sm-5 py-5
-                      {%- elsif blocks_size == 3 -%} col-sm-4 py-4
-                      {%- else -%} col-sm-3 py-3
-                      {%- endif -%} 
-                      col-12"  {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
-                        <div class="card feature-block border-0">
-                            <div class="card-img text-center position-relative overflow-hidden" style="padding-top:105.64%;transform-origin: top;">
-                                {%- if block.settings.image != blank -%}
-                                <img src="{{ block.settings.image | image_url: width: 20, format: 'pjpg' }}"
-                                  srcset="
-                                  {%- if block.settings.image.width >= 280 -%}{{ block.settings.image | image_url: width: 280, format: 'pjpg' }} 280w,{%- endif -%}
-                                  {%- if block.settings.image.width >= 320 -%}{{ block.settings.image | image_url: width: 320, format: 'pjpg' }} 320w,{%- endif -%}
-                                  {%- if block.settings.image.width >= 345 -%}{{ block.settings.image | image_url: width: 345, format: 'pjpg' }} 345w,{%- endif -%}
-                                  {%- if block.settings.image.width >= 426 -%}{{ block.settings.image | image_url: width: 426, format: 'pjpg' }} 426w,{%- endif -%}
-                                  {%- if block.settings.image.width >= 460 -%}{{ block.settings.image | image_url: width: 460, format: 'pjpg' }} 460w,{%- endif -%}
-                                  {%- if block.settings.image.width >= 520 -%}{{ block.settings.image | image_url: width: 520, format: 'pjpg' }} 520w,{%- endif -%}
-                                  {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}"
-                                  sizes="(min-width: 991px) 426px, (min-width: 768px) 460px, (min-width: 576px) 50vw, 100vw"
-                                  alt="{{ block.settings.title | strip_html }}" loading="lazy"
-                                  width="{{ block.settings.image.width }}" class="w-100 h-100 position-absolute start-0 top-0 object-cover"
-                                  height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio }}"
-                                        >
-                                {% else %}
-                                <img src="{{ settings.no_image | image_url: width: 20, format: 'pjpg' }}" srcset="
+<section
+  id="{{ section.settings.anchorid }}"
+  class="section-content info-block-wrapper py-8 border-bottom py-lg-11"
+  data-section-id="{{ section.id }}"
+  style="background-color: {{ section.settings.section_bg_color }}; color: {{ section.settings.section_txt_color }}"
+>
+  <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
+    <div class="row">
+      <div class="col-12 text-center d-flex flex-column justify-content-center mb-6 mb-lg-8 pb-1 pb-lg-0">
+        {%- if section.settings.heading_txt != blank -%}
+          <h3 class="h2 section-title mb-3">{{ section.settings.heading_txt }}</h3>
+        {% endif %}
+        {%- if section.settings.lead_txt != blank -%}
+          <p class="me-xl-n1 mb-0">
+            {{ section.settings.lead_txt }}
+          </p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        {% assign blocks_size = section.blocks | size %}
+        {%- if blocks_size > 0 -%}
+          <div id="BlogTagFilter">
+            <span data-value="all" class="active">All</span>
+            {% for block in section.blocks %}
+              {%- case block.type -%}
+                {%- when 'tab' -%}
+                  <span data-value="{{ block.settings.tabtitle }}">{{ block.settings.tabtitle }}</span>
+              {%- endcase -%}
+            {% endfor %}
+          </div>
+        {%- endif -%}
+        {%- if blocks_size > 0 -%}
+          <div class="swiper mySwiper">
+            <div class="my-n3 blog-list swiper-wrapper" data-in-view>
+              {% for block in section.blocks %}
+                {%- case block.type -%}
+                  {%- when 'content' -%}
+                    <div
+                      class="swiper-slide blog-item {% if blocks_size == 2 %}col-sm-5 py-5{% elsif blocks_size == 3 %}col-sm-4 py-4{% else %}col-sm-custom py-3 py-sm-4{% endif %} col-12 test66"
+                      {{ block.shopify_attributes }}
+                      data-block-id="{{ block.id }}"
+                      data-block-tab="{{ block.settings.tabtitle }}"
+                    >
+                      <div class="card feature-block border-0">
+                        <div
+                          class="card-img text-center position-relative overflow-hidden"
+                          style="padding-top:105.64%;transform-origin: top;"
+                        >
+                          {%- if block.settings.image != blank -%}
+                            <img
+                              src="{{ block.settings.image | image_url: width: 20, format: 'pjpg' }}"
+                              srcset="
+                                {%- if block.settings.image.width >= 280 -%}{{ block.settings.image | image_url: width: 280, format: 'pjpg' }} 280w,{%- endif -%}
+                                {%- if block.settings.image.width >= 320 -%}{{ block.settings.image | image_url: width: 320, format: 'pjpg' }} 320w,{%- endif -%}
+                                {%- if block.settings.image.width >= 345 -%}{{ block.settings.image | image_url: width: 345, format: 'pjpg' }} 345w,{%- endif -%}
+                                {%- if block.settings.image.width >= 426 -%}{{ block.settings.image | image_url: width: 426, format: 'pjpg' }} 426w,{%- endif -%}
+                                {%- if block.settings.image.width >= 460 -%}{{ block.settings.image | image_url: width: 460, format: 'pjpg' }} 460w,{%- endif -%}
+                                {%- if block.settings.image.width >= 520 -%}{{ block.settings.image | image_url: width: 520, format: 'pjpg' }} 520w,{%- endif -%}
+                                {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}
+                              "
+                              sizes="(min-width: 991px) 426px, (min-width: 768px) 460px, (min-width: 576px) 50vw, 100vw"
+                              alt="{{ block.settings.title | strip_html }}"
+                              loading="lazy"
+                              width="{{ block.settings.image.width }}"
+                              class="w-100 h-100 position-absolute start-0 top-0 object-cover"
+                              height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio }}"
+                            >
+                          {% else %}
+                            <img
+                              src="{{ settings.no_image | image_url: width: 20, format: 'pjpg' }}"
+                              srcset="
                                 {%- if settings.no_image.width.width >= 280 -%}{{ settings.no_image.width | image_url: width: 280, format: 'pjpg' }} 280w,{%- endif -%}
                                 {%- if settings.no_image.width.width >= 320 -%}{{ settings.no_image.width | image_url: width: 320, format: 'pjpg' }} 320w,{%- endif -%}
                                 {%- if settings.no_image.width.width >= 345 -%}{{ settings.no_image.width | image_url: width: 345, format: 'pjpg' }} 345w,{%- endif -%}
                                 {%- if settings.no_image.width.width >= 426 -%}{{ settings.no_image.width | image_url: width: 426, format: 'pjpg' }} 426w,{%- endif -%}
                                 {%- if settings.no_image.width.width >= 460 -%}{{ settings.no_image.width | image_url: width: 460, format: 'pjpg' }} 460w,{%- endif -%}
                                 {%- if settings.no_image.width.width >= 520 -%}{{ settings.no_image.width | image_url: width: 520, format: 'pjpg' }} 520w,{%- endif -%}
-                                {%- if settings.no_image.width.width >= 550 -%}{{ settings.no_image.width | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}"
-                                sizes="(min-width: 991px) 426px, (min-width: 768px) 460px, (min-width: 576px) 50vw, 100vw"
-                                  alt="{{ block.settings.title | strip_html }}" loading="lazy"
-                                  width="{{ settings.no_image.width }}"  class="w-100 h-100 position-absolute start-0 top-0 object-cover"
-                                  height="{{ settings.no_image.width | divided_by: settings.no_image.aspect_ratio }}">
-                                {% endif %}
-                            </div>
-                            <div class="card-body d-flex flex-wrap p-0 flex-grow-0 pt-3">
-                                {%- if block.settings.title != blank -%}
-                                    <div class="h4 fw-light w-100 mb-0">{{ block.settings.title }}</div>
-                                {% endif %}
-                                {%- if block.settings.txt_info != blank -%}
-                                <div class="w-100 pb-md-3 pb-3">
-                                    {{ block.settings.txt_info }}
-                                </div>
-                                {% endif %}
-                                {%- if block.settings.btn_txt != blank -%}
-                                    <a class="btn w-sm-auto w-100 btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}" href="{{ block.settings.btn_url }}">{{ block.settings.btn_txt }}</a>
-                                {% endif %}
-                            </div>
+                                {%- if settings.no_image.width.width >= 550 -%}{{ settings.no_image.width | image_url: width: 550, format: 'pjpg' }} 550w,{%- endif -%}
+                              "
+                              sizes="(min-width: 991px) 426px, (min-width: 768px) 460px, (min-width: 576px) 50vw, 100vw"
+                              alt="{{ block.settings.title | strip_html }}"
+                              loading="lazy"
+                              width="{{ settings.no_image.width }}"
+                              class="w-100 h-100 position-absolute start-0 top-0 object-cover"
+                              height="{{ settings.no_image.width | divided_by: settings.no_image.aspect_ratio }}"
+                            >
+                          {% endif %}
                         </div>
+                        <div class="card-body d-flex flex-wrap p-0 flex-grow-0 pt-3">
+                          {%- if block.settings.title != blank -%}
+                            <div class="h4 fw-light w-100 mb-0 cus-heading">
+                              {{ block.settings.title }}
+                            </div>
+                          {% endif %}
+                          {%- if block.settings.subtitle != blank -%}
+                            <div class="h4 fw-light w-100 mb-0 cus-subheading">
+                              {{ block.settings.subtitle }}
+                            </div>
+                          {% endif %}
+                          {%- if block.settings.txt_info != blank -%}
+                            <div class="w-100 pb-md-3 pb-3 cus-info-block">
+                              {{ block.settings.txt_info }}
+                            </div>
+                          {% endif %}
+                          {%- if block.settings.btn_txt != blank -%}
+                            <a
+                              class="btn w-sm-auto w-100 btn{% if section.settings.btn_type == 'outline' %}-{% endif %}{{ section.settings.btn_type }}-{{ section.settings.btn_variant }} {{ section.settings.btn_size }}"
+                              href="{{ block.settings.btn_url }}"
+                            >
+                              {{- block.settings.btn_txt -}}
+                            </a>
+                          {% endif %}
+                        </div>
+                      </div>
                     </div>
-                    {% endfor %}
-                </div>
-                {% endif %}
+                {%- endcase -%}
+              {% endfor %}
             </div>
-        </div>
-
+            <div class="swiper-pagination"></div>
+          </div>
+        {% endif %}
+      </div>
     </div>
-  </section>
-  {% schema %}
+  </div>
+</section>
+<style>
+      .card.feature-block .card-body .cus-subheading {
+      display: block;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 400;
+      }
+      #BlogTagFilter {
+        margin-bottom: 20px;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        overflow-x: scroll;
+        transition: .25s left ease;
+        flex-wrap: unset;
+        box-shadow: none;
+        justify-content: unset;
+        padding-bottom: 20px;
+        gap: 0;
+      }
+      @media (min-width:768px){
+        #BlogTagFilter {
+          display: none;
+        }
+        .swiper-slide.blog-item.col-sm-custom {
+      width: 20%;    padding-right: 15px;
+      padding-left: 15px;
+  }
+      }
+      #BlogTagFilter span {
+          color: #9C9C9C;
+          font-weight: 500;
+          padding-right: 10px;
+          padding-left: 10px;
+          cursor: pointer; text-wrap: nowrap;
+      }
+
+      #BlogTagFilter span.active {
+          color: #000;
+          border-bottom: 2px solid #000;
+      }
+      @media (max-width:767px){
+         .swiper-slide.blog-item {
+           width:70%;        margin-bottom: 20px !important;
+         }
+        .swiper-pagination.swiper-pagination-bullets {
+            bottom: 0;
+            position: relative;
+        }
+      }
+</style>
+<script>
+    $(document).ready(function () {
+       console.log("on mobile working");
+    function isMobileDevice() {
+        return window.innerWidth <= 767; // Adjust the width as per your mobile breakpoint
+      }
+
+      // Example usage
+      if (isMobileDevice()) {
+      console.log("on mobile");
+                var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            observer: true,
+            observeParents: true,
+            spaceBetween: 30,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+      }
+
+        $('#BlogTagFilter span').on('click',function(){
+    $(this).parent().find('span').removeClass('active');
+    var find_var = $(this).attr('data-value');
+
+    $('.blog-list .blog-item').each(function(i){
+      var taggg = $(this).attr('data-block-tab');
+      if (find_var == taggg) {
+        //  console.log(find_var + ' is exist!');
+        $(this).show();
+      }else {
+        $(this).hide();
+        //  console.log(find_var + ' does not exist!');
+      }
+      if(find_var == 'all'){$(this).show();}
+    });
+    $(this).addClass('active');
+   swiper.update(true);
+    return false;
+  });
+
+  });
+</script>
+{% schema %}
 {
   "name": "Info Block",
   "settings": [
@@ -192,9 +332,25 @@
   ],
   "blocks": [
     {
+      "type": "tab",
+      "name": "Tab Title",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tabtitle",
+          "label": "Mobile Tab Heading"
+        }
+      ]
+    },
+    {
       "type": "content",
       "name": "Feature Block",
       "settings": [
+        {
+          "type": "text",
+          "id": "tabtitle",
+          "label": "Mobile Tab Heading"
+        },
         {
           "type": "image_picker",
           "id": "image",
@@ -205,6 +361,11 @@
           "type": "richtext",
           "id": "title",
           "label": "Info Heading"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Sub Heading"
         },
         {
           "type": "richtext",
