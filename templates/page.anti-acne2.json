@@ -69,10 +69,10 @@
         "before_after_twNPFg"
       ],
       "settings": {
-        "heading": "Over 300,000 Customers Trust Omnilux to Achieve Younger Skin with a 10-Minute Treatment",
-        "description": "<ul><li>Reduces fine lines and wrinkles<\/li><li>Clinically proven results for anti-aging<\/li><li>10-minute, at home, spa level treatment<\/li><\/ul>",
+        "heading": "Mask On, Acne Gone",
+        "description": "<ul><li>Reduces active acne and blemishes, redness & inflammation<\/li><li>Helps clear breakouts faster<\/li><li>Reduces and helps soften the appearance of acne scarring<\/li><\/ul>",
         "button_label": "TRANSFORM MY SKIN",
-        "button_url": "shopify:\/\/products\/omnilux-clear",
+        "button_url": "#featuredproductsingle",
         "additional_info": "<p>FREE Shipping | 30-Day Money-Back Guarantee<\/p>",
         "padding_top": 36,
         "padding_bottom": 36
@@ -120,7 +120,7 @@
         "logo_bWnWpd"
       ],
       "settings": {
-        "background_color": "#F5F5F5",
+        "background_color": "#f5f5f5",
         "text": "<p>Approved and <br\/>Recommended by:<\/p>",
         "padding_top": 36,
         "padding_bottom": 36
