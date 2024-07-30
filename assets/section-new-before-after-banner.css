@@ -59,14 +59,15 @@
 
 .before-after-banner__description ul li {
     display: flex;
-    gap: 8px;
     align-items: center;
     margin-bottom: 6px;
+    gap: 4px;
 }
 
 .before-after-banner__description ul li::before {
     content: "";
     display: block;
+    margin-right: 4px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2.5' stroke='rgb(151, 84, 43)' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m4.5 12.75 6 6 9-13.5' /%3E%3C/svg%3E%0A");
     background-size: 16px 16px;
     background-repeat: no-repeat;
