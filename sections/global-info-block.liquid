@@ -33,7 +33,7 @@
         {%- endif -%}
         {%- if blocks_size > 0 -%}
           <div class="swiper mySwiper">
-            <div class="my-n3 blog-list swiper-wrapper" data-in-view>
+          <div class="my-n3 blog-list swiper-wrapper {% if section.settings.multiple_tabs %}blog-list__multiple-tabs{% endif %}" data-in-view>
               {% for block in section.blocks %}
                 {%- case block.type -%}
                   {%- when 'content' -%}
@@ -173,7 +173,40 @@
             bottom: 0;
             position: relative;
         }
+
+        .blog-list__multiple-tabs {
+          overflow-x: auto;
+        }
+
+        .swiper-slide {
+          padding-right: 20px;
+        }
       }
+
+      .swiper-slide {
+        min-height: 100%;
+        height: auto;
+      }
+
+      .swiper-slide .card {
+        min-height: 100%;
+        height: auto;
+        flex: 1;
+      }
+
+      .swiper-slide .card-body {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 100%;
+        flex: 1;
+        flex-grow: 1 !important;
+      }
+
+      .card-body .cus-info-block {
+        flex: 1;
+      }
+
 </style>
 <script>
   const multipleTabs = {{ section.settings.multiple_tabs }};
@@ -183,18 +216,7 @@
         return window.innerWidth <= 767; // Adjust the width as per your mobile breakpoint
       }
 
-      if (isMobileDevice() && multipleTabs) {
-          var swiper = new Swiper(".mySwiper", {
-            slidesPerView: auto,
-            observer: true,
-            observeParents: true,
-            spaceBetween: 30,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-          });
-        } else if (!multipleTabs) {
+      if (!multipleTabs) {
           var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             breakpoints: {
@@ -231,7 +253,7 @@
       if(find_var == 'all'){$(this).show();}
     });
     $(this).addClass('active');
-   swiper.update(true);
+  //  swiper.update(true);
     return false;
   });
 
