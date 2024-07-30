@@ -2987,6 +2987,7 @@ html body .cc-compliance button.cc-btn-accept-selected:not(:hover) {
   .circle-video-swipe__modal.modal--active {
     display: block;
     position: fixed;
+    position: fixed;
     inset: 0;
     min-height: 100vh;
     height: 100vh;
@@ -3121,4 +3122,60 @@ html:not(.test-skin-goal) .new-featured-collection {
 
 html:not(.test-replo-banner) .section-new-before-after-banner, html:not(.test-replo-banner) .section-recommended-by-slider {
   display: none;
+}
+main {
+  position: relative !important;
+}
+
+/* Circle video swipe desktop */
+
+html .circle-video-swipe.circle-video-desktop .circle-video-menu-item-image {
+  border: none !important;
+  width: auto !important
+}
+
+html .circle-video-swipe.circle-video-desktop .circle-video-menu-item {
+  position: relative;
+}
+
+html .circle-video-swipe.circle-video-desktop .circle-menu-item-label {
+  position: absolute;
+  top: auto;
+  bottom: 30px;
+  left: 20px;
+  z-index: 10;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 999px) {
+  html .circle-video-swipe.circle-video-desktop .circle-video-menu-item-image {
+      min-width: 275px !important;
+  }
+}
+
+@media (min-width: 601px) {
+  html .circle-video-swipe.circle-video-desktop .circle-video-swipe__modal.modal--active {
+      display: block !important;
+  }
+
+  html .circle-video-swipe.circle-video-desktop .circle-video-swipe__modal.modal--active {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    z-index: 100000000000;
+    max-width: 100vw;
+    background-color: #000;
+  }
+
+  html .circle-video-swipe.circle-video-desktop .circle-video__item video {
+    display: block;
+    margin: 0 auto;
+  }
 }
