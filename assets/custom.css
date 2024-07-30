@@ -3104,3 +3104,21 @@ html:not(.test-skin-goal) .new-featured-collection {
     position: absolute;
     z-index: 1;
 }
+
+.page-width {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.test-replo-banner .template-page.anti-aging .hoox-hero {
+  display: none;
+}
+
+.test-replo-banner .template-page.page-anti-acne2 .image-hero.overflow-hidden.withreviews {
+  display: none;
+}
+
+html:not(.test-replo-banner) .section-new-before-after-banner, html:not(.test-replo-banner) .section-recommended-by-slider {
+  display: none;
+}

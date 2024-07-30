@@ -1,0 +1,30 @@
+.recommended-by-slider__slider {
+    display: flex;
+    align-items: center;
+}
+
+.recommended-by-slider__inner {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+}
+
+.recommended-by-slider__left {
+    min-width: max-content;
+    padding-left: 3rem;
+    font-size: 20px;
+}
+
+.recommended-by-slider__left p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 749px) {
+    .recommended-by-slider__left {
+        display: none;
+    }
+
+    .recommended-by-slider__inner {
+        gap: 0
+    }
+}

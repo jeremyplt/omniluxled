@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "46303bd3-da3b-4cc4-9804-394607ef3f06": {
@@ -5,12 +14,119 @@
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/Untitled-222_e65c0107-3a4e-4b4d-bade-6fd0644b515c.jpg",
         "image_mobile": "shopify:\/\/shop_images\/Untitled-8.png",
-        "title": "Mask on, <br>acne <em>gone<\/em>.",
+        "title": "Mask on, acne gone.",
         "subtitle": "Clinically proven to stop breakouts in their tracks.",
         "btn_text": "SHOP NOW",
         "btn_link": "shopify:\/\/products\/omnilux-clear",
         "content_position": "2",
         "custom_class": ""
+      }
+    },
+    "new_before_after_banner_jeiW9c": {
+      "type": "new-before-after-banner",
+      "blocks": {
+        "before_after_PjR7nP": {
+          "type": "before-after",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/before_1.jpg",
+            "after_image": "shopify:\/\/shop_images\/after_1.jpg"
+          }
+        },
+        "before_after_qhDaG8": {
+          "type": "before-after",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/before_2.jpg",
+            "after_image": "shopify:\/\/shop_images\/after_2.jpg"
+          }
+        },
+        "before_after_UpfCa7": {
+          "type": "before-after",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/before_3.jpg",
+            "after_image": "shopify:\/\/shop_images\/before_3.jpg"
+          }
+        },
+        "before_after_zEhgTq": {
+          "type": "before-after",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/before_4.jpg",
+            "after_image": "shopify:\/\/shop_images\/after_4.jpg"
+          }
+        },
+        "before_after_twNPFg": {
+          "type": "before-after",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/before_5.jpg",
+            "after_image": "shopify:\/\/shop_images\/after_5.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "before_after_PjR7nP",
+        "before_after_qhDaG8",
+        "before_after_UpfCa7",
+        "before_after_zEhgTq",
+        "before_after_twNPFg"
+      ],
+      "custom_css": [
+        ".before-after-banner__heading {font-size: 50px;}"
+      ],
+      "settings": {
+        "heading": "Mask On, Acne Gone",
+        "description": "<ul><li>Reduces active acne and blemishes, redness & inflammation<\/li><li>Helps clear breakouts faster<\/li><li>Reduces and helps soften the appearance of acne scarring<\/li><\/ul>",
+        "button_label": "TRANSFORM MY SKIN",
+        "button_url": "#featuredproductsingle",
+        "additional_info": "<p>FREE Shipping | 30-Day Money-Back Guarantee<\/p>",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "recommended_by_slider_jBbnR3": {
+      "type": "recommended-by-slider",
+      "blocks": {
+        "logo_inDHpc": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/2_svg.png"
+          }
+        },
+        "logo_aGgfX8": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Picture_1_svg.png"
+          }
+        },
+        "logo_zQp9Jd": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Picture_4_svg.png"
+          }
+        },
+        "logo_GRXbBx": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Picture_3_svg.png"
+          }
+        },
+        "logo_bWnWpd": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Figma_Logo.png"
+          }
+        }
+      },
+      "block_order": [
+        "logo_inDHpc",
+        "logo_aGgfX8",
+        "logo_zQp9Jd",
+        "logo_GRXbBx",
+        "logo_bWnWpd"
+      ],
+      "settings": {
+        "background_color": "#f5f5f5",
+        "text": "<p>Approved and <br\/>Recommended by:<\/p>",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "a1064ed2-44b7-4aff-801b-b9497008532a": {
@@ -1000,6 +1116,8 @@
   },
   "order": [
     "46303bd3-da3b-4cc4-9804-394607ef3f06",
+    "new_before_after_banner_jeiW9c",
+    "recommended_by_slider_jBbnR3",
     "a1064ed2-44b7-4aff-801b-b9497008532a",
     "654dfb70-8515-4329-b35a-c595a1c866e6",
     "ccd2af3c-3893-452e-8e9d-e82555f637c3",
