@@ -68,6 +68,9 @@
         "before_after_zEhgTq",
         "before_after_twNPFg"
       ],
+      "custom_css": [
+        ".before-after-banner__heading {font-size: }"
+      ],
       "settings": {
         "heading": "Mask On, Acne Gone",
         "description": "<ul><li>Reduces active acne and blemishes, redness & inflammation<\/li><li>Helps clear breakouts faster<\/li><li>Reduces and helps soften the appearance of acne scarring<\/li><\/ul>",
