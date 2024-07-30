@@ -20,7 +20,7 @@
     <div class="row">
       <div class="col-12">
         {% assign blocks_size = section.blocks | size %}
-        {%- if blocks_size > 0 -%}
+        {%- if blocks_size > 0 and section.settings.multiple_tabs -%}
           <div id="BlogTagFilter">
             <span data-value="all" class="active">All</span>
             {% for block in section.blocks %}
