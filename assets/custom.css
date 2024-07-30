@@ -3118,3 +3118,7 @@ html:not(.test-skin-goal) .new-featured-collection {
 .test-replo-banner .template-page.anti-aging .image-hero.overflow-hidden.withreviews {
   display: none;
 }
+
+html:not(.test-replo-banner) .section-new-before-after-banner, html:not(.test-replo-banner) .section-recommended-by-slider {
+  display: none;
+}
