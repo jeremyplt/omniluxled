@@ -176,15 +176,26 @@
       }
 </style>
 <script>
+  const multipleTabs = {{ section.settings.multiple_tabs }};
     $(document).ready(function () {
        console.log("on mobile working");
     function isMobileDevice() {
         return window.innerWidth <= 767; // Adjust the width as per your mobile breakpoint
       }
 
-
-      console.log("on mobile");
-                var swiper = new Swiper(".mySwiper", {
+      if (isMobileDevice() && multipleTabs) {
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: auto,
+            observer: true,
+            observeParents: true,
+            spaceBetween: 30,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+        } else if (!multipleTabs) {
+          var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             breakpoints: {
               640: {
@@ -202,6 +213,7 @@
               clickable: true,
             },
           });
+        }
 
         $('#BlogTagFilter span').on('click',function(){
     $(this).parent().find('span').removeClass('active');
@@ -232,6 +244,11 @@
     {
       "type": "header",
       "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "multiple_tabs",
+      "label": "Multiple Tabs?"
     },
     {
       "type": "checkbox",
