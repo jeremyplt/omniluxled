@@ -38,7 +38,7 @@
         drag: false,
         slides: {
             perView: 4,
-            spacing: 40 // Optional: Adjust the spacing between slides if needed
+            spacing: 5 // Optional: Adjust the spacing between slides if needed
         },
         breakpoints: {
             "(max-width: 749px)": {
@@ -49,13 +49,13 @@
             }
         },
         created(s) {
-            s.moveToIdx(5, true, animation)
+            s.moveToIdx(4, true, animation)
         },
         updated(s) {
-            s.moveToIdx(s.track.details.abs + 5, true, animation)
+            s.moveToIdx(s.track.details.abs + 4, true, animation)
         },
         animationEnded(s) {
-            s.moveToIdx(s.track.details.abs + 5, true, animation)
+            s.moveToIdx(s.track.details.abs + 4, true, animation)
         },
     })
 </script>

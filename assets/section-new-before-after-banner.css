@@ -133,7 +133,12 @@
 
 @media (max-width: 749px) {
     .before-after-banner__inner {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        gap: 1rem
+    }
+
+    .before-after-banner__description {
+        margin: 1rem 0 1.5rem;
     }
 
     .before-after-banner__inner > * {
@@ -154,6 +159,10 @@
         width: 100%;
         min-width: 100%;
         max-width: 100%;
+    }
+
+    .before-after-banner__button {
+        margin-bottom: .5rem;
     }
 }
 

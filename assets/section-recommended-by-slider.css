@@ -6,17 +6,29 @@
 .recommended-by-slider__inner {
     display: flex;
     align-items: center;
-    gap: 8rem;
+    gap: 8%;
 }
 
 .recommended-by-slider__left {
     min-width: max-content;
-    padding-left: 3rem;
+    padding-left: 8%;
     font-size: 20px;
 }
 
 .recommended-by-slider__left p {
     margin-bottom: 0;
+}
+
+@media (min-width: 1549px) {
+    .recommended-by-slider__left {
+        padding-left: 15%;
+    }
+}
+
+.recommended-by-slider__slider  img {
+    max-height: 70px;
+    width: 150px;
+    height: auto;
 }
 
 @media (max-width: 749px) {
