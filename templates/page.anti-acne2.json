@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "46303bd3-da3b-4cc4-9804-394607ef3f06": {
@@ -114,6 +123,7 @@
         "logo_GRXbBx",
         "logo_bWnWpd"
       ],
+      "disabled": true,
       "settings": {
         "background_color": "#f5f5f5",
         "text": "<p>Approved and <br\/>Recommended by:<\/p>",
