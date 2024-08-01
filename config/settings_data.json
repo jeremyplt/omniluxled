@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "current": {
     "enable_skio": true,
@@ -1229,6 +1220,12 @@
       "5792010825272225357": {
         "type": "shopify:\/\/apps\/dual-price-display-pro\/blocks\/app-block\/fbd96439-f105-44a6-b4c5-51766faddec4",
         "disabled": true,
+        "settings": {
+        }
+      },
+      "4608311950725594925": {
+        "type": "shopify:\/\/apps\/avada-seo-suite\/blocks\/avada-seo\/15507c6e-1aa3-45d3-b698-7e175e033440",
+        "disabled": false,
         "settings": {
         }
       }

@@ -60,7 +60,8 @@
         "before_after_twNPFg"
       ],
       "custom_css": [
-        ".before-after-banner__heading {font-size: 50px;}"
+        ".before-after-banner__heading {font-size: 50px;}",
+        "@media (max-width: 749px) {.before-after-banner__heading {font-size: 35px; } .hoox-hero__reviews {margin-bottom: 0; } .before-after-banner__description {margin: 1rem 0 1.5rem; } .before-after-banner__inner {gap: 1rem; } .before-after-banner__image img {max-height: 235px; }}"
       ],
       "settings": {
         "heading": "Mask On, Acne Gone",
