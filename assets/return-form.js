@@ -14,7 +14,7 @@ $(document).ready(function () {
       let products = Array.from($("input[name='checkbox-1[]']:checked"));
       let skincare = false;
       let device = false;
-
+      console.log(method);
       if (method == 'Replacement') {
         $("input[value='LED Essentials Bundle']").parent().parent().hide();
         $("input[value='Enzyme Powder Cleanser']").parent().parent().hide();
@@ -26,6 +26,8 @@ $(document).ready(function () {
         $("input[value='Mini Skin Corrector Refill']").parent().parent().hide();
         $("input[value='Mini Blemish Eraser Refill']").parent().parent().hide();
         $("input[value='Antioxidant Eye Cream']").parent().parent().hide();
+        $("input[value='CoQ10 Face Cream']").parent().parent().hide();
+        
       } else {
         $("input[value='LED Essentials Bundle']").parent().parent().show();
         $("input[value='Enzyme Powder Cleanser']").parent().parent().show();
@@ -37,6 +39,7 @@ $(document).ready(function () {
         $("input[value='Mini Skin Corrector Refill']").parent().parent().show();
         $("input[value='Mini Blemish Eraser Refill']").parent().parent().show();
         $("input[value='Antioxidant Eye Cream']").parent().parent().show();
+        $("input[value='CoQ10 Face Cream']").parent().parent().show();
       }
 
       if (method == 'Return' && direct == 'No') {

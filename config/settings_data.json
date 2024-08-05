@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "current": {
     "enable_skio": true,
@@ -232,7 +223,7 @@
           "topbar_enabled": true,
           "topbar_text": "<strong>NEW LAUNCH! COQ10 FACE CREAM - <u>Shop Now<\/u> <\/strong>",
           "page_url": "shopify:\/\/products\/coq10-face-cream",
-          "topbar_text2": "",
+          "topbar_text2": "<strong>FREE SHIPPING ON ORDERS $100+ USD<\/strong>",
           "page_url2": "",
           "topbar_text3": "",
           "page_url3": "",
