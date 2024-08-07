@@ -1,3 +1,10 @@
+{%- unless product.handle == 'omnilux-men' or product.handle == 'omnilux-contour-neck-decollete' or product.handle == 'omnilux-contour-glove' %}
+<style>
+  .circle-video-menu--{{ section.id }} .circle-video-menu-item-image {
+    border-color: {{ section.settings.border_color }};
+  }
+</style>
+
 <div class="circle-video-swipe circle-video-menu-wrap circle-video-menu-wrap--{{ section.id }} {{ section.settings.div_id }}{% if section.settings.desktop %} circle-video-desktop{% endif %}">
     <div class="circle-video-menu circle-video-menu--{{ section.id }} {% if section.settings.ignore %}circle-vide-menu--ignore{% endif %}">
         <div class="circle-menu-items">
@@ -16,9 +23,16 @@
     <div class="circle-video-swipe__modal">
         <div class="circle-video-swipe__slider keen-slider">
             {% for block in section.blocks %}
-                <div class="circle-video__item keen-slider__slide">
+                <div class="circle-video__item keen-slider__slide video--pause">
                     <div class="loading-spinner"></div>
-                    {{ block.settings.video | video_tag: autoplay: true }}
+                    {{ block.settings.video | video_tag: autoplay: true, preload: "metadata" }}
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="white" class="size-6 icon--play">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="white" class="size-6 icon--pause">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
                 </div>
             {% endfor %}
         </div>
@@ -46,119 +60,80 @@
             </span>
         </div>
     </div>
-
-
 </div>
-
-<style>
-  .circle-video-menu--{{ section.id }} .circle-video-menu-item-image {
-    border-color: {{ section.settings.border_color }};
-  }
-</style>
-
-<style>
-  .loading-spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    margin-top: -25px;
-    margin-left: -25px;
-    border: 6px solid #ccc;
-    border-top-color: #000;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    z-index: 10;
-    display: block !important;
-  }
-
-  .loading-spinner.hidden {
-    display: none;
-  }
-
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-
-  .circle-video-menu--{{ section.id }} .circle-video-menu-item-image {
-    border-color: {{ section.settings.border_color }};
-  }
-</style>
-
 
 <script>
 
   document.addEventListener("DOMContentLoaded", () => {
     const modal = document.querySelector('.circle-video-swipe__modal');
     const videos = modal.querySelectorAll('.circle-video__item video');
+    let slider;
 
-    // videos.forEach(video => {
-    //   video.addEventListener('loadeddata', () => {
-    //     console.log('loaded', video.parentElement.querySelector('.loading-spinner'))
-    //     video.parentElement.querySelector('.loading-spinner').classList.add("hidden")
-    //   });
-    //   video.addEventListener('canplay', () => {
-    //     console.log('canplay', video.parentElement.querySelector('.loading-spinner'))
-    //     video.parentElement.querySelector('.loading-spinner').classList.add("hidden")
-    //   });
-    //   video.addEventListener('play', () => {
-    //     console.log('play', video.parentElement.querySelector('.loading-spinner'))
-    //     video.parentElement.querySelector('.loading-spinner').classList.add("hidden")
-    //   });
-    // });
+    function hideSpinner(video) {
+      const spinner = video.parentElement.querySelector('.loading-spinner');
+      if (spinner) spinner.classList.add('hidden');
+    }
+
+    function showSpinner(video) {
+      const spinner = video.parentElement.querySelector('.loading-spinner');
+      if (spinner) spinner.classList.remove('hidden');
+    }
+
+    function playVideo(video) {
+      video.muted = false;
+      video.play().then(() => {
+        hideSpinner(video);
+        video.parentElement.classList.remove('video--pause');
+      }).catch((error) => {
+        console.error('Video playback failed:', error);
+        showSpinner(video);
+      });
+    }
+
+    videos.forEach(video => {
+      video.addEventListener('loadedmetadata', () => hideSpinner(video));
+      video.addEventListener('waiting', () => showSpinner(video));
+      video.addEventListener('canplay', () => hideSpinner(video));
+
+      video.addEventListener('click', () => {
+        if (video.paused) {
+          playVideo(video);
+        } else {
+          video.pause();
+          video.parentElement.classList.add('video--pause');
+        }
+      });
+    });
 
     document.querySelectorAll('.circle-video-menu--{{ section.id }} .circle-video-menu-item').forEach((item, i) => {
       item.addEventListener('click', () => {
-        const video = videos[i];
-  
         document.documentElement.style.overflow = 'hidden';
         document.querySelector("body").style.overflow = 'hidden';
-  
         modal.classList.add('modal--active');
-        video.play();
-  
-        var currentSlide = 0;
-  
-        var slider = new KeenSlider(".circle-video-swipe__slider", {
-          vertical: true,
-          slideChanged: (s) => {
-                const slide = s.track.details.rel;
-                videos.forEach((video, i) => {
-                    video.pause();
-                });
 
-                setTimeout(() => {
-                  videos[slide].parentElement.querySelector('.loading-spinner').classList.add("hidden");
-                  videos[slide].play();
-                  if (document.querySelector(".modal__sound").classList.contains("muted")) {
-                    videos[slide].muted = true;
-                    videos[slide].volume = 0;
-                  } else {
-                    videos[slide].muted = false;
-                  }
-                });
-
-                currentSlide = slide
+        if (!slider) {
+          slider = new KeenSlider(".circle-video-swipe__slider", {
+            vertical: true,
+            slideChanged: (s) => {
+              const slide = s.track.details.rel;
+              videos.forEach((video, index) => {
+                if (index === slide) {
+                  playVideo(video);
+                } else {
+                  video.pause();
+                  video.parentElement.classList.add('video--pause');
+                }
+              });
             },
-        });
-
-  
-        slider.moveToIdx(i);
-        videos[i].parentElement.querySelector('.loading-spinner').classList.add("hidden");
-        videos[i].play();
-        if (document.querySelector(".modal__sound").classList.contains("muted")) {
-          videos[i].muted = true;
-          videos[i].volume = 0;
-        } else {
-          videos[i].muted = false;
+          });
         }
-        
-        
-  
+
+        slider.moveToIdx(i);
+        playVideo(videos[i]);
+
         setTimeout(() => {
-          document.querySelector('.modal__swipe-animation').style.display = "none"
-        }, 6000)
+          document.querySelector('.modal__swipe-animation').style.display = "none";
+        }, 6000);
       });
     });
   
@@ -181,16 +156,16 @@
     });
   
     document.querySelector(".modal__sound").addEventListener("click", () => {
-      const videos = document.querySelectorAll('.circle-video-swipe__modal video');
+      const isMuted = document.querySelector(".modal__sound").classList.toggle("muted");
       videos.forEach(video => {
-          video.muted = !video.muted;
-          video.volume = video.muted ? 0 : 1;
+        video.muted = isMuted;
+        video.volume = isMuted ? 0 : 1;
       });
-  
-      document.querySelector(".modal__sound").classList.toggle("muted")
-      })
+    });
   })
 </script>
+
+{%- endunless -%}
 
 {% schema %}
 {
