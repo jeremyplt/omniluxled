@@ -1,0 +1,5 @@
+/*
+Generated time: August 7, 2024 11:02
+This file was created by the app developer. Feel free to contact the original developer with any questions. It was minified (compressed) by AVADA. AVADA do NOT own this script.
+*/
+.icons-with-text__inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding-left:2rem;padding-right:2rem;max-width:1600px;margin:0 auto}.icons-with-text__item{display:flex;align-items:center;gap:.5rem}.icons-with-text__icon img{width:40px;min-width:40px;height:auto}.icons-with-text__content p{font-size:13px;line-height:1.3}@media (max-width:999px){.icons-with-text__inner{padding-left:1rem;padding-right:1rem}.icons-with-text__inner{grid-template-columns:repeat(2,1fr);gap:.75rem}.icons-with-text__item{gap:.5rem}.icons-with-text__content p{font-size:13px;line-height:1.2}}@media (max-width:749px){.icons-with-text__inner{grid-template-columns:repeat(2,1fr)}.icons-with-text__content span{display:none}.icons-with-text__icon img{width:35px;min-width:35px}}@media (max-width:499px){.icons-with-text__inner{padding-left:.5rem;padding-right:.5rem}}

@@ -1,0 +1,5 @@
+/*
+Generated time: August 7, 2024 11:02
+This file was created by the app developer. Feel free to contact the original developer with any questions. It was minified (compressed) by AVADA. AVADA do NOT own this script.
+*/
+.marquee{overflow:hidden;width:100%;display:block}.marquee__inner{width:200vw;animation:marquee 15s linear infinite;display:flex;justify-content:space-around}.marquee__inner div{display:block;white-space:nowrap}@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-100vw)}}

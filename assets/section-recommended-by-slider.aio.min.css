@@ -1,0 +1,5 @@
+/*
+Generated time: August 7, 2024 11:02
+This file was created by the app developer. Feel free to contact the original developer with any questions. It was minified (compressed) by AVADA. AVADA do NOT own this script.
+*/
+.recommended-by-slider__slider{display:flex;align-items:center}.recommended-by-slider__inner{display:flex;align-items:center;gap:8%}.recommended-by-slider__left{min-width:max-content;padding-left:8%;font-size:20px}.recommended-by-slider__left p{margin-bottom:0}@media (min-width:1549px){.recommended-by-slider__left{padding-left:15%}}.recommended-by-slider__slider img{max-height:70px;width:150px;height:auto}@media (max-width:749px){.recommended-by-slider__left{display:none}.recommended-by-slider__inner{gap:0}}

@@ -1,0 +1,5 @@
+/*
+Generated time: August 7, 2024 11:02
+This file was created by the app developer. Feel free to contact the original developer with any questions. It was minified (compressed) by AVADA. AVADA do NOT own this script.
+*/
+.image-text-overlay__inner{position:relative}.image-text-overlay__text{position:absolute;left:50%;top:50%;width:100%;transform:translate(-50%,-50%);text-align:center;font-size:clamp(20px, 3vw, 50px)!important}@media (max-width:499px){.image-text-overlay__text{max-width:50%}}
