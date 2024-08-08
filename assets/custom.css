@@ -3179,3 +3179,7 @@ html .circle-video-swipe.circle-video-desktop .circle-menu-item-label {
     margin: 0 auto;
   }
 }
+
+.circle-video__item {
+  max-height: 100% !important;
+}
