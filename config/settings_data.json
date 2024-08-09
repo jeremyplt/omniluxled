@@ -221,9 +221,9 @@
         ],
         "settings": {
           "topbar_enabled": true,
-          "topbar_text": "<strong>NEW LAUNCH! COQ10 FACE CREAM - <u>Shop Now<\/u> <\/strong>",
+          "topbar_text": "<p><strong>NEW LAUNCH! COQ10 FACE CREAM - <u>Shop Now<\/u> <\/strong></p>",
           "page_url": "shopify:\/\/products\/coq10-face-cream",
-          "topbar_text2": "<strong>FREE SHIPPING ON ORDERS $100+ USD<\/strong>",
+          "topbar_text2": "<p><strong>FREE SHIPPING ON ORDERS $100+ USD<\/strong></p>",
           "page_url2": "",
           "topbar_text3": "",
           "page_url3": "",
