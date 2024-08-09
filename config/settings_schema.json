@@ -197,13 +197,13 @@
         "content": "t:settings_schema.typography.settings.header__1.content"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "type_header_font",
         "default": "Futura",
         "label": "t:settings_schema.typography.settings.type_header_font.label"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "type_secondary_font",
         "default": "Futura",
         "label": "Header Secondary Font Family"
@@ -253,7 +253,7 @@
         "label": "Select Font Weight"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "type_heading_line_height",
         "default": "1.3",
         "label": "Body Line Height"
@@ -263,7 +263,7 @@
         "content": "t:settings_schema.typography.settings.header__2.content"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "type_body_font",
         "default": "Karla",
         "label": "t:settings_schema.typography.settings.type_body_font.label"
@@ -313,49 +313,49 @@
         "label": "Select Font Weight"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "type_body_font_size",
         "default": "16px",
         "label": "Body Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "type_body_line_height",
         "default": "1.5",
         "label": "Body Line Height"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "type_body_letter_spacing",
         "default": "0.05em",
         "label": "Body Letter Spacing"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "xs_font_size",
         "default": "12px",
         "label": "XS Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "sm_font_size",
         "default": "13px",
         "label": "SM Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "md_font_size",
         "default": "14px",
         "label": "MD Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "lg_font_size",
         "default": "15px",
         "label": "LG Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "xl_font_size",
         "default": "17px",
         "label": "XL Font Size"
@@ -370,37 +370,37 @@
         "content": "Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h1_font_size",
         "default": "42px",
         "label": "H1 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h2_font_size",
         "default": "40px",
         "label": "H2 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h3_font_size",
         "default": "35px",
         "label": "H3 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h4_font_size",
         "default": "30px",
         "label": "H4 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h5_font_size",
         "default": "22px",
         "label": "H5 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h6_font_size",
         "default": "15px",
         "label": "H6 Font Size"
@@ -410,37 +410,37 @@
         "content": "Font Size Ipad"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h1_font_size_md",
         "default": "36px",
         "label": "H1 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h2_font_size_md",
         "default": "34px",
         "label": "H2 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h3_font_size_md",
         "default": "32px",
         "label": "H3 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h4_font_size_md",
         "default": "27px",
         "label": "H4 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h5_font_size_md",
         "default": "21px",
         "label": "H5 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h6_font_size_md",
         "default": "15px",
         "label": "H6 Font Size"
@@ -450,37 +450,37 @@
         "content": "Font Size Mobile"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h1_font_size_sm",
         "default": "29px",
         "label": "H1 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h2_font_size_sm",
         "default": "28px",
         "label": "H2 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h3_font_size_sm",
         "default": "26px",
         "label": "H3 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h4_font_size_sm",
         "default": "23px",
         "label": "H4 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h5_font_size_sm",
         "default": "20px",
         "label": "H5 Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "h6_font_size_sm",
         "default": "14px",
         "label": "H6 Font Size"
@@ -495,7 +495,7 @@
         "content": "Content"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "type_button_font",
         "default": "Futura",
         "label": "t:settings_schema.typography.settings.type_body_font.label",
@@ -530,43 +530,43 @@
         "label": "Select Font Weight"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_font_size",
         "default": "13px",
         "label": "Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_line-height",
         "default": "24px",
         "label": "Line height"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_letter_spacing",
         "default": "3px",
         "label": "Letter Spacing"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_border-radius",
         "default": "0px",
         "label": "Border Radius"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_border-width",
         "default": "1px",
         "label": "Border Width"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_x_padding",
         "default": "30px",
         "label": "X padding"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_y_padding",
         "default": "11px",
         "label": "Y padding"
@@ -576,19 +576,19 @@
         "content": "Button Small"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_font_size_sm",
         "default": "13px",
         "label": "Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_x_padding_sm",
         "default": "20px",
         "label": "X padding"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_y_padding_sm",
         "default": "8px",
         "label": "Y padding"
@@ -598,19 +598,19 @@
         "content": "Button Large"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_font_size_lg",
         "default": "14px",
         "label": "Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_x_padding_lg",
         "default": "30px",
         "label": "X padding"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "button_y_padding_lg",
         "default": "14px",
         "label": "Y padding"
@@ -713,7 +713,7 @@
         "content": "Content"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "type_input_font",
         "default": "Futura",
         "label": "t:settings_schema.typography.settings.type_body_font.label",
@@ -748,37 +748,37 @@
         "label": "Select Input Weight"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "input_font_size",
         "default": "16px",
         "label": "Input Font Size"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "input_line-height",
         "default": "24px",
         "label": "Input Line height"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "input_border-radius",
         "default": "4px",
         "label": "Input Border Radius"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "input_border-width",
         "default": "1px",
         "label": "Input Border Width"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "input_x_padding",
         "default": "16px",
         "label": "Input X padding"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "input_y_padding",
         "default": "12px",
         "label": "Input Y padding"
@@ -812,7 +812,7 @@
         "content": "Floating Label"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "floating_label_size",
         "default": "11px",
         "label": "Floating Label Font Size"
@@ -822,19 +822,19 @@
         "content": "Form SM"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "input_font_size_sm",
         "default": "13px",
         "label": "Input Font Size SM"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "input_x_padding_sm",
         "default": "16px",
         "label": "Input X padding SM"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "input_y_padding_sm",
         "default": "11px",
         "label": "Input Y padding SM"
@@ -844,19 +844,19 @@
         "content": "Form LG"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "input_font_size_lg",
         "default": "18px",
         "label": "Input Font Size LG"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "input_x_padding_lg",
         "default": "20px",
         "label": "Input X padding lG"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "input_y_padding_lg",
         "default": "18px",
         "label": "Input Y padding LG"
@@ -871,19 +871,19 @@
         "content": "Content"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "shadow",
         "default": "0 0.5rem 1rem rgba(0, 0, 0, 0.15)",
         "label": "Shadow Normal"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "shadow-sm",
         "default": "0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)",
         "label": "Shadow SM"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "shadow-lg",
         "default": "0 1rem 3rem rgba(0, 0, 0, 0.175)",
         "label": "Shadow LG"
@@ -898,13 +898,13 @@
         "content": "Content"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "container_width",
         "default": "1380px",
         "label": "container width With padding"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "container_padding",
         "default": "15px",
         "label": "Container padding"
@@ -940,55 +940,55 @@
         "content": "Social accounts"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "social_facebook_link",
         "label": "Facebook",
         "info": "https:\/\/facebook.com\/shopify"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "social_twitter_link",
         "label": "Twitter",
         "info": "https:\/\/twitter.com\/shopify"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "social_tiktok_link",
         "label": "Tiktok",
         "info": "https:\/\/tiktok.com\/shopify"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "social_pinterest_link",
         "label": "Pinterest",
         "info": "https:\/\/pinterest.com\/shopify"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "social_instagram_link",
         "label": "Instagram",
         "info": "http:\/\/instagram.com\/shopify"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "social_tumblr_link",
         "label": "Tumblr",
         "info": "http:\/\/shopify.tumblr.com"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "social_snapchat_link",
         "label": "Snapchat",
         "info": "https:\/\/www.snapchat.com\/add\/shopify"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "social_youtube_link",
         "label": "YouTube",
         "info": "https:\/\/www.youtube.com\/shopify"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "social_vimeo_link",
         "label": "Vimeo",
         "info": "https:\/\/vimeo.com\/shopify"
@@ -1048,7 +1048,7 @@
         "content": "Product Exclude Tag"
       },
       {
-        "type": "text",
+        "type": "liquid",
         "id": "product_exclude_tag_text",
         "label": "Product Tag",
         "info": "Products with the above tag will be excluded from collections and search results."
@@ -1058,7 +1058,7 @@
         "content": "Hide product Tag"
       },
       {
-        "type": "textarea",
+        "type": "liquid",
         "id": "hide_product_tag_text",
         "label": "Hide Product Tag",
         "default": "providers",
