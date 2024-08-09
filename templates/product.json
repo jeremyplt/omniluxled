@@ -8,7 +8,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-07-12_at_5.38.00_PM.jpg",
             "label": "Lizeth’s Story",
-            "video": "shopify:\/\/files\/videos\/Omnilux LED Mobile Testimonial.mp4"
+            "video": "shopify:\/\/files\/videos\/Omnilux 3 Compress.mp4"
           }
         },
         "circle_link_a99FNP": {
@@ -16,7 +16,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_5.09.51_PM.jpg",
             "label": "Deborah's Story",
-            "video": "shopify:\/\/files\/videos\/test2.mov"
+            "video": "shopify:\/\/files\/videos\/Omnilux LED video.mov"
           }
         },
         "circle_link_mKkWk7": {
@@ -24,7 +24,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_8.29.07_AM.png",
             "label": "Anna's Story",
-            "video": "shopify:\/\/files\/videos\/Video 3 - IG Scroller.mp4"
+            "video": "shopify:\/\/files\/videos\/Omnilux LED IG Scroller.mp4"
           }
         },
         "circle_link_NNHcQh": {
@@ -32,7 +32,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_8.28.15_AM.png",
             "label": "Tanya's Story",
-            "video": "shopify:\/\/files\/videos\/Video 2 - IG Scroller.mp4"
+            "video": "shopify:\/\/files\/videos\/Omnilux LED IG Scroller (1).mp4"
           }
         },
         "circle_link_ATwKdV": {
@@ -40,7 +40,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_12.48.02_PM.png",
             "label": "Lina's Story",
-            "video": "shopify:\/\/files\/videos\/Testimonial 6.mp4"
+            "video": "shopify:\/\/files\/videos\/Omnilux LED Testimonial 6.mp4"
           }
         },
         "circle_link_YdTRbc": {
@@ -48,7 +48,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-21_at_12.56.02_PM.png",
             "label": "Sarah's Story",
-            "video": "shopify:\/\/files\/videos\/Omnilux LED Mobile Testimonial (1).mp4"
+            "video": "shopify:\/\/files\/videos\/Omnilux 1 Compress.mp4"
           }
         }
       },
@@ -63,7 +63,8 @@
       "settings": {
         "border_color": "#000000",
         "div_id": "",
-        "ignore": true
+        "ignore": true,
+        "desktop": false
       }
     },
     "main": {

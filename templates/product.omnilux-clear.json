@@ -8,7 +8,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Omnilux_LED_Screenshot_Apr_7.jpg",
             "label": "Ariana's Story",
-            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Ariana's Story.mp4"
+            "video": "shopify:\/\/files\/videos\/Omnilux 2 Comproess.mp4"
           }
         },
         "circle_link_trigM4": {
@@ -16,7 +16,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Omnilux_LED_Screenshot_Mar_19.jpg",
             "label": "Jess's Story",
-            "video": "shopify:\/\/files\/videos\/Omnilux LED testimonial mobile.mp4"
+            "video": "shopify:\/\/files\/videos\/Omnilux 4 Compress.mp4"
           }
         },
         "circle_link_wDjUgP": {
@@ -24,7 +24,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Omnilux_LED_Screenshot_Apr_7_1.jpg",
             "label": "Sophie's Story",
-            "video": "shopify:\/\/files\/videos\/OmniLux CLEAR_ Sophie's Story.mp4"
+            "video": "shopify:\/\/files\/videos\/Omnilux LED Sophies Story.mp4"
           }
         },
         "circle_link_bt3JyV": {
@@ -32,7 +32,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Omnilux_LED_Alana.jpg",
             "label": "Alana's Story",
-            "video": "shopify:\/\/files\/videos\/Omnilux LED testimonial Alana.mp4"
+            "video": "shopify:\/\/files\/videos\/Omnilux LED Testimonial Alana (2).mp4"
           }
         }
       },
@@ -45,7 +45,8 @@
       "settings": {
         "border_color": "#000000",
         "div_id": "",
-        "ignore": true
+        "ignore": true,
+        "desktop": false
       }
     },
     "main": {
