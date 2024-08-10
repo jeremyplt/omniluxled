@@ -1,5 +1,13 @@
 {%- unless product.handle == 'omnilux-men' or product.handle == 'omnilux-contour-neck-decollete' or product.handle == 'omnilux-contour-glove' %}
 
+  {% if section.settings.heading != blank or section.settings.subheading != blank %}
+    <div class="desktopreviewstitle">
+      <div class="is-flex is-justify-center seereviewsbtn">
+        <h2 class="title">{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.subheading }}</p>
+      </div>
+    </div>
+  {% endif %}
 
 <div class="circle-video-swipe circle-video-menu-wrap circle-video-menu-wrap--{{ section.id }} {{ section.settings.div_id }}{% if section.settings.desktop %} circle-video-desktop{% endif %}">
     <div class="circle-video-menu circle-video-menu--{{ section.id }} {% if section.settings.ignore %}circle-vide-menu--ignore{% endif %}">
@@ -195,7 +203,7 @@
   })
 </script>
 
-{%  endunless %}
+{% endunless %}
 
 {% schema %}
 {
@@ -203,16 +211,26 @@
   "class": "circle-video-menu-wrap-wrap",
   "settings": [
     {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
       "label": "Border color",
       "id": "border_color",
       "type": "color",
       "default": "#000000"
     },
     {
-          "label": "Section Product ID",
-          "id": "div_id",
-          "type": "text"
-        },
+      "label": "Section Product ID",
+      "id": "div_id",
+      "type": "text"
+    },
     {
       "label": "Ignore theme fonts",
       "id": "ignore",
