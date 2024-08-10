@@ -61,6 +61,16 @@
 
 </div>
 
+{% if section.settings.button_label != blank %}
+  <div class="seereviewsbtn">
+    <div class="seeallreviews">
+      <div class="container is-flex is-justify-center">
+        <a href="{{ section.settings.button_url }}">{{ section.settings.button_label }}</a>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
 <style>
   .circle-video-menu--{{ section.id }} .circle-video-menu-item-image {
     border-color: {{ section.settings.border_color }};
@@ -219,6 +229,16 @@
       "type": "text",
       "id": "subheading",
       "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
     },
     {
       "label": "Border color",
