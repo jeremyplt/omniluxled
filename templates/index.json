@@ -383,16 +383,12 @@
       "settings": {
         "heading": "Unveil Your Glow with Omnilux",
         "subheading": "We've helped 300,000+ customers achieve their skin goals.",
+        "button_label": "SEE MORE REVIEWS AND RESULTS",
+        "button_url": "shopify:\/\/pages\/reviews-results",
         "border_color": "#000000",
         "div_id": "",
         "ignore": true,
         "desktop": true
-      }
-    },
-    "0cc6c87d-8225-4d2d-8409-1e4c60f0753c": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"seereviewsbtn\">\n<div class=\"seeallreviews\"><div class=\"container is-flex is-justify-center\"><a href=\"https:\/\/omniluxled.com\/pages\/reviews-results\">SEE MORE REVIEWS AND RESULTS<\/a><\/div><\/div><\/div>"
       }
     },
     "7caf6918-0887-4d78-b125-88468bd9dd86": {
@@ -1014,7 +1010,6 @@
     "8804dfd9-e64d-4fa2-bf07-3fa8ee0dd89a",
     "59bdd293-efe7-4fcd-8619-feac003821e6",
     "circle_video_swipe_H4bnJa",
-    "0cc6c87d-8225-4d2d-8409-1e4c60f0753c",
     "7caf6918-0887-4d78-b125-88468bd9dd86",
     "483972b6-05da-4d1a-964a-d5598ce78682",
     "c552e92a-f090-4e52-8c25-337f36136add",
