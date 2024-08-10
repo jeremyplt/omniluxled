@@ -338,12 +338,6 @@
         "btn_size": ""
       }
     },
-    "dcb3cafc-7296-46cc-8c09-ce11f9bfb43c": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"desktopreviewstitle\"><div class=\"is-flex is-justify-center seereviewsbtn\">\n<h2 class=\"title\">Unveil Your Glow with Omnilux<\/h2>\n<p>We've helped 300,000+ customers achieve their skin goals.<\/p>\n<\/div>"
-      }
-    },
     "circle_video_swipe_H4bnJa": {
       "type": "circle-video-swipe",
       "blocks": {
@@ -387,6 +381,8 @@
         "circle_link_GCaKEL"
       ],
       "settings": {
+        "heading": "Unveil Your Glow with Omnilux",
+        "subheading": "We've helped 300,000+ customers achieve their skin goals.",
         "border_color": "#000000",
         "div_id": "",
         "ignore": true,
@@ -1017,7 +1013,6 @@
     "16270420142c0cafe8",
     "8804dfd9-e64d-4fa2-bf07-3fa8ee0dd89a",
     "59bdd293-efe7-4fcd-8619-feac003821e6",
-    "dcb3cafc-7296-46cc-8c09-ce11f9bfb43c",
     "circle_video_swipe_H4bnJa",
     "0cc6c87d-8225-4d2d-8409-1e4c60f0753c",
     "7caf6918-0887-4d78-b125-88468bd9dd86",
