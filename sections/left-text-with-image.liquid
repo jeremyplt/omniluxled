@@ -74,7 +74,7 @@
                         {%- case block.type -%}
                             {%- when 'heading' -%}
                             <h1 class="banner__heading  mb-3 " {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
-                                <span>{{ block.settings.heading | escape }}</span>
+                                {{ block.settings.heading | escape }}
                             </h1>
                             {%- when 'html' -%}
                                 {{ block.settings.html }}
