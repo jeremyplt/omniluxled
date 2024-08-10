@@ -4,9 +4,9 @@
       "type": "left-text-with-image",
       "blocks": {
         "905d430d-f1fd-4e89-bfda-56eccd0b38be": {
-          "type": "html",
+          "type": "heading",
           "settings": {
-            "html": "<h1 class=\"banner__heading  mb-3 \">Reviews<br>and results<\/h1>"
+            "heading": "Reviews<br>and results"
           }
         },
         "template--16034908471458__eb6beb2b-13ef-4c37-9caf-4e1f91fb78ce-16703050070505d1ba-1": {

@@ -4,9 +4,9 @@
       "type": "left-text-with-image",
       "blocks": {
         "e896dd01-fe84-45ba-afdf-a50656aa0f18": {
-          "type": "html",
+          "type": "heading",
           "settings": {
-            "html": "<h2 class=\"banner__heading  mb-3 \">Glowing skin, meet <em class=\"fw-light\">you<\/em>\n<\/h2>"
+            "heading": "Glowing skin, meet you"
           }
         },
         "template--16102371754146__cc79c309-4e46-40f1-b1e4-9bb2771bcef9-16772172011e9f2cf7-1": {
@@ -453,9 +453,9 @@
       "type": "left-text-with-image",
       "blocks": {
         "5bce5f79-0d20-4d8e-802f-75fce365e87a": {
-          "type": "html",
+          "type": "heading",
           "settings": {
-            "html": "<h2 class=\"banner__heading  mb-3 \">The science behind beauty<\/h2>"
+            "heading": "The science behind beauty"
           }
         },
         "template--16102371754146__d41b32c3-87ab-4fb6-a718-120a790e819a-1677230225d66bc077-1": {
