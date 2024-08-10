@@ -3184,3 +3184,8 @@ html .circle-video-swipe.circle-video-desktop .circle-menu-item-label {
     margin: 0 auto;
   }
 }
+
+.tabcontent > div:first-child p {
+  font-size: 14px;
+  text-transform: uppercase;
+}
