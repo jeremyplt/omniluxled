@@ -69,8 +69,7 @@
             <div class="col-12 {% if section.settings.video_style == 'col-lg-6' %}col-lg-6 col-xl-5{% else %}col-lg-4{% endif %} {% if section.settings.video_style_large == 'col-xl-5' %}col-xl-5{% else %}col-xl-4{% endif %}   mt-4 mt-lg-0 pt-1 pt-lg-0 order-lg-1 {{ section.settings.alignment }}">
                 <div class="inside-block" style="color:{{ section.settings.section_text_color }}">
                     {% if section.settings.title != blank %}
-                    {{ section.settings.title }}
-
+                      <h3 class="mb-3 pb-1 pe-xl-3">{{ section.settings.title }}</h3>
                     {% endif %}
                     {% if section.settings.subtitle != blank %}
                         <p class="mb-4 pb-1">{{ section.settings.subtitle }}</p>
