@@ -4,9 +4,9 @@
       "type": "left-text-with-image",
       "blocks": {
         "447a1921-6c8c-4c21-a3be-989d36adece7": {
-          "type": "html",
+          "type": "heading",
           "settings": {
-            "html": "<h1 class=\"banner__heading  mb-3 \">\nOur story\n</h1>"
+            "heading": "Our story"
           }
         },
         "a5df27d4-dc0f-4e06-83a9-d8cef64e10aa": {
