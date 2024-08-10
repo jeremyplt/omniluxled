@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "07d3a4cc-7ca0-4817-aa64-57d396b854a5": {
@@ -625,7 +634,6 @@
             "heading_txt": "Glow on the <em class=\"fw-light\">go<\/em>",
             "max_width": 530,
             "txt": "<p>Master your on-the-go skincare with the Omnilux LED collection. Portable, flexible and built for global use, Omnilux is the perfect travel companion that provides everything you need to look and feel your best — for wherever life takes you.<\/p>",
-            "txt_liquid": "",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
@@ -637,8 +645,6 @@
             "btn_variant": "primary",
             "btn_size": "",
             "btn_txt_watch": "",
-            "watch_video_id": "",
-            "watch_mobile_video_id": "",
             "btn_type_watch": "",
             "btn_variant_watch": "primary",
             "btn_size_watch": "",
@@ -656,7 +662,6 @@
             "heading_txt": "Newest addition:<br>\nTopical Skincare",
             "max_width": 530,
             "txt": "<p>Discover a power-packed skincare trio clinically proven to fight signs of aging and optimize Omnilux’s signature LED light therapy treatments.<\/p>",
-            "txt_liquid": "",
             "step_heading": "",
             "steps_captions": "",
             "steps_captions_2": "",
@@ -668,8 +673,6 @@
             "btn_variant": "primary",
             "btn_size": "",
             "btn_txt_watch": "",
-            "watch_video_id": "",
-            "watch_mobile_video_id": "",
             "btn_type_watch": "",
             "btn_variant_watch": "primary",
             "btn_size_watch": "",
