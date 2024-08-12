@@ -3147,7 +3147,13 @@ html .circle-video-swipe.circle-video-desktop .circle-menu-item-label {
   color: white;
   font-weight: bold;
 }
-
+/* custom css */
+.custom-video-container .text-start ul {
+    margin-bottom: 1rem;
+}
+.custom-video-container.row {
+    margin: 0;
+}
 @media (max-width: 999px) {
   html .circle-video-swipe.circle-video-desktop .circle-video-menu-item-image {
       min-width: 275px !important;
