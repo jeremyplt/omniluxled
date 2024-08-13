@@ -182,7 +182,7 @@
       "settings": {
         "fluid_layout": false,
         "gradient_tone": false,
-        "heading_txt": "<h3 class=\"h4 section-title mb-3 fw-light\"> The #1 LED Mask for Acne<\/h3>",
+        "heading_txt": "The #1 LED Mask for Acne",
         "section_bg_color": "",
         "section_txt_color": "#000000",
         "pt": 36,
@@ -272,7 +272,7 @@
       "settings": {
         "class_names": "",
         "section_id": "#",
-        "section_title": "Real Stories,<br>Real Impact"
+        "section_title": "Real Stories,Real Impact"
       }
     },
     "839046eb-ba08-422a-bf0e-7cc84c8fcd1c": {
@@ -821,36 +821,6 @@
     "d1e8d9f9-4e0f-4ef5-af16-8f334ad3b8c9": {
       "type": "global-image-with-text",
       "blocks": {
-        "703b5f98-b80c-4f4e-bded-6e03143c3c1c": {
-          "type": "image-with-text-block",
-          "disabled": true,
-          "settings": {
-            "fullwidth_content": false,
-            "heading_txt": "Why Omnilux",
-            "max_width_enabled": true,
-            "max_width": 530,
-            "txt": "",
-            "step_heading": "",
-            "steps_captions": "",
-            "steps_captions_2": "",
-            "btn_txt": "take the clear self-assessment",
-            "btn_link": "shopify:\/\/pages\/clear-assessment",
-            "triggerbtn_txt": "",
-            "triggerto": "",
-            "btn_type": "",
-            "btn_variant": "primary",
-            "btn_size": "",
-            "btn_txt_watch": "",
-            "btn_type_watch": "",
-            "btn_variant_watch": "primary",
-            "btn_size_watch": "",
-            "link_txt": "",
-            "link_url": "",
-            "image": "shopify:\/\/shop_images\/Before_21.png",
-            "alignment": "text-left",
-            "image_alignment": "right"
-          }
-        },
         "d4b24e54-b7f8-43ab-8885-537da6bd6160": {
           "type": "image-with-text-block",
           "settings": {
@@ -882,7 +852,6 @@
         }
       },
       "block_order": [
-        "703b5f98-b80c-4f4e-bded-6e03143c3c1c",
         "d4b24e54-b7f8-43ab-8885-537da6bd6160"
       ],
       "settings": {
@@ -891,164 +860,6 @@
         "border_bottom": false,
         "section_bg_color": "rgba(0,0,0,0)",
         "section_text_color": "#000000"
-      }
-    },
-    "cc65e22a-b26b-40d1-ac1e-c6ff657ff136": {
-      "type": "global-testimonial",
-      "blocks": {
-        "4b0f191d-31ae-4309-a9aa-90e3cec9c9d2": {
-          "type": "logowidthtext",
-          "settings": {
-            "title": "<p>I’ve struggled with acne for years and have tried several aggressive prescription treatments. Nothing was a long-term solution until I found Clear. My results have been incredible with absolutely NO side effects.<\/p>",
-            "quote_author": "Madison",
-            "alignment": "text-center"
-          }
-        },
-        "33e76f9f-6b2e-4982-9e01-1b05ee48c0f3": {
-          "type": "logowidthtext",
-          "settings": {
-            "title": "<p>I suffer from breakouts and inflammation due to hormonal and stress-induced acne. The Clear mask has reduced the overall redness and my breakouts clear up so much faster than they used to. This device has definitely brought my confidence back – just in time for college starting in the fall!<\/p>",
-            "quote_author": "Kylie",
-            "alignment": "text-center"
-          }
-        },
-        "cf8d096d-2200-44c5-bd4d-3a36b3a3bf03": {
-          "type": "logowidthtext",
-          "settings": {
-            "title": "<p>I have seen rapid results with Omnilux Clear – within just the first week my redness was reduced. By the second week, I saw less acne. The third week I experienced a softer and smoother complexion. Overall, my skin looks more even and much clearer than before!<\/p>",
-            "quote_author": "Daniela",
-            "alignment": "text-center"
-          }
-        },
-        "a91e52e8-ddd4-4b72-9ecb-3d00d4ff330f": {
-          "type": "logowidthtext",
-          "settings": {
-            "title": "<p>Love this mask! Using it for hormonal acne breakouts. Really helping to keep acne at bay!<\/p>",
-            "quote_author": "Maria",
-            "alignment": "text-center"
-          }
-        },
-        "4b0e629f-4380-4cc9-8c3c-3011580869fe": {
-          "type": "logowidthtext",
-          "settings": {
-            "title": "<p>So far with using the Omnilux Clear, I’ve noticed a significant decrease in my inflammation on my face. This is a must in my skincare routine.<\/p>",
-            "quote_author": "Nicole",
-            "alignment": "text-center"
-          }
-        },
-        "162e00e6-e12e-4c47-b151-8b5f093f1a6c": {
-          "type": "logowidthtext",
-          "settings": {
-            "title": "<p>This device works. I use it regularly and found it has helped clear up breakouts and reduce the size of new ones. My skin is stubborn and the Omnilux Clear gives it the extra support.<\/p>",
-            "quote_author": "Tracy",
-            "alignment": "text-center"
-          }
-        }
-      },
-      "block_order": [
-        "4b0f191d-31ae-4309-a9aa-90e3cec9c9d2",
-        "33e76f9f-6b2e-4982-9e01-1b05ee48c0f3",
-        "cf8d096d-2200-44c5-bd4d-3a36b3a3bf03",
-        "a91e52e8-ddd4-4b72-9ecb-3d00d4ff330f",
-        "4b0e629f-4380-4cc9-8c3c-3011580869fe",
-        "162e00e6-e12e-4c47-b151-8b5f093f1a6c"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "h3 {color: #000; text-shadow: none;}"
-      ],
-      "settings": {
-        "fluid_layout": false,
-        "border_bottom": false,
-        "heading_txt": "What  they say",
-        "section_bg_color": "rgba(0,0,0,0)",
-        "section_text_color": "#000000",
-        "autoplay_enable": true,
-        "nav_arrows": true,
-        "nav_dots": true
-      }
-    },
-    "ab62fd12-1370-4dd1-8aca-97e40474aa60": {
-      "type": "global-reviews-slider",
-      "blocks": {
-        "1e350c9a-858f-4858-a7de-53efd4f1453b": {
-          "type": "logowidthtext",
-          "settings": {
-            "watch_video_id": "https:\/\/www.youtube.com\/embed\/BcT9M0Ye6Is?\nstart=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
-          }
-        },
-        "d53df187-bfb7-4daf-9a5e-290efbe7680d": {
-          "type": "logowidthtext",
-          "settings": {
-            "watch_video_id": "https:\/\/www.youtube.com\/embed\/iZ3gGDVdRH8?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
-          }
-        },
-        "3a9b0594-4e75-4e10-8915-9e876ed00e24": {
-          "type": "logowidthtext",
-          "settings": {
-            "watch_video_id": "https:\/\/www.youtube.com\/embed\/-Ph4qs79HBA?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
-          }
-        },
-        "caa63c70-9179-4e97-aa06-87f245da5811": {
-          "type": "logowidthtext",
-          "settings": {
-            "watch_video_id": "https:\/\/www.youtube.com\/embed\/fdYkRP4jUwo?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
-          }
-        },
-        "5e640109-af35-4c27-af0f-b5ef1af2a2d4": {
-          "type": "logowidthtext",
-          "settings": {
-            "watch_video_id": "https:\/\/www.youtube.com\/embed\/EA4E5y-pEL4?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
-          }
-        },
-        "dc406bf3-5d88-457b-be62-46cdb596149c": {
-          "type": "logowidthtext",
-          "settings": {
-            "watch_video_id": "https:\/\/www.youtube.com\/embed\/MVKhth_oRdw?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
-          }
-        },
-        "744978f7-82c8-4f71-a276-ef96e137f247": {
-          "type": "logowidthtext",
-          "settings": {
-            "watch_video_id": "https:\/\/www.youtube.com\/embed\/EmKJfqoLXgk?start=0&autoplay=0&loop=0&mute=0&controls=0&enablejsapi=1"
-          }
-        }
-      },
-      "block_order": [
-        "1e350c9a-858f-4858-a7de-53efd4f1453b",
-        "d53df187-bfb7-4daf-9a5e-290efbe7680d",
-        "3a9b0594-4e75-4e10-8915-9e876ed00e24",
-        "caa63c70-9179-4e97-aa06-87f245da5811",
-        "5e640109-af35-4c27-af0f-b5ef1af2a2d4",
-        "dc406bf3-5d88-457b-be62-46cdb596149c",
-        "744978f7-82c8-4f71-a276-ef96e137f247"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".h2 {color: #000; text-shadow: none;}"
-      ],
-      "settings": {
-        "fluid_layout": false,
-        "heading_style": "heading_style_1",
-        "pt": 20,
-        "pb": 58,
-        "pts": 10,
-        "pbs": 70,
-        "border-top": false,
-        "border-bottom": false,
-        "heading_txt": "Watch video reviews",
-        "txt": "",
-        "btn_txt": "",
-        "btn_link": "",
-        "btn_type": "",
-        "btn_variant": "dark",
-        "btn_size": "",
-        "section_bg_color": "rgba(0,0,0,0)",
-        "section_text_color": "#000000",
-        "autoplay_enable": false,
-        "slider_enable": true,
-        "nav_arrows": true,
-        "nav_dots": false
       }
     },
     "a618eef4-fb94-4608-b62a-a035c206de40": {
@@ -1132,8 +943,6 @@
     "ec0f761c-9d46-426c-b34e-7536509c5a1b",
     "07429a64-3eb5-4663-827f-f01a6fb8f5cd",
     "d1e8d9f9-4e0f-4ef5-af16-8f334ad3b8c9",
-    "cc65e22a-b26b-40d1-ac1e-c6ff657ff136",
-    "ab62fd12-1370-4dd1-8aca-97e40474aa60",
     "a618eef4-fb94-4608-b62a-a035c206de40",
     "2fc01c3d-fdb9-4eed-9a67-450b2c83d9e3",
     "db51e2b5-fbe8-4255-be41-9434c6a6c906"
