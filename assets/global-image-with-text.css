@@ -85,7 +85,7 @@
     .image-with-table .readbody[data-redmore="false"] .readbody-text
     {
         display: block !important;
-        height: 150px;
+        /* height: 150px; */
     }
     .image-with-table .readbody[data-redmore="false"] .red-more-btn
     {

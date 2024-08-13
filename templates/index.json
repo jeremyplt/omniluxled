@@ -533,6 +533,12 @@
     "483972b6-05da-4d1a-964a-d5598ce78682": {
       "type": "global-awards",
       "blocks": {
+        "content_cyRUcq": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/2024_Woman_Home_Awards_Badge.png"
+          }
+        },
         "template--16029767729314__483972b6-05da-4d1a-964a-d5598ce78682-166974779644c81bd5-0": {
           "type": "content",
           "settings": {
@@ -604,9 +610,16 @@
           "settings": {
             "icon_img": "shopify:\/\/shop_images\/NB_AwardSeal2022.png"
           }
+        },
+        "content_GjA3eM": {
+          "type": "content",
+          "settings": {
+            "icon_img": "shopify:\/\/shop_images\/GQ-UK-TechAwards-Logo-2024_002.png"
+          }
         }
       },
       "block_order": [
+        "content_cyRUcq",
         "template--16029767729314__483972b6-05da-4d1a-964a-d5598ce78682-166974779644c81bd5-0",
         "6cd1848c-f7bf-4d4b-b49a-87fafc1bf5a1",
         "d07b85e1-d45c-4b0d-92b4-9bb639c58aa3",
@@ -618,7 +631,8 @@
         "2c456bce-fb04-49a4-9f6c-129376a355db",
         "f5903697-c569-4c64-af15-7ea0e970746b",
         "b6d222dd-da7e-4dd4-a6fe-c434828074e6",
-        "0bfd51a6-46c3-4eb7-9fd4-90acfefc95d0"
+        "0bfd51a6-46c3-4eb7-9fd4-90acfefc95d0",
+        "content_GjA3eM"
       ],
       "custom_css": [
         "@media (max-width: 768px) {.col-6 {width: 33%; }}"

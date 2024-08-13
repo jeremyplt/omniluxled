@@ -34,16 +34,16 @@
             "section_badge_image": "shopify:\/\/shop_images\/grooming_mens_awards_720111c1-6234-465a-9afa-924029c1847a.png"
           }
         },
+        "8744403a-afcb-477f-ac9c-a2deec7a0d08": {
+          "type": "usp",
+          "settings": {
+            "section_badge_image": "shopify:\/\/shop_images\/GQ-UK-TechAwards-Logo-2024_002.png"
+          }
+        },
         "e7a9beb7-c5cd-4468-87d8-7b8b9860e9c1": {
           "type": "usp",
           "settings": {
             "section_badge_image": "shopify:\/\/shop_images\/Get_the_Gloss_Wellness_Awards_2023_Silver_44afd4a0-997d-460c-9823-ed4249f3b6b8.png"
-          }
-        },
-        "8744403a-afcb-477f-ac9c-a2deec7a0d08": {
-          "type": "usp",
-          "settings": {
-            "section_badge_image": "shopify:\/\/shop_images\/NB_AwardSeal_2023_1_c1beb42b-fa6b-42a6-ac7b-9808ae8cf17b.png"
           }
         },
         "8b28fde4-7d0a-4be7-85b2-40677dbd8cdf": {
@@ -58,8 +58,8 @@
         "d3f5b179-09a1-4d77-b432-7eecb9bfa32f",
         "8d4c1d26-ac76-4be7-8bc1-f25fbbd086fc",
         "47044bff-3006-4ecc-ba56-d28f6c52df80",
-        "e7a9beb7-c5cd-4468-87d8-7b8b9860e9c1",
         "8744403a-afcb-477f-ac9c-a2deec7a0d08",
+        "e7a9beb7-c5cd-4468-87d8-7b8b9860e9c1",
         "8b28fde4-7d0a-4be7-85b2-40677dbd8cdf"
       ],
       "settings": {
@@ -67,6 +67,8 @@
         "section_star_text": "300K+ Glowing Customers",
         "section_star_anchor_id": "#hoow-reviws",
         "section_title": "One tool. Powerful results.",
+        "section_subtitle": "",
+        "section_mobile_subtitle": "",
         "section_description": "For men who want to simplify their routine, yet enjoy all the benefits of high-performance skincare.",
         "section_btn_text": "Transform My Skin",
         "section_btn_url": "#hoox-shop",

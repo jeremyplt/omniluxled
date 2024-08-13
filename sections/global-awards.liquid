@@ -6,7 +6,7 @@
     {%- endif -%}
     <div class="{% if section.settings.fluid_layout %}container-fluid{% else %}container{% endif %}">
         <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 text-center mb-lg-4 mb-2 pb-1 pb-lg-0 mx-auto">
+            <div class="col-12 col-lg-7 col-md-8 text-center mb-lg-4 mb-2 pb-1 pb-lg-0 mx-auto">
                 {% if section.settings.heading_txt != blank %}
                   <h3 class="h6 pb-md-1 ls-0 section-title mb-3">{{ section.settings.heading_txt }}</h3>
                 {% endif %}
@@ -18,7 +18,7 @@
 
             <div class="row justify-content-center row-cols-lg-5">
               {% for block in section.blocks %}
-              <div class="col-lg col-md-4 col-6" {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
+              <div class="col-lg col-md-4 col-7 col-sm-2" {{ block.shopify_attributes }} data-block-id="{{ block.id }}">
                   <div class="awards mx-auto d-flex flex-column mb-5 pb-1 pb-lg-0">
                       <div class="position-relative square-card text-center">
                         {% if block.settings.icon_img != blank %}
@@ -184,5 +184,9 @@
     }
 
 .awards-wrap .col-6{width:16.5%!important;}
+    .awards-wrap .col-7{width:14.2%!important;}
+  }
+  @media(max-width:600px){
+    .awards-wrap .col-sm-2{width:50%!important;}
   }
 </style>

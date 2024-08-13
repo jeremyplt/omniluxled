@@ -10,6 +10,13 @@
     "new_before_after_banner_ajnpaV": {
       "type": "new-before-after-banner",
       "blocks": {
+        "before_after_iij87Y": {
+          "type": "before-after",
+          "settings": {
+            "before_image": "shopify:\/\/shop_images\/Frame_1.jpg",
+            "after_image": "shopify:\/\/shop_images\/Frame_2.jpg"
+          }
+        },
         "before_after_gcwFii": {
           "type": "before-after",
           "settings": {
@@ -54,6 +61,7 @@
         }
       },
       "block_order": [
+        "before_after_iij87Y",
         "before_after_gcwFii",
         "before_after_8WQJxy",
         "before_after_cW3hQT",
@@ -143,7 +151,7 @@
         "e7a9beb7-c5cd-4468-87d8-7b8b9860e9c1": {
           "type": "usp",
           "settings": {
-            "section_badge_image": "shopify:\/\/shop_images\/Get_the_Gloss_Wellness_Awards_2023_Silver_44afd4a0-997d-460c-9823-ed4249f3b6b8.png"
+            "section_badge_image": "shopify:\/\/shop_images\/2024_Woman_Home_Awards_Badge.png"
           }
         },
         "47044bff-3006-4ecc-ba56-d28f6c52df80": {

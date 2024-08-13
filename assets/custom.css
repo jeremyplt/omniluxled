@@ -3185,3 +3185,23 @@ html .circle-video-swipe.circle-video-desktop .circle-menu-item-label {
     margin: 0 auto;
   }
 }
+
+
+#stockist-widget .stockist-query-entry .stockist-search-button button {
+  padding: 0 !important;
+}
+
+#stockist-widget .stockist-query-entry .stockist-search-button button:before,
+#stockist-widget .stockist-query-entry .stockist-search-button button:after {
+  display: none;
+}
+
+#stockist-widget .leaflet-control-compact-attribution-button {
+  background-repeat: no-repeat;
+  padding: 0px !important;
+}
+
+#stockist-widget .leaflet-control-compact-attribution-button:before,
+#stockist-widget .leaflet-control-compact-attribution-button:after {
+  display: none;
+}

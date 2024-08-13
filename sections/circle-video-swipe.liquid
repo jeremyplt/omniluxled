@@ -123,45 +123,47 @@
   
         var currentSlide = 0;
   
-        var slider = new KeenSlider(".circle-video-swipe__slider", {
-          vertical: true,
-          slideChanged: (s) => {
-                const slide = s.track.details.rel;
-                videos.forEach((video, i) => {
-                    video.pause();
-                });
-
-                setTimeout(() => {
-                  videos[slide].parentElement.querySelector('.loading-spinner').classList.add("hidden");
-                  videos[slide].play();
-                  if (document.querySelector(".modal__sound").classList.contains("muted")) {
-                    videos[slide].muted = true;
-                    videos[slide].volume = 0;
-                  } else {
-                    videos[slide].muted = false;
-                  }
-                });
-
-                currentSlide = slide
-            },
-        });
-
-  
-        slider.moveToIdx(i);
-        videos[i].parentElement.querySelector('.loading-spinner').classList.add("hidden");
-        videos[i].play();
-        if (document.querySelector(".modal__sound").classList.contains("muted")) {
-          videos[i].muted = true;
-          videos[i].volume = 0;
-        } else {
-          videos[i].muted = false;
-        }
-        
-        
-  
         setTimeout(() => {
-          document.querySelector('.modal__swipe-animation').style.display = "none"
-        }, 6000)
+          var slider = new KeenSlider(".circle-video-swipe__slider", {
+            vertical: true,
+            slideChanged: (s) => {
+              const slide = s.track.details.rel;
+              videos.forEach((video, i) => {
+                  video.pause();
+              });
+  
+              setTimeout(() => {
+                videos[slide].parentElement.querySelector('.loading-spinner').classList.add("hidden");
+                videos[slide].play();
+                if (document.querySelector(".modal__sound").classList.contains("muted")) {
+                  videos[slide].muted = true;
+                  videos[slide].volume = 0;
+                } else {
+                  videos[slide].muted = false;
+                }
+              });
+  
+              currentSlide = slide
+            },
+          });
+  
+    
+          slider.moveToIdx(i);
+          videos[i].parentElement.querySelector('.loading-spinner').classList.add("hidden");
+          videos[i].play();
+          if (document.querySelector(".modal__sound").classList.contains("muted")) {
+            videos[i].muted = true;
+            videos[i].volume = 0;
+          } else {
+            videos[i].muted = false;
+          }
+          
+          
+    
+          setTimeout(() => {
+            document.querySelector('.modal__swipe-animation').style.display = "none"
+          }, 6000)
+        }, 100)
       });
     });
   
